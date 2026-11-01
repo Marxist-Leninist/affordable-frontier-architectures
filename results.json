@@ -1,0 +1,139 @@
+{
+  "warning": "Illustrative assumptions; no actual 3T benchmark or quality result",
+  "assumptions": {
+    "gpus": 32,
+    "usd_gpu_hour": 3.99,
+    "gbp_per_usd": 0.8,
+    "infrastructure_multiplier": 1.2,
+    "utilization": 0.6,
+    "input_tps": 8000,
+    "output_tps": 1500,
+    "hours_month": 730
+  },
+  "monthly_cluster_gbp": 89478.144,
+  "budgets": {
+    "20": {
+      "serving_gbp": 4.000000000000001,
+      "minimum_subscribers_to_cover_cluster_at_target_margin": 22370
+    },
+    "200": {
+      "serving_gbp": 49.000000000000014,
+      "minimum_subscribers_to_cover_cluster_at_target_margin": 1827
+    },
+    "400": {
+      "serving_gbp": 99.00000000000003,
+      "minimum_subscribers_to_cover_cluster_at_target_margin": 904
+    }
+  },
+  "weight_storage_decimal_TB": {
+    "16": 6.0,
+    "8": 3.0,
+    "4": 1.5,
+    "1.58": 0.5925,
+    "1": 0.375
+  },
+  "kv_decimal_GB_per_sequence": {
+    "8192": 1.13246208,
+    "32768": 4.52984832,
+    "131072": 18.11939328
+  },
+  "scenarios": [
+    {
+      "assumed_output_tps": 500,
+      "gbp_per_million_input_output": [
+        7.093333333333334,
+        113.49333333333334
+      ],
+      "workloads": [
+        {
+          "name": "light",
+          "inputs": 100000,
+          "outputs": 20000,
+          "monthly_gbp": 2.9792,
+          "capacity_subscribers": 30034.285714285714
+        },
+        {
+          "name": "regular",
+          "inputs": 1000000,
+          "outputs": 200000,
+          "monthly_gbp": 29.792,
+          "capacity_subscribers": 3003.4285714285716
+        },
+        {
+          "name": "heavy",
+          "inputs": 10000000,
+          "outputs": 2000000,
+          "monthly_gbp": 297.91999999999996,
+          "capacity_subscribers": 300.34285714285716
+        }
+      ]
+    },
+    {
+      "assumed_output_tps": 1500,
+      "gbp_per_million_input_output": [
+        7.093333333333334,
+        37.83111111111111
+      ],
+      "workloads": [
+        {
+          "name": "light",
+          "inputs": 100000,
+          "outputs": 20000,
+          "monthly_gbp": 1.4659555555555557,
+          "capacity_subscribers": 61037.419354838705
+        },
+        {
+          "name": "regular",
+          "inputs": 1000000,
+          "outputs": 200000,
+          "monthly_gbp": 14.659555555555556,
+          "capacity_subscribers": 6103.74193548387
+        },
+        {
+          "name": "heavy",
+          "inputs": 10000000,
+          "outputs": 2000000,
+          "monthly_gbp": 146.59555555555553,
+          "capacity_subscribers": 610.3741935483872
+        }
+      ]
+    },
+    {
+      "assumed_output_tps": 3000,
+      "gbp_per_million_input_output": [
+        7.093333333333334,
+        18.915555555555557
+      ],
+      "workloads": [
+        {
+          "name": "light",
+          "inputs": 100000,
+          "outputs": 20000,
+          "monthly_gbp": 1.0876444444444446,
+          "capacity_subscribers": 82267.82608695651
+        },
+        {
+          "name": "regular",
+          "inputs": 1000000,
+          "outputs": 200000,
+          "monthly_gbp": 10.876444444444445,
+          "capacity_subscribers": 8226.782608695652
+        },
+        {
+          "name": "heavy",
+          "inputs": 10000000,
+          "outputs": 2000000,
+          "monthly_gbp": 108.76444444444444,
+          "capacity_subscribers": 822.6782608695653
+        }
+      ]
+    }
+  ],
+  "primary_USD500_at_assumed_FX": {
+    "gross_GBP": 400,
+    "serving_budget_GBP": 99.00000000000003,
+    "heavy_10M_input_2M_visible_no_hidden_cost": 146.59555555555553,
+    "heavy_plus_2M_hidden_cost": 222.25777777777776,
+    "heavy_plus_hidden_50percent_cache_10percent_cache_work_cost": 190.33777777777777
+  }
+}
