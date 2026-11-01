@@ -1,0 +1,19 @@
+{
+  "warning": "Toy untrained diagonal recurrence, not Mamba, not LM quality or GPU performance; token-list memory excluded from state payload",
+  "cases": [
+    {
+      "sequence_length": 512,
+      "state_payload_bytes": 512,
+      "cpu_seconds": 0.003819385001406772,
+      "chunk_equivalent": true,
+      "branch_snapshot_independent": true
+    },
+    {
+      "sequence_length": 8192,
+      "state_payload_bytes": 512,
+      "cpu_seconds": 0.09412849599902984,
+      "chunk_equivalent": true,
+      "branch_snapshot_independent": true
+    }
+  ]
+}
