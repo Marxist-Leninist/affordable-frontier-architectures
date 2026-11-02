@@ -1,0 +1,23 @@
+test_deterministic (test_experiment.Tests.test_deterministic) ... ok
+test_disjoint_support (test_experiment.Tests.test_disjoint_support) ... ok
+test_empty_matrix (test_experiment.Tests.test_empty_matrix) ... ok
+test_exact_formula (test_experiment.Tests.test_exact_formula) ... ok
+test_full_acceptance (test_experiment.Tests.test_full_acceptance) ... ok
+test_identical (test_experiment.Tests.test_identical) ... ok
+test_identical_draft_no_rejection (test_experiment.Tests.test_identical_draft_no_rejection) ... ok
+test_invalid (test_experiment.Tests.test_invalid) ... ok
+test_more_resources_cost_more (test_experiment.Tests.test_more_resources_cost_more) ... ok
+test_no_acceptance (test_experiment.Tests.test_no_acceptance) ... ok
+test_output_length (test_experiment.Tests.test_output_length) ... ok
+test_overflow (test_experiment.Tests.test_overflow) ... ok
+test_prefill_still_blocks (test_experiment.Tests.test_prefill_still_blocks) ... ok
+test_scored_not_free (test_experiment.Tests.test_scored_not_free) ... ok
+test_transition_distribution (test_experiment.Tests.test_transition_distribution) ... ok
+test_worse_draft_slower (test_experiment.Tests.test_worse_draft_slower) ... ok
+test_zero_draft_support (test_experiment.Tests.test_zero_draft_support) ... ok
+test_zero_extra_gpu_still_blocks (test_experiment.Tests.test_zero_extra_gpu_still_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.359s
+
+OK

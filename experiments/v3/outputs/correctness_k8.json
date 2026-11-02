@@ -1,0 +1,86 @@
+{
+  "classification": "untrained four-symbol Markov CPU correctness probe",
+  "seed": 17,
+  "output_tokens": 400000,
+  "block_length": 8,
+  "stats": {
+    "target_block_calls": 144736,
+    "draft_proposed": 1157879,
+    "accepted": 255265,
+    "rejections": 140215,
+    "bonus": 4520
+  },
+  "transition_rows": [
+    {
+      "previous_token": 0,
+      "samples": 88434,
+      "observed": [
+        0.10080964334984283,
+        0.1996517176651514,
+        0.6011149557862361,
+        0.09842368319876971
+      ],
+      "target": [
+        0.1,
+        0.2,
+        0.6,
+        0.1
+      ],
+      "total_variation": 0.001924599136078911
+    },
+    {
+      "previous_token": 1,
+      "samples": 123231,
+      "observed": [
+        0.3989986285918316,
+        0.201272407105355,
+        0.09963402066038578,
+        0.3000949436424276
+      ],
+      "target": [
+        0.4,
+        0.2,
+        0.1,
+        0.3
+      ],
+      "total_variation": 0.0013673507477826238
+    },
+    {
+      "previous_token": 2,
+      "samples": 112497,
+      "observed": [
+        0.10033156439727281,
+        0.5498457736650755,
+        0.2494822084144466,
+        0.10034045352320506
+      ],
+      "target": [
+        0.1,
+        0.55,
+        0.25,
+        0.1
+      ],
+      "total_variation": 0.0006720179204779131
+    },
+    {
+      "previous_token": 3,
+      "samples": 75837,
+      "observed": [
+        0.25135487954428576,
+        0.2494428840803302,
+        0.25045821960256864,
+        0.24874401677281538
+      ],
+      "target": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "total_variation": 0.001813099146854416
+    }
+  ],
+  "max_row_total_variation": 0.001924599136078911,
+  "exact_one_step_max_abs_error": 1.1102230246251565e-16,
+  "timing_claim": "none; no GPU performance or LM quality inferred"
+}
