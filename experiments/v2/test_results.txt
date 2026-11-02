@@ -1,0 +1,19 @@
+test_bad_inputs (test_experiment.Tests.test_bad_inputs) ... ok
+test_capacity_hours (test_experiment.Tests.test_capacity_hours) ... ok
+test_dedicated_fails (test_experiment.Tests.test_dedicated_fails) ... ok
+test_deterministic (test_experiment.Tests.test_deterministic) ... ok
+test_drain_charged (test_experiment.Tests.test_drain_charged) ... ok
+test_exact_request_count (test_experiment.Tests.test_exact_request_count) ... ok
+test_fixed_ledger (test_experiment.Tests.test_fixed_ledger) ... ok
+test_hidden_not_free (test_experiment.Tests.test_hidden_not_free) ... ok
+test_impossible_reserve (test_experiment.Tests.test_impossible_reserve) ... ok
+test_min_users_boundary (test_experiment.Tests.test_min_users_boundary) ... ok
+test_monotonic_arrivals (test_experiment.Tests.test_monotonic_arrivals) ... ok
+test_pool_double_copy_cost (test_experiment.Tests.test_pool_double_copy_cost) ... ok
+test_same_ledger_clustered (test_experiment.Tests.test_same_ledger_clustered) ... ok
+test_single_request_latency (test_experiment.Tests.test_single_request_latency) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.076s
+
+OK
