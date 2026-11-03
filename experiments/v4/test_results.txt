@@ -1,0 +1,17 @@
+test_cold (test_experiment.Tests.test_cold) ... ok
+test_conservation (test_experiment.Tests.test_conservation) ... ok
+test_empty (test_experiment.Tests.test_empty) ... ok
+test_full_work (test_experiment.Tests.test_full_work) ... ok
+test_invalid (test_experiment.Tests.test_invalid) ... ok
+test_lru (test_experiment.Tests.test_lru) ... ok
+test_max_fraction (test_experiment.Tests.test_max_fraction) ... ok
+test_no_cache (test_experiment.Tests.test_no_cache) ... ok
+test_not_economics_pass (test_experiment.Tests.test_not_economics_pass) ... ok
+test_order_same_work (test_experiment.Tests.test_order_same_work) ... ok
+test_revision (test_experiment.Tests.test_revision) ... ok
+test_tenant (test_experiment.Tests.test_tenant) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.000s
+
+OK
