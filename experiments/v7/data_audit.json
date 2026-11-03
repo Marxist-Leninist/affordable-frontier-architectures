@@ -1,0 +1,14 @@
+{
+  "source_git_blob_sha1": "7dcb3a2d4cc3b48b6283dd46870bfeb78f88aac9",
+  "source_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "split_chars": {
+    "train": 892315,
+    "validation": 111475,
+    "test": 111476
+  },
+  "exact_evaluated_contexts_found_in_training": {
+    "validation": 0,
+    "test": 0
+  },
+  "evaluated_contexts_per_split": 256
+}

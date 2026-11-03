@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-03",
+  "hypothesis": "Does a parameter-matched vanilla recurrent LM outperform a normalized multi-head Transformer on held-out real text at equal training-token and learning-rate tuning budgets?",
+  "dataset": "karpathy/char-rnn data/tinyshakespeare/input.txt",
+  "repository_commit": "6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e",
+  "blob_sha": "7dcb3a2d4cc3b48b6283dd46870bfeb78f88aac9",
+  "split": "contiguous 80% training, 10% validation, 10% test; 64-character gaps at boundaries discarded",
+  "transformer_width": 32,
+  "transformer_heads": 4,
+  "recurrent_width": "nearest total parameter count to transformer, selected arithmetically before training",
+  "training_steps": 400,
+  "batch_size": 8,
+  "context": 64,
+  "training_tokens_per_run": 204800,
+  "optimizer": "Adam beta1 .9 beta2 .999 epsilon 1e-8; global grad norm clip 1",
+  "learning_rates": [0.001,0.003,0.01],
+  "selection": "One tuning seed 101 for each of three rates for each architecture. Select smallest validation bpc; no test data access until selection frozen.",
+  "final_seeds": [1,2,3],
+  "evaluation": "First 16384 disjoint target positions per held-out split, reset at every 64-character segment; bits per character; teacher forced",
+  "stopping": "Fixed 400 steps per run; all runs reported, no best-seed selection or early stopping",
+  "limits": "Equal parameter and token budgets do not equal FLOPs or wall time. One small historical text corpus and tiny models do not measure general intelligence, frontier equivalence, long context, coding, tool use or business feasibility. No architecture can be selected globally from this test."
+}
