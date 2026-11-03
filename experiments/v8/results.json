@@ -1,0 +1,428 @@
+{
+  "protocol": {
+    "date": "2026-11-03",
+    "hypothesis": "Does the small recurrent result survive an established Hugging Face real-text benchmark with official held-out splits and a stronger Transformer baseline?",
+    "dataset": "Salesforce/wikitext",
+    "config": "wikitext-2-raw-v1",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "split": "Official train/validation/test files; original text rows joined with one LF, encoded UTF-8 without normalization, truncation, or unknown-token substitution",
+    "tokenization": "lossless UTF-8 bytes, fixed vocabulary 256; bpb not directly comparable with v7 bpc",
+    "transformer_width": 32,
+    "transformer_heads": 4,
+    "recurrent_width": "nearest total parameter count to transformer selected before training",
+    "training_steps": 400,
+    "batch_size": 8,
+    "context": 64,
+    "training_tokens_per_run": 204800,
+    "optimizer": "Adam beta1 .9 beta2 .999 epsilon 1e-8; global grad norm clip 1",
+    "learning_rates": [
+      0.001,
+      0.003,
+      0.01
+    ],
+    "selection": "One tuning seed101 per each of three learning rates, select full validation bpb; save selection before accessing test scores",
+    "final_seeds": [
+      1,
+      2,
+      3
+    ],
+    "evaluation": "All complete 64-byte segments of each official held-out split; state resets every64 bytes; last incomplete segment excluded and exact scored token counts disclosed; token-weighted loss",
+    "stopping": "400 steps every run, no early stopping or best-seed selection",
+    "limits": "Equal parameter/token/tuning budgets do not mean equal FLOPs. Tiny undertrained models, short context and one dataset do not measure intelligence, frontier equivalence or business economics. No model selection against test loss."
+  },
+  "vocab": 256,
+  "recurrent_width": 51,
+  "evaluation_tokens": {
+    "validation": 1147968,
+    "test": 1291968
+  },
+  "evaluation_target_bytes_omitted": {
+    "validation": 38,
+    "test": 44
+  },
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "data_manifest": {
+    "dataset": "Salesforce/wikitext",
+    "config": "wikitext-2-raw-v1",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "serialization": "UTF-8 bytes of LF-joined original text rows; no normalization or filtering",
+    "splits": {
+      "train": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet",
+        "parquet_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+        "rows": 36718,
+        "utf8_bytes": 10951562,
+        "text_sha256": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8"
+      },
+      "validation": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet",
+        "parquet_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+        "rows": 3760,
+        "utf8_bytes": 1148007,
+        "text_sha256": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307"
+      },
+      "test": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet",
+        "parquet_sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+        "rows": 4358,
+        "utf8_bytes": 1292013,
+        "text_sha256": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      }
+    }
+  },
+  "split_sha256": {
+    "train": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+    "validation": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+    "test": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+  },
+  "source_sha256": {
+    "models.py": "c9319b45bdc5c5a0ca128a05701e1a8aee45a53501347cb232147d996be4df4f",
+    "run.py": "fa3b01f4a31e81c38eac20aa1fe28459e132a4d7b1bcbe2f8b665cba9b3bea35",
+    "protocol.json": "92259e10cf3fda81f7dee004a61ab0976c06b28e0e10862a17514c900e2beb91"
+  },
+  "selected_rates": {
+    "transformer": 0.01,
+    "recurrent": 0.01
+  },
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 3.344783180997183,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 3.1028706456518926
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.748038227485574
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.69180958249603
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.5529852219626914
+        }
+      ],
+      "validation_bpb": 3.778784461739502
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 3.863673612999264,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.7637678426699246
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.5627031670133675
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.566168069550237
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.431472731647577
+        }
+      ],
+      "validation_bpb": 3.6024516729984275
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 3.559999835000781,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.6339037443238693
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.5210825947148408
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.4987295598873156
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.3248680813845675
+        }
+      ],
+      "validation_bpb": 3.4351767104810618
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 2.2104973110035644,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 3.164782197080175
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 3.1010217791036387
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 3.0710047416185873
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.9193774202101617
+        }
+      ],
+      "validation_bpb": 4.242841367991813
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 2.2075705989991548,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.9895936367448956
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.6807976886253995
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.5309257651717374
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.4031827228822213
+        }
+      ],
+      "validation_bpb": 3.5162596924140708
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 2.084980170999188,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.608432958489679
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.4609398680809598
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.392032726981224
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.2741008881751084
+        }
+      ],
+      "validation_bpb": 3.348576289582127
+    }
+  ],
+  "final": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "learning_rate": 0.01,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 3.542314593993069,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.8561790933985893
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.5714388626772213
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.5031008398856858
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.3757334645303234
+        }
+      ],
+      "validation_bpb": 3.5054813179127606,
+      "test_bpb": 3.5174054630525027,
+      "weights_sha256": "42eab6fa3a20ef01c6f0902a83360d4b2fe78bda0c85c6becc6567ab9e7b835b"
+    },
+    {
+      "kind": "recurrent",
+      "seed": 1,
+      "learning_rate": 0.01,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 2.284316643999773,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.6851421682572747
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.4184297165444884
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.340776903048165
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.207679296997594
+        }
+      ],
+      "validation_bpb": 3.2628084105174064,
+      "test_bpb": 3.2797036636508663,
+      "weights_sha256": "a2a9e9510343fb9b36f3211aca5d233802ed52b77e43b1346a4fa874b19e4bd5"
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "learning_rate": 0.01,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 2.900961441999243,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.6274684993715494
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.4930107741543246
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.4272026261349895
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.39167477394253
+        }
+      ],
+      "validation_bpb": 3.479006924915652,
+      "test_bpb": 3.490568858711079,
+      "weights_sha256": "aa5e7115887cb6b1aec5f9f16aaf3a95e0ff59be536b5becd86bab887f342f7d"
+    },
+    {
+      "kind": "recurrent",
+      "seed": 2,
+      "learning_rate": 0.01,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 1.7704362939985003,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.6640774038129624
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.536384058874791
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.387851145246289
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.4151190405833916
+        }
+      ],
+      "validation_bpb": 3.4288252098009466,
+      "test_bpb": 3.443202108933314,
+      "weights_sha256": "8edb477f57a1cfcc175692b10c420df7e51530facc91e3b9109b9f5d9ee1948b"
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "learning_rate": 0.01,
+      "parameters": 29024,
+      "training_tokens": 204800,
+      "training_seconds": 3.55043177799962,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.743540208084077
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.4907680732188595
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.3693369080914364
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.3511123344618525
+        }
+      ],
+      "validation_bpb": 3.429969217921978,
+      "test_bpb": 3.4400448930439445,
+      "weights_sha256": "143bc68233af43e8fde3d810a28442ee95aa8e0a98f89206b7574f39339453e6"
+    },
+    {
+      "kind": "recurrent",
+      "seed": 3,
+      "learning_rate": 0.01,
+      "parameters": 28764,
+      "training_tokens": 204800,
+      "training_seconds": 1.7148875549974036,
+      "trace": [
+        {
+          "step": 100,
+          "batch_train_nats": 2.677357754337244
+        },
+        {
+          "step": 200,
+          "batch_train_nats": 2.374899720615379
+        },
+        {
+          "step": 300,
+          "batch_train_nats": 2.1839665037765656
+        },
+        {
+          "step": 400,
+          "batch_train_nats": 2.2834916745150187
+        }
+      ],
+      "validation_bpb": 3.266360436173789,
+      "test_bpb": 3.282270897559023,
+      "weights_sha256": "ccf19896c4854c79fd4b113b497f72b76968243311cb385d6a909f7dfac5ed8f"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "hypothesis": "Does the small recurrent result survive an established Hugging Face real-text benchmark with official held-out splits and a stronger Transformer baseline?",
+  "dataset": "Salesforce/wikitext",
+  "config": "wikitext-2-raw-v1",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "split": "Official train/validation/test files; original text rows joined with one LF, encoded UTF-8 without normalization, truncation, or unknown-token substitution",
+  "tokenization": "lossless UTF-8 bytes, fixed vocabulary 256; bpb not directly comparable with v7 bpc",
+  "transformer_width": 32,
+  "transformer_heads": 4,
+  "recurrent_width": "nearest total parameter count to transformer selected before training",
+  "training_steps": 400,
+  "batch_size": 8,
+  "context": 64,
+  "training_tokens_per_run": 204800,
+  "optimizer": "Adam beta1 .9 beta2 .999 epsilon 1e-8; global grad norm clip 1",
+  "learning_rates": [0.001,0.003,0.01],
+  "selection": "One tuning seed101 per each of three learning rates, select full validation bpb; save selection before accessing test scores",
+  "final_seeds": [1,2,3],
+  "evaluation": "All complete 64-byte segments of each official held-out split; state resets every64 bytes; last incomplete segment excluded and exact scored token counts disclosed; token-weighted loss",
+  "stopping": "400 steps every run, no early stopping or best-seed selection",
+  "limits": "Equal parameter/token/tuning budgets do not mean equal FLOPs. Tiny undertrained models, short context and one dataset do not measure intelligence, frontier equivalence or business economics. No model selection against test loss."
+}

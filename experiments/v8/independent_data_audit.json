@@ -1,0 +1,26 @@
+{
+  "train": {
+    "bytes": 10951562,
+    "rows": 36718,
+    "scored_targets": 10951552,
+    "tail_targets_excluded": 9,
+    "first_byte_unscored": 1,
+    "unique_bytes": 193
+  },
+  "validation": {
+    "bytes": 1148007,
+    "rows": 3760,
+    "scored_targets": 1147968,
+    "tail_targets_excluded": 38,
+    "first_byte_unscored": 1,
+    "unique_bytes": 169
+  },
+  "test": {
+    "bytes": 1292013,
+    "rows": 4358,
+    "scored_targets": 1291968,
+    "tail_targets_excluded": 44,
+    "first_byte_unscored": 1,
+    "unique_bytes": 178
+  }
+}
