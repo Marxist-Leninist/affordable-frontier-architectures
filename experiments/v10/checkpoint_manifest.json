@@ -1,0 +1,74 @@
+[
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_transformer_lr0.001_seed101.pt",
+    "state_sha256": "f2b1fcb80b5b68f5e00c2b6551b019ef9baf19949a662845f7d474b2ec8108f8",
+    "file_sha256": "8716704259bca2545084336130e69f0f9490c7e26ee1ac3d7541fb9e4b51f65f",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_transformer_lr0.003_seed101.pt",
+    "state_sha256": "c50347eb9693dfa4a520c9dd7d43429d0a44085cd62acbf3a35985e19ad25f1c",
+    "file_sha256": "348b7050a912b080638e52eac91e012f34741551d9abfb5a5b7f3427f815252e",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_transformer_lr0.01_seed101.pt",
+    "state_sha256": "6b67bae6dd0f75b309827bfa3f068d7a7775857146fa27539046a200934793ce",
+    "file_sha256": "7758f0b87f0684b96fa97268dfaaf91122673f390f821843c0f074ffbeef9469",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_rnn_lr0.001_seed101.pt",
+    "state_sha256": "3e8c844b033ea2a4d895fc35f3db20f49c1a63c7ca8111bffaa819c8564a6bd7",
+    "file_sha256": "779178bd1b5d1ada8af1e31fc4088f075f4cd707074c7380ff71046d057c57ff",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_rnn_lr0.003_seed101.pt",
+    "state_sha256": "aadbf55bbf14fba0491728b12cf63e4f546bc6ca44f9f8963a03149f8758ea98",
+    "file_sha256": "c7fe7efd86988014b1737ad512075960624b1f218fac50c92df69d6cab6055f7",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/tune_rnn_lr0.01_seed101.pt",
+    "state_sha256": "ef70afdf54ae388eba36bdc18d7bf9643355eef8b8cbb33e10b7176baba5289e",
+    "file_sha256": "331c7a2abe84ec1bf8997bded94b666e9adf856ab7c869d42859c18e58ee4870",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_transformer_lr0.01_seed1.pt",
+    "state_sha256": "afbe8bb83f7c5faf868bbfe150c78e6f43c007cdc19584ff8097bcd1b57f1411",
+    "file_sha256": "9486290f2ad767124373cd796ac144644f2d33d61152ec4bf816e4dc85675391",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_transformer_lr0.01_seed2.pt",
+    "state_sha256": "786c5168ffd66a10d22b6cb016f0d57fc327231fa495812bb370e3460eeb01a0",
+    "file_sha256": "c8cb6aab41ae063b6efbb7f4845ec9f84f066b5cf79e7625a05dda539ea9ac31",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_transformer_lr0.01_seed3.pt",
+    "state_sha256": "175107addbc3dc9632794ddd6e122fd3f03fb0ec06d3c400f9b83e667966f7a7",
+    "file_sha256": "25067c4c42c4cc8d5e93c524f35a6bede45f20f00056a39b2755ff21218b9ca8",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_rnn_lr0.001_seed1.pt",
+    "state_sha256": "e45ecf789c5669bc79111a4533162190417af2261fd2cb1d2698fd866eb6fb32",
+    "file_sha256": "d202ecf9750b0cc279b705a5dcdc27ef301237bcf70608dccfffcc931ddf03a3",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_rnn_lr0.001_seed2.pt",
+    "state_sha256": "edd4b7e8b2a5ace54037b9b2067809c26856c729e1492fb702da73071ccdf05b",
+    "file_sha256": "25bafbe32893e0426721d24689a739a2ecedf94bc25431ecdc8a74470b2cbb86",
+    "reload_max_logit_difference": 0.0
+  },
+  {
+    "path": "/workspace/scratch/da7c9af8b517/frontier_research_v10/checkpoints/final_rnn_lr0.001_seed3.pt",
+    "state_sha256": "35c90b2667a2f16eaac49171fed9dbadde909d4cb839a5cc09cce9988718470f",
+    "file_sha256": "67e4b9bf35e23e73d3113ff10d9b8d0f22ca0cce5e9b2387628f487a40c3221a",
+    "reload_max_logit_difference": 0.0
+  }
+]

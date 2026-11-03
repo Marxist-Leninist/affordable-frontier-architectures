@@ -1,0 +1,114 @@
+{
+  "transformer": {
+    "L512_K4": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.7718969928100705
+    },
+    "L512_K8": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.7709295923511186
+    },
+    "L512_K16": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.77380041560779
+    },
+    "L2048_K4": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.767246153516074
+    },
+    "L2048_K8": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.7719552696992955
+    },
+    "L2048_K16": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.7762701405833163
+    },
+    "L4096_K4": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.770125846999387
+    },
+    "L4096_K8": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.77486823964864
+    },
+    "L4096_K16": {
+      "mean_accuracy_percent": 6.25,
+      "minimum": 6.25,
+      "maximum": 6.25,
+      "mean_ce": 2.7755829145510993
+    }
+  },
+  "rnn": {
+    "L512_K4": {
+      "mean_accuracy_percent": 6.380208333333333,
+      "minimum": 4.6875,
+      "maximum": 7.421875,
+      "mean_ce": 2.7997195245698094
+    },
+    "L512_K8": {
+      "mean_accuracy_percent": 5.338541666666667,
+      "minimum": 5.078125,
+      "maximum": 5.46875,
+      "mean_ce": 2.800714843906462
+    },
+    "L512_K16": {
+      "mean_accuracy_percent": 5.859375,
+      "minimum": 4.296875,
+      "maximum": 7.421875,
+      "mean_ce": 2.788322603019575
+    },
+    "L2048_K4": {
+      "mean_accuracy_percent": 4.557291666666667,
+      "minimum": 2.734375,
+      "maximum": 6.25,
+      "mean_ce": 2.7931004262839756
+    },
+    "L2048_K8": {
+      "mean_accuracy_percent": 6.510416666666667,
+      "minimum": 5.859375,
+      "maximum": 7.03125,
+      "mean_ce": 2.806537273650368
+    },
+    "L2048_K16": {
+      "mean_accuracy_percent": 5.46875,
+      "minimum": 4.6875,
+      "maximum": 6.640625,
+      "mean_ce": 2.785848409868777
+    },
+    "L4096_K4": {
+      "mean_accuracy_percent": 7.161458333333333,
+      "minimum": 6.640625,
+      "maximum": 7.8125,
+      "mean_ce": 2.78631997667253
+    },
+    "L4096_K8": {
+      "mean_accuracy_percent": 7.682291666666667,
+      "minimum": 6.25,
+      "maximum": 10.15625,
+      "mean_ce": 2.8066813508048654
+    },
+    "L4096_K16": {
+      "mean_accuracy_percent": 5.208333333333333,
+      "minimum": 4.6875,
+      "maximum": 5.859375,
+      "mean_ce": 2.7975050505871573
+    }
+  }
+}

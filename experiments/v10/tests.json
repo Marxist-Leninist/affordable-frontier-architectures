@@ -1,0 +1,113 @@
+{
+  "reference_logit_max_difference": 4.440892098500626e-16,
+  "reference_parameter_gradient_max_difference": 2.3002433291452462e-15,
+  "directional_gradient_relative_error": 8.220738653003384e-11,
+  "causality_pass": true,
+  "controls": {
+    "L128_K4": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 124,
+      "sha256": "b243d160795fd09a9ebd25b4cca381106a670959fa7a25a41ae4029ef3ddc94d"
+    },
+    "L128_K8": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 124,
+      "sha256": "2457db7f7346a917c236f385c2dde2a29dfd19a091c88aaaab8b8844130a3dfb"
+    },
+    "L128_K16": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 124,
+      "sha256": "fecdbb63bcc38957b06099715d6541cde34ad33573b4812addc9180ffd79cde0"
+    },
+    "L256_K4": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 250,
+      "sha256": "e28afdf128b101d99c96ce1356d9afc8b574138dcccf1f7f2162fd4fba426914"
+    },
+    "L256_K8": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 252,
+      "sha256": "e0ffbc6f709e410c5f70222b2733aa8b422b4cd5fab57974569751f616cf2089"
+    },
+    "L256_K16": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 4,
+      "query_fact_position_max": 252,
+      "sha256": "ddc6adfe89f30c8106abe25607507a322725f38171865921f0095d8fea759332"
+    },
+    "L512_K4": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 2,
+      "query_fact_position_max": 508,
+      "sha256": "33a862cef42775621fdc415e6628df43f15472a32bb0bd26ee9d3b6190100f87"
+    },
+    "L512_K8": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 0,
+      "query_fact_position_max": 508,
+      "sha256": "050cb655c7f5d6061e0fd88cf00a91714d6a170e10a61941d478a10e5b7cdcc9"
+    },
+    "L512_K16": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 1,
+      "query_fact_position_max": 507,
+      "sha256": "c69a7b6c20f6223c803b9953fa7238493ce226131186e92947ebbb838a8b3813"
+    },
+    "L2048_K4": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 5,
+      "query_fact_position_max": 2026,
+      "sha256": "874dcfa08540253bc6a87790fc301fcab298644b04ea7647c7acf5554311f386"
+    },
+    "L2048_K8": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 6,
+      "query_fact_position_max": 2043,
+      "sha256": "c0964f26dbfd26007be3162181ed428c10eea3882f0894f1e029d971fbb1ba30"
+    },
+    "L2048_K16": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 24,
+      "query_fact_position_max": 2042,
+      "sha256": "dd469217592f731157255e8c9f617b10f9ef567b9b38c9e65faf246545a2f88b"
+    },
+    "L4096_K4": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 3,
+      "query_fact_position_max": 4059,
+      "sha256": "98db8c6ac58dc6a2f5bc847ea0b1c0627be3e731bc0922880279eb6d77f10706"
+    },
+    "L4096_K8": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 4,
+      "query_fact_position_max": 4079,
+      "sha256": "3a5ad0ab44fc45fd095d59964c8c089abfda47af3d77880b9273c580cc384cde"
+    },
+    "L4096_K16": {
+      "oracle_accuracy": 1.0,
+      "constant_guess_accuracy": 0.0625,
+      "query_fact_position_min": 47,
+      "query_fact_position_max": 4081,
+      "sha256": "de5d1bfda9e56990f57fb0c273ffe6869bf8e617584eff2a79ad5f72ed3155ad"
+    }
+  }
+}
