@@ -1,0 +1,8 @@
+test_prefix_parity_and_reset (test_benchmark.Tests.test_prefix_parity_and_reset) ... ok
+test_resident_state (test_benchmark.Tests.test_resident_state) ... ok
+test_sliding_window_is_not_same_semantics (test_benchmark.Tests.test_sliding_window_is_not_same_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.050s
+
+OK

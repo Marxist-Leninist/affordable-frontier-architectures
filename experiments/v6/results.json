@@ -1,0 +1,402 @@
+{
+  "classification": "Actual trained toy neural LM exact incremental inference; synthetic text; not frontier evidence",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "training_tokens_per_model": 102400,
+  "source_sha256": {
+    "benchmark.py": "25e65699a50ea81c7f28705d887a1fb351da1d4988c58c3b844e43cc013475ef",
+    "baseline.py": "f142aefeff9108e0e85fd319f4efa2343a86c4dfa2ca3037aba1ae5535ebf5d9"
+  },
+  "rows": [
+    {
+      "kind": "attention",
+      "seed": 1,
+      "parameters": 2848,
+      "weights_sha256": "36ced02574dcb991f27be5a1b95e347b36967efd1430b9fa42627edda08dddda",
+      "quality": {
+        "max_probability_error": 1.7763568394002505e-15,
+        "reference_bpc": 1.4186539684911463,
+        "cached_bpc": 1.4186539684911463,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 8320,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.0254325,
+              "p95_ms": 0.06070529999999982,
+              "sequence_median_ms": 0.856483
+            },
+            "recompute": {
+              "p50_ms": 0.053114,
+              "p95_ms": 0.08489604999999999,
+              "sequence_median_ms": 1.876059
+            }
+          },
+          "sequence_speedup": 2.190421759684664
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 32896,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.026048,
+              "p95_ms": 0.04203209999999996,
+              "sequence_median_ms": 3.733125
+            },
+            "recompute": {
+              "p50_ms": 0.1225915,
+              "p95_ms": 0.2807116499999999,
+              "sequence_median_ms": 17.943734
+            }
+          },
+          "sequence_speedup": 4.806625548300686
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 131200,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.02743,
+              "p95_ms": 0.09775004999999976,
+              "sequence_median_ms": 19.218276
+            },
+            "recompute": {
+              "p50_ms": 0.9435215,
+              "p95_ms": 4.422492649999998,
+              "sequence_median_ms": 765.844357
+            }
+          },
+          "sequence_speedup": 39.849794903559506
+        }
+      ]
+    },
+    {
+      "kind": "recurrent",
+      "seed": 1,
+      "parameters": 2856,
+      "weights_sha256": "7606b92cc0b0517732edb826d6cd1e0bf9892896c6a08a589a156a00612407bd",
+      "quality": {
+        "max_probability_error": 1.3322676295501878e-15,
+        "reference_bpc": 0.4706498495495265,
+        "cached_bpc": 0.4706498495495265,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007311,
+              "p95_ms": 0.0113475,
+              "sequence_median_ms": 0.240239
+            },
+            "recompute": {
+              "p50_ms": 0.0603145,
+              "p95_ms": 0.1358903999999998,
+              "sequence_median_ms": 1.992886
+            }
+          },
+          "sequence_speedup": 8.295430800161505
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007271,
+              "p95_ms": 0.014484649999999924,
+              "sequence_median_ms": 1.45198
+            },
+            "recompute": {
+              "p50_ms": 0.2340265,
+              "p95_ms": 0.7592296,
+              "sequence_median_ms": 40.727901
+            }
+          },
+          "sequence_speedup": 28.04990495736856
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007251,
+              "p95_ms": 0.00784399999999999,
+              "sequence_median_ms": 4.532862
+            },
+            "recompute": {
+              "p50_ms": 0.8301045,
+              "p95_ms": 1.7153608999999999,
+              "sequence_median_ms": 442.714408
+            }
+          },
+          "sequence_speedup": 97.66774457285486
+        }
+      ]
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "parameters": 2848,
+      "weights_sha256": "90ad1f98bd99e02d2c8c8f0a1d4fd3e5025381c9d2f32609bfbfc25023f81f30",
+      "quality": {
+        "max_probability_error": 1.6653345369377348e-15,
+        "reference_bpc": 1.523559223734349,
+        "cached_bpc": 1.523559223734349,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 8320,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.025403,
+              "p95_ms": 0.06683619999999914,
+              "sequence_median_ms": 1.24825
+            },
+            "recompute": {
+              "p50_ms": 0.0563585,
+              "p95_ms": 0.18028149999999965,
+              "sequence_median_ms": 2.217882
+            }
+          },
+          "sequence_speedup": 1.776793110354496
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 32896,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.026008,
+              "p95_ms": 0.09360649999999998,
+              "sequence_median_ms": 4.568078
+            },
+            "recompute": {
+              "p50_ms": 0.1486655,
+              "p95_ms": 0.40132355,
+              "sequence_median_ms": 23.204917
+            }
+          },
+          "sequence_speedup": 5.079798768760078
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 131200,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.02715,
+              "p95_ms": 0.055125549999999975,
+              "sequence_median_ms": 15.115254
+            },
+            "recompute": {
+              "p50_ms": 0.923968,
+              "p95_ms": 4.642921199999999,
+              "sequence_median_ms": 734.461075
+            }
+          },
+          "sequence_speedup": 48.5907200103948
+        }
+      ]
+    },
+    {
+      "kind": "recurrent",
+      "seed": 2,
+      "parameters": 2856,
+      "weights_sha256": "83eec2a60b705d9f87eec1db3b8e4652c32a37c84d096d1138bb18ee31adf66c",
+      "quality": {
+        "max_probability_error": 1.4432899320127035e-15,
+        "reference_bpc": 0.458424195921392,
+        "cached_bpc": 0.458424195921392,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.0072505,
+              "p95_ms": 0.007947549999999998,
+              "sequence_median_ms": 0.237404
+            },
+            "recompute": {
+              "p50_ms": 0.058196,
+              "p95_ms": 0.13179379999999982,
+              "sequence_median_ms": 2.136966
+            }
+          },
+          "sequence_speedup": 9.001390035551212
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007251,
+              "p95_ms": 0.01563804999999997,
+              "sequence_median_ms": 1.361313
+            },
+            "recompute": {
+              "p50_ms": 0.2211825,
+              "p95_ms": 0.5801855499999999,
+              "sequence_median_ms": 32.111154
+            }
+          },
+          "sequence_speedup": 23.58836946389258
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007251,
+              "p95_ms": 0.009126499999999985,
+              "sequence_median_ms": 4.350909
+            },
+            "recompute": {
+              "p50_ms": 0.891565,
+              "p95_ms": 1.8344690999999995,
+              "sequence_median_ms": 480.49836
+            }
+          },
+          "sequence_speedup": 110.43631572161128
+        }
+      ]
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "parameters": 2848,
+      "weights_sha256": "6d3f4aa18b2c0faf37eba774f86ac93407bab94e85a3e0d44c5a06fb5b5d0e4f",
+      "quality": {
+        "max_probability_error": 1.7763568394002505e-15,
+        "reference_bpc": 1.4528862079008846,
+        "cached_bpc": 1.4528862079008846,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 8320,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.025332,
+              "p95_ms": 0.03556449999999999,
+              "sequence_median_ms": 0.921689
+            },
+            "recompute": {
+              "p50_ms": 0.057235,
+              "p95_ms": 0.1517655,
+              "sequence_median_ms": 2.128731
+            }
+          },
+          "sequence_speedup": 2.3095979229436394
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 32896,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.0259535,
+              "p95_ms": 0.09453604999999997,
+              "sequence_median_ms": 4.422187
+            },
+            "recompute": {
+              "p50_ms": 0.142992,
+              "p95_ms": 0.4679708999999998,
+              "sequence_median_ms": 23.566335
+            }
+          },
+          "sequence_speedup": 5.329113174092366
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 131200,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.02715,
+              "p95_ms": 0.08374119999999936,
+              "sequence_median_ms": 17.017027
+            },
+            "recompute": {
+              "p50_ms": 0.873679,
+              "p95_ms": 4.61595245,
+              "sequence_median_ms": 731.987618
+            }
+          },
+          "sequence_speedup": 43.01501184666394
+        }
+      ]
+    },
+    {
+      "kind": "recurrent",
+      "seed": 3,
+      "parameters": 2856,
+      "weights_sha256": "a5dfc7c8bbc287980f87b082e36277cead69b2fb736a4e347ad6fc888dc59d37",
+      "quality": {
+        "max_probability_error": 1.9984014443252818e-15,
+        "reference_bpc": 0.4811830003800539,
+        "cached_bpc": 0.4811830003800539,
+        "targets": 8192
+      },
+      "timings": [
+        {
+          "length": 32,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.0072355,
+              "p95_ms": 0.00970649999999999,
+              "sequence_median_ms": 0.240665
+            },
+            "recompute": {
+              "p50_ms": 0.0589925,
+              "p95_ms": 0.12850124999999993,
+              "sequence_median_ms": 2.056367
+            }
+          },
+          "sequence_speedup": 8.544520391415453
+        },
+        {
+          "length": 128,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.0072755,
+              "p95_ms": 0.0141715,
+              "sequence_median_ms": 1.129227
+            },
+            "recompute": {
+              "p50_ms": 0.2252385,
+              "p95_ms": 0.4759011499999999,
+              "sequence_median_ms": 30.317582
+            }
+          },
+          "sequence_speedup": 26.848084574669222
+        },
+        {
+          "length": 512,
+          "resident_state_bytes": 272,
+          "timings": {
+            "cached": {
+              "p50_ms": 0.007251,
+              "p95_ms": 0.012208999999999994,
+              "sequence_median_ms": 5.254223
+            },
+            "recompute": {
+              "p50_ms": 0.9287755,
+              "p95_ms": 1.896301349999999,
+              "sequence_median_ms": 477.151342
+            }
+          },
+          "sequence_speedup": 90.81292172030004
+        }
+      ]
+    }
+  ]
+}
