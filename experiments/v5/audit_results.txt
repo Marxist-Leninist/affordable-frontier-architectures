@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "classification": "Independent numerical implementation audit; no training or timing rerun",
+  "benchmark_sha256": "c74c91d5d66388f2eb704bbba81228733d6d5b1b958de8f2590fc0363618802f",
+  "numpy": "2.3.5",
+  "dtype": "float64",
+  "models": {
+    "attention": {
+      "parameter_coordinates_checked": 328,
+      "max_gradient_absolute_error": 7.16203593827125e-11,
+      "gradient_tolerance": 1e-07,
+      "future_mutation_checks": 5,
+      "truncated_prefix_checks": 5,
+      "duplicated_batch_loss_and_all_gradients": "pass",
+      "probability_and_gradient_comparison_atol": 1e-14
+    },
+    "recurrent": {
+      "parameter_coordinates_checked": 216,
+      "max_gradient_absolute_error": 9.751638385679939e-11,
+      "gradient_tolerance": 1e-07,
+      "future_mutation_checks": 5,
+      "truncated_prefix_checks": 5,
+      "duplicated_batch_loss_and_all_gradients": "pass",
+      "probability_and_gradient_comparison_atol": 1e-14
+    }
+  },
+  "data_and_results": {
+    "training_lines": 1500,
+    "distinct_training_lines": 1110,
+    "validation_lines": 300,
+    "distinct_validation_lines": 300,
+    "train_validation_line_overlap": 0,
+    "saved_data_hashes": "match current benchmark",
+    "saved_model_seed_parameter_and_token_budget_checks": "pass",
+    "scope": "Held-out combinations from the same grammar and lexicon, not general-language validation"
+  },
+  "limits": [
+    "Gradient coverage is exhaustive only for these small-model fixtures, not a formal proof",
+    "No inference caching, GPU throughput, service latency, frontier quality or economic feasibility is tested"
+  ]
+}

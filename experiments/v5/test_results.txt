@@ -1,0 +1,10 @@
+test_causal (test_benchmark.Tests.test_causal) ... ok
+test_disjoint_sentences (test_benchmark.Tests.test_disjoint_sentences) ... ok
+test_gradient (test_benchmark.Tests.test_gradient) ... ok
+test_normalized (test_benchmark.Tests.test_normalized) ... ok
+test_parameter_match (test_benchmark.Tests.test_parameter_match) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.035s
+
+OK

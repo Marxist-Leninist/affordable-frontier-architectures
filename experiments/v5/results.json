@@ -1,0 +1,223 @@
+{
+  "classification": "actual tiny neural LM training on synthetic English templates; CPU only",
+  "gradient_max_abs_errors": {
+    "attention": 6.079346347078601e-11,
+    "recurrent": 3.682865123977308e-11
+  },
+  "vocab": 25,
+  "train_sha256": "172af3fdd6eb5227fbacc2a993424362ef9a6e18fc1c2c0c9285e9a0c17098e6",
+  "validation_sha256": "f03ef17c44c04a4471c0bb61c53945def1051f3b4a598394fc4047b1e6adc4e8",
+  "numpy": "2.3.5",
+  "rows": [
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.06763500005035894,
+      "decode_p95_ms": 0.10984554992319305,
+      "greedy_sample": ". then then then hen home.\nal.\nalice the the then hen hen homen he.\nal.\nbome.\nalice the the then the hen hen home.\nal.\nb",
+      "kind": "attention",
+      "width": 16,
+      "seed": 1,
+      "parameters": 2848,
+      "training_tokens": 102400,
+      "training_seconds": 0.2733733539998866,
+      "training_tokens_per_second": 374579.3015366175,
+      "initial_nats": 3.234711176991534,
+      "final_nats": 0.9833359984498157,
+      "final_bpc": 1.4186539684911466,
+      "evaluation_seconds": 0.008576514000196767,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.52491221162827
+        },
+        {
+          "step": 200,
+          "train_loss": 1.2004725243191054
+        },
+        {
+          "step": 300,
+          "train_loss": 1.1065604981509163
+        },
+        {
+          "step": 400,
+          "train_loss": 0.9041212027701238
+        }
+      ]
+    },
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.10489050055184634,
+      "decode_p95_ms": 0.4307424001581236,
+      "greedy_sample": ". then frank went home.\neve put the gold book in the room. then carol went home.\neve put the gold book in the room. then",
+      "kind": "recurrent",
+      "width": 34,
+      "seed": 1,
+      "parameters": 2856,
+      "training_tokens": 102400,
+      "training_seconds": 0.3376684800005023,
+      "training_tokens_per_second": 303256.0220007733,
+      "initial_nats": 3.2064461269244475,
+      "final_nats": 0.32622961624621677,
+      "final_bpc": 0.47064984954952654,
+      "evaluation_seconds": 0.012093951000679226,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.1013026511740795
+        },
+        {
+          "step": 200,
+          "train_loss": 0.6066660254231303
+        },
+        {
+          "step": 300,
+          "train_loss": 0.38676652035336034
+        },
+        {
+          "step": 400,
+          "train_loss": 0.3126215623835095
+        }
+      ]
+    },
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.06799050015615649,
+      "decode_p95_ms": 0.15671960040890554,
+      "greedy_sample": " bol gooome thome thome bom. the the.\nd bome puthe bolll booom. the thol thooom. thome thome rome. the the.\nd romen puth",
+      "kind": "attention",
+      "width": 16,
+      "seed": 2,
+      "parameters": 2848,
+      "training_tokens": 102400,
+      "training_seconds": 0.3177341130003697,
+      "training_tokens_per_second": 322282.04593153286,
+      "initial_nats": 3.2496525527362823,
+      "final_nats": 1.056050780347563,
+      "final_bpc": 1.5235592237343492,
+      "evaluation_seconds": 0.007899403000010352,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.6559914774498128
+        },
+        {
+          "step": 200,
+          "train_loss": 1.2429753739580076
+        },
+        {
+          "step": 300,
+          "train_loss": 1.1780402784997803
+        },
+        {
+          "step": 400,
+          "train_loss": 1.0924456033051384
+        }
+      ]
+    },
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.10052299967355793,
+      "decode_p95_ms": 0.22992039985183502,
+      "greedy_sample": ". then eve went home.\neve put the green book in the house. then alice went home.\neve put the green book in the house. th",
+      "kind": "recurrent",
+      "width": 34,
+      "seed": 2,
+      "parameters": 2856,
+      "training_tokens": 102400,
+      "training_seconds": 0.3077806600003896,
+      "training_tokens_per_second": 332704.46557581093,
+      "initial_nats": 3.2246946706460866,
+      "final_nats": 0.3177554389033728,
+      "final_bpc": 0.458424195921392,
+      "evaluation_seconds": 0.007336622000366333,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.2193497680335557
+        },
+        {
+          "step": 200,
+          "train_loss": 0.5824572684776345
+        },
+        {
+          "step": 300,
+          "train_loss": 0.40089082519574093
+        },
+        {
+          "step": 400,
+          "train_loss": 0.33768967935679783
+        }
+      ]
+    },
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.06722450007146108,
+      "decode_p95_ms": 0.11150850018566393,
+      "greedy_sample": " then hen then hen bome.\ne.\ne.\ne.\ne.\ne put t the the ren gren hen hen hen bomen. went put t t he.\nen hen hen hen he bome",
+      "kind": "attention",
+      "width": 16,
+      "seed": 3,
+      "parameters": 2848,
+      "training_tokens": 102400,
+      "training_seconds": 0.2730060849999063,
+      "training_tokens_per_second": 375083.214720416,
+      "initial_nats": 3.247477294344745,
+      "final_nats": 1.0070639786809286,
+      "final_bpc": 1.4528862079008844,
+      "evaluation_seconds": 0.007786696000039228,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.5378735777923402
+        },
+        {
+          "step": 200,
+          "train_loss": 1.2416943847446298
+        },
+        {
+          "step": 300,
+          "train_loss": 1.195341860552385
+        },
+        {
+          "step": 400,
+          "train_loss": 1.0450015343907446
+        }
+      ]
+    },
+    {
+      "decode_mode": "batch1 greedy sliding32 full-window recomputation, no KV/recurrent caching",
+      "decode_p50_ms": 0.09755900009622565,
+      "decode_p95_ms": 0.14352545008478035,
+      "greedy_sample": ". then carol went home.\neve put the green cup in the hall. then carol went home.\neve put the green cup in the hall. then",
+      "kind": "recurrent",
+      "width": 34,
+      "seed": 3,
+      "parameters": 2856,
+      "training_tokens": 102400,
+      "training_seconds": 0.32818051499998546,
+      "training_tokens_per_second": 312023.39968295966,
+      "initial_nats": 3.2287608838773103,
+      "final_nats": 0.33353064004680943,
+      "final_bpc": 0.4811830003800539,
+      "evaluation_seconds": 0.007001946999480424,
+      "history": [
+        {
+          "step": 100,
+          "train_loss": 1.2582794723903914
+        },
+        {
+          "step": 200,
+          "train_loss": 0.6082576005468838
+        },
+        {
+          "step": 300,
+          "train_loss": 0.43779805206982686
+        },
+        {
+          "step": 400,
+          "train_loss": 0.32005170797745414
+        }
+      ]
+    }
+  ]
+}
