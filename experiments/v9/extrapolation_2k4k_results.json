@@ -1,0 +1,396 @@
+{
+  "scope": "Same v9 trained weights, no retuning;3-bit single-symbol recall, not long-text memory. Unseen sinusoidal positions/context lengths may confound Transformer extrapolation. Length units are vocabulary symbols, not bytes.",
+  "original_results_sha256": "aab97fec7abac19bc9cc12e29546bb21a550db972c10dde1e15fdc7fa11df7b5",
+  "extension_protocol_sha256": "d614257536d6f34b151a2c78dcf24f9b75661db0a277b97b0cd55d82f2409c76",
+  "source_sha256": "cbe06a6dd9a4549e406948da8fd0965886819184fccf3675c8934a602f988bd9",
+  "rows": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "learning_rate": 0.01,
+      "weights_sha256": "e44764291be2c60f3a5492bc46fc65693d78dd400ab73db69176eb0e003a74f8",
+      "identical_original_weights": true,
+      "parameters": 13728,
+      "reconstruction_training_seconds": 2.2821669110053335,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 7.601120577515063,
+          "evaluation_wall_seconds": 1.324023314002261,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 35651584,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 7.1116039851732715,
+          "evaluation_wall_seconds": 2.687181811998016,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 71303168,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    },
+    {
+      "kind": "recurrent",
+      "seed": 1,
+      "learning_rate": 0.003,
+      "weights_sha256": "7a5716d7cd5ef5b5bbf1f17959c957bb19149d352ec2a64348a175fa9ad22015",
+      "identical_original_weights": true,
+      "parameters": 13736,
+      "reconstruction_training_seconds": 1.120762183003535,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0028413238496225396,
+          "evaluation_wall_seconds": 2.2251666489974014,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.006145316190788349,
+          "evaluation_wall_seconds": 4.9892149820007035,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "learning_rate": 0.01,
+      "weights_sha256": "c31c8d522492d80aa1fcbe03b5111da6257959c1e778ca95acbaad558d99c92f",
+      "identical_original_weights": true,
+      "parameters": 13728,
+      "reconstruction_training_seconds": 2.509176257000945,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 5.627917999191404,
+          "evaluation_wall_seconds": 1.5863388599973405,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 35651584,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 6.85611345634682,
+          "evaluation_wall_seconds": 2.9098131400023703,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 71303168,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    },
+    {
+      "kind": "recurrent",
+      "seed": 2,
+      "learning_rate": 0.003,
+      "weights_sha256": "71a9ba9508b810c47d21e1e31fd122f67a3f4a6a64fd00aba60727afcc22cce3",
+      "identical_original_weights": true,
+      "parameters": 13736,
+      "reconstruction_training_seconds": 1.2574731250060722,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0019246047446561994,
+          "evaluation_wall_seconds": 2.035178463003831,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0019242851841526076,
+          "evaluation_wall_seconds": 3.8387515780050308,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "learning_rate": 0.01,
+      "weights_sha256": "609b21b591a4f8f852feca2a15fcadd84d8e8dafaca660e56cb3a36ec169feb2",
+      "identical_original_weights": true,
+      "parameters": 13728,
+      "reconstruction_training_seconds": 1.5337386390019674,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 10.007652005015052,
+          "evaluation_wall_seconds": 1.2271919370032265,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 35651584,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 128,
+          "query_accuracy": 0.125,
+          "query_ce_nats": 10.484855829328502,
+          "evaluation_wall_seconds": 3.0287986030016327,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 71303168,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    },
+    {
+      "kind": "recurrent",
+      "seed": 3,
+      "learning_rate": 0.003,
+      "weights_sha256": "2fbd82dc7ca285f1f9869b65f8675e61d590b5a1fdd319854a3220c5a2e20471",
+      "identical_original_weights": true,
+      "parameters": 13736,
+      "reconstruction_training_seconds": 1.286958222000976,
+      "evaluations": {
+        "2048": {
+          "length_symbols": 2048,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0008443324266445441,
+          "evaluation_wall_seconds": 2.4232488080015173,
+          "batch_size": 16,
+          "data_arrays_bytes": 33554432,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "6bbf8ab4eb860b6dda75c2742d6742f4514580318dd992a6b19c756bdd3039b1",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        },
+        "4096": {
+          "length_symbols": 4096,
+          "queries": 1024,
+          "target_counts": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "correct": 1024,
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0008444600684169284,
+          "evaluation_wall_seconds": 4.872005612000066,
+          "batch_size": 16,
+          "data_arrays_bytes": 67108864,
+          "named_model_cache_bytes_estimate": 25856,
+          "cache_estimate_note": "Named main arrays only, excludes temporary normalization/BLAS allocations, parameters, Python overhead and process RSS. No speed comparison.",
+          "input_sha256": "ea34f8b42f0a1ec11281c9a08371450fe2b702af5ee09d70cfedc155fad37795",
+          "extrapolation": true,
+          "target_class_chance": 0.125
+        }
+      }
+    }
+  ],
+  "summary": {
+    "transformer": {
+      "2048": {
+        "query_accuracy": 0.125,
+        "query_ce_nats": 7.745563527240506
+      },
+      "4096": {
+        "query_accuracy": 0.125,
+        "query_ce_nats": 8.15085775694953
+      }
+    },
+    "recurrent": {
+      "2048": {
+        "query_accuracy": 1.0,
+        "query_ce_nats": 0.0018700870069744276
+      },
+      "4096": {
+        "query_accuracy": 1.0,
+        "query_ce_nats": 0.002971353814452628
+      }
+    }
+  }
+}

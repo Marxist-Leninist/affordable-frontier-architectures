@@ -1,0 +1,13 @@
+{
+  "prepared_utc": "2026-11-03T20:17:02.103903+00:00",
+  "training_started": false,
+  "artifacts": {
+    "protocol.json": "cacb98fb0a26a124233ac8d963cac59313cc365dfb5ff9b206c143db78387053",
+    "models.py": "b8a55f0aae5ac7bbe1d60ccac0df293034be4aef9d364880294e82f12966fd85",
+    "run.py": "6a737462686043d1b081dbf9b252cc0efb6730fd2e9631f446f8833dccf6c09b",
+    "test_models.py": "99d81f5a1eb92f2f3a25d140bd5f45b1bf72463f45ba73c1d974aae23761d87c",
+    "test_base_models.py": "92b75b0c3746a868f2563799d66ce8a99f8b872bfb1e367097d8a97f7302912f",
+    "model_tests.json": "303a14a30f99bf66dbe5182497f139483c25703ee2ce0ffea812e1fa132540f9"
+  },
+  "pretraining_protocol_wording_fix_utc": "2026-11-03T20:17:08.298951+00:00"
+}

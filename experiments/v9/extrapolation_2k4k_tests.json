@@ -1,0 +1,150 @@
+{
+  "random": {
+    "Transformer": {
+      "8": {
+        "probability_max_absolute_error": 1.6653345369377348e-16,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 8.326672684688674e-17,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 1.1102230246251565e-16,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 3.3306690738754696e-16,
+        "query_ce_agrees": true
+      }
+    },
+    "Recurrent": {
+      "8": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      }
+    }
+  },
+  "trained": {
+    "transformer_1": {
+      "8": {
+        "probability_max_absolute_error": 6.505213034913027e-19,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 5.149960319306146e-19,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 1.0299920638612292e-18,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 2.498001805406602e-16,
+        "query_ce_agrees": true
+      }
+    },
+    "recurrent_1": {
+      "8": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 5.421010862427522e-20,
+        "query_ce_agrees": true
+      }
+    },
+    "transformer_2": {
+      "8": {
+        "probability_max_absolute_error": 1.8973538018496328e-19,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 4.607859233063394e-19,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 1.3877787807814457e-17,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 7.28583859910259e-17,
+        "query_ce_agrees": true
+      }
+    },
+    "recurrent_2": {
+      "8": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 2.710505431213761e-20,
+        "query_ce_agrees": true
+      }
+    },
+    "transformer_3": {
+      "8": {
+        "probability_max_absolute_error": 5.421010862427522e-19,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 1.2197274440461925e-19,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 5.204170427930421e-18,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 2.498001805406602e-16,
+        "query_ce_agrees": true
+      }
+    },
+    "recurrent_3": {
+      "8": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "64": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "128": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      },
+      "256": {
+        "probability_max_absolute_error": 0.0,
+        "query_ce_agrees": true
+      }
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "selected_rates": {
+    "transformer": 0.01,
+    "recurrent": 0.003
+  },
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 13728,
+      "width": 32,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 2.296408442998654,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 1.880986260200804
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.05035536738250951
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.015011613162902615
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.008669301107097294
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.008352818349477282,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.008899173164219894,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.008433626893293477,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.008915396428068352,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.008650253708764752
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 13728,
+      "width": 32,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 2.4285206220010878,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 0.06301520313217612
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.006870358930086196
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.0028999125138328696
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.0017828171417969552
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0017543887286622494,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0018460867851088185,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0017778234541765102,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0018061319547103029,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.0017961077306644702
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 13728,
+      "width": 32,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 2.415232666004158,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 0.004994407016035984
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.0014413186266588607
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.0007335816292333153
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.0004264254862671457
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0004478787488378169,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.00046018369413224763,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0004500180507390483,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0004598815507136072,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.00045449051110568
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 13736,
+      "width": 101,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 1.1687702119961614,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 2.013822972833558
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.11692588403312087
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.013670809290910524
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.007088039569440097
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.007040353217224717,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.005916710986619039,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.006852672015499259,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.00779952030631698,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.006902314131414998
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 13736,
+      "width": 101,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 1.131260022004426,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 0.35851943243922946
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.007329013817915342
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.0021130658332272345
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.0011362237445906587
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.00106908245520476,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0011896149549942368,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0013521624956150113,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 1.0,
+          "query_ce_nats": 0.0014112647204561311,
+          "correct": 1024,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.0012555311565675348
+    },
+    {
+      "kind": "recurrent",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 13736,
+      "width": 101,
+      "training_input_tokens": 192000,
+      "supervised_queries": 6400,
+      "train_queries_by_length": {
+        "8": 1600,
+        "16": 1600,
+        "32": 1600,
+        "64": 1600
+      },
+      "training_batches_sha256": "d21a017c2c4041eeee137a4f278c1b43ac677a551c9ba02d15d90ff03278f82d",
+      "training_seconds": 1.0543714130035369,
+      "trace": [
+        {
+          "step": 100,
+          "batch_query_ce_nats": 2.059282790759098
+        },
+        {
+          "step": 200,
+          "batch_query_ce_nats": 0.826271037601723
+        },
+        {
+          "step": 300,
+          "batch_query_ce_nats": 0.5693504415836035
+        },
+        {
+          "step": 400,
+          "batch_query_ce_nats": 0.802378708243402
+        }
+      ],
+      "validation": {
+        "8": {
+          "query_accuracy": 0.625,
+          "query_ce_nats": 0.5393918235211628,
+          "correct": 640,
+          "queries": 1024,
+          "input_tokens": 8192,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "16": {
+          "query_accuracy": 0.625,
+          "query_ce_nats": 0.5393810428872127,
+          "correct": 640,
+          "queries": 1024,
+          "input_tokens": 16384,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "32": {
+          "query_accuracy": 0.625,
+          "query_ce_nats": 0.539397494553636,
+          "correct": 640,
+          "queries": 1024,
+          "input_tokens": 32768,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        },
+        "64": {
+          "query_accuracy": 0.625,
+          "query_ce_nats": 0.5394017548105038,
+          "correct": 640,
+          "queries": 1024,
+          "input_tokens": 65536,
+          "extrapolation": false,
+          "target_class_chance": 0.125
+        }
+      },
+      "validation_mean_query_ce_nats": 0.5393930289431288
+    }
+  ]
+}

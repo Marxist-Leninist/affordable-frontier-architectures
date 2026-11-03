@@ -1,0 +1,141 @@
+{
+  "base_models": {
+    "Transformer": {
+      "sampled_gradient_max_absolute_errors": {
+        "E": 1.7384496620032053e-11,
+        "U": 4.101494144315154e-11,
+        "Q": 2.6044597034591277e-11,
+        "K": 2.2809733268847054e-11,
+        "V": 3.100078527218386e-11,
+        "O": 4.1439546238919434e-11,
+        "F": 5.370846822838615e-11,
+        "G": 3.162421713387431e-11,
+        "n1s": 2.158770384674824e-11,
+        "n1b": 1.9555974461321624e-11,
+        "n2s": 3.67471747475534e-11,
+        "n2b": 2.9263081541275326e-11,
+        "nfs": 3.803707349092633e-11,
+        "nfb": 2.9716253763245604e-11,
+        "fb": 2.5351887473004653e-11,
+        "gb": 3.01489527787524e-11
+      },
+      "causal_mask": "passed",
+      "batch_invariance": "passed",
+      "sgd_loss_before": 2.9078478633290032,
+      "sgd_loss_after": 2.902568136725463
+    },
+    "Recurrent": {
+      "sampled_gradient_max_absolute_errors": {
+        "E": 1.4813331117302653e-11,
+        "U": 3.373851198418265e-11,
+        "R": 2.373250901355206e-11,
+        "b": 2.6989396828547285e-11
+      },
+      "causal_mask": "passed",
+      "batch_invariance": "passed",
+      "sgd_loss_before": 1.9754702633211707,
+      "sgd_loss_after": 1.975139661523721
+    }
+  },
+  "Transformer": {
+    "masked_gradient_max_absolute_errors": {
+      "E": 3.8721942319241975e-11,
+      "U": 3.5142905946417e-11,
+      "Q": 6.801540331381056e-11,
+      "K": 8.414666706479945e-11,
+      "V": 4.8669502455966906e-11,
+      "O": 5.106875339278005e-11,
+      "F": 6.698806106716394e-11,
+      "G": 6.653073231221995e-11,
+      "n1s": 1.6427892379766718e-10,
+      "n1b": 8.72232008841678e-11,
+      "n2s": 2.8488850167818214e-11,
+      "n2b": 4.3949402277199123e-11,
+      "nfs": 3.5150937716110775e-11,
+      "nfb": 5.922173862416003e-11,
+      "fb": 6.284652659394041e-11,
+      "gb": 4.0053696470643274e-11
+    },
+    "nonquery_direct_gradient_exact_zero": true,
+    "query_only_ce": true,
+    "batch_gradient_invariance": true,
+    "empty_mask_rejected": true
+  },
+  "Recurrent": {
+    "masked_gradient_max_absolute_errors": {
+      "E": 2.935385268187929e-11,
+      "U": 4.580980560164871e-11,
+      "R": 2.6906331329623612e-11,
+      "b": 6.648995243274669e-11
+    },
+    "nonquery_direct_gradient_exact_zero": true,
+    "query_only_ce": true,
+    "batch_gradient_invariance": true,
+    "empty_mask_rejected": true
+  },
+  "data": {
+    "balanced_evaluation": true,
+    "split_hashes": {
+      "validation_8": "7c4c207459e5f96bd7e69b282c395c27e9aa57d30cec46df9eb496a20eef8147",
+      "validation_16": "b257b18ae123dcc66aec5fbb83d81f214f118bbe73a2ede286f7cd7f98373006",
+      "validation_32": "632a8905e98767ded8a7ad59925d29d381c0acddc1641cc4ec973766a3439840",
+      "validation_64": "924e995773059bac05fa9defcd05b6d45c70fccd0c50a0cab58088d915193538",
+      "validation_128": "e10d0ecede523fc513e98509b72fe6171f5e8afab62147cf2e850e9f9372ee77",
+      "validation_256": "4a5ec91450a3680c9ede82f4e9372e11156542402d8aa8b67c1d79afe1bb4d2e",
+      "test_8": "298259d506f87487b593000f53bde4273c41f5cb3dd9cc6dcc3b38f4aca6e48b",
+      "test_16": "15e0bae5f242380152d4ca037bd95df411b8915ce223d4a74ff6a4b919b4d0e9",
+      "test_32": "10268917ee67d24e7aefdb7f6996b87319f1557c349782c2eba1b93133b7a52f",
+      "test_64": "4caf97973bf935277f7df5c3afb0f71fc83a65fd3d3a450d1b022deef2f08342",
+      "test_128": "ea72e18fd653eadead15bbeec2141a06a8d3159a48fda036920ff82148827767",
+      "test_256": "450927ed8a534c7f62665d6ba8d4e54927763717422d3de431f349c5cb919abe"
+    },
+    "paired_deterministic_train_schedules": {
+      "101": {
+        "input_tokens": 192000,
+        "queries": 6400,
+        "queries_by_length": {
+          "8": 1600,
+          "16": 1600,
+          "32": 1600,
+          "64": 1600
+        }
+      },
+      "1": {
+        "input_tokens": 192000,
+        "queries": 6400,
+        "queries_by_length": {
+          "8": 1600,
+          "16": 1600,
+          "32": 1600,
+          "64": 1600
+        }
+      },
+      "2": {
+        "input_tokens": 192000,
+        "queries": 6400,
+        "queries_by_length": {
+          "8": 1600,
+          "16": 1600,
+          "32": 1600,
+          "64": 1600
+        }
+      },
+      "3": {
+        "input_tokens": 192000,
+        "queries": 6400,
+        "queries_by_length": {
+          "8": 1600,
+          "16": 1600,
+          "32": 1600,
+          "64": 1600
+        }
+      }
+    }
+  },
+  "parameters": {
+    "transformer_width": 32,
+    "transformer_count": 13728,
+    "recurrent_width": 101,
+    "recurrent_count": 13736
+  }
+}

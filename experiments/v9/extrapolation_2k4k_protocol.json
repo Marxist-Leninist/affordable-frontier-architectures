@@ -1,0 +1,15 @@
+{
+ "declared_before_run":true,
+ "lengths_symbols":[2048,4096],
+ "cases_per_length":1024,
+ "balanced_targets":128,
+ "models":"Same6 v9 final models; reconstruct deterministic training and require exact original weight SHA256 before evaluation",
+ "seeds":[1,2,3],
+ "learning_rates":{"transformer":0.01,"recurrent":0.003},
+ "no_retune":true,
+ "heldout_rng":"300000+length, matching original test generator convention",
+ "implementation":"Transformer last-query only exact one-layer forward; recurrent state-only forward; compare probabilities and CE with full reference at8/64/128/256 for random and every trained model",
+ "metrics":["full17-way query crossentropy nats","full17-way argmax accuracy"],
+ "resources":"Scratch CPU single BLAS thread, batch16, linear attention cache; report array estimates and walltimes, no speed claims",
+ "interpretation":"Only3bits of remembered target. Not long-text memory. Transformer extrapolates absolute sinusoidal positions and context far beyond training length64."
+}

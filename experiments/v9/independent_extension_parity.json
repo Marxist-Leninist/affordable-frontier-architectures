@@ -1,0 +1,28 @@
+{
+  "Transformer": {
+    "random_seed": 913,
+    "lengths": [
+      1,
+      2,
+      7,
+      31,
+      65,
+      129
+    ],
+    "maximum_probability_error": 2.498001805406602e-16,
+    "dtype": "float64"
+  },
+  "Recurrent": {
+    "random_seed": 913,
+    "lengths": [
+      1,
+      2,
+      7,
+      31,
+      65,
+      129
+    ],
+    "maximum_probability_error": 1.3877787807814457e-17,
+    "dtype": "float64"
+  }
+}
