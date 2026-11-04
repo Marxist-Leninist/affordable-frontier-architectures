@@ -1,0 +1,134 @@
+{
+  "scope": "Illustrative arithmetic, not measured service capacity or actual user workload",
+  "hourly_usd": 1.0,
+  "utilization": 0.6,
+  "margin": 0.3,
+  "prices_per_million": {
+    "uncached": 0.05,
+    "cached": 0.001,
+    "output": 0.1
+  },
+  "cached_work_fraction": 0.1,
+  "ledger": {
+    "uncached": 10000000.0,
+    "cached": 5000000.0,
+    "visible": 2000000.0,
+    "hidden": 2000000.0
+  },
+  "output_only": {
+    "ut1.0_hidden_billableTrue": 3968.2539682539687,
+    "ut1.0_hidden_billableFalse": 7936.507936507937,
+    "ut0.6_hidden_billableTrue": 6613.756613756615,
+    "ut0.6_hidden_billableFalse": 13227.51322751323
+  },
+  "rows": [
+    {
+      "hidden_billable": true,
+      "other_usd": 0.0,
+      "prefill_tps": 8000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.6335,
+      "prefill_cost": 0.607638888888889,
+      "required_busy_generated_tps": 71607.59040458301
+    },
+    {
+      "hidden_billable": true,
+      "other_usd": 0.0,
+      "prefill_tps": 80000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.6335,
+      "prefill_cost": 0.06076388888888889,
+      "required_busy_generated_tps": 3233.3422250244525
+    },
+    {
+      "hidden_billable": true,
+      "other_usd": 0.0,
+      "prefill_tps": 800000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.6335,
+      "prefill_cost": 0.006076388888888889,
+      "required_busy_generated_tps": 2951.517633473162
+    },
+    {
+      "hidden_billable": true,
+      "other_usd": 0.1,
+      "prefill_tps": 8000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.5335,
+      "prefill_cost": 0.607638888888889,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hidden_billable": true,
+      "other_usd": 0.1,
+      "prefill_tps": 80000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.5335,
+      "prefill_cost": 0.06076388888888889,
+      "required_busy_generated_tps": 3917.305677155253
+    },
+    {
+      "hidden_billable": true,
+      "other_usd": 0.1,
+      "prefill_tps": 800000,
+      "revenue": 0.905,
+      "hardware_budget_after_other_usd": 0.5335,
+      "prefill_cost": 0.006076388888888889,
+      "required_busy_generated_tps": 3511.1280815635055
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.0,
+      "prefill_tps": 8000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.49349999999999994,
+      "prefill_cost": 0.607638888888889,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.0,
+      "prefill_tps": 80000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.49349999999999994,
+      "prefill_cost": 0.06076388888888889,
+      "required_busy_generated_tps": 4279.402167517199
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.0,
+      "prefill_tps": 800000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.49349999999999994,
+      "prefill_cost": 0.006076388888888889,
+      "required_busy_generated_tps": 3799.265791885719
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.1,
+      "prefill_tps": 8000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.39349999999999996,
+      "prefill_cost": 0.607638888888889,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.1,
+      "prefill_tps": 80000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.39349999999999996,
+      "prefill_cost": 0.06076388888888889,
+      "required_busy_generated_tps": 5565.527124987826
+    },
+    {
+      "hidden_billable": false,
+      "other_usd": 0.1,
+      "prefill_tps": 800000,
+      "revenue": 0.705,
+      "hardware_budget_after_other_usd": 0.39349999999999996,
+      "prefill_cost": 0.006076388888888889,
+      "required_busy_generated_tps": 4779.914798018725
+    }
+  ]
+}

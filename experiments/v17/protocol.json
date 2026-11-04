@@ -1,0 +1,17 @@
+{
+  "experiment": "v17 exact local-attention chunked prefill",
+  "dataset_manifest_sha256": "6efe3988cd7c054c6239e0508a4ee9900a1ebe567be33f8dfbe2a4533cd0ffa3",
+  "source_hashes": {
+    "run.py": "550053cad730aa51eb21a4f96c1986e94d9a20f0ca279aaf3715d6de808cd543",
+    "prefill.py": "8a22d8f934ad2f2c64ab268a5fe0866f0826afe16c60ccc0d35869742fe3cd30",
+    "local_attention.py": "f33dd75a98b814479fb45f71403d72e8d28bd97c4f5c23a1fe3fe35c289ee0fa",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "prepare_data.py": "d005f4b69020a0120c04197469fd3267aa9806fc0193a6e9ce9c30430a461bfd"
+  },
+  "settings": "Fresh rows200-299;fixed chunk128 from attention window;frozen v14 seeds1/2/3;no fitting/tuning;score identical last128 targets per512/2048 document window.",
+  "quality_gate": "Every window abs bpb difference<=2e-6 and max local logits difference<=1e-4; no quality-reducing approximation. Preserve failed results.",
+  "baseline": "Both monolithic and chunked compute only required final output-tail head. Full Transformer and GRU receive same output-head optimization.",
+  "v14_checkpoint_manifest_sha256": "4dd235df02ff05a206f745307bea85b1fbb456bcc616fd76ca0bd1d6269d0c4c",
+  "torch": "2.6.0+cpu",
+  "memory": "Persistent state measured; largest explicit mask shape derived separately, not measured whole-process peak. No linear-cost or throughput claim from shape alone."
+}

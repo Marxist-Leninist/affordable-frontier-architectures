@@ -1,0 +1,343 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "seed": 1,
+      "input_bytes": 512,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 2.7546528613697774e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        1048576,
+        1048576,
+        1048576
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 512,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 1.579750619207232e-07,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 512,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 8.484502922456727e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 512,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 8.379533023017416e-08,
+      "max_ordinary_prefill_logit_error": 1.52587890625e-05,
+      "max_next_byte_continuation_error": 3.814697265625e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 2048,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 4.989782009801047e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        4194304,
+        4194304,
+        4194304
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 2048,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 1.431650522576433e-07,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 2048,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.5673081700291505e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 1,
+      "input_bytes": 2048,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 9.232856390539723e-08,
+      "max_ordinary_prefill_logit_error": 1.621246337890625e-05,
+      "max_next_byte_continuation_error": 5.7220458984375e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 512,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.954681991937605e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        1048576,
+        1048576,
+        1048576
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 512,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 1.35485734631402e-07,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 512,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 4.731954517112058e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 512,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 6.880163105904558e-08,
+      "max_ordinary_prefill_logit_error": 1.049041748046875e-05,
+      "max_next_byte_continuation_error": 3.337860107421875e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 2048,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 4.7853879081571904e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        4194304,
+        4194304,
+        4194304
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 2048,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 1.398709317257385e-07,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 2048,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.5573860624491545e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 2,
+      "input_bytes": 2048,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 9.0912373185148e-08,
+      "max_ordinary_prefill_logit_error": 1.1444091796875e-05,
+      "max_next_byte_continuation_error": 3.814697265625e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 512,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.857770180028865e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        1048576,
+        1048576,
+        1048576
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 512,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 3.9706562038333004e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 512,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 2.268327348176058e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 512,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.808185932210108e-08,
+      "max_ordinary_prefill_logit_error": 1.52587890625e-05,
+      "max_next_byte_continuation_error": 3.814697265625e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 2048,
+      "model": "full_transformer",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 4.841335776717415e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        4194304,
+        4194304,
+        4194304
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 2048,
+      "model": "gru",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.901010347031388e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        512,
+        512,
+        512
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 2048,
+      "model": "local_monolithic",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 5.056613083809225e-08,
+      "max_ordinary_prefill_logit_error": 0.0,
+      "max_next_byte_continuation_error": 0.0,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    },
+    {
+      "seed": 3,
+      "input_bytes": 2048,
+      "model": "local_chunked",
+      "sampled_windows": 3,
+      "max_fresh_loss_error": 6.852755296549162e-08,
+      "max_ordinary_prefill_logit_error": 1.049041748046875e-05,
+      "max_next_byte_continuation_error": 3.814697265625e-06,
+      "allocated_state_bytes": [
+        130064,
+        130064,
+        130064
+      ]
+    }
+  ],
+  "scope": "Three actual windows for every model/seed/length row,ordinary full-head forward as independent comparator,plus all stored means/target IDs/gates. No latency rerun;not a full fresh neural rescore.",
+  "seconds": 5.308859695011051
+}

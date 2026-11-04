@@ -1,0 +1,25 @@
+{
+  "cohort_rows": [
+    200,
+    202,
+    205,
+    206,
+    207,
+    210,
+    211,
+    212
+  ],
+  "prefix_bytes": [
+    128,
+    512,
+    2048
+  ],
+  "chunk_size_fixed": 128,
+  "output_head": "final1 position for all neural monolithic/chunked prefill",
+  "repetitions": 6,
+  "warmups": 2,
+  "retained": 32,
+  "ordering": "seed17112026 permutation of variants per document/repetition; paired local measurements on same document/repetition;statistical onlyseed1",
+  "distributions": 33,
+  "scope": "Single CPU thread float32 batch1;32 observed updates;no sampling/network/queue/service cost;timing after audits"
+}

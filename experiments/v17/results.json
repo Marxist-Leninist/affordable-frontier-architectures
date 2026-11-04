@@ -1,0 +1,121 @@
+{
+  "protocol_sha256": "526496e2540cfd36609e4a09116dfee5b0154dc1de18253388935d1e055e946e",
+  "rows": [
+    {
+      "seed": 1,
+      "input_bytes": 512,
+      "windows": 496,
+      "targets": 63488,
+      "documents": 98,
+      "mean_bpb": {
+        "full_transformer": 5.726704001749671,
+        "local_monolithic": 3.0415910712348584,
+        "local_chunked": 3.041591069876038,
+        "gru": 2.9961205920146026
+      },
+      "max_abs_local_logits_error": 2.47955322265625e-05,
+      "max_abs_local_state_error": 5.7220458984375e-06,
+      "max_abs_window_bpb_error": 2.3618222932952904e-07,
+      "mean_chunked_minus_monolithic_bpb": -1.3588202722512473e-09,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    },
+    {
+      "seed": 1,
+      "input_bytes": 2048,
+      "windows": 94,
+      "targets": 12032,
+      "documents": 61,
+      "mean_bpb": {
+        "full_transformer": 5.570016583568016,
+        "local_monolithic": 2.9952682555392545,
+        "local_chunked": 2.99526825143644,
+        "gru": 2.953347291544725
+      },
+      "max_abs_local_logits_error": 2.8133392333984375e-05,
+      "max_abs_local_state_error": 4.76837158203125e-06,
+      "max_abs_window_bpb_error": 1.3965192824372252e-07,
+      "mean_chunked_minus_monolithic_bpb": -4.102814764051652e-09,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    },
+    {
+      "seed": 2,
+      "input_bytes": 512,
+      "windows": 496,
+      "targets": 63488,
+      "documents": 98,
+      "mean_bpb": {
+        "full_transformer": 5.787843387629404,
+        "local_monolithic": 3.05766313982352,
+        "local_chunked": 3.057663136945155,
+        "gru": 2.946246602019005
+      },
+      "max_abs_local_logits_error": 2.3365020751953125e-05,
+      "max_abs_local_state_error": 6.67572021484375e-06,
+      "max_abs_window_bpb_error": 2.0389349408844737e-07,
+      "mean_chunked_minus_monolithic_bpb": -2.8783650977925655e-09,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    },
+    {
+      "seed": 2,
+      "input_bytes": 2048,
+      "windows": 94,
+      "targets": 12032,
+      "documents": 61,
+      "mean_bpb": {
+        "full_transformer": 5.734563232622658,
+        "local_monolithic": 3.0015489117623377,
+        "local_chunked": 3.0015489161298943,
+        "gru": 2.8909776873655395
+      },
+      "max_abs_local_logits_error": 2.47955322265625e-05,
+      "max_abs_local_state_error": 4.76837158203125e-06,
+      "max_abs_window_bpb_error": 1.2419773742777807e-07,
+      "mean_chunked_minus_monolithic_bpb": 4.367556609518916e-09,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    },
+    {
+      "seed": 3,
+      "input_bytes": 512,
+      "windows": 496,
+      "targets": 63488,
+      "documents": 98,
+      "mean_bpb": {
+        "full_transformer": 5.368529212057306,
+        "local_monolithic": 3.03669534352998,
+        "local_chunked": 3.036695343466666,
+        "gru": 2.9598409372737726
+      },
+      "max_abs_local_logits_error": 3.814697265625e-05,
+      "max_abs_local_state_error": 5.7220458984375e-06,
+      "max_abs_window_bpb_error": 1.664402411449828e-07,
+      "mean_chunked_minus_monolithic_bpb": -6.331392668210772e-11,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    },
+    {
+      "seed": 3,
+      "input_bytes": 2048,
+      "windows": 94,
+      "targets": 12032,
+      "documents": 61,
+      "mean_bpb": {
+        "full_transformer": 5.4264088745166275,
+        "local_monolithic": 2.987214589866742,
+        "local_chunked": 2.9872145837839885,
+        "gru": 2.904829101550853
+      },
+      "max_abs_local_logits_error": 2.47955322265625e-05,
+      "max_abs_local_state_error": 6.67572021484375e-06,
+      "max_abs_window_bpb_error": 1.3259795172970712e-07,
+      "mean_chunked_minus_monolithic_bpb": -6.08275329632666e-09,
+      "all_allocated_storage_equal": true,
+      "strict_quality_parity": true
+    }
+  ],
+  "all_quality_gates_pass": true,
+  "wall_seconds": 88.36149951300467
+}

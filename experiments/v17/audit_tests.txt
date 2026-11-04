@@ -1,0 +1,12 @@
+test_invalid (test_prefill.Tests.test_invalid) ... ok
+test_mask_shape_bound (test_prefill.Tests.test_mask_shape_bound) ... ok
+test_single_head_call_and_weights_unchanged (test_prefill.Tests.test_single_head_call_and_weights_unchanged) ... ok
+test_snapshot_protocol (test_prefill.Tests.test_snapshot_protocol) ... ok
+test_states_and_continuation (test_prefill.Tests.test_states_and_continuation) ... ok
+test_tail_across_partial_chunks (test_prefill.Tests.test_tail_across_partial_chunks) ... ok
+test_tail_target_alignment (test_prefill.Tests.test_tail_target_alignment) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.817s
+
+OK
