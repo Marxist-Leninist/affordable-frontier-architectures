@@ -1,0 +1,128 @@
+{
+  "quality": {
+    "transformer": {
+      "reset128": {
+        "mean_bpb": 3.0464096706421797,
+        "sample_seed_sd_bpb": 0.015340554865985952
+      },
+      "full512": {
+        "mean_bpb": 5.588126174064539,
+        "sample_seed_sd_bpb": 0.224521511331849
+      },
+      "primary128": {
+        "mean_bpb": 3.0697996947560204,
+        "sample_seed_sd_bpb": 0.011413228162140231
+      },
+      "local512": {
+        "mean_bpb": 3.026076548059597,
+        "sample_seed_sd_bpb": 0.013897529478334145
+      }
+    },
+    "gru": {
+      "reset128": {
+        "mean_bpb": 2.9751765209608916,
+        "sample_seed_sd_bpb": 0.02327465456121771
+      },
+      "full512": {
+        "mean_bpb": 2.9516857499438376,
+        "sample_seed_sd_bpb": 0.029107851484619075
+      },
+      "primary128": {
+        "mean_bpb": 2.994036972567166,
+        "sample_seed_sd_bpb": 0.02328417118265422
+      }
+    },
+    "ngram": {
+      "bpb": 3.3552384386729046,
+      "windows": 460,
+      "targets": 58880,
+      "documents": 98
+    }
+  },
+  "timing": {
+    "transformer": {
+      "128": {
+        "prefill_p50_ms": 1.5346600048360415,
+        "sequence_mean_decode_p50_ms": 0.579305406063213,
+        "end_to_end_p50_ms": 20.100980007555336,
+        "end_to_end_p95_ms": 25.783055206557034,
+        "final_state_tensor_bytes": 163840,
+        "allocated_state_storage_bytes": 163840
+      },
+      "512": {
+        "prefill_p50_ms": 6.722793004882988,
+        "sequence_mean_decode_p50_ms": 0.6333482031095627,
+        "end_to_end_p50_ms": 27.462674996058922,
+        "end_to_end_p95_ms": 34.58053780123009,
+        "final_state_tensor_bytes": 557056,
+        "allocated_state_storage_bytes": 557056
+      }
+    },
+    "local_transformer": {
+      "128": {
+        "prefill_p50_ms": 1.7497524895588867,
+        "sequence_mean_decode_p50_ms": 0.6454965937336965,
+        "end_to_end_p50_ms": 22.41579400288174,
+        "end_to_end_p95_ms": 27.217398746870455,
+        "final_state_tensor_bytes": 130064,
+        "allocated_state_storage_bytes": 130064
+      },
+      "512": {
+        "prefill_p50_ms": 7.78346700099064,
+        "sequence_mean_decode_p50_ms": 0.6583356407645624,
+        "end_to_end_p50_ms": 29.401080493698828,
+        "end_to_end_p95_ms": 33.72616954584373,
+        "final_state_tensor_bytes": 130064,
+        "allocated_state_storage_bytes": 130064
+      }
+    },
+    "gru": {
+      "128": {
+        "prefill_p50_ms": 3.981984998972621,
+        "sequence_mean_decode_p50_ms": 0.2703012344227318,
+        "end_to_end_p50_ms": 12.517014998593368,
+        "end_to_end_p95_ms": 16.119173745391883,
+        "final_state_tensor_bytes": 512,
+        "allocated_state_storage_bytes": 512
+      },
+      "512": {
+        "prefill_p50_ms": 14.837371498288121,
+        "sequence_mean_decode_p50_ms": 0.2902284998071991,
+        "end_to_end_p50_ms": 23.701272999460343,
+        "end_to_end_p95_ms": 28.378504650754618,
+        "final_state_tensor_bytes": 512,
+        "allocated_state_storage_bytes": 512
+      }
+    },
+    "ngram": {
+      "128": {
+        "prefill_p50_ms": 0.33631749829510227,
+        "sequence_mean_decode_p50_ms": 0.34333593748669955,
+        "end_to_end_p50_ms": 11.354568996466696,
+        "end_to_end_p95_ms": 12.52015734426095,
+        "final_state_tensor_bytes": null,
+        "allocated_state_storage_bytes": null
+      },
+      "512": {
+        "prefill_p50_ms": 0.33140499726869166,
+        "sequence_mean_decode_p50_ms": 0.35790187530437834,
+        "end_to_end_p50_ms": 11.771100507758092,
+        "end_to_end_p95_ms": 12.592776701058028,
+        "final_state_tensor_bytes": null,
+        "allocated_state_storage_bytes": null
+      }
+    }
+  },
+  "local_reset_gate": {
+    "all_seeds_within_two_sided_002": false,
+    "seed_gaps": [
+      -0.021449111375752256,
+      -0.021312022819764007,
+      -0.018238233552231795
+    ],
+    "primary128_max_window_delta": 0.0,
+    "interpretation": "Two-sided equality screen fails for2 seeds because candidate is better by slightly more than.02;not a harmful regression or a statistical noninferiority test."
+  },
+  "cache_reduction_544": 0.7665153952205882,
+  "economic_gate": "Unmeasured:CPU byte probes do not establish commercial-token cost or frontier quality."
+}

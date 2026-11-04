@@ -1,0 +1,14 @@
+test_cache_allocations_are_bounded_not_views (test_local_attention.Tests.test_cache_allocations_are_bounded_not_views) ... ok
+test_frozen_sources_and_fresh_snapshot (test_local_attention.Tests.test_frozen_sources_and_fresh_snapshot) ... ok
+test_full_chunked_and_trimmed_absolute_offsets (test_local_attention.Tests.test_full_chunked_and_trimmed_absolute_offsets) ... ok
+test_independent_local_attention_reference (test_local_attention.Tests.test_independent_local_attention_reference) ... ok
+test_single_layer_span_and_causality (test_local_attention.Tests.test_single_layer_span_and_causality) ... ok
+test_statistical_target_and_reset_context (test_local_attention.Tests.test_statistical_target_and_reset_context) ... ok
+test_target_windows_and_tail_alignment (test_local_attention.Tests.test_target_windows_and_tail_alignment) ... ok
+test_weights_and_short_context_parity (test_local_attention.Tests.test_weights_and_short_context_parity) ... ok
+test_window_one_and_invalid (test_local_attention.Tests.test_window_one_and_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.126s
+
+OK

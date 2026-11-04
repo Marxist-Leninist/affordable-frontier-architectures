@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v15 transfer and context failure
+## Latest experiment: v16 fixed-span attention safeguard
+
+[Full v16 report, audited source and measured results](experiments/v16/README.md). On fresh FineWeb-Edu rows 100–199, restricting each layer to 128 attended positions with unchanged weights restores the tiny Transformer's 512-context loss from **5.58813 to 3.02608 bits/byte**, slightly better than reset128 (**3.04641**). Original 128-window scores are unchanged. Actual persistent cache falls **76.65%** to 130,064 bytes, but the measured CPU probe is **about 7.1% slower**. This is a tested quality/memory safeguard, not a speedup, long-range task result, or frontier-cost pass.
+
+## Prior experiment: v15 transfer and context failure
 
 [Full v15 report, tested source and numerical results](experiments/v15/README.md). Frozen v14 models evaluated on 100 FineWeb-Edu documents reverse the statistical baseline's ranking: GRU **3.00234**, Transformer **3.07665**, statistical **3.43396 bits/byte**. On identical scored targets, increasing input from 128 to 512 bytes sharply degrades these short-context-trained Transformer checkpoints (**3.07523 → 5.61408**) while GRU slightly improves. Independent alignment, cached/full and attention checks support the result; a post-hoc WikiText control reproduces the length failure. This is not a general architecture verdict. No comparable-quality pair or commercial-token economic pass is established.
 

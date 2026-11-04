@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 7.990788830625206e-08,
+      "max_cached_full_logit_error": 2.09808349609375e-05,
+      "max_cached_full_loss_error": 1.693360953680667e-07,
+      "max_primary128_logit_error": 0.0,
+      "cache": {
+        "tensor_bytes": 130064,
+        "allocated_bytes": 130064
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 6.601366919767315e-08,
+      "max_cached_full_logit_error": 1.9073486328125e-05,
+      "max_cached_full_loss_error": 1.1600770344344369e-07,
+      "max_primary128_logit_error": 0.0,
+      "cache": {
+        "tensor_bytes": 130064,
+        "allocated_bytes": 130064
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 7.838196580678414e-08,
+      "max_cached_full_logit_error": 2.288818359375e-05,
+      "max_cached_full_loss_error": 9.455162874871803e-08,
+      "max_primary128_logit_error": 0.0,
+      "cache": {
+        "tensor_bytes": 130064,
+        "allocated_bytes": 130064
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 1.70061028814672e-07,
+      "max_cached_full_logit_error": 1.33514404296875e-05,
+      "max_cached_full_loss_error": 1.058064307279949e-07,
+      "max_primary128_logit_error": null,
+      "cache": {
+        "tensor_bytes": 512,
+        "allocated_bytes": 512
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 1.9564990028086982e-07,
+      "max_cached_full_logit_error": 1.52587890625e-05,
+      "max_cached_full_loss_error": 1.0729903276995856e-07,
+      "max_primary128_logit_error": null,
+      "cache": {
+        "tensor_bytes": 512,
+        "allocated_bytes": 512
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "sampled_long_windows": 6,
+      "max_fresh_loss_error": 2.0761061270135883e-07,
+      "max_cached_full_logit_error": 1.33514404296875e-05,
+      "max_cached_full_loss_error": 6.565016841264537e-08,
+      "max_primary128_logit_error": null,
+      "cache": {
+        "tensor_bytes": 512,
+        "allocated_bytes": 512
+      }
+    }
+  ],
+  "scope": "36 real512 windows with independent float64 loss; all stored means and main gate arithmetic; local checkpoint weights identical; actual cloned storage inspected. Not a fresh full-corpus rescore or statistical-table rebuild.",
+  "seconds": 1.722177963994909
+}

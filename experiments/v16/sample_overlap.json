@@ -1,0 +1,4 @@
+{
+  "exact_full_document_duplicates_against_v15": [],
+  "scope": "Full byte SHA256 matches only;not semantic or partial-duplicate detection;no filtering performed"
+}

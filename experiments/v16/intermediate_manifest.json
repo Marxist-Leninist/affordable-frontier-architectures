@@ -1,0 +1,12 @@
+{
+  "rows.json": {
+    "sha256": "ae84b3227710ad863493fd635dd566fa18edbd55eff5ed91f15e153c79794b5f",
+    "bytes": 457559,
+    "redistributed": false
+  },
+  "window_scores.json": {
+    "sha256": "a0e141c0d184608613236fa1e7515d6194262366595ac70236b806e6793a1f2a",
+    "bytes": 1771833,
+    "redistributed": false
+  }
+}

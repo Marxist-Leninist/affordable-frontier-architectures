@@ -1,0 +1,21 @@
+{
+  "experiment": "v16 weight-preserving128-span attention on fresh HF slice",
+  "data_manifest_sha256": "f365915379e63a408e5347bcd768f079ec6b69cb9c0c58018229a785d1bf5fbe",
+  "source_hashes": {
+    "run.py": "1a27dc78a59d4358a1058c4c0b17282dff90230b85e9dd8e3ca59844c9a9af9e",
+    "local_attention.py": "f33dd75a98b814479fb45f71403d72e8d28bd97c4f5c23a1fe3fe35c289ee0fa",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "ngram.py": "b81dee48d2d7a21c61b06e1c94fc3d30286c95145ef7b522d0b06aeedf94d997",
+    "prepare_data.py": "df3665244e474776862f5d5f72a4099867dafc8eef85ff4c62340bffa5951231"
+  },
+  "selection": "No new fitting or hyperparameter search. W128 is fixed from original training context before scoring fresh viewer rows100-199. Final4000-step v14 seeds1/2/3 fixed.",
+  "paired": "Same128 tail targets of complete512-target document windows; full512 Transformer, local128-span512 Transformer, reset128 Transformer, full512 GRU, reset128 GRU, full512 ngram.",
+  "quality_gate": "Two-sided abs aggregate local512 minus reset128 Transformer loss<=.02 for each paired seed; descriptive screen only, not statistical equivalence. Also report all baseline gaps.",
+  "cache": "Keep127 prior K/V positions per attention layer plus absolute-position int64 tensor; clone storage; no distant KV retained. Layerwise128 span can transmit information beyond128 raw bytes through depth.",
+  "prefix128_invariance": "All primary128-window local logits should match baseline within floating-point tolerance; this is not proof of512 quality.",
+  "v14_manifest_sha256": "4dd235df02ff05a206f745307bea85b1fbb456bcc616fd76ca0bd1d6269d0c4c",
+  "v14_results_sha256": "c758edf431a9c79ee1be90718cf5ba855905dfb1b4ae589c91e639df7134ff00",
+  "paired_windows": 460,
+  "primary_windows": 1954,
+  "torch": "2.6.0+cpu"
+}
