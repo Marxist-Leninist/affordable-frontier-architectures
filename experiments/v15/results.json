@@ -1,0 +1,424 @@
+{
+  "protocol_sha256": "2fdee878ba4283fabe0cd10e8fb3847505eeb5395621a15534878ad1f497d685",
+  "neural": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "checkpoint_sha256": "c604072c6e42b389bb04923580444730f4aa1c0ce7c4e00a4514d6db68e85710",
+      "primary": {
+        "bpb": 3.0747173544825546,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 3.076416828975193,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 5.738225363607435,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": 2.6618085346322413,
+        "fraction_windows_improved": 0,
+        "equal_document_mean_delta_bpb": 2.6550741828210382,
+        "descriptive_document_bootstrap_interval": [
+          2.5906713375282244,
+          2.710958616734329
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.5409475017804652,
+          "sequence_average_decode_p50_ms": 0.5512224217909534,
+          "end_to_end_p50_ms": 19.38365149544552,
+          "end_to_end_p95_ms": 21.799307195760775,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 6.208146493008826,
+          "sequence_average_decode_p50_ms": 0.610993250120373,
+          "end_to_end_p50_ms": 26.091080500918906,
+          "end_to_end_p95_ms": 31.181248652865175,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "checkpoint_sha256": "593190dcf6f23eb509ccfbf5c2f0cdab95c6e75ec36cca9640516acb79d9ac36",
+      "primary": {
+        "bpb": 3.0880728795354058,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 3.0870297089365697,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 5.768742654222959,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": 2.6817129452863893,
+        "fraction_windows_improved": 0,
+        "equal_document_mean_delta_bpb": 2.6784401922461734,
+        "descriptive_document_bootstrap_interval": [
+          2.614563671914184,
+          2.733082203124576
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.3850315008312464,
+          "sequence_average_decode_p50_ms": 0.5340196405541064,
+          "end_to_end_p50_ms": 18.60072400450008,
+          "end_to_end_p95_ms": 20.62045034399489,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 6.281620000663679,
+          "sequence_average_decode_p50_ms": 0.6006083749525715,
+          "end_to_end_p50_ms": 25.82827700098278,
+          "end_to_end_p95_ms": 34.39968325692462,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "checkpoint_sha256": "d9647fda51791846f2776a8e7b271b9cedbb5ea5f91f0771c87a64b09c97ce97",
+      "primary": {
+        "bpb": 3.067169005256098,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 3.0622383976598053,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 5.335261707682181,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": 2.2730233100223756,
+        "fraction_windows_improved": 0,
+        "equal_document_mean_delta_bpb": 2.2891324107264226,
+        "descriptive_document_bootstrap_interval": [
+          2.22850744729094,
+          2.3406679359404694
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.7311844931100495,
+          "sequence_average_decode_p50_ms": 0.6807683123497554,
+          "end_to_end_p50_ms": 23.83882550202543,
+          "end_to_end_p95_ms": 30.631857941625633,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 7.494746503653005,
+          "sequence_average_decode_p50_ms": 0.8370257187380048,
+          "end_to_end_p50_ms": 34.09812549944036,
+          "end_to_end_p95_ms": 42.90756424816209,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "checkpoint_sha256": "ce7e6b0de560417ba6929d0d226f5dc83d4ed54cf2c7b2fd97acee2b3029b78c",
+      "primary": {
+        "bpb": 3.0284961693740255,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 3.0313711317676932,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 3.0139875811131764,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": -0.017383550654516678,
+        "fraction_windows_improved": 0.6929824561403509,
+        "equal_document_mean_delta_bpb": -0.018908210522325733,
+        "descriptive_document_bootstrap_interval": [
+          -0.023670938841842216,
+          -0.014927279730522559
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 5.482996995851863,
+          "sequence_average_decode_p50_ms": 0.398747234385155,
+          "end_to_end_p50_ms": 18.460064500686713,
+          "end_to_end_p95_ms": 22.73947829453391,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 19.299269995826762,
+          "sequence_average_decode_p50_ms": 0.3582711406124872,
+          "end_to_end_p50_ms": 30.996895999123808,
+          "end_to_end_p95_ms": 47.71978419521472,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "checkpoint_sha256": "dbb09a76ebadd5057abd5b1b4207a575f608245749e8858d41f3bb7fc646dee9",
+      "primary": {
+        "bpb": 2.9848508617768155,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 2.9763306732204464,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 2.9510867229937827,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": -0.025243950226663946,
+        "fraction_windows_improved": 0.8048245614035088,
+        "equal_document_mean_delta_bpb": -0.024289688992445203,
+        "descriptive_document_bootstrap_interval": [
+          -0.02877879063362303,
+          -0.019698377031654977
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 4.604538495186716,
+          "sequence_average_decode_p50_ms": 0.3477003438092652,
+          "end_to_end_p50_ms": 15.319824000471272,
+          "end_to_end_p95_ms": 18.194185201718938,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 16.037552995840088,
+          "sequence_average_decode_p50_ms": 0.3438037188061571,
+          "end_to_end_p50_ms": 26.64216000266606,
+          "end_to_end_p95_ms": 32.50370144232874,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "checkpoint_sha256": "f76bc7485033d2653a16c029ad48eafc4bd3a1990f87ab0ad78b064d12af72b4",
+      "primary": {
+        "bpb": 2.9936864713559617,
+        "targets": 247680,
+        "windows": 1935,
+        "documents": 100
+      },
+      "context_short": {
+        "bpb": 2.9938825010369543,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "context_long": {
+        "bpb": 2.9679431377442254,
+        "targets": 58368,
+        "windows": 456,
+        "documents": 97
+      },
+      "paired": {
+        "long_minus_short_bpb": -0.025939363292728695,
+        "fraction_windows_improved": 0.7960526315789473,
+        "equal_document_mean_delta_bpb": -0.027718037462011215,
+        "descriptive_document_bootstrap_interval": [
+          -0.03210416267241969,
+          -0.023443703309233024
+        ],
+        "documents": 97,
+        "windows": 456
+      },
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 4.350657996837981,
+          "sequence_average_decode_p50_ms": 0.3270126405823248,
+          "end_to_end_p50_ms": 15.026089000457432,
+          "end_to_end_p95_ms": 19.101815702742897,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 18.426829505187925,
+          "sequence_average_decode_p50_ms": 0.34835599990401533,
+          "end_to_end_p50_ms": 29.423939995467663,
+          "end_to_end_p95_ms": 38.88088744570268,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    }
+  ],
+  "ngram": {
+    "primary": {
+      "bpb": 3.4339559890752986,
+      "targets": 247680,
+      "windows": 1935,
+      "documents": 100
+    },
+    "context_short": {
+      "bpb": 3.4454200188551947,
+      "targets": 58368,
+      "windows": 456,
+      "documents": 97
+    },
+    "context_long": {
+      "bpb": 3.4337596470582588,
+      "targets": 58368,
+      "windows": 456,
+      "documents": 97
+    },
+    "paired": {
+      "long_minus_short_bpb": -0.011660371796935586,
+      "fraction_windows_improved": 0.7631578947368421,
+      "equal_document_mean_delta_bpb": -0.011851010916477651,
+      "descriptive_document_bootstrap_interval": [
+        -0.015602668947479819,
+        -0.0073261106662627674
+      ],
+      "documents": 97,
+      "windows": 456
+    },
+    "rebuild_seconds": 11.728473754992592,
+    "timing": [
+      {
+        "prefix_bytes": 128,
+        "contexts": 8,
+        "retained_probes": 24,
+        "prefill_p50_ms": 0.40495849680155516,
+        "sequence_average_decode_p50_ms": 0.43546434380914434,
+        "end_to_end_p50_ms": 14.419265004107729,
+        "end_to_end_p95_ms": 18.42996070408844,
+        "final_state_bytes": 4,
+        "state_scope": "logical suffix only",
+        "distributions_per_probe": 33
+      },
+      {
+        "prefix_bytes": 512,
+        "contexts": 8,
+        "retained_probes": 24,
+        "prefill_p50_ms": 0.3620450006565079,
+        "sequence_average_decode_p50_ms": 0.44459173432187526,
+        "end_to_end_p50_ms": 14.579997005057521,
+        "end_to_end_p95_ms": 17.910342202958418,
+        "final_state_bytes": 4,
+        "state_scope": "logical suffix only",
+        "distributions_per_probe": 33
+      }
+    ]
+  },
+  "total_seconds": 57.35389915799897
+}

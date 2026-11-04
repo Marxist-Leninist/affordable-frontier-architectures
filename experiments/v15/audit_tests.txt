@@ -1,0 +1,11 @@
+test_neural_alignment_tail_and_batch_boundary (test_v15.Tests.test_neural_alignment_tail_and_batch_boundary) ... ok
+test_ngram_extra_context_only_first_three (test_v15.Tests.test_ngram_extra_context_only_first_three) ... ok
+test_pair_and_aggregation_weights (test_v15.Tests.test_pair_and_aggregation_weights) ... ok
+test_snapshot_and_source_identity (test_v15.Tests.test_snapshot_and_source_identity) ... ok
+test_stat_alignment_context_reset (test_v15.Tests.test_stat_alignment_context_reset) ... ok
+test_windows_document_boundaries (test_v15.Tests.test_windows_document_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.082s
+
+OK

@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "neural_rescores": [
+    {
+      "model": "transformer_1",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 6.029383659011955e-08,
+      "max_independent_short_loss_error": 3.54060336604789e-08,
+      "max_cached_full_logit_error": 3.528594970703125e-05,
+      "max_cached_full_loss_error": 1.1765610530289905e-07,
+      "max_future_perturbation_logit_error": 0.0
+    },
+    {
+      "model": "transformer_2",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 6.60153665066332e-08,
+      "max_independent_short_loss_error": 7.04915272820017e-08,
+      "max_cached_full_logit_error": 2.765655517578125e-05,
+      "max_cached_full_loss_error": 8.419625796562968e-08,
+      "max_future_perturbation_logit_error": 0.0
+    },
+    {
+      "model": "transformer_3",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 4.5527002612288925e-08,
+      "max_independent_short_loss_error": 7.709860438964711e-08,
+      "max_cached_full_logit_error": 2.86102294921875e-05,
+      "max_cached_full_loss_error": 1.3439953594485132e-07,
+      "max_future_perturbation_logit_error": 0.0
+    },
+    {
+      "model": "gru_1",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 1.695500495557667e-07,
+      "max_independent_short_loss_error": 2.9990097960563844e-07,
+      "max_cached_full_logit_error": 0.0,
+      "max_cached_full_loss_error": 0.0,
+      "max_future_perturbation_logit_error": 0.0
+    },
+    {
+      "model": "gru_2",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 1.2081517786199925e-07,
+      "max_independent_short_loss_error": 1.4522662183935608e-07,
+      "max_cached_full_logit_error": 0.0,
+      "max_cached_full_loss_error": 0.0,
+      "max_future_perturbation_logit_error": 0.0
+    },
+    {
+      "model": "gru_3",
+      "sampled_actual_long_windows": 6,
+      "max_independent_long_loss_error": 1.0103498304658842e-07,
+      "max_independent_short_loss_error": 1.5736451652870187e-07,
+      "max_cached_full_logit_error": 0.0,
+      "max_cached_full_loss_error": 0.0,
+      "max_future_perturbation_logit_error": 0.0
+    }
+  ],
+  "independent_attention_512_max_error": 1.7881393432617188e-07,
+  "timing_document_indices": {
+    "128": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "512": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "timing_same_cohort": true,
+  "scope": "36 actual paired windows freshly rescored; all stored means/target counts checked; no full fresh neural rescore or latency rerun",
+  "wall_seconds": 2.124373999002273
+}

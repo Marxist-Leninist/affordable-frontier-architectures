@@ -1,0 +1,18 @@
+test_neural_alignment_tail_and_batch_boundary (test_v15.Tests.test_neural_alignment_tail_and_batch_boundary) ... ok
+test_ngram_extra_context_only_first_three (test_v15.Tests.test_ngram_extra_context_only_first_three) ... ok
+test_pair_and_aggregation_weights (test_v15.Tests.test_pair_and_aggregation_weights) ... ok
+test_snapshot_and_source_identity (test_v15.Tests.test_snapshot_and_source_identity) ... ok
+test_stat_alignment_context_reset (test_v15.Tests.test_stat_alignment_context_reset) ... ok
+test_windows_document_boundaries (test_v15.Tests.test_windows_document_boundaries) ... ok
+test_hidden (test_thresholds.Tests.test_hidden) ... ok
+test_invalid (test_thresholds.Tests.test_invalid) ... ok
+test_mixed_conservation (test_thresholds.Tests.test_mixed_conservation) ... ok
+test_other_exhausts_budget (test_thresholds.Tests.test_other_exhausts_budget) ... ok
+test_prefill_exhaustion (test_thresholds.Tests.test_prefill_exhaustion) ... ok
+test_reference (test_thresholds.Tests.test_reference) ... ok
+test_utilization (test_thresholds.Tests.test_utilization) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.053s
+
+OK

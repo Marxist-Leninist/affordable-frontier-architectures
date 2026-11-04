@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v14 stronger training and quality-cost gate
+## Latest experiment: v15 transfer and context failure
+
+[Full v15 report, tested source and numerical results](experiments/v15/README.md). Frozen v14 models evaluated on 100 FineWeb-Edu documents reverse the statistical baseline's ranking: GRU **3.00234**, Transformer **3.07665**, statistical **3.43396 bits/byte**. On identical scored targets, increasing input from 128 to 512 bytes sharply degrades these short-context-trained Transformer checkpoints (**3.07523 → 5.61408**) while GRU slightly improves. Independent alignment, cached/full and attention checks support the result; a post-hoc WikiText control reproduces the length failure. This is not a general architecture verdict. No comparable-quality pair or commercial-token economic pass is established.
+
+## Prior experiment: v14 stronger training and quality-cost gate
 
 [Full v14 report, tested source and numerical results](experiments/v14/README.md). Four times the sampled training targets and a wider learning-rate grid improve the tiny Transformer to **2.35970 bits/byte**, GRU to **2.23878**, and statistical control to **2.22609**. The neural gap roughly halves versus v12, but **none of the prespecified matched-quality gates passes**, so no equal-quality speedup is claimed. Direct CPU prefill-plus-update timing and live statistical RAM are measured; these are not commercial-token serving costs. Three final seeds, independent tests and artifact checks. [Current 30%-margin economic gate](experiments/v14/pricing_audit.md) remains unmeasured by these byte models.
 

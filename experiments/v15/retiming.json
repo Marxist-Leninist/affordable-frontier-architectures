@@ -1,0 +1,225 @@
+{
+  "reason": "Original timings possibly overlapped tiny audit tests and length cohorts could differ. This rerun follows all CPU audits and uses identical document IDs across lengths. No whole-host isolation guarantee.",
+  "document_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "rows": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.8860894997487776,
+          "sequence_average_decode_p50_ms": 0.6707603906761506,
+          "end_to_end_p50_ms": 23.537999491964,
+          "end_to_end_p95_ms": 32.404666643560624,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 7.5139484979445115,
+          "sequence_average_decode_p50_ms": 0.7694959845139238,
+          "end_to_end_p50_ms": 32.199972003581934,
+          "end_to_end_p95_ms": 34.7021863606642,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.6343115057679825,
+          "sequence_average_decode_p50_ms": 0.6818986253165349,
+          "end_to_end_p50_ms": 24.23657400504453,
+          "end_to_end_p95_ms": 26.90172120273928,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 7.818924990715459,
+          "sequence_average_decode_p50_ms": 0.8237794063461479,
+          "end_to_end_p50_ms": 34.91394899174338,
+          "end_to_end_p95_ms": 41.76141854914022,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 1.9034005017601885,
+          "sequence_average_decode_p50_ms": 0.7098184844380739,
+          "end_to_end_p50_ms": 24.328276005689986,
+          "end_to_end_p95_ms": 27.49903285584878,
+          "final_state_bytes": 163840,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 7.813111500581726,
+          "sequence_average_decode_p50_ms": 0.847589187515041,
+          "end_to_end_p50_ms": 35.719825005799066,
+          "end_to_end_p95_ms": 48.242736308748135,
+          "final_state_bytes": 557056,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 4.722505000245292,
+          "sequence_average_decode_p50_ms": 0.3431395468851406,
+          "end_to_end_p50_ms": 15.720160998171195,
+          "end_to_end_p95_ms": 21.165639202081366,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 17.45986500463914,
+          "sequence_average_decode_p50_ms": 0.36338260929369426,
+          "end_to_end_p50_ms": 29.754970499197952,
+          "end_to_end_p95_ms": 35.62054984868155,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 4.955867996613961,
+          "sequence_average_decode_p50_ms": 0.3559997344382282,
+          "end_to_end_p50_ms": 16.16617149556987,
+          "end_to_end_p95_ms": 23.002223290677648,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 17.218218003108632,
+          "sequence_average_decode_p50_ms": 0.3498033595406014,
+          "end_to_end_p50_ms": 28.63091949984664,
+          "end_to_end_p95_ms": 39.82070134443346,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 4.540279493085109,
+          "sequence_average_decode_p50_ms": 0.3548988593138347,
+          "end_to_end_p50_ms": 16.007100995921064,
+          "end_to_end_p95_ms": 21.626833595655626,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 17.553533005411737,
+          "sequence_average_decode_p50_ms": 0.3484334686163493,
+          "end_to_end_p50_ms": 28.583325998624787,
+          "end_to_end_p95_ms": 35.16180740116397,
+          "final_state_bytes": 512,
+          "state_scope": "tensor bytes only",
+          "distributions_per_probe": 33
+        }
+      ]
+    },
+    {
+      "kind": "ngram",
+      "seed": null,
+      "timing": [
+        {
+          "prefix_bytes": 128,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 0.40321300184587017,
+          "sequence_average_decode_p50_ms": 0.4234848750002129,
+          "end_to_end_p50_ms": 13.970587504445575,
+          "end_to_end_p95_ms": 17.149940649687775,
+          "final_state_bytes": 4,
+          "state_scope": "logical suffix only",
+          "distributions_per_probe": 33
+        },
+        {
+          "prefix_bytes": 512,
+          "contexts": 8,
+          "retained_probes": 24,
+          "prefill_p50_ms": 0.37415949918795377,
+          "sequence_average_decode_p50_ms": 0.3893283906108991,
+          "end_to_end_p50_ms": 12.91929650324164,
+          "end_to_end_p95_ms": 16.468314456142252,
+          "final_state_bytes": 4,
+          "state_scope": "logical suffix only",
+          "distributions_per_probe": 33
+        }
+      ]
+    }
+  ]
+}

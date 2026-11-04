@@ -1,0 +1,5 @@
+{
+  "exact_129_byte_primary_windows_found_in_wikitext_training": 0,
+  "total": 1935,
+  "scope": "Exact whole-window substring only; not a near-duplicate or training-contamination guarantee"
+}

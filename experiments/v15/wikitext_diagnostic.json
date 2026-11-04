@@ -1,0 +1,96 @@
+{
+  "scope": "Post-hoc domain control, first100 contiguous512-byte WikiText test windows,128 tail targets each. No retraining/tuning or fresh heldout claim. Same source corpus as training, distinct official test split; windows from flat serialization may cross article boundaries, unlike the FineWeb document reset protocol.",
+  "rows": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "short": {
+        "bpb": 2.3327184138551296,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 5.4544164396412205,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": 3.121698025786091
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "short": {
+        "bpb": 2.3341647526197273,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 5.38045605560764,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": 3.0462913029879126
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "short": {
+        "bpb": 2.334028451023751,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 5.021643852609907,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": 2.6876154015861564
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "short": {
+        "bpb": 2.203908962264765,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 2.17419828438979,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": -0.029710677874974945
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "short": {
+        "bpb": 2.204511718716714,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 2.17293463834222,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": -0.03157708037449369
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "short": {
+        "bpb": 2.213067127894456,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long": {
+        "bpb": 2.181700903170049,
+        "targets": 12800,
+        "windows": 100
+      },
+      "long_minus_short_bpb": -0.031366224724406866
+    }
+  ],
+  "seconds": 4.307378322992008
+}
