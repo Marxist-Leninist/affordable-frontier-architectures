@@ -1,0 +1,8 @@
+test_causality_and_streaming (__main__.Tests.test_causality_and_streaming) ... ok
+test_gradients_reload (__main__.Tests.test_gradients_reload) ... ok
+test_parameters (__main__.Tests.test_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.053s
+
+OK

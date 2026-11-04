@@ -1,0 +1,54 @@
+{
+  "gru_seed101_lr0.001.pt": {
+    "bytes": 536003,
+    "sha256": "f51a3ef23dbb858844b0ccaa36a5047a21108dd38d1c0973f8ec09da0e841bac"
+  },
+  "gru_seed101_lr0.003.pt": {
+    "bytes": 536003,
+    "sha256": "f75fb26f05dffc1945314e246c3cdc5df8701576cc47b60066ccafcb1b8dd95f"
+  },
+  "gru_seed101_lr0.01.pt": {
+    "bytes": 535978,
+    "sha256": "8dadf88e748ade3ec0146842d2e7c622815ae0098333ad147c479a4d83bcd4a1"
+  },
+  "gru_seed1_lr0.01.pt": {
+    "bytes": 535928,
+    "sha256": "19738aae8cc0718fb9abafa0eb113449f9111feea1f8bb24e646e1cd120e13bc"
+  },
+  "gru_seed2_lr0.01.pt": {
+    "bytes": 535928,
+    "sha256": "959c4c36893775b698bb875809d5d973ead42c5f2897404dd1018603fb273197"
+  },
+  "gru_seed3_lr0.01.pt": {
+    "bytes": 535928,
+    "sha256": "93000536e76386e15874e53133de637b43acaaa794ffb74e7f31581a0f30390b"
+  },
+  "ngram.pkl": {
+    "bytes": 2820855,
+    "sha256": "550ce5004e7652d06a024eafcabd770f4351d5cae2cbb2c6ba5b676e7a8efade"
+  },
+  "transformer_seed101_lr0.001.pt": {
+    "bytes": 534215,
+    "sha256": "d627f8173f1bb1486af950e42a3ee64c58e71ec2742eb440f23180d335d82ac2"
+  },
+  "transformer_seed101_lr0.003.pt": {
+    "bytes": 534215,
+    "sha256": "d4e0ef198509874f4a42ae88388d28766ad05b977a8e81e6bff6aa219481dff4"
+  },
+  "transformer_seed101_lr0.01.pt": {
+    "bytes": 534194,
+    "sha256": "c605a0b88503e61d5f705aee2c79b47702daa70918651101178a58a08f88dc55"
+  },
+  "transformer_seed1_lr0.01.pt": {
+    "bytes": 534152,
+    "sha256": "1f38352f72a756445c3a143cf18d54b1a6e8c2568e96812c8cd6dcdbafaf818c"
+  },
+  "transformer_seed2_lr0.01.pt": {
+    "bytes": 534152,
+    "sha256": "fc3917dfb96727bb8530a8dc39fb00f837c71a1eca74e3e56bd538aa95e7042b"
+  },
+  "transformer_seed3_lr0.01.pt": {
+    "bytes": 534152,
+    "sha256": "5921fb37549025db198486bff89ee6bb531a1dc39961bbbc5c5ef0d7a105b02b"
+  }
+}

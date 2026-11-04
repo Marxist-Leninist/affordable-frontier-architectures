@@ -1,0 +1,738 @@
+{
+  "protocol_sha256": "1087c8183992afde941f8fdcc987f298a8f16a8cc56716b11bdf25ef3f1a76b6",
+  "selection_sha256": "a3a295f8f25ae6dda355783b75c49069804d909881bb68d823cf7c8c31e81e53",
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 131904,
+      "training_seconds": 27.40633718400204,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.386968883886765
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 3.2336862506175716
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 3.050758279888552
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.953660658829729
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 3.1524529972049375
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.001.pt",
+        "sha256": "d627f8173f1bb1486af950e42a3ee64c58e71ec2742eb440f23180d335d82ac2",
+        "bytes": 534215,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 3.056911290761535,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 131904,
+      "training_seconds": 26.042500911993557,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.2145497410560666
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9857171930546516
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7737917435116066
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.6627280993068183
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.8863449294555172
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.003.pt",
+        "sha256": "d4e0ef198509874f4a42ae88388d28766ad05b977a8e81e6bff6aa219481dff4",
+        "bytes": 534215,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.7872411918351245,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 131904,
+      "training_seconds": 25.400733574002516,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.1323213960255405
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9713033270858396
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.746484166224959
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.5871685535461486
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.839934723189585
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.01.pt",
+        "sha256": "c605a0b88503e61d5f705aee2c79b47702daa70918651101178a58a08f88dc55",
+        "bytes": 534194,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.7187872918634106,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 132160,
+      "training_seconds": 52.600594912000815,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.2383442287335398
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9843120947971022
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7924986404112557
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.704734173849456
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.930002725377041
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.001.pt",
+        "sha256": "f51a3ef23dbb858844b0ccaa36a5047a21108dd38d1c0973f8ec09da0e841bac",
+        "bytes": 536003,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.832206298918834,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 132160,
+      "training_seconds": 49.90532937498938,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.9874985893522883
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.7769192480175464
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.5394858476464823
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.3871823116086506
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.7154292589586615
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.003.pt",
+        "sha256": "f75fb26f05dffc1945314e246c3cdc5df8701576cc47b60066ccafcb1b8dd95f",
+        "bytes": 536003,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.5478091632817845,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 132160,
+      "training_seconds": 52.730622426010086,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.914768502163614
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.6490900470760486
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.4793032706994564
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.3393869570726693
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.634644536299478
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.01.pt",
+        "sha256": "8dadf88e748ade3ec0146842d2e7c622815ae0098333ad147c479a4d83bcd4a1",
+        "bytes": 535978,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.4438556247550345,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    }
+  ],
+  "final": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "learning_rate": 0.01,
+      "parameters": 131904,
+      "training_seconds": 25.864313398997183,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.1066375069456886
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9805374195759655
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.773399623067639
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.5805948606822193
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.7837276971999034
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed1_lr0.01.pt",
+        "sha256": "1f38352f72a756445c3a143cf18d54b1a6e8c2568e96812c8cd6dcdbafaf818c",
+        "bytes": 534152,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.7059775364617034,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.728793989554986,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 1.514564995886758,
+          "prefill_p95_ms": 2.1117561023856974,
+          "cached_decode_p50_ms": 0.5513704963959754,
+          "cached_decode_p95_ms": 0.7699757596128619,
+          "initial_cache_tensor_bytes": 131072,
+          "final_cache_tensor_bytes": 187392,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 6.396742006472778,
+          "prefill_p95_ms": 7.217383494571549,
+          "cached_decode_p50_ms": 0.5377704947022721,
+          "cached_decode_p95_ms": 0.8351015436346639,
+          "initial_cache_tensor_bytes": 524288,
+          "final_cache_tensor_bytes": 580608,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 44.55643950495869,
+          "prefill_p95_ms": 46.207561947085196,
+          "cached_decode_p50_ms": 0.8306789968628436,
+          "cached_decode_p95_ms": 1.3603048486402258,
+          "initial_cache_tensor_bytes": 2097152,
+          "final_cache_tensor_bytes": 2153472,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "learning_rate": 0.01,
+      "parameters": 132160,
+      "training_seconds": 50.65386528499948,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.896977240897158
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.6958978772307756
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.467146333057917
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.3331572295104657
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.673056861369686
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed1_lr0.01.pt",
+        "sha256": "19738aae8cc0718fb9abafa0eb113449f9111feea1f8bb24e646e1cd120e13bc",
+        "bytes": 535928,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.4654248358168465,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.4910961446181155,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 4.250697500538081,
+          "prefill_p95_ms": 10.353849099192303,
+          "cached_decode_p50_ms": 0.3003295059897937,
+          "cached_decode_p95_ms": 0.5416694461018778,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 14.71387449419126,
+          "prefill_p95_ms": 19.399400308611803,
+          "cached_decode_p50_ms": 0.223790506424848,
+          "cached_decode_p95_ms": 0.399687804019777,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 54.80430599709507,
+          "prefill_p95_ms": 56.733235694264295,
+          "cached_decode_p50_ms": 0.21582799672614783,
+          "cached_decode_p95_ms": 0.4459973984921816,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "learning_rate": 0.01,
+      "parameters": 131904,
+      "training_seconds": 26.011907175998203,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.1696753398623394
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 3.0133830102030466
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7750952000224958
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.5858757599596127
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.8573950898357805
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed2_lr0.01.pt",
+        "sha256": "fc3917dfb96727bb8530a8dc39fb00f837c71a1eca74e3e56bd538aa95e7042b",
+        "bytes": 534152,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.700844984570905,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.73000283487047,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 1.4211890011210926,
+          "prefill_p95_ms": 1.5075548501044977,
+          "cached_decode_p50_ms": 0.5062644995632581,
+          "cached_decode_p95_ms": 0.6568823519046418,
+          "initial_cache_tensor_bytes": 131072,
+          "final_cache_tensor_bytes": 187392,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 5.948169498878997,
+          "prefill_p95_ms": 6.4450734498677775,
+          "cached_decode_p50_ms": 0.5798579950351268,
+          "cached_decode_p95_ms": 0.9441416004847266,
+          "initial_cache_tensor_bytes": 524288,
+          "final_cache_tensor_bytes": 580608,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 41.092881496297196,
+          "prefill_p95_ms": 43.00420569488779,
+          "cached_decode_p50_ms": 0.733300497813616,
+          "cached_decode_p95_ms": 1.0732130001997573,
+          "initial_cache_tensor_bytes": 2097152,
+          "final_cache_tensor_bytes": 2153472,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "learning_rate": 0.01,
+      "parameters": 132160,
+      "training_seconds": 52.95742281900311,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.934986094668442
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.694725643482495
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.504508188096655
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.286542019924705
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.577685946125526
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed2_lr0.01.pt",
+        "sha256": "959c4c36893775b698bb875809d5d973ead42c5f2897404dd1018603fb273197",
+        "bytes": 535928,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.4373763003518487,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.472277511171258,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 3.9760490035405383,
+          "prefill_p95_ms": 4.380983544251649,
+          "cached_decode_p50_ms": 0.2799639987642877,
+          "cached_decode_p95_ms": 0.5326348560629413,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 14.080237502639648,
+          "prefill_p95_ms": 15.797326202300608,
+          "cached_decode_p50_ms": 0.21893899247515947,
+          "cached_decode_p95_ms": 0.38419519623857906,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 57.15698350104503,
+          "prefill_p95_ms": 69.26197210195822,
+          "cached_decode_p50_ms": 0.22266949235927314,
+          "cached_decode_p95_ms": 0.3882766541210002,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "learning_rate": 0.01,
+      "parameters": 131904,
+      "training_seconds": 25.60252981100348,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.136633001082671
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.958851783163372
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7579086297564737
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.5714775444120295
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.8202509648330345
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed3_lr0.01.pt",
+        "sha256": "5921fb37549025db198486bff89ee6bb531a1dc39961bbbc5c5ef0d7a105b02b",
+        "bytes": 534152,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.694822842983253,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.7188740817815593,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 1.2562360061565414,
+          "prefill_p95_ms": 1.4238824020139873,
+          "cached_decode_p50_ms": 0.47266000910894945,
+          "cached_decode_p95_ms": 0.5791705538285896,
+          "initial_cache_tensor_bytes": 131072,
+          "final_cache_tensor_bytes": 187392,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 5.524354492081329,
+          "prefill_p95_ms": 5.917147698346525,
+          "cached_decode_p50_ms": 0.5089740079711191,
+          "cached_decode_p95_ms": 0.5570159977651201,
+          "initial_cache_tensor_bytes": 524288,
+          "final_cache_tensor_bytes": 580608,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 37.32394099642988,
+          "prefill_p95_ms": 39.88488674731343,
+          "cached_decode_p50_ms": 0.6485610065283254,
+          "cached_decode_p95_ms": 0.8044519585382659,
+          "initial_cache_tensor_bytes": 2097152,
+          "final_cache_tensor_bytes": 2153472,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "learning_rate": 0.01,
+      "parameters": 132160,
+      "training_seconds": 49.17474778200267,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.902654388202139
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.71117526808957
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.508997451232127
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.308494573411437
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.6335553701715635
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed3_lr0.01.pt",
+        "sha256": "93000536e76386e15874e53133de637b43acaaa794ffb74e7f31581a0f30390b",
+        "bytes": 535928,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.4572141393614193,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "test": {
+        "bpb": 2.4865027197207024,
+        "targets": 1291904,
+        "unscored_trailing_targets": 108
+      },
+      "latency": [
+        {
+          "prefix_bytes": 128,
+          "prefill_p50_ms": 3.60416249895934,
+          "prefill_p95_ms": 3.956163850671146,
+          "cached_decode_p50_ms": 0.2411324967397377,
+          "cached_decode_p95_ms": 0.48172780298045825,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 512,
+          "prefill_p50_ms": 14.35358299931977,
+          "prefill_p95_ms": 34.357037502923006,
+          "cached_decode_p50_ms": 0.22912949498277158,
+          "cached_decode_p95_ms": 0.43331529886927445,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        },
+        {
+          "prefix_bytes": 2048,
+          "prefill_p50_ms": 54.85633850184968,
+          "prefill_p95_ms": 57.05093169162865,
+          "cached_decode_p50_ms": 0.22073699801694602,
+          "cached_decode_p95_ms": 0.3388819495739881,
+          "initial_cache_tensor_bytes": 512,
+          "final_cache_tensor_bytes": 512,
+          "decode_samples": 50,
+          "prefill_samples": 10
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "transformer": {
+      "mean_test_bpb": 2.725890302069005,
+      "sd_test_bpb": 0.006106212990935205
+    },
+    "gru": {
+      "mean_test_bpb": 2.483292125170025,
+      "sd_test_bpb": 0.009811532970358177
+    }
+  }
+}

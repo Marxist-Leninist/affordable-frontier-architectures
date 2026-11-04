@@ -1,0 +1,60 @@
+{
+  "family": "non-neural interpolated byte ngram",
+  "orders_tuned": [
+    2,
+    3,
+    4
+  ],
+  "alpha_fixed": 10,
+  "training_targets": 1024000,
+  "training_seconds_shared_order4_table": 2.6027457430027425,
+  "selected_order": 4,
+  "validation": {
+    "2": {
+      "bpb": 2.9749717772073367,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 1.2859676799998851
+    },
+    "3": {
+      "bpb": 2.526269534006402,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 1.8790026549977483
+    },
+    "4": {
+      "bpb": 2.3062603560266313,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 2.8745151319890283
+    }
+  },
+  "test": {
+    "bpb": 2.3351727883430624,
+    "targets": 1291904,
+    "unscored_trailing_targets": 108,
+    "evaluation_seconds": 3.6254646479937946
+  },
+  "next_byte_distribution_p50_ms": 0.3238345088902861,
+  "next_byte_distribution_p95_ms": 0.4774184031703041,
+  "timing_samples": 500,
+  "serialized_all_order_tables_bytes": 2820855,
+  "table_context_counts": [
+    1,
+    182,
+    2747,
+    16388,
+    61973
+  ],
+  "table_nonzero_entries": [
+    182,
+    2751,
+    16414,
+    62154,
+    151874
+  ],
+  "training_windows_sha256": "594f8c363c588d5e10114b46e6ee49755497cf34b0f6021b8fdf029a0c80e2be",
+  "checkpoint_sha256": "550ce5004e7652d06a024eafcabd770f4351d5cae2cbb2c6ba5b676e7a8efade",
+  "checkpoint_warning": "Local trusted pickle only; never load untrusted pickles",
+  "fairness": "Identical sampled byte targets, not parameter/FLOP matched. Three candidate orders share one max-order fit. Deterministic; repeated initialization seeds are not meaningful. CPU wall times can be affected by concurrent neural training."
+}

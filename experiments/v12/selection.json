@@ -1,0 +1,248 @@
+{
+  "selected": {
+    "transformer": 0.01,
+    "gru": 0.01
+  },
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 131904,
+      "training_seconds": 27.40633718400204,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.386968883886765
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 3.2336862506175716
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 3.050758279888552
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.953660658829729
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 3.1524529972049375
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.001.pt",
+        "sha256": "d627f8173f1bb1486af950e42a3ee64c58e71ec2742eb440f23180d335d82ac2",
+        "bytes": 534215,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 3.056911290761535,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 131904,
+      "training_seconds": 26.042500911993557,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.2145497410560666
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9857171930546516
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7737917435116066
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.6627280993068183
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.8863449294555172
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.003.pt",
+        "sha256": "d4e0ef198509874f4a42ae88388d28766ad05b977a8e81e6bff6aa219481dff4",
+        "bytes": 534215,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.7872411918351245,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 131904,
+      "training_seconds": 25.400733574002516,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.1323213960255405
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9713033270858396
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.746484166224959
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.5871685535461486
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.839934723189585
+        }
+      ],
+      "checkpoint": {
+        "file": "transformer_seed101_lr0.01.pt",
+        "sha256": "c605a0b88503e61d5f705aee2c79b47702daa70918651101178a58a08f88dc55",
+        "bytes": 534194,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.7187872918634106,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.001,
+      "parameters": 132160,
+      "training_seconds": 52.600594912000815,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 3.2383442287335398
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.9843120947971022
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.7924986404112557
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.704734173849456
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.930002725377041
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.001.pt",
+        "sha256": "f51a3ef23dbb858844b0ccaa36a5047a21108dd38d1c0973f8ec09da0e841bac",
+        "bytes": 536003,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.832206298918834,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.003,
+      "parameters": 132160,
+      "training_seconds": 49.90532937498938,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.9874985893522883
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.7769192480175464
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.5394858476464823
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.3871823116086506
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.7154292589586615
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.003.pt",
+        "sha256": "f75fb26f05dffc1945314e246c3cdc5df8701576cc47b60066ccafcb1b8dd95f",
+        "bytes": 536003,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.5478091632817845,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "learning_rate": 0.01,
+      "parameters": 132160,
+      "training_seconds": 52.730622426010086,
+      "trace": [
+        {
+          "step": 200,
+          "training_batch_bpb": 2.914768502163614
+        },
+        {
+          "step": 400,
+          "training_batch_bpb": 2.6490900470760486
+        },
+        {
+          "step": 600,
+          "training_batch_bpb": 2.4793032706994564
+        },
+        {
+          "step": 800,
+          "training_batch_bpb": 2.3393869570726693
+        },
+        {
+          "step": 1000,
+          "training_batch_bpb": 2.634644536299478
+        }
+      ],
+      "checkpoint": {
+        "file": "gru_seed101_lr0.01.pt",
+        "sha256": "8dadf88e748ade3ec0146842d2e7c622815ae0098333ad147c479a4d83bcd4a1",
+        "bytes": 535978,
+        "reload_exact": true
+      },
+      "validation": {
+        "bpb": 2.4438556247550345,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    }
+  ]
+}

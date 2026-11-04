@@ -1,0 +1,23 @@
+{
+  "selected_order": 4,
+  "validation": {
+    "2": {
+      "bpb": 2.9749717772073367,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 1.2859676799998851
+    },
+    "3": {
+      "bpb": 2.526269534006402,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 1.8790026549977483
+    },
+    "4": {
+      "bpb": 2.3062603560266313,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102,
+      "evaluation_seconds": 2.8745151319890283
+    }
+  }
+}

@@ -1,0 +1,12 @@
+test_causality_and_streaming (test_models.Tests.test_causality_and_streaming) ... ok
+test_gradients_reload (test_models.Tests.test_gradients_reload) ... ok
+test_parameters (test_models.Tests.test_parameters) ... ok
+test_budget (test_auxiliary.Tests.test_budget) ... ok
+test_hidden_and_cache (test_auxiliary.Tests.test_hidden_and_cache) ... ok
+test_ngram_evaluation_boundaries (test_auxiliary.Tests.test_ngram_evaluation_boundaries) ... ok
+test_ngram_mass_and_counts (test_auxiliary.Tests.test_ngram_mass_and_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.061s
+
+OK

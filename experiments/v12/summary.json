@@ -1,0 +1,78 @@
+{
+  "transformer": {
+    "parameters": 131904,
+    "seed_test_bpb": [
+      2.728793989554986,
+      2.73000283487047,
+      2.7188740817815593
+    ],
+    "mean_test_bpb": 2.725890302069005,
+    "sd_test_bpb": 0.006106212990935205,
+    "mean_training_seconds": 25.826250128666288,
+    "all_pilot_final_training_seconds": 156.32832205599698,
+    "total_training_target_presentations_including_pilots": 6144000,
+    "latency_median_of_seed_medians": [
+      {
+        "prefix_bytes": 128,
+        "prefill_ms": 1.4211890011210926,
+        "cached_decode_ms": 0.5062644995632581,
+        "cache_tensor_bytes": 131072
+      },
+      {
+        "prefix_bytes": 512,
+        "prefill_ms": 5.948169498878997,
+        "cached_decode_ms": 0.5377704947022721,
+        "cache_tensor_bytes": 524288
+      },
+      {
+        "prefix_bytes": 2048,
+        "prefill_ms": 41.092881496297196,
+        "cached_decode_ms": 0.733300497813616,
+        "cache_tensor_bytes": 2097152
+      }
+    ]
+  },
+  "gru": {
+    "parameters": 132160,
+    "seed_test_bpb": [
+      2.4910961446181155,
+      2.472277511171258,
+      2.4865027197207024
+    ],
+    "mean_test_bpb": 2.483292125170025,
+    "sd_test_bpb": 0.009811532970358177,
+    "mean_training_seconds": 50.92867862866842,
+    "all_pilot_final_training_seconds": 308.02258259900555,
+    "total_training_target_presentations_including_pilots": 6144000,
+    "latency_median_of_seed_medians": [
+      {
+        "prefix_bytes": 128,
+        "prefill_ms": 3.9760490035405383,
+        "cached_decode_ms": 0.2799639987642877,
+        "cache_tensor_bytes": 512
+      },
+      {
+        "prefix_bytes": 512,
+        "prefill_ms": 14.35358299931977,
+        "cached_decode_ms": 0.223790506424848,
+        "cache_tensor_bytes": 512
+      },
+      {
+        "prefix_bytes": 2048,
+        "prefill_ms": 54.85633850184968,
+        "cached_decode_ms": 0.22073699801694602,
+        "cache_tensor_bytes": 512
+      }
+    ]
+  },
+  "ngram": {
+    "test_bpb": 2.3351727883430624,
+    "context_bytes": 4,
+    "all_tables_serialized_bytes": 2820855,
+    "fit_seconds": 2.6027457430027425,
+    "distribution_p50_ms": 0.3238345088902861
+  },
+  "gru_bpb_reduction_vs_transformer_fraction": 0.08899777687856447,
+  "ngram_bpb_reduction_vs_gru_fraction": 0.059646360299564494,
+  "interpretation": "Cross-entropy reductions, not accuracy or intelligence percentages; same sampled target exposure, not equal model memory/FLOPs or full quality parity."
+}

@@ -1,0 +1,9 @@
+test_budget (__main__.Tests.test_budget) ... ok
+test_hidden_and_cache (__main__.Tests.test_hidden_and_cache) ... ok
+test_ngram_evaluation_boundaries (__main__.Tests.test_ngram_evaluation_boundaries) ... ok
+test_ngram_mass_and_counts (__main__.Tests.test_ngram_mass_and_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

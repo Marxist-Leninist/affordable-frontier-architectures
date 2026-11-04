@@ -1,0 +1,57 @@
+[
+  {
+    "kind": "transformer",
+    "seed": 1,
+    "independent_test_bpb": 2.7287939875441767,
+    "reported_test_bpb": 2.728793989554986,
+    "delta": -2.0108092968484925e-09,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "gru",
+    "seed": 1,
+    "independent_test_bpb": 2.491096150296115,
+    "reported_test_bpb": 2.4910961446181155,
+    "delta": 5.677999403985723e-09,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "transformer",
+    "seed": 2,
+    "independent_test_bpb": 2.7300028450045053,
+    "reported_test_bpb": 2.73000283487047,
+    "delta": 1.0134035388631446e-08,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "gru",
+    "seed": 2,
+    "independent_test_bpb": 2.472277512673043,
+    "reported_test_bpb": 2.472277511171258,
+    "delta": 1.5017853627341538e-09,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "transformer",
+    "seed": 3,
+    "independent_test_bpb": 2.718874086058008,
+    "reported_test_bpb": 2.7188740817815593,
+    "delta": 4.276448528628407e-09,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "gru",
+    "seed": 3,
+    "independent_test_bpb": 2.486502728259315,
+    "reported_test_bpb": 2.4865027197207024,
+    "delta": 8.538612483732777e-09,
+    "checkpoint_hash_verified": true
+  },
+  {
+    "kind": "ngram",
+    "independent_test_bpb": 2.3351727883430624,
+    "delta": 0.0,
+    "checkpoint_hash_verified": true,
+    "total_target_count": 1024000
+  }
+]
