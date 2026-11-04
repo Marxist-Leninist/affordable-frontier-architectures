@@ -1,0 +1,140 @@
+{
+  "scope": "Required throughput, NOT measured performance or quality parity. Rates checked 2026-11-04.",
+  "reference_sources": [
+    "https://www.runpod.io/pricing",
+    "https://lambda.ai/instances"
+  ],
+  "price_per_M_output": 0.1,
+  "margin": 0.3,
+  "reference_thresholds": [
+    {
+      "reference": "Runpod RTX A6000 48GB",
+      "usd_gpu_hour": 0.59,
+      "ideal_tps": 2341.2698412698414,
+      "utilization_60pct_tps": 3902.1164021164022,
+      "uplift20pct_utilization60pct_tps": 4682.539682539683,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 6555.5555555555575
+    },
+    {
+      "reference": "Runpod RTX4090 24GB",
+      "usd_gpu_hour": 0.89,
+      "ideal_tps": 3531.7460317460323,
+      "utilization_60pct_tps": 5886.243386243386,
+      "uplift20pct_utilization60pct_tps": 7063.492063492064,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 9888.888888888892
+    },
+    {
+      "reference": "Runpod A100 80GB",
+      "usd_gpu_hour": 1.79,
+      "ideal_tps": 7103.174603174604,
+      "utilization_60pct_tps": 11838.624338624339,
+      "uplift20pct_utilization60pct_tps": 14206.349206349207,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 19888.888888888894
+    },
+    {
+      "reference": "Runpod H100 PCIe 80GB",
+      "usd_gpu_hour": 2.89,
+      "ideal_tps": 11468.25396825397,
+      "utilization_60pct_tps": 19113.756613756614,
+      "uplift20pct_utilization60pct_tps": 22936.50793650794,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 32111.11111111112
+    },
+    {
+      "reference": "Runpod H100 SXM 80GB",
+      "usd_gpu_hour": 3.99,
+      "ideal_tps": 15833.333333333336,
+      "utilization_60pct_tps": 26388.88888888889,
+      "uplift20pct_utilization60pct_tps": 31666.666666666668,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 44333.33333333334
+    },
+    {
+      "reference": "Lambda B200 180GB per GPU in 8-GPU instance",
+      "usd_gpu_hour": 6.69,
+      "ideal_tps": 26547.61904761905,
+      "utilization_60pct_tps": 44246.03174603175,
+      "uplift20pct_utilization60pct_tps": 53095.238095238106,
+      "uplift20pct_utilization60pct_other_02_per_M_tps": 74333.33333333336
+    }
+  ],
+  "mixed_fixed_ledger": {
+    "uncached": 10000000,
+    "cached": 5000000,
+    "visible": 2000000,
+    "hidden": 2000000
+  },
+  "mixed_sensitivity": [
+    {
+      "hourly": 1,
+      "prefill_tps": 8000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.607638888888889,
+      "required_busy_generated_tps": 71607.59040458301
+    },
+    {
+      "hourly": 1,
+      "prefill_tps": 80000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.06076388888888889,
+      "required_busy_generated_tps": 3233.3422250244525
+    },
+    {
+      "hourly": 1,
+      "prefill_tps": 800000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.006076388888888889,
+      "required_busy_generated_tps": 2951.517633473162
+    },
+    {
+      "hourly": 3.99,
+      "prefill_tps": 8000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 2.424479166666667,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hourly": 3.99,
+      "prefill_tps": 80000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.24244791666666668,
+      "required_busy_generated_tps": 18894.897134688297
+    },
+    {
+      "hourly": 3.99,
+      "prefill_tps": 800000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.024244791666666668,
+      "required_busy_generated_tps": 12127.740211038637
+    },
+    {
+      "hourly": 153.216,
+      "prefill_tps": 8000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 93.1,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hourly": 153.216,
+      "prefill_tps": 80000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 9.31,
+      "required_busy_generated_tps": null
+    },
+    {
+      "hourly": 153.216,
+      "prefill_tps": 800000,
+      "revenue": 0.905,
+      "total_cost_budget": 0.6335,
+      "prefill_cost": 0.931,
+      "required_busy_generated_tps": null
+    }
+  ],
+  "hidden_unbilled_1to1_at_1usd_hour": 7936.507936507937
+}
