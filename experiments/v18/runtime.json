@@ -1,0 +1,9 @@
+{
+  "python": "3.12.14",
+  "machine": "x86_64",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "torch": "2.6.0+cpu",
+  "threads_requested": 1,
+  "exclusive_host": false,
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor"
+}

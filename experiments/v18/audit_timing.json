@@ -1,0 +1,45 @@
+{
+  "samples": 576,
+  "pairs": 288,
+  "exact_cohort_and_randomized_order_verified": true,
+  "summary": [
+    {
+      "length": 128,
+      "pairs": 96,
+      "median_paired_end_speedup": 1.0017748705328682,
+      "faster": 49,
+      "median_paired_prefill_speedup": 0.9677310927366044,
+      "full_end_p50": 24.062643002253026,
+      "full_end_p95": 31.629678233002778,
+      "pruned_end_p50": 24.00980200036429,
+      "pruned_end_p95": 32.268915012537036
+    },
+    {
+      "length": 512,
+      "pairs": 96,
+      "median_paired_end_speedup": 1.1587498693407188,
+      "faster": 81,
+      "median_paired_prefill_speedup": 2.0296197315827698,
+      "full_end_p50": 30.19098400545772,
+      "full_end_p95": 38.67053025169298,
+      "pruned_end_p50": 26.39648350304924,
+      "pruned_end_p95": 35.32769050070783
+    },
+    {
+      "length": 2048,
+      "pairs": 96,
+      "median_paired_end_speedup": 2.14639211562797,
+      "faster": 95,
+      "median_paired_prefill_speedup": 8.589445111360922,
+      "full_end_p50": 58.87162649014499,
+      "full_end_p95": 72.92039674939588,
+      "pruned_end_p50": 26.349687497713603,
+      "pruned_end_p95": 36.16326572955586
+    }
+  ],
+  "sha256": {
+    "benchmark.py": "19ce01eeda1a45d1e7a8104df52117b694da9ece8fe020b73d367e3e84867479",
+    "timings.json": "cc4c4226e320e58b89d5324ca50b31b88cf7a0a781e64a38edbcf1251144f5de",
+    "validation.json": "e7e1a472bba48caa4e24b61425c974f5bc0cec7bec889d1fc134eea1ac43213b"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "full_score_aggregates_verified": true,
+  "local_quality_gates_pass": true,
+  "reset_local_gates_fail": true,
+  "source_sha256": {
+    "run.py": "fc26344ea087de3916934e0e39f3b4b0f4043108afbfff539b8e62d3a0e9dfeb",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "local_attention.py": "f33dd75a98b814479fb45f71403d72e8d28bd97c4f5c23a1fe3fe35c289ee0fa",
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "test_pruning.py": "0d1f2abdd14f0234b37175a7adb42686906c0f827f5cef4c55103cf50ffef9f5"
+  }
+}

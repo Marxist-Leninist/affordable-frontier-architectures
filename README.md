@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v17 matched-quality chunked prefill
+## Latest experiment: v18 unreachable-prefix pruning
+
+[Full v18 report, audited code and measurements](experiments/v18/README.md). On fresh FineWeb-Edu rows 300–399, skipping context outside the two-layer local model’s 255-byte prediction receptive field reduces a 2,048-byte-prefix CPU probe from **58.872 to 26.350 ms**, versus v17’s optimized chunked baseline. Median paired end speedup is **2.146×** (95/96 favorable). Preserving absolute RoPE positions passes all three seeds’ numerical quality gates; the failed position-reset control is retained. This saves work precisely because the model cannot use distant context, not because it solves long-range tasks. Commercial economics and frontier quality remain unproven.
+
+## Prior experiment: v17 matched-quality chunked prefill
 
 [Full v17 report, audited code and measurements](experiments/v17/README.md). On fresh FineWeb-Edu rows 200–299, fixed 128-byte prefill chunks preserve local-Transformer losses to floating-point precision while reducing the 2,048-byte-prefix CPU probe from **117.295 to 55.709 ms**. The median paired speed ratio is **2.020×**; all 96 paired long-prefix probes improve. Both paths receive the same output-head optimization. Chunking is slightly slower at 512 bytes and neutral at 128, so this is workload-dependent. No frontier-task or commercial-token economic pass is claimed.
 

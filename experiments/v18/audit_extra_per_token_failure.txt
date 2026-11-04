@@ -1,0 +1,25 @@
+test_final_one_and_32_single_updates (test_pruning.PruningTests.test_final_one_and_32_single_updates) ... FAIL
+test_independent_monolithic_and_prefix_poison (test_pruning.PruningTests.test_independent_monolithic_and_prefix_poison) ... ok
+test_indexing_and_receptive_field (test_pruning.PruningTests.test_indexing_and_receptive_field) ... ok
+test_real_weights_outputs_states_continuation (test_pruning.PruningTests.test_real_weights_outputs_states_continuation) ... FROZEN_WEIGHT_METRICS [{"seed": 1, "max_logit_error": 1.52587890625e-05, "max_continuation_error": 7.62939453125e-06}, {"seed": 2, "max_logit_error": 1.239776611328125e-05, "max_continuation_error": 9.5367431640625e-06}, {"seed": 3, "max_logit_error": 1.430511474609375e-05, "max_continuation_error": 9.5367431640625e-06}]
+ok
+test_rope_shift_is_numerical_not_bitwise (test_pruning.PruningTests.test_rope_shift_is_numerical_not_bitwise) ... ROPE_RESET_CONTROL {"reset_max_logit_error": 0.00027751922607421875, "preserved_max_logit_error": 1.52587890625e-05}
+ok
+
+======================================================================
+FAIL: test_final_one_and_32_single_updates (test_pruning.PruningTests.test_final_one_and_32_single_updates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/frontier-v10-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/da7c9af8b517/frontier_research_v18/test_pruning.py", line 123, in test_final_one_and_32_single_updates
+    self.parity(a,b,raw[:,2049+t:2050+t])
+  File "/workspace/scratch/da7c9af8b517/frontier_research_v18/test_pruning.py", line 59, in parity
+    self.assertLessEqual(float((la-lb).abs().max()), 2e-6)
+AssertionError: 2.63321754800927e-06 not less than or equal to 2e-06
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.212s
+
+FAILED (failures=1)

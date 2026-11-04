@@ -1,0 +1,8 @@
+{
+  "dataset_manifest_sha256": "7df7bf5142bed15b4d57f15e8d1c1a852bce8e5675fbff31c676e669d62e205a",
+  "selection": "Fresh FineWeb rows300-399, first4097 bytes, nonoverlapping2048 input+next target windows, last128 identical targets. No tuning.",
+  "hypothesis": "Two layers span128: final distribution receptive field255 inputs. Last128 distributions require382 inputs. Preserve absolute RoPE counters after initial reset-position control failed declared gates. Prefix pruning exact up to floating-point effects, does not add long-range capability.",
+  "gate": "local max logits abs error <=1e-4 and each window bpb abs error <=2e-6",
+  "baseline": "Same frozen v14 checkpoints; local baseline v17 chunk128 + final-head-only. Both paths use chunk128 for local. Full Transformer and GRU suffix-pruning controls are diagnostic and may not be quality matched.",
+  "checkpoint_manifest_sha256": "4dd235df02ff05a206f745307bea85b1fbb456bcc616fd76ca0bd1d6269d0c4c"
+}
