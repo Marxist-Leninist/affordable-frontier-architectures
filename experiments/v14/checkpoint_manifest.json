@@ -1,0 +1,11 @@
+{
+  "gru_seed1_step2000.pt": "5bbe253c6cd8b32bd4423f07d38d6131a7a0600494aced4f7e12a7c94b183170",
+  "gru_seed1_step4000.pt": "ce7e6b0de560417ba6929d0d226f5dc83d4ed54cf2c7b2fd97acee2b3029b78c",
+  "gru_seed2_step2000.pt": "c219a325fba9cac58004c5b59ef199fcc9a2809f3aa8a0d18e71292998185de6",
+  "gru_seed2_step4000.pt": "dbb09a76ebadd5057abd5b1b4207a575f608245749e8858d41f3bb7fc646dee9",
+  "gru_seed3_step2000.pt": "93a279cfebf835f244bfc4560fcbd427e7ad6f12a917d8b8b293fb3bfba42400",
+  "gru_seed3_step4000.pt": "f76bc7485033d2653a16c029ad48eafc4bd3a1990f87ab0ad78b064d12af72b4",
+  "transformer_seed1_step4000.pt": "c604072c6e42b389bb04923580444730f4aa1c0ce7c4e00a4514d6db68e85710",
+  "transformer_seed2_step4000.pt": "593190dcf6f23eb509ccfbf5c2f0cdab95c6e75ec36cca9640516acb79d9ac36",
+  "transformer_seed3_step4000.pt": "d9647fda51791846f2776a8e7b271b9cedbb5ea5f91f0771c87a64b09c97ce97"
+}

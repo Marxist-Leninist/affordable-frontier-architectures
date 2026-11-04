@@ -1,0 +1,767 @@
+{
+  "protocol_sha256": "a255116410b51ce3e872d6834ad5158c72b4650e8ac69c932574fee4c25cdc15",
+  "selection_sha256": "2fef5ec9eb6f0dff8b11b6202a8e2c0c593343304db1bd7e904fbda6ab9d0370",
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.003,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 31.6781841370248,
+          "validation": {
+            "bpb": 2.7285897404359947,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 61.474952566000866,
+          "validation": {
+            "bpb": 2.527523116154416,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 116.44772340777854,
+          "validation": {
+            "bpb": 2.3612586834515965,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 116.44772340777854
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.01,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 28.130043784083682,
+          "validation": {
+            "bpb": 2.7384444978247053,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 54.84550656523788,
+          "validation": {
+            "bpb": 2.5276075082767666,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 108.55372519424418,
+          "validation": {
+            "bpb": 2.3332890059137497,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 108.55372519424418
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.03,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 30.88489229393599,
+          "validation": {
+            "bpb": 3.0865512968194486,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 59.22020465771493,
+          "validation": {
+            "bpb": 2.8440291380838016,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 114.26012227397587,
+          "validation": {
+            "bpb": 2.5425069630230857,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 114.26012227397587
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.003,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 54.381186145037645,
+          "validation": {
+            "bpb": 2.5040433884092357,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.06344325796817,
+          "validation": {
+            "bpb": 2.3438971400426394,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 233.47239384707063,
+          "validation": {
+            "bpb": 2.208299135315016,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 233.47239384707063
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.01,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 58.080075045261765,
+          "validation": {
+            "bpb": 2.531877824606579,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.18387245156919,
+          "validation": {
+            "bpb": 2.375423228808489,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 230.65009272182942,
+          "validation": {
+            "bpb": 2.2065359638122604,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 230.65009272182942
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.03,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 57.661270140262786,
+          "validation": {
+            "bpb": 2.7552619745040103,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.30489289226534,
+          "validation": {
+            "bpb": 2.60267432137971,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 233.34210457419977,
+          "validation": {
+            "bpb": 2.3682774614078457,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 233.34210457419977
+    }
+  ],
+  "final": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "lr": 0.01,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 28.552310094979475,
+          "validation": {
+            "bpb": 2.7349845829504806,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 56.01687749211851,
+          "validation": {
+            "bpb": 2.5210903320017635,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 112.45331446826458,
+          "validation": {
+            "bpb": 2.325420790066281,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 112.45331446826458,
+      "validation_gate_steps": {
+        "2.5": 4000,
+        "2.35": 4000,
+        "2.25": null
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.3547470932319383,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "transformer_seed1_step4000.pt",
+          "checkpoint_sha256": "c604072c6e42b389bb04923580444730f4aa1c0ce7c4e00a4514d6db68e85710",
+          "checkpoint_bytes": 534194,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 1.6478679972351529,
+            "prefill_p95_ms": 2.0659993977460545,
+            "decode_step_p50_ms": 0.5999380314278824,
+            "decode_step_p95_ms": 0.6658140482613817,
+            "end_to_end_p50_ms": 21.175227499043103,
+            "end_to_end_p95_ms": 23.651026251172876,
+            "end_to_end_mean_ms": 21.251841875709943,
+            "final_cache_tensor_bytes": 163840,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "lr": 0.01,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 59.61636817904946,
+          "validation": {
+            "bpb": 2.5437267808618396,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 117.6772131184116,
+          "validation": {
+            "bpb": 2.3862635843449125,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 239.09837062902807,
+          "validation": {
+            "bpb": 2.209724892247033,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 239.09837062902807,
+      "validation_gate_steps": {
+        "2.5": 2000,
+        "2.35": 4000,
+        "2.25": 4000
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 2000,
+          "test": {
+            "bpb": 2.4146070341934975,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed1_step2000.pt",
+          "checkpoint_sha256": "5bbe253c6cd8b32bd4423f07d38d6131a7a0600494aced4f7e12a7c94b183170",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 4.058961996634025,
+            "prefill_p95_ms": 5.385394143377197,
+            "decode_step_p50_ms": 0.29901318748670747,
+            "decode_step_p95_ms": 0.3652209404663153,
+            "end_to_end_p50_ms": 13.762440001301002,
+            "end_to_end_p95_ms": 16.54657775143278,
+            "end_to_end_mean_ms": 13.806506833134335,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        },
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.2464801086855393,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed1_step4000.pt",
+          "checkpoint_sha256": "ce7e6b0de560417ba6929d0d226f5dc83d4ed54cf2c7b2fd97acee2b3029b78c",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 4.166721002548002,
+            "prefill_p95_ms": 5.154112452146364,
+            "decode_step_p50_ms": 0.3145429375308595,
+            "decode_step_p95_ms": 0.3630941107985563,
+            "end_to_end_p50_ms": 14.251063999836333,
+            "end_to_end_p95_ms": 15.976032800244866,
+            "end_to_end_mean_ms": 14.260328166225614,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "lr": 0.01,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 27.09326373320073,
+          "validation": {
+            "bpb": 2.722185233948357,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 54.00917181519617,
+          "validation": {
+            "bpb": 2.5281689069394053,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 112.39305595689802,
+          "validation": {
+            "bpb": 2.327531015967469,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 112.39305595689802,
+      "validation_gate_steps": {
+        "2.5": 4000,
+        "2.35": 4000,
+        "2.25": null
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.3623734267532965,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "transformer_seed2_step4000.pt",
+          "checkpoint_sha256": "593190dcf6f23eb509ccfbf5c2f0cdab95c6e75ec36cca9640516acb79d9ac36",
+          "checkpoint_bytes": 534194,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 1.759752500220202,
+            "prefill_p95_ms": 2.0880657932139,
+            "decode_step_p50_ms": 0.6449170934956783,
+            "decode_step_p95_ms": 0.8650964874959755,
+            "end_to_end_p50_ms": 22.6002544950461,
+            "end_to_end_p95_ms": 29.27986884897109,
+            "end_to_end_mean_ms": 23.23143129009016,
+            "final_cache_tensor_bytes": 163840,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "lr": 0.01,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 60.37161757987633,
+          "validation": {
+            "bpb": 2.5263704611270286,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 117.78090609819628,
+          "validation": {
+            "bpb": 2.3693848307312075,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 242.23841877143423,
+          "validation": {
+            "bpb": 2.195208551853325,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 242.23841877143423,
+      "validation_gate_steps": {
+        "2.5": 2000,
+        "2.35": 4000,
+        "2.25": 4000
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 2000,
+          "test": {
+            "bpb": 2.397705582600576,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed2_step2000.pt",
+          "checkpoint_sha256": "c219a325fba9cac58004c5b59ef199fcc9a2809f3aa8a0d18e71292998185de6",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 4.1361625044373795,
+            "prefill_p95_ms": 5.455830057326239,
+            "decode_step_p50_ms": 0.3164930938055477,
+            "decode_step_p95_ms": 0.4036978592921513,
+            "end_to_end_p50_ms": 14.278907998232171,
+            "end_to_end_p95_ms": 16.9393680007488,
+            "end_to_end_mean_ms": 14.567797959898598,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        },
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.227431373483005,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed2_step4000.pt",
+          "checkpoint_sha256": "dbb09a76ebadd5057abd5b1b4207a575f608245749e8858d41f3bb7fc646dee9",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 4.304245499952231,
+            "prefill_p95_ms": 6.269505149975883,
+            "decode_step_p50_ms": 0.32197354698837444,
+            "decode_step_p95_ms": 0.3555175343535666,
+            "end_to_end_p50_ms": 14.537645998643711,
+            "end_to_end_p95_ms": 16.964113799622282,
+            "end_to_end_mean_ms": 14.537185874360148,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "lr": 0.01,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 28.73158552062523,
+          "validation": {
+            "bpb": 2.7246917521349214,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 58.22675799073477,
+          "validation": {
+            "bpb": 2.529277290836087,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 119.94297531314078,
+          "validation": {
+            "bpb": 2.3282338072038162,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 119.94297531314078,
+      "validation_gate_steps": {
+        "2.5": 4000,
+        "2.35": 4000,
+        "2.25": null
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.3619667514693297,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "transformer_seed3_step4000.pt",
+          "checkpoint_sha256": "d9647fda51791846f2776a8e7b271b9cedbb5ea5f91f0771c87a64b09c97ce97",
+          "checkpoint_bytes": 534194,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 1.690250493993517,
+            "prefill_p95_ms": 2.557028344017453,
+            "decode_step_p50_ms": 0.6249890311664785,
+            "decode_step_p95_ms": 0.8617191672783518,
+            "end_to_end_p50_ms": 21.589014497294556,
+            "end_to_end_p95_ms": 30.092581295320993,
+            "end_to_end_mean_ms": 23.51117445808389,
+            "final_cache_tensor_bytes": 163840,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "lr": 0.01,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 60.42042501195101,
+          "validation": {
+            "bpb": 2.5347519865235837,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 121.49168144690339,
+          "validation": {
+            "bpb": 2.379496910121124,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 242.31022926591686,
+          "validation": {
+            "bpb": 2.20741955470344,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 242.31022926591686,
+      "validation_gate_steps": {
+        "2.5": 2000,
+        "2.35": 4000,
+        "2.25": 4000
+      },
+      "evaluated_checkpoints": [
+        {
+          "step": 2000,
+          "test": {
+            "bpb": 2.406164674368781,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed3_step2000.pt",
+          "checkpoint_sha256": "93a279cfebf835f244bfc4560fcbd427e7ad6f12a917d8b8b293fb3bfba42400",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 3.8223185038077645,
+            "prefill_p95_ms": 7.954698200774146,
+            "decode_step_p50_ms": 0.25044915605576534,
+            "decode_step_p95_ms": 0.5795080967118338,
+            "end_to_end_p50_ms": 11.898267002834473,
+            "end_to_end_p95_ms": 26.496550846786704,
+            "end_to_end_mean_ms": 15.007899414437512,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        },
+        {
+          "step": 4000,
+          "test": {
+            "bpb": 2.242441345488638,
+            "targets": 1291904,
+            "unscored_trailing_targets": 108
+          },
+          "checkpoint_file": "gru_seed3_step4000.pt",
+          "checkpoint_sha256": "f76bc7485033d2653a16c029ad48eafc4bd3a1990f87ab0ad78b064d12af72b4",
+          "checkpoint_bytes": 535978,
+          "latency": {
+            "prefill_bytes": 128,
+            "decode_steps": 32,
+            "contexts": 8,
+            "repetitions_after_warmup": 3,
+            "prefill_p50_ms": 3.5642915026983246,
+            "prefill_p95_ms": 3.9552246969833504,
+            "decode_step_p50_ms": 0.25339304670524143,
+            "decode_step_p95_ms": 0.35123522472986207,
+            "end_to_end_p50_ms": 11.745706498913933,
+            "end_to_end_p95_ms": 14.776088698272357,
+            "end_to_end_mean_ms": 12.042861915688263,
+            "final_cache_tensor_bytes": 512,
+            "scope": "Single-thread CPU batch1 teacher-forced replay, full softmax. p95 is over 24 local probes, not service p95. Last byte predicts next distribution; outputs not sampled."
+          }
+        }
+      ]
+    }
+  ],
+  "ngram": {
+    "training_seconds": 12.079514270997606,
+    "training_target_presentations": 4096000,
+    "selected_order": 4,
+    "validation": {
+      "2": {
+        "bpb": 2.957339716881496,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "3": {
+        "bpb": 2.4704905243335475,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "4": {
+        "bpb": 2.1982545766525443,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    "test": {
+      "bpb": 2.226091549414156,
+      "targets": 1291904,
+      "unscored_trailing_targets": 108
+    },
+    "serialized_bytes": 4506831,
+    "context_counts": [
+      1,
+      190,
+      3797,
+      23242,
+      97713
+    ],
+    "latency": {
+      "prefill_bytes": 128,
+      "decode_steps": 32,
+      "contexts": 8,
+      "repetitions_after_warmup": 3,
+      "prefill_p50_ms": 0.3994110011262819,
+      "prefill_p95_ms": 0.5248895511613226,
+      "decode_step_p50_ms": 0.415894765410485,
+      "decode_step_p95_ms": 0.4330358251763755,
+      "end_to_end_p50_ms": 13.749544996244367,
+      "end_to_end_p95_ms": 14.3462926025677,
+      "end_to_end_mean_ms": 13.800165917321769,
+      "logical_suffix_bytes": 4,
+      "scope": "Same 24 batch1 teacher-forced sequences; full 256-way distributions. Finite-order prefill needs only suffix; not prefix likelihood scoring."
+    }
+  },
+  "total_wall_seconds": 2540.242070993001
+}

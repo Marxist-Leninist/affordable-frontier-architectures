@@ -1,0 +1,18 @@
+{
+  "method": "Identity-deduplicated sys.getsizeof Python object graph. Excludes interpreter, allocator fragmentation, temporary activations and process RSS.",
+  "ngram_object_graph_bytes": 54023171,
+  "unique_objects": 264687,
+  "bytes_by_type": {
+    "Ngram": 48,
+    "dict": 296,
+    "list": 240,
+    "Counter": 42306128,
+    "int": 413896,
+    "bytes": 4591481,
+    "defaultdict": 6710872,
+    "float": 24,
+    "str": 186
+  },
+  "serialized_bytes": 4506831,
+  "training_target_presentations": 4096000
+}

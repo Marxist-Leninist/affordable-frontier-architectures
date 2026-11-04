@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "checkpoint_count": 9,
+  "neural_sample_rescores": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 2.2700999391389587e-07,
+      "all_window_mean_error": 6.4006426825358176e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "step": 2000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 2.2401326349452688e-07,
+      "all_window_mean_error": 6.55657483861205e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 3.2369791247433e-07,
+      "all_window_mean_error": 5.7363958028133766e-09
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 1.9121074634753654e-07,
+      "all_window_mean_error": 5.902940358737396e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "step": 2000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 3.60249052810957e-07,
+      "all_window_mean_error": 7.713115923735359e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 2.187947076848218e-07,
+      "all_window_mean_error": 4.782744866815847e-09
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 2.566343302312646e-07,
+      "all_window_mean_error": 4.801176789470674e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "step": 2000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 3.1477328432671925e-07,
+      "all_window_mean_error": 9.782993970475218e-09
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "step": 4000,
+      "sampled_windows": 20,
+      "max_absolute_bpb_error": 3.37552966911403e-07,
+      "all_window_mean_error": 7.218051489843447e-09
+    }
+  ],
+  "ngram_full_test_bpb": 2.226091549414156,
+  "ngram_full_test_targets": 1291904,
+  "verified": [
+    "dataset/source/protocol/selection/checkpoint hashes",
+    "all pilot LR selections",
+    "all final gate/checkpoint choices",
+    "summary means/sample SD/training totals",
+    "all gate pair gaps and failed descriptive screens",
+    "neural sample scores via float64 logsumexp",
+    "full statistical test score"
+  ],
+  "scope": "20 distributed windows per neural checkpoint, not full neural rescore; every saved block mean checked. Ngram fully rescored with independent loop, shared probability routine. No timing repeated.",
+  "wall_seconds": 16.375015294994228
+}

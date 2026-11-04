@@ -1,0 +1,279 @@
+{
+  "families": {
+    "transformer": {
+      "mean_test_bpb": 2.3596957571515214,
+      "seed_sample_sd_bpb": 0.004290489731765562,
+      "individual_test_bpb": [
+        2.3547470932319383,
+        2.3623734267532965,
+        2.3619667514693297
+      ],
+      "total_training_seconds_including_pilots": 684.050916614302,
+      "mean_final_training_seconds": 114.9297819127678,
+      "median_seed_prefill_p50_ms": 1.690250493993517,
+      "median_seed_decode_step_p50_ms": 0.6249890311664785,
+      "median_seed_end_to_end_p50_ms": 21.589014497294556,
+      "checkpoint_bytes": 534194,
+      "final_cache_tensor_bytes": 163840
+    },
+    "gru": {
+      "mean_test_bpb": 2.2387842758857275,
+      "seed_sample_sd_bpb": 0.010037140866026797,
+      "individual_test_bpb": [
+        2.2464801086855393,
+        2.227431373483005,
+        2.242441345488638
+      ],
+      "total_training_seconds_including_pilots": 1421.111609809479,
+      "mean_final_training_seconds": 241.21567288879305,
+      "median_seed_prefill_p50_ms": 4.166721002548002,
+      "median_seed_decode_step_p50_ms": 0.3145429375308595,
+      "median_seed_end_to_end_p50_ms": 14.251063999836333,
+      "checkpoint_bytes": 535978,
+      "final_cache_tensor_bytes": 512
+    }
+  },
+  "quality_gates": [
+    {
+      "validation_threshold": 2.5,
+      "pairs": [
+        {
+          "seed": 1,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.325420790066281,
+              "test_bpb": 2.3547470932319383,
+              "training_seconds": 112.45331446826458,
+              "end_to_end_p50_ms": 21.175227499043103
+            },
+            "gru": {
+              "step": 2000,
+              "validation_bpb": 2.3862635843449125,
+              "test_bpb": 2.4146070341934975,
+              "training_seconds": 117.6772131184116,
+              "end_to_end_p50_ms": 13.762440001301002
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": 0.05985994096155922,
+          "within_descriptive_002_bpb_screen": false
+        },
+        {
+          "seed": 2,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.327531015967469,
+              "test_bpb": 2.3623734267532965,
+              "training_seconds": 112.39305595689802,
+              "end_to_end_p50_ms": 22.6002544950461
+            },
+            "gru": {
+              "step": 2000,
+              "validation_bpb": 2.3693848307312075,
+              "test_bpb": 2.397705582600576,
+              "training_seconds": 117.78090609819628,
+              "end_to_end_p50_ms": 14.278907998232171
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": 0.035332155847279445,
+          "within_descriptive_002_bpb_screen": false
+        },
+        {
+          "seed": 3,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.3282338072038162,
+              "test_bpb": 2.3619667514693297,
+              "training_seconds": 119.94297531314078,
+              "end_to_end_p50_ms": 21.589014497294556
+            },
+            "gru": {
+              "step": 2000,
+              "validation_bpb": 2.379496910121124,
+              "test_bpb": 2.406164674368781,
+              "training_seconds": 121.49168144690339,
+              "end_to_end_p50_ms": 11.898267002834473
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": 0.044197922899451125,
+          "within_descriptive_002_bpb_screen": false
+        }
+      ],
+      "all_seeds_reached_and_within_screen": false
+    },
+    {
+      "validation_threshold": 2.35,
+      "pairs": [
+        {
+          "seed": 1,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.325420790066281,
+              "test_bpb": 2.3547470932319383,
+              "training_seconds": 112.45331446826458,
+              "end_to_end_p50_ms": 21.175227499043103
+            },
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.209724892247033,
+              "test_bpb": 2.2464801086855393,
+              "training_seconds": 239.09837062902807,
+              "end_to_end_p50_ms": 14.251063999836333
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": -0.10826698454639905,
+          "within_descriptive_002_bpb_screen": false
+        },
+        {
+          "seed": 2,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.327531015967469,
+              "test_bpb": 2.3623734267532965,
+              "training_seconds": 112.39305595689802,
+              "end_to_end_p50_ms": 22.6002544950461
+            },
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.195208551853325,
+              "test_bpb": 2.227431373483005,
+              "training_seconds": 242.23841877143423,
+              "end_to_end_p50_ms": 14.537645998643711
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": -0.1349420532702914,
+          "within_descriptive_002_bpb_screen": false
+        },
+        {
+          "seed": 3,
+          "selected": {
+            "transformer": {
+              "step": 4000,
+              "validation_bpb": 2.3282338072038162,
+              "test_bpb": 2.3619667514693297,
+              "training_seconds": 119.94297531314078,
+              "end_to_end_p50_ms": 21.589014497294556
+            },
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.20741955470344,
+              "test_bpb": 2.242441345488638,
+              "training_seconds": 242.31022926591686,
+              "end_to_end_p50_ms": 11.745706498913933
+            }
+          },
+          "both_validation_gates_reached": true,
+          "test_gap_gru_minus_transformer_bpb": -0.11952540598069161,
+          "within_descriptive_002_bpb_screen": false
+        }
+      ],
+      "all_seeds_reached_and_within_screen": false
+    },
+    {
+      "validation_threshold": 2.25,
+      "pairs": [
+        {
+          "seed": 1,
+          "selected": {
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.209724892247033,
+              "test_bpb": 2.2464801086855393,
+              "training_seconds": 239.09837062902807,
+              "end_to_end_p50_ms": 14.251063999836333
+            }
+          },
+          "both_validation_gates_reached": false
+        },
+        {
+          "seed": 2,
+          "selected": {
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.195208551853325,
+              "test_bpb": 2.227431373483005,
+              "training_seconds": 242.23841877143423,
+              "end_to_end_p50_ms": 14.537645998643711
+            }
+          },
+          "both_validation_gates_reached": false
+        },
+        {
+          "seed": 3,
+          "selected": {
+            "gru": {
+              "step": 4000,
+              "validation_bpb": 2.20741955470344,
+              "test_bpb": 2.242441345488638,
+              "training_seconds": 242.31022926591686,
+              "end_to_end_p50_ms": 11.745706498913933
+            }
+          },
+          "both_validation_gates_reached": false
+        }
+      ],
+      "all_seeds_reached_and_within_screen": false
+    }
+  ],
+  "note": "The .02-bpb screen is descriptive, not a statistical equivalence test. No failed screen is called matched quality.",
+  "ngram": {
+    "training_seconds": 12.079514270997606,
+    "training_target_presentations": 4096000,
+    "selected_order": 4,
+    "validation": {
+      "2": {
+        "bpb": 2.957339716881496,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "3": {
+        "bpb": 2.4704905243335475,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      },
+      "4": {
+        "bpb": 2.1982545766525443,
+        "targets": 1147904,
+        "unscored_trailing_targets": 102
+      }
+    },
+    "test": {
+      "bpb": 2.226091549414156,
+      "targets": 1291904,
+      "unscored_trailing_targets": 108
+    },
+    "serialized_bytes": 4506831,
+    "context_counts": [
+      1,
+      190,
+      3797,
+      23242,
+      97713
+    ],
+    "latency": {
+      "prefill_bytes": 128,
+      "decode_steps": 32,
+      "contexts": 8,
+      "repetitions_after_warmup": 3,
+      "prefill_p50_ms": 0.3994110011262819,
+      "prefill_p95_ms": 0.5248895511613226,
+      "decode_step_p50_ms": 0.415894765410485,
+      "decode_step_p95_ms": 0.4330358251763755,
+      "end_to_end_p50_ms": 13.749544996244367,
+      "end_to_end_p95_ms": 14.3462926025677,
+      "end_to_end_mean_ms": 13.800165917321769,
+      "logical_suffix_bytes": 4,
+      "scope": "Same 24 batch1 teacher-forced sequences; full 256-way distributions. Finite-order prefill needs only suffix; not prefix likelihood scoring."
+    }
+  },
+  "wall_seconds": 2540.242070993001
+}

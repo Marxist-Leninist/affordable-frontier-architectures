@@ -1,0 +1,15 @@
+test_actual_gate_selection_and_checkpoint_set (test_v14.Audit.test_actual_gate_selection_and_checkpoint_set) ... ok
+test_evaluation_batch_boundary (test_v14.Audit.test_evaluation_batch_boundary) ... ok
+test_evaluation_target_alignment_and_truncation (test_v14.Audit.test_evaluation_target_alignment_and_truncation) ... ok
+test_ngram_eval_exact_context_and_targets (test_v14.Audit.test_ngram_eval_exact_context_and_targets) ... ok
+test_ngram_ledger_reset_and_normalization (test_v14.Audit.test_ngram_ledger_reset_and_normalization) ... ok
+test_protocol_source_and_ledger_hashes (test_v14.Audit.test_protocol_source_and_ledger_hashes) ... ok
+test_timing_semantics_and_identical_sequences (test_v14.Audit.test_timing_semantics_and_identical_sequences) ... ok
+test_causality_and_streaming (test_models.Tests.test_causality_and_streaming) ... ok
+test_gradients_reload (test_models.Tests.test_gradients_reload) ... ok
+test_parameters (test_models.Tests.test_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.170s
+
+OK

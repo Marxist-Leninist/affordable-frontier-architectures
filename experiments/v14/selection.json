@@ -1,0 +1,242 @@
+{
+  "neural": {
+    "transformer": 0.01,
+    "gru": 0.01
+  },
+  "ngram_order": 4,
+  "ngram_validation": {
+    "2": {
+      "bpb": 2.957339716881496,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102
+    },
+    "3": {
+      "bpb": 2.4704905243335475,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102
+    },
+    "4": {
+      "bpb": 2.1982545766525443,
+      "targets": 1147904,
+      "unscored_trailing_targets": 102
+    }
+  },
+  "tuning": [
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.003,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 31.6781841370248,
+          "validation": {
+            "bpb": 2.7285897404359947,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 61.474952566000866,
+          "validation": {
+            "bpb": 2.527523116154416,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 116.44772340777854,
+          "validation": {
+            "bpb": 2.3612586834515965,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 116.44772340777854
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.01,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 28.130043784083682,
+          "validation": {
+            "bpb": 2.7384444978247053,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 54.84550656523788,
+          "validation": {
+            "bpb": 2.5276075082767666,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 108.55372519424418,
+          "validation": {
+            "bpb": 2.3332890059137497,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 108.55372519424418
+    },
+    {
+      "kind": "transformer",
+      "seed": 101,
+      "lr": 0.03,
+      "parameters": 131904,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 30.88489229393599,
+          "validation": {
+            "bpb": 3.0865512968194486,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 59.22020465771493,
+          "validation": {
+            "bpb": 2.8440291380838016,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 114.26012227397587,
+          "validation": {
+            "bpb": 2.5425069630230857,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 114.26012227397587
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.003,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 54.381186145037645,
+          "validation": {
+            "bpb": 2.5040433884092357,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.06344325796817,
+          "validation": {
+            "bpb": 2.3438971400426394,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 233.47239384707063,
+          "validation": {
+            "bpb": 2.208299135315016,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 233.47239384707063
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.01,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 58.080075045261765,
+          "validation": {
+            "bpb": 2.531877824606579,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.18387245156919,
+          "validation": {
+            "bpb": 2.375423228808489,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 230.65009272182942,
+          "validation": {
+            "bpb": 2.2065359638122604,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 230.65009272182942
+    },
+    {
+      "kind": "gru",
+      "seed": 101,
+      "lr": 0.03,
+      "parameters": 132160,
+      "curve": [
+        {
+          "step": 1000,
+          "training_seconds": 57.661270140262786,
+          "validation": {
+            "bpb": 2.7552619745040103,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 2000,
+          "training_seconds": 116.30489289226534,
+          "validation": {
+            "bpb": 2.60267432137971,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        },
+        {
+          "step": 4000,
+          "training_seconds": 233.34210457419977,
+          "validation": {
+            "bpb": 2.3682774614078457,
+            "targets": 1147904,
+            "unscored_trailing_targets": 102
+          }
+        }
+      ],
+      "training_seconds": 233.34210457419977
+    }
+  ]
+}
