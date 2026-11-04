@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "transformer",
+    "seed": 1,
+    "v13_neural_test_bpb": 2.7287939875441753,
+    "v12_independent_test_bpb": 2.7287939875441767,
+    "delta": -1.3322676295501878e-15
+  },
+  {
+    "kind": "transformer",
+    "seed": 2,
+    "v13_neural_test_bpb": 2.7300028450045066,
+    "v12_independent_test_bpb": 2.7300028450045053,
+    "delta": 1.3322676295501878e-15
+  },
+  {
+    "kind": "transformer",
+    "seed": 3,
+    "v13_neural_test_bpb": 2.718874086058004,
+    "v12_independent_test_bpb": 2.718874086058008,
+    "delta": -3.9968028886505635e-15
+  },
+  {
+    "kind": "gru",
+    "seed": 1,
+    "v13_neural_test_bpb": 2.4910961502961166,
+    "v12_independent_test_bpb": 2.491096150296115,
+    "delta": 1.7763568394002505e-15
+  },
+  {
+    "kind": "gru",
+    "seed": 2,
+    "v13_neural_test_bpb": 2.472277512673044,
+    "v12_independent_test_bpb": 2.472277512673043,
+    "delta": 8.881784197001252e-16
+  },
+  {
+    "kind": "gru",
+    "seed": 3,
+    "v13_neural_test_bpb": 2.486502728259314,
+    "v12_independent_test_bpb": 2.486502728259315,
+    "delta": -8.881784197001252e-16
+  }
+]

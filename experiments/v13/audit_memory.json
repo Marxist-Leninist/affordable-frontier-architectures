@@ -1,0 +1,19 @@
+{
+  "method": "Identity-deduplicated recursive sys.getsizeof of rebuilt Ngram instance, instance dict, containers, keys, values. Shared identities counted once. Does not follow class/type objects or defaultdict factory types. Excludes Python interpreter, allocator fragmentation, transient inference allocations, neural runtime, and RSS.",
+  "ngram_object_graph_bytes": 32205521,
+  "unique_objects": 166687,
+  "bytes_by_type": {
+    "Ngram": 48,
+    "dict": 296,
+    "list": 240,
+    "Counter": 25736432,
+    "int": 114408,
+    "bytes": 2985335,
+    "defaultdict": 3368552,
+    "float": 24,
+    "str": 186
+  },
+  "ngram_serialized_checkpoint_bytes": 2820855,
+  "ledger_sha256": "594f8c363c588d5e10114b46e6ee49755497cf34b0f6021b8fdf029a0c80e2be",
+  "training_targets": 1024000
+}

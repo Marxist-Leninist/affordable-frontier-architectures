@@ -1,0 +1,13 @@
+test_completed_result_and_prior_full_corpus_parity (__main__.Audit.test_completed_result_and_prior_full_corpus_parity) ... ok
+test_frozen_source_data_ledger_checkpoints (__main__.Audit.test_frozen_source_data_ledger_checkpoints) ... ok
+test_neural_reset_batch_and_cross_entropy_parity (__main__.Audit.test_neural_reset_batch_and_cross_entropy_parity) ... ok
+test_ngram_frozen_normalized_and_reference_eval (__main__.Audit.test_ngram_frozen_normalized_and_reference_eval) ... ok
+test_ngram_training_target_count (__main__.Audit.test_ngram_training_target_count) ... ok
+test_probability_mixture_not_loss_average (__main__.Audit.test_probability_mixture_not_loss_average) ... ok
+test_statistical_context_reset_and_target_order (__main__.Audit.test_statistical_context_reset_and_target_order) ... ok
+test_target_indexing_and_truncation (__main__.Audit.test_target_indexing_and_truncation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.092s
+
+OK

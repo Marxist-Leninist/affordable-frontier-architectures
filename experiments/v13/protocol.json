@@ -1,0 +1,58 @@
+{
+  "experiment": "v13 frozen neural plus statistical mixture",
+  "weights_ngram": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "selection": "Full validation only, pilot seed101 for each architecture. Freeze weights before scoring three final test seeds.",
+  "training": "No new neural training. Rebuild same v12 ngram from identical ledger. Combined systems incur both original component training costs.",
+  "evaluation": "Identical complete 128-byte windows, reset each; no adaptive counts or test updates",
+  "v12_checkpoint_manifest_sha256": "59b082b7b036e840e078448981fe112f6a5c10e228e285efd8bd8b16e4d7f0d2",
+  "ledger_sha256": "594f8c363c588d5e10114b46e6ee49755497cf34b0f6021b8fdf029a0c80e2be",
+  "dataset": {
+    "dataset": "Salesforce/wikitext",
+    "config": "wikitext-2-raw-v1",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "serialization": "UTF-8 bytes of LF-joined original text rows; no normalization or filtering",
+    "splits": {
+      "train": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet",
+        "parquet_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+        "rows": 36718,
+        "utf8_bytes": 10951562,
+        "text_sha256": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8"
+      },
+      "validation": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet",
+        "parquet_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+        "rows": 3760,
+        "utf8_bytes": 1148007,
+        "text_sha256": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307"
+      },
+      "test": {
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet",
+        "parquet_sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+        "rows": 4358,
+        "utf8_bytes": 1292013,
+        "text_sha256": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      }
+    }
+  },
+  "source_sha256": {
+    "run.py": "9cacf268c53d137a3c8a1b0be9e830ab46d3530a0ec00ad97e88206f84df91da",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "ngram.py": "b81dee48d2d7a21c61b06e1c94fc3d30286c95145ef7b522d0b06aeedf94d997"
+  },
+  "torch": "2.6.0+cpu",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v12 real-text neural and non-neural controls
+## Latest experiment: v13 statistical–neural complementarity
+
+[Full v13 report, tested source and numerical results](experiments/v13/README.md). Frozen validation-selected mixtures improve prediction on the same pinned WikiText-2 test split: Transformer+statistics **2.27116 bits/byte**, GRU+statistics **2.24240**, versus statistical-only **2.33517**. The best hybrid reduces loss by 3.97% versus the statistical model, at additive memory and inference cost. A 2.82MB serialized table occupies ~32.21MB as Python objects before runtime overhead. Three seeds, eight independent checks; no equal-compute, AGI or frontier-economics claim. [Updated official pricing caveats](experiments/v13/pricing.md) preserve the $500 sustainability goal.
+
+## Prior experiment: v12 real-text neural and non-neural controls
 
 [Full v12 report, tested source and numerical results](experiments/v12/README.md). On pinned Hugging Face WikiText-2 with the same sampled training targets, a modern two-block Transformer scored **2.7259 bits/byte**, parameter-matched gated recurrence **2.4833**, and an interpolated non-neural byte 5-gram **2.3352**. The GRU has faster cached CPU decoding but slower training/prefill; the n-gram uses larger sparse storage. This is short-context sample-limited prediction, not evidence of general reasoning, AGI or frontier economics. Prior experiments and failed controls remain preserved.
 

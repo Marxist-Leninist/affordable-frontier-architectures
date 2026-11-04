@@ -1,0 +1,12 @@
+# Pricing verification, 2026-11-04
+
+Primary sources checked during v13; these are public retail rates, not underlying inference costs or evidence of quality parity.
+
+- [Meta official pricing](https://dev.meta.ai/docs/pricing-rate-limits): Muse Spark 1.3 Contributor $0.10/M uncached input, $0.002/M cached input, $0.20/M output. Requested half-price targets are therefore $0.05 / $0.001 / $0.10. Standard rates $1.25 / $0.15 / $4.25. Contributor permits training on submitted prompts, code, files, context and responses; this is not an equivalent privacy proposition to private hosting.
+- [Meta model documentation](https://dev.meta.ai/docs/models): max reasoning is unavailable in Contributor. Standard/max benchmark scores cannot establish Contributor quality equivalence.
+- [DeepSeek official pricing](https://api-docs.deepseek.com/quick_start/pricing/): V4.1 Flash-1017 off-peak $0.15/M uncached, $0.003/M cached, $0.60/M output. Peak doubles each. Peak weekdays 01–04 and 06–10 UTC, except Chinese public holidays.
+- [Runpod displayed Pod pricing](https://www.runpod.io/pricing): H100 PCIe 80GB $2.89/hour, H100 SXM 80GB $3.99/hour, RTX4090 24GB $0.89/hour, RTX A6000 48GB $0.59/hour; storage extra, inventory not checked. Displayed update October28,2026. These are reference prices, not reservations or all-in quotes. No hardware was rented.
+
+At $0.10/M output and perfect utilization, output-only revenue must fund at least 8,028 aggregate tokens/s for a $2.89/hour GPU or 2,472 for $0.89/hour, before prefill, other expenses and profit. At 60% utilization requirements divide by 0.6. Mixed input revenue requires separate phase accounting; do not double-charge shared busy capacity or assume free prefill. Bytes/s from v13 cannot be substituted for provider tokens/s.
+
+The fixed illustrative workload remains 10M uncached input, 5M cached input, 2M visible output and 2M hidden output. Target retail bill $0.905. This is not the user's measured workload or an observed service cost. Separate $500 gross monthly subscription accounting retains $150 assumed non-serving costs; 30% margin on net sales leaves $200 serving budget at zero tax or $141.67 with an illustrative 20% tax included. No allowance, quality or hidden-reasoning reduction is credited. Training amortization, failed experiments, support, payment costs, tools, storage, network, idle capacity and redundancy must be paid. A profitable $500 heavy-user service remains unproven.
