@@ -1,0 +1,52 @@
+[
+  {
+    "arm": "context2048",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 3.209238430557093e-17
+  },
+  {
+    "arm": "context2048",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 5.551115123125783e-17
+  },
+  {
+    "arm": "mixed",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 2.7755575615628914e-17
+  },
+  {
+    "arm": "mixed",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 1.1102230246251565e-16
+  },
+  {
+    "arm": "reset512",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 6.245004513516506e-17
+  },
+  {
+    "arm": "reset512",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "arm": "local",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "arm": "local",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 2.9541703403592216e-17
+  },
+  {
+    "arm": "gru",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 2.3255607204222036e-17
+  },
+  {
+    "arm": "gru",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 4.071179157683069e-17
+  }
+]

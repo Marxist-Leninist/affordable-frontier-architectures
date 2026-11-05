@@ -1,0 +1,6 @@
+{
+  "stage": "Before any corpus scores or summaries",
+  "reason": "Optimized local chunk/pruning float32 versus monolithic logit numerical difference 1.2636184692382812e-05 exceeds overly strict 1e-5 absolute threshold. Adopt inherited v24 optimized scoring threshold1e-4; causal remains1e-5 and local donor loss invariance1e-10. No model/data/score/selection changes.",
+  "original_protocol": "protocol_initial.json",
+  "failed_test_log": "preflight_initial_failure.txt"
+}

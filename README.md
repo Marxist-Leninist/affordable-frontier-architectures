@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v24 mixed-context tradeoff
+## Latest experiment: v25 distant-prefix content specificity
+
+[Audited v25 report, code and measurements](experiments/v25/README.md). Recomputing neural outputs after replacing distant real text with unrelated text preserves every target and input length. The context-trained Transformer has nearly equal aggregate original/donor loss (3.421446/3.421562 bits per byte; conditional donor-effect interval spans zero), while its genuine512-byte suffix remains better at3.333290. Individual predictions can change greatly, so this is not content blindness or proof of length-only behavior. The artificial boundary and donor dependence limit inference; no useful long-context, frontier-quality or profitability gain is established. [Current sources and economic gates](experiments/v25/pricing_sources.md) remain unchanged.
+
+## Prior experiment: v24 mixed-context tradeoff
 
 [Audited v24 report, code and measurements](experiments/v24/README.md). Fixed 50/50 context training produces an intermediate result rather than beating both specialists: mixed loss is 3.18215/3.60269 bits per byte at nested512/full2048, versus short-trained 3.05462/4.43126 and long-trained 3.30596/3.39622. The same target ledger, initial weights and optimizer updates are used, but compute differs. Fresh held-out real text, seven tests and independent reconstruction support this narrow negative finding. No matched-quality speed or frontier/economic win follows. [Current prices and retained gates](experiments/v24/pricing_sources.md) remain unchanged.
 

@@ -1,0 +1,19 @@
+{
+  "frozen_hashes_verified": true,
+  "rows": 100,
+  "eligible_documents": 68,
+  "windows": 107,
+  "targets_per_seed_condition": 13696,
+  "capped_bytes": 282587,
+  "donor_different_full_document_hash": true,
+  "all_prefixes_actually_changed": true,
+  "deterministic_next_eligible_donor": true,
+  "identical_final641_bytes": true,
+  "preserved_real_prior_bytes_before_earliest_target": 513,
+  "exact_128_target_spans_in_full_wikitext_training": [],
+  "exact_128_target_spans_in_previous_evaluation_documents": [],
+  "exact_128_target_spans_in_other_current_documents": [],
+  "prior_document_records_checked": 900,
+  "duplicate_128_target_spans": 0,
+  "limits": "Exact 128-byte target-span and full-document identity checks do not rule out shorter overlap, near duplicates, semantic overlap, or common upstream provenance. Prior dataset check covers available v15-v24 rows snapshots only."
+}

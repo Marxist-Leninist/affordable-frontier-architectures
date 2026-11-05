@@ -1,0 +1,17 @@
+test_causal_and_optimized (test_v25.Tests.test_causal_and_optimized) ... FAIL
+test_intervention (test_v25.Tests.test_intervention) ... ok
+test_local_invariance_and_suffix_alignment (test_v25.Tests.test_local_invariance_and_suffix_alignment) ... ok
+test_protocol (test_v25.Tests.test_protocol) ... ok
+
+======================================================================
+FAIL: test_causal_and_optimized (test_v25.Tests.test_causal_and_optimized)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/da7c9af8b517/frontier_research_v25/test_v25.py", line 16, in test_causal_and_optimized
+    self.assertLessEqual(float((opt-z[:,-128:]).abs().max()),1e-5)
+AssertionError: 1.2636184692382812e-05 not less than or equal to 1e-05
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.633s
+
+FAILED (failures=1)

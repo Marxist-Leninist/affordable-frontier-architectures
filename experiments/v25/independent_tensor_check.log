@@ -1,0 +1,195 @@
+{
+  "context2048": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    }
+  ],
+  "mixed": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    }
+  ],
+  "reset512": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 0.0,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 2097152,
+      "allocated_state_bytes": 4194304
+    }
+  ],
+  "local": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 1.33514404296875e-05,
+      "independent_native_saved_max_loss_error": 4.293478427896957e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 130064,
+      "allocated_state_bytes": 130064
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 1.1444091796875e-05,
+      "independent_native_saved_max_loss_error": 3.467584938743329e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 130064,
+      "allocated_state_bytes": 130064
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 1.52587890625e-05,
+      "independent_native_saved_max_loss_error": 4.8596408612766595e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 130064,
+      "allocated_state_bytes": 130064
+    }
+  ],
+  "gru": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 8.514978126150652e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 512,
+      "allocated_state_bytes": 512
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 8.588081996663277e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 512,
+      "allocated_state_bytes": 512
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 3.929060071072854e-06,
+      "first_target_causal_max_logit_error": 0.0,
+      "logical_state_bytes": 512,
+      "allocated_state_bytes": 512
+    }
+  ],
+  "all_45_loss_means_and_10_comparison_means_verified": true,
+  "local_all_seed_all_target_donor_invariance": true,
+  "timing_240_unique_records_weight_state_bytes_verified": true
+}

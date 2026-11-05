@@ -1,0 +1,9 @@
+test_causal_and_optimized (test_v25.Tests.test_causal_and_optimized) ... ok
+test_intervention (test_v25.Tests.test_intervention) ... ok
+test_local_invariance_and_suffix_alignment (test_v25.Tests.test_local_invariance_and_suffix_alignment) ... ok
+test_protocol (test_v25.Tests.test_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.913s
+
+OK

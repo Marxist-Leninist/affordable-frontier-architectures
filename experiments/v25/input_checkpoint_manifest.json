@@ -1,0 +1,17 @@
+{
+  "frontier_research_v23/checkpoints/context2048_seed1_step250.pt": "621d059f054808b38628f40be12d54a749cede2703a046655867617a5fec1470",
+  "frontier_research_v23/checkpoints/context2048_seed2_step250.pt": "fad584497c5aad1d440e9de094fcb19aa7ebb3e8ae0a7cb01ef536b73f34f492",
+  "frontier_research_v23/checkpoints/context2048_seed3_step250.pt": "1a441c20bdac2198a0a43d706a355fae483f32b2b428c78aff21a125d4efac4d",
+  "frontier_research_v24/checkpoints/mixed_seed1_step250.pt": "90de1674412b788ca45ee5e5500536999a75ab258c455d38f3cc2507623fa0da",
+  "frontier_research_v24/checkpoints/mixed_seed2_step250.pt": "7bbedc455d74b81acd52eabab61e25c2df126ae59462bf0d0aa984e2edfd30df",
+  "frontier_research_v24/checkpoints/mixed_seed3_step250.pt": "436d5ba289f4fbe943a321ba4ef490684ab2f668c1b99a17a87ed9009ad354d5",
+  "frontier_research_v23/checkpoints/reset512_seed1_step250.pt": "c3c5939bfca43ca4702b7d173a61e4f7f871a2a5d0d7453d9c5a9674228949cf",
+  "frontier_research_v23/checkpoints/reset512_seed2_step250.pt": "c6e128f14ed28773f8ec08b63ee7b9486b49f2de5a126115fe457bc07e5448a9",
+  "frontier_research_v23/checkpoints/reset512_seed3_step250.pt": "600d13c3881f905ef1f532bc42f00f1257112aa84ce0069f3796d48671bd0683",
+  "frontier_research_v19/checkpoints/local_seed1_adapt500.pt": "49f4965b81156cb47144a0e5201cf80ba34768cc7f7895a3b6e296092332af89",
+  "frontier_research_v19/checkpoints/local_seed2_adapt500.pt": "46083c26efc171fe3eb1dcb17523da4eb83505096edd72e345f74a3df876adcb",
+  "frontier_research_v19/checkpoints/local_seed3_adapt500.pt": "1f15f9c0a5a9d2305e9a83f41860e31ae0ceeb15c455b7a3b8656671fe5c9bd4",
+  "frontier_research_v19/checkpoints/gru_seed1_adapt500.pt": "11a7a30d3e4c3da3e13ce181b6f8a2eb2d09468df9d335607a19298a8639b85a",
+  "frontier_research_v19/checkpoints/gru_seed2_adapt500.pt": "ee883ec09a8b6f89e54718223cd575661fdab1cc6908e309dd9dcc405fb8a6c4",
+  "frontier_research_v19/checkpoints/gru_seed3_adapt500.pt": "3d471e01a559f26e9c8376212b06ff47fafdd125601472277ca1a642175fb4d4"
+}

@@ -1,0 +1,132 @@
+{
+  "context2048_512": {
+    "prefill_state_bytes": 524288.0,
+    "final_state_bytes": 557056.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 76969.44872242326,
+    "observed_bytes_per_decode_cpu_second": 1391.5574247280126,
+    "total_wall_ms_p50_p95": [
+      29.328189499210566,
+      35.10319629422156
+    ],
+    "samples": 24
+  },
+  "context2048_2048": {
+    "prefill_state_bytes": 2097152.0,
+    "final_state_bytes": 2129920.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 41389.951085754634,
+    "observed_bytes_per_decode_cpu_second": 1048.9844859046232,
+    "total_wall_ms_p50_p95": [
+      80.16396348830312,
+      90.82438874320358
+    ],
+    "samples": 24
+  },
+  "mixed_512": {
+    "prefill_state_bytes": 524288.0,
+    "final_state_bytes": 557056.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 76841.19216182645,
+    "observed_bytes_per_decode_cpu_second": 1499.946816338875,
+    "total_wall_ms_p50_p95": [
+      25.97115449316334,
+      33.69898984674364
+    ],
+    "samples": 24
+  },
+  "mixed_2048": {
+    "prefill_state_bytes": 2097152.0,
+    "final_state_bytes": 2129920.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 43216.9735254377,
+    "observed_bytes_per_decode_cpu_second": 1090.9636313423423,
+    "total_wall_ms_p50_p95": [
+      74.56144198658876,
+      86.672464539879
+    ],
+    "samples": 24
+  },
+  "reset512_512": {
+    "prefill_state_bytes": 524288.0,
+    "final_state_bytes": 557056.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 73853.09088828463,
+    "observed_bytes_per_decode_cpu_second": 1424.5169898311126,
+    "total_wall_ms_p50_p95": [
+      29.949936506454833,
+      33.10592424531933
+    ],
+    "samples": 24
+  },
+  "reset512_2048": {
+    "prefill_state_bytes": 2097152.0,
+    "final_state_bytes": 2129920.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 41372.66255514756,
+    "observed_bytes_per_decode_cpu_second": 1060.8394593094088,
+    "total_wall_ms_p50_p95": [
+      80.2575729903765,
+      95.775326511648
+    ],
+    "samples": 24
+  },
+  "local_512": {
+    "prefill_state_bytes": 130064.0,
+    "final_state_bytes": 130064.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 133568.11088309006,
+    "observed_bytes_per_decode_cpu_second": 1390.9481113997533,
+    "total_wall_ms_p50_p95": [
+      27.551830004085787,
+      30.71430724230595
+    ],
+    "samples": 24
+  },
+  "local_2048": {
+    "prefill_state_bytes": 130064.0,
+    "final_state_bytes": 130064.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 554070.4354149983,
+    "observed_bytes_per_decode_cpu_second": 1453.4473805549273,
+    "total_wall_ms_p50_p95": [
+      25.36756798508577,
+      31.420582327700686
+    ],
+    "samples": 24
+  },
+  "gru_512": {
+    "prefill_state_bytes": 512.0,
+    "final_state_bytes": 512.0,
+    "parameters": 132160.0,
+    "fp32_weight_bytes": 528640.0,
+    "prefill_bytes_per_cpu_second": 35075.79430139527,
+    "observed_bytes_per_decode_cpu_second": 3463.2498460141364,
+    "total_wall_ms_p50_p95": [
+      22.86793947860133,
+      31.405204036855135
+    ],
+    "samples": 24
+  },
+  "gru_2048": {
+    "prefill_state_bytes": 512.0,
+    "final_state_bytes": 512.0,
+    "parameters": 132160.0,
+    "fp32_weight_bytes": 528640.0,
+    "prefill_bytes_per_cpu_second": 34952.265347324406,
+    "observed_bytes_per_decode_cpu_second": 3363.1147066465987,
+    "total_wall_ms_p50_p95": [
+      64.63043998519424,
+      88.4182736466755
+    ],
+    "samples": 24
+  }
+}

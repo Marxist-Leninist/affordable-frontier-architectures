@@ -1,0 +1,46 @@
+{
+  "experiment": "v25 learned distant-content specificity",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "arms": [
+    "context2048",
+    "mixed",
+    "reset512",
+    "local",
+    "gru"
+  ],
+  "conditions": [
+    "original2048",
+    "donor2048",
+    "suffix512"
+  ],
+  "training": "none; frozen v23 context2048/reset512, v24 mixed, v19 local/GRU",
+  "data": "Pinned FineWeb-Edu rows900-999 first4097 UTF8 bytes/document, no joins/content selection; all nonoverlapping2048-input windows final128 targets",
+  "intervention": "Replace first1408 bytes of each2049-byte window by first1408 bytes of deterministic next eligible different full-document-hash document, cycling ascending row order. Preserve final641 bytes including all128 targets and513 real preceding bytes before earliest target. Original/donor equal input lengths/RoPE positions.",
+  "controls": "suffix512 feeds final512 inputs, effective385-512 contexts; local finite receptive field; GRU near-constant distant influence but not exact invariance",
+  "statistics": "Mean seeds then paired document-cluster5000 bootstrap seed25; donor-original and original-suffix, all arms. Conditional convenience sample; no population guarantee.",
+  "limits": "Artificial unrelated-prefix boundary; effects can include disruption. Original better than donor does not establish beneficial context if suffix remains better. Unequal inherited training; no distant reasoning/frontier capability claim.",
+  "timing": "Original paths only,first8 documents >=2080 bytes,3seeds,all5arms,512/2048 contexts,one full warmup then one measured prefill+32 observed updates/full256way softmax;batch1 randomized order seed250025;descriptive byte units",
+  "source_sha256": {
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "run.py": "d01ef48da3c4a9acb82518a0e002771411ea94e112bede69d9859cde6225ff40",
+    "timing.py": "5364b848880c81c936fa73bb0217f740d6fbac7caa02141e3abffd46c4921edb",
+    "prepare_data.py": "a4bb7846ff4fee533e32346945f29bc31ac5e378e96969ab2b709ece5d00734d",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "check_data.py": "0991db5da62671679b8b9fe101d38ebe25e1d1dff4a867bfef4687a464aaa698",
+    "summarize.py": "1dc4fa46f318cd5b301b53750f1e84046464e79dd632ce4626629886276d99e2",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "test_v25.py": "60d09b9d42c956626bd57faea43832a221d1107efc0b9f5651f0d45e42ea0e0c"
+  },
+  "input_manifest_sha256": "10cf2b43191da4de8b802a0a626ababeb9817c240d5e3c6f11a5fc0670794c6e",
+  "data_manifest_sha256": "1cd2916f7d489149fe96210151180b9e83785be8a45275ba18d0009362341012",
+  "cpu_budget_seconds": 900,
+  "main_cpu_limit": 700,
+  "timing_cpu_limit": 100,
+  "torch": "2.6.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

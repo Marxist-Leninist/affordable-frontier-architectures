@@ -1,0 +1,35 @@
+{
+  "aggregate_max_error_bpb": 0,
+  "aggregate_rows": 45,
+  "arrays": 45,
+  "source_and_checkpoint_hashes_verified": true,
+  "items_and_donors_reconstructed": true,
+  "causal_and_parity": [
+    {
+      "arm": "context2048",
+      "causal_logit_error": 0.0,
+      "optimized_full_logit_error": 0.0
+    },
+    {
+      "arm": "mixed",
+      "causal_logit_error": 0.0,
+      "optimized_full_logit_error": 0.0
+    },
+    {
+      "arm": "reset512",
+      "causal_logit_error": 0.0,
+      "optimized_full_logit_error": 0.0
+    },
+    {
+      "arm": "local",
+      "causal_logit_error": 0.0,
+      "optimized_full_logit_error": 1.239776611328125e-05
+    },
+    {
+      "arm": "gru",
+      "causal_logit_error": 0.0,
+      "optimized_full_logit_error": 0.0
+    }
+  ],
+  "all_local_donor_losses_identical": true
+}
