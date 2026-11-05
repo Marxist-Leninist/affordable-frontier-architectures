@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v25 distant-prefix content specificity
+## Latest experiment: v26 distant-repeat histories and explicit memory
+
+[Audited v26 report, code and measurements](experiments/v26/README.md). A prespecified history-only subgroup identifies 870 targets with an eight-byte context previously observed in the distant replaced prefix, absent from the recent suffix. The context-trained Transformer still shows no clear original-prefix advantage (+0.00572 bits/byte; conditional interval spans zero). Fixed exact-copy hybrids provide a positive control: their subgroup original-over-unrelated-prefix benefits are about0.59–0.99 bits/byte. The GRU hybrid improves overall loss2.94785→2.65981, but adds index memory and measured latency. This is narrow repeated-string complementarity, not learned distant reasoning, matched-quality architecture superiority or proven commercial economics. [Current sources and retained cost gates](experiments/v26/pricing_sources.md) remain unchanged.
+
+## Prior experiment: v25 distant-prefix content specificity
 
 [Audited v25 report, code and measurements](experiments/v25/README.md). Recomputing neural outputs after replacing distant real text with unrelated text preserves every target and input length. The context-trained Transformer has nearly equal aggregate original/donor loss (3.421446/3.421562 bits per byte; conditional donor-effect interval spans zero), while its genuine512-byte suffix remains better at3.333290. Individual predictions can change greatly, so this is not content blindness or proof of length-only behavior. The artificial boundary and donor dependence limit inference; no useful long-context, frontier-quality or profitability gain is established. [Current sources and economic gates](experiments/v25/pricing_sources.md) remain unchanged.
 

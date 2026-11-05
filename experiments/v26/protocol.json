@@ -1,0 +1,48 @@
+{
+  "experiment": "v26 history-only distant-repeat subgroup",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "arms": [
+    "context2048",
+    "local",
+    "gru"
+  ],
+  "conditions": [
+    "original2048",
+    "donor2048",
+    "suffix512"
+  ],
+  "training": "none; frozen v23 context2048 and v19 local/GRU; unmatched inherited histories",
+  "data": "Pinned FineWeb rows1000\u20131099 cap4097; all nonoverlapping2048-input windows final128 targets; UTF8 bytes0\u2013255",
+  "subgroup": "Before scores, for history raw[:t], t1921..2048, last8 bytes have >=1 matching context with observed follower j satisfying8<=j<min(t-512,1408); no matching complete pair inside suffix: t-512+8<=j<t. Current target raw[t] never consulted. Entire far9-byte pair lies in replaced prefix and precedes suffix; retained-middle matches may remain. Crossing pairs do not qualify as far or inside.",
+  "intervention": "v25 donor first1408 bytes from next eligible different full-document-hash row cyclically; preserve final641 including all128 targets",
+  "copy": "Complete normalized LM longest available exact context orders4/8/16; one uniform pseudocount. This differs from fixed8 subgroup. Copy suffix requires complete pair in last512 observed bytes. Hybrid uses fixed v20 weights context2048 .6,local .3,GRU .2, falling back to neural when no copy match; no tuning.",
+  "comparisons": "All-target primary and fixed subgroup secondary. donor-original, original-suffix512. Hybrid additional suffixCopyOnly holds original neural logits fixed while shortening only copy memory. Neural suffix reset effective385\u2013512 unlike copy sliding512.",
+  "statistics": "Average seeds then paired recipient document-cluster5000 bootstrap seed26; subgroup ratio of sums, omit zero-denominator replicates and report them; convenience cohort and donor dependence limitations.",
+  "timing": "first8 documents>=2080 bytes,all3seeds and3arms,original2048 neural/hybrid paths,one full warmup then measured prefill+32 observed updates,complete256 softmax,randomized seed260026; compact cache exact parity tested",
+  "source_sha256": {
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "run.py": "44d15e38593adf0cd885d1f89aa419ed2a843c33650f1f3dd0809e22519b87bc",
+    "copy_cache.py": "c5473b599ebce2b1474288cc0c4b7560144743e5dd2513341060827606173115",
+    "timing.py": "87bcfcf2b4e3cb0da87e8633269ea18fe1622b704139b5b03c198c498d5df82b",
+    "prepare_data.py": "f57777a72e5202bcf8ef8820515f4d7adad6b8d7e66206b23163a1a00ff1087c",
+    "compact_cache.py": "17b641a6d90a0552601427a0d2c94101ab0cf55ee45aed47227153c3e16cb489",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "check_data.py": "c2ec62c37628f3ca83894a6dce955c918cc0dbbce958dbca34d73abb464ba088",
+    "summarize.py": "a14f88151fb45be57b8d9fb15c26de5e709b284eb25bdc1c9cac1d4a94a3d370",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "test_v26.py": "39c688bd23e9d01ece48eecf52a6ee0e95f4054db501422ea4c83506ad67d497"
+  },
+  "input_manifest_sha256": "6ac054e866f08b14c36a4baa29081b892dc0960845efa2fc0626e3a67bb6b431",
+  "data_manifest_sha256": "a35ba0a277a975c0a79e56950c0f19c07112e8a18b7b671cfb1e427016b017f8",
+  "subgroup_sha256": "5e2fdeb380428837b9523918476cddf89954fd18d70847271b9ce65455805252",
+  "cpu_budget_seconds": 900,
+  "main_cpu_limit": 650,
+  "timing_cpu_limit": 120,
+  "torch": "2.6.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

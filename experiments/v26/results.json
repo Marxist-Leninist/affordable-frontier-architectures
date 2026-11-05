@@ -1,0 +1,270 @@
+{
+  "rows": [
+    {
+      "key": "copy_original2048",
+      "bpb": 5.748566028291106
+    },
+    {
+      "key": "copy_donor2048",
+      "bpb": 6.317809744996771
+    },
+    {
+      "key": "copy_suffix512",
+      "bpb": 6.7380694079348995
+    },
+    {
+      "key": "context2048_seed1_original2048",
+      "bpb": 3.200780796088438
+    },
+    {
+      "key": "context2048Hybrid_seed1_original2048",
+      "bpb": 2.8307438626832524
+    },
+    {
+      "key": "context2048_seed1_donor2048",
+      "bpb": 3.202492049137558
+    },
+    {
+      "key": "context2048Hybrid_seed1_donor2048",
+      "bpb": 3.0215077456712103
+    },
+    {
+      "key": "context2048_seed1_suffix512",
+      "bpb": 3.0815663483849547
+    },
+    {
+      "key": "context2048Hybrid_seed1_suffix512",
+      "bpb": 2.9119427654264585
+    },
+    {
+      "key": "context2048Hybrid_seed1_suffixCopyOnly",
+      "bpb": 3.006758652984844
+    },
+    {
+      "key": "local_seed1_original2048",
+      "bpb": 3.0167574958878416
+    },
+    {
+      "key": "localHybrid_seed1_original2048",
+      "bpb": 2.683856209577793
+    },
+    {
+      "key": "local_seed1_donor2048",
+      "bpb": 3.0167574958878416
+    },
+    {
+      "key": "localHybrid_seed1_donor2048",
+      "bpb": 2.82377196123463
+    },
+    {
+      "key": "local_seed1_suffix512",
+      "bpb": 3.016757320590882
+    },
+    {
+      "key": "localHybrid_seed1_suffix512",
+      "bpb": 2.833952830452048
+    },
+    {
+      "key": "localHybrid_seed1_suffixCopyOnly",
+      "bpb": 2.833953091760432
+    },
+    {
+      "key": "gru_seed1_original2048",
+      "bpb": 2.979134257895819
+    },
+    {
+      "key": "gruHybrid_seed1_original2048",
+      "bpb": 2.6793368776346744
+    },
+    {
+      "key": "gru_seed1_donor2048",
+      "bpb": 2.979109007793056
+    },
+    {
+      "key": "gruHybrid_seed1_donor2048",
+      "bpb": 2.798452332771359
+    },
+    {
+      "key": "gru_seed1_suffix512",
+      "bpb": 2.9789475869483852
+    },
+    {
+      "key": "gruHybrid_seed1_suffix512",
+      "bpb": 2.8105505172470076
+    },
+    {
+      "key": "gruHybrid_seed1_suffixCopyOnly",
+      "bpb": 2.8107247363041354
+    },
+    {
+      "key": "context2048_seed2_original2048",
+      "bpb": 3.7168087521254516
+    },
+    {
+      "key": "context2048Hybrid_seed2_original2048",
+      "bpb": 3.1822182363789233
+    },
+    {
+      "key": "context2048_seed2_donor2048",
+      "bpb": 3.718800845525152
+    },
+    {
+      "key": "context2048Hybrid_seed2_donor2048",
+      "bpb": 3.4101054673860087
+    },
+    {
+      "key": "context2048_seed2_suffix512",
+      "bpb": 3.618714468615094
+    },
+    {
+      "key": "context2048Hybrid_seed2_suffix512",
+      "bpb": 3.347352815918903
+    },
+    {
+      "key": "context2048Hybrid_seed2_suffixCopyOnly",
+      "bpb": 3.429257736209275
+    },
+    {
+      "key": "local_seed2_original2048",
+      "bpb": 3.047386053240748
+    },
+    {
+      "key": "localHybrid_seed2_original2048",
+      "bpb": 2.708194009803919
+    },
+    {
+      "key": "local_seed2_donor2048",
+      "bpb": 3.047386053240748
+    },
+    {
+      "key": "localHybrid_seed2_donor2048",
+      "bpb": 2.8489704753031355
+    },
+    {
+      "key": "local_seed2_suffix512",
+      "bpb": 3.0473859871615443
+    },
+    {
+      "key": "localHybrid_seed2_suffix512",
+      "bpb": 2.8574068598384974
+    },
+    {
+      "key": "localHybrid_seed2_suffixCopyOnly",
+      "bpb": 2.8574067547371116
+    },
+    {
+      "key": "gru_seed2_original2048",
+      "bpb": 2.9282303506155065
+    },
+    {
+      "key": "gruHybrid_seed2_original2048",
+      "bpb": 2.6485769131526573
+    },
+    {
+      "key": "gru_seed2_donor2048",
+      "bpb": 2.928230618645661
+    },
+    {
+      "key": "gruHybrid_seed2_donor2048",
+      "bpb": 2.764211706720166
+    },
+    {
+      "key": "gru_seed2_suffix512",
+      "bpb": 2.9282335398091845
+    },
+    {
+      "key": "gruHybrid_seed2_suffix512",
+      "bpb": 2.7725108107503487
+    },
+    {
+      "key": "gruHybrid_seed2_suffixCopyOnly",
+      "bpb": 2.772506652488478
+    },
+    {
+      "key": "context2048_seed3_original2048",
+      "bpb": 3.422744938601683
+    },
+    {
+      "key": "context2048Hybrid_seed3_original2048",
+      "bpb": 2.9968437606360467
+    },
+    {
+      "key": "context2048_seed3_donor2048",
+      "bpb": 3.420871565153996
+    },
+    {
+      "key": "context2048Hybrid_seed3_donor2048",
+      "bpb": 3.197873829306411
+    },
+    {
+      "key": "context2048_seed3_suffix512",
+      "bpb": 3.3202721560756077
+    },
+    {
+      "key": "context2048Hybrid_seed3_suffix512",
+      "bpb": 3.1084756270559963
+    },
+    {
+      "key": "context2048Hybrid_seed3_suffixCopyOnly",
+      "bpb": 3.1958702896673223
+    },
+    {
+      "key": "local_seed3_original2048",
+      "bpb": 3.0245263697222233
+    },
+    {
+      "key": "localHybrid_seed3_original2048",
+      "bpb": 2.690503571314667
+    },
+    {
+      "key": "local_seed3_donor2048",
+      "bpb": 3.0245263697222233
+    },
+    {
+      "key": "localHybrid_seed3_donor2048",
+      "bpb": 2.829584353733114
+    },
+    {
+      "key": "local_seed3_suffix512",
+      "bpb": 3.024526161625534
+    },
+    {
+      "key": "localHybrid_seed3_suffix512",
+      "bpb": 2.8375211453147777
+    },
+    {
+      "key": "localHybrid_seed3_suffixCopyOnly",
+      "bpb": 2.8375212702583053
+    },
+    {
+      "key": "gru_seed3_original2048",
+      "bpb": 2.936180490357783
+    },
+    {
+      "key": "gruHybrid_seed3_original2048",
+      "bpb": 2.6515133170783374
+    },
+    {
+      "key": "gru_seed3_donor2048",
+      "bpb": 2.9362222149487383
+    },
+    {
+      "key": "gruHybrid_seed3_donor2048",
+      "bpb": 2.7645773281361734
+    },
+    {
+      "key": "gru_seed3_suffix512",
+      "bpb": 2.9358022653682854
+    },
+    {
+      "key": "gruHybrid_seed3_suffix512",
+      "bpb": 2.7730701049293245
+    },
+    {
+      "key": "gruHybrid_seed3_suffixCopyOnly",
+      "bpb": 2.7733749085827544
+    }
+  ],
+  "complete": true,
+  "cpu_seconds": 60.113650869999994
+}

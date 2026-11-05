@@ -1,0 +1,4 @@
+{
+  "initial_export_failure": "Pretty-printed timing.json exceeded70000-character group limit. ZIP created but text payload not created.",
+  "adaptation": "Minified timing.json whitespace only, preserving parsed data; rebuilt manifest and exports. No scoring or timing changed."
+}

@@ -1,0 +1,11 @@
+test_compact_reference (test_v26.CopyTests.test_compact_reference) ... ok
+test_subgroup_oracle_and_target_independence (test_v26.CopyTests.test_subgroup_oracle_and_target_independence) ... ok
+test_causal_and_optimized (test_v26.Tests.test_causal_and_optimized) ... ok
+test_intervention (test_v26.Tests.test_intervention) ... ok
+test_local_invariance_and_suffix_alignment (test_v26.Tests.test_local_invariance_and_suffix_alignment) ... ok
+test_protocol (test_v26.Tests.test_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 8.744s
+
+OK

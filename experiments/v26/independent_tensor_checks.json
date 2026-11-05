@@ -1,0 +1,102 @@
+{
+  "context2048": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 8.881784197001252e-16,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 1.7763568394002505e-15,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 1.7763568394002505e-15,
+      "first_target_causal_max_logit_error": 0.0
+    }
+  ],
+  "local": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 1.33514404296875e-05,
+      "independent_native_saved_max_loss_error": 7.788539754471913e-06,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 2.2411346435546875e-05,
+      "independent_native_saved_max_loss_error": 2.8347932689243294e-05,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 527616,
+      "native_optimized_max_logit_error": 1.52587890625e-05,
+      "independent_native_saved_max_loss_error": 3.460857873172074e-06,
+      "first_target_causal_max_logit_error": 0.0
+    }
+  ],
+  "gru": [
+    {
+      "seed": 1,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 3.7192669175567517e-06,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 2,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 7.5347207300069385e-06,
+      "first_target_causal_max_logit_error": 0.0
+    },
+    {
+      "seed": 3,
+      "weight_dtype": [
+        "torch.float32"
+      ],
+      "weight_bytes": 528640,
+      "native_optimized_max_logit_error": 0.0,
+      "independent_native_saved_max_loss_error": 6.27098812966409e-06,
+      "first_target_causal_max_logit_error": 0.0
+    }
+  ],
+  "all66_loss_means_verified": true,
+  "all_hybrid_losses_verified": true,
+  "local_all_seed_all_target_donor_invariance": true,
+  "timing144_unique_records_weight_state_bytes_verified": true
+}

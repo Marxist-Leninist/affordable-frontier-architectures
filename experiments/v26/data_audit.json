@@ -1,0 +1,20 @@
+{
+  "fineweb": {
+    "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/README.md",
+    "sha256": "a0cc8998a20499432b28b6575f3046b714938eb8e11b8d59a1d25ddf3716061e",
+    "status": "retrieved"
+  },
+  "wikitext": {
+    "url": "https://huggingface.co/datasets/Salesforce/wikitext/raw/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+    "error": "URLError(TimeoutError('timed out'))",
+    "status": "inherited prior verification only"
+  },
+  "contamination": {
+    "prior_exact_full_document_matches": [],
+    "within_cohort_exact_full_duplicates": 0,
+    "full_documents_occurring_in_wikitext_train": [],
+    "limitations": "No near duplicate or exhaustive passage-overlap detection; absence of exact full-document matches does not rule out contamination. Previous FineWeb rows disjoint.",
+    "exact_final128_target_spans_in_train": [],
+    "target_span_check": "All complete128-byte target spans searched in WikiText training. Shorter overlaps/near-duplicates not ruled out."
+  }
+}

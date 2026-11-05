@@ -1,0 +1,92 @@
+{
+  "context2048_neural": {
+    "prefill_state_bytes": 2097152.0,
+    "final_state_bytes": 2129920.0,
+    "prefill_copy_index_bytes": 0.0,
+    "final_copy_index_bytes": 0.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 37793.879941798106,
+    "observed_bytes_per_decode_cpu_second": 918.6652760052095,
+    "total_wall_ms_p50_p95": [
+      88.55161399696954,
+      97.79586252116133
+    ],
+    "samples": 24
+  },
+  "context2048_hybrid": {
+    "prefill_state_bytes": 2097152.0,
+    "final_state_bytes": 2129920.0,
+    "prefill_copy_index_bytes": 617691.0,
+    "final_copy_index_bytes": 626195.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 34756.73938282069,
+    "observed_bytes_per_decode_cpu_second": 902.8675928240067,
+    "total_wall_ms_p50_p95": [
+      95.7810399850132,
+      100.0050073445891
+    ],
+    "samples": 24
+  },
+  "local_neural": {
+    "prefill_state_bytes": 130064.0,
+    "final_state_bytes": 130064.0,
+    "prefill_copy_index_bytes": 0.0,
+    "final_copy_index_bytes": 0.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 468809.9505675056,
+    "observed_bytes_per_decode_cpu_second": 1253.6828689103827,
+    "total_wall_ms_p50_p95": [
+      30.52979901258368,
+      31.620128902432043
+    ],
+    "samples": 24
+  },
+  "local_hybrid": {
+    "prefill_state_bytes": 130064.0,
+    "final_state_bytes": 130064.0,
+    "prefill_copy_index_bytes": 617679.0,
+    "final_copy_index_bytes": 626183.0,
+    "parameters": 131904.0,
+    "fp32_weight_bytes": 527616.0,
+    "prefill_bytes_per_cpu_second": 173262.9671082223,
+    "observed_bytes_per_decode_cpu_second": 1109.2363716543643,
+    "total_wall_ms_p50_p95": [
+      40.85276050318498,
+      45.3727695523412
+    ],
+    "samples": 24
+  },
+  "gru_neural": {
+    "prefill_state_bytes": 512.0,
+    "final_state_bytes": 512.0,
+    "prefill_copy_index_bytes": 0.0,
+    "final_copy_index_bytes": 0.0,
+    "parameters": 132160.0,
+    "fp32_weight_bytes": 528640.0,
+    "prefill_bytes_per_cpu_second": 26615.217813174226,
+    "observed_bytes_per_decode_cpu_second": 2717.606309715583,
+    "total_wall_ms_p50_p95": [
+      90.89685000071768,
+      96.90966905181995
+    ],
+    "samples": 24
+  },
+  "gru_hybrid": {
+    "prefill_state_bytes": 512.0,
+    "final_state_bytes": 512.0,
+    "prefill_copy_index_bytes": 617679.0,
+    "final_copy_index_bytes": 626183.0,
+    "parameters": 132160.0,
+    "fp32_weight_bytes": 528640.0,
+    "prefill_bytes_per_cpu_second": 25997.010832467608,
+    "observed_bytes_per_decode_cpu_second": 2298.9455108125876,
+    "total_wall_ms_p50_p95": [
+      95.42701100872364,
+      102.62539319955977
+    ],
+    "samples": 24
+  }
+}

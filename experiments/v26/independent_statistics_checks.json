@@ -1,0 +1,206 @@
+[
+  {
+    "cohort": "all",
+    "arm": "context2048",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "context2048",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "local",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "local",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "gru",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "gru",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "context2048Hybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "context2048Hybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "context2048Hybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "localHybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "localHybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "localHybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "gruHybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "gruHybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "gruHybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "copy",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "all",
+    "arm": "copy",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "context2048",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "context2048",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "local",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "local",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "gru",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "gru",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "context2048Hybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "context2048Hybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "context2048Hybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "localHybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "localHybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "localHybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "gruHybrid",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "gruHybrid",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "gruHybrid",
+    "comparison": "suffixCopyOnly minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "copy",
+    "comparison": "donor2048 minus original2048",
+    "max_ci_error": 0.0
+  },
+  {
+    "cohort": "distant_repeat",
+    "arm": "copy",
+    "comparison": "original2048 minus suffix512",
+    "max_ci_error": 0.0
+  }
+]

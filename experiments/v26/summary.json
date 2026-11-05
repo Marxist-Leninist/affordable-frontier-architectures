@@ -1,0 +1,438 @@
+{
+  "all": {
+    "targets": 12416,
+    "fraction": 1.0,
+    "documents": 68,
+    "windows": 97,
+    "means": {
+      "context2048": {
+        "original2048": 3.446778162271858,
+        "donor2048": 3.447388153272235,
+        "suffix512": 3.3401843243585523
+      },
+      "local": {
+        "original2048": 3.029556639616938,
+        "donor2048": 3.029556639616938,
+        "suffix512": 3.029556489792654
+      },
+      "gru": {
+        "original2048": 2.9478483662897035,
+        "donor2048": 2.947853947129152,
+        "suffix512": 2.9476611307086182
+      },
+      "context2048Hybrid": {
+        "original2048": 3.003268619899408,
+        "donor2048": 3.20982901412121,
+        "suffix512": 3.1225904028004523,
+        "suffixCopyOnly": 3.2106288929538134
+      },
+      "localHybrid": {
+        "original2048": 2.694184596898793,
+        "donor2048": 2.8341089300902933,
+        "suffix512": 2.842960278535108,
+        "suffixCopyOnly": 2.842960372251949
+      },
+      "gruHybrid": {
+        "original2048": 2.6598090359552233,
+        "donor2048": 2.775747122542566,
+        "suffix512": 2.7853771443088933,
+        "suffixCopyOnly": 2.785535432458456
+      },
+      "copy": {
+        "original2048": 5.748566028291106,
+        "donor2048": 6.317809744996771,
+        "suffix512": 6.7380694079348995
+      }
+    },
+    "effects": [
+      {
+        "arm": "context2048",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.0006099910003776188,
+        "bootstrap95": [
+          -0.006147376517822232,
+          0.007275616841451063
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": 0.10659383791330528,
+        "bootstrap95": [
+          0.09221908450463473,
+          0.12093196168860922
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "local",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "local",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": 1.4982428410357498e-07,
+        "bootstrap95": [
+          -1.7696618895362836e-07,
+          4.6025944305950905e-07
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gru",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 5.58083944878517e-06,
+        "bootstrap95": [
+          -0.0001397040846997066,
+          0.00014284622164369086
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gru",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": 0.00018723558108497254,
+        "bootstrap95": [
+          5.928055487901068e-05,
+          0.0003033589792607602
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.20656039422180256,
+        "bootstrap95": [
+          0.16436057534603593,
+          0.2508035487518875
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.11932178290104449,
+        "bootstrap95": [
+          -0.16733169010102564,
+          -0.0719995415318871
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 0.20736027305440574,
+        "bootstrap95": [
+          0.16551571962768624,
+          0.2509231154098878
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.1399243331915002,
+        "bootstrap95": [
+          0.1095163467775354,
+          0.17308509587943413
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.1487756816363148,
+        "bootstrap95": [
+          -0.1821457656598035,
+          -0.11656619174782455
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 0.14877577535315648,
+        "bootstrap95": [
+          0.11656626296171689,
+          0.18214589306802215
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.11593808658734304,
+        "bootstrap95": [
+          0.08975984165762664,
+          0.14410001409868564
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.1255681083536707,
+        "bootstrap95": [
+          -0.15413830951244867,
+          -0.0981820146593123
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 0.12572639650323295,
+        "bootstrap95": [
+          0.09833294943987125,
+          0.15433489073140125
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "copy",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.569243716705667,
+        "bootstrap95": [
+          0.4613187897826007,
+          0.6837120932593904
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "copy",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.9895033796437952,
+        "bootstrap95": [
+          -1.1091735201053643,
+          -0.8726415639097048
+        ],
+        "zero_denominator_bootstraps": 0
+      }
+    ]
+  },
+  "distant_repeat": {
+    "targets": 870,
+    "fraction": 0.0700708762886598,
+    "documents": 63,
+    "windows": 88,
+    "means": {
+      "context2048": {
+        "original2048": 3.757091297752084,
+        "donor2048": 3.762807218961837,
+        "suffix512": 3.6579881879239786
+      },
+      "local": {
+        "original2048": 3.361265229550489,
+        "donor2048": 3.361265229550489,
+        "suffix512": 3.3612654871790917
+      },
+      "gru": {
+        "original2048": 3.1850294994113058,
+        "donor2048": 3.184776345771539,
+        "suffix512": 3.18466439709895
+      },
+      "context2048Hybrid": {
+        "original2048": 2.3543869624259957,
+        "donor2048": 3.3447835808984827,
+        "suffix512": 3.33300043254529,
+        "suffixCopyOnly": 3.4079234083197156
+      },
+      "localHybrid": {
+        "original2048": 2.2767109544808095,
+        "donor2048": 3.0036093380523208,
+        "suffix512": 3.074736652546477,
+        "suffixCopyOnly": 3.0747365837897256
+      },
+      "gruHybrid": {
+        "original2048": 2.298426026667889,
+        "donor2048": 2.8912076409603684,
+        "suffix512": 2.9427492039905907,
+        "suffixCopyOnly": 2.9430336643493873
+      },
+      "copy": {
+        "original2048": 2.8290188864210717,
+        "donor2048": 6.087570160542766,
+        "suffix512": 6.661512566919497
+      }
+    },
+    "effects": [
+      {
+        "arm": "context2048",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.005715921209753621,
+        "bootstrap95": [
+          -0.02269994191665695,
+          0.035733659153855284
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": 0.09910310982810569,
+        "bootstrap95": [
+          0.06486981586743143,
+          0.1328282851640848
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "local",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "local",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -2.576286027884565e-07,
+        "bootstrap95": [
+          -1.5150982888705602e-06,
+          9.438194626403044e-07
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gru",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": -0.0002531536397673034,
+        "bootstrap95": [
+          -0.0006660282572926976,
+          0.00010458280019529846
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gru",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": 0.00036510231235634534,
+        "bootstrap95": [
+          1.2355572887063778e-06,
+          0.0008580099370562684
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.9903966184724873,
+        "bootstrap95": [
+          0.7303466119046085,
+          1.2414441393206506
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.9786134701192944,
+        "bootstrap95": [
+          -1.2232676476086048,
+          -0.7248444825845471
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "context2048Hybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 1.0535364458937195,
+        "bootstrap95": [
+          0.8040141064257531,
+          1.2945187692050644
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.7268983835715117,
+        "bootstrap95": [
+          0.5044186766373974,
+          0.9380901056128181
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.7980256980656674,
+        "bootstrap95": [
+          -0.9880880102004844,
+          -0.5911113442236204
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "localHybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 0.7980256293089163,
+        "bootstrap95": [
+          0.5911113716534135,
+          0.9880871394738627
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 0.5927816142924797,
+        "bootstrap95": [
+          0.3891813984754344,
+          0.7917773845169737
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -0.6443231773227017,
+        "bootstrap95": [
+          -0.8316536841558536,
+          -0.4544926047551409
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "gruHybrid",
+        "comparison": "suffixCopyOnly minus original2048",
+        "effect_bpb": 0.6446076376814988,
+        "bootstrap95": [
+          0.4550702481681573,
+          0.8319557093312687
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "copy",
+        "comparison": "donor2048 minus original2048",
+        "effect_bpb": 3.258551274121695,
+        "bootstrap95": [
+          2.6531768402035896,
+          3.8328100068915636
+        ],
+        "zero_denominator_bootstraps": 0
+      },
+      {
+        "arm": "copy",
+        "comparison": "original2048 minus suffix512",
+        "effect_bpb": -3.832493680498426,
+        "bootstrap95": [
+          -4.325379346095511,
+          -3.276145388820139
+        ],
+        "zero_denominator_bootstraps": 0
+      }
+    ]
+  }
+}
