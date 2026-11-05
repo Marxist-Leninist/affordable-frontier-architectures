@@ -1,0 +1,9 @@
+# Preserved v19-v22 research records
+
+Recovered from completed local research on 2026-11-05. Private archival only; no repository visibility, license, credentials or workflows changed. v22 repairs the storage/performance measurement gap with a dynamic INT8 CPU comparison. Its independently audited findings: about2.72x serialized model compression; Transformer paths14–45% slower, GRU about6% faster; small systematic quality losses, no frontier/economic pass.
+
+Parts contain gzip-compressed UTF-8 JSON dictionaries of the historical source, reports, protocol/data/checkpoint hashes, full text-format numeric results, timing records and test/audit logs. Small parts avoid connector payload limitations. Run `python extract.py --output /path/to/clean/workspace` from this directory to verify archive hashes and restore sibling frontier_research_v19 through v22 directories. The script refuses differing existing files. Keep these sibling names because historical reproduction code references them.
+
+No dataset text, rows.json, checkpoint weights, credentials or personal data is included. Historical .npz/.npy numerical arrays are also omitted from this text archive; regenerate them with the preserved experiment scripts and licensed data/checkpoints. Original artifact manifests describe the complete original runs, so entries for omitted binary arrays are expected. Do not claim this text archive alone reproduces model weights or replaces data acquisition. Original complete local archives remain separate.
+
+v19-v21 historical prose describing unavailable archival destinations is retained verbatim as historical context; this archival step is new. v22 source/pricing/economics records and independent audit are included. CPU probes are not production billing-token throughput; no AGI, frontier parity or profitable service is established.

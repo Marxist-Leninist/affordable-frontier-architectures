@@ -1,0 +1,42 @@
+{
+  "experiment": "v22 CPU dynamic INT8 causal comparison",
+  "frozen_before_results": true,
+  "source_sha256": {
+    "run.py": "3f8aa9c7de57093b8b829bf493433c8dba314d4cf83fb7444e0dccd26ea26591",
+    "benchmark.py": "532424cc5eb593dd23906aa17d0e2f7a50458397779c39ff71eaa4110e6dd9c0",
+    "test_quant.py": "8b3584091e500297559ebdfe3927f30b8cd9e15a67aecde23dd7b18430068a7d",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "compact_cache.py": "17b641a6d90a0552601427a0d2c94101ab0cf55ee45aed47227153c3e16cb489"
+  },
+  "inputs": {
+    "frontier_research_v21/rows.json": "ff175431a7e0a5f0f09ad0e0cecace6558d5291561cabf07f15a699020e7cf43",
+    "frontier_research_v21/data_manifest.json": "634b653c72ed9d90ea7faf8e45af6342f8248ae72b75e74cf99839dca947ecf0",
+    "frontier_research_v22/input_checkpoint_manifest.json": "5faf914281e4de1cd8bca41f14b7b2011d8ca023dc6bf58bdc718a2e3aeaa8c1",
+    "frontier_research_v22/frozen_selection.json": "e2e9cad760268e87c2fc72f340b81699962d0fbc568435cd4c66df8376ac4ef4"
+  },
+  "dataset": "REUSED exploratory v21 FineWeb-Edu rows600-699; no fresh confirmation and no tuning",
+  "kinds": [
+    "transformer",
+    "transformer_reset512",
+    "local",
+    "gru"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "quantization": "PyTorch dynamic qint8 Linear + GRU; x86 engine; embedding/norm/state FP32",
+  "quality": "91 windows; final128 targets; batch1 prefix1921 then127 single observed updates; reset512 begins1536. Every prediction causal, avoiding future-token dynamic-scale leakage. Float and INT8 identical invocation shapes.",
+  "hybrid": "Frozen v20 weights, compact full-history copy memory; no retuning.",
+  "quality_gate": "Abs paired aggregate delta <=0.02 bpb is descriptive only, not formal equivalence.",
+  "timing": "After tests and scoring; 8 docs;3 seeds;4 repetitions; discard first1; random matched variants fp32/int8/base/hybrid;prefix2048 +32 observed updates, reset512 begins1536; all256-way distributions; exclude loads,input construction,memory traversal,final cache destruction.",
+  "cpu_budget_seconds": 900,
+  "torch": "2.6.0+cpu",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "engine": "x86"
+}

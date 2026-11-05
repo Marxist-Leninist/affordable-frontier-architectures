@@ -1,0 +1,101 @@
+{
+  "quality": [
+    {
+      "kind": "transformer",
+      "hybrid": false,
+      "fp32_bpb": 4.229754068395028,
+      "int8_bpb": 4.240160654643421,
+      "delta_int8_minus_fp32": 0.010406586248391693,
+      "paired_document_bootstrap95": [
+        0.006942003077522261,
+        0.013784295860481462
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "transformer",
+      "hybrid": true,
+      "fp32_bpb": 3.559573036097276,
+      "int8_bpb": 3.566223487024835,
+      "delta_int8_minus_fp32": 0.006650450927560208,
+      "paired_document_bootstrap95": [
+        0.004316111982210269,
+        0.009254088989941206
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "transformer_reset512",
+      "hybrid": false,
+      "fp32_bpb": 3.615053155938168,
+      "int8_bpb": 3.625744003886387,
+      "delta_int8_minus_fp32": 0.010690847948219511,
+      "paired_document_bootstrap95": [
+        0.008292140575783171,
+        0.013320388788067765
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "transformer_reset512",
+      "hybrid": true,
+      "fp32_bpb": 3.1556126562469546,
+      "int8_bpb": 3.1626253878728803,
+      "delta_int8_minus_fp32": 0.007012731625924873,
+      "paired_document_bootstrap95": [
+        0.005127526344705737,
+        0.009045738812113834
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "local",
+      "hybrid": false,
+      "fp32_bpb": 3.028825441000207,
+      "int8_bpb": 3.035315989808055,
+      "delta_int8_minus_fp32": 0.006490548807849317,
+      "paired_document_bootstrap95": [
+        0.004813230029445681,
+        0.008060591042590078
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "local",
+      "hybrid": true,
+      "fp32_bpb": 2.7158744665634855,
+      "int8_bpb": 2.7212341686585066,
+      "delta_int8_minus_fp32": 0.005359702095020556,
+      "paired_document_bootstrap95": [
+        0.003968085268670573,
+        0.0068039312819488966
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "gru",
+      "hybrid": false,
+      "fp32_bpb": 2.9569944076146983,
+      "int8_bpb": 2.958938835749525,
+      "delta_int8_minus_fp32": 0.0019444281348271213,
+      "paired_document_bootstrap95": [
+        0.0008261361226368285,
+        0.003067934082051288
+      ],
+      "descriptive_abs_delta_le_002": true
+    },
+    {
+      "kind": "gru",
+      "hybrid": true,
+      "fp32_bpb": 2.684393485901126,
+      "int8_bpb": 2.6859322467089317,
+      "delta_int8_minus_fp32": 0.0015387608078058202,
+      "paired_document_bootstrap95": [
+        0.0005169158945716432,
+        0.002552280582476129
+      ],
+      "descriptive_abs_delta_le_002": true
+    }
+  ],
+  "bootstrap": "5000 paired document clusters; average checkpoint seeds before sampling; token-weighted same-sample exploratory intervals, not population guarantees. Fixed seed2026110522."
+}

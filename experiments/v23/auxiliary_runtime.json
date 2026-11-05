@@ -1,0 +1,23 @@
+[
+  {
+    "script": "summarize.py",
+    "returncode": 0,
+    "wall_seconds": 0.2313327840238344,
+    "user_seconds": 0.187273,
+    "system_seconds": 0.043634
+  },
+  {
+    "script": "audit_results.py",
+    "returncode": 0,
+    "wall_seconds": 1.6018344959884416,
+    "user_seconds": 1.511818,
+    "system_seconds": 0.08476599999999998
+  },
+  {
+    "script": "write_report.py",
+    "returncode": 0,
+    "wall_seconds": 0.02880963298957795,
+    "user_seconds": 0.016664999999999708,
+    "system_seconds": 0.011656
+  }
+]

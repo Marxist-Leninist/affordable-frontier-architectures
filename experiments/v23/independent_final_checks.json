@@ -1,0 +1,8 @@
+{
+  "all_30_loss_rows_reconstructed": true,
+  "six_checkpoint_hashes_match": true,
+  "six_complete_training_ledgers": true,
+  "all_nine_comparison_intervals_reconstructed": true,
+  "maximum_comparison_error": 4.440892098500626e-16,
+  "cpu_seconds": 0.10384720100000001
+}

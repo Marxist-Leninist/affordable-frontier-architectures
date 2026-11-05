@@ -1,0 +1,3 @@
+model name	: AMD EPYC 9V74 80-Core Processor
+
+lscpu unavailable because /sys/devices/system/cpu/possible is absent. No exclusive host allocation.

@@ -1,0 +1,30 @@
+{
+  "models.py": {
+    "source": "frontier_research_v21/models.py",
+    "sha256": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972"
+  },
+  "local_attention.py": {
+    "source": "frontier_research_v21/local_attention.py",
+    "sha256": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19"
+  },
+  "prefill.py": {
+    "source": "frontier_research_v21/prefill.py",
+    "sha256": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612"
+  },
+  "pruning.py": {
+    "source": "frontier_research_v21/pruning.py",
+    "sha256": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135"
+  },
+  "compact_cache.py": {
+    "source": "frontier_research_v21/compact_cache.py",
+    "sha256": "17b641a6d90a0552601427a0d2c94101ab0cf55ee45aed47227153c3e16cb489"
+  },
+  "input_checkpoint_manifest.json": {
+    "source": "frontier_research_v21/input_checkpoint_manifest.json",
+    "sha256": "5faf914281e4de1cd8bca41f14b7b2011d8ca023dc6bf58bdc718a2e3aeaa8c1"
+  },
+  "frozen_selection.json": {
+    "source": "frontier_research_v21/frozen_selection.json",
+    "sha256": "e2e9cad760268e87c2fc72f340b81699962d0fbc568435cd4c66df8376ac4ef4"
+  }
+}

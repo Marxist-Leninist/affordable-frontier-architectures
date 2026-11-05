@@ -1,0 +1,1 @@
+2026-11-05T11:17:56Z: /usr/bin/time unavailable; summary/audit commands did not execute (shell exit127). Replaced measurement wrapper with Python standard-library resource.getrusage(RUSAGE_CHILDREN). No training/scoring failure, result change or selection occurred.

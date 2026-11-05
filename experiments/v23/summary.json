@@ -1,0 +1,185 @@
+{
+  "means": {
+    "initial": {
+      "512": 3.7470929565529274,
+      "2048": 4.357837935382633
+    },
+    "context2048": {
+      "512": 3.4757707482696882,
+      "2048": 3.563760158862979
+    },
+    "reset512": {
+      "512": 3.2302136009462257,
+      "2048": 4.572721190338162
+    },
+    "frozen_local": {
+      "512": 3.1832795166664947,
+      "2048": 3.1832795176088893
+    },
+    "frozen_gru": {
+      "512": 3.1010298025056415,
+      "2048": 3.1012693890942975
+    }
+  },
+  "comparisons": [
+    {
+      "a": "context2048",
+      "a_context": 512,
+      "b": "reset512",
+      "b_context": 512,
+      "a_minus_b_bpb": 0.24555714732346243,
+      "document_cluster_bootstrap95": [
+        0.22746320043387389,
+        0.26255230587055106
+      ],
+      "documents_a_lower": 0,
+      "seed_effects": [
+        0.044489415225879014,
+        0.4697089985372336,
+        0.22247302820727466
+      ]
+    },
+    {
+      "a": "context2048",
+      "a_context": 2048,
+      "b": "reset512",
+      "b_context": 2048,
+      "a_minus_b_bpb": -1.0089610314751833,
+      "document_cluster_bootstrap95": [
+        -1.043653597213998,
+        -0.9749187691457795
+      ],
+      "documents_a_lower": 66,
+      "seed_effects": [
+        -1.3676640520788155,
+        -0.6552475532170425,
+        -1.0039714891296923
+      ]
+    },
+    {
+      "a": "context2048",
+      "a_context": 2048,
+      "b": "initial",
+      "b_context": 2048,
+      "a_minus_b_bpb": -0.7940777765196536,
+      "document_cluster_bootstrap95": [
+        -0.8243758328704354,
+        -0.7638984226030497
+      ],
+      "documents_a_lower": 66,
+      "seed_effects": [
+        -1.1659277768598812,
+        -0.43889785211618326,
+        -0.7774077005828968
+      ]
+    },
+    {
+      "a": "reset512",
+      "a_context": 2048,
+      "b": "initial",
+      "b_context": 2048,
+      "a_minus_b_bpb": 0.2148832549555297,
+      "document_cluster_bootstrap95": [
+        0.20005618316130558,
+        0.22988451335781296
+      ],
+      "documents_a_lower": 1,
+      "seed_effects": [
+        0.20173627521893422,
+        0.21634970110085927,
+        0.22656378854679549
+      ]
+    },
+    {
+      "a": "initial",
+      "a_context": 2048,
+      "b": "initial",
+      "b_context": 512,
+      "a_minus_b_bpb": 0.6107449788297059,
+      "document_cluster_bootstrap95": [
+        0.585603507927655,
+        0.6354441931936924
+      ],
+      "documents_a_lower": 0,
+      "seed_effects": [
+        0.9650630585330209,
+        0.21837886746790947,
+        0.648793010488188
+      ]
+    },
+    {
+      "a": "context2048",
+      "a_context": 2048,
+      "b": "context2048",
+      "b_context": 512,
+      "a_minus_b_bpb": 0.08798941059329063,
+      "document_cluster_bootstrap95": [
+        0.07503094913588895,
+        0.10172045902242034
+      ],
+      "documents_a_lower": 4,
+      "seed_effects": [
+        0.08547455470460585,
+        0.08097517646068164,
+        0.09751850061458489
+      ]
+    },
+    {
+      "a": "reset512",
+      "a_context": 2048,
+      "b": "reset512",
+      "b_context": 512,
+      "a_minus_b_bpb": 1.3425075893919365,
+      "document_cluster_bootstrap95": [
+        1.29209323596031,
+        1.3908487015482227
+      ],
+      "documents_a_lower": 0,
+      "seed_effects": [
+        1.4976280220093003,
+        1.2059317282149578,
+        1.3239630179515518
+      ]
+    },
+    {
+      "a": "context2048",
+      "a_context": 2048,
+      "b": "frozen_local",
+      "b_context": 2048,
+      "a_minus_b_bpb": 0.3804806412540897,
+      "document_cluster_bootstrap95": [
+        0.3459875485118956,
+        0.4129729492552126
+      ],
+      "documents_a_lower": 1,
+      "seed_effects": [
+        0.15147485986026465,
+        0.6100619638090254,
+        0.3799051000929792
+      ]
+    },
+    {
+      "a": "context2048",
+      "a_context": 2048,
+      "b": "frozen_gru",
+      "b_context": 2048,
+      "a_minus_b_bpb": 0.46249076976868136,
+      "document_cluster_bootstrap95": [
+        0.42552218259285357,
+        0.49605773408169107
+      ],
+      "documents_a_lower": 0,
+      "seed_effects": [
+        0.22415691014451733,
+        0.7221799885242364,
+        0.44113541063729045
+      ]
+    }
+  ],
+  "windows": 105,
+  "documents": 66,
+  "targets_per_condition_seed": 13440,
+  "training_cpu_seconds": 183.335522144,
+  "main_cpu_seconds": 249.01932772,
+  "limits": "Bootstrap conditional on deterministic convenience cohort; seeds share data; references have unequal added training; no convergence, equal-compute or frontier claim."
+}

@@ -1,0 +1,14 @@
+{
+  "transformer_seed1_adapt500.pt": "65ca247b228d47c48003b51e39bc5eb8e50fd5cd2330a4ee2d846c3aa65f6405",
+  "transformer_short_seed1_adapt500.pt": "f9134835ff424098cfb4aa89643a604079e9f5ba4be3512059e3d1105a155e95",
+  "local_seed1_adapt500.pt": "49f4965b81156cb47144a0e5201cf80ba34768cc7f7895a3b6e296092332af89",
+  "gru_seed1_adapt500.pt": "11a7a30d3e4c3da3e13ce181b6f8a2eb2d09468df9d335607a19298a8639b85a",
+  "transformer_seed2_adapt500.pt": "ca8d1770be25ff64e4f810e3ec57e6a469186f899ca6771a2f2c309b4d8ea5b1",
+  "transformer_short_seed2_adapt500.pt": "d528edb918e642a9d6fff536ec6c306e6cb471049ee70c87a37c0617dbd77217",
+  "local_seed2_adapt500.pt": "46083c26efc171fe3eb1dcb17523da4eb83505096edd72e345f74a3df876adcb",
+  "gru_seed2_adapt500.pt": "ee883ec09a8b6f89e54718223cd575661fdab1cc6908e309dd9dcc405fb8a6c4",
+  "transformer_seed3_adapt500.pt": "8d9342e9a832ed7fd64b8fedefb69c7ffa6b70b8c7877ca9691b6314e4bd6bf5",
+  "transformer_short_seed3_adapt500.pt": "c002b67b0c1bcfc1185fdcfe5422337ea985935de049dc7b8ff53caeb901b665",
+  "local_seed3_adapt500.pt": "1f15f9c0a5a9d2305e9a83f41860e31ae0ceeb15c455b7a3b8656671fe5c9bd4",
+  "gru_seed3_adapt500.pt": "3d471e01a559f26e9c8376212b06ff47fafdd125601472277ca1a642175fb4d4"
+}

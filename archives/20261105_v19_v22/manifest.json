@@ -1,0 +1,47 @@
+[
+  {
+    "version": 19,
+    "archive": "v19_text_artifacts.json.gz",
+    "sha256": "77c4ad33523457115553d8dd755bb9e598f6afdd920a88ba00d442220e11b718",
+    "parts": [
+      "v19_text_artifacts.json.gz.part000",
+      "v19_text_artifacts.json.gz.part001",
+      "v19_text_artifacts.json.gz.part002",
+      "v19_text_artifacts.json.gz.part003",
+      "v19_text_artifacts.json.gz.part004",
+      "v19_text_artifacts.json.gz.part005",
+      "v19_text_artifacts.json.gz.part006",
+      "v19_text_artifacts.json.gz.part007"
+    ]
+  },
+  {
+    "version": 20,
+    "archive": "v20_text_artifacts.json.gz",
+    "sha256": "24a41c20c0ce0dbe8a1d63ab3907964dfcb735b248699f904f70971b17232cb9",
+    "parts": [
+      "v20_text_artifacts.json.gz.part000",
+      "v20_text_artifacts.json.gz.part001"
+    ]
+  },
+  {
+    "version": 21,
+    "archive": "v21_text_artifacts.json.gz",
+    "sha256": "a2b26a40fcb61a0091b97b0935c0750a2e71be84886edc023787082148159916",
+    "parts": [
+      "v21_text_artifacts.json.gz.part000",
+      "v21_text_artifacts.json.gz.part001",
+      "v21_text_artifacts.json.gz.part002",
+      "v21_text_artifacts.json.gz.part003"
+    ]
+  },
+  {
+    "version": 22,
+    "archive": "v22_text_artifacts.json.gz",
+    "sha256": "fef7cfe172fd651903bd853f2258b42c59e6cd5d6421c80e23fc626ac2fde88d",
+    "parts": [
+      "v22_text_artifacts.json.gz.part000",
+      "v22_text_artifacts.json.gz.part001",
+      "v22_text_artifacts.json.gz.part002"
+    ]
+  }
+]

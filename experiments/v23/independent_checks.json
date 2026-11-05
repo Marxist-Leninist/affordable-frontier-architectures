@@ -1,0 +1,16 @@
+{
+  "ledger_exactly_regenerated": true,
+  "source_hashes_match": true,
+  "train_hash_matches": true,
+  "items_exactly_reconstructed": true,
+  "documents_selected": 100,
+  "documents_eligible": 66,
+  "windows": 105,
+  "targets_per_condition_seed": 13440,
+  "full_document_prior_hash_matches": 0,
+  "duplicate_capped_documents": 0,
+  "duplicate_full_windows": 0,
+  "duplicate_128byte_target_spans": 0,
+  "complete_target_spans_occurring_in_training": [],
+  "cpu_seconds": 0.23304771800000013
+}

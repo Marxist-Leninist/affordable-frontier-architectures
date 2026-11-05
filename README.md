@@ -2,7 +2,13 @@
 
 Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v18 unreachable-prefix pruning
+## Latest experiment: v23 matched-context training
+
+[Audited v23 code, results and limitations](experiments/v23/README.md). With identical next-byte training targets and optimizer updates, continuing the small full-attention Transformer at 2,048 context improves its full-context loss from 4.35784 to 3.56376 bits/byte. A 512-reset continuation instead reaches 4.57272. The longer-context arm wins that comparison by 1.00896 bits/byte but remains worse at 512 context, and longer context still hurts its own matched-target score by 0.08799. This repairs a training/evaluation mismatch, not evidence of distant-information reasoning, a matched-budget architecture victory, frontier parity or profitable deployment.
+
+[Restored v19–v22 source, reports and detailed text results](archives/20261105_v19_v22/README.md) preserve preceding results, including the v22 finding that dynamic INT8 shrinks model serialization about 2.72x but slows the Transformer paths while modestly accelerating GRU. Corpus, weights and regenerable binary arrays are excluded from that text archive. [Current pricing and retained economic gates](experiments/v23/pricing_sources.md) keep the $0.05/$0.001/$0.10 per-million targets and 30% net-revenue margin unchanged.
+
+## Prior experiment: v18 unreachable-prefix pruning
 
 [Full v18 report, audited code and measurements](experiments/v18/README.md). On fresh FineWeb-Edu rows 300–399, skipping context outside the two-layer local model’s 255-byte prediction receptive field reduces a 2,048-byte-prefix CPU probe from **58.872 to 26.350 ms**, versus v17’s optimized chunked baseline. Median paired end speedup is **2.146×** (95/96 favorable). Preserving absolute RoPE positions passes all three seeds’ numerical quality gates; the failed position-reset control is retained. This saves work precisely because the model cannot use distant context, not because it solves long-range tasks. Commercial economics and frontier quality remain unproven.
 

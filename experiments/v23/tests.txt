@@ -1,0 +1,11 @@
+test_causal (test_v23.TestV23.test_causal) ... ok
+test_initial_identity (test_v23.TestV23.test_initial_identity) ... ok
+test_ledger (test_v23.TestV23.test_ledger) ... ok
+test_nested_targets (test_v23.TestV23.test_nested_targets) ... ok
+test_optimized_scoring (test_v23.TestV23.test_optimized_scoring) ... ok
+test_protocol (test_v23.TestV23.test_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.316s
+
+OK

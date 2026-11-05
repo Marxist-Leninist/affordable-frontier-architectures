@@ -1,0 +1,10 @@
+{
+  "complete_rows": 30,
+  "training_runs": 6,
+  "optimizer_updates": 1500,
+  "maximum_aggregate_reconstruction_error": 0,
+  "final2048_causal_future_suffix_error": 0.0,
+  "final2048_optimized_logits_error": 0.0,
+  "source_and_checkpoint_hashes": true,
+  "cpu_seconds": 0.19114397100000002
+}

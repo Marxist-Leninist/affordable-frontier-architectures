@@ -1,0 +1,10 @@
+test_causal_suffix_and_normalization (test_quant.Checks.test_causal_suffix_and_normalization) ... ok
+test_float_reference (test_quant.Checks.test_float_reference) ... ok
+test_manifest (test_quant.Checks.test_manifest) ... ok
+test_packed_and_fp32 (test_quant.Checks.test_packed_and_fp32) ... ok
+test_selection_keys (test_quant.Checks.test_selection_keys) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.538s
+
+OK

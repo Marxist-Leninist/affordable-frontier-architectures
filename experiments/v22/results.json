@@ -1,0 +1,200 @@
+{
+  "rows": [
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "precision": "fp32",
+      "base_bpb": 4.345777570647077,
+      "hybrid_bpb": 3.638844771301916,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "precision": "int8",
+      "base_bpb": 4.345726531459868,
+      "hybrid_bpb": 3.636155550590171,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "precision": "fp32",
+      "base_bpb": 4.147765397922568,
+      "hybrid_bpb": 3.510017855299643,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "precision": "int8",
+      "base_bpb": 4.161900336762068,
+      "hybrid_bpb": 3.5187050623202354,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "precision": "fp32",
+      "base_bpb": 4.195719236615442,
+      "hybrid_bpb": 3.5298564816902673,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "precision": "int8",
+      "base_bpb": 4.212855095708325,
+      "hybrid_bpb": 3.543809848164101,
+      "weight": 0.6
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 1,
+      "precision": "fp32",
+      "base_bpb": 3.380155727907553,
+      "hybrid_bpb": 2.9791428680407246,
+      "weight": 0.5
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 1,
+      "precision": "int8",
+      "base_bpb": 3.3866843873970662,
+      "hybrid_bpb": 2.9836267070411115,
+      "weight": 0.5
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 2,
+      "precision": "fp32",
+      "base_bpb": 3.9205517574696236,
+      "hybrid_bpb": 3.37251142313597,
+      "weight": 0.5
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 2,
+      "precision": "int8",
+      "base_bpb": 3.930262392377985,
+      "hybrid_bpb": 3.3786996563893883,
+      "weight": 0.5
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 3,
+      "precision": "fp32",
+      "base_bpb": 3.5444519824373257,
+      "hybrid_bpb": 3.115183677564169,
+      "weight": 0.5
+    },
+    {
+      "kind": "transformer_reset512",
+      "seed": 3,
+      "precision": "int8",
+      "base_bpb": 3.56028523188411,
+      "hybrid_bpb": 3.125549800188139,
+      "weight": 0.5
+    },
+    {
+      "kind": "local",
+      "seed": 1,
+      "precision": "fp32",
+      "base_bpb": 3.028274659286112,
+      "hybrid_bpb": 2.7110925383024926,
+      "weight": 0.3
+    },
+    {
+      "kind": "local",
+      "seed": 1,
+      "precision": "int8",
+      "base_bpb": 3.0331876546917846,
+      "hybrid_bpb": 2.714822713142748,
+      "weight": 0.3
+    },
+    {
+      "kind": "local",
+      "seed": 2,
+      "precision": "fp32",
+      "base_bpb": 3.0438420323170248,
+      "hybrid_bpb": 2.729184240940997,
+      "weight": 0.3
+    },
+    {
+      "kind": "local",
+      "seed": 2,
+      "precision": "int8",
+      "base_bpb": 3.050538386216466,
+      "hybrid_bpb": 2.7354913466457016,
+      "weight": 0.3
+    },
+    {
+      "kind": "local",
+      "seed": 3,
+      "precision": "fp32",
+      "base_bpb": 3.01435963139748,
+      "hybrid_bpb": 2.7073466204469683,
+      "weight": 0.3
+    },
+    {
+      "kind": "local",
+      "seed": 3,
+      "precision": "int8",
+      "base_bpb": 3.0222219285159144,
+      "hybrid_bpb": 2.71338844618707,
+      "weight": 0.3
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "precision": "fp32",
+      "base_bpb": 2.980756386188787,
+      "hybrid_bpb": 2.707165783987468,
+      "weight": 0.2
+    },
+    {
+      "kind": "gru",
+      "seed": 1,
+      "precision": "int8",
+      "base_bpb": 2.978996711737234,
+      "hybrid_bpb": 2.7069767895332637,
+      "weight": 0.2
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "precision": "fp32",
+      "base_bpb": 2.9461895779130813,
+      "hybrid_bpb": 2.6738188271591956,
+      "weight": 0.2
+    },
+    {
+      "kind": "gru",
+      "seed": 2,
+      "precision": "int8",
+      "base_bpb": 2.9480797178569325,
+      "hybrid_bpb": 2.674781091105388,
+      "weight": 0.2
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "precision": "fp32",
+      "base_bpb": 2.944037258742225,
+      "hybrid_bpb": 2.672195846556715,
+      "weight": 0.2
+    },
+    {
+      "kind": "gru",
+      "seed": 3,
+      "precision": "int8",
+      "base_bpb": 2.9497400776544103,
+      "hybrid_bpb": 2.676038859488143,
+      "weight": 0.2
+    }
+  ],
+  "cpu_seconds": 283.13887050899996,
+  "windows": 91,
+  "targets": 11648,
+  "documents": 58
+}

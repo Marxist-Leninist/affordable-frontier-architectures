@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "transformer",
+    "hybrid": false,
+    "median_paired_int8_over_fp32": 1.1441538326014047
+  },
+  {
+    "kind": "transformer",
+    "hybrid": true,
+    "median_paired_int8_over_fp32": 1.1343211419643304
+  },
+  {
+    "kind": "transformer_reset512",
+    "hybrid": false,
+    "median_paired_int8_over_fp32": 1.3906849729018167
+  },
+  {
+    "kind": "transformer_reset512",
+    "hybrid": true,
+    "median_paired_int8_over_fp32": 1.323488081985655
+  },
+  {
+    "kind": "local",
+    "hybrid": false,
+    "median_paired_int8_over_fp32": 1.4512980290943314
+  },
+  {
+    "kind": "local",
+    "hybrid": true,
+    "median_paired_int8_over_fp32": 1.3539983636997104
+  },
+  {
+    "kind": "gru",
+    "hybrid": false,
+    "median_paired_int8_over_fp32": 0.9424405164245164
+  },
+  {
+    "kind": "gru",
+    "hybrid": true,
+    "median_paired_int8_over_fp32": 0.9468118076838636
+  }
+]
