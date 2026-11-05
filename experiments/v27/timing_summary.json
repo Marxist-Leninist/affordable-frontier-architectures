@@ -1,0 +1,102 @@
+{
+  "local_neural": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      25.31960650230758,
+      30.284051335183904
+    ],
+    "final_copy_index_bytes_median": 0.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_512": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      27.678525002556853,
+      34.237625714740716
+    ],
+    "final_copy_index_bytes_median": 582840.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_1024": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      35.7420465152245,
+      39.576222843606956
+    ],
+    "final_copy_index_bytes_median": 1160850.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_2048": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      33.6721734929597,
+      42.857764424115885
+    ],
+    "final_copy_index_bytes_median": 2295213.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_full": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      42.9915525164688,
+      55.743154406081885
+    ],
+    "final_copy_index_bytes_median": 1240803.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "gru_neural": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      125.6333040073514,
+      161.49975600128528
+    ],
+    "final_copy_index_bytes_median": 0.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_512": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      117.80790249758866,
+      192.92149314715056
+    ],
+    "final_copy_index_bytes_median": 582840.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_1024": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      124.74065746937413,
+      166.26463078719098
+    ],
+    "final_copy_index_bytes_median": 1160850.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_2048": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      137.75060398620553,
+      172.96258829446742
+    ],
+    "final_copy_index_bytes_median": 2295177.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_full": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      135.31796951428987,
+      183.98356894467724
+    ],
+    "final_copy_index_bytes_median": 1240783.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  }
+}

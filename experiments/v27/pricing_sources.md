@@ -1,0 +1,14 @@
+# Current sources and economic boundary — 2026-11-05 23:12 UTC
+
+Primary pricing pages and exact-revision data cards reopened during v27. No material change to the retained benchmark prices was found.
+
+- Meta https://dev.meta.ai/docs/pricing-rate-limits lists Muse Spark Contributor uncached/cached/output rates $0.10/$0.002/$0.20 per million. Half-price research targets remain $0.05/$0.001/$0.10. Contributor discounts require content training-use permission; no user data was submitted. Retail prices do not reveal provider cost. Search grounding remains separately priced.
+- Runpod https://www.runpod.io/pricing (updated November4) lists Pods H100 PCIe $2.89/h and SXM $3.99/h. No cluster capacity, interconnect, reservation or actual serving rate follows from those list prices. This run bought nothing.
+- FineWeb-Edu exact card https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/blob/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/README.md confirms ODC-BY1.0 plus Common Crawl terms. Underlying web-text rights remain applicable.
+- WikiText exact card https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md still has CC-BY-SA3.0/GFDL metadata versus CC-BY-SA4.0 prose. The inconsistency is preserved, not resolved by assumption. No text or weights redistributed.
+
+Retain [v26 complete economic ledger](../v26/pricing_sources.md), including30% margin on net revenue, all-in cost<=0.70×net revenue, <=$500/month average/heavy workload and separate GBP200/GBP20 stretch tiers. No reduced workload, quality, hidden reasoning or reliability earns a pass.
+
+Conditional output-only hardware floor at $0.10/M and30% margin is 1/(3600*0.10e-6*0.70)=3968.254 billable output tokens/s per $1/h at100% productive utilization before all other costs. At H dollars/hour and utilization u, required busy throughput is3968.254*H/u. This is not a mixed-workload or net-fee-adjusted profitability calculation. The retained mixed10M uncached+5M cached+2M visible+2M hidden ledger permits $0.614495 all-in cost with hidden billed, or$0.478695 without, after illustrative3% fees and30% margin. Training amortization, memory, cache build/hits, prefill, decoding, idle/bursts, hidden/tool work, reliability, taxes/fees, storage/bandwidth/support all remain costs.
+
+v27 measures isolated CPU byte prediction, Python object memory and observed-byte update latency. Neither byte-to-commercial-token conversion nor frontier quality, deployment throughput, monthly serving capacity or profitability is measured. All quality gates against full copy fail; no equal-quality savings claim is justified. Actual bounded memory can still have larger finite-size overhead than a compact unbounded representation. No economics simulation was rerun because its inputs did not materially change.

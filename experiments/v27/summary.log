@@ -1,0 +1,119 @@
+{
+  "local": {
+    "neural": 3.0823977230426216,
+    "512": 2.867439927398203,
+    "1024": 2.8139548692167695,
+    "2048": 2.75967642401948,
+    "full": 2.6620689241352635
+  },
+  "gru": {
+    "neural": 3.0064515187068084,
+    "512": 2.822612641669737,
+    "1024": 2.7779616167459595,
+    "2048": 2.730898770475722,
+    "full": 2.645703502610772
+  }
+}
+{'local_512_minus_full': (0.20537100326293958, [0.1298296367206018, 0.3116353805169128], False), 'local_512_minus_neural': (-0.2149577956444182, [-0.29652006481577947, -0.14456012763131515], None), 'local_1024_minus_full': (0.1518859450815058, [0.07894361874004409, 0.2598610163272057], False), 'local_1024_minus_neural': (-0.2684428538258519, [-0.35961148315628966, -0.19133339876462058], None), 'local_2048_minus_full': (0.09760749988421662, [0.028833017250569477, 0.203230222222785], False), 'local_2048_minus_neural': (-0.3227212990231411, [-0.4174352434548554, -0.23843584441660987], None), 'local_full_minus_neural': (-0.4203287989073577, [-0.5697455100897179, -0.297697430398785], None), 'gru_512_minus_full': (0.17690913905896516, [0.11113537306837695, 0.26943251555929953], False), 'gru_512_minus_neural': (-0.18383887703707089, [-0.2500615514407328, -0.1256137134238733], None), 'gru_1024_minus_full': (0.13225811413518798, [0.06735696688723707, 0.22586761876638778], False), 'gru_1024_minus_neural': (-0.22848990196084806, [-0.30149514058848054, -0.16549852933812179], None), 'gru_2048_minus_full': (0.08519526786494996, [0.025314921829355925, 0.1771855484889069], False), 'gru_2048_minus_neural': (-0.2755527482310861, [-0.3548229942152499, -0.20442881498469667], None), 'gru_full_minus_neural': (-0.360748016096036, [-0.49040869644822027, -0.2540239592499971], None)}
+{
+  "local_neural": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      25.31960650230758,
+      30.284051335183904
+    ],
+    "final_copy_index_bytes_median": 0.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_512": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      27.678525002556853,
+      34.237625714740716
+    ],
+    "final_copy_index_bytes_median": 582840.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_1024": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      35.7420465152245,
+      39.576222843606956
+    ],
+    "final_copy_index_bytes_median": 1160850.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_2048": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      33.6721734929597,
+      42.857764424115885
+    ],
+    "final_copy_index_bytes_median": 2295213.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "local_full": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      42.9915525164688,
+      55.743154406081885
+    ],
+    "final_copy_index_bytes_median": 1240803.0,
+    "final_state_bytes": 130064,
+    "weight_bytes": 527616
+  },
+  "gru_neural": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      125.6333040073514,
+      161.49975600128528
+    ],
+    "final_copy_index_bytes_median": 0.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_512": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      117.80790249758866,
+      192.92149314715056
+    ],
+    "final_copy_index_bytes_median": 582840.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_1024": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      124.74065746937413,
+      166.26463078719098
+    ],
+    "final_copy_index_bytes_median": 1160850.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_2048": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      137.75060398620553,
+      172.96258829446742
+    ],
+    "final_copy_index_bytes_median": 2295177.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  },
+  "gru_full": {
+    "samples": 48,
+    "total_wall_ms_p50_p95": [
+      135.31796951428987,
+      183.98356894467724
+    ],
+    "final_copy_index_bytes_median": 1240783.0,
+    "final_state_bytes": 512,
+    "weight_bytes": 528640
+  }
+}

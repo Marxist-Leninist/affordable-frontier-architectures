@@ -1,0 +1,6 @@
+{
+  "contrasts_verified": 14,
+  "all_bounded_scopes_fail_gate": true,
+  "timing_rows_verified": 480,
+  "zero_cpu_prefill_rows": 2
+}

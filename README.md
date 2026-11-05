@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v26 distant-repeat histories and explicit memory
+## Latest experiment: v27 physical bounded copy memory
+
+[Audited v27 report, code and results](experiments/v27/README.md). Actual sliding-cache eviction passes independent correctness tests, but all 512/1024/2048-byte scopes fail the fixed quality-preservation gate versus full 4096-context copy memory. GRU 2048-copy loses 0.08520 bits/byte (paired 95% interval 0.02531–0.17719); full-copy loss is 2.64570 versus neural-only 3.00645. Bounded storage is not automatically smaller: the Python 2048 index uses about 2.295MB versus 1.241MB for compact full history. This is a measured quality/storage tradeoff, not an equal-quality cost saving or frontier result. [Current prices and retained economic gates](experiments/v27/pricing_sources.md) remain unchanged.
+
+## Prior experiment: v26 distant-repeat histories and explicit memory
 
 [Audited v26 report, code and measurements](experiments/v26/README.md). A prespecified history-only subgroup identifies 870 targets with an eight-byte context previously observed in the distant replaced prefix, absent from the recent suffix. The context-trained Transformer still shows no clear original-prefix advantage (+0.00572 bits/byte; conditional interval spans zero). Fixed exact-copy hybrids provide a positive control: their subgroup original-over-unrelated-prefix benefits are about0.59–0.99 bits/byte. The GRU hybrid improves overall loss2.94785→2.65981, but adds index memory and measured latency. This is narrow repeated-string complementarity, not learned distant reasoning, matched-quality architecture superiority or proven commercial economics. [Current sources and retained cost gates](experiments/v26/pricing_sources.md) remain unchanged.
 

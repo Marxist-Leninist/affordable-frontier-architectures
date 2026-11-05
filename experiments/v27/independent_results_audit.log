@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "windows": 50,
+  "documents": 36,
+  "targets": 6400,
+  "oracle_scored_distributions": 25600,
+  "suffix_initialization_and_continuation_checks": 4800,
+  "aggregate_arrays": 34,
+  "native_neural_checks": [
+    {
+      "arm": "local",
+      "seed": 1,
+      "max_logit_error": 1.1444091796875e-05,
+      "max_saved_loss_error": 5.127311506925025e-06,
+      "future_change_error": 0.0
+    },
+    {
+      "arm": "local",
+      "seed": 2,
+      "max_logit_error": 1.239776611328125e-05,
+      "max_saved_loss_error": 3.247730048450137e-06,
+      "future_change_error": 0.0
+    },
+    {
+      "arm": "local",
+      "seed": 3,
+      "max_logit_error": 2.193450927734375e-05,
+      "max_saved_loss_error": 4.480744124180092e-06,
+      "future_change_error": 0.0
+    },
+    {
+      "arm": "gru",
+      "seed": 1,
+      "max_logit_error": 0.0,
+      "max_saved_loss_error": 4.1017142571320164e-06,
+      "future_change_error": 0.0
+    },
+    {
+      "arm": "gru",
+      "seed": 2,
+      "max_logit_error": 0.0,
+      "max_saved_loss_error": 5.8651173335810824e-06,
+      "future_change_error": 0.0
+    },
+    {
+      "arm": "gru",
+      "seed": 3,
+      "max_logit_error": 0.0,
+      "max_saved_loss_error": 3.776434908786541e-06,
+      "future_change_error": 0.0
+    }
+  ],
+  "prior_document_records": 1100,
+  "exact_target_span_overlap": []
+}

@@ -1,0 +1,10 @@
+test_forgetting (test_v27.Tests.test_forgetting) ... ok
+test_invalid (test_v27.Tests.test_invalid) ... ok
+test_normalized (test_v27.Tests.test_normalized) ... ok
+test_prefix_only (test_v27.Tests.test_prefix_only) ... ok
+test_reference (test_v27.Tests.test_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.176s
+
+OK

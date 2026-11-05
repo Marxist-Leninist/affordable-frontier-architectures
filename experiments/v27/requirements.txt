@@ -1,0 +1,4 @@
+numpy==2.3.5
+pyarrow==19.0.1
+# Install the CPU build from the official PyTorch wheel index when GPU is absent.
+torch==2.6.0

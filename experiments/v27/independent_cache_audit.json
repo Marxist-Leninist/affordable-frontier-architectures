@@ -1,0 +1,95 @@
+{
+  "full_distribution_oracle_comparisons": 5622,
+  "maximum_normalization_error": 8.881784197001252e-16,
+  "storage_growth": [
+    {
+      "scope": 512,
+      "snapshots": [
+        {
+          "seen": 4096,
+          "reachable_bytes": 674173,
+          "contexts": 1508,
+          "events": 1508
+        },
+        {
+          "seen": 8192,
+          "reachable_bytes": 674061,
+          "contexts": 1508,
+          "events": 1508
+        },
+        {
+          "seen": 16384,
+          "reachable_bytes": 674089,
+          "contexts": 1508,
+          "events": 1508
+        },
+        {
+          "seen": 32768,
+          "reachable_bytes": 674033,
+          "contexts": 1508,
+          "events": 1508
+        }
+      ]
+    },
+    {
+      "scope": 1024,
+      "snapshots": [
+        {
+          "seen": 4096,
+          "reachable_bytes": 1348681,
+          "contexts": 3044,
+          "events": 3044
+        },
+        {
+          "seen": 8192,
+          "reachable_bytes": 1348569,
+          "contexts": 3044,
+          "events": 3044
+        },
+        {
+          "seen": 16384,
+          "reachable_bytes": 1348541,
+          "contexts": 3044,
+          "events": 3044
+        },
+        {
+          "seen": 32768,
+          "reachable_bytes": 1348457,
+          "contexts": 3044,
+          "events": 3044
+        }
+      ]
+    },
+    {
+      "scope": 2048,
+      "snapshots": [
+        {
+          "seen": 4096,
+          "reachable_bytes": 2696033,
+          "contexts": 6116,
+          "events": 6116
+        },
+        {
+          "seen": 8192,
+          "reachable_bytes": 2696005,
+          "contexts": 6116,
+          "events": 6116
+        },
+        {
+          "seen": 16384,
+          "reachable_bytes": 2696033,
+          "contexts": 6116,
+          "events": 6116
+        },
+        {
+          "seen": 32768,
+          "reachable_bytes": 2696033,
+          "contexts": 6116,
+          "events": 6116
+        }
+      ]
+    }
+  ],
+  "source_sha256": "1beaf069f08084a9d608a497b8c5877bd1bb07253c973a17dc48fcf895280839",
+  "status": "pass"
+}

@@ -1,0 +1,47 @@
+{
+  "experiment": "v27 physical bounded copy memory",
+  "data": "FineWeb-Edu sample10BT pinned rows1100\u20131199 cap8193, nonoverlapping4096-input windows final128 targets, no training/tuning",
+  "arms": [
+    "local",
+    "gru"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "scopes": [
+    512,
+    1024,
+    2048,
+    "full"
+  ],
+  "alpha": {
+    "local": 0.3,
+    "gru": 0.2
+  },
+  "design": "Hold frozen neural output and target ledger identical across memory scopes. Bounded cache stores only complete context/follower pairs in dynamic last S observed bytes; physical eviction. Full uses compact exact unbounded index. Fixed orders4/8/16; one uniform pseudocount; fall back to neural if no match.",
+  "statistics": "All targets primary; seeds averaged first; 5000 paired document cluster bootstrap seed27; scope-minus-full and hybrid-minus-neural; conditional convenience cohort not population inference.",
+  "quality_gate": "Prespecified practical loss increase <=0.01 bits/byte versus full hybrid; require upper paired95% CI<=0.01 to claim noninferiority here. No frontier/task equivalence.",
+  "timing": "First8 rows>=4128 bytes,3seeds,neural/full/512/1024/2048 paths; random jobs seed270027; warmup plus2 measured repeats,4096 prefill+32 observed updates,complete256 distributions. Bounded index may initialize only final S prefix bytes because older pairs are necessarily evicted; neural gets same4096 inputs. Same optimized local path in all comparisons.",
+  "cpu_limit_main": 500,
+  "cpu_limit_timing": 200,
+  "source_sha256": {
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "run.py": "04b8c0053c5d8408543d794ecd5da08875520ae5e8670d104509e38946139e98",
+    "copy_cache.py": "c5473b599ebce2b1474288cc0c4b7560144743e5dd2513341060827606173115",
+    "timing.py": "279e2c84aa4b499c15099b337d90ade1cf53d665903608a0e0403a6f8134d1e3",
+    "prepare_data.py": "f16fa7241dfaba11e62698c78daaf5c6e1e9d1b80d3594e699305deb50162c72",
+    "compact_cache.py": "17b641a6d90a0552601427a0d2c94101ab0cf55ee45aed47227153c3e16cb489",
+    "test_v27.py": "03f098d57a9c425c19ba9de00935e04f7ac53987cf653f87172c0706b842481f",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "bounded_cache.py": "1beaf069f08084a9d608a497b8c5877bd1bb07253c973a17dc48fcf895280839",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "independent_cache_audit.py": "539c4f183f06beb260e17e014923d3b22d6cf2c5850ea06f1fef8f872930f8b8"
+  },
+  "data_manifest_sha256": "688bff0ce4df3edcd32362bab967dbdbe73e4a0d11fa5184dffcb56bcf02b351",
+  "input_checkpoint_manifest_sha256": "80bcbb6a816e0a20951d0152db5d6a935dea1098021230aa8c5fef912176c13f",
+  "torch": "2.6.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

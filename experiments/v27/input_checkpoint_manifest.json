@@ -1,0 +1,8 @@
+{
+  "frontier_research_v19/checkpoints/local_seed1_adapt500.pt": "49f4965b81156cb47144a0e5201cf80ba34768cc7f7895a3b6e296092332af89",
+  "frontier_research_v19/checkpoints/local_seed2_adapt500.pt": "46083c26efc171fe3eb1dcb17523da4eb83505096edd72e345f74a3df876adcb",
+  "frontier_research_v19/checkpoints/local_seed3_adapt500.pt": "1f15f9c0a5a9d2305e9a83f41860e31ae0ceeb15c455b7a3b8656671fe5c9bd4",
+  "frontier_research_v19/checkpoints/gru_seed1_adapt500.pt": "11a7a30d3e4c3da3e13ce181b6f8a2eb2d09468df9d335607a19298a8639b85a",
+  "frontier_research_v19/checkpoints/gru_seed2_adapt500.pt": "ee883ec09a8b6f89e54718223cd575661fdab1cc6908e309dd9dcc405fb8a6c4",
+  "frontier_research_v19/checkpoints/gru_seed3_adapt500.pt": "3d471e01a559f26e9c8376212b06ff47fafdd125601472277ca1a642175fb4d4"
+}
