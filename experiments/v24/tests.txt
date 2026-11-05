@@ -1,0 +1,12 @@
+test_causal (test_v24.TestV24.test_causal) ... ok
+test_initial_identity (test_v24.TestV24.test_initial_identity) ... ok
+test_ledger (test_v24.TestV24.test_ledger) ... ok
+test_nested_targets (test_v24.TestV24.test_nested_targets) ... ok
+test_optimized_scoring (test_v24.TestV24.test_optimized_scoring) ... ok
+test_order_and_controls (test_v24.TestV24.test_order_and_controls) ... ok
+test_protocol (test_v24.TestV24.test_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.498s
+
+OK

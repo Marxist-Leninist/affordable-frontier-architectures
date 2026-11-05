@@ -1,0 +1,8 @@
+{
+  "reason": "Pre-timing source review: convert all256-way logits to probabilities in warmup and measured prefill/decode; original frozen timing.py retained unchanged. No training or quality design changes.",
+  "utc": "2026-11-05T14:21:32.478980+00:00",
+  "original_protocol_sha256": "b6a5f9409a446b198fca9c1314328d26a68a6ea09d0954db7e6eefe03dbbabbb",
+  "original_timing_sha256": "c6b00291946002e9591d62666bb84a2266e4c1c293a3a69d42d111f7649e415b",
+  "executed_timing": "timing_distribution.py",
+  "executed_timing_sha256": "6f76460067140690a164a5a1623173a02941025fb5fc8b1c21dc09e9da1f4c66"
+}

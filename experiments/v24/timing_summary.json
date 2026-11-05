@@ -1,0 +1,62 @@
+[
+  {
+    "arm": "context2048",
+    "context": 512,
+    "prefill_bytes_per_cpu_second": 64084.998069108,
+    "observed_decode_bytes_per_cpu_second": 1512.443701449475,
+    "prefill_bytes_per_wall_second": 68564.98913567676,
+    "observed_decode_bytes_per_wall_second": 1461.4410791312484,
+    "prefill_state_bytes": 524288,
+    "final_state_bytes": 557056
+  },
+  {
+    "arm": "context2048",
+    "context": 2048,
+    "prefill_bytes_per_cpu_second": 41984.298200475314,
+    "observed_decode_bytes_per_cpu_second": 1122.9902159945282,
+    "prefill_bytes_per_wall_second": 42088.34687362693,
+    "observed_decode_bytes_per_wall_second": 1115.943550285977,
+    "prefill_state_bytes": 2097152,
+    "final_state_bytes": 2129920
+  },
+  {
+    "arm": "reset512",
+    "context": 512,
+    "prefill_bytes_per_cpu_second": 72077.19115232932,
+    "observed_decode_bytes_per_cpu_second": 1561.5224758744084,
+    "prefill_bytes_per_wall_second": 76594.04814425332,
+    "observed_decode_bytes_per_wall_second": 1552.5224093438771,
+    "prefill_state_bytes": 524288,
+    "final_state_bytes": 557056
+  },
+  {
+    "arm": "reset512",
+    "context": 2048,
+    "prefill_bytes_per_cpu_second": 43740.55531667749,
+    "observed_decode_bytes_per_cpu_second": 1115.6253797783882,
+    "prefill_bytes_per_wall_second": 43569.359383669995,
+    "observed_decode_bytes_per_wall_second": 1135.6815671412328,
+    "prefill_state_bytes": 2097152,
+    "final_state_bytes": 2129920
+  },
+  {
+    "arm": "mixed",
+    "context": 512,
+    "prefill_bytes_per_cpu_second": 85389.45258613687,
+    "observed_decode_bytes_per_cpu_second": 1636.4836226919706,
+    "prefill_bytes_per_wall_second": 81721.29523789822,
+    "observed_decode_bytes_per_wall_second": 1629.9420593093857,
+    "prefill_state_bytes": 524288,
+    "final_state_bytes": 557056
+  },
+  {
+    "arm": "mixed",
+    "context": 2048,
+    "prefill_bytes_per_cpu_second": 43720.63379950517,
+    "observed_decode_bytes_per_cpu_second": 1158.042853475314,
+    "prefill_bytes_per_wall_second": 43656.431759526204,
+    "observed_decode_bytes_per_wall_second": 1162.772112074278,
+    "prefill_state_bytes": 2097152,
+    "final_state_bytes": 2129920
+  }
+]

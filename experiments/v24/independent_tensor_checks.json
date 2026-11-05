@@ -1,0 +1,93 @@
+{
+  "weights": {
+    "context2048_1": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "reset512_1": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "mixed_1": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "context2048_2": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "reset512_2": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "mixed_2": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "context2048_3": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "reset512_3": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    },
+    "mixed_3": {
+      "dtypes": [
+        "torch.float32"
+      ],
+      "tensor_elements": 131904,
+      "tensor_bytes": 527616,
+      "finite": true
+    }
+  },
+  "timing_amendment_hash_checks": {
+    "original_protocol_sha256": true,
+    "original_timing_sha256": true,
+    "executed_timing_sha256": true
+  },
+  "expected_KV_bytes": {
+    "512": {
+      "prefill": 524288,
+      "after32": 557056
+    },
+    "2048": {
+      "prefill": 2097152,
+      "after32": 2129920
+    }
+  },
+  "cpu_after_imports_seconds": 0.016094735999999887,
+  "timing_summary_max_error": 0.0
+}

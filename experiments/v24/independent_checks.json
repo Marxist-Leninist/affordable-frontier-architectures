@@ -1,0 +1,343 @@
+{
+  "source_hashes": {
+    "run.py": true,
+    "models.py": true,
+    "local_attention.py": true,
+    "prefill.py": true,
+    "pruning.py": true,
+    "prepare_data.py": true,
+    "test_v24.py": true,
+    "timing.py": true,
+    "summarize.py": true,
+    "check_data.py": true
+  },
+  "protocol_manifest_hashes": {
+    "inputs_sha256": true,
+    "data_sha256": true
+  },
+  "ledger_reconstructed": true,
+  "ledger_matches_v23": true,
+  "train_hash_matches": true,
+  "input_checkpoint_hashes": {
+    "local_seed3_adapt500.pt": true,
+    "gru_seed3_adapt500.pt": true,
+    "transformer_seed2_adapt500.pt": true,
+    "gru_seed2_adapt500.pt": true,
+    "gru_seed1_adapt500.pt": true,
+    "transformer_seed1_adapt500.pt": true,
+    "transformer_seed3_adapt500.pt": true,
+    "local_seed2_adapt500.pt": true,
+    "local_seed1_adapt500.pt": true,
+    "v23/reset512_seed1_step250.pt": true,
+    "v23/reset512_seed3_step250.pt": true,
+    "v23/context2048_seed3_step250.pt": true,
+    "v23/context2048_seed1_step250.pt": true,
+    "v23/reset512_seed2_step250.pt": true,
+    "v23/context2048_seed2_step250.pt": true
+  },
+  "items_match": true,
+  "row_indices_match": true,
+  "cohort": {
+    "sampled_documents": 100,
+    "eligible_documents": 66,
+    "windows": 108,
+    "capped_bytes": 286349,
+    "targets_per_condition_seed": 13824
+  },
+  "contamination": {
+    "capped_document_duplicates": 0,
+    "window_duplicates": 0,
+    "target_span_duplicates": 0,
+    "complete128byte_target_spans_in_training": [],
+    "limits": "Exact spans only; no exhaustive shorter-passage or near-duplicate decontamination."
+  },
+  "complete": true,
+  "loss_arrays": {
+    "initial_seed1_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "initial_seed1_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed1_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed1_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed1_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed1_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed1_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed1_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "initial_seed2_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "initial_seed2_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed2_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed2_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed2_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed2_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed2_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed2_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "initial_seed3_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "initial_seed3_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed3_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "mixed_seed3_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed3_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "context2048_seed3_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed3_ctx512": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    },
+    "reset512_seed3_ctx2048": {
+      "shape": [
+        108,
+        128
+      ],
+      "finite": true
+    }
+  },
+  "row_max_error": 0.0,
+  "training_records_valid": true,
+  "new_checkpoint_hashes": {
+    "mixed_seed1_step250.pt": true,
+    "mixed_seed2_step250.pt": true,
+    "mixed_seed3_step250.pt": true
+  },
+  "comparison_max_error": 1.1102230246251565e-16,
+  "main_cpu_seconds": 156.204934778,
+  "training_cpu_seconds": 87.998736248,
+  "scoring_cpu_seconds": 66.88246446100003,
+  "timing_groups": {
+    "mixed_ctx512": {
+      "rows": 24,
+      "prefill_bytes": 12288,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 0.15036472395877354,
+      "decode_wall_seconds": 0.4711823930265382,
+      "prefill_cpu_seconds": 0.14390536099999518,
+      "decode_cpu_seconds": 0.4692989220000021,
+      "prefill_bytes_per_wall_second": 81721.29523789822,
+      "decode_bytes_per_wall_second": 1629.9420593093857,
+      "input_plus_observed_updates_wall_seconds": 0.6215471169853117
+    },
+    "mixed_ctx2048": {
+      "rows": 24,
+      "prefill_bytes": 49152,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 1.1258822129748296,
+      "decode_wall_seconds": 0.660490557027515,
+      "prefill_cpu_seconds": 1.1242288990000027,
+      "decode_cpu_seconds": 0.663187892999999,
+      "prefill_bytes_per_wall_second": 43656.431759526204,
+      "decode_bytes_per_wall_second": 1162.772112074278,
+      "input_plus_observed_updates_wall_seconds": 1.7863727700023446
+    },
+    "context2048_ctx512": {
+      "rows": 24,
+      "prefill_bytes": 12288,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 0.1792168299725745,
+      "decode_wall_seconds": 0.525508698890917,
+      "prefill_cpu_seconds": 0.191745343999993,
+      "decode_cpu_seconds": 0.5077874959999997,
+      "prefill_bytes_per_wall_second": 68564.98913567676,
+      "decode_bytes_per_wall_second": 1461.4410791312484,
+      "input_plus_observed_updates_wall_seconds": 0.7047255288634915
+    },
+    "reset512_ctx2048": {
+      "rows": 24,
+      "prefill_bytes": 49152,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 1.128132263023872,
+      "decode_wall_seconds": 0.6762458969315048,
+      "prefill_cpu_seconds": 1.1237168720000046,
+      "decode_cpu_seconds": 0.6884031269999955,
+      "prefill_bytes_per_wall_second": 43569.359383669995,
+      "decode_bytes_per_wall_second": 1135.6815671412328,
+      "input_plus_observed_updates_wall_seconds": 1.8043781599553768
+    },
+    "context2048_ctx2048": {
+      "rows": 24,
+      "prefill_bytes": 49152,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 1.1678291891003028,
+      "decode_wall_seconds": 0.6882068540144246,
+      "prefill_cpu_seconds": 1.170723392000001,
+      "decode_cpu_seconds": 0.6838884160000038,
+      "prefill_bytes_per_wall_second": 42088.34687362693,
+      "decode_bytes_per_wall_second": 1115.943550285977,
+      "input_plus_observed_updates_wall_seconds": 1.8560360431147274
+    },
+    "reset512_ctx512": {
+      "rows": 24,
+      "prefill_bytes": 12288,
+      "decode_bytes": 768,
+      "prefill_wall_seconds": 0.16043022007215768,
+      "decode_wall_seconds": 0.49467884996556677,
+      "prefill_cpu_seconds": 0.17048389100000172,
+      "decode_cpu_seconds": 0.4918276949999978,
+      "prefill_bytes_per_wall_second": 76594.04814425332,
+      "decode_bytes_per_wall_second": 1552.5224093438771,
+      "input_plus_observed_updates_wall_seconds": 0.6551090700377245
+    }
+  },
+  "timing_cpu_seconds": 15.064801559000001,
+  "timing_rows": 144,
+  "timing_memory_values": {
+    "512": {
+      "parameters": [
+        131904
+      ],
+      "fp32_weight_bytes": [
+        527616
+      ],
+      "prefill_state_bytes": [
+        524288
+      ],
+      "final_state_bytes": [
+        557056
+      ]
+    },
+    "2048": {
+      "parameters": [
+        131904
+      ],
+      "fp32_weight_bytes": [
+        527616
+      ],
+      "prefill_state_bytes": [
+        2097152
+      ],
+      "final_state_bytes": [
+        2129920
+      ]
+    }
+  },
+  "audit_cpu_after_imports_seconds": 0.328253901
+}

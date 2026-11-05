@@ -1,0 +1,63 @@
+{
+  "experiment": "v24 alternating mixed-context continuation",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "arms": [
+    "mixed"
+  ],
+  "control_arms": [
+    "context2048",
+    "reset512"
+  ],
+  "order": "zero-based even steps full2048, odd steps independent4x512; 125 each; same for every seed",
+  "training_rng_seed": 240000,
+  "initial": "same v19 transformer adapt500 state per seed; fresh AdamW each arm",
+  "steps": 250,
+  "targets_per_update": 2048,
+  "targets_per_arm_seed": 512000,
+  "ledger_seed": 23112026,
+  "ledger_sha256": "c00b8031795dc98462f2d37549e66af5facfcc9ca499afe7aa26af9697dede56",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "warmup": 25,
+    "schedule": "min(1,(step+1)/25)*(.1+.9*.5*(1+cos(pi*max(0,step-25)/225)))"
+  },
+  "intervention": "Same contiguous2048 x/y independently reshaped to4x512 in reset512 arm; same update count, targets, initial state, optimizer. Not equal FLOPs, time or convergence.",
+  "evaluation": "Fresh pinned FineWeb rows800-899 capped4097 bytes; all nonoverlapping2048-input windows final128 targets. Nested512 diagnostic resets to last512 input of exactly same windows/targets; effective context385-512 versus1921-2048.",
+  "references": "Frozen v19 local and GRU, no additional training; unequal training budget descriptive only",
+  "selection": "No tuning, no early stopping selection, no validation/test-based choices. All completed arms and failed work retained.",
+  "tokenizer": "UTF8 bytes0-255, no normalization/joins for evaluation",
+  "source_sha256": {
+    "run.py": "7c4a22036ea333287bde2dcc9b521d8e04288d3d0eb4150e21106733c411fb41",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "prepare_data.py": "fe2cc3ca7b43de0995441c26f96cafbc41d77cd38fb46d9f5abe0f7b79df143d",
+    "test_v24.py": "a8574e1851b44a2e7d3dbaad6dc98719c7726efe42af12a60086f0a210f70af2",
+    "timing.py": "c6b00291946002e9591d62666bb84a2266e4c1c293a3a69d42d111f7649e415b",
+    "summarize.py": "78a800831a47b16a0e89588e6f474108b4a1be6128e0748631a508aecb783d9c",
+    "check_data.py": "3d155c6f4b1467a0a86326610f1489788bfa06993d1551c00f44a2deb85f52d3"
+  },
+  "inputs_sha256": "7810e7b6533b2c59d43270e881e93e22a0266c233e9456328d20194200a3b982",
+  "data_sha256": "53080d10420ea3d066c11106794345d7ea515359cc44da581908cae92c60cd7e",
+  "threads": 1,
+  "torch": "2.6.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu_budget_seconds": 900,
+  "main_hard_cpu_limit_seconds": 820,
+  "planned_statistics": "Mean seed effects, paired document-cluster bootstrap5000 seed24; seeds share corpus; descriptive not formal equivalence",
+  "quality_screen_bpb": 0.02,
+  "timing": "After quality, fixed first8 rows with >=2080 bytes;3seeds,3trainedarms,512/2048 nested prefill plus32 same observed updates;seed240024 shuffles arm/seed/context jobs;one full warmup per measured doc;batch1;80CPU-second limit;descriptive only"
+}

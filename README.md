@@ -1,8 +1,12 @@
 # Affordable Frontier Architectures
 
-Architecture-neutral research into neural language models that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
+Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v23 matched-context training
+## Latest experiment: v24 mixed-context tradeoff
+
+[Audited v24 report, code and measurements](experiments/v24/README.md). Fixed 50/50 context training produces an intermediate result rather than beating both specialists: mixed loss is 3.18215/3.60269 bits per byte at nested512/full2048, versus short-trained 3.05462/4.43126 and long-trained 3.30596/3.39622. The same target ledger, initial weights and optimizer updates are used, but compute differs. Fresh held-out real text, seven tests and independent reconstruction support this narrow negative finding. No matched-quality speed or frontier/economic win follows. [Current prices and retained gates](experiments/v24/pricing_sources.md) remain unchanged.
+
+## Prior experiment: v23 matched-context training
 
 [Audited v23 code, results and limitations](experiments/v23/README.md). With identical next-byte training targets and optimizer updates, continuing the small full-attention Transformer at 2,048 context improves its full-context loss from 4.35784 to 3.56376 bits/byte. A 512-reset continuation instead reaches 4.57272. The longer-context arm wins that comparison by 1.00896 bits/byte but remains worse at 512 context, and longer context still hurts its own matched-target score by 0.08799. This repairs a training/evaluation mismatch, not evidence of distant-information reasoning, a matched-budget architecture victory, frontier parity or profitable deployment.
 
