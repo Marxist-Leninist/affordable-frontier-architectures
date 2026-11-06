@@ -1,0 +1,8 @@
+{
+  "confirmed_completed_reconstructions": 1,
+  "confirmed_completed_continuations": 3,
+  "confirmed_target_presentations": 2048000,
+  "partial_next_reconstruction": "possibly executed, count unmeasured",
+  "excluded_from_quality_results": true,
+  "reason": "optimizer-state aliasing between arms, corrected by deepcopy and full rerun"
+}

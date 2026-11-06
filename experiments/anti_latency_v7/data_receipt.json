@@ -1,0 +1,14 @@
+{
+  "wiki_offset": 196608,
+  "wiki_windows": 128,
+  "fineweb_windows": 64,
+  "fineweb_selection": "First64 eligible windows in frozen v31 source; no tuning/selection on losses",
+  "window_bytes": 513,
+  "targets_per_window": 128,
+  "train_bytes": 2000000,
+  "train_sha256": "77fc488d9c24735f44714b30f6c8507e61c16369d278810cffb0decb5df5f4af",
+  "datasets": {
+    "wiki": "814bc20c89c2b735a950119d7c1f486d2002e9b22e1b4942ae255a684a81e4d7",
+    "fineweb": "a21a6875fb35d6c260884cb466c21eda7cabf7413fccf49bf2e0fcea19a8d45c"
+  }
+}

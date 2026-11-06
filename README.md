@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: optimizer-retention replication (anti-attention v6)
+## Latest experiment: retained-optimizer mixed contexts (anti-attention v7)
+
+[Audited report, source and results](experiments/anti_latency_v7/README.md). Fixed50/50 short/long-context training is an intermediate tradeoff, not a win over both specialists. In all three seeds and both matched models it improves128-context scores over long-only training but worsens512-context scores. Signed WikiText gains0.00735 bits/byte at128 and loses0.01676 at512. Short-only training still fails severely at512. An optimizer-isolation pilot bug was caught, disclosed and corrected before the full rerun;18 state/cache checks and six exact historical aggregate-loss replays pass. Randomized training and inference probes establish no matched-quality speed or frontier-cost win.
+
+## Prior experiment: optimizer-retention replication (anti-attention v6)
 
 [Audited report, reproducible source and raw results](experiments/anti_latency_v6/README.md). Retaining Adam state improves all four held-out metrics in both tiny models across three seeds (seeds2/3 newly replicated; seed1 reused). At512 context, mean WikiText improvement is0.07435 bits/byte for Transformer and0.01964 for signed suppression, shrinking signed's advantage from0.09523 to0.04052. Four exact checkpoint reconstructions and eight optimizer/cache checks pass. CPU timing is marginal and mixed; no frontier-quality or commercial-cost pass is established. Raw corpora and binary checkpoints are excluded; regeneration instructions and hashes are included.
 

@@ -1,0 +1,13 @@
+{
+  "corrected_reconstruction_targets": 4915200,
+  "corrected_continuation_targets": 7372800,
+  "corrected_total_quality_training_targets": 12288000,
+  "corrected_elapsed_wall_seconds": 315.7579578680452,
+  "reconstruction_seconds": 113.10326796997106,
+  "continuation_step_seconds": 183.42958230595104,
+  "disposable_profile_training_targets": 442368,
+  "invalid_pilot_confirmed_targets": 2048000,
+  "invalid_pilot_partial_next_reconstruction": "not instrumented before interrupt; not included in confirmed lower bound",
+  "paid_resources_created": false,
+  "invoice_cost": "not observed; no zero-cost claim"
+}
