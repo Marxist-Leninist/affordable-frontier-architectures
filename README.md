@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: fresh-document replication (anti-attention v8)
+## Latest experiment: earlier-prefix content test (anti-attention v9)
+
+[Audited intervention report, source and results](experiments/anti_latency_v9/README.md). On 95 fresh document pairs, replacing the first 256 bytes with unrelated real text changes predictions but shows no clear aggregate genuine-prefix accuracy advantage in any of four context-trained neural configurations; all primary intervals include zero. An exact-copy reference benefits by 0.3069 bits/byte but has much worse overall loss. Genuine suffix-only inputs score better on this cohort, without proving safe general context pruning. Audit also finds that V views retain larger QKV backing storage: the batch-4/512 Transformer cache holds 4.19 MB despite 2.10 MB logical tensor payload. Targeted numerical/copy tests pass; no frontier or economic pass is claimed.
+
+## Prior experiment: fresh-document replication (anti-attention v8)
 
 [Audited fresh-data report, source and measurements](experiments/anti_latency_v8/README.md). Frozen v7 models evaluated on100 new FineWeb-Edu documents reproduce the context tradeoff: signed mixed training gains0.00494 bits/byte at128 input but loses0.01594 at512 versus long-only. Document-paired95% intervals exclude zero for these and both Transformer primary contrasts; every seed agrees in direction. Intermediate256 windows show little mean advantage for mixing. No retraining, exact target overlap with training/prior cohorts, matched-quality speed win or frontier/economic pass. Raw corpora and weights are excluded; provenance and reproduction instructions are retained.
 

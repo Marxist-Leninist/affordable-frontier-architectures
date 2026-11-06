@@ -1,0 +1,366 @@
+{
+  "neural_checks": [
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 6.217248937900877e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 6.8833827526759706e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 5.329070518200751e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.0658141036401503e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.1102230246251565e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 5.329070518200751e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 8.881784197001252e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.1546319456101628e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.4210854715202004e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.3766765505351941e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.1546319456101628e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 0.0,
+      "tailhead_error": 0.0,
+      "cache_error": 1.354472090042691e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 2.3092638912203256e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.398081733190338e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 2.2370993946196904e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.930988785010413e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 1.4654943925052066e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.5987211554602254e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 1.84297022087776e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.1760371282653068e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 1.9095836023552692e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.3092638912203256e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 2.3092638912203256e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.4868995751603507e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 2.4868995751603507e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.1760371282653068e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 2.4868995751603507e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.3314683517128287e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 1.3322676295501878e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.3988810110276972e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 3.419486915845482e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.554312234475219e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 2.842170943040401e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.9539925233402755e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 1.7319479184152442e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.865174681370263e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "long",
+      "condition": "original512",
+      "optimized_error": 2.1316282072803006e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.4646951146678475e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "long",
+      "condition": "donor512",
+      "optimized_error": 2.5979218776228663e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.3092638912203256e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "long",
+      "condition": "suffix256",
+      "optimized_error": 1.2434497875801753e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 2.0872192862952943e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "original512",
+      "optimized_error": 2.042810365310288e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.7763568394002505e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "donor512",
+      "optimized_error": 1.7985612998927536e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.5987211554602254e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "mixed",
+      "condition": "suffix256",
+      "optimized_error": 1.509903313490213e-14,
+      "tailhead_error": 0.0,
+      "cache_error": 1.509903313490213e-14,
+      "future_error": 0.0
+    }
+  ],
+  "copy_distribution_oracle_checks": 1152,
+  "intervention_target_alignment": true
+}

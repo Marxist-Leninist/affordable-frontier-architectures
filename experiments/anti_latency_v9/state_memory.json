@@ -1,0 +1,134 @@
+[
+  {
+    "kind": "attention",
+    "arm": "long",
+    "condition": "original512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2097152,
+    "distinct_retained_cache_storage_bytes": 4194304,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "attention",
+    "arm": "long",
+    "condition": "donor512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2097152,
+    "distinct_retained_cache_storage_bytes": 4194304,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "attention",
+    "arm": "long",
+    "condition": "suffix256",
+    "batch": 4,
+    "prefix_tokens": 256,
+    "persistent_cache_tensor_bytes": 1048576,
+    "distinct_retained_cache_storage_bytes": 2097152,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "attention",
+    "arm": "mixed",
+    "condition": "original512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2097152,
+    "distinct_retained_cache_storage_bytes": 4194304,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "attention",
+    "arm": "mixed",
+    "condition": "donor512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2097152,
+    "distinct_retained_cache_storage_bytes": 4194304,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "attention",
+    "arm": "mixed",
+    "condition": "suffix256",
+    "batch": 4,
+    "prefix_tokens": 256,
+    "persistent_cache_tensor_bytes": 1048576,
+    "distinct_retained_cache_storage_bytes": 2097152,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "long",
+    "condition": "original512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2099200,
+    "distinct_retained_cache_storage_bytes": 4196352,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "long",
+    "condition": "donor512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2099200,
+    "distinct_retained_cache_storage_bytes": 4196352,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "long",
+    "condition": "suffix256",
+    "batch": 4,
+    "prefix_tokens": 256,
+    "persistent_cache_tensor_bytes": 1050624,
+    "distinct_retained_cache_storage_bytes": 2099200,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "mixed",
+    "condition": "original512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2099200,
+    "distinct_retained_cache_storage_bytes": 4196352,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "mixed",
+    "condition": "donor512",
+    "batch": 4,
+    "prefix_tokens": 512,
+    "persistent_cache_tensor_bytes": 2099200,
+    "distinct_retained_cache_storage_bytes": 4196352,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  },
+  {
+    "kind": "signed",
+    "arm": "mixed",
+    "condition": "suffix256",
+    "batch": 4,
+    "prefix_tokens": 256,
+    "persistent_cache_tensor_bytes": 1050624,
+    "distinct_retained_cache_storage_bytes": 2099200,
+    "model_parameter_bytes": 527616,
+    "warm_position_table_bytes": 524288
+  }
+]

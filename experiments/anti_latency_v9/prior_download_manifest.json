@@ -1,0 +1,121 @@
+[
+  {
+    "directory": "frontier_research_v15",
+    "offset": 0,
+    "length": 100,
+    "sha256": "a4eeea6d8ea201f9835167aed98ea8e0b849a9e97db30954f0e03c42cfc869c8",
+    "bytes": 419904
+  },
+  {
+    "directory": "frontier_research_v16",
+    "offset": 100,
+    "length": 100,
+    "sha256": "ae84b3227710ad863493fd635dd566fa18edbd55eff5ed91f15e153c79794b5f",
+    "bytes": 457559
+  },
+  {
+    "directory": "frontier_research_v17",
+    "offset": 200,
+    "length": 100,
+    "sha256": "9668bb907f6bf03b4bd3a008dae72f7d5f2c50c9ecc219f156f5de626aaadc85",
+    "bytes": 543238
+  },
+  {
+    "directory": "frontier_research_v18",
+    "offset": 300,
+    "length": 100,
+    "sha256": "71823990d956ae55d5504b9846b62c362890dcdd5ff9d4e2ea4016ecddfedb6f",
+    "bytes": 465353
+  },
+  {
+    "directory": "frontier_research_v19",
+    "offset": 400,
+    "length": 100,
+    "sha256": "b75432526ec96a628317186ecb6b1f6a2a2fa318f84f661a725f6f4d48e3d981",
+    "bytes": 555638
+  },
+  {
+    "directory": "frontier_research_v20",
+    "offset": 500,
+    "length": 100,
+    "sha256": "12e3bd59751a7c81f8ffbfe53487f24e4c35e6cbb82e63d8ece48a0deacaa5cb",
+    "bytes": 451669
+  },
+  {
+    "directory": "frontier_research_v21",
+    "offset": 600,
+    "length": 100,
+    "sha256": "ff175431a7e0a5f0f09ad0e0cecace6558d5291561cabf07f15a699020e7cf43",
+    "bytes": 469780
+  },
+  {
+    "directory": "frontier_research_v23",
+    "offset": 700,
+    "length": 100,
+    "sha256": "424a310f345ac088f5b8f0d9f92280fdaa5c8e6647cbb7d44c8ba5a10cc705e6",
+    "bytes": 636685
+  },
+  {
+    "directory": "frontier_research_v24",
+    "offset": 800,
+    "length": 100,
+    "sha256": "09e00531cd35caa751014866a5f99072c3f27937399af1de4b36ea235a20fa4b",
+    "bytes": 664834
+  },
+  {
+    "directory": "frontier_research_v25",
+    "offset": 900,
+    "length": 100,
+    "sha256": "012c1865aa57c7a48effd37b401330892aa00402742208b4f767b2846bf4e14f",
+    "bytes": 750451
+  },
+  {
+    "directory": "frontier_research_v26",
+    "offset": 1000,
+    "length": 100,
+    "sha256": "b3d6b57bed9eaec4c5415319358236e9fed21b8c4b481f39818fd3a918ae725f",
+    "bytes": 555151
+  },
+  {
+    "directory": "frontier_research_v27",
+    "offset": 1100,
+    "length": 100,
+    "sha256": "b900b1d4e36c2f889edc754f77f9868ae4b5bd341fe1b96795f3283818af45d5",
+    "bytes": 675516
+  },
+  {
+    "directory": "frontier_research_v28",
+    "offset": 1200,
+    "length": 100,
+    "sha256": "fcdc25ae2614b7dd40f1ec35174c063765cb24db61606c0ed7901e7f2b138bd0",
+    "bytes": 537162
+  },
+  {
+    "directory": "frontier_research_v29",
+    "offset": 1300,
+    "length": 100,
+    "sha256": "69f812db32bb358932709ba4036f437e508e154fe102ce45494b6e12dd27e7c7",
+    "bytes": 427393
+  },
+  {
+    "directory": "frontier_research_v30",
+    "offset": 1400,
+    "length": 100,
+    "sha256": "b460913f68dc496767a29bcb4f690519118d29ecec8214f18064374477e45969",
+    "bytes": 418851
+  },
+  {
+    "directory": "frontier_research_v31",
+    "offset": 1500,
+    "length": 100,
+    "sha256": "153e0783e45b242dbc5322e488efe42aa184f930c219601287a290ccbe5be8a9",
+    "bytes": 683929
+  },
+  {
+    "directory": "anti_latency_v8",
+    "offset": 1600,
+    "length": 100,
+    "sha256": "27e084092b0c8f9323364a5410acfb708248d20029e9cf8597c12386383d2fcc",
+    "bytes": 693207
+  }
+]
