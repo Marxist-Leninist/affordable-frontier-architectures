@@ -1,0 +1,72 @@
+from pathlib import Path
+import json
+P=Path(__file__).resolve().parent;s=json.loads((P/'summary.json').read_text());m=json.loads((P/'data_manifest.json').read_text());r=json.loads((P/'results.json').read_text());prof=json.loads((P/'profile.json').read_text())
+out='''# Anti-attention v8: fresh-document context replication
+
+## Useful result
+
+The v7 tradeoff replicates on100 fresh FineWeb-Edu documents: mixed training improves128-input-window loss relative to long-only training but worsens512-window loss, for both architectures in every seed. Document-paired95% bootstrap intervals exclude zero for all four prespecified primary contrasts. This strengthens a narrow generalization finding, not a frontier-quality or equal-quality speed claim. Frozen checkpoints were evaluated without retraining or tuning.
+
+Signed mixed gains0.00494 bits/byte at128 while losing0.01594 at512 versus signed long-only. Transformer gains0.00789 and loses0.03177 respectively. Intermediate256 windows show little mean difference between mixed and long-only, rather than a broad mixed-training advantage. Short-only models already degrade severely at256 and fail further at512.
+
+## Fresh heldout scores
+
+Three-seed mean bits/byte; lower is better:
+
+|Architecture|Training arm|128 input|256 input|512 input|
+|---|---|---:|---:|---:|
+'''
+for kind in ['attention','signed']:
+ for arm in ['short','long','mixed']:
+  vals=[next(x['mean_bpb'] for x in s['means'] if x['kind']==kind and x['arm']==arm and x['context']==n) for n in [128,256,512]];out+=f"|{kind}|{arm}|{vals[0]:.6f}|{vals[1]:.6f}|{vals[2]:.6f}|\n"
+out+='''
+All conditions score exactly the same128 target bytes per document. “128/256/512 context” denotes total input-window length, not equal history at each scored target: actual histories range1–128,129–256 and385–512 bytes. Position/window initialization changes with input length. This does not measure distant reasoning or isolate prefix content from position effects.
+
+## Paired uncertainty
+
+Mixed-minus-long bpb (negative means mixed is better). Average three seeds per document first, then5000 paired resamples of100 documents, fixed RNG seed8008; equal128 targets per document. Intervals are conditional on this deterministic100-document cohort and fixed trained models, not full uncertainty across training runs or the web. No multiple-comparison adjustment. All21 primary/secondary contrasts, per-seed deltas and per-document differences are disclosed in summary.json.
+
+|Primary contrast|Mean delta|95% document interval|Documents favoring mixed|
+|---|---:|---|---:|
+'''
+for x in s['contrasts']:
+ if x['primary']:out+=f"|{x['label']}|{x['delta_bpb']:+.6f}|[{x['ci95_document_bootstrap'][0]:+.6f}, {x['ci95_document_bootstrap'][1]:+.6f}]|{x['documents_favor_first']}/100|\n"
+out+='''
+No prespecified practical noninferiority margin establishes quality preservation. Signed-vs-Transformer secondary comparisons use matched architecture/training target budgets and seeds, but not equal FLOPs or converged/frontier-scale models. Architecture claims remain limited to these131,904-parameter byte predictors and training recipes.
+
+## Dataset and model provenance
+
+HuggingFaceFW/fineweb-edu sample-10BT upstream train split, pinned revision87f09149ef4734204d70ed1d046ddc9ca3f2b8f9, new rows1600–1699. Public official endpoint, no gated terms or private data; retrieval validated revision header and bounded2MB response. Response SHA25627e084092b0c8f9323364a5410acfb708248d20029e9cf8597c12386383d2fcc,693207 bytes. Dataset card/metadata identifies educational English web text filtered from FineWeb/Common Crawl and ODC-BY; underlying web-text rights remain applicable. Source: https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu .
+
+First513 UTF8 bytes per document, no normalization/joining or loss-based selection. All100 rows qualify; zero exclusions. Score final128 bytes,12,800 targets per model/context,54 model/context rows. No exact full-document duplicates against1600 distinct prior FineWeb documents or within this cohort. No exact128-byte scored targets in prior FineWeb, raw WikiText training, or the actual line-deduplicated first2,000,000 training bytes (hash77fc488d9c24735f44714b30f6c8507e61c16369d278810cffb0decb5df5f4af). All100 current targets are unique. Shorter/near-duplicate contamination remains unmeasured; this is not exhaustive decontamination.
+
+The original training data is Salesforce/wikitext wikitext-2-raw-v1 revisionb08601e04326c79dfdd32d625aee71d232d685c3. Source hashes and the source card's CC-BY-SA3.0/GFDL metadata versus CC-BY-SA4.0 prose inconsistency remain inherited; no new license interpretation is asserted.
+
+All18 checkpoints are frozen v7 short/long/mixed ×attention/signed ×seeds1–3. Their hashes match the manifest published before v8 in commit607d1237365e6dc4a8df9e42d410f290f13b453c. Initial scoring recorded and independently verified hashes; the loader was then hardened to check that existing manifest before loading. No weight selection after scores. Original U−A checkpoints are converted by negating signed output projections only for optimized inference. Eighteen full/optimized/cache/causal checks and exact target alignment pass. Numerical checks use two33-byte sequences in FP64, not exhaustive coverage of all lengths or the FP32 timing path. Dataset regeneration now fails closed if prior-cohort receipt lists or source hashes differ.
+
+## Fresh inference probe
+
+Seed2 mixed-trained weights; two CPU threads, batch4 first4 eligible documents;5 warmups+31 randomized interleaved repetitions. Full-logit prefill and one next-token decode after the stated prefix are separate. Decode excludes prefix construction; neither is end-to-end service latency. No retraining or new training-speed claim. v7's matched training measurements remain prior evidence, not rerun here.
+
+|Prefix|Probe|Attention ms|Signed ms|Attention bytes/s|Signed bytes/s|
+|---:|---|---:|---:|---:|---:|
+'''
+for n,v in prof.items():
+ for task,t in v['median_seconds'].items():
+  work=4 if task=='decode' else 4*int(n)
+  out+=f"|{n}|{task}|{t['attention']*1000:.4f}|{t['signed']*1000:.4f}|{work/t['attention']:.1f}|{work/t['signed']:.1f}|\n"
+out+='''
+## Economics and scope
+
+'''
+out+=f"New training targets:0. Quality evaluation scores691,200 target predictions (54×12,800) in{r['elapsed_wall_seconds']:.2f}s measured evaluator wall time, including preparation but excluding external download, separate tests, timing and report work. Prior training/search and failed-pilot costs remain in v7 accounting, not amortized to zero. No new paid resources, production changes or external-agent messages. Actual invoice/hardware rate and all-in cost per useful commercial token remain unmeasured.\n"
+out+='''
+Retain$0.05/M uncached input,$0.001/M cached input,$0.10/M output and30% margin on net receipts. Conditional output-only hardware floor3968.254 billable output tokens/s per$1/hour at100% productive utilization is not a mixed-workload or byte-throughput gate. See economics.md for explicit tax/fee, utilization, prefill/decode/cache, memory, burst/reliability, non-billable reasoning/tools, training amortization and operations accounting. No billable-token conversion, frontier-quality match or full workload SLA supports a numerical commercial gap calculation.≤$500/month subscription keeps full workload and30% net margin; no profitable scaling claim follows.
+
+## Reproduce
+
+Python3.12, torch2.6.0 CPU, numpy; pyarrow for pinned WikiText download. Restore original WikiText with download_wikitext.py and set ANTI_DATA_DIR to its data directory. download_data.py restores/hash-checks the fresh snapshot plus16 required prior snapshots into the recorded sibling directory names (maximum34MB if all missing). It fails closed on source revision/response changes. Raw corpora are excluded from repository publication.
+
+Restore frozen v7 checkpoints using v7's published reconstruction instructions, then set ANTI_V7_CHECKPOINT_DIR to that checkpoint directory. expected_checkpoint_hashes.json is the prior v7 manifest; exact serialization may depend on runtime, and hash failures are never silently refrozen. Run evaluate_fresh.py under an external300-second timeout, check_provenance.py, summarize_v8.py, profile_v8.py and validate_v8.py, then report_v8.py. Numerical results, per-document losses, bootstrap deltas, timings, receipts and tested code are included. New source hardening did not change data, model weights or recorded scores.
+'''
+(P/'README.md').write_text(out)

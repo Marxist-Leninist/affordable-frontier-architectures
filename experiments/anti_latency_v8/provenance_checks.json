@@ -1,0 +1,8 @@
+{
+  "actual_training_sha256": "77fc488d9c24735f44714b30f6c8507e61c16369d278810cffb0decb5df5f4af",
+  "actual_training_bytes": 2000000,
+  "actual_training_target_overlap_rows": [],
+  "unique_current_target_spans": 100,
+  "current_documents": 100,
+  "shorter_and_near_duplicate_contamination": "not measured"
+}

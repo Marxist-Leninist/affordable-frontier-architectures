@@ -1,0 +1,4 @@
+attention:mixed-minus-long@128 -0.007891 [-0.009485, -0.006263] 84
+attention:mixed-minus-long@512 0.031768 [0.02837, 0.034993] 4
+signed:mixed-minus-long@128 -0.004939 [-0.00618, -0.003698] 78
+signed:mixed-minus-long@512 0.015942 [0.014045, 0.017813] 4

@@ -1,0 +1,149 @@
+{
+  "target_alignment_passed": true,
+  "checks": [
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "short",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 5.329070518200751e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "long",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 1,
+      "arm": "mixed",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.549516567451064e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "short",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "long",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 2,
+      "arm": "mixed",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 6.217248937900877e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "short",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "long",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 6.217248937900877e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "attention",
+      "seed": 3,
+      "arm": "mixed",
+      "optimized_error": 0.0,
+      "chunked_cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "short",
+      "optimized_error": 7.105427357601002e-15,
+      "chunked_cache_error": 5.329070518200751e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "long",
+      "optimized_error": 1.1546319456101628e-14,
+      "chunked_cache_error": 8.43769498715119e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 1,
+      "arm": "mixed",
+      "optimized_error": 8.881784197001252e-15,
+      "chunked_cache_error": 7.105427357601002e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "short",
+      "optimized_error": 6.217248937900877e-15,
+      "chunked_cache_error": 9.769962616701378e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "long",
+      "optimized_error": 1.3322676295501878e-14,
+      "chunked_cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 2,
+      "arm": "mixed",
+      "optimized_error": 1.554312234475219e-14,
+      "chunked_cache_error": 1.3322676295501878e-14,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "short",
+      "optimized_error": 1.1102230246251565e-14,
+      "chunked_cache_error": 8.881784197001252e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "long",
+      "optimized_error": 1.1102230246251565e-14,
+      "chunked_cache_error": 7.993605777301127e-15,
+      "future_error": 0.0
+    },
+    {
+      "kind": "signed",
+      "seed": 3,
+      "arm": "mixed",
+      "optimized_error": 1.4654943925052066e-14,
+      "chunked_cache_error": 1.1546319456101628e-14,
+      "future_error": 0.0
+    }
+  ]
+}

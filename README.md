@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: retained-optimizer mixed contexts (anti-attention v7)
+## Latest experiment: fresh-document replication (anti-attention v8)
+
+[Audited fresh-data report, source and measurements](experiments/anti_latency_v8/README.md). Frozen v7 models evaluated on100 new FineWeb-Edu documents reproduce the context tradeoff: signed mixed training gains0.00494 bits/byte at128 input but loses0.01594 at512 versus long-only. Document-paired95% intervals exclude zero for these and both Transformer primary contrasts; every seed agrees in direction. Intermediate256 windows show little mean advantage for mixing. No retraining, exact target overlap with training/prior cohorts, matched-quality speed win or frontier/economic pass. Raw corpora and weights are excluded; provenance and reproduction instructions are retained.
+
+## Prior experiment: retained-optimizer mixed contexts (anti-attention v7)
 
 [Audited report, source and results](experiments/anti_latency_v7/README.md). Fixed50/50 short/long-context training is an intermediate tradeoff, not a win over both specialists. In all three seeds and both matched models it improves128-context scores over long-only training but worsens512-context scores. Signed WikiText gains0.00735 bits/byte at128 and loses0.01676 at512. Short-only training still fails severely at512. An optimizer-isolation pilot bug was caught, disclosed and corrected before the full rerun;18 state/cache checks and six exact historical aggregate-loss replays pass. Randomized training and inference probes establish no matched-quality speed or frontier-cost win.
 
