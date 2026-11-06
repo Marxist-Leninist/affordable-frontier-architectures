@@ -1,0 +1,12 @@
+{
+  "validation": {
+    "offset": 32769,
+    "sha256": "644c5cd021400895e34c4b168747f4e4f770f03e34e1f98ab28aa6487550cb61",
+    "tokens": 32768
+  },
+  "test": {
+    "offset": 98307,
+    "sha256": "84612f27f43a0b15ff25fa20e2804059a48cec4d5d409575facdf092e1690b17",
+    "tokens": 32768
+  }
+}

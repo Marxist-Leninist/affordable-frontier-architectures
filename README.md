@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: v27 physical bounded copy memory
+## Latest experiment: optimizer-retention replication (anti-attention v6)
+
+[Audited report, reproducible source and raw results](experiments/anti_latency_v6/README.md). Retaining Adam state improves all four held-out metrics in both tiny models across three seeds (seeds2/3 newly replicated; seed1 reused). At512 context, mean WikiText improvement is0.07435 bits/byte for Transformer and0.01964 for signed suppression, shrinking signed's advantage from0.09523 to0.04052. Four exact checkpoint reconstructions and eight optimizer/cache checks pass. CPU timing is marginal and mixed; no frontier-quality or commercial-cost pass is established. Raw corpora and binary checkpoints are excluded; regeneration instructions and hashes are included.
+
+## Prior experiment: v27 physical bounded copy memory
 
 [Audited v27 report, code and results](experiments/v27/README.md). Actual sliding-cache eviction passes independent correctness tests, but all 512/1024/2048-byte scopes fail the fixed quality-preservation gate versus full 4096-context copy memory. GRU 2048-copy loses 0.08520 bits/byte (paired 95% interval 0.02531–0.17719); full-copy loss is 2.64570 versus neural-only 3.00645. Bounded storage is not automatically smaller: the Python 2048 index uses about 2.295MB versus 1.241MB for compact full history. This is a measured quality/storage tradeoff, not an equal-quality cost saving or frontier result. [Current prices and retained economic gates](experiments/v27/pricing_sources.md) remain unchanged.
 

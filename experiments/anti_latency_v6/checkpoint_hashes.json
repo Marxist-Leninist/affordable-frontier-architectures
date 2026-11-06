@@ -1,0 +1,16 @@
+{
+  "restart_signed_2_retain.pt": "03a317dd315a294788971fa0413a32786c5ccac68021fcbe3234af0d665e40ee",
+  "restart_attention_2_reset.pt": "277d8ade55c1df32eb066c88825c897d9b8bd3afaec9940d277ee18c23d60916",
+  "restart_signed_2_reset.pt": "74780e2186038b1e42a3e76d6ad5bd92528d746597de16a017d6d8e670b64c82",
+  "restart_attention_3_reset.pt": "c600a6409d05403919935e7b88098d95f3988f96db09be18cb51565f7746eccc",
+  "restart_signed_3_reset.pt": "d43668070b90e2f313268666446b29bb93bbcf91e0c77aaa23ea1f1644df0377",
+  "restart_attention_3_retain.pt": "840acc32da5ae60c4290cb0733a0151b7fc93719c9d9885f0e79cc4ceb308f8e",
+  "restart_attention_2_retain.pt": "91416101a8cfbd16fcf2c43efb8781395cfa91194d55245841581f009bdce106",
+  "restart_signed_3_retain.pt": "8d3d75828b25e1d950b90ff05792e01340f99da483d84fb70481c5a8e4e7f6b3",
+  "checkpoints/signed_1_0.006.pt": "046dcd12e52f167b85fd8332d5cd7c6de0485d2fbd1b3bbbc41f0997c9b6310b",
+  "checkpoints/attention_3_0.006.pt": "51de5c499507a9d8a81f2d1a423ee35d0f8e6616ca2d371f89d8a0c8c984a5b9",
+  "checkpoints/signed_2_0.006.pt": "cda5abc2796a2c23db47c101dadb979123b1ef44a6e518c34c6e7d6fdf74b35d",
+  "checkpoints/attention_2_0.006.pt": "7fb30d306e0cb92288b8a8522700d286a4e226711e602c5e266037b008bc8936",
+  "checkpoints/attention_1_0.006.pt": "456e34ec6f900ce2a9f86e1c1b83c034c55765af55eac26ba6dcd3fc0eec0e14",
+  "checkpoints/signed_3_0.006.pt": "42779b5fd625eea491f39e683d6507ba128b648655d91b29f8b67837efeb215e"
+}

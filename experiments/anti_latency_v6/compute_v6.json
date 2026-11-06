@@ -1,0 +1,10 @@
+{
+  "new_training_target_bytes": 6553600,
+  "disposable_training_probe_target_bytes": 235520,
+  "total_target_presentations_excluding_inference_evaluation": 6789120,
+  "reconstruction_seconds": 78.52654796594288,
+  "continuation_step_seconds": 94.97632409341168,
+  "paid_resources_created": false,
+  "incremental_charges_authorized": 0,
+  "note": "Historical seed1 evidence reused, not rerun; timings exclude evaluation and other overhead. No monetary hardware rate observed."
+}

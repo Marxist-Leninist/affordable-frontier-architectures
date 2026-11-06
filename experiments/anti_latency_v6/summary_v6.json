@@ -1,0 +1,206 @@
+{
+  "attention": {
+    "wiki_128": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 2.824473468925712,
+          "retain": 2.797841233169718,
+          "retention_improvement": 0.02663223575599405
+        },
+        {
+          "seed": 2,
+          "reset": 2.8461977221796597,
+          "retain": 2.8292443980489774,
+          "retention_improvement": 0.01695332413068229
+        },
+        {
+          "seed": 3,
+          "reset": 2.7960855930932453,
+          "retain": 2.7753047260905594,
+          "retention_improvement": 0.020780867002685888
+        }
+      ],
+      "mean_reset": 2.822252261399539,
+      "mean_retain": 2.8007967857697516,
+      "mean_improvement": 0.021455475629787408
+    },
+    "wiki_512": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 2.8738960664346753,
+          "retain": 2.7908634514662776,
+          "retention_improvement": 0.08303261496839776
+        },
+        {
+          "seed": 2,
+          "reset": 2.888718649482225,
+          "retain": 2.8185343035465373,
+          "retention_improvement": 0.07018434593568745
+        },
+        {
+          "seed": 3,
+          "reset": 2.836632441203877,
+          "retain": 2.7668075132078256,
+          "retention_improvement": 0.06982492799605122
+        }
+      ],
+      "mean_reset": 2.866415719040259,
+      "mean_retain": 2.7920684227402135,
+      "mean_improvement": 0.07434729630004548
+    },
+    "fineweb_128": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 3.3848222289281447,
+          "retain": 3.367212482035994,
+          "retention_improvement": 0.017609746892150557
+        },
+        {
+          "seed": 2,
+          "reset": 3.4195665156621398,
+          "retain": 3.403659359981204,
+          "retention_improvement": 0.015907155680935592
+        },
+        {
+          "seed": 3,
+          "reset": 3.358665657691792,
+          "retain": 3.3429678635204687,
+          "retention_improvement": 0.01569779417132322
+        }
+      ],
+      "mean_reset": 3.387684800760692,
+      "mean_retain": 3.371279901845889,
+      "mean_improvement": 0.016404898914803123
+    },
+    "fineweb_512": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 3.4132478513742432,
+          "retain": 3.358315902413935,
+          "retention_improvement": 0.0549319489603084
+        },
+        {
+          "seed": 2,
+          "reset": 3.4564301609014545,
+          "retain": 3.4016019009884673,
+          "retention_improvement": 0.05482825991298723
+        },
+        {
+          "seed": 3,
+          "reset": 3.400707963336574,
+          "retain": 3.3341660516004445,
+          "retention_improvement": 0.06654191173612967
+        }
+      ],
+      "mean_reset": 3.423461991870757,
+      "mean_retain": 3.364694618334282,
+      "mean_improvement": 0.0587673735364751
+    }
+  },
+  "signed": {
+    "wiki_128": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 2.759163256724086,
+          "retain": 2.7509119198614074,
+          "retention_improvement": 0.008251336862678649
+        },
+        {
+          "seed": 2,
+          "reset": 2.8118801056596996,
+          "retain": 2.8017813694997966,
+          "retention_improvement": 0.010098736159902977
+        },
+        {
+          "seed": 3,
+          "reset": 2.7621013672705303,
+          "retain": 2.7537598463979376,
+          "retention_improvement": 0.008341520872592767
+        }
+      ],
+      "mean_reset": 2.777714909884772,
+      "mean_retain": 2.7688177119197137,
+      "mean_improvement": 0.008897197965058131
+    },
+    "wiki_512": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 2.7542159817233807,
+          "retain": 2.7371762441852097,
+          "retention_improvement": 0.017039737538171007
+        },
+        {
+          "seed": 2,
+          "reset": 2.807972575911396,
+          "retain": 2.7842510751993226,
+          "retention_improvement": 0.02372150071207324
+        },
+        {
+          "seed": 3,
+          "reset": 2.751363508456951,
+          "retain": 2.7332198229474796,
+          "retention_improvement": 0.018143685509471652
+        }
+      ],
+      "mean_reset": 2.771184022030576,
+      "mean_retain": 2.751549047444004,
+      "mean_improvement": 0.019634974586571968
+    },
+    "fineweb_128": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 3.352381532364441,
+          "retain": 3.343924746709877,
+          "retention_improvement": 0.00845678565456387
+        },
+        {
+          "seed": 2,
+          "reset": 3.372709304638449,
+          "retain": 3.3653214455677323,
+          "retention_improvement": 0.007387859070716818
+        },
+        {
+          "seed": 3,
+          "reset": 3.328320593947476,
+          "retain": 3.3188677480267486,
+          "retention_improvement": 0.00945284592072726
+        }
+      ],
+      "mean_reset": 3.351137143650122,
+      "mean_retain": 3.3427046467681194,
+      "mean_improvement": 0.008432496882002649
+    },
+    "fineweb_512": {
+      "pairs": [
+        {
+          "seed": 1,
+          "reset": 3.34144384774,
+          "retain": 3.328170272066276,
+          "retention_improvement": 0.013273575673724114
+        },
+        {
+          "seed": 2,
+          "reset": 3.3642918631912617,
+          "retain": 3.3455371764730875,
+          "retention_improvement": 0.018754686718174263
+        },
+        {
+          "seed": 3,
+          "reset": 3.31178812777684,
+          "retain": 3.297238763918827,
+          "retention_improvement": 0.014549363858013198
+        }
+      ],
+      "mean_reset": 3.3391746129027005,
+      "mean_retain": 3.3236487374860633,
+      "mean_improvement": 0.015525875416637192
+    }
+  }
+}

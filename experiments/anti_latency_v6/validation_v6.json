@@ -1,0 +1,82 @@
+[
+  {
+    "kind": "attention",
+    "seed": 2,
+    "mode": "reset",
+    "optimized_maxerror": 0.0,
+    "cached_maxerror": 1.0658141036401503e-14,
+    "optimizer_steps": [
+      200.0
+    ]
+  },
+  {
+    "kind": "attention",
+    "seed": 2,
+    "mode": "retain",
+    "optimized_maxerror": 0.0,
+    "cached_maxerror": 1.6486811915683575e-14,
+    "optimizer_steps": [
+      1000.0
+    ]
+  },
+  {
+    "kind": "attention",
+    "seed": 3,
+    "mode": "reset",
+    "optimized_maxerror": 0.0,
+    "cached_maxerror": 6.217248937900877e-15,
+    "optimizer_steps": [
+      200.0
+    ]
+  },
+  {
+    "kind": "attention",
+    "seed": 3,
+    "mode": "retain",
+    "optimized_maxerror": 0.0,
+    "cached_maxerror": 5.662137425588298e-15,
+    "optimizer_steps": [
+      1000.0
+    ]
+  },
+  {
+    "kind": "signed",
+    "seed": 2,
+    "mode": "reset",
+    "optimized_maxerror": 1.2434497875801753e-14,
+    "cached_maxerror": 1.1546319456101628e-14,
+    "optimizer_steps": [
+      200.0
+    ]
+  },
+  {
+    "kind": "signed",
+    "seed": 2,
+    "mode": "retain",
+    "optimized_maxerror": 2.842170943040401e-14,
+    "cached_maxerror": 1.2878587085651816e-14,
+    "optimizer_steps": [
+      1000.0
+    ]
+  },
+  {
+    "kind": "signed",
+    "seed": 3,
+    "mode": "reset",
+    "optimized_maxerror": 1.1324274851176597e-14,
+    "cached_maxerror": 8.659739592076221e-15,
+    "optimizer_steps": [
+      200.0
+    ]
+  },
+  {
+    "kind": "signed",
+    "seed": 3,
+    "mode": "retain",
+    "optimized_maxerror": 8.326672684688674e-15,
+    "cached_maxerror": 1.2434497875801753e-14,
+    "optimizer_steps": [
+      1000.0
+    ]
+  }
+]
