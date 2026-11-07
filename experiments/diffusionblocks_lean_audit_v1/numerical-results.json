@@ -1,0 +1,16 @@
+{
+  "kind": "independent exact arithmetic and numerical identities, not a language benchmark",
+  "seed": 20261107,
+  "paper_sign_counterexample": {
+    "correct": "1/2",
+    "printed": "3/2"
+  },
+  "affine_matrix_cases": 100,
+  "dimension": 4,
+  "steps": 8,
+  "max_affine_matrix_absolute_error": 1.6653345369377348e-16,
+  "nonlinear_one_step_reparameterization_absolute_error": 2.220446049250313e-16,
+  "weighted_loss_intended": 5.0,
+  "weighted_loss_broadcast": 4.0,
+  "all_assertions_passed": true
+}

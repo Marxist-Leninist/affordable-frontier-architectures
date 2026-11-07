@@ -1,0 +1,18 @@
+{
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "compiler_exit_code": 0,
+  "verified_named_statements": 20,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "custom_axioms": false,
+  "sorryAx": false,
+  "native_decide": false,
+  "source_sha256": "e598280500c2cafe8015e9f4644d81ed83950664fd10e5e21e879b332ed3afc2",
+  "command": "lean -D Elab.async=false -j1 DiffusionEquivalence.lean",
+  "library": "Lean Init only; no Mathlib dependency",
+  "toolchain_archive_sha256": "7289597a44543246c9227b8cae501767e095ce17f6d448b95fc4a8dc97268f6d",
+  "official_release": "https://github.com/leanprover/lean4/releases/tag/v4.35.0"
+}

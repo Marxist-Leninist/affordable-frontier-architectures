@@ -1,0 +1,22 @@
+'DiffusionEquivalence.euler_from_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.euler_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.residual_mixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.residual_reparameterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.printed_sign_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.ideal_denoiser' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.ideal_two_steps_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.terminal_perfect_denoiser' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.affine_denoiser_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.two_affine_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.geometric_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.affine_closed_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.affine_closed_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.local_objective_independent' does not depend on any axioms
+'DiffusionEquivalence.training_losses_not_identical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.local_loss_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.endpoint_loss_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.weighted_broadcast_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiffusionEquivalence.displayed_loop_excludes_output' depends on axioms: [propext, Quot.sound]
+'DiffusionEquivalence.displayed_first_index_is_negative' depends on axioms: [propext, Quot.sound]
+LEAN_EXIT=0
+SOURCE_SHA256=e598280500c2cafe8015e9f4644d81ed83950664fd10e5e21e879b332ed3afc2
