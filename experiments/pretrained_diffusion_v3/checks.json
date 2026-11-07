@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "kind": "normal",
+      "initial_native_logit_error": 0.0
+    },
+    {
+      "kind": "masked_hybrid_parent",
+      "initial_native_logit_error": 0.0,
+      "selected_group": 0,
+      "qkv_forward_counts": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gradient_optimizer_isolation": true
+    },
+    {
+      "kind": "masked_hybrid_all",
+      "initial_native_logit_error": 0.0,
+      "selected_group": 1,
+      "qkv_forward_counts": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "gradient_optimizer_isolation": true
+    },
+    {
+      "kind": "masked_local_all",
+      "initial_native_logit_error": 0.0,
+      "selected_group": 1,
+      "qkv_forward_counts": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "gradient_optimizer_isolation": true
+    },
+    {
+      "kind": "direct_hybrid_all",
+      "initial_native_logit_error": 0.0,
+      "selected_group": 1,
+      "qkv_forward_counts": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "gradient_optimizer_isolation": true
+    },
+    {
+      "kind": "direct_local_all",
+      "initial_native_logit_error": 0.0,
+      "selected_group": 1,
+      "qkv_forward_counts": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "gradient_optimizer_isolation": true
+    }
+  ],
+  "common_native_causal_inference": true,
+  "masked_targets_absent_from_inputs": true,
+  "masked_training_bidirectional_by_design": true,
+  "direct_training_causal_clean_past_only": true,
+  "reserved_mask_absent_in_all_data": true,
+  "cadence_and_restricted_coverage_verified": true
+}

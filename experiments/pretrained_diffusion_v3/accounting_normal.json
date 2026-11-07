@@ -1,0 +1,102 @@
+{
+  "family": "normal",
+  "loaded_files": [
+    "shared.safetensors",
+    "normal_body.safetensors"
+  ],
+  "subset_logits_exact": true,
+  "initial_reads": [
+    {
+      "file": "shared.safetensors",
+      "logical_bytes": 51511496,
+      "wall_seconds": 0.06766153901116922,
+      "proc_io_delta": {
+        "rchar": 51511612,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 51810304,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4768000,
+      "wall_seconds": 0.006845518015325069,
+      "proc_io_delta": {
+        "rchar": 4768116,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 4771840,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    }
+  ],
+  "warm_body_reads": [
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4768000,
+      "wall_seconds": 0.005331243970431387,
+      "proc_io_delta": {
+        "rchar": 4768116,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 4771840,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4768000,
+      "wall_seconds": 0.0016980139771476388,
+      "proc_io_delta": {
+        "rchar": 4768116,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 0,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4768000,
+      "wall_seconds": 0.0009976919973269105,
+      "proc_io_delta": {
+        "rchar": 4768116,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 0,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    }
+  ],
+  "weight_write": {
+    "logical_bytes": 4782840,
+    "wall_seconds_excluding_serialization": 0.005621426971629262,
+    "proc_io_delta": {
+      "rchar": 116,
+      "wchar": 4782840,
+      "syscr": 2,
+      "syscw": 1,
+      "read_bytes": 0,
+      "write_bytes": 4796416,
+      "cancelled_write_bytes": 0
+    }
+  },
+  "saved_nonparameter_storage_bytes": 16065540,
+  "peak_rss_bytes": 554496000,
+  "warmed_step_cpu_seconds": 0.08013780125000003,
+  "warmed_step_wall_seconds": 0.0801395663729636,
+  "matrix_operator_flops": 2120631170,
+  "trainable_parameters": 1189888,
+  "scope": "Separate process; actual selected file reads and real CE forward/backward/clip/AdamW. Synthetic fixed batch2 context32, selected32targets for masked versus64for others. Teacher/production pipeline absent. Physical cache state uncontrolled; logical transfer bytes are not disk bandwidth. RSS includes construction/loading. Updated weight transfer excludes optimizer state."
+}

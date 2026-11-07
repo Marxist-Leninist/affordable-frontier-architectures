@@ -1,0 +1,431 @@
+{
+  "complete": true,
+  "untouched_test_nll": 5.609661526978016,
+  "rows": [
+    {
+      "kind": "normal",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        5.471095036715269,
+        5.445540841668844,
+        5.455939315259457
+      ],
+      "mean_test_nll": 5.457525064547856,
+      "seed_sd_test_nll": 0.012850687597242692,
+      "paired_gap_nats": 0.0,
+      "conditional_window_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "mean_training_cpu_seconds": 44.33720451799999,
+      "cpu_fraction_of_ordinary": 1.0,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        41472,
+        41472,
+        41472
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": true,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 3089664000.0,
+      "modeled_body_read_fraction_of_ordinary": 1.0
+    },
+    {
+      "kind": "masked_hybrid_parent",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        5.459054306149483,
+        5.524177502840757,
+        5.5038237273693085
+      ],
+      "mean_test_nll": 5.495685178786516,
+      "seed_sd_test_nll": 0.03331568199209591,
+      "paired_gap_nats": 0.038160114238659545,
+      "conditional_window_bootstrap95": [
+        0.011372756989051897,
+        0.06515307532002529
+      ],
+      "mean_training_cpu_seconds": 41.55596397466667,
+      "cpu_fraction_of_ordinary": 0.9372707284194204,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        39253,
+        39160,
+        39032
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 2861013888.0,
+      "modeled_body_read_fraction_of_ordinary": 0.9259951528709918
+    },
+    {
+      "kind": "masked_hybrid_parent",
+      "endpoint": "equal_cpu",
+      "test_nll_by_seed": [
+        5.501341357827187,
+        5.510939672589302,
+        5.465609438717365
+      ],
+      "mean_test_nll": 5.492630156377952,
+      "seed_sd_test_nll": 0.023887680899115984,
+      "paired_gap_nats": 0.03510509183009465,
+      "conditional_window_bootstrap95": [
+        -0.0038541279112299315,
+        0.07572888874759273
+      ],
+      "mean_training_cpu_seconds": 44.36191990366667,
+      "cpu_fraction_of_ordinary": 1.000557441226513,
+      "steps": [
+        698,
+        720,
+        661
+      ],
+      "predicted_targets": [
+        42335,
+        43496,
+        39817
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 3060753973.3333335,
+      "modeled_body_read_fraction_of_ordinary": 0.9906429868533709
+    },
+    {
+      "kind": "masked_hybrid_all",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        5.475598067045212,
+        5.486964199692011,
+        5.504402294754982
+      ],
+      "mean_test_nll": 5.488988187164068,
+      "seed_sd_test_nll": 0.0145083864524749,
+      "paired_gap_nats": 0.03146312261621157,
+      "conditional_window_bootstrap95": [
+        0.001238386395076913,
+        0.06222604122012853
+      ],
+      "mean_training_cpu_seconds": 41.860223312,
+      "cpu_fraction_of_ordinary": 0.9441331217669714,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        39227,
+        39158,
+        39100
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 2861013888.0,
+      "modeled_body_read_fraction_of_ordinary": 0.9259951528709918
+    },
+    {
+      "kind": "masked_hybrid_all",
+      "endpoint": "equal_cpu",
+      "test_nll_by_seed": [
+        5.436406139284372,
+        5.478870004415512,
+        5.504952050745487
+      ],
+      "mean_test_nll": 5.4734093981484575,
+      "seed_sd_test_nll": 0.0345976756460835,
+      "paired_gap_nats": 0.01588433360060056,
+      "conditional_window_bootstrap95": [
+        -0.02897628434002399,
+        0.06371753367905815
+      ],
+      "mean_training_cpu_seconds": 44.36014884166667,
+      "cpu_fraction_of_ordinary": 1.0005174959476157,
+      "steps": [
+        666,
+        701,
+        693
+      ],
+      "predicted_targets": [
+        40336,
+        42413,
+        41822
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 3032673770.6666665,
+      "modeled_body_read_fraction_of_ordinary": 0.9815545543679398
+    },
+    {
+      "kind": "masked_local_all",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        9.069624401628971,
+        9.012046582996845,
+        9.005704447627068
+      ],
+      "mean_test_nll": 9.029125144084295,
+      "seed_sd_test_nll": 0.035216445966546245,
+      "paired_gap_nats": 3.571600079536438,
+      "conditional_window_bootstrap95": [
+        3.334720635289947,
+        3.825407001655549
+      ],
+      "mean_training_cpu_seconds": 20.858447780333332,
+      "cpu_fraction_of_ordinary": 0.47045022362348604,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        21229,
+        20720,
+        20754
+      ],
+      "mean_gap_within_0_05": false,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 1031812992.0,
+      "modeled_body_read_fraction_of_ordinary": 0.3339563758389262
+    },
+    {
+      "kind": "masked_local_all",
+      "endpoint": "equal_cpu",
+      "test_nll_by_seed": [
+        8.551747098565102,
+        8.456206291913986,
+        8.496575392782688
+      ],
+      "mean_test_nll": 8.501509594420591,
+      "seed_sd_test_nll": 0.04796114253475489,
+      "paired_gap_nats": 3.0439845298727355,
+      "conditional_window_bootstrap95": [
+        2.8370370797192055,
+        3.2694061282401283
+      ],
+      "mean_training_cpu_seconds": 44.35463398899997,
+      "cpu_fraction_of_ordinary": 1.0003931116359153,
+      "steps": [
+        1375,
+        1434,
+        1391
+      ],
+      "predicted_targets": [
+        44736,
+        45915,
+        44706
+      ],
+      "mean_gap_within_0_05": false,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 2229225600.0,
+      "modeled_body_read_fraction_of_ordinary": 0.7215106885408898
+    },
+    {
+      "kind": "direct_hybrid_all",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        5.49667289480567,
+        5.550279900431633,
+        5.524060811847448
+      ],
+      "mean_test_nll": 5.523671202361584,
+      "seed_sd_test_nll": 0.026805626456196087,
+      "paired_gap_nats": 0.06614613781372705,
+      "conditional_window_bootstrap95": [
+        0.03541075025374691,
+        0.09693503836169838
+      ],
+      "mean_training_cpu_seconds": 42.85178044466668,
+      "cpu_fraction_of_ordinary": 0.9664971193046178,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        41472,
+        41472,
+        41472
+      ],
+      "mean_gap_within_0_05": false,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 2875758336.0,
+      "modeled_body_read_fraction_of_ordinary": 0.9307673378076062
+    },
+    {
+      "kind": "direct_hybrid_all",
+      "endpoint": "equal_cpu",
+      "test_nll_by_seed": [
+        5.499467980116606,
+        5.49653035774827,
+        5.521033553406596
+      ],
+      "mean_test_nll": 5.50567729709049,
+      "seed_sd_test_nll": 0.013379774375122501,
+      "paired_gap_nats": 0.04815223254263401,
+      "conditional_window_bootstrap95": [
+        0.007192311001320681,
+        0.08865455826744435
+      ],
+      "mean_training_cpu_seconds": 44.366664882000016,
+      "cpu_fraction_of_ordinary": 1.000664461467977,
+      "steps": [
+        653,
+        710,
+        647
+      ],
+      "predicted_targets": [
+        41792,
+        45440,
+        41408
+      ],
+      "mean_gap_within_0_05": true,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 2975702816.0,
+      "modeled_body_read_fraction_of_ordinary": 0.9631153471704367
+    },
+    {
+      "kind": "direct_local_all",
+      "endpoint": "equal_data",
+      "test_nll_by_seed": [
+        11.184618011116982,
+        10.731212317943573,
+        10.185347184538841
+      ],
+      "mean_test_nll": 10.700392504533133,
+      "seed_sd_test_nll": 0.5003478209071474,
+      "paired_gap_nats": 5.242867439985275,
+      "conditional_window_bootstrap95": [
+        4.991781507898122,
+        5.488700197047243
+      ],
+      "mean_training_cpu_seconds": 36.29390293566666,
+      "cpu_fraction_of_ordinary": 0.8185879856483076,
+      "steps": [
+        648,
+        648,
+        648
+      ],
+      "predicted_targets": [
+        41472,
+        41472,
+        41472
+      ],
+      "mean_gap_within_0_05": false,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 1164513024.0,
+      "modeled_body_read_fraction_of_ordinary": 0.37690604026845637
+    },
+    {
+      "kind": "direct_local_all",
+      "endpoint": "equal_cpu",
+      "test_nll_by_seed": [
+        11.47661241889,
+        11.289984196424484,
+        10.57652921974659
+      ],
+      "mean_test_nll": 11.114375278353691,
+      "seed_sd_test_nll": 0.47504348266717084,
+      "paired_gap_nats": 5.656850213805834,
+      "conditional_window_bootstrap95": [
+        5.410622083457808,
+        5.898545700560013
+      ],
+      "mean_training_cpu_seconds": 44.365827010333334,
+      "cpu_fraction_of_ordinary": 1.0006455637572216,
+      "steps": [
+        810,
+        812,
+        747
+      ],
+      "predicted_targets": [
+        51840,
+        51968,
+        47808
+      ],
+      "mean_gap_within_0_05": false,
+      "conditional_upper_ci_within_0_05": false,
+      "scope": "Bootstrap conditions on these three seeds and64windows; not production noninferiority or generalization to other data/models.",
+      "mean_modeled_body_read_bytes": 1419100490.6666667,
+      "modeled_body_read_fraction_of_ordinary": 0.459305766150192
+    }
+  ],
+  "conservative_quality_and_cpu_screen_passes": [],
+  "offload_body_bytes": {
+    "normal": 4768000,
+    "masked": 1592304,
+    "direct": 1797088
+  },
+  "modeled_hybrid_mean_body_bytes": {
+    "masked": 4415144.888888889,
+    "direct": 4437898.666666667
+  },
+  "native_inference_checks": [
+    {
+      "checkpoint": "normal_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.025716260124999946,
+      "warmed_full_prefix_wall_seconds": 0.025717637880006805,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_hybrid_parent_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.024751846000000022,
+      "warmed_full_prefix_wall_seconds": 0.024751524251769297,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_hybrid_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.026774196749999923,
+      "warmed_full_prefix_wall_seconds": 0.026785022622789256,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_local_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.02606627624999991,
+      "warmed_full_prefix_wall_seconds": 0.026066070997330826,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "direct_hybrid_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.023128888999999875,
+      "warmed_full_prefix_wall_seconds": 0.023128660999645945,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "direct_local_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.027774627000000107,
+      "warmed_full_prefix_wall_seconds": 0.027774305002822075,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    }
+  ],
+  "io_scope": "Actual isolated file sizes/reads verified; hybrid-weighted totals are a schedule model, not measured primary-run offloading. Primary training stays in RAM. Shared vocabulary loading and optimizer transfers excluded from modeled body figures.",
+  "interpretation": "Prefer measured common causal quality and useful end-to-end cost, not paper fidelity. Dense Pythia proxy isolates local mechanisms with common AR anchors; does not reproduce native ternary MoE, SAT policy, rotating write shards, or exact ancestor ratio."
+}

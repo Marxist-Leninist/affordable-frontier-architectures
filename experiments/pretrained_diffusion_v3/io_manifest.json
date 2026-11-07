@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "normal": {
+      "kind": "normal",
+      "group": 0,
+      "reference_logits_sha256": "e137fa480c96163815e0d53d02d1c6443ca9814002786d12eb514129a6fbe580"
+    },
+    "masked": {
+      "kind": "masked_hybrid_parent",
+      "group": 0,
+      "reference_logits_sha256": "28d0166246a6fea0dfe949382b92ad9440b3ee12b2428c594736cddffdaa4e59"
+    },
+    "direct": {
+      "kind": "direct_hybrid_all",
+      "group": 1,
+      "reference_logits_sha256": "474e7b50f4ef3815c7d750ed195da3c2b63bd481002fba5b0946f6d6e08886ee"
+    }
+  },
+  "scope": "One-time sharding reads full study checkpoints. Shared vocabulary files and selected bodies are separate. Local probe group chosen explicitly; no optimizer states included.",
+  "files": {
+    "direct_body.safetensors": {
+      "bytes": 1797088,
+      "sha256": "7a01017a7b4bc2a166fcf63dd5a7761768a508b8a67f6dc179031442212431e0"
+    },
+    "masked_body.safetensors": {
+      "bytes": 1592304,
+      "sha256": "d2369f30f54b55c8d941c3c47bb6a90b56fe80012bdbb259eed721b9f7938d86"
+    },
+    "normal_body.safetensors": {
+      "bytes": 4768000,
+      "sha256": "0bfe95080c257b75c24857290475927ac3e633eb6812f1d229bc161831de6a16"
+    },
+    "shared.safetensors": {
+      "bytes": 51511496,
+      "sha256": "16088329ab729569e0b67de2169196d3a794d6097569885373b8c584f3f0ad0b"
+    }
+  },
+  "export_cpu_seconds": 0.5259916870000003,
+  "export_wall_seconds": 0.5912546539912
+}

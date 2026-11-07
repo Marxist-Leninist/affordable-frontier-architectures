@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "name": "untouched",
+      "test_nll": 5.609661526978016,
+      "max_window_difference": 0.0,
+      "load_cpu_seconds": 0.06516590700000036,
+      "eval_cpu_seconds": 0.9236523610000003
+    },
+    {
+      "name": "normal_101_equal_data",
+      "test_nll": 5.471095036715269,
+      "max_window_difference": 0.0,
+      "load_cpu_seconds": 0.05720814900000004,
+      "eval_cpu_seconds": 1.0245292170000004
+    }
+  ],
+  "change": "Explicit NumPy-before-Torch startup through launch.py, matching v2 import order. Scientific implementation files unchanged."
+}

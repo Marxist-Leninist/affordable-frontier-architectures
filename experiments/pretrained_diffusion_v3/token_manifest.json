@@ -1,0 +1,14 @@
+{
+  "train": {
+    "tokens": 2444793,
+    "sha256": "917ec225e5b6fe25d396c16fd6d2ce4c8c28f47323dc564e5ef84d43e344eef1"
+  },
+  "validation": {
+    "tokens": 253770,
+    "sha256": "b1d10151511d840d68c6bc2bc339574273a3443ea62f0739ae0f07428e420771"
+  },
+  "test": {
+    "tokens": 290188,
+    "sha256": "fee2e8a11a70c1ecb8287ecd2cb374d26fa7c03c83a06dfb0c9e08f752c9c5f6"
+  }
+}

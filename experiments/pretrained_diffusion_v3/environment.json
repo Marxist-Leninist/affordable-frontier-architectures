@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "system": "Linux",
+  "machine": "x86_64",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "packages": {
+    "torch": "2.6.0+cpu",
+    "numpy": "2.3.5",
+    "transformers": "4.57.6",
+    "safetensors": "0.6.2",
+    "tokenizers": "0.22.1",
+    "pyarrow": "19.0.1"
+  },
+  "execution": "FP32 single intra-op and inter-op CPU thread; no CUDA/GPU used. Package version strings may include the official CPU wheel suffix.",
+  "numerical_runtime": "Denormal flushing enabled process-locally, autograd multithreading disabled, deterministic algorithm enforcement retained."
+}

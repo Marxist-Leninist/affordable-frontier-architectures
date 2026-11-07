@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "model": "Pinned pretrained Pythia-14M; frozen vocabulary input/output maps for all methods",
+  "methods": [
+    "normal",
+    "masked_hybrid_parent",
+    "masked_hybrid_all",
+    "masked_local_all",
+    "direct_hybrid_all",
+    "direct_local_all"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "steps": 648,
+  "max_steps": 2592,
+  "batch": 2,
+  "context": 32,
+  "input_token_exposures": 41472,
+  "inference": "Every method uses the unchanged native six-layer causal next-token inference graph. Local branches share core layers with the native graph; no diffusion rollout or teacher at inference.",
+  "matching": "Equal data/updates plus first update reaching same-seed ordinary training CPU. CPU includes forward, loss, backward, clipping, and optimizer, excludes preparation, loading, evaluation and no-update warmup. Not simultaneous equal predicted-target count or equal FLOPs.",
+  "optimizer": "AdamW lr1e-4,warmup48,betas(.9,.95),wd.01,clip1. All methods start from same original independently. Local losses above35 are skipped and counted; nonfinite loss aborts.",
+  "masked": "Source-matched local mechanism: every ninth update for hybrid, first native group only for parent analogue or all3 groups cycling; sigma uniform per descending probability band over[.05,.95], token selection probability sigma with >=1 selected; unused reserved ID50303; VP corruption sqrt(1-sigma^2)*embedding+sigma*standard_normal; zero affine conditioning x*(1+.1*tanh(scale))+shift; selected2layers with bidirectional attention; selected-token reconstruction CE. Uses Pythia LayerNorm rather than source RMS.",
+  "direct": "V2 clean-past-only/noisy-query denoising auxiliary, native shared layers, same frozen vocabulary codes and noise bands as v2. Every ninth update for hybrid, all updates for local. Causal native inference remains the common evaluation. Not a paper-faithful diffusion generator.",
+  "anchors": "Common ordinary causal CE anchors for all hybrids to isolate the local intervention. Deliberately does NOT reproduce source SAT-fixed, learned SAT-variable, NAT anchors, ternary weights, MoE routing, shared trainable table, writeback/checkpoint system or rotating update shard.",
+  "restricted_group_limit": "Live schedule uses oldest20/80 groups. Six-layer proxy has3 two-layer groups, so parent analogue uses first1/3 groups rather than exactly1/4. It retains the source parent-count noise-band recalibration; label as mechanism analogue, not exact AGILLM runtime reproduction.",
+  "evaluation": "New32validation/64test disjoint contexts excluding all scored v1/v2 contexts; final16 targets each. Standard causal exact next-token NLL at context<=32. Original pretraining contamination unknown.",
+  "decision": "Report all methods/endpoints. Practical screening gate: mean test gap<=.05nats versus ordinary paired control, with conditional window bootstrap uncertainty, and measured useful compute/I/O advantage. This small pilot cannot certify production noninferiority. No test selection for extra training or deployment.",
+  "safety": "Scratch CPU only; no production changes, no paid resources, no old checkpoint removal.",
+  "source_sha256": {
+    "direct.py": "44f2a8d39f84c1d6fc2bba186647a3269ecb2e212736063d2bf469d2b2d0cf29",
+    "models.py": "916007c9b0b6c18b0230bb18944e72801f52adb497578a9012520d07eeae32e1",
+    "experiment.py": "3a3f1542574a3b9da6d99e61df8aa378eebf6ee93853f781ae8bb8e0da85715b",
+    "checks.py": "a091b88a7dacc8b611036527450647a6b977bec21f57765e0d3a34bb1fbf37ca",
+    "prepare.py": "dd92a27552509f846472358fa26d88bdbe094e30b3c615191d5af627a8f448a3"
+  },
+  "data_manifest_sha256": "e0468c77a82940c9accf93c9eaf0b27f6d2bb22df1fd633c9828de63c7430e15",
+  "window_manifest_sha256": "11069f3d789ff5e63fe6e53d61c201f9a56bf635259c4dfa8dc295892f996501",
+  "runtime_launcher_sha256": "98c4834c306c6df1c68b116e6a95f34fce34ceadbeed1a6ff3e8ace30605e270",
+  "runtime_amendment": "After one ordinary control but before any adapted candidate endpoint, repeated isolated runs were killed with exit137. Bounded stack traces localized long parameter-loading stalls; exact root cause is not claimed. Explicit NumPy-before-Torch startup now matches v2. No model/data/objective/hyperparameter change; initial protocol and ordinary result retained and exact score parity checked."
+}

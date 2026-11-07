@@ -1,0 +1,10 @@
+{
+  "source": "User-owned AGILLM agillm128b.py, read without importing or executing",
+  "sha256": "1241dead5f786b7fa398c8f9859de182cc9c97341718ff9ffc8990f5e174942c",
+  "source_bytes": 621431,
+  "verified_methods": ["TernTF.forward_local", "MoETrainingState.prepare", "MoETrainingState.finish", "MultimodeObjectives.prepare"],
+  "base_schedule": "Eight full-model multimode anchors, then one selected-group local step. Local is bidirectional masked reconstruction with variance-preserving embedding noise and a zero-initialized affine scalar-noise conditioner.",
+  "active_patch_semantics": "Source-pinned parent-group prepare override changes group_count to the oldest ancestor's20 groups out of80 live groups; group is local_cursor modulo20, and the same descending sigma interval formulas use20. The step5825 launch receipt corroborated parent_groups40 to20 and live groups80. Exact patch hashes were not captured; none are invented.",
+  "current_model_limits": "Native model has320 layers,4 layers per local group, trainable shared ternary vocabulary table, MoE routing, multimode AR/SAT-fixed/learned-SAT-variable/NAT anchors, and separate rotating write-shard controls. None of those systems are reproduced by the dense proxy.",
+  "proxy_scope": "Isolate the verified local masked/noise mechanism against causal-direct alternatives and ordinary AR continued training, using common Pythia causal inference and ordinary AR anchors. Parent-only proxy uses first1of3 groups; not an exact quarter-depth ratio. Pythia LayerNorm replaces native RMS and vocabulary maps remain frozen. No source code, weights, credentials, or private operational logs are redistributed."
+}

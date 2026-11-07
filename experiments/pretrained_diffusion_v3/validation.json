@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "checkpoint_count": 33,
+  "checkpoints": [
+    "normal_101_equal_data",
+    "normal_202_equal_data",
+    "normal_303_equal_data",
+    "masked_hybrid_parent_101_equal_data",
+    "masked_hybrid_parent_101_equal_cpu",
+    "masked_hybrid_parent_202_equal_data",
+    "masked_hybrid_parent_202_equal_cpu",
+    "masked_hybrid_parent_303_equal_data",
+    "masked_hybrid_parent_303_equal_cpu",
+    "masked_hybrid_all_101_equal_data",
+    "masked_hybrid_all_101_equal_cpu",
+    "masked_hybrid_all_202_equal_data",
+    "masked_hybrid_all_202_equal_cpu",
+    "masked_hybrid_all_303_equal_data",
+    "masked_hybrid_all_303_equal_cpu",
+    "masked_local_all_101_equal_data",
+    "masked_local_all_101_equal_cpu",
+    "masked_local_all_202_equal_data",
+    "masked_local_all_202_equal_cpu",
+    "masked_local_all_303_equal_data",
+    "masked_local_all_303_equal_cpu",
+    "direct_hybrid_all_101_equal_data",
+    "direct_hybrid_all_101_equal_cpu",
+    "direct_hybrid_all_202_equal_data",
+    "direct_hybrid_all_202_equal_cpu",
+    "direct_hybrid_all_303_equal_data",
+    "direct_hybrid_all_303_equal_cpu",
+    "direct_local_all_101_equal_data",
+    "direct_local_all_101_equal_cpu",
+    "direct_local_all_202_equal_data",
+    "direct_local_all_202_equal_cpu",
+    "direct_local_all_303_equal_data",
+    "direct_local_all_303_equal_cpu"
+  ],
+  "exact_score_replays": [
+    "normal_101_equal_data",
+    "masked_hybrid_parent_101_equal_data",
+    "masked_hybrid_all_101_equal_data",
+    "masked_local_all_101_equal_data",
+    "direct_hybrid_all_101_equal_data",
+    "direct_local_all_101_equal_data"
+  ],
+  "native_cache_continuation_checks": [
+    {
+      "checkpoint": "normal_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.025716260124999946,
+      "warmed_full_prefix_wall_seconds": 0.025717637880006805,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_hybrid_parent_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.024751846000000022,
+      "warmed_full_prefix_wall_seconds": 0.024751524251769297,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_hybrid_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.026774196749999923,
+      "warmed_full_prefix_wall_seconds": 0.026785022622789256,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "masked_local_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.02606627624999991,
+      "warmed_full_prefix_wall_seconds": 0.026066070997330826,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "direct_hybrid_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.023128888999999875,
+      "warmed_full_prefix_wall_seconds": 0.023128660999645945,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    },
+    {
+      "checkpoint": "direct_local_all_101_equal_data",
+      "max_abs_logits": 0.0,
+      "argmax_equal": true,
+      "warmed_full_prefix_cpu_seconds": 0.027774627000000107,
+      "warmed_full_prefix_wall_seconds": 0.027774305002822075,
+      "timing_scope": "Batch2 context32, native causal forward without cache; eight warmed repetitions. Continuation parity separately checks16prefill+16continuation positions."
+    }
+  ],
+  "source_and_original_unchanged": true,
+  "new_eval_contexts_exclude_v1_v2": true,
+  "selected_file_loading_verified": true
+}
