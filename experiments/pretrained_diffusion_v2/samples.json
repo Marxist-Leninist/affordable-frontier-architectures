@@ -1,0 +1,205 @@
+{
+  "scope": "Two fixed illustrative prompts, greedy12tokens,seed11equal-data models; not a generation-quality benchmark or selection criterion.",
+  "samples": [
+    {
+      "kind": "untouched",
+      "seed": 11,
+      "prompt": "The purpose of scientific research is",
+      "continuation": " to determine the importance of the scientific research in the scientific community",
+      "token_ids": [
+        281,
+        3653,
+        253,
+        6349,
+        273,
+        253,
+        8249,
+        2561,
+        275,
+        253,
+        8249,
+        3114
+      ]
+    },
+    {
+      "kind": "untouched",
+      "seed": 11,
+      "prompt": "Once upon a time, a small robot",
+      "continuation": ", the robot is a robot, and a robot is a",
+      "token_ids": [
+        13,
+        253,
+        15688,
+        310,
+        247,
+        15688,
+        13,
+        285,
+        247,
+        15688,
+        310,
+        247
+      ]
+    },
+    {
+      "kind": "normal_ce",
+      "seed": 11,
+      "prompt": "The purpose of scientific research is",
+      "continuation": " a novel and a novel , and a novel of the novel",
+      "token_ids": [
+        247,
+        4460,
+        285,
+        247,
+        4460,
+        1157,
+        285,
+        247,
+        4460,
+        273,
+        253,
+        4460
+      ]
+    },
+    {
+      "kind": "normal_ce",
+      "seed": 11,
+      "prompt": "Once upon a time, a small robot",
+      "continuation": " , a small robot , a robot , a robot , a",
+      "token_ids": [
+        1157,
+        247,
+        1355,
+        15688,
+        1157,
+        247,
+        15688,
+        1157,
+        247,
+        15688,
+        1157,
+        247
+      ]
+    },
+    {
+      "kind": "normal_kd",
+      "seed": 11,
+      "prompt": "The purpose of scientific research is",
+      "continuation": " a scientific study of the science . . . . . .",
+      "token_ids": [
+        247,
+        8249,
+        1263,
+        273,
+        253,
+        5859,
+        964,
+        964,
+        964,
+        964,
+        964,
+        964
+      ]
+    },
+    {
+      "kind": "normal_kd",
+      "seed": 11,
+      "prompt": "Once upon a time, a small robot",
+      "continuation": " , the robot , the robot , the robot , the robot",
+      "token_ids": [
+        1157,
+        253,
+        15688,
+        1157,
+        253,
+        15688,
+        1157,
+        253,
+        15688,
+        1157,
+        253,
+        15688
+      ]
+    },
+    {
+      "kind": "direct_ce",
+      "seed": 11,
+      "prompt": "The purpose of scientific research is",
+      "continuation": " a early history of the course of the stage , and the",
+      "token_ids": [
+        247,
+        2393,
+        2892,
+        273,
+        253,
+        2282,
+        273,
+        253,
+        3924,
+        1157,
+        285,
+        253
+      ]
+    },
+    {
+      "kind": "direct_ce",
+      "seed": 11,
+      "prompt": "Once upon a time, a small robot",
+      "continuation": " and the club , and he was included the summer , and",
+      "token_ids": [
+        285,
+        253,
+        5453,
+        1157,
+        285,
+        344,
+        369,
+        2908,
+        253,
+        5768,
+        1157,
+        285
+      ]
+    },
+    {
+      "kind": "direct_kd",
+      "seed": 11,
+      "prompt": "The purpose of scientific research is",
+      "continuation": " a early history of the stage , and the club , and",
+      "token_ids": [
+        247,
+        2393,
+        2892,
+        273,
+        253,
+        3924,
+        1157,
+        285,
+        253,
+        5453,
+        1157,
+        285
+      ]
+    },
+    {
+      "kind": "direct_kd",
+      "seed": 11,
+      "prompt": "Once upon a time, a small robot",
+      "continuation": " and the end of the end of the end of the end",
+      "token_ids": [
+        285,
+        253,
+        990,
+        273,
+        253,
+        990,
+        273,
+        253,
+        990,
+        273,
+        253,
+        990
+      ]
+    }
+  ]
+}

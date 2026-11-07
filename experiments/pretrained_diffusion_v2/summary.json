@@ -1,0 +1,280 @@
+{
+  "complete": true,
+  "untouched_test_nll": 5.61479002982378,
+  "rows": [
+    {
+      "kind": "normal_ce",
+      "endpoint": "equal_data",
+      "mean_test_nll": 5.5234682355076075,
+      "seed_sd_test_nll": 0.011081893099723784,
+      "test_nll_by_seed": [
+        5.510735780000687,
+        5.528729118406773,
+        5.530939808115363
+      ],
+      "mean_validation_nll": 5.498190907140573,
+      "steps": [
+        768,
+        768,
+        768
+      ],
+      "mean_training_cpu_seconds": 52.50398630633331,
+      "mean_training_wall_seconds": 52.559968673119634,
+      "mean_recipe_cpu_with_teacher": 52.50398630633331,
+      "token_exposures": [
+        49152,
+        49152,
+        49152
+      ]
+    },
+    {
+      "kind": "normal_kd",
+      "endpoint": "equal_data",
+      "mean_test_nll": 5.490467144797246,
+      "seed_sd_test_nll": 0.05675023634890042,
+      "test_nll_by_seed": [
+        5.52636343985796,
+        5.425040777772665,
+        5.519997216761112
+      ],
+      "mean_validation_nll": 5.497811205685139,
+      "steps": [
+        768,
+        768,
+        768
+      ],
+      "mean_training_cpu_seconds": 69.08323228033333,
+      "mean_training_wall_seconds": 69.0862016849375,
+      "mean_recipe_cpu_with_teacher": 122.30535116333334,
+      "token_exposures": [
+        49152,
+        49152,
+        49152
+      ]
+    },
+    {
+      "kind": "direct_ce",
+      "endpoint": "equal_data",
+      "mean_test_nll": 8.881832706431547,
+      "seed_sd_test_nll": 0.834757458633968,
+      "test_nll_by_seed": [
+        8.315926991403103,
+        9.8405318595469,
+        8.48903926834464
+      ],
+      "mean_validation_nll": 9.322350020209948,
+      "steps": [
+        768,
+        768,
+        768
+      ],
+      "mean_training_cpu_seconds": 42.359377294333335,
+      "mean_training_wall_seconds": 42.38506284961477,
+      "mean_recipe_cpu_with_teacher": 42.359377294333335,
+      "token_exposures": [
+        49152,
+        49152,
+        49152
+      ]
+    },
+    {
+      "kind": "direct_ce",
+      "endpoint": "equal_cpu",
+      "mean_test_nll": 8.994464372595152,
+      "seed_sd_test_nll": 0.03144563935799535,
+      "test_nll_by_seed": [
+        8.964711882174015,
+        8.991315074265003,
+        9.027366161346436
+      ],
+      "mean_validation_nll": 9.387957309683165,
+      "steps": [
+        996,
+        942,
+        946
+      ],
+      "mean_training_cpu_seconds": 52.520853729333304,
+      "mean_training_wall_seconds": 52.53812325070612,
+      "mean_recipe_cpu_with_teacher": 52.520853729333304,
+      "token_exposures": [
+        63744,
+        60288,
+        60544
+      ]
+    },
+    {
+      "kind": "direct_kd",
+      "endpoint": "equal_data",
+      "mean_test_nll": 8.236692177752653,
+      "seed_sd_test_nll": 0.28245746483813605,
+      "test_nll_by_seed": [
+        8.110893875360489,
+        8.56019315123558,
+        8.038989506661892
+      ],
+      "mean_validation_nll": 8.58136581381162,
+      "steps": [
+        768,
+        768,
+        768
+      ],
+      "mean_training_cpu_seconds": 58.515351178666656,
+      "mean_training_wall_seconds": 58.538363281909064,
+      "mean_recipe_cpu_with_teacher": 111.73747006166666,
+      "token_exposures": [
+        49152,
+        49152,
+        49152
+      ]
+    },
+    {
+      "kind": "direct_kd",
+      "endpoint": "equal_cpu",
+      "mean_test_nll": 8.4396240003407,
+      "seed_sd_test_nll": 0.19769737907665888,
+      "test_nll_by_seed": [
+        8.341818500310183,
+        8.66715994104743,
+        8.309893559664488
+      ],
+      "mean_validation_nll": 8.772310753663382,
+      "steps": [
+        915,
+        910,
+        892
+      ],
+      "mean_training_cpu_seconds": 69.13613614733333,
+      "mean_training_wall_seconds": 69.17770141421352,
+      "mean_recipe_cpu_with_teacher": 122.35825503033334,
+      "token_exposures": [
+        58560,
+        58240,
+        57088
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "left": [
+        "direct_ce",
+        "equal_data"
+      ],
+      "right": [
+        "normal_ce",
+        "equal_data"
+      ],
+      "mean_difference_nats": 3.3583644709239406,
+      "window_bootstrap_95": [
+        3.050051543302834,
+        3.6775721841336533
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    },
+    {
+      "left": [
+        "direct_ce",
+        "equal_cpu"
+      ],
+      "right": [
+        "normal_ce",
+        "equal_data"
+      ],
+      "mean_difference_nats": 3.4709961370875435,
+      "window_bootstrap_95": [
+        3.1674573658655087,
+        3.7886254795826977
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    },
+    {
+      "left": [
+        "direct_kd",
+        "equal_data"
+      ],
+      "right": [
+        "normal_kd",
+        "equal_data"
+      ],
+      "mean_difference_nats": 2.746225032955408,
+      "window_bootstrap_95": [
+        2.4672648167858524,
+        3.030445750057697
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    },
+    {
+      "left": [
+        "direct_kd",
+        "equal_cpu"
+      ],
+      "right": [
+        "normal_kd",
+        "equal_data"
+      ],
+      "mean_difference_nats": 2.9491568555434546,
+      "window_bootstrap_95": [
+        2.6660544704956313,
+        3.240362122406562
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    },
+    {
+      "left": [
+        "direct_kd",
+        "equal_data"
+      ],
+      "right": [
+        "direct_ce",
+        "equal_data"
+      ],
+      "mean_difference_nats": -0.645140528678894,
+      "window_bootstrap_95": [
+        -0.7306346153219541,
+        -0.5610617216676475
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    },
+    {
+      "left": [
+        "normal_kd",
+        "equal_data"
+      ],
+      "right": [
+        "normal_ce",
+        "equal_data"
+      ],
+      "mean_difference_nats": -0.03300109071036181,
+      "window_bootstrap_95": [
+        -0.06907835441331069,
+        0.00410425798036156
+      ],
+      "scope": "Conditional on these3trained seeds and64test windows; not a population-level confidence interval over models, datasets or training seeds."
+    }
+  ],
+  "offload_probe": {
+    "normal_cold_component_read_bytes": 56279120,
+    "block_cold_component_read_bytes": 53308232,
+    "normal_warm_body_read_bytes": 4767632,
+    "block_warm_body_read_bytes": 1796744,
+    "normal_weight_write_bytes": 4782456,
+    "block_weight_write_bytes": 1803123,
+    "normal_peak_rss_bytes": 524914688,
+    "block_peak_rss_bytes": 547074048,
+    "normal_saved_tensor_bytes": 16065540,
+    "block_saved_tensor_bytes": 15017092,
+    "normal_matrix_flops": 2120631042,
+    "block_matrix_flops": 1932253452,
+    "physical_read_bytes_normal": 11489280,
+    "physical_read_bytes_block": 57774080,
+    "scope": "Separate executed scratch offload probe; primary adaptation runs keep model weights in RAM. Logical read savings do not establish uncached SSD speed or 512B throughput. Cold component means vocabulary maps loaded too, not OS caches flushed. Optimizer state excluded from file-transfer sizes. FLOPs are supported matrix operators, not exhaustive instructions."
+  },
+  "limits": [
+    "Small14M model, frozen lexical maps and49,152 training-token exposures per equal-data run",
+    "Converted finite4particle log score is not exact implicit diffusion likelihood or perplexity",
+    "New evaluation contexts exclude v1 contexts, but use the same benchmark and original pretraining overlap is unknown",
+    "Independent partition is not function-preserving; full-depth neutral-adapter check does not establish quality preservation after splitting",
+    "Teacher preparation uses the full model once offline over the cached training batches; its cost and storage are reported, not erased",
+    "Matrix FLOPs and wall time reported separately; CPU matching is not simultaneous equal-FLOP/data/wall matching",
+    "No production changes, no GPU/512B training, no long-context retrieval or autoregressive cache-continuation claim"
+  ]
+}

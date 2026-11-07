@@ -1,0 +1,35 @@
+{
+  "scope": "Warmed FP32,one CPU thread,batch2,context32,full-prefix distributions. Charges clean-context preparation on every converted repetition, reuses only across denoising steps/particles within that fixed prefix. Does not measure incremental decoding. KV backing-storage counts include view-retained unused allocation; logical bytes count tensor elements. No cross-block KV sharing.",
+  "rows": [
+    {
+      "kind": "normal_ce",
+      "particles": 1,
+      "cpu_seconds": 0.02924499479999998,
+      "wall_seconds": 0.029326371802017092,
+      "kv_cache": {
+        "logical_bytes": 393216,
+        "unique_retained_storage_bytes": 393216
+      }
+    },
+    {
+      "kind": "direct_kd",
+      "particles": 1,
+      "cpu_seconds": 0.12108590360000004,
+      "wall_seconds": 0.12109184719156474,
+      "kv_cache": {
+        "logical_bytes": 393216,
+        "unique_retained_storage_bytes": 786432
+      }
+    },
+    {
+      "kind": "direct_kd",
+      "particles": 4,
+      "cpu_seconds": 0.5014201694,
+      "wall_seconds": 0.5014213892049156,
+      "kv_cache": {
+        "logical_bytes": 393216,
+        "unique_retained_storage_bytes": 786432
+      }
+    }
+  ]
+}

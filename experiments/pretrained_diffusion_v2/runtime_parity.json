@@ -1,0 +1,24 @@
+{
+  "common": {
+    "intra_threads": 1,
+    "inter_threads": 1,
+    "autograd_multithreading": false,
+    "flush_denormal": true
+  },
+  "results": [
+    {
+      "deterministic_enforcement": true,
+      "cpu_seconds": 0.12332232099999985,
+      "wall_seconds": 0.15376866998849437,
+      "loss": 6.648119926452637
+    },
+    {
+      "deterministic_enforcement": false,
+      "cpu_seconds": 0.07148993900000011,
+      "wall_seconds": 0.07287621800787747,
+      "loss": 6.648119926452637
+    }
+  ],
+  "max_abs_logits": 0.0,
+  "max_abs_gradients": 0.0
+}

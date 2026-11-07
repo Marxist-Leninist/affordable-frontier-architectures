@@ -1,0 +1,31 @@
+{
+  "files": {
+    "block_0.safetensors": {
+      "bytes": 1796744,
+      "sha256": "49a60f4791fea079b5977fa883904960f79a128b101ec61f4020b70806198a2e"
+    },
+    "block_1.safetensors": {
+      "bytes": 1796744,
+      "sha256": "cc9590d792b171795e2a1996df8ddc7b016cd66c9203620edc9668f99e76fd33"
+    },
+    "block_2.safetensors": {
+      "bytes": 1796744,
+      "sha256": "efb4bf4715755ef704704df8ecfd61d60b6e7271db158f06b1487c6524504b8f"
+    },
+    "normal_body.safetensors": {
+      "bytes": 4767632,
+      "sha256": "83fe6fce65a06132b2aec237e363a269ec26968ba6c395bd7e39fbcdb7d65362"
+    },
+    "shared.safetensors": {
+      "bytes": 51511488,
+      "sha256": "e13d7fc0912032a7a8b3b912200505bc586dab5602b138b26056590585644b4d"
+    }
+  },
+  "reference_logits_sha256": {
+    "normal": "7c30755ad5be8ba40021a1db3d7c0438166512d99d154d97e2ba25ea05c7991b",
+    "block": "c6ea8e30cb95a9e672b2ecf9088e1331a2b4c648e347191d7a8bd6e3430973f8"
+  },
+  "export_cpu_seconds": 0.4426405550000001,
+  "export_wall_seconds": 0.4992219380219467,
+  "scope": "One-time sharding loads full original/model checkpoints. FP32 scratch weights; shared input/output lexical matrices separate from ordinary full body or individual converted block. No optimizer state in these files. Not published."
+}

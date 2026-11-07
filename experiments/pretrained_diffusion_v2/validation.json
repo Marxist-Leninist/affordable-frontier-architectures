@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checkpoint_count": 18,
+  "checked": [
+    "normal_ce_11_equal_data",
+    "normal_ce_22_equal_data",
+    "normal_ce_33_equal_data",
+    "normal_kd_11_equal_data",
+    "normal_kd_22_equal_data",
+    "normal_kd_33_equal_data",
+    "direct_ce_11_equal_data",
+    "direct_ce_11_equal_cpu",
+    "direct_ce_22_equal_data",
+    "direct_ce_22_equal_cpu",
+    "direct_ce_33_equal_data",
+    "direct_ce_33_equal_cpu",
+    "direct_kd_11_equal_data",
+    "direct_kd_11_equal_cpu",
+    "direct_kd_22_equal_data",
+    "direct_kd_22_equal_cpu",
+    "direct_kd_33_equal_data",
+    "direct_kd_33_equal_cpu"
+  ],
+  "score_replays": [
+    {
+      "checkpoint": "normal_ce_11_equal_data",
+      "max_window_difference": 0.0
+    },
+    {
+      "checkpoint": "normal_kd_11_equal_data",
+      "max_window_difference": 0.0
+    },
+    {
+      "checkpoint": "direct_ce_11_equal_data",
+      "max_window_difference": 0.0
+    },
+    {
+      "checkpoint": "direct_kd_11_equal_data",
+      "max_window_difference": 0.0
+    }
+  ],
+  "original_weights_and_protocol_unchanged": true,
+  "new_eval_windows_exclude_all_v1_contexts": true,
+  "weight_read_trace_matches_selected_block": true,
+  "finite_trainable_tensors_and_exact_keys": true
+}

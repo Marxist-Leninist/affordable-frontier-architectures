@@ -1,0 +1,15 @@
+{
+  "seed": 22,
+  "steps": 1536,
+  "top_k": 32,
+  "cpu_seconds": 53.149313909,
+  "wall_seconds": 53.17649957904359,
+  "initial_equal_data_fraction": 0.5,
+  "files": {
+    "indices_22.npy": "c9b2d07ddcb995c5982e8766770b26fe8a77053aae63c7a41c389eb76312c360",
+    "probs_22.npy": "bb877813109c3c2403e13e7e6d6764c335bbe719032edeffe4a100231e7fc250"
+  },
+  "train_window_sha256": "4c7f472fce31efbb64128bfcfbceba8cc8eae208d32dba829fd0b83d0f3d1c03",
+  "bytes": 25166080,
+  "teacher": "Pinned untouched Pythia-14M, offline targets from training split only, no teacher computation required during selected-block updates"
+}

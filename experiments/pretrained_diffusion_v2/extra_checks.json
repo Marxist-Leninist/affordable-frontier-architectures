@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "optimizer_changed_only_active_group": true,
+  "changed_parameter_count": 33,
+  "unchanged_parameter_count": 68,
+  "clean_cache_unchanged_across_noise_calls": true,
+  "descending_euler_constant_oracle_max_abs": 7.450580596923828e-08
+}

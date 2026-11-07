@@ -1,0 +1,104 @@
+{
+  "mode": "normal",
+  "loaded_weight_files": [
+    "shared.safetensors",
+    "normal_body.safetensors"
+  ],
+  "loaded_subset_reproduces_full_source_logits": true,
+  "reference_logits_sha256": "7c30755ad5be8ba40021a1db3d7c0438166512d99d154d97e2ba25ea05c7991b",
+  "cold_component_logical_read_bytes": 56279120,
+  "initial_reads": [
+    {
+      "file": "shared.safetensors",
+      "logical_bytes": 51511488,
+      "wall_read_deserialize_seconds": 0.06323174998397008,
+      "proc_io_delta": {
+        "rchar": 51511604,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 6717440,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4767632,
+      "wall_read_deserialize_seconds": 0.00660208601038903,
+      "proc_io_delta": {
+        "rchar": 4767748,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 4771840,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    }
+  ],
+  "warm_shared_maps_body_reads": [
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4767632,
+      "wall_read_deserialize_seconds": 0.0064523249748162925,
+      "proc_io_delta": {
+        "rchar": 4767748,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 5730304,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4767632,
+      "wall_read_deserialize_seconds": 0.0013708830229006708,
+      "proc_io_delta": {
+        "rchar": 4767748,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 0,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    {
+      "file": "normal_body.safetensors",
+      "logical_bytes": 4767632,
+      "wall_read_deserialize_seconds": 0.0010342770256102085,
+      "proc_io_delta": {
+        "rchar": 4767748,
+        "wchar": 0,
+        "syscr": 4,
+        "syscw": 0,
+        "read_bytes": 0,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    }
+  ],
+  "updated_trainable_weight_write": {
+    "logical_bytes": 4782456,
+    "wall_serialize_excluded_fsync_seconds": 0.0038799779722467065,
+    "proc_io_delta": {
+      "rchar": 116,
+      "wchar": 4782456,
+      "syscr": 2,
+      "syscw": 1,
+      "read_bytes": 0,
+      "write_bytes": 4792320,
+      "cancelled_write_bytes": 0
+    }
+  },
+  "saved_nonparameter_storage_bytes": 16065540,
+  "process_peak_rss_bytes": 524914688,
+  "trainable_parameters": 1189888,
+  "warmed_training_cpu_seconds": 0.0719706403749999,
+  "warmed_training_wall_seconds": 0.0719747434995952,
+  "profiled_matrix_operator_flops_per_step": 2120631042,
+  "scope": "Separate process; full CE forward/backward/clip/AdamW step. Normal six native layers versus one loaded two-layer conversion block. Includes interpreter/library/model/optimizer in RSS. Tensor-save storage is not peak RAM. FLOPs are profiler-supported matrix ops, not complete hardware instructions. Teacher/cache construction and KL excluded from probe timing; full recipe costs recorded in main runs. Filesystem cache is not flushed; physical read_bytes may be zero. Shared vocabulary maps dominate this small model."
+}

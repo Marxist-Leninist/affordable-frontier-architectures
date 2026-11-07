@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "flush_denormal": false,
+      "forward_loss_cpu": 0.14168138500000005,
+      "backward_cpu": 2.6679093270000003,
+      "loss": 6.648119926452637
+    },
+    {
+      "flush_denormal": true,
+      "forward_loss_cpu": 0.700108342,
+      "backward_cpu": 32.151034824,
+      "loss": 6.648119926452637
+    }
+  ],
+  "logit_max_abs": 0.0,
+  "gradient_max_abs": 0.0
+}
