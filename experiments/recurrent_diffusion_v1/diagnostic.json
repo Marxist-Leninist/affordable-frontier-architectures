@@ -1,0 +1,324 @@
+{
+  "posthoc": true,
+  "split": "validation",
+  "no_model_selection": true,
+  "rows": [
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 1,
+      "particles": 4,
+      "bpb": 8.605426286041691,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 1,
+      "particles": 32,
+      "bpb": 8.31046238474641,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 4,
+      "particles": 4,
+      "bpb": 4.17146701823028,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 4,
+      "particles": 32,
+      "bpb": 4.173090759948335,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 32,
+      "particles": 4,
+      "bpb": 4.819970560806155,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "depth": 32,
+      "particles": 32,
+      "bpb": 4.822679212913795,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.000765636854339391
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.002,
+      "bpb": 7.095576763153076,
+      "targets": 512
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.03,
+      "bpb": 7.372696876525879,
+      "targets": 512
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.3,
+      "bpb": 10.36419677734375,
+      "targets": 512
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 3.0,
+      "bpb": 10.808900833129883,
+      "targets": 512
+    },
+    {
+      "kind": "bptt",
+      "seed": 1,
+      "endpoint": "equal_data",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 80.0,
+      "bpb": 9.383658409118652,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 1,
+      "particles": 4,
+      "bpb": 3.9592431529066094,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 1,
+      "particles": 32,
+      "bpb": 3.707567056484662,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 4,
+      "particles": 4,
+      "bpb": 13.566767425177142,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 4,
+      "particles": 32,
+      "bpb": 5.636272298420017,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 32,
+      "particles": 4,
+      "bpb": 18.76494265773362,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 32,
+      "particles": 32,
+      "bpb": 7.624478934702087,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.00025189484586007893
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.002,
+      "bpb": 4.333141987444833e-07,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.03,
+      "bpb": 1.964012426469708e-06,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.3,
+      "bpb": 0.3157709240913391,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 3.0,
+      "bpb": 3.438854694366455,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 80.0,
+      "bpb": 4.3230485916137695,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 1,
+      "particles": 4,
+      "bpb": 3.5535518646061885,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 1,
+      "particles": 32,
+      "bpb": 3.4296197800393795,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 4,
+      "particles": 4,
+      "bpb": 10.681449462035438,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 4,
+      "particles": 32,
+      "bpb": 4.7253329331827265,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 32,
+      "particles": 4,
+      "bpb": 13.979490625811676,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "depth": 32,
+      "particles": 32,
+      "bpb": 6.1085327683952695,
+      "targets": 512,
+      "mean_codebook_offdiag_cosine": 0.002450030529871583
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.002,
+      "bpb": 0.00018992391414940357,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.03,
+      "bpb": 3.644734897534363e-05,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 0.3,
+      "bpb": 0.32054200768470764,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 3.0,
+      "bpb": 3.301701545715332,
+      "targets": 512
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "diagnostic": "target-conditioned denoising CE: NOT predictive loss",
+      "sigma": 80.0,
+      "bpb": 3.687127113342285,
+      "targets": 512
+    }
+  ],
+  "cpu_seconds": 10.572420201,
+  "limits": "Only16 validation windows and seed1; changing inference depth tests an altered decoder. Finite-mixture log-score remains biased relative to continuous marginal."
+}

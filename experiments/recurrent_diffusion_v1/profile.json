@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "kind": "bptt",
+      "parameters": 77216,
+      "optimizer_state_bytes": 617860,
+      "unique_saved_nonparameter_storage_bytes": 20253828,
+      "profiler_counted_flops": 1244360792,
+      "median_step_cpu_seconds": 0.04183571100000094,
+      "forward_transformer_blocks": 5,
+      "denoiser_calls": 4
+    },
+    {
+      "kind": "diffusion_weighted",
+      "parameters": 77216,
+      "optimizer_state_bytes": 617860,
+      "unique_saved_nonparameter_storage_bytes": 7177924,
+      "profiler_counted_flops": 354816418,
+      "median_step_cpu_seconds": 0.015881929999999045,
+      "forward_transformer_blocks": 2,
+      "denoiser_calls": 1
+    },
+    {
+      "kind": "transformer",
+      "parameters": 71744,
+      "optimizer_state_bytes": 574064,
+      "unique_saved_nonparameter_storage_bytes": 6775300,
+      "profiler_counted_flops": 340082688,
+      "median_step_cpu_seconds": 0.014821106000001194,
+      "forward_transformer_blocks": 2,
+      "denoiser_calls": 0
+    }
+  ],
+  "notes": [
+    "Profiler FLOPs cover recognized matmuls, exclude fused SDPA and many elementwise operations; not complete FLOPs.",
+    "Saved nonparameter storage is graph-retained activation proxy, not measured peak resident memory.",
+    "Same-parameter recurrent variants have identical parameter and optimizer memory. Recurrent single-pass training reduces activation/compute, not weights by number of recurrences.",
+    "CPU timings from shared machine; no GPU or production extrapolation."
+  ]
+}

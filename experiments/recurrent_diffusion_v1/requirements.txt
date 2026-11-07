@@ -1,0 +1,5 @@
+numpy==2.3.5
+torch==2.6.0
+pyarrow==19.0.1
+# For CPU: use official index https://download.pytorch.org/whl/cpu for torch.
+# pyarrow needed only for downloading/reconstructing data, not training existing data.

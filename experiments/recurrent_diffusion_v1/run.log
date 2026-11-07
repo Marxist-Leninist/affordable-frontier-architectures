@@ -1,0 +1,10 @@
+bptt 1 300 cpu 50.98
+{"kind": "bptt", "seed": 1, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 63.520981219999975, "training_wall_seconds": 92.53168987104436, "parameters": 77216, "last_training_objective": 2.832582473754883, "test_bpb": 4.184022983992904}
+diffusion_weighted 1 300 cpu 4.57
+{"kind": "diffusion_weighted", "seed": 1, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 9.151027901999925, "training_wall_seconds": 9.151161082554609, "parameters": 77216, "last_training_objective": 0.008918621577322483, "test_bpb": 12.439808684304209}
+diffusion_weighted 1 600 cpu 9.15
+diffusion_weighted 1 900 cpu 13.66
+diffusion_weighted 1 1200 cpu 18.4
+diffusion_weighted 1 1500 cpu 23.11
+diffusion_weighted 1 1800 cpu 27.95
+diffusion_weighted 1 2100 cpu 33.42

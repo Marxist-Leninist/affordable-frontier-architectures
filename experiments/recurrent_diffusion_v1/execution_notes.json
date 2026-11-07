@@ -1,0 +1,11 @@
+{
+  "environment": "Shared scratch CPU, one PyTorch thread; no GPU rentals or production services",
+  "initial_attempt": "One long training process exited with status137 after saving bptt seed1 equal-data and weighted-denoising seed1 equal-data. No diagnostic identified the kill cause. Another accounting process was concurrent; later work ran short sequential jobs.",
+  "recovery": "Preserved completed endpoints. Replayed weighted seed1 from its same fixed seed; equal-data test BPB was exactly identical. Remaining work uses separate run_one.py jobs capped at180 CPU seconds each. Initial monolithic launcher bound was1200 CPU seconds.",
+  "timing_caveat": "Budget times include cold-start effects inside training. In particular bptt seed1 recorded63.52 CPU seconds versus roughly25 seconds suggested by isolated warmed timing. Extended runs may hit the predeclared3000-update cap before equal CPU; label such endpoints capped_cpu rather than matched. Use accounting.py warmed step timing for speed comparisons, not the anomalous cold first run.",
+  "cost_scope": "Endpoint training times exclude evaluation, package setup, failed or replayed work and accounting. They are not end-to-end project cost. All scratch work incurred no new user-paid resources.",
+  "public_code_weighting": "Official ViT model.py, inspected read-only, multiplies a length-N CE vector by N-by-1 weights, broadcasting to N-by-N. This pilot primary implements intended per-example weighting; its prespecified secondary is unweighted CE. Neither is claimed identical to the unpublished recurrent-depth LM implementation.",
+  "diagnostic_scope": "Additional decoder-depth/particle checks are post-hoc validation-only diagnostics, not test-set tuning or a replacement primary result.",
+  "second_interruption": "Later shell batch exited137 during diffusion_ce seed3 after saving equal-data endpoint; exact cause unknown. Replayed that one method in an isolated job and ran final Transformer control separately. Equal-data score again matched exactly.",
+  "data_download_test": "Fresh pinned public train, validation and test parquet files were downloaded and reconstructed independently; all hashes matched."
+}

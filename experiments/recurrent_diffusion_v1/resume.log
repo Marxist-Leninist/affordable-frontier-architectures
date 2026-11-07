@@ -1,0 +1,90 @@
+diffusion_ce 1 300 cpu 5.39
+{"kind": "diffusion_ce", "seed": 1, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 11.30459715499999, "training_wall_seconds": 11.341913170123007, "parameters": 77216, "last_training_objective": 0.510212242603302, "test_bpb": 9.242711575848451}
+diffusion_ce 1 600 cpu 11.3
+diffusion_ce 1 900 cpu 17.6
+diffusion_ce 1 1200 cpu 23.87
+diffusion_ce 1 1500 cpu 30.13
+diffusion_ce 1 1800 cpu 36.18
+diffusion_ce 1 2100 cpu 41.66
+diffusion_ce 1 2400 cpu 46.57
+diffusion_ce 1 2700 cpu 51.72
+diffusion_ce 1 3000 cpu 57.51
+{"kind": "diffusion_ce", "seed": 1, "endpoint": "capped_cpu", "steps": 3000, "token_exposures": 3072000, "training_cpu_seconds": 57.51410191700007, "training_wall_seconds": 57.593198982125614, "parameters": 77216, "last_training_objective": 0.8521685004234314, "test_bpb": 10.286502316296428}
+diffusion_weighted 1 300 cpu 5.24
+{"kind": "diffusion_weighted", "seed": 1, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 10.293290021000002, "training_wall_seconds": 10.308186537527945, "parameters": 77216, "last_training_objective": 0.008918621577322483, "test_bpb": 12.439808684304209}
+diffusion_weighted 1 600 cpu 10.29
+diffusion_weighted 1 900 cpu 15.59
+diffusion_weighted 1 1200 cpu 21.53
+diffusion_weighted 1 1500 cpu 27.51
+diffusion_weighted 1 1800 cpu 33.37
+diffusion_weighted 1 2100 cpu 39.36
+diffusion_weighted 1 2400 cpu 45.12
+diffusion_weighted 1 2700 cpu 50.47
+diffusion_weighted 1 3000 cpu 56.11
+{"kind": "diffusion_weighted", "seed": 1, "endpoint": "capped_cpu", "steps": 3000, "token_exposures": 3072000, "training_cpu_seconds": 56.113966185000095, "training_wall_seconds": 56.01957112271339, "parameters": 77216, "last_training_objective": 0.010738237760961056, "test_bpb": 13.821672638863012}
+transformer 1 300 cpu 5.48
+{"kind": "transformer", "seed": 1, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 10.452393013000002, "training_wall_seconds": 11.025206126389094, "parameters": 71744, "last_training_objective": 2.3954012393951416, "test_bpb": 3.580284951522868}
+transformer 1 600 cpu 10.45
+transformer 1 900 cpu 24.88
+transformer 1 1200 cpu 28.94
+transformer 1 1500 cpu 33.18
+transformer 1 1800 cpu 37.22
+transformer 1 2100 cpu 41.33
+transformer 1 2400 cpu 46.29
+transformer 1 2700 cpu 50.99
+transformer 1 3000 cpu 56.05
+{"kind": "transformer", "seed": 1, "endpoint": "capped_cpu", "steps": 3000, "token_exposures": 3072000, "training_cpu_seconds": 56.05300637400005, "training_wall_seconds": 65.41948110802332, "parameters": 71744, "last_training_objective": 1.9750603437423706, "test_bpb": 2.8985898170434004}
+bptt 2 300 cpu 16.96
+{"kind": "bptt", "seed": 2, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 31.53580752199999, "training_wall_seconds": 33.35570421844022, "parameters": 77216, "last_training_objective": 2.7780022621154785, "test_bpb": 4.193777027497192}
+diffusion_weighted 2 300 cpu 5.28
+{"kind": "diffusion_weighted", "seed": 2, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 10.61375603, "training_wall_seconds": 10.711666362476535, "parameters": 77216, "last_training_objective": 0.01268488448113203, "test_bpb": 12.012390455811008}
+diffusion_weighted 2 600 cpu 10.61
+diffusion_weighted 2 900 cpu 16.23
+diffusion_weighted 2 1200 cpu 21.68
+diffusion_weighted 2 1500 cpu 27.56
+{"kind": "diffusion_weighted", "seed": 2, "endpoint": "equal_cpu", "steps": 1763, "token_exposures": 1805312, "training_cpu_seconds": 31.541614777999946, "training_wall_seconds": 31.674286676221527, "parameters": 77216, "last_training_objective": 0.012433026917278767, "test_bpb": 13.127769597168994}
+diffusion_ce 2 300 cpu 5.08
+{"kind": "diffusion_ce", "seed": 2, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 10.607385093, "training_wall_seconds": 10.632569767825771, "parameters": 77216, "last_training_objective": 0.7561715841293335, "test_bpb": 7.361659580784147}
+diffusion_ce 2 600 cpu 10.61
+diffusion_ce 2 900 cpu 16.15
+diffusion_ce 2 1200 cpu 21.41
+diffusion_ce 2 1500 cpu 26.76
+{"kind": "diffusion_ce", "seed": 2, "endpoint": "equal_cpu", "steps": 1775, "token_exposures": 1817600, "training_cpu_seconds": 31.542554769000013, "training_wall_seconds": 31.634589481400326, "parameters": 77216, "last_training_objective": 0.664725661277771, "test_bpb": 8.844176069805087}
+transformer 2 300 cpu 5.09
+{"kind": "transformer", "seed": 2, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 10.048452768999997, "training_wall_seconds": 10.06459072389407, "parameters": 71744, "last_training_objective": 2.388615369796753, "test_bpb": 3.594061932864582}
+transformer 2 600 cpu 10.05
+transformer 2 900 cpu 14.91
+transformer 2 1200 cpu 19.93
+transformer 2 1500 cpu 25.2
+transformer 2 1800 cpu 30.82
+{"kind": "transformer", "seed": 2, "endpoint": "equal_cpu", "steps": 1841, "token_exposures": 1885184, "training_cpu_seconds": 31.55116038700003, "training_wall_seconds": 31.665922830579802, "parameters": 71744, "last_training_objective": 2.080772638320923, "test_bpb": 3.089719132570773}
+bptt 3 300 cpu 14.93
+{"kind": "bptt", "seed": 3, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 30.095616467, "training_wall_seconds": 30.788918773410842, "parameters": 77216, "last_training_objective": 2.7298924922943115, "test_bpb": 3.9432309044281664}
+diffusion_weighted 3 300 cpu 5.93
+{"kind": "diffusion_weighted", "seed": 3, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 11.412586371999998, "training_wall_seconds": 11.41351262317039, "parameters": 77216, "last_training_objective": 0.01799730584025383, "test_bpb": 11.413778199654512}
+diffusion_weighted 3 600 cpu 11.41
+diffusion_weighted 3 900 cpu 16.76
+diffusion_weighted 3 1200 cpu 21.92
+diffusion_weighted 3 1500 cpu 27.39
+{"kind": "diffusion_weighted", "seed": 3, "endpoint": "equal_cpu", "steps": 1651, "token_exposures": 1690624, "training_cpu_seconds": 30.104818457000004, "training_wall_seconds": 30.119064363243524, "parameters": 77216, "last_training_objective": 0.013417894020676613, "test_bpb": 13.047405169760498}
+diffusion_ce 3 300 cpu 4.7
+{"kind": "diffusion_ce", "seed": 3, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 9.880431584, "training_wall_seconds": 10.203036764229182, "parameters": 77216, "last_training_objective": 1.264126181602478, "test_bpb": 8.5495331266541}
+diffusion_ce 3 600 cpu 9.88
+recurrent_diffusion_v1/resume_remaining.sh: line 6:    15 Killed                  python -u run_one.py "$kind" "$seed"
+diffusion_ce 3 300 cpu 4.47
+{"kind": "diffusion_ce", "seed": 3, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 9.107793874000002, "training_wall_seconds": 9.126813388895243, "parameters": 77216, "last_training_objective": 1.264126181602478, "test_bpb": 8.5495331266541}
+diffusion_ce 3 600 cpu 9.11
+diffusion_ce 3 900 cpu 13.71
+diffusion_ce 3 1200 cpu 18.41
+diffusion_ce 3 1500 cpu 23.14
+diffusion_ce 3 1800 cpu 27.7
+{"kind": "diffusion_ce", "seed": 3, "endpoint": "equal_cpu", "steps": 1966, "token_exposures": 2013184, "training_cpu_seconds": 30.103255104000013, "training_wall_seconds": 30.15729010978248, "parameters": 77216, "last_training_objective": 0.7115380167961121, "test_bpb": 9.580023283889403}
+transformer 3 300 cpu 4.4
+{"kind": "transformer", "seed": 3, "endpoint": "equal_data", "steps": 600, "token_exposures": 614400, "training_cpu_seconds": 8.512577375999994, "training_wall_seconds": 8.565013635554351, "parameters": 71744, "last_training_objective": 2.4201557636260986, "test_bpb": 3.602351089668455}
+transformer 3 600 cpu 8.51
+transformer 3 900 cpu 12.59
+transformer 3 1200 cpu 16.68
+transformer 3 1500 cpu 20.8
+transformer 3 1800 cpu 24.7
+transformer 3 2100 cpu 28.84
+{"kind": "transformer", "seed": 3, "endpoint": "equal_cpu", "steps": 2199, "token_exposures": 2251776, "training_cpu_seconds": 30.110979691999987, "training_wall_seconds": 30.20975831145188, "parameters": 71744, "last_training_objective": 1.8733925819396973, "test_bpb": 2.994097808785079}

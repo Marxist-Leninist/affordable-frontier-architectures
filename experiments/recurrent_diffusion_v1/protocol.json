@@ -1,0 +1,38 @@
+{
+  "experiment": "Independent recurrent-depth denoising pilot; not a Huginn/DiffusionBlocks paper replication",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "methods": [
+    "bptt",
+    "diffusion_weighted",
+    "diffusion_ce",
+    "transformer"
+  ],
+  "steps_equal_data": 600,
+  "batch": 16,
+  "context": 64,
+  "train_token_exposures_equal_data": 614400,
+  "train_source": "all WikiText2 train bytes; uniform random windows with replacement",
+  "evaluation": "256 disjoint evenly spaced windows from official test;128 validation; final32 of64 shifted targets scored",
+  "decoder": "Arithmetic mean of final softmax over four fixed independent target-free Gaussian particles; next-byte log-score, NOT exact diffusion/greedy sampler likelihood",
+  "optimization": "AdamW lr.002,betas(.9,.95),weight_decay.01,gradclip1,warmup30,constant thereafter; no hyperparameter selection",
+  "noise": "log sigma Normal(-1.2,1.2), clamped [.002,80]; codebook learned with unit L2 rows; EDM sigma_data.5",
+  "weighted": "Primary diffusion: CE weighted (sigma^2+.25)/(sigma*.5)^2, divided by FIXED 500 for numerical loss scale; same relative weights. Secondary unweighted CE predeclared.",
+  "inference": "4 Karras rho7 levels80 to.002, Euler with negative dt, posterior mean normalized embedding, last logits",
+  "baseline": "Exact same recurrent architecture/inference graph, full 4-step BPTT from noise; not original Huginn32 with8 truncation",
+  "transformer": "2-layer causal Transformer same width/context, secondary comparator, fewer noise-conditioning parameters",
+  "matching": "Same seed/init shared recurrent models; same first600 batches; additionally continue each cheaper method until baseline600 cumulative CPU training time, cap3000. Timing excludes data extraction and validation/test, includes optimizer/loss",
+  "compute": "Single CPU thread shared scratch; actual process/wall training seconds; no paid resources",
+  "selection": "No test-based selection; all seeds, methods, equal-data and equal-CPU endpoints reported. Validation diagnostic only.",
+  "limits": "1200 process CPU seconds entire training process; final artifact contains all checkpoints",
+  "files": {
+    "models.py": "b065345cc5d4bf69842b0c0f71575d11ba1848eb56085a04c25b5949f85491f7",
+    "run.py": "81d6f985c2f80b3a36bcf5b0a30d153edca817569b4f1ddc811c3c138099b69e",
+    "checks.py": "b145cd5eec1124ba71d66589385ccadf2a5d5af186a4b47519e988e0d0420e02"
+  },
+  "data_manifest_sha256": "fcf72bec57c287c3e2fa8ad520da0fe9a7e164600473245c0a27377c9f800423",
+  "torch": "2.6.0+cpu"
+}

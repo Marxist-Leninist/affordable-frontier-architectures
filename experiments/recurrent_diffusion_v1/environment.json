@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "system": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "processor": "AMD EPYC 9V74 80-Core Processor",
+  "torch": "2.6.0+cpu",
+  "numpy": "2.3.5",
+  "threads": 1,
+  "device": "CPU",
+  "source_dependencies": "Official PyTorch CPU wheel index; no upstream experiment code executed"
+}

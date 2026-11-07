@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "endpoints": 21,
+  "checks": [
+    {
+      "checkpoint": "bptt_1_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true,
+      "heldout_replay_abs_error": 0.0
+    },
+    {
+      "checkpoint": "diffusion_weighted_1_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true,
+      "heldout_replay_abs_error": 0.0
+    },
+    {
+      "checkpoint": "diffusion_weighted_1_capped_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_ce_1_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true,
+      "heldout_replay_abs_error": 0.0
+    },
+    {
+      "checkpoint": "diffusion_ce_1_capped_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "transformer_1_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true,
+      "heldout_replay_abs_error": 0.0
+    },
+    {
+      "checkpoint": "transformer_1_capped_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "bptt_2_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_weighted_2_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_weighted_2_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_ce_2_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_ce_2_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "transformer_2_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "transformer_2_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "bptt_3_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_weighted_3_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_weighted_3_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_ce_3_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "diffusion_ce_3_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "transformer_3_equal_data.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    },
+    {
+      "checkpoint": "transformer_3_equal_cpu.pt",
+      "sha256": true,
+      "finite": true,
+      "parameters": true,
+      "metric_mean": true
+    }
+  ],
+  "source_hashes_verified": true,
+  "public_data_hashes_verified": true
+}

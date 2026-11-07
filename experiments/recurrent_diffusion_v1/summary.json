@@ -1,0 +1,149 @@
+{
+  "equal_data": [
+    {
+      "kind": "bptt",
+      "mean_test_bpb": 4.107010305306087,
+      "sample_sd": 0.1419209443849601,
+      "seed_test_bpb": [
+        4.184022983992904,
+        4.193777027497192,
+        3.9432309044281664
+      ],
+      "parameters": 77216,
+      "mean_training_cpu_seconds": 41.717468402999984,
+      "train_exposures_per_seed": 614400
+    },
+    {
+      "kind": "diffusion_weighted",
+      "mean_test_bpb": 11.955325779923243,
+      "sample_sd": 0.5153900676024468,
+      "seed_test_bpb": [
+        12.439808684304209,
+        12.012390455811008,
+        11.413778199654512
+      ],
+      "parameters": 77216,
+      "mean_training_cpu_seconds": 10.773210807666667,
+      "train_exposures_per_seed": 614400
+    },
+    {
+      "kind": "diffusion_ce",
+      "mean_test_bpb": 8.384634761095567,
+      "sample_sd": 0.9513058158430214,
+      "seed_test_bpb": [
+        9.242711575848451,
+        7.361659580784147,
+        8.5495331266541
+      ],
+      "parameters": 77216,
+      "mean_training_cpu_seconds": 10.339925373999998,
+      "train_exposures_per_seed": 614400
+    },
+    {
+      "kind": "transformer",
+      "mean_test_bpb": 3.592232658018635,
+      "sample_sd": 0.01114622348652424,
+      "seed_test_bpb": [
+        3.580284951522868,
+        3.594061932864582,
+        3.602351089668455
+      ],
+      "parameters": 71744,
+      "mean_training_cpu_seconds": 9.671141052666664,
+      "train_exposures_per_seed": 614400
+    }
+  ],
+  "extra_training": [
+    {
+      "kind": "diffusion_weighted",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "steps": 3000,
+      "test_bpb": 13.821672638863012,
+      "training_cpu_seconds": 56.113966185000095,
+      "baseline_cpu_budget": 63.520981219999975,
+      "cpu_budget_fraction": 0.883392622520325
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "steps": 3000,
+      "test_bpb": 10.286502316296428,
+      "training_cpu_seconds": 57.51410191700007,
+      "baseline_cpu_budget": 63.520981219999975,
+      "cpu_budget_fraction": 0.9054347211326043
+    },
+    {
+      "kind": "transformer",
+      "seed": 1,
+      "endpoint": "capped_cpu",
+      "steps": 3000,
+      "test_bpb": 2.8985898170434004,
+      "training_cpu_seconds": 56.05300637400005,
+      "baseline_cpu_budget": 63.520981219999975,
+      "cpu_budget_fraction": 0.8824329425873448
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 2,
+      "endpoint": "equal_cpu",
+      "steps": 1763,
+      "test_bpb": 13.127769597168994,
+      "training_cpu_seconds": 31.541614777999946,
+      "baseline_cpu_budget": 31.53580752199999,
+      "cpu_budget_fraction": 1.000184148003691
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 2,
+      "endpoint": "equal_cpu",
+      "steps": 1775,
+      "test_bpb": 8.844176069805087,
+      "training_cpu_seconds": 31.542554769000013,
+      "baseline_cpu_budget": 31.53580752199999,
+      "cpu_budget_fraction": 1.0002139551046954
+    },
+    {
+      "kind": "transformer",
+      "seed": 2,
+      "endpoint": "equal_cpu",
+      "steps": 1841,
+      "test_bpb": 3.089719132570773,
+      "training_cpu_seconds": 31.55116038700003,
+      "baseline_cpu_budget": 31.53580752199999,
+      "cpu_budget_fraction": 1.0004868391268984
+    },
+    {
+      "kind": "diffusion_weighted",
+      "seed": 3,
+      "endpoint": "equal_cpu",
+      "steps": 1651,
+      "test_bpb": 13.047405169760498,
+      "training_cpu_seconds": 30.104818457000004,
+      "baseline_cpu_budget": 30.095616467,
+      "cpu_budget_fraction": 1.0003057584818074
+    },
+    {
+      "kind": "diffusion_ce",
+      "seed": 3,
+      "endpoint": "equal_cpu",
+      "steps": 1966,
+      "test_bpb": 9.580023283889403,
+      "training_cpu_seconds": 30.103255104000013,
+      "baseline_cpu_budget": 30.095616467,
+      "cpu_budget_fraction": 1.0002538122788875
+    },
+    {
+      "kind": "transformer",
+      "seed": 3,
+      "endpoint": "equal_cpu",
+      "steps": 2199,
+      "test_bpb": 2.994097808785079,
+      "training_cpu_seconds": 30.110979691999987,
+      "baseline_cpu_budget": 30.095616467,
+      "cpu_budget_fraction": 1.0005104804886398
+    }
+  ],
+  "limits": "Three tiny seeds, one byte-level corpus and an explicitly finite-mixture decoder. Results do not measure exact diffusion likelihood or reproduce original Huginn."
+}
