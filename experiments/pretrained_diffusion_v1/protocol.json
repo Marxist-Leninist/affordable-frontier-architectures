@@ -1,0 +1,36 @@
+{
+  "experiment": "Pretrained Pythia14M to three independent two-layer diffusion blocks: feasibility pilot",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "equal_data_steps": 96,
+  "batch": 2,
+  "context": 32,
+  "training_token_exposures_equal_data": 6144,
+  "methods": [
+    "untouched",
+    "normal_finetune",
+    "pretrained_diffusion"
+  ],
+  "frozen_shared_parameters": "Original input embedding and output head frozen in both fine-tuned methods; all six original layers trainable. Diffusion adds per-block final norms and zero-output time-conditioning MLPs. No parameters shared between trainable blocks.",
+  "original_model": "EleutherAI/pythia-14m at cf967c0a9a04383db6f7b1108d86b2962634b4ac, Apache-2.0",
+  "data": "Official WikiText2 raw train/validation/test, each LF-preserved line independently BPE tokenized, no special tokens. Heldout from adaptation only, pretraining contamination unknown.",
+  "training": "AdamW lr3e-4 betas(.9,.95),weight_decay.01,clip1,warmup12,constant thereafter. Same random train windows per paired seed. Diffusion cycles blocks0,1,2, inverse-CDF truncated-lognormal sigma within equal-probability interval; perexample weightedCE ((sigma\u00b2+1/128)/(sigma\u00b2/128))/512.",
+  "conversion": "Fresh start from original pretrained weights for each run. No distillation, no cross-block gradients, clean raw embeddings plus scaled/preconditioned unit-L2 noisy target embeddings; concat clean/noisy streams and strict clean-past-only attention.",
+  "inference": "Two log-spaced Euler steps in each of3 noise ranges followed by final block at sigma=.002:7 denoiser calls,14 layer applications,2x sequence. Start noise at80. Posterior-mean unit-L2 target embedding from softmax; negative Euler dt.",
+  "evaluation": "64 disjoint uniformly spaced test windows,32 validation,32 tokens/window,score final16 targets. Converted decoder log score from arithmetic4-particle mixture of final softmax probabilities, fixed target-free particles. This is finite-decoder NLL, NOT exact implicit-diffusion perplexity or ELBO. Normal model exact truncated-context nexttoken NLL.",
+  "matching": "Paired96 updates equal observed data (6144tokens); additionally save converted first step reaching normal96 cumulative measuredCPU, potentially below96 or after96,cap384. One-step timing overshoot disclosed. Warmup2 forwardbackward passes WITHOUT optimizer update excluded from budget, evaluation excluded.",
+  "compute": "Scratch CPU one thread; no rentals or production changes. Each method process capped600CPU seconds.",
+  "selection": "No tuning or selecting using test; all3 seeds and both endpoints reported. Validation diagnostic only. No large-model claims.",
+  "files": {
+    "models.py": "bb6a1eebdf92f101b8cded7dd97f1d27e7b1d3f041b30da6e8957150bbb19933",
+    "run.py": "a024860affb76112e73349f5932cdb59b8397ca0acee2cbf37f8e385bf97edf6",
+    "checks.py": "9c6cddf8c34b7d003d98f110349c1f93851338ba68cb72bfcf657b2f8fceee3c",
+    "prepare.py": "dd92a27552509f846472358fa26d88bdbe094e30b3c615191d5af627a8f448a3"
+  },
+  "model_manifest_sha256": "6daee1e991570e3b96dd3d23d61ac6ef9073f45f05938e92b064551b60d10259",
+  "source_manifest_sha256": "fcf72bec57c287c3e2fa8ad520da0fe9a7e164600473245c0a27377c9f800423",
+  "token_manifest_sha256": "e0468c77a82940c9accf93c9eaf0b27f6d2bb22df1fd633c9828de63c7430e15"
+}

@@ -1,0 +1,10 @@
+{
+  "execution": "Single-thread scratch CPU; no paid rentals, no changes to production services or running training.",
+  "source_review": "Independent adapter code plus standard Transformers GPT-NeoX implementation inspected; no Hugging Face repository code executed, safe tensor weights only.",
+  "preprocessing_failure": "Initial whole-file BPE tokenization process exited137 before producing a token manifest. Exact kill cause was not diagnosed. Line-bounded preprocessing succeeded and was frozen before any outcomes.",
+  "dependencies": "Torch2.6.0+cpu and NumPy2.3.5 from an existing isolated scratch package directory; Transformers4.57.6, tokenizers0.22.1 and safetensors0.6.2 installed from PyPI into a separate directory. No global environment modification.",
+  "timing_scope": "Per-run training times exclude package installation, downloads, preprocessing, model loading, two warmup forward/backward passes with no optimizer update, evaluation, diagnostics and integrity replay. Equal-CPU endpoint can vary by machine.",
+  "model_scope": "Original pretrained14.067712M parameters. Both adaptations freeze the original input and output vocabulary matrices; only transformer layers/norms and conversion conditioning are trained. All trainable tensors retained locally; none published.",
+  "evaluation_scope": "Four-particle finite decoder log scores are not exact implicit diffusion likelihood. Decoder sensitivity checks are post-hoc, validation-only and do not select a checkpoint or alter the frozen main protocol.",
+  "publication_scope": "Only source code, instructions, hashes, scalar/window results and fixed illustrative generations in the existing private research repository. No raw dataset, token arrays, upstream weights, adapted tensors, credentials or personal data."
+}

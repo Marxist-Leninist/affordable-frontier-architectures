@@ -1,0 +1,117 @@
+{
+  "complete": true,
+  "untouched_test_nll": 5.903326719999313,
+  "rows": [
+    {
+      "method": "normal_finetune",
+      "endpoint": "equal_data",
+      "test_mean_nll": 6.3794968500733376,
+      "test_nll_sd_across_seeds": 0.006688821901218409,
+      "test_nll_by_seed": [
+        6.373689144849777,
+        6.377991251647472,
+        6.386810153722763
+      ],
+      "steps_by_seed": [
+        96,
+        96,
+        96
+      ],
+      "training_cpu_by_seed": [
+        6.396755345000001,
+        6.524181074000004,
+        6.629450892000002
+      ],
+      "training_tokens_by_seed": [
+        6144,
+        6144,
+        6144
+      ],
+      "validation_mean_nll": 6.203724108636379
+    },
+    {
+      "method": "pretrained_diffusion",
+      "endpoint": "equal_data",
+      "test_mean_nll": 12.077817196647326,
+      "test_nll_sd_across_seeds": 1.6981469444513126,
+      "test_nll_by_seed": [
+        14.018317237496376,
+        11.351591229438782,
+        10.86354312300682
+      ],
+      "steps_by_seed": [
+        96,
+        96,
+        96
+      ],
+      "training_cpu_by_seed": [
+        4.9901510090000025,
+        4.773084673999997,
+        5.022381569000004
+      ],
+      "training_tokens_by_seed": [
+        6144,
+        6144,
+        6144
+      ],
+      "validation_mean_nll": 11.92590351899465
+    },
+    {
+      "method": "pretrained_diffusion",
+      "endpoint": "equal_cpu",
+      "test_mean_nll": 12.373744602004686,
+      "test_nll_sd_across_seeds": 0.6173150441138596,
+      "test_nll_by_seed": [
+        13.08028757572174,
+        12.102177664637566,
+        11.938768565654755
+      ],
+      "steps_by_seed": [
+        121,
+        131,
+        128
+      ],
+      "training_cpu_by_seed": [
+        6.442145089000008,
+        6.567667336999997,
+        6.670374463000009
+      ],
+      "training_tokens_by_seed": [
+        7744,
+        8384,
+        8192
+      ],
+      "validation_mean_nll": 12.134017969171206
+    }
+  ],
+  "paired_differences": [
+    {
+      "endpoint": "equal_data",
+      "converted_minus_normal_nll": 5.698320346573989,
+      "window_bootstrap_95": [
+        5.4442930148914455,
+        5.976719981618226
+      ],
+      "scope": "Resamples 64 test windows conditional on 3 fixed training seeds; not uncertainty over new datasets, models, or the seed population. Finite 4-particle decoder, not implicit diffusion likelihood."
+    },
+    {
+      "endpoint": "equal_cpu",
+      "converted_minus_normal_nll": 5.99424775193135,
+      "window_bootstrap_95": [
+        5.764418780803681,
+        6.234071170352399
+      ],
+      "scope": "Resamples 64 test windows conditional on 3 fixed training seeds; not uncertainty over new datasets, models, or the seed population. Finite 4-particle decoder, not implicit diffusion likelihood."
+    }
+  ],
+  "verdict": "This small direct pretrained conversion did not preserve baseline quality. It is not a successful large-model conversion and does not refute better adaptation methods or the paper.",
+  "limits": [
+    "14M model, 1.2M trainable with frozen lexical maps; not a large-model trial",
+    "Only 6,144 training token exposures per equal-data run and 32-token context",
+    "Only 1,024 test targets; pretrained exposure to WikiText unknown",
+    "No random-initialization ablation, distillation, MAUVE or teacher generative perplexity",
+    "Four-particle decoder approximation can overstate loss of the implicit model",
+    "Architecture not function-preserving: later pretrained blocks now receive lexical and noise codes rather than original hidden states",
+    "CPU timing and saved-tensor accounting are not GPU peak memory or end-to-end cost"
+  ]
+}

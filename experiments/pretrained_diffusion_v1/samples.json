@@ -1,0 +1,143 @@
+{
+  "scope": "Two fixed illustrative prompts, max16 greedy tokens; seed1 final CPU-matched conversion and normal equal-data control. No ranking or model selection.",
+  "samples": [
+    {
+      "method": "untouched",
+      "prompt": "The purpose of scientific research is",
+      "continuation": " to determine the importance of the scientific research in the scientific community.\n\nThe",
+      "generated_token_ids": [
+        281,
+        3653,
+        253,
+        6349,
+        273,
+        253,
+        8249,
+        2561,
+        275,
+        253,
+        8249,
+        3114,
+        15,
+        187,
+        187,
+        510
+      ]
+    },
+    {
+      "method": "untouched",
+      "prompt": "Once upon a time, a small robot",
+      "continuation": ", the robot is a robot, and a robot is a robot.\n\n",
+      "generated_token_ids": [
+        13,
+        253,
+        15688,
+        310,
+        247,
+        15688,
+        13,
+        285,
+        247,
+        15688,
+        310,
+        247,
+        15688,
+        15,
+        187,
+        187
+      ]
+    },
+    {
+      "method": "normal_finetune",
+      "prompt": "The purpose of scientific research is",
+      "continuation": " \" , and \" , and \" , and \" , and \" , and ,",
+      "generated_token_ids": [
+        346,
+        1157,
+        285,
+        346,
+        1157,
+        285,
+        346,
+        1157,
+        285,
+        346,
+        1157,
+        285,
+        346,
+        1157,
+        285,
+        1157
+      ]
+    },
+    {
+      "method": "normal_finetune",
+      "prompt": "Once upon a time, a small robot",
+      "continuation": " , the first time , the first time , the first time , the first time",
+      "generated_token_ids": [
+        1157,
+        253,
+        806,
+        673,
+        1157,
+        253,
+        806,
+        673,
+        1157,
+        253,
+        806,
+        673,
+        1157,
+        253,
+        806,
+        673
+      ]
+    },
+    {
+      "method": "pretrained_diffusion",
+      "prompt": "The purpose of scientific research is",
+      "continuation": " , the and the the and . the- ' the @ , \" of the",
+      "generated_token_ids": [
+        1157,
+        253,
+        285,
+        253,
+        253,
+        285,
+        964,
+        253,
+        14,
+        686,
+        253,
+        1214,
+        1157,
+        346,
+        273,
+        253
+      ]
+    },
+    {
+      "method": "pretrained_diffusion",
+      "prompt": "Once upon a time, a small robot",
+      "continuation": "- by . in will theia in and . the in the and (-",
+      "generated_token_ids": [
+        14,
+        407,
+        964,
+        275,
+        588,
+        253,
+        571,
+        275,
+        285,
+        964,
+        253,
+        275,
+        253,
+        285,
+        313,
+        14
+      ]
+    }
+  ]
+}

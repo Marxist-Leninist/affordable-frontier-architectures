@@ -1,0 +1,29 @@
+{
+  "scope": "Post-hoc validation-only diagnosis, seed1 CPUmatched checkpoint,128targets; no hyperparameter or checkpoint selection and not a replacement main result",
+  "results": [
+    {
+      "mode": "high_noise_head",
+      "particles": 4,
+      "nll_nats": 8.648291289806366,
+      "scored_validation_targets": 128
+    },
+    {
+      "mode": "high_noise_head",
+      "particles": 32,
+      "nll_nats": 8.585393726825714,
+      "scored_validation_targets": 128
+    },
+    {
+      "mode": "iterative",
+      "particles": 4,
+      "nll_nats": 13.088409900665283,
+      "scored_validation_targets": 128
+    },
+    {
+      "mode": "iterative",
+      "particles": 32,
+      "nll_nats": 10.289336740970612,
+      "scored_validation_targets": 128
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "original manual-forward equivalence",
+    "no future clean leakage for all blocks",
+    "no other noisy target leakage for all blocks",
+    "gradient isolation",
+    "optimizer isolation",
+    "frozen embedding and head",
+    "finite gradients and inference",
+    "equal probability descending ranges",
+    "sigma sampling ranges",
+    "negative-dt oracle endpoint"
+  ],
+  "torch": "2.6.0+cpu",
+  "trainable_diffusion": 1246464
+}

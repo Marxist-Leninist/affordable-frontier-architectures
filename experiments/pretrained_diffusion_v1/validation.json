@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checkpoint_count": 9,
+  "checkpoints": [
+    "normal_finetune_1_equal_data",
+    "normal_finetune_2_equal_data",
+    "normal_finetune_3_equal_data",
+    "pretrained_diffusion_1_equal_data",
+    "pretrained_diffusion_1_equal_cpu",
+    "pretrained_diffusion_2_equal_data",
+    "pretrained_diffusion_2_equal_cpu",
+    "pretrained_diffusion_3_equal_data",
+    "pretrained_diffusion_3_equal_cpu"
+  ],
+  "original_files_unchanged": true,
+  "source_matches_frozen_protocol": true,
+  "frozen_maps_unchanged": true,
+  "all_trainable_tensor_keys_and_finiteness_verified": true,
+  "heldout_replays": [
+    {
+      "checkpoint": "normal_finetune_1_equal_data",
+      "max_window_difference": 0.0
+    },
+    {
+      "checkpoint": "pretrained_diffusion_1_equal_data",
+      "max_window_difference": 0.0
+    }
+  ]
+}

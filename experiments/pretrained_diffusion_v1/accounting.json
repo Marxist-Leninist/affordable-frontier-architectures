@@ -1,0 +1,21 @@
+{
+  "scope": "CPU one thread,BS2,context32,warmed; activations=unique storages saved for backward excluding model parameters/buffers,NOT GPU peak allocated memory. Timing excludes optimizer and is descriptive,not endpoint budget. Decoder1particle; primary evaluates4.",
+  "rows": [
+    {
+      "method": "normal_finetune",
+      "saved_nonparameter_storage_bytes": 16065540,
+      "trainable_parameters": 1189888,
+      "total_parameters": 14067712,
+      "forward_backward_cpu_seconds": 0.07221874975000009,
+      "single_particle_inference_cpu_seconds": 0.02838280425000006
+    },
+    {
+      "method": "pretrained_diffusion",
+      "saved_nonparameter_storage_bytes": 15182980,
+      "trainable_parameters": 1246464,
+      "total_parameters": 14124288,
+      "forward_backward_cpu_seconds": 0.045723185999999916,
+      "single_particle_inference_cpu_seconds": 0.21768831425000013
+    }
+  ]
+}
