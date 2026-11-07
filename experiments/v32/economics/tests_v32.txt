@@ -1,0 +1,11 @@
+test_boundaries_and_workload (test_economics.EconomicsTests.test_boundaries_and_workload) ... ok
+test_budget (test_economics.EconomicsTests.test_budget) ... ok
+test_burst_cost_invariant (test_economics.EconomicsTests.test_burst_cost_invariant) ... ok
+test_burst_throughput (test_economics.EconomicsTests.test_burst_throughput) ... ok
+test_cache_decode_invariant (test_economics.EconomicsTests.test_cache_decode_invariant) ... ok
+test_fee_once (test_economics.EconomicsTests.test_fee_once) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

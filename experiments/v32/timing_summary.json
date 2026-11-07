@@ -1,0 +1,88 @@
+{
+  "groups": {
+    "local_neural": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        24.236611498054117,
+        32.47684633242898
+      ],
+      "prefill_ms_p50": 3.809124988038093,
+      "update32_ms_p50": 20.45286202337593,
+      "index_bytes_median": 0.0,
+      "state_bytes": 130064,
+      "weight_bytes": 527616
+    },
+    "local_constant": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        34.443785494659096,
+        46.65443814301398
+      ],
+      "prefill_ms_p50": 12.221409473568201,
+      "update32_ms_p50": 21.879526524571702,
+      "index_bytes_median": 1237887.0,
+      "state_bytes": 130064,
+      "weight_bytes": 527616
+    },
+    "local_by_order": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        34.07630752190016,
+        46.81654119340237
+      ],
+      "prefill_ms_p50": 12.067173956893384,
+      "update32_ms_p50": 21.859691973077133,
+      "index_bytes_median": 1237887.0,
+      "state_bytes": 130064,
+      "weight_bytes": 527616
+    },
+    "gru_neural": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        114.55666748224758,
+        156.40127673686948
+      ],
+      "prefill_ms_p50": 104.83461149851792,
+      "update32_ms_p50": 9.439745481358841,
+      "index_bytes_median": 0.0,
+      "state_bytes": 512,
+      "weight_bytes": 528640
+    },
+    "gru_constant": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        123.76182648586109,
+        172.55288651795126
+      ],
+      "prefill_ms_p50": 112.19022097066045,
+      "update32_ms_p50": 11.17117697140202,
+      "index_bytes_median": 1237887.0,
+      "state_bytes": 512,
+      "weight_bytes": 528640
+    },
+    "gru_by_order": {
+      "samples": 72,
+      "total_ms_p50_p95": [
+        122.74336401605979,
+        164.45887250592932
+      ],
+      "prefill_ms_p50": 110.01668300013989,
+      "update32_ms_p50": 11.150007980177179,
+      "index_bytes_median": 1237887.0,
+      "state_bytes": 512,
+      "weight_bytes": 528640
+    }
+  },
+  "paired": {
+    "local": {
+      "pairs": 72,
+      "median_constant_over_by_order_total_ratio": 0.9967077483974192,
+      "by_order_faster_pairs": 34
+    },
+    "gru": {
+      "pairs": 72,
+      "median_constant_over_by_order_total_ratio": 1.00117091979588,
+      "by_order_faster_pairs": 38
+    }
+  }
+}

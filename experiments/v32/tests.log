@@ -1,0 +1,9 @@
+test_calibration_separable_objective (test_v32.MixtureTests.test_calibration_separable_objective) ... ok
+test_complete_distribution_causality (test_v32.MixtureTests.test_complete_distribution_causality) ... ok
+test_gate_never_uses_target (test_v32.MixtureTests.test_gate_never_uses_target) ... ok
+test_normalization_and_fallback (test_v32.MixtureTests.test_normalization_and_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.007s
+
+OK

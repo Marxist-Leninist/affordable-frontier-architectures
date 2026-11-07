@@ -2,7 +2,11 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
-## Latest experiment: earlier-prefix content test (anti-attention v9)
+## Latest experiment: match-length copy calibration (v32)
+
+[Audited v32 report, code and results](experiments/v32/README.md). On fresh FineWeb-Edu, a match-length-dependent copy gate improves the local Transformer versus a constant freshly calibrated on the same validation data by 0.03342 bits/byte. Its smaller advantage over the stronger historical constant is uncertain, as is the GRU gain. Complete-path CPU timing shows no clear speed improvement, and memory is unchanged. This is a controlled calibration/domain-transfer result, not a universal architecture win, frontier-quality result or commercial-cost pass. Four unit tests, independent distribution/checkpoint audits and six economic tests pass.
+
+## Prior experiment: earlier-prefix content test (anti-attention v9)
 
 [Audited intervention report, source and results](experiments/anti_latency_v9/README.md). On 95 fresh document pairs, replacing the first 256 bytes with unrelated real text changes predictions but shows no clear aggregate genuine-prefix accuracy advantage in any of four context-trained neural configurations; all primary intervals include zero. An exact-copy reference benefits by 0.3069 bits/byte but has much worse overall loss. Genuine suffix-only inputs score better on this cohort, without proving safe general context pruning. Audit also finds that V views retain larger QKV backing storage: the batch-4/512 Transformer cache holds 4.19 MB despite 2.10 MB logical tensor payload. Targeted numerical/copy tests pass; no frontier or economic pass is claimed.
 

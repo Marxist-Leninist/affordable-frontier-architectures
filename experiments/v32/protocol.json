@@ -1,0 +1,53 @@
+{
+  "experiment": "v32 validation-calibrated match-order copy mixture",
+  "hypothesis": "Use only already-observed longest exact match length to choose copy weight. Does it improve held-out loss versus a constant retuned on the identical validation ledger?",
+  "design": "Same frozen neural checkpoints, full CompactCache orders4/8/16, pseudocount1, identical target ledger; no target-dependent gating, no new neural training.",
+  "arms": [
+    "local",
+    "gru"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "variants": [
+    "neural",
+    "historical",
+    "constant",
+    "by_order"
+  ],
+  "selection": "First32 eligible nonoverlapping4096-input WikiText validation windows after exact training-target exclusion; final128 targets. Fit one constant per arm and one weight per observed order4/8/16 separately on grid0,.1,...1, pooled over3seeds. First/lower grid weight wins ties. Missing bucket falls back to constant. Save selection before any FineWeb scoring.",
+  "evaluation": "FineWeb-Edu pinned rows1800-1899, first8193 bytes/document; nonoverlapping4096-input windows, final128 targets. Exclude exact full-document or target128 overlaps with training/validation/prior/current other documents before scoring.",
+  "primary_contrasts": [
+    "local by_order minus constant",
+    "gru by_order minus constant"
+  ],
+  "quality_gate": "Improvement supported only when upper paired document-bootstrap95% interval <0, both primary comparisons retained without winner selection; unadjusted multiple-comparison caveat.",
+  "statistics": "Average3seed losses within each target, then5000 target-weighted document cluster resamples, seed32. Conditional convenience-cohort uncertainty; seeds not independent documents.",
+  "timing": "First8 eligible evaluation documents with4128 bytes; seeds1-3, batch1, one CPU thread.4096 prefix+32 teacher-forced updates,33 full distributions. Neural/constant/by_order; one warmup,3 randomized repetitions seed320032. Include cache build/query/mix, prefill/decode. No overlapping task-owned heavy correctness audit.",
+  "limits": "No frontier parity, commercial-token conversion, service throughput/cost, longer-context generalization, or equal neural training-FLOPs claim.",
+  "cpu_limit_seconds": 240,
+  "timing_cpu_limit_seconds": 200,
+  "torch": "2.6.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "source_sha256": {
+    "prefill.py": "438b0bdd9eea3c21f7f998574068015e83db3b6b6954e2ac7ecee2149c937612",
+    "local_attention.py": "0a4bb3be332d128282c39b8f76715c317717cb5340e1405f5e122a26d4d0fd19",
+    "run.py": "35a6963ea5b7aebfcd90bc3d0950963ad1b7fa4e8eebf446a4a30286bcdba737",
+    "timing.py": "be15f51aaca90de1b6bff710e48c14ec08d92366e1586f7ca4a76f5e0efa87a1",
+    "test_v32.py": "2295e46d3a2396cfc57799a8a1d2a46987b1419463e7b1f263b6635d04bbb267",
+    "prepare_data.py": "903fb742ca9fdf8049edb6942b26646c2c06debffbba77a431906e2f6fcfea69",
+    "compact_cache.py": "17b641a6d90a0552601427a0d2c94101ab0cf55ee45aed47227153c3e16cb489",
+    "pruning.py": "7267a061127388f99382d0259fd2d1b0abe7a867b679ec45baf8e1f88951c135",
+    "models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "prepare_ledger.py": "36dd8936a341254fd6460940bbb24e9d2a5721612e39ff947e3ba54b969f6f96"
+  },
+  "inputs_sha256": {
+    "data_manifest.json": "bd968d23bde7c9fde0b064857e5ccdfc0d9d17f04de6eb6785ec375e6716625c",
+    "training_data_manifest.json": "fcf72bec57c287c3e2fa8ad520da0fe9a7e164600473245c0a27377c9f800423",
+    "checkpoint_manifest.json": "38e8da5b99c23f630dfea7de546a32f41771fabfad7002fe2d88e3c932b8904c",
+    "items.json": "a43cbbf2be275e7442dd88bf7eb2e0bb5d72295ef14b8d15a64ccdf94b07cf64",
+    "provenance.json": "566f4f54b71578f1112931108ff91ec212f2eef06943d93c7de64eeb932bf942"
+  }
+}

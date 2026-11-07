@@ -1,0 +1,135 @@
+{
+  "pass_all_assertions": true,
+  "cpu_seconds": 7.047609381999999,
+  "windows": 43,
+  "documents": 34,
+  "targets": 5504,
+  "validation_windows": 32,
+  "calibration": {
+    "local": {
+      "constant": 0.2,
+      "by_order": {
+        "4": 0.2,
+        "8": 0.4,
+        "16": 0.5
+      }
+    },
+    "gru": {
+      "constant": 0.2,
+      "by_order": {
+        "4": 0.1,
+        "8": 0.4,
+        "16": 0.4
+      }
+    }
+  },
+  "primary": {
+    "local": {
+      "delta_bpb": -0.0334204121424995,
+      "paired_document_bootstrap_95": [
+        -0.05475881557287652,
+        -0.018113909546989212
+      ],
+      "improvement_supported": true
+    },
+    "gru": {
+      "delta_bpb": -0.006682862717357709,
+      "paired_document_bootstrap_95": [
+        -0.022546216824131084,
+        0.005626990281431657
+      ],
+      "improvement_supported": false
+    }
+  },
+  "all_saved_loss_means": {
+    "local_seed1_neural": 3.0476084071272314,
+    "local_seed1_historical": 2.697929581994667,
+    "local_seed1_constant": 2.724536795596455,
+    "local_seed1_by_order": 2.6906715251941433,
+    "local_seed2_neural": 3.0491525159515263,
+    "local_seed2_historical": 2.6803991009435086,
+    "local_seed2_constant": 2.706306601687804,
+    "local_seed2_by_order": 2.673807750881672,
+    "local_seed3_neural": 3.057208040896955,
+    "local_seed3_historical": 2.6901283390468267,
+    "local_seed3_constant": 2.7167204873484647,
+    "local_seed3_by_order": 2.682823372129411,
+    "gru_seed1_neural": 2.9689895542092177,
+    "gru_seed1_historical": 2.661489781349544,
+    "gru_seed1_constant": 2.661489781349544,
+    "gru_seed1_by_order": 2.6543869583193174,
+    "gru_seed2_neural": 2.945013891101064,
+    "gru_seed2_historical": 2.6391871671960754,
+    "gru_seed2_constant": 2.6391871671960754,
+    "gru_seed2_by_order": 2.6330054339600077,
+    "gru_seed3_neural": 2.952786142093691,
+    "gru_seed3_historical": 2.6565781649579927,
+    "gru_seed3_constant": 2.6565781649579927,
+    "gru_seed3_by_order": 2.6498141330722147
+  },
+  "neural_parity": [
+    {
+      "arm": "local",
+      "seed": 1,
+      "full_chunked_max_logit_error": 9.5367431640625e-06,
+      "full_pruned_max_logit_error": 1.52587890625e-05,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 5.998363089787517e-06
+    },
+    {
+      "arm": "local",
+      "seed": 2,
+      "full_chunked_max_logit_error": 8.58306884765625e-06,
+      "full_pruned_max_logit_error": 1.1444091796875e-05,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 3.467496104470058e-06
+    },
+    {
+      "arm": "local",
+      "seed": 3,
+      "full_chunked_max_logit_error": 7.62939453125e-06,
+      "full_pruned_max_logit_error": 1.621246337890625e-05,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 2.7165691918185075e-06
+    },
+    {
+      "arm": "gru",
+      "seed": 1,
+      "full_chunked_max_logit_error": 0.0,
+      "full_pruned_max_logit_error": null,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 3.8047545363184554e-06
+    },
+    {
+      "arm": "gru",
+      "seed": 2,
+      "full_chunked_max_logit_error": 0.0,
+      "full_pruned_max_logit_error": null,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 3.4328100930736127e-06
+    },
+    {
+      "arm": "gru",
+      "seed": 3,
+      "full_chunked_max_logit_error": 0.0,
+      "full_pruned_max_logit_error": null,
+      "causality_max_logit_error": 0.0,
+      "saved_neural_bpb_max_error": 5.430662630701022e-06
+    }
+  ],
+  "checks": [
+    "Frozen source/input/checkpoint hashes",
+    "Training/validation/prior/current exact exclusions",
+    "Independent causal Counter full copy distributions for every scored validation/evaluation target",
+    "Target-probability equals complete distribution gather",
+    "Independent all calibration grid objectives and argmins",
+    "Independent all saved loss and mean reconstructions",
+    "All six checkpoint full/chunked/pruned/causal neural sample checks",
+    "Independent paired document bootstrap"
+  ],
+  "limitations": [
+    "No cryptographic chronology: files bind protocol/selection/evaluation but evaluated_test flag is self-report; reviewed execution paths never fit on test.",
+    "Exact full-document and 128-byte target dedup only; near-duplicate and semantic overlap unmeasured.",
+    "Convenience cohort; two unadjusted primary comparisons; no frontier quality or service cost claim."
+  ]
+}
