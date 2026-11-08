@@ -1,0 +1,9 @@
+{
+  "url": "https://datasets-server.huggingface.co/rows?dataset=HuggingFaceFW%2Ffineweb-edu&config=sample-10BT&split=train&offset=2500&length=100",
+  "headers": {
+    "content-type": "application/json",
+    "date": "Sun, 08 Nov 2026 02:47:20 GMT",
+    "x-revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9"
+  },
+  "response_sha256": "ce7d127082f7c4f05462e3c8b658c853ec5ee8c6d7f05f245166e49666883c2d"
+}
