@@ -1,0 +1,318 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "6d5e72543db712abdf7cff34d4dff860a278b105aed12decae313d05c4d6647c",
+  "dlgm_records": [
+    {
+      "window": 0,
+      "target_bytes": 9455,
+      "nll_sum": 19620.384364819503,
+      "bits_per_byte": 2.9937843705405025,
+      "repeat_exact": true,
+      "decoded_window_sha256": "d4116b40d90938308d40f319586b703c7ea0189ac42776c4c8e122d681fa3e0a"
+    },
+    {
+      "window": 1,
+      "target_bytes": 11693,
+      "nll_sum": 21151.362241622293,
+      "bits_per_byte": 2.6096780478948562,
+      "repeat_exact": true,
+      "decoded_window_sha256": "387aada48267885163bd999510f98be54102b9f7431809c506757416eb863611"
+    },
+    {
+      "window": 2,
+      "target_bytes": 10865,
+      "nll_sum": 20088.56955236604,
+      "bits_per_byte": 2.6674348524391633,
+      "repeat_exact": true,
+      "decoded_window_sha256": "b5863fd982d7e9019d19828b221f8ce3ac35c0e4b24e34d2f64433515d9f8035"
+    },
+    {
+      "window": 3,
+      "target_bytes": 10180,
+      "nll_sum": 22062.144259256776,
+      "bits_per_byte": 3.1266155318474134,
+      "repeat_exact": true,
+      "decoded_window_sha256": "cd56ac6104ab8ac79b7995ac99f9e93f1788656846dee186fbcf10a0c74d6e13"
+    },
+    {
+      "window": 4,
+      "target_bytes": 10160,
+      "nll_sum": 19387.961970760487,
+      "bits_per_byte": 2.7530429712755877,
+      "repeat_exact": true,
+      "decoded_window_sha256": "a0439b570b85be79c86e35bed6582acd57ff1b390108c22626f4d36c077eb515"
+    },
+    {
+      "window": 5,
+      "target_bytes": 11363,
+      "nll_sum": 20078.47230773978,
+      "bits_per_byte": 2.5492486515007093,
+      "repeat_exact": true,
+      "decoded_window_sha256": "5713dad3cc5511557bd7206d0e8052a7ffbd3edb0b4e0510b06e05d4433be329"
+    },
+    {
+      "window": 6,
+      "target_bytes": 9927,
+      "nll_sum": 19569.850682091434,
+      "bits_per_byte": 2.8440945431641795,
+      "repeat_exact": true,
+      "decoded_window_sha256": "1d558744b8b906b767bd74458388dbf34976fd4e8004ef8368abe258757d237e"
+    },
+    {
+      "window": 7,
+      "target_bytes": 9610,
+      "nll_sum": 20568.296645674855,
+      "bits_per_byte": 3.087802244562769,
+      "repeat_exact": true,
+      "decoded_window_sha256": "efd5ababd6f375ea9323592a6d9ce511ee43e9c84529147f16c1e07a0d46dca2"
+    }
+  ],
+  "dlgm_nll_sum": 162527.04202433117,
+  "target_bytes": 83253,
+  "dlgm_weighted_bits_per_byte": 2.816438537216133,
+  "native_receipts": [
+    {
+      "step": 5053,
+      "nominal_size": "512B-class/L320",
+      "receipt_sha256": "1608a052ebc9f0736ddbffa30eb508f626cf4af05a2b3d1b5fac5e21883d8b8c",
+      "records": [
+        {
+          "window": 0,
+          "native_nll_sum": 14571.992859840393,
+          "target_bytes": 9455,
+          "bits_per_byte": 2.2234734886050895
+        },
+        {
+          "window": 1,
+          "native_nll_sum": 13195.081948757172,
+          "target_bytes": 11693,
+          "bits_per_byte": 1.6280235432819168
+        },
+        {
+          "window": 2,
+          "native_nll_sum": 12444.675641059875,
+          "target_bytes": 10865,
+          "bits_per_byte": 1.6524502377200887
+        },
+        {
+          "window": 3,
+          "native_nll_sum": 13186.473416805267,
+          "target_bytes": 10180,
+          "bits_per_byte": 1.868768153756297
+        },
+        {
+          "window": 4,
+          "native_nll_sum": 13455.781937122345,
+          "target_bytes": 10160,
+          "bits_per_byte": 1.9106879795245766
+        },
+        {
+          "window": 5,
+          "native_nll_sum": 13340.339955329895,
+          "target_bytes": 11363,
+          "bits_per_byte": 1.693746571972836
+        },
+        {
+          "window": 6,
+          "native_nll_sum": 12831.403745174408,
+          "target_bytes": 9927,
+          "bits_per_byte": 1.8647932457748757
+        },
+        {
+          "window": 7,
+          "native_nll_sum": 13609.08360338211,
+          "target_bytes": 9610,
+          "bits_per_byte": 2.043054883001319
+        }
+      ],
+      "native_nll_sum": 106634.83310747147,
+      "target_bytes": 83253,
+      "weighted_bits_per_byte": 1.847879895140972,
+      "evidence": "Historical saved full-depth full-vocabulary AR receipt, not a fresh evaluation or a verification of current live weights."
+    },
+    {
+      "step": 5750,
+      "nominal_size": "512B-class/L320",
+      "receipt_sha256": "18b2ea8639730e429d5f202e846c33420e0b9ea3a4333aea2124b20a73c2c9ed",
+      "records": [
+        {
+          "window": 0,
+          "native_nll_sum": 14608.233595848083,
+          "target_bytes": 9455,
+          "bits_per_byte": 2.229003296126661
+        },
+        {
+          "window": 1,
+          "native_nll_sum": 13593.700371742249,
+          "target_bytes": 11693,
+          "bits_per_byte": 1.6772055172875227
+        },
+        {
+          "window": 2,
+          "native_nll_sum": 12705.86014175415,
+          "target_bytes": 10865,
+          "bits_per_byte": 1.6871312854797471
+        },
+        {
+          "window": 3,
+          "native_nll_sum": 13472.108180522919,
+          "target_bytes": 10180,
+          "bits_per_byte": 1.9092479039646415
+        },
+        {
+          "window": 4,
+          "native_nll_sum": 13690.054660320282,
+          "target_bytes": 10160,
+          "bits_per_byte": 1.9439541307030428
+        },
+        {
+          "window": 5,
+          "native_nll_sum": 13606.252214431763,
+          "target_bytes": 11363,
+          "bits_per_byte": 1.7275079287903883
+        },
+        {
+          "window": 6,
+          "native_nll_sum": 12954.386690616608,
+          "target_bytes": 9927,
+          "bits_per_byte": 1.8826664084124682
+        },
+        {
+          "window": 7,
+          "native_nll_sum": 14023.025197505951,
+          "target_bytes": 9610,
+          "bits_per_byte": 2.1051975973676185
+        }
+      ],
+      "native_nll_sum": 108653.621052742,
+      "target_bytes": 83253,
+      "weighted_bits_per_byte": 1.8828635636844266,
+      "evidence": "Historical saved full-depth full-vocabulary AR receipt, not a fresh evaluation or a verification of current live weights."
+    },
+    {
+      "step": 6001,
+      "nominal_size": "600B-class/L380",
+      "receipt_sha256": "22858e253a6390fcc9e02d39662fcdc8c2c92a9a19c8cd5c4cee3f5c525122b6",
+      "records": [
+        {
+          "window": 0,
+          "native_nll_sum": 14679.609751701355,
+          "target_bytes": 9455,
+          "bits_per_byte": 2.239894256051276
+        },
+        {
+          "window": 1,
+          "native_nll_sum": 13354.259417057037,
+          "target_bytes": 11693,
+          "bits_per_byte": 1.6476630322186716
+        },
+        {
+          "window": 2,
+          "native_nll_sum": 12809.053569793701,
+          "target_bytes": 10865,
+          "bits_per_byte": 1.7008336920039067
+        },
+        {
+          "window": 3,
+          "native_nll_sum": 13322.58090877533,
+          "target_bytes": 10180,
+          "bits_per_byte": 1.8880571128617043
+        },
+        {
+          "window": 4,
+          "native_nll_sum": 13669.09030342102,
+          "target_bytes": 10160,
+          "bits_per_byte": 1.9409772435245005
+        },
+        {
+          "window": 5,
+          "native_nll_sum": 13435.539222717285,
+          "target_bytes": 11363,
+          "bits_per_byte": 1.705833477803695
+        },
+        {
+          "window": 6,
+          "native_nll_sum": 12948.6360912323,
+          "target_bytes": 9927,
+          "bits_per_byte": 1.881830671410969
+        },
+        {
+          "window": 7,
+          "native_nll_sum": 14359.54390001297,
+          "target_bytes": 9610,
+          "bits_per_byte": 2.155717250153598
+        }
+      ],
+      "native_nll_sum": 108578.313164711,
+      "target_bytes": 83253,
+      "weighted_bits_per_byte": 1.881558549851866,
+      "evidence": "Historical saved full-depth full-vocabulary AR receipt, not a fresh evaluation or a verification of current live weights."
+    },
+    {
+      "step": 6250,
+      "nominal_size": "600B-class/L380",
+      "receipt_sha256": "50c3bf4a5930f8e8d2c970d9cde5a1c5c1097133f87e6d082adf0fa790c99eff",
+      "records": [
+        {
+          "window": 0,
+          "native_nll_sum": 14221.482609272003,
+          "target_bytes": 9455,
+          "bits_per_byte": 2.1699907387081288
+        },
+        {
+          "window": 1,
+          "native_nll_sum": 13258.365018844604,
+          "target_bytes": 11693,
+          "bits_per_byte": 1.635831477207117
+        },
+        {
+          "window": 2,
+          "native_nll_sum": 12737.638660430908,
+          "target_bytes": 10865,
+          "bits_per_byte": 1.6913509551807833
+        },
+        {
+          "window": 3,
+          "native_nll_sum": 13355.629965782166,
+          "target_bytes": 10180,
+          "bits_per_byte": 1.8927407779550067
+        },
+        {
+          "window": 4,
+          "native_nll_sum": 13419.353020191193,
+          "target_bytes": 10160,
+          "bits_per_byte": 1.9055151628118276
+        },
+        {
+          "window": 5,
+          "native_nll_sum": 13474.700729370117,
+          "target_bytes": 11363,
+          "bits_per_byte": 1.7108055900488572
+        },
+        {
+          "window": 6,
+          "native_nll_sum": 12939.695656299591,
+          "target_bytes": 9927,
+          "bits_per_byte": 1.8805313542818456
+        },
+        {
+          "window": 7,
+          "native_nll_sum": 13954.494877815247,
+          "target_bytes": 9610,
+          "bits_per_byte": 2.094909527402133
+        }
+      ],
+      "native_nll_sum": 107361.36053800583,
+      "target_bytes": 83253,
+      "weighted_bits_per_byte": 1.8604699221802585,
+      "evidence": "Historical saved full-depth full-vocabulary AR receipt, not a fresh evaluation or a verification of current live weights."
+    }
+  ],
+  "future_perturbation_prefix_maxabs": 0.0,
+  "cpu_seconds": 7.414646169999999,
+  "total_process_cpu_seconds": 8.671457203,
+  "wall_seconds": 7.424439820999396,
+  "peak_rss_kib": 475916,
+  "precision": "FP32 checkpoint weights, BF16 CPU autocast, FP32 per-byte cross entropy summed in float64",
+  "interpretation": "Different pretrained checkpoint sizes, ages, tokenizers, datasets, optimization histories and training costs. Eight length-selected English pilot documents, historical contamination unknown. No architecture fairness, intelligence, current600B recovery, production serving or training-cost conclusion."
+}
