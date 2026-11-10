@@ -1,0 +1,34 @@
+{
+  "evidence_availability": "Hashes identify local frozen evidence, not included downloads. This report is not a standalone reproduction.",
+  "files": {
+    "METRICS.json": {
+      "bytes": 35560,
+      "sha256": "dbf69b4a9ab767a1798ef713c04721a025af1cb81bfce6c65c844bce2948e434"
+    },
+    "README.md": {
+      "bytes": 9805,
+      "sha256": "6f505340b911085080342a6fe6864492432f1d99e31aa69ae72aee0c2ac2108b"
+    }
+  },
+  "manifest_self_hash": "Excluded to avoid circularity; exact committed bytes can be verified through Git.",
+  "release": "original_gallery_growth_20261110",
+  "scope": "Three new UTF-8 report files only; no code, checkpoints, raw data, credentials, private source or private paths.",
+  "source_evidence_sha256": {
+    "growth_final_review": "b0c063d0dfa7d58e7f7a5b0ee78fbbe47022599a309bb6604487971914a0d4fc",
+    "growth_frozen_protocol": "2954be29f2f70a8ae7ad82753be0bbe82437fbbb0d1a73d3bbca1517eae7fb08",
+    "growth_posthoc_front_diagnosis": "8154fce5c836c80de8a9b9cffb7d112ae47ee576c635ffac4fc9bab92a085b3e",
+    "growth_primary_metrics": "1f8205529d901cf77f93a06c9529e7c3d60dcae50c581aeebfb9b473d5739244",
+    "v65_final_summary": "7e4a3de0660831a17e64240dc7762a1404c7cb102f7572a39e6ee0fb39581fe5",
+    "v65_frozen_protocol": "053803519c9d5f0b70e50ca958a9dece61228ab55cd229d18c09d5976cea3d8a",
+    "v65_independent_final_verification": "4126c77aae7c615fc916dc98f59c608fd71e7fa4450382160894bd4fe97627fe"
+  },
+  "upstream": {
+    "commit": "3113c51b04a1d4a7520a3b0238c6a08d3194d58f",
+    "dlgm_source_sha256": "76412d2f7aff30f99ce7089e0f57f8ef26add7f2d9f965adf8650a00538bd1f5",
+    "paper": "https://arxiv.org/abs/2507.18074",
+    "repository": "https://github.com/GAIR-NLP/ASI-Arch",
+    "source_json_git_blob": "e403531e663cf24c800002720d293cccf77f94df",
+    "source_license": "Apache-2.0",
+    "source_permalink": "https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json"
+  }
+}

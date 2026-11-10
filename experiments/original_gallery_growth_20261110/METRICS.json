@@ -1,0 +1,1056 @@
+{
+  "growth_R4": {
+    "arms": {
+      "G": "zero-gated growth preserving learned model and optimizer",
+      "L": "fixed large, gates initially 1",
+      "R": "same growth trajectory, all model parameters and Adam state reset at each growth; data/LR/global clocks continue",
+      "S": "fixed small",
+      "Z": "fixed large, added gates initially 0"
+    },
+    "growth_completed_target_tokens": [
+      32768,
+      98304
+    ],
+    "immediate_boundary_ce_changes": [
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 1,
+        "updates": 64,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 1,
+        "updates": 192,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 2.9708471524288704,
+        "seed": 1,
+        "updates": 64,
+        "wiki_ce_change": 2.9966291106880156
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 3.336635338297358,
+        "seed": 1,
+        "updates": 192,
+        "wiki_ce_change": 3.431712957575014
+      },
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 2,
+        "updates": 64,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 2,
+        "updates": 192,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 3.0161164155247597,
+        "seed": 2,
+        "updates": 64,
+        "wiki_ce_change": 3.0023063441461297
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 3.3258959902780734,
+        "seed": 2,
+        "updates": 192,
+        "wiki_ce_change": 3.430932926110116
+      },
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 3,
+        "updates": 64,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "G",
+        "fineweb_ce_change": 0.0,
+        "seed": 3,
+        "updates": 192,
+        "wiki_ce_change": 0.0
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 2.922380347408293,
+        "seed": 3,
+        "updates": 64,
+        "wiki_ce_change": 2.9663228959195953
+      },
+      {
+        "arm": "R",
+        "fineweb_ce_change": 3.2115557210652566,
+        "seed": 3,
+        "updates": 192,
+        "wiki_ce_change": 3.382698764127722
+      }
+    ],
+    "inclusive_guarded_accounting": {
+      "active_wall_cap_seconds": 5400,
+      "active_wall_seconds": "1766.296201303962904504",
+      "cpu_cap_seconds": 3600,
+      "cpu_seconds": "1841.247070624",
+      "scope": "Includes recorded failed preparation, study, accounting, review and extraction costs with guards; not exact physical consumption."
+    },
+    "milestones": {
+      "cpu_60": {
+        "individual": [
+          {
+            "active_wall_seconds": 61.65049142501084,
+            "arm": "S",
+            "cpu_seconds": 60.048528,
+            "fineweb_ce": 2.3987715701473675,
+            "parameters": 31032,
+            "peak_rss_mib": 379.73046875,
+            "seed": 1,
+            "training_target_tokens": 528896,
+            "updates": 1033,
+            "wiki_ce": 2.0782411187871834
+          },
+          {
+            "active_wall_seconds": 60.64799245700124,
+            "arm": "L",
+            "cpu_seconds": 60.058115,
+            "fineweb_ce": 2.36682310303749,
+            "parameters": 60266,
+            "peak_rss_mib": 386.43359375,
+            "seed": 1,
+            "training_target_tokens": 239104,
+            "updates": 467,
+            "wiki_ce": 2.0891548862373925
+          },
+          {
+            "active_wall_seconds": 60.466029625968076,
+            "arm": "Z",
+            "cpu_seconds": 60.121013999999995,
+            "fineweb_ce": 2.3818786890767663,
+            "parameters": 60266,
+            "peak_rss_mib": 388.38671875,
+            "seed": 1,
+            "training_target_tokens": 238592,
+            "updates": 466,
+            "wiki_ce": 2.107687679232798
+          },
+          {
+            "active_wall_seconds": 61.311420140002156,
+            "arm": "G",
+            "cpu_seconds": 60.166698,
+            "fineweb_ce": 2.3992444334441227,
+            "parameters": 60266,
+            "peak_rss_mib": 385.87109375,
+            "seed": 1,
+            "training_target_tokens": 265728,
+            "updates": 519,
+            "wiki_ce": 2.1046596439510106
+          },
+          {
+            "active_wall_seconds": 60.495701095991535,
+            "arm": "R",
+            "cpu_seconds": 60.083069,
+            "fineweb_ce": 2.4185729163747665,
+            "parameters": 60266,
+            "peak_rss_mib": 385.41015625,
+            "seed": 1,
+            "training_target_tokens": 260608,
+            "updates": 509,
+            "wiki_ce": 2.1611027980270805
+          },
+          {
+            "active_wall_seconds": 64.05227708100574,
+            "arm": "S",
+            "cpu_seconds": 60.058924000000005,
+            "fineweb_ce": 2.3966669819108146,
+            "parameters": 31032,
+            "peak_rss_mib": 381.8671875,
+            "seed": 2,
+            "training_target_tokens": 503808,
+            "updates": 984,
+            "wiki_ce": 2.0717499703180633
+          },
+          {
+            "active_wall_seconds": 60.734859910968225,
+            "arm": "L",
+            "cpu_seconds": 60.089104999999996,
+            "fineweb_ce": 2.4252701534978103,
+            "parameters": 60266,
+            "peak_rss_mib": 388.3984375,
+            "seed": 2,
+            "training_target_tokens": 183808,
+            "updates": 359,
+            "wiki_ce": 2.143809979652567
+          },
+          {
+            "active_wall_seconds": 60.40491048799595,
+            "arm": "Z",
+            "cpu_seconds": 60.057349,
+            "fineweb_ce": 2.4491529890651096,
+            "parameters": 60266,
+            "peak_rss_mib": 387.9296875,
+            "seed": 2,
+            "training_target_tokens": 198144,
+            "updates": 387,
+            "wiki_ce": 2.1688937404387665
+          },
+          {
+            "active_wall_seconds": 60.52572350698756,
+            "arm": "G",
+            "cpu_seconds": 60.109557,
+            "fineweb_ce": 2.3931396437252053,
+            "parameters": 60266,
+            "peak_rss_mib": 385.578125,
+            "seed": 2,
+            "training_target_tokens": 265216,
+            "updates": 518,
+            "wiki_ce": 2.1014787122500636
+          },
+          {
+            "active_wall_seconds": 61.158100319997175,
+            "arm": "R",
+            "cpu_seconds": 60.112687,
+            "fineweb_ce": 2.439238793929662,
+            "parameters": 60266,
+            "peak_rss_mib": 384.7578125,
+            "seed": 2,
+            "training_target_tokens": 280576,
+            "updates": 548,
+            "wiki_ce": 2.18114048290843
+          },
+          {
+            "active_wall_seconds": 60.701862777990755,
+            "arm": "S",
+            "cpu_seconds": 60.046147000000005,
+            "fineweb_ce": 2.399910389968102,
+            "parameters": 31032,
+            "peak_rss_mib": 381.3203125,
+            "seed": 3,
+            "training_target_tokens": 446976,
+            "updates": 873,
+            "wiki_ce": 2.0830591938081353
+          },
+          {
+            "active_wall_seconds": 60.48735588998534,
+            "arm": "L",
+            "cpu_seconds": 60.140604,
+            "fineweb_ce": 2.4130824101368153,
+            "parameters": 60266,
+            "peak_rss_mib": 389.47265625,
+            "seed": 3,
+            "training_target_tokens": 195072,
+            "updates": 381,
+            "wiki_ce": 2.1166951115209955
+          },
+          {
+            "active_wall_seconds": 60.43469835497672,
+            "arm": "Z",
+            "cpu_seconds": 60.090781,
+            "fineweb_ce": 2.4293801331961156,
+            "parameters": 60266,
+            "peak_rss_mib": 390.28515625,
+            "seed": 3,
+            "training_target_tokens": 187904,
+            "updates": 367,
+            "wiki_ce": 2.1884734888501574
+          },
+          {
+            "active_wall_seconds": 61.1221240569721,
+            "arm": "G",
+            "cpu_seconds": 60.124848,
+            "fineweb_ce": 2.410353495123051,
+            "parameters": 60266,
+            "peak_rss_mib": 385.8359375,
+            "seed": 3,
+            "training_target_tokens": 247296,
+            "updates": 483,
+            "wiki_ce": 2.1275418397431376
+          },
+          {
+            "active_wall_seconds": 60.47895643199445,
+            "arm": "R",
+            "cpu_seconds": 60.073485000000005,
+            "fineweb_ce": 2.4526809562684915,
+            "parameters": 60266,
+            "peak_rss_mib": 386.30078125,
+            "seed": 3,
+            "training_target_tokens": 249856,
+            "updates": 488,
+            "wiki_ce": 2.2197438015874456
+          }
+        ],
+        "means": {
+          "G": {
+            "active_wall_seconds": 60.98642256798727,
+            "cpu_seconds": 60.133701,
+            "fineweb_ce": 2.4009125240974596,
+            "peak_rss_mib": 385.76171875,
+            "training_target_tokens": 259413.33333333334,
+            "wiki_ce": 2.1112267319814038
+          },
+          "L": {
+            "active_wall_seconds": 60.6234027526516,
+            "cpu_seconds": 60.095941333333336,
+            "fineweb_ce": 2.4017252222240386,
+            "peak_rss_mib": 388.1015625,
+            "training_target_tokens": 205994.66666666666,
+            "wiki_ce": 2.1165533258036517
+          },
+          "R": {
+            "active_wall_seconds": 60.71091928266105,
+            "cpu_seconds": 60.089747,
+            "fineweb_ce": 2.43683088885764,
+            "peak_rss_mib": 385.4895833333333,
+            "training_target_tokens": 263680,
+            "wiki_ce": 2.1873290275076522
+          },
+          "S": {
+            "active_wall_seconds": 62.134877094669115,
+            "cpu_seconds": 60.05119966666667,
+            "fineweb_ce": 2.398449647342095,
+            "peak_rss_mib": 380.97265625,
+            "training_target_tokens": 493226.6666666667,
+            "wiki_ce": 2.077683427637794
+          },
+          "Z": {
+            "active_wall_seconds": 60.43521282298025,
+            "cpu_seconds": 60.089714666666666,
+            "fineweb_ce": 2.420137270445997,
+            "peak_rss_mib": 388.8671875,
+            "training_target_tokens": 208213.33333333334,
+            "wiki_ce": 2.155018302840574
+          }
+        },
+        "paired_G_minus_control": {
+          "L": {
+            "fineweb_ce": [
+              0.03242133040663253,
+              -0.03213050977260501,
+              -0.002728915013764155
+            ],
+            "wiki_ce": [
+              0.015504757713618034,
+              -0.04233126740250359,
+              0.010846728222142055
+            ]
+          },
+          "R": {
+            "fineweb_ce": [
+              -0.01932848293064371,
+              -0.04609915020445676,
+              -0.04232746114544028
+            ],
+            "wiki_ce": [
+              -0.056443154076069924,
+              -0.07966177065836666,
+              -0.09220196184430796
+            ]
+          },
+          "S": {
+            "fineweb_ce": [
+              0.00047286329675522154,
+              -0.003527338185609352,
+              0.010443105154949173
+            ],
+            "wiki_ce": [
+              0.026418525163827145,
+              0.029728741932000258,
+              0.044482645935002285
+            ]
+          },
+          "Z": {
+            "fineweb_ce": [
+              0.017365744367356495,
+              -0.05601334533990432,
+              -0.019026638073064372
+            ],
+            "wiki_ce": [
+              -0.0030280352817873,
+              -0.06741502818870293,
+              -0.06093164910701976
+            ]
+          }
+        }
+      },
+      "token_131072": {
+        "individual": [
+          {
+            "active_wall_seconds": 21.00723933498375,
+            "arm": "S",
+            "cpu_seconds": 20.445112,
+            "fineweb_ce": 2.5294206070473533,
+            "parameters": 31032,
+            "peak_rss_mib": 377.60546875,
+            "seed": 1,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.3042399282636645
+          },
+          {
+            "active_wall_seconds": 40.61167912898236,
+            "arm": "L",
+            "cpu_seconds": 40.416599,
+            "fineweb_ce": 2.465337734712763,
+            "parameters": 60266,
+            "peak_rss_mib": 385.55859375,
+            "seed": 1,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.2084956331851244
+          },
+          {
+            "active_wall_seconds": 40.281072110985406,
+            "arm": "Z",
+            "cpu_seconds": 40.093659,
+            "fineweb_ce": 2.4798161337034323,
+            "parameters": 60266,
+            "peak_rss_mib": 387.38671875,
+            "seed": 1,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.231201073823167
+          },
+          {
+            "active_wall_seconds": 32.71874688999378,
+            "arm": "G",
+            "cpu_seconds": 32.48728,
+            "fineweb_ce": 2.511511343511804,
+            "parameters": 60266,
+            "peak_rss_mib": 384.62109375,
+            "seed": 1,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.2698074135734916
+          },
+          {
+            "active_wall_seconds": 32.289315195987,
+            "arm": "R",
+            "cpu_seconds": 32.093090000000004,
+            "fineweb_ce": 2.8418846108743105,
+            "parameters": 60266,
+            "peak_rss_mib": 384.16015625,
+            "seed": 1,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.7338522408858634
+          },
+          {
+            "active_wall_seconds": 21.822308262984734,
+            "arm": "S",
+            "cpu_seconds": 21.599754,
+            "fineweb_ce": 2.511063924547241,
+            "parameters": 31032,
+            "peak_rss_mib": 379.7421875,
+            "seed": 2,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.2884993890013496
+          },
+          {
+            "active_wall_seconds": 49.02884103698307,
+            "arm": "L",
+            "cpu_seconds": 48.477005,
+            "fineweb_ce": 2.46228267107104,
+            "parameters": 60266,
+            "peak_rss_mib": 387.8984375,
+            "seed": 2,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.218708055905029
+          },
+          {
+            "active_wall_seconds": 46.2084934010054,
+            "arm": "Z",
+            "cpu_seconds": 45.958683,
+            "fineweb_ce": 2.503038892473956,
+            "parameters": 60266,
+            "peak_rss_mib": 386.9296875,
+            "seed": 2,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.257092922229043
+          },
+          {
+            "active_wall_seconds": 32.964246367977466,
+            "arm": "G",
+            "cpu_seconds": 32.741899,
+            "fineweb_ce": 2.4991271910718558,
+            "parameters": 60266,
+            "peak_rss_mib": 384.203125,
+            "seed": 2,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.2584872165692125
+          },
+          {
+            "active_wall_seconds": 32.83014112699311,
+            "arm": "R",
+            "cpu_seconds": 32.611203,
+            "fineweb_ce": 2.7822183500675486,
+            "parameters": 60266,
+            "peak_rss_mib": 383.2578125,
+            "seed": 2,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.665663323383816
+          },
+          {
+            "active_wall_seconds": 23.558915148983942,
+            "arm": "S",
+            "cpu_seconds": 23.348748999999998,
+            "fineweb_ce": 2.518357297420044,
+            "parameters": 31032,
+            "peak_rss_mib": 379.421875,
+            "seed": 3,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.3057433654529644
+          },
+          {
+            "active_wall_seconds": 45.77181689199642,
+            "arm": "L",
+            "cpu_seconds": 45.538761,
+            "fineweb_ce": 2.4635647055776326,
+            "parameters": 60266,
+            "peak_rss_mib": 388.8359375,
+            "seed": 3,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.21424757902393
+          },
+          {
+            "active_wall_seconds": 47.887770040979376,
+            "arm": "Z",
+            "cpu_seconds": 47.64978,
+            "fineweb_ce": 2.4874271995143875,
+            "parameters": 60266,
+            "peak_rss_mib": 389.66015625,
+            "seed": 3,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.268817290968974
+          },
+          {
+            "active_wall_seconds": 35.66462662696722,
+            "arm": "G",
+            "cpu_seconds": 34.83826,
+            "fineweb_ce": 2.492200346818027,
+            "parameters": 60266,
+            "peak_rss_mib": 384.4609375,
+            "seed": 3,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.2598992837899763
+          },
+          {
+            "active_wall_seconds": 34.89413127597072,
+            "arm": "R",
+            "cpu_seconds": 34.668977999999996,
+            "fineweb_ce": 2.8063862936562427,
+            "parameters": 60266,
+            "peak_rss_mib": 385.16796875,
+            "seed": 3,
+            "training_target_tokens": 131072,
+            "updates": 256,
+            "wiki_ce": 2.698186794316759
+          }
+        ],
+        "means": {
+          "G": {
+            "active_wall_seconds": 33.78253996164616,
+            "cpu_seconds": 33.355813,
+            "fineweb_ce": 2.5009462938005624,
+            "peak_rss_mib": 384.4283854166667,
+            "training_target_tokens": 131072,
+            "wiki_ce": 2.262731304644227
+          },
+          "L": {
+            "active_wall_seconds": 45.13744568598728,
+            "cpu_seconds": 44.810788333333335,
+            "fineweb_ce": 2.4637283704538118,
+            "peak_rss_mib": 387.4309895833333,
+            "training_target_tokens": 131072,
+            "wiki_ce": 2.213817089371361
+          },
+          "R": {
+            "active_wall_seconds": 33.337862532983614,
+            "cpu_seconds": 33.124423666666665,
+            "fineweb_ce": 2.810163084866034,
+            "peak_rss_mib": 384.1953125,
+            "training_target_tokens": 131072,
+            "wiki_ce": 2.6992341195288128
+          },
+          "S": {
+            "active_wall_seconds": 22.129487582317477,
+            "cpu_seconds": 21.797871666666666,
+            "fineweb_ce": 2.5196139430048796,
+            "peak_rss_mib": 378.9231770833333,
+            "training_target_tokens": 131072,
+            "wiki_ce": 2.2994942275726595
+          },
+          "Z": {
+            "active_wall_seconds": 44.79244518432339,
+            "cpu_seconds": 44.567374,
+            "fineweb_ce": 2.490094075230592,
+            "peak_rss_mib": 387.9921875,
+            "training_target_tokens": 131072,
+            "wiki_ce": 2.2523704290070614
+          }
+        },
+        "paired_G_minus_control": {
+          "L": {
+            "fineweb_ce": [
+              0.04617360879904098,
+              0.03684452000081562,
+              0.028635641240394527
+            ],
+            "wiki_ce": [
+              0.061311780388367154,
+              0.03977916066418352,
+              0.0456517047660463
+            ]
+          },
+          "R": {
+            "fineweb_ce": [
+              -0.3303732673625066,
+              -0.2830911589956928,
+              -0.31418594683821555
+            ],
+            "wiki_ce": [
+              -0.46404482731237184,
+              -0.4071761068146036,
+              -0.4382875105267825
+            ]
+          },
+          "S": {
+            "fineweb_ce": [
+              -0.017909263535549336,
+              -0.011936733475385264,
+              -0.02615695060201695
+            ],
+            "wiki_ce": [
+              -0.034432514690172944,
+              -0.030012172432137163,
+              -0.045844081662988145
+            ]
+          },
+          "Z": {
+            "fineweb_ce": [
+              0.031695209808371594,
+              -0.003911701402100398,
+              0.0047731473036396466
+            ],
+            "wiki_ce": [
+              0.03860633975032446,
+              0.0013942943401694663,
+              -0.008918007178997822
+            ]
+          }
+        }
+      }
+    },
+    "parameter_counts": [
+      31032,
+      45649,
+      60266
+    ],
+    "posthoc_five_metric_fronts": {
+      "cpu_60": {
+        "exact_dominance_edges": [],
+        "exact_nondominated_arms": [
+          "G",
+          "L",
+          "R",
+          "S",
+          "Z"
+        ],
+        "metrics_minimized": [
+          "wiki_ce",
+          "fineweb_ce",
+          "cpu_seconds",
+          "active_wall_seconds",
+          "peak_rss_mib"
+        ]
+      },
+      "token_131072": {
+        "exact_dominance_edges": [
+          [
+            "S",
+            "R"
+          ]
+        ],
+        "exact_nondominated_arms": [
+          "G",
+          "L",
+          "S",
+          "Z"
+        ],
+        "metrics_minimized": [
+          "wiki_ce",
+          "fineweb_ce",
+          "cpu_seconds",
+          "active_wall_seconds",
+          "peak_rss_mib"
+        ]
+      }
+    },
+    "posthoc_front_scope": "Descriptive arithmetic on five saved arm means. Not prespecified statistical inference, practical dominance, or a global optimum. Frozen quality_resource entries had zero eligible points because of retention-availability partitioning.",
+    "primary_wiki_G_minus_L_cpu60_bootstrap": {
+      "available": true,
+      "ci95": [
+        -0.012405622722312215,
+        0.0010830535659103852
+      ],
+      "conditional_on": "These three seeds and reused articles; no global confidence guarantee",
+      "difference": "G minus L",
+      "estimate": -0.005326593822248003,
+      "resamples": 10000,
+      "seed": 73101
+    },
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "worker_cpu_clock": "Training-job process-tree CPU, including frozen inline checks and checkpoint costs; excludes separately charged offline audits. Not the v65 training-interval clock."
+  },
+  "limitations": [
+    "Reused discovery heldouts; no fresh confirmatory test or semantic decontamination guarantee.",
+    "Three paired seeds and tiny CPU BF16 models; no universal architecture or growth winner.",
+    "No valid serving economics, GPU scaling, intelligence multiplier, or large-model extrapolation.",
+    "No monetary training cost was measured."
+  ],
+  "release": "original_gallery_growth_20261110",
+  "scope": "Report-only derived scalar metrics. No executable reproduction or model files included.",
+  "units": "Cross-entropy in natural-log nats per byte target; lower is better. CPU clocks differ between studies and must not be pooled.",
+  "v65": {
+    "coverage_snapshot": {
+      "growth_variants_add_original_ids": 0,
+      "new_seed1_only_ids": [
+        1081,
+        750,
+        890
+      ],
+      "total_original_gallery_ids": 105,
+      "trained_distinct_original_gallery_ids": 25
+    },
+    "individual_final120": [
+      {
+        "arm": "dlgm",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "191f12acf0d2256ccf6f2da1f82d8163e86a183a3da9b09007993df1a0c12783",
+        "fineweb_ce_nats": 2.108068203569582,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#458 DualScaleMemoryRouter",
+        "parameters": 349944,
+        "peak_training_rss_mib": 414.09375,
+        "seed": 1,
+        "state_content_sha256": "b380de8a96d10533a687faa264196d2cd662e43641c8867e9cd7b2104a089f0a",
+        "training_cpu_seconds": 120.1875024789999,
+        "updates": 433,
+        "wiki_ce_nats": 1.7675675356276197
+      },
+      {
+        "arm": "dlgm",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "e713a904cd95b2247b3424f3c3ee084d88e2329deb3bb65c6ccd8631158e01e3",
+        "fineweb_ce_nats": 2.10579161717274,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#458 DualScaleMemoryRouter",
+        "parameters": 349944,
+        "peak_training_rss_mib": 413.53125,
+        "seed": 2,
+        "state_content_sha256": "c726531badcaef7a85660787c1aceb890de68085699203e2c16264ddd4a7c82b",
+        "training_cpu_seconds": 120.196467717,
+        "updates": 442,
+        "wiki_ce_nats": 1.7650471415748692
+      },
+      {
+        "arm": "dlgm",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "7729b903ca102485d51b3bf379312f35a4c77efa809d836ee32313604f2c98df",
+        "fineweb_ce_nats": 2.0961192528535286,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#458 DualScaleMemoryRouter",
+        "parameters": 349944,
+        "peak_training_rss_mib": 412.8828125,
+        "seed": 3,
+        "state_content_sha256": "31384a7523da6c2a987f20cd270cda6b75e3a4dcf7972f9be3f12bedc7ebcd9b",
+        "training_cpu_seconds": 120.14696869899993,
+        "updates": 446,
+        "wiki_ce_nats": 1.7540497425390993
+      },
+      {
+        "arm": "entropy",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "04affc82177adfd8209affbdb1207347d20a0ae7967766f05fa2a2f9fe76742b",
+        "fineweb_ce_nats": 2.190963562090388,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#1081 gallery screen",
+        "parameters": 349941,
+        "peak_training_rss_mib": 456.94921875,
+        "seed": 1,
+        "state_content_sha256": "ad60dbfd163e43fc82a5fccb09553e1ac31401f3b34e58c44bfc42b2f0162072",
+        "training_cpu_seconds": 120.38723391900011,
+        "updates": 315,
+        "wiki_ce_nats": 1.8416013871574044
+      },
+      {
+        "arm": "fusion",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "c3519aa6d423f2250272cf2834a9f7e37e11d39566f71e2c366d2feb2d5a015e",
+        "fineweb_ce_nats": 2.10641920289152,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#879 FusionGatedFIRNet (original full forward)",
+        "parameters": 349956,
+        "peak_training_rss_mib": 415.80078125,
+        "seed": 1,
+        "state_content_sha256": "c6e3ca7c6ed22fa9ca2cbd6864d689e2263cf9eb672be237b20ec2f1855b9eaa",
+        "training_cpu_seconds": 120.21022630900006,
+        "updates": 434,
+        "wiki_ce_nats": 1.7623369600447003
+      },
+      {
+        "arm": "fusion",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "2c73b295d4c85d0cbbfc9c3c77e3de763a93d7f590f0b832597d9eebd94282be",
+        "fineweb_ce_nats": 2.104066538336228,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#879 FusionGatedFIRNet (original full forward)",
+        "parameters": 349956,
+        "peak_training_rss_mib": 415.21484375,
+        "seed": 2,
+        "state_content_sha256": "ae644115e9e038f0b276ed8f8e7adf55f157ae29ca6bc3bd780b2f7ecfa2429c",
+        "training_cpu_seconds": 120.02769329700018,
+        "updates": 430,
+        "wiki_ce_nats": 1.7676658744148057
+      },
+      {
+        "arm": "fusion",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "c8be03576dd5252e35a9b5654fdd1ed574fd5f3d6de55892c574002b4331cec4",
+        "fineweb_ce_nats": 2.1625746258286545,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#879 FusionGatedFIRNet (original full forward)",
+        "parameters": 349956,
+        "peak_training_rss_mib": 414.6796875,
+        "seed": 3,
+        "state_content_sha256": "0184d1146b13d917e4dad5ff977bb4ea5eae06c39eff1600995c271ae80c8663",
+        "training_cpu_seconds": 120.20746769700007,
+        "updates": 404,
+        "wiki_ce_nats": 1.7836361760023896
+      },
+      {
+        "arm": "hmsr",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "e4408397a47a6d352b0ffcb22b5d464bbd9abd81e66dccd5b603c7de9cc8d4a7",
+        "fineweb_ce_nats": 2.175659445372491,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#890 gallery screen",
+        "parameters": 349992,
+        "peak_training_rss_mib": 418.2890625,
+        "seed": 1,
+        "state_content_sha256": "b65513e9c562d9eb34365bcbe09b0255f58356ffa75a27d5c9f7c01a56a4793d",
+        "training_cpu_seconds": 120.15505790299994,
+        "updates": 324,
+        "wiki_ce_nats": 1.8297429656720807
+      },
+      {
+        "arm": "span",
+        "cached_serving_audit": "UNSUPPORTED",
+        "checkpoint_file_sha256": "253ae531540bb4e17fb43f02f5d9cdd3f4394f1b592e59f501849a7ddceced19",
+        "fineweb_ce_nats": 2.1158461047966863,
+        "full_sequence_training_audit": "PASSED",
+        "name": "#750 AdaptiveSpanGateConv",
+        "parameters": 349968,
+        "peak_training_rss_mib": 423.8984375,
+        "seed": 1,
+        "state_content_sha256": "87b0726c6c7bb8c5cabb65a8120ec5b52908bfca662f341c71bef13dc692197f",
+        "training_cpu_seconds": 120.19346945200013,
+        "updates": 426,
+        "wiki_ce_nats": 1.781299355135087
+      },
+      {
+        "arm": "wide96",
+        "cached_serving_audit": "FAILED",
+        "checkpoint_file_sha256": "de39c1b09e14194d2debb87c477f662a96cbfda44abaa23d6cc1216895c4afe6",
+        "fineweb_ce_nats": 2.1854463885679305,
+        "full_sequence_training_audit": "PASSED",
+        "name": "T96 Transformer (corrected RoPE)",
+        "parameters": 349920,
+        "peak_training_rss_mib": 372.9375,
+        "seed": 1,
+        "state_content_sha256": "44c0c4cdf5c4e4213b812843fb358cfa0f003a0107b28e1ab2d204cdcdce3fc8",
+        "training_cpu_seconds": 120.0700920119999,
+        "updates": 709,
+        "wiki_ce_nats": 1.8387497687556633
+      },
+      {
+        "arm": "wide96",
+        "cached_serving_audit": "FAILED",
+        "checkpoint_file_sha256": "dd5cf38e492a55c0638e91e09a093326ff30ca675dab508dc2d3f28517016211",
+        "fineweb_ce_nats": 2.202056329117224,
+        "full_sequence_training_audit": "PASSED",
+        "name": "T96 Transformer (corrected RoPE)",
+        "parameters": 349920,
+        "peak_training_rss_mib": 377.03515625,
+        "seed": 2,
+        "state_content_sha256": "5a9345d742f4e8e7cac275d6ef808a3a28fe081ca32a5730a30b520c2a360bc9",
+        "training_cpu_seconds": 120.04521354699982,
+        "updates": 732,
+        "wiki_ce_nats": 1.8186625204161688
+      },
+      {
+        "arm": "wide96",
+        "cached_serving_audit": "PASSED",
+        "checkpoint_file_sha256": "14b9bd05c6276370a3d1f2c1d6dc649b5b58c8e3e296452cefc2a547f23e2ca5",
+        "fineweb_ce_nats": 2.1767092165250785,
+        "full_sequence_training_audit": "PASSED",
+        "name": "T96 Transformer (corrected RoPE)",
+        "parameters": 349920,
+        "peak_training_rss_mib": 376.5703125,
+        "seed": 3,
+        "state_content_sha256": "437a625b22de7275bead047e8e9250d26ac81981c3d181b8e7f8ec7433f50d3c",
+        "training_cpu_seconds": 120.0143293849998,
+        "updates": 730,
+        "wiki_ce_nats": 1.8323608467277086
+      }
+    ],
+    "interval_scope": "Conditional on three fixed seeds and reused clusters. Nominal Bonferroni adjustment over four planned comparisons, not a general architecture confidence interval.",
+    "joint_targets_ce_nats": {
+      "fineweb": 2.1642716566882556,
+      "wiki": 1.819536793257356
+    },
+    "means_final120": {
+      "dlgm": {
+        "fineweb_ce_nats": 2.1033263578652837,
+        "name": "#458 DualScaleMemoryRouter",
+        "parameters": 349944,
+        "seeds": 3,
+        "training_cpu_seconds": 120.17697963166661,
+        "wiki_ce_nats": 1.7622214732471961
+      },
+      "entropy": {
+        "fineweb_ce_nats": 2.190963562090388,
+        "name": "#1081 gallery screen",
+        "parameters": 349941,
+        "seeds": 1,
+        "training_cpu_seconds": 120.38723391900011,
+        "wiki_ce_nats": 1.8416013871574044
+      },
+      "fusion": {
+        "fineweb_ce_nats": 2.1243534556854673,
+        "name": "#879 FusionGatedFIRNet (original full forward)",
+        "parameters": 349956,
+        "seeds": 3,
+        "training_cpu_seconds": 120.14846243433344,
+        "wiki_ce_nats": 1.7712130034872986
+      },
+      "hmsr": {
+        "fineweb_ce_nats": 2.175659445372491,
+        "name": "#890 gallery screen",
+        "parameters": 349992,
+        "seeds": 1,
+        "training_cpu_seconds": 120.15505790299994,
+        "wiki_ce_nats": 1.8297429656720807
+      },
+      "span": {
+        "fineweb_ce_nats": 2.1158461047966863,
+        "name": "#750 AdaptiveSpanGateConv",
+        "parameters": 349968,
+        "seeds": 1,
+        "training_cpu_seconds": 120.19346945200013,
+        "wiki_ce_nats": 1.781299355135087
+      },
+      "wide96": {
+        "fineweb_ce_nats": 2.188070644736744,
+        "name": "T96 Transformer (corrected RoPE)",
+        "parameters": 349920,
+        "seeds": 3,
+        "training_cpu_seconds": 120.04321164799984,
+        "wiki_ce_nats": 1.8299243786331802
+      }
+    },
+    "nominal_training_cpu_seconds": 120,
+    "paired_comparisons": {
+      "fusion_minus_dlgm": {
+        "fineweb": {
+          "all_three_seeds_negative": false,
+          "conditional_cluster_98_75_percent_interval": [
+            0.011799419111951398,
+            0.030178245818546667
+          ],
+          "mean": 0.02102709782018414,
+          "paired_seed_differences": [
+            -0.0016490006780617973,
+            -0.0017250788365121498,
+            0.06645537297512637
+          ],
+          "sample_SD": 0.039342058723920444
+        },
+        "wiki": {
+          "all_three_seeds_negative": false,
+          "conditional_cluster_98_75_percent_interval": [
+            0.0010936841550007572,
+            0.016980109060593263
+          ],
+          "mean": 0.00899153024010236,
+          "paired_seed_differences": [
+            -0.005230575582919779,
+            0.002618732839936715,
+            0.02958643346329014
+          ],
+          "sample_SD": 0.01826240509239225
+        }
+      },
+      "fusion_minus_wide96": {
+        "fineweb": {
+          "all_three_seeds_negative": true,
+          "conditional_cluster_98_75_percent_interval": [
+            -0.08029166405281214,
+            -0.04757594347099877
+          ],
+          "mean": -0.06371718905127692,
+          "paired_seed_differences": [
+            -0.07902718567641055,
+            -0.09798979078099615,
+            -0.01413459069642405
+          ],
+          "sample_SD": 0.04397409058527655
+        },
+        "wiki": {
+          "all_three_seeds_negative": true,
+          "conditional_cluster_98_75_percent_interval": [
+            -0.07394129534138771,
+            -0.041456054664506296
+          ],
+          "mean": -0.058711375145881727,
+          "paired_seed_differences": [
+            -0.07641280871096329,
+            -0.05099664600136295,
+            -0.04872467072531893
+          ],
+          "sample_SD": 0.015371923451799583
+        }
+      }
+    },
+    "precision": "BF16 CPU autocast, FP32 master weights and optimizer",
+    "seeds_main": [
+      1,
+      2,
+      3
+    ],
+    "sustained_target_observed_in_main_arms": false,
+    "training_clock": "Minibatch construction through optimizer update and finite checks; excludes snapshots, hashing, I/O and evaluation.",
+    "twofold_time_to_quality_supported": false
+  }
+}
