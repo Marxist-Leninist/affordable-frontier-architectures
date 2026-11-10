@@ -1,0 +1,13 @@
+{
+  "gpt2_training_start_token_id": 50256,
+  "gpt2_start_token_text": "<|endoftext|>",
+  "qwen3_training_start_token_id": 151645,
+  "qwen3_06b_and_235b_tokenizer_config_identical": true,
+  "qwen3_tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+  "hardware": "Intel Xeon Processor (Skylake, IBRS, no TSX), CPU only",
+  "threads": 1,
+  "nice": 19,
+  "source_hash_train": "5d949a2f2f7bc29358d856245f8b0d3c605ff558016b7b687b33dc529cdebd00",
+  "source_hash_prepare": "8e23d9db5707538d350292e4a459ac14806944d77d13481b6fd9665f3b0e95ee",
+  "notes": "GPT-2 tokenizer_config does not declare special tokens; the training script assigns the existing <|endoftext|> token as its start marker. No new token is added."
+}

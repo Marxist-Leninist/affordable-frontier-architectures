@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "arm": "gpt2",
+      "seed": 1,
+      "checkpoint_sha256": "10374f66c7e6e93ed5f4c18c6f39416d2374068123bd3d7a86052eefb802bcbe",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "gpt2",
+      "seed": 2,
+      "checkpoint_sha256": "93322157a2adeb268606e8b1701404936e6d29ec962565123d72277b3e0233f7",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "gpt2",
+      "seed": 3,
+      "checkpoint_sha256": "8b9988114f9fbb7562ccacd20205c44e0a532549677206d404b2057161d38122",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "qwen3",
+      "seed": 1,
+      "checkpoint_sha256": "5e96ce83d66467df64dc1c1ec540e1264a7a9a694ff0dc359e55d7369c06d55f",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "qwen3",
+      "seed": 2,
+      "checkpoint_sha256": "321ba91f75bdaee3c819b3473073dc2c3af45113b43353e7802e677b6d4919bf",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "qwen3",
+      "seed": 3,
+      "checkpoint_sha256": "b4e4bc560d2fb568980ab6bc928c400b34cef2049b767787e6638ee2969e59a3",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "gpt2_padded",
+      "seed": 1,
+      "checkpoint_sha256": "2e2be7e8b5baa9ee7338bbc61b08e880c21b6d68e9569d2751ef84cfefe8a5ff",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "gpt2_padded",
+      "seed": 2,
+      "checkpoint_sha256": "82b41bb0cfe33fdadf5a2547c1d90f1824a7a76b25941d746b88fdabc35de2fe",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    },
+    {
+      "arm": "gpt2_padded",
+      "seed": 3,
+      "checkpoint_sha256": "ebf513b84a3083794a18e58a37e6864081ab1d11c4ec53d864131a48a4f11af9",
+      "reload_nll_matches": true,
+      "causality_passed_during_training": true
+    }
+  ],
+  "exact_cross_split_duplicate_check": true
+}

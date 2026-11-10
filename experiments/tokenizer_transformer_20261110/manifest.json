@@ -1,0 +1,64 @@
+{
+  "dataset": "Salesforce/wikitext",
+  "config": "wikitext-2-raw-v1",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "license": "CC-BY-SA-3.0 and GFDL per card",
+  "tokenizers": {
+    "gpt2": {
+      "repo": "openai-community/gpt2",
+      "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+      "files": {
+        "tokenizer.json": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+        "tokenizer_config.json": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f"
+      },
+      "vocab_size": 50257,
+      "eos": null
+    },
+    "qwen3": {
+      "repo": "Qwen/Qwen3-235B-A22B",
+      "revision": "8efa61729e24bd65b1d152b5ab5409052aa80e65",
+      "files": {
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      "vocab_size": 151669,
+      "eos": 151645
+    }
+  },
+  "splits": {
+    "train": {
+      "parquet_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "samples": 10000,
+      "bytes": 1571589,
+      "duplicates_removed": 1,
+      "text_sha256": "a67343436e58d6ec881989b288d86c9d94af4a9524b9e473ebbc2d5f795e2a2d",
+      "tokens": {
+        "gpt2": 344844,
+        "qwen3": 363744
+      }
+    },
+    "validation": {
+      "parquet_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+      "samples": 128,
+      "bytes": 19928,
+      "duplicates_removed": 0,
+      "text_sha256": "78218f1087d5a31d9daa8d5ff8e3181cc6965ed9fb8db99af4b73a1ae3b06a45",
+      "tokens": {
+        "gpt2": 4527,
+        "qwen3": 4949
+      }
+    },
+    "test": {
+      "parquet_sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+      "samples": 128,
+      "bytes": 20107,
+      "duplicates_removed": 0,
+      "text_sha256": "043db50d8cde73b939f2b1b9048d2d7abbfc11789fb23179a3aa379b41973a79",
+      "tokens": {
+        "gpt2": 4478,
+        "qwen3": 4659
+      }
+    }
+  },
+  "qwen06_tokenizer_same_as_235b": true
+}

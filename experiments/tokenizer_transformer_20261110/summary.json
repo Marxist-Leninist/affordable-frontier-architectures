@@ -1,0 +1,310 @@
+{
+  "arms": {
+    "gpt2": {
+      "parameters": 3320128,
+      "trunk_parameters": 103680,
+      "matched_512_raw_segments": {
+        "test_bpb_seeds": [
+          2.5287594547922487,
+          2.534095510814031,
+          2.545369068606051
+        ],
+        "test_bpb_mean": 2.536074678070777,
+        "test_bpb_stdev": 0.008479837559384317,
+        "validation_bpb_seeds": [
+          2.648168015151925,
+          2.6195485963889196,
+          2.6378727776927353
+        ],
+        "training_cpu_seconds": [
+          37.000910597000015,
+          36.60254011999996,
+          36.33026401900001
+        ],
+        "training_wall_seconds": [
+          37.2190226605162,
+          36.61008832603693,
+          36.335923289414495
+        ],
+        "steps": [
+          128,
+          128,
+          128
+        ],
+        "raw_bytes_seen": [
+          80669,
+          81026,
+          80353
+        ],
+        "tokens_seen": [
+          17738,
+          17908,
+          17488
+        ]
+      },
+      "fixed_cpu_endpoint": {
+        "test_bpb_seeds": [
+          2.4159586807441245,
+          2.4223423099755608,
+          2.426597999296284
+        ],
+        "test_bpb_mean": 2.4216329966719896,
+        "test_bpb_stdev": 0.005355008761482001,
+        "validation_bpb_seeds": [
+          2.486704718547486,
+          2.503852238602646,
+          2.500848754024294
+        ],
+        "training_cpu_seconds": [
+          240.20595327700005,
+          240.08824674000024,
+          240.0163248349997
+        ],
+        "training_wall_seconds": [
+          240.5135800773278,
+          240.5177740463987,
+          241.15073527069762
+        ],
+        "steps": [
+          841,
+          833,
+          814
+        ],
+        "raw_bytes_seen": [
+          529130,
+          525027,
+          511154
+        ],
+        "tokens_seen": [
+          115902,
+          115328,
+          112045
+        ]
+      }
+    },
+    "qwen3": {
+      "parameters": 9810496,
+      "trunk_parameters": 103680,
+      "matched_512_raw_segments": {
+        "test_bpb_seeds": [
+          2.6503964155567763,
+          2.6670718528370183,
+          2.671260135564785
+        ],
+        "test_bpb_mean": 2.6629094679861933,
+        "test_bpb_stdev": 0.011037109625165855,
+        "validation_bpb_seeds": [
+          2.8282420720802213,
+          2.799699555728922,
+          2.805341847100857
+        ],
+        "training_cpu_seconds": [
+          154.365474578,
+          164.24300828100007,
+          154.5898477479999
+        ],
+        "training_wall_seconds": [
+          154.55573786282912,
+          164.40362258255482,
+          154.72493680287153
+        ],
+        "steps": [
+          128,
+          128,
+          128
+        ],
+        "raw_bytes_seen": [
+          80669,
+          81026,
+          80353
+        ],
+        "tokens_seen": [
+          18842,
+          18927,
+          18491
+        ]
+      },
+      "fixed_cpu_endpoint": {
+        "test_bpb_seeds": [
+          2.616518994868376,
+          2.642484491165074,
+          2.650060998563457
+        ],
+        "test_bpb_mean": 2.636354828198969,
+        "test_bpb_stdev": 0.017591079529941923,
+        "validation_bpb_seeds": [
+          2.7801928054239538,
+          2.774726327131412,
+          2.7861657464565157
+        ],
+        "training_cpu_seconds": [
+          240.43593542299985,
+          241.07283851500046,
+          240.10821365900006
+        ],
+        "training_wall_seconds": [
+          240.8108662883751,
+          243.83257384970784,
+          240.33940581185743
+        ],
+        "steps": [
+          194,
+          190,
+          199
+        ],
+        "raw_bytes_seen": [
+          122208,
+          120095,
+          124971
+        ],
+        "tokens_seen": [
+          28563,
+          27959,
+          28820
+        ]
+      }
+    },
+    "gpt2_padded": {
+      "parameters": 9810496,
+      "trunk_parameters": 103680,
+      "matched_512_raw_segments": {
+        "test_bpb_seeds": [
+          2.6137346147222864,
+          2.6197719936015593,
+          2.632074522319239
+        ],
+        "test_bpb_mean": 2.6218603768810285,
+        "test_bpb_stdev": 0.009346606935549718,
+        "validation_bpb_seeds": [
+          2.746972606204985,
+          2.7112911221897606,
+          2.724589770214696
+        ],
+        "training_cpu_seconds": [
+          150.1007388170002,
+          154.96057754499992,
+          145.16452653899987
+        ],
+        "training_wall_seconds": [
+          150.40110656106845,
+          155.10373518802226,
+          145.20232597365975
+        ],
+        "steps": [
+          128,
+          128,
+          128
+        ],
+        "raw_bytes_seen": [
+          80669,
+          81026,
+          80353
+        ],
+        "tokens_seen": [
+          17738,
+          17908,
+          17488
+        ]
+      },
+      "fixed_cpu_endpoint": {
+        "test_bpb_seeds": [
+          2.5784885702113836,
+          2.5982060223188492,
+          2.5999219781871514
+        ],
+        "test_bpb_mean": 2.5922055235724613,
+        "test_bpb_stdev": 0.011910173519641888,
+        "validation_bpb_seeds": [
+          2.6959549877602687,
+          2.6739763445537297,
+          2.682688784873437
+        ],
+        "training_cpu_seconds": [
+          240.73554393900017,
+          240.09866736200001,
+          241.01542536499986
+        ],
+        "training_wall_seconds": [
+          241.0491171469912,
+          240.32058750232682,
+          241.19019827712327
+        ],
+        "steps": [
+          204,
+          203,
+          211
+        ],
+        "raw_bytes_seen": [
+          128456,
+          128344,
+          132609
+        ],
+        "tokens_seen": [
+          28350,
+          28221,
+          28922
+        ]
+      }
+    }
+  },
+  "unigram_full_train": {
+    "gpt2": {
+      "test_bpb": 2.434700028944884,
+      "smoothing": 1,
+      "note": "Trained on all retained training segments, not compute/data matched to Transformer endpoints."
+    },
+    "qwen3": {
+      "test_bpb": 2.5527251470452694,
+      "smoothing": 1,
+      "note": "Trained on all retained training segments, not compute/data matched to Transformer endpoints."
+    },
+    "gpt2_padded": {
+      "test_bpb": 2.508106979410358,
+      "smoothing": 1,
+      "note": "Trained on all retained training segments, not compute/data matched to Transformer endpoints."
+    }
+  },
+  "scope": "Small from-scratch language modelling; not an intelligence benchmark",
+  "paired_differences": {
+    "matched_512_raw_segments_qwen_minus_gpt2": {
+      "seeds": [
+        0.12163696076452757,
+        0.13297634202298747,
+        0.12589106695873387
+      ],
+      "mean": 0.1268347899154163,
+      "stdev": 0.005728293951553551,
+      "interpretation": "Positive means worse canonical text likelihood for Qwen3 in this experiment only."
+    },
+    "matched_512_raw_segments_qwen_minus_gpt2_padded": {
+      "seeds": [
+        0.03666180083448989,
+        0.047299859235458985,
+        0.0391856132455457
+      ],
+      "mean": 0.04104909110516486,
+      "stdev": 0.005558460572458474,
+      "interpretation": "Positive means worse canonical text likelihood for Qwen3 in this experiment only."
+    },
+    "fixed_cpu_endpoint_qwen_minus_gpt2": {
+      "seeds": [
+        0.20056031412425135,
+        0.22014218118951323,
+        0.22346299926717306
+      ],
+      "mean": 0.2147218315269792,
+      "stdev": 0.012376121748635604,
+      "interpretation": "Positive means worse canonical text likelihood for Qwen3 in this experiment only."
+    },
+    "fixed_cpu_endpoint_qwen_minus_gpt2_padded": {
+      "seeds": [
+        0.038030424656992246,
+        0.04427846884622477,
+        0.05013902037630569
+      ],
+      "mean": 0.04414930462650757,
+      "stdev": 0.0060553311321665405,
+      "interpretation": "Positive means worse canonical text likelihood for Qwen3 in this experiment only."
+    }
+  }
+}
