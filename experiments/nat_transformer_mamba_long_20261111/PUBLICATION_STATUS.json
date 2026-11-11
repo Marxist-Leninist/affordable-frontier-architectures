@@ -1,6 +1,6 @@
 {
-  "status": "code_reports_results_complete_checkpoints_pending",
-  "published_release_files": 109,
-  "pending_checkpoint_files": 18,
-  "note": "All reviewed code, reports, figures, sanitized metrics and result files published. The18checkpoints listed by manifests remain pending separate upload verification. FILE_MANIFEST alone is not a publication receipt."
+  "status": "github_reviewed_release_complete",
+  "published_release_files": 127,
+  "checkpoint_files": 18,
+  "note": "All reviewed long-run release files present in this GitHub tree. Hugging Face publication status is tracked separately; its quota may prevent weights."
 }
