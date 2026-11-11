@@ -1,0 +1,25 @@
+{
+  "bootstrap_performed": false,
+  "component_rows": 54,
+  "evaluated_checkpoints": 18,
+  "figures": [
+    "matched_step_bpb.svg",
+    "matched_step_accuracy.svg",
+    "matched_step_exact_match.svg",
+    "cpu_300_bpb.svg",
+    "cpu_300_accuracy.svg",
+    "cpu_300_exact_match.svg",
+    "cpu_900_bpb.svg",
+    "cpu_900_accuracy.svg",
+    "cpu_900_exact_match.svg",
+    "architecture.svg",
+    "paired_bpb_differences.svg",
+    "training_timing.svg"
+  ],
+  "interpretation": "Three paired seeds, descriptive only. No partial comparison or sweep result.",
+  "model_compute_performed": false,
+  "paired_metric_rows": 81,
+  "publication_performed": false,
+  "runs": 6,
+  "status": "completed"
+}

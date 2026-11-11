@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "original_sources_unchanged": true,
+  "amended_sources_match_freeze": true,
+  "pure_mock_tests": 8,
+  "review": "Separate fixed8 all-count and64-window 0/2/100 cohort; original calibration reused by hash; actual prior and new setup debit combined7200 deadline; same1200 cumulative checkpoint caps; standard18checkpoint completion and hash gates before data; no model execution in this review.",
+  "source_manifest_sha256": "9dee44fe7ef011b33c9719f26703b15443e9796be410c908ea412ba31b401dc2"
+}

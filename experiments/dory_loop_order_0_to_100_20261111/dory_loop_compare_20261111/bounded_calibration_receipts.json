@@ -1,0 +1,8 @@
+{
+  "original_source_manifest_sha256": "7bb5c404c9d141dc91a865fb8700d3948f7bca1ad569ec7af31d7484295dd17e",
+  "receipts_sha256": {
+    "calibration_raw.json": "44ed63fbf0b28ff6ed83aeedad342385ee13951b88c0f7981105e07c362ebe80",
+    "cohort_selection.json": "ac706b2cf4f8a262799dbcdbad4f6c3f54185587fe84ef9c47b0e86ba8a9def9",
+    "blocker.json": "f06dd016654c8becfbf32780ae40973b4a6b966b601d0c1c26ce7a562786843a"
+  }
+}

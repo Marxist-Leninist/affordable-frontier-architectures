@@ -1,0 +1,410 @@
+{
+  "checkpoint_bytes_unchanged": true,
+  "checkpoint_static_scans": [
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s1/cpu_300.pt",
+      "pickle_bytes": 85212,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s1/matched_step.pt",
+      "pickle_bytes": 85218,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s1/cpu_900.pt",
+      "pickle_bytes": 85213,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/cpu_300.pt",
+      "pickle_bytes": 85213,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/matched_step.pt",
+      "pickle_bytes": 85218,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/cpu_900.pt",
+      "pickle_bytes": 85212,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s2/cpu_300.pt",
+      "pickle_bytes": 85210,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s2/matched_step.pt",
+      "pickle_bytes": 85215,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s2/cpu_900.pt",
+      "pickle_bytes": 85210,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/cpu_300.pt",
+      "pickle_bytes": 85210,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/matched_step.pt",
+      "pickle_bytes": 85215,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/cpu_900.pt",
+      "pickle_bytes": 85213,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s3/cpu_300.pt",
+      "pickle_bytes": 85211,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s3/matched_step.pt",
+      "pickle_bytes": 85217,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/split_s3/cpu_900.pt",
+      "pickle_bytes": 85209,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/cpu_300.pt",
+      "pickle_bytes": 85212,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/matched_step.pt",
+      "pickle_bytes": 85217,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    },
+    {
+      "limitation": "Static metadata inspection does not reconstruct state or prove arbitrary pickle safety; exact training file hashes also required.",
+      "method": "zipfile plus pickletools.genops; no deserialization",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/cpu_900.pt",
+      "pickle_bytes": 85210,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch ByteStorage",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "required_state_keys_observed": [
+        "meta",
+        "model",
+        "numpy_rng",
+        "optimizer",
+        "param_groups",
+        "state",
+        "torch_rng"
+      ]
+    }
+  ],
+  "checks": [
+    "Exact explicit destination allowlist",
+    "No symlinks",
+    "UTF-8 text/JSON privacy-pattern scan",
+    "Potential raw text/token-array JSON keys rejected",
+    "Python AST parse, no experiment execution",
+    "All 18 full checkpoint training SHA-256 matches",
+    "Checkpoint zip members/pickle strings/globals inspected without deserialization",
+    "Report input/artifact SHA-256 verification",
+    "Source stability rechecked immediately before and after copying"
+  ],
+  "exclusions": [
+    "Original prepared README",
+    "prelaunch_history",
+    "private_backups",
+    "data_cache and raw corpus/token arrays",
+    "progress logs and live locks",
+    "__pycache__ and compiled binaries",
+    "QA fixtures and preview images",
+    "authorization, internal coordination and transfer/publication receipts",
+    "Private source code and pretrained NVIDIA weights"
+  ],
+  "frozen_sources_unchanged": true,
+  "limitations": "Pattern and structural checks cannot guarantee absence of every kind of personal information or prove arbitrary pickle safety. No tensor deserialization or numerical checkpoint conversion is performed.",
+  "numerical_metrics_unchanged": true,
+  "policy": "Fail closed rather than modify numerical JSON, frozen sources or original full checkpoint bytes",
+  "redactions": []
+}

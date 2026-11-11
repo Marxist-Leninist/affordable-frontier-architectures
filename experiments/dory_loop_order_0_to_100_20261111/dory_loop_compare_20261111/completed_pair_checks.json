@@ -1,0 +1,23 @@
+{
+  "training_only_checks": {
+    "1": {
+      "identical_initial_parameters": true,
+      "matched_step_data_hash_identical": true,
+      "checkpoint_hashes_verified": true
+    },
+    "2": {
+      "identical_initial_parameters": true,
+      "matched_step_data_hash_identical": true,
+      "checkpoint_hashes_verified": true
+    },
+    "3": {
+      "identical_initial_parameters": true,
+      "matched_step_data_hash_identical": true,
+      "checkpoint_hashes_verified": true
+    }
+  },
+  "all_six_fits_complete": true,
+  "total_training_update_cpu_seconds": 5401.134206171004,
+  "max_training_process_peak_rss_kib": 689996,
+  "heldout_scoring": "This audit opened no held-out corpus or scores. Standard held-out checkpoint evaluation is a separate running phase."
+}

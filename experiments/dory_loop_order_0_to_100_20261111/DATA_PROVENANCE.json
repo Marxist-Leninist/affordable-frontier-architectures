@@ -1,0 +1,22 @@
+{
+  "corpus_bytes_included": false,
+  "datasets": {
+    "FineWeb-Edu": {
+      "config": "sample-10BT",
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "download_script": "frontier_research_v31/prepare_data.py",
+      "manifest": "frontier_research_v31/data_manifest.json",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "rows": "1500-1599"
+    },
+    "WikiText": {
+      "config": "wikitext-2-raw-v1",
+      "dataset": "Salesforce/wikitext",
+      "download_script": "frontier_research_v8/prepare_data.py",
+      "manifest": "frontier_research_v8/data_manifest.json",
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3"
+    }
+  },
+  "notes": "Pinned retrieval scripts and numerical manifests reused byte-for-byte from the prior public NAT release. FineWeb viewer fails closed if revision/content changes. Read THIRD_PARTY_NOTICES.md before fetching or redistributing data.",
+  "raw_token_arrays_included": false
+}

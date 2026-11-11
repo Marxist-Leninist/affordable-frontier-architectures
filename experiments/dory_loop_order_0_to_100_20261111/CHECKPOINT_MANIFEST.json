@@ -1,0 +1,204 @@
+{
+  "count": 18,
+  "files": [
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s1/cpu_300.pt",
+      "seed": 1,
+      "sha256": "250dfb18024fe4aa35cd232b465aad4e8d9317450e40fabbad4649117f754fbe",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 702,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.23827953700095
+    },
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s1/cpu_900.pt",
+      "seed": 1,
+      "sha256": "95457e583f790ea284b5e0ff3c1e11d5149a30abe13d23f5ddcbef360d8a09c9",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2098,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.2337432400021
+    },
+    {
+      "bytes": 9433677,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s1/matched_step.pt",
+      "seed": 1,
+      "sha256": "4c93c0798da8d15d61893d086a0b3d8e9035e733b028a3316938da83d36540f3",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 858.2938731500019
+    },
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s2/cpu_300.pt",
+      "seed": 2,
+      "sha256": "1b927e41380ddf04de5ce6e9f2c3c55cc7222a1d29d49de6e6db4153a5a560da",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 699,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.3619357890002
+    },
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s2/cpu_900.pt",
+      "seed": 2,
+      "sha256": "eb740f7df33b94b50da078e9059bc38bb75dc4f8f919ba2507fa5c02f0ea3403",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2089,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.3525226049989
+    },
+    {
+      "bytes": 9433677,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s2/matched_step.pt",
+      "seed": 2,
+      "sha256": "196461bca04458030ca0443ff2ef6af5224032b10e5879600b733a6b01ca59f3",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 861.7962798789985
+    },
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s3/cpu_300.pt",
+      "seed": 3,
+      "sha256": "f7503845ae9647b3a674067e3519c7f6a69a2efea4397e9150b8f31b988a2c6f",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 692,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.18647963500024
+    },
+    {
+      "bytes": 9428824,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s3/cpu_900.pt",
+      "seed": 3,
+      "sha256": "cd8ea094c76d8a348ff44211119f07beac3a8845e4fc67a49296d9795dba1e81",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2098,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.038323363
+    },
+    {
+      "bytes": 9433677,
+      "kind": "split",
+      "path": "dory_loop_compare_20261111/runs/split_s3/matched_step.pt",
+      "seed": 3,
+      "sha256": "f33b30b01bd2d5599bab80fe14e9acaf8608820aa13e037e152700b9a4f31b26",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 857.8486578840001
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/cpu_300.pt",
+      "seed": 1,
+      "sha256": "4f074fb03e7e272c3f6c4caa80518f26118396567f14d9edad7cadfd8a9f0e92",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 701,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.17596311399933
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/cpu_900.pt",
+      "seed": 1,
+      "sha256": "d866f15f330454664776780bd598c6771a91d61896095e417b0958cd1073068c",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2105,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.237369322
+    },
+    {
+      "bytes": 9433677,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s1/matched_step.pt",
+      "seed": 1,
+      "sha256": "2341e43cea6ae42d48eeb382f46fdf498782cfbb14bf1f0290bf0a2b8793bae9",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 854.8555435290001
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/cpu_300.pt",
+      "seed": 2,
+      "sha256": "5f31848a05e005c6c0924d1fa78fbc8fa61665fb258d2bc6297200ae81fce9d6",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 691,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.28884884799965
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/cpu_900.pt",
+      "seed": 2,
+      "sha256": "d4370c98d4145407322896369afc1bd8c7f15259fa6f026806ce42b9e2037424",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2086,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.1297085530018
+    },
+    {
+      "bytes": 9433677,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s2/matched_step.pt",
+      "seed": 2,
+      "sha256": "70dadbb9902858c4561d515dfb6d28a6bb1f3b7acc464cef059d61704bf83907",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 863.497499656002
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/cpu_300.pt",
+      "seed": 3,
+      "sha256": "097e3cf831d6d4d5d504b2cdbf8d19a789223e39c7e5c6a6285fdde625941428",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 708,
+      "tag": "cpu_300",
+      "training_cpu_seconds": 300.38415397999984
+    },
+    {
+      "bytes": 9428824,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/cpu_900.pt",
+      "seed": 3,
+      "sha256": "89f10ebda18dcd09c8662f943a87a33d30d413dc7f50ccde05ef13710e798a49",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2117,
+      "tag": "cpu_900",
+      "training_cpu_seconds": 900.142539088001
+    },
+    {
+      "bytes": 9433677,
+      "kind": "whole",
+      "path": "dory_loop_compare_20261111/runs/whole_s3/matched_step.pt",
+      "seed": 3,
+      "sha256": "dee75545764c6adb619307c6b1681962db86cd91c85ebe7b1abdda7aa7062cf2",
+      "state": "Original full PyTorch model, optimizer, NumPy RNG, Torch RNG and metadata; not converted",
+      "step": 2000,
+      "tag": "matched_step",
+      "training_cpu_seconds": 850.3601170700005
+    }
+  ],
+  "security": "Verify full SHA-256 against this manifest before loading. Full original torch checkpoints can require trusted pickle loading in frozen evaluation scripts; do not load untrusted checkpoints. The packager never deserializes them."
+}

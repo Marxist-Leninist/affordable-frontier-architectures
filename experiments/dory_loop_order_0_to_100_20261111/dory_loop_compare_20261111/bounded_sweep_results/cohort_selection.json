@@ -1,0 +1,55 @@
+{
+  "status": "selected",
+  "windows_per_domain": 8,
+  "selected_windows_per_domain": 64,
+  "selected_counts": [
+    0,
+    2,
+    100
+  ],
+  "predicted_seconds_per_checkpoint": {
+    "split_1": 555.4160142979808,
+    "whole_1": 669.9808130342572,
+    "whole_2": 604.0517620862229,
+    "split_2": 551.877376058496,
+    "split_3": 677.8247596877336,
+    "whole_3": 549.0994447881149
+  },
+  "global_bound_seconds": 6094.758148733203,
+  "prior_elapsed_debited_seconds": 81.06850944599864,
+  "new_setup_debited_seconds": 1.3143843579964596,
+  "checkpoint_hashes": {
+    "split_1": "4c93c0798da8d15d61893d086a0b3d8e9035e733b028a3316938da83d36540f3",
+    "whole_1": "2341e43cea6ae42d48eeb382f46fdf498782cfbb14bf1f0290bf0a2b8793bae9",
+    "whole_2": "70dadbb9902858c4561d515dfb6d28a6bb1f3b7acc464cef059d61704bf83907",
+    "split_2": "196461bca04458030ca0443ff2ef6af5224032b10e5879600b733a6b01ca59f3",
+    "split_3": "f33b30b01bd2d5599bab80fe14e9acaf8608820aa13e037e152700b9a4f31b26",
+    "whole_3": "dee75545764c6adb619307c6b1681962db86cd91c85ebe7b1abdda7aa7062cf2"
+  },
+  "envelopes": {
+    "split_1": {
+      "a": 0.039606425001693424,
+      "b": 0.046497989093722936
+    },
+    "whole_1": {
+      "a": 0.0393342949973885,
+      "b": 0.056268943000759464
+    },
+    "whole_2": {
+      "a": 0.03835815499769524,
+      "b": 0.05067015200620517
+    },
+    "split_2": {
+      "a": 0.038777708999987226,
+      "b": 0.046214025640001634
+    },
+    "split_3": {
+      "a": 0.03810980999696767,
+      "b": 0.056963630002428545
+    },
+    "whole_3": {
+      "a": 0.039867445004347246,
+      "b": 0.04595402178119912
+    }
+  }
+}
