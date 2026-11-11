@@ -1,0 +1,41 @@
+{
+  "publication_scope": "Completed reversible Transformer source/results and all18 small checkpoints only.",
+  "private_data_audit": {
+    "no_corpus_text": true,
+    "no_credentials_or_authentication_files": true,
+    "no_personal_data": true,
+    "checkpoint_payload": "Fresh local research model/optimizer/RNG state; no production weights."
+  },
+  "original_experiment_files_unchanged": true,
+  "source_code_files_byte_identical": true,
+  "public_documentation_modified": [
+    "README.md",
+    "REPORT.md",
+    "RESULTS_STATUS.md",
+    "PROTOCOL.md"
+  ],
+  "modification_purpose": "Remove local queue/scheduling details and replace historical preparation status with completed-study status. No numerical findings altered.",
+  "omitted": [
+    "local queue launcher",
+    "preparation-only readiness records",
+    "private tool or authorization transcripts",
+    "corpus text",
+    "unrelated files"
+  ],
+  "license_access_visibility_changes": false,
+  "original_source_hashes": {
+    "INVERSE_ATLAS.md": "82fdcebf4e0c073805763b69b7812c8b6f4e90e8c2f1912169de39907aec3445",
+    "PROTOCOL.md": "5469953ad77bd7c11c4ff8375f29e481fec2468157dda8fe0489656260de1173",
+    "README.md": "1e6f3a85f726f36ec99b2b990798769e0619f45ecd2e7df66bc8e1744a8f700f",
+    "VISUALIZATION_SPEC.md": "0ca670aced06c783f5d0cd11c59a85d7a6397103f51733cb4673afc5b5c51879",
+    "checks.py": "11373d4f96da957577dca03197871e9f182111c45acd37f9297a96cae54a9cef",
+    "compute_accounting.py": "2b9b536b4bf457f97d6b2b17d53bf9782225b8238de616501d6841e6ac42d4af",
+    "data.py": "17f859972139d03ad30d56ef7d1fcbe50d566a50a5390cffdd0b4e4701defac3",
+    "launch.py": "b0f64a9986b123be57056888836168eeac631b6b5f285b89391e41262be93848",
+    "memory_probe.py": "bc8d90f27987a7b25521d3d9fabb1ecfc1ea1ed8ecadce9ffd19d1e7901830ec",
+    "models.py": "85fe9e264bc13862ef41d983ccb7739550aad423bf7d4e70014505a5e1afeae2",
+    "prepare_data.py": "99ab00ee0573a61217083d65d799554439df83aa831fa6af195f3e7dd7658ea7",
+    "report.py": "91a446424c653f7ed32f842979031faeb929886477bfcfb0ca8c6cdab1b3341b",
+    "study.py": "6dcec1fa316fd1271647ce26863f3d43e5a1383ef7d64508b0ebda1781de0237"
+  }
+}

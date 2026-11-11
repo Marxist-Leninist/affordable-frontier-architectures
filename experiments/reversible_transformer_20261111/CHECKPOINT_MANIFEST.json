@@ -1,0 +1,114 @@
+{
+  "count": 18,
+  "files": [
+    {
+      "path": "checkpoint_s11_ordinary_equal_cpu.pt",
+      "bytes": 1165554,
+      "sha256": "1bdf54ff243191a4f706053a473a24df6765bd3a732743e3afe7fba6422073d6",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s11_ordinary_equal_data.pt",
+      "bytes": 1165767,
+      "sha256": "fb179a251af23500ea175e4e04fac7148ed61b16d8a195aefd1688f7032a230a",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s11_reversible_graph_equal_cpu.pt",
+      "bytes": 1167258,
+      "sha256": "4982a8c1c5822a9025c5dfb0e8ec2a49d3fccadd9997a087166ae8184e573e11",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s11_reversible_graph_equal_data.pt",
+      "bytes": 1167471,
+      "sha256": "97e65b2ae1303b5dc36b7f8ad89ffec8c9be0c63c646bd58ba5bde75a38fa8bd",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s11_reversible_inverse_equal_cpu.pt",
+      "bytes": 1167684,
+      "sha256": "e35a139e8ec0f2bf1aea83c9140e0ea6bd79be90bd59eda4b7e2c6c18e5d018f",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s11_reversible_inverse_equal_data.pt",
+      "bytes": 1167897,
+      "sha256": "cd96d31cc0af02184638cf61f895b9d2711ba609959654e362f17a7b0379e7c0",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_ordinary_equal_cpu.pt",
+      "bytes": 1165554,
+      "sha256": "cf869fd0b83bc88f559d6a4e20c6eb9a70ea17d01946f62d37f4591f4a9075f6",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_ordinary_equal_data.pt",
+      "bytes": 1165767,
+      "sha256": "dcff480f64ed84723946db4174428639db5ad7fb6f1c6272f37fddf824037618",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_reversible_graph_equal_cpu.pt",
+      "bytes": 1167258,
+      "sha256": "cbfa2b37282db2e3a98ee4399ec62042d820513ccc9166ec6d3bd39cb7678e3f",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_reversible_graph_equal_data.pt",
+      "bytes": 1167471,
+      "sha256": "2aaf147a0c102fa5c9af9c231661f04e730795162833f45858edd76e93e4aaa1",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_reversible_inverse_equal_cpu.pt",
+      "bytes": 1167684,
+      "sha256": "e30b2a4268e931354ae9829499cd292abca8931a0b070627e99239c06a64fdb3",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s22_reversible_inverse_equal_data.pt",
+      "bytes": 1167897,
+      "sha256": "92e18f60dc21d60206d4a4bebd280034835aa4219015787dbc91ab275da8fc05",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_ordinary_equal_cpu.pt",
+      "bytes": 1165554,
+      "sha256": "076137bbd6d9a63f7f9e7eac900200d08e844e8265b7930a42b0024357845f4e",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_ordinary_equal_data.pt",
+      "bytes": 1165767,
+      "sha256": "461ee46913599e0ab5293aff72e9f896ee39b7d2b779166b40cdd25ea1bdf068",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_reversible_graph_equal_cpu.pt",
+      "bytes": 1167258,
+      "sha256": "af2ba0918e0b32b0ee5b9b7be142697072c3b8236ee89670251d6566fba48cd2",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_reversible_graph_equal_data.pt",
+      "bytes": 1167471,
+      "sha256": "660048338fe529d7b5459add1315b2f43456d532007b39cbc140135c811d4e72",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_reversible_inverse_equal_cpu.pt",
+      "bytes": 1167684,
+      "sha256": "1bebcf3e6d51f76efd154cb49c1091de1341504a6bddda891e7bfd6fb5bfd686",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    },
+    {
+      "path": "checkpoint_s33_reversible_inverse_equal_data.pt",
+      "bytes": 1167897,
+      "sha256": "00aae527c83cbccfb4456d9ebecdaab8f9810f28c09d444bdaf313997bba8e90",
+      "contents": "model state_dict, optimizer state_dict, training RNG state, step"
+    }
+  ],
+  "total_bytes": 21004893
+}

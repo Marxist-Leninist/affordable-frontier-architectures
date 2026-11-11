@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_hashes_unchanged_after_freeze": true,
+  "all9_fits_and18_endpoints_present": true,
+  "paired_equal_data_sequence_hashes_match": true,
+  "all18_checkpoint_file_hashes_match": true,
+  "nll_bpb_and_perwindow_aggregation_match": true,
+  "resource_caps_satisfied": true,
+  "all_children_reaped": true,
+  "method": "Post-run standard-library artifact audit; no additional model execution."
+}

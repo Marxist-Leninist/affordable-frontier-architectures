@@ -1,0 +1,60 @@
+{
+  "mode": "ordinary",
+  "depth": 12,
+  "batch": 8,
+  "context": 64,
+  "parameters": 242976,
+  "parameter_bytes": 971904,
+  "optimizer_tensor_bytes": 1944400,
+  "retained_forward_nonparameter_storage_bytes": 15086084,
+  "unique_saved_storages": 165,
+  "baseline_import_peak_rss_bytes": 234749952,
+  "whole_process_peak_rss_bytes": 351219712,
+  "timings": [
+    {
+      "cpu_seconds": 0.036223879000000014,
+      "wall_seconds": 0.03642300899809925
+    },
+    {
+      "cpu_seconds": 0.03605862400000004,
+      "wall_seconds": 0.036114843998802826
+    },
+    {
+      "cpu_seconds": 0.03600250100000002,
+      "wall_seconds": 0.03601865800010273
+    },
+    {
+      "cpu_seconds": 0.035066143999999966,
+      "wall_seconds": 0.03530485100054648
+    },
+    {
+      "cpu_seconds": 0.03555730300000004,
+      "wall_seconds": 0.03563072300312342
+    },
+    {
+      "cpu_seconds": 0.035913419999999974,
+      "wall_seconds": 0.03591586399852531
+    },
+    {
+      "cpu_seconds": 0.036143040000000015,
+      "wall_seconds": 0.03633906300092349
+    },
+    {
+      "cpu_seconds": 0.035795676,
+      "wall_seconds": 0.03587545300251804
+    },
+    {
+      "cpu_seconds": 0.035229387,
+      "wall_seconds": 0.03526101399620529
+    },
+    {
+      "cpu_seconds": 0.034927659999999694,
+      "wall_seconds": 0.03512264600431081
+    }
+  ],
+  "caveats": [
+    "Saved storage is union retained by forward autograd, not whole step peak or allocator/GPU memory.",
+    "RSS is whole process high-water mark and includes runtime, model, gradients, optimizer and all13 updates. Baseline subtraction is a rough diagnostic.",
+    "Fresh process per mode/depth, one CPU thread; timing includes clip and optimizer but excludes data generation."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "shape": {
+    "batch": 8,
+    "context": 64,
+    "width": 48,
+    "ffn": 96,
+    "depth": 4,
+    "vocabulary": 256
+  },
+  "parameter_count": 91296,
+  "per_sample_forward_matrix_macs": 7077888,
+  "per_batch_forward_matrix_macs": 56623104,
+  "per_block_per_sample": {
+    "attention_dense_macs": 589824,
+    "full_square_attention_score_value_macs": 393216,
+    "mlp_macs": 589824
+  },
+  "head_per_sample_macs": 786432,
+  "scope": "Identical module matrix shapes across ordinary, reversible graph and reversible inverse arms. Dense square attention estimate, not actual fused kernel operations.",
+  "excluded": [
+    "bias additions",
+    "normalization",
+    "GELU",
+    "softmax",
+    "residual additions",
+    "stream averages",
+    "embedding lookup",
+    "backward",
+    "optimizer",
+    "memory movement",
+    "dispatch"
+  ],
+  "caveats": [
+    "One MAC means multiply-accumulate, not a full FLOP count.",
+    "Causal attention implementations can elide masked work; this is a static full-square convention.",
+    "Inverse backprop recomputes attention and MLP forward operations, so equal forward MAC count does not mean equal training compute.",
+    "There is no second stored feed-forward graph for inverse mode, but recomputation produces temporary local graphs."
+  ]
+}

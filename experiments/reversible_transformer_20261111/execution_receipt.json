@@ -1,0 +1,107 @@
+{
+  "complete": true,
+  "phases": [
+    {
+      "phase": "checks",
+      "exit_code": 0,
+      "cpu_seconds": 2.0167620000000004,
+      "wall_seconds": 2.112484883000434,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "freeze",
+      "exit_code": 0,
+      "cpu_seconds": 2.521413,
+      "wall_seconds": 2.6135764770006062,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_ordinary_1",
+      "exit_code": 0,
+      "cpu_seconds": 2.047300999999999,
+      "wall_seconds": 2.1097060319953016,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_graph_1",
+      "exit_code": 0,
+      "cpu_seconds": 2.1477290000000004,
+      "wall_seconds": 2.211562780001259,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_inverse_1",
+      "exit_code": 0,
+      "cpu_seconds": 2.084777,
+      "wall_seconds": 2.1124418289982714,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_ordinary_4",
+      "exit_code": 0,
+      "cpu_seconds": 2.166327000000001,
+      "wall_seconds": 2.2110361279992503,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_graph_4",
+      "exit_code": 0,
+      "cpu_seconds": 2.1251789999999997,
+      "wall_seconds": 2.2113510710041737,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_inverse_4",
+      "exit_code": 0,
+      "cpu_seconds": 2.1838850000000027,
+      "wall_seconds": 2.2115786549984477,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_ordinary_12",
+      "exit_code": 0,
+      "cpu_seconds": 2.482926999999998,
+      "wall_seconds": 2.5126176580015454,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_graph_12",
+      "exit_code": 0,
+      "cpu_seconds": 2.4325059999999983,
+      "wall_seconds": 2.5099635910009965,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "memory_reversible_inverse_12",
+      "exit_code": 0,
+      "cpu_seconds": 2.667086,
+      "wall_seconds": 2.713914890002343,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "training",
+      "exit_code": 0,
+      "cpu_seconds": 85.00237200000001,
+      "wall_seconds": 85.22144090400252,
+      "owned_child_reaped": true
+    },
+    {
+      "phase": "report",
+      "exit_code": 0,
+      "cpu_seconds": 0.03748299999999283,
+      "wall_seconds": 0.10073235500021838,
+      "owned_child_reaped": true
+    }
+  ],
+  "child_cpu_seconds": 109.915747,
+  "wall_seconds": 110.85716824200063,
+  "sampled_child_peak_rss_bytes": 371724288,
+  "stop": null,
+  "cpu_cap_seconds": 600.0,
+  "wall_cap_seconds": 900.0,
+  "rss_cap_bytes": 996147200,
+  "cpu_affinity": [
+    0
+  ],
+  "accounting": "Includes all child imports/checks/evaluation/training/report; excludes static preparation and launcher CPU. No descendants created by numerical children. Limits are monitored every0.1sec; bounded scheduling/shutdown overshoot is reported, not hidden."
+}
