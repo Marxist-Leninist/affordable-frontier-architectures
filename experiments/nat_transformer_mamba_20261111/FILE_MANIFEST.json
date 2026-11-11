@@ -1,5 +1,5 @@
 {
-  "README.md": "406a797ba7d72b1416eaf9ce5e1401f8c50fcf4be0b7f729441493e19f296d15",
+  "README.md": "e7802b4896ca492e715f90aa39754fe7b691ff646974570c31f4116113692eb7",
   "frontier_research_v8/prepare_data.py": "d192f5e47cc7465a85f62ed546332d018193b3c740810b126d128bde8fd46eb2",
   "nat_compare_20261111/REPORT.md": "1359c8b987dc1e54e0983c7d982b249d1ddcb05577e5d16a3ef529c6b0a24a1f",
   "nat_compare_20261111/THIRD_PARTY_NOTICES.md": "fd9bca3670ae1474c851783cbf7d09555f132c9494b98e54a3e85153a445b944",
@@ -19,7 +19,9 @@
   "nat_compare_20261111/checkpoints/final_transformer_2_time.pt": "9009f362498499df0ffdb9581052b88d49122d49f210737f6274e4aa88294c49",
   "nat_compare_20261111/checkpoints/final_transformer_3.pt": "8916e63471e7e4fea26b1bb7735c2777f893528a97cf9ae7e539fcf6ca567ee1",
   "nat_compare_20261111/checkpoints/final_transformer_3_time.pt": "545bf9856557fd57c813714e4f12523a586e1836414ee169e7c9637458b1aa47",
+  "nat_compare_20261111/checkpoints/tune_mamba_0.001.pt": "0302a8f4676b22bc04c1a1cd0db4306012d372ee56fcb916e72cb8d9b87b60c7",
   "nat_compare_20261111/checkpoints/tune_mamba_0.003.pt": "d2e7062bc1a1d242f4a5d8aea53b094474947d46a81b7052dfa093a246b95fcc",
+  "nat_compare_20261111/checkpoints/tune_transformer_0.001.pt": "cdf33f66939d4840e6bd9bc16763ccc6502d2353b22764b96f6b072c0bac041f",
   "nat_compare_20261111/checkpoints/tune_transformer_0.003.pt": "95b4692cb5870b3f1632bd74fd6506a0fb60b4473f8214d3446785e9dc2275fe",
   "nat_compare_20261111/data_audit.json": "7aae644ab4d11e8594f74886e45ccc95ffcf969d3efbd2937e9756321a6e3c6c",
   "nat_compare_20261111/data_audit.py": "2f45543cb6d96fbd07758500dad5da1d94b44bcef529cf1472f33172ab49770d",
