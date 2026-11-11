@@ -23,3 +23,17 @@
 00:10:29 g641_s3 ok 138s left=0
 00:10:45 g556_s3 ok 142s left=0
 00:10:45 driver exit pending=0
+00:25:35 start pending=12 of 12 cores=[0, 1]
+00:27:51 g259_s4 ok 136s left=10
+00:27:53 g458_s4 ok 138s left=9
+00:30:07 g151_s4 ok 136s left=8
+00:30:11 g879_s4 ok 138s left=7
+00:32:21 T96_s4 ok 130s left=6
+00:32:25 g437_s4 ok 138s left=5
+00:34:37 g458_s5 ok 136s left=4
+00:34:41 g151_s5 ok 136s left=3
+00:36:47 T96_s5 ok 130s left=2
+00:36:55 g259_s5 ok 134s left=1
+00:39:07 g879_s5 ok 140s left=0
+00:39:11 g437_s5 ok 136s left=0
+00:39:11 driver exit pending=0
