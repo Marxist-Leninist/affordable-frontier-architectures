@@ -1,7 +1,6 @@
 {
-  "status": "staged_publication_in_progress",
-  "published_release_files": 76,
-  "pending_large_metric_files": 33,
+  "status": "code_reports_results_complete_checkpoints_pending",
+  "published_release_files": 109,
   "pending_checkpoint_files": 18,
-  "note": "Reports, code, figures and small summaries published first. FILE_MANIFEST describes full intended reviewed release, not proof all files are present. Larger files are pending separate upload verification."
+  "note": "All reviewed code, reports, figures, sanitized metrics and result files published. The18checkpoints listed by manifests remain pending separate upload verification. FILE_MANIFEST alone is not a publication receipt."
 }
