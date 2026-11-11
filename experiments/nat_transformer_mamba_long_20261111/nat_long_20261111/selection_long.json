@@ -1,0 +1,75 @@
+{
+  "selected_lrs": {
+    "transformer": 0.0005,
+    "mamba": 0.0005
+  },
+  "criterion": "final validation mean suffix CE, tuning seed101; no test metrics",
+  "tuning_runs": [
+    {
+      "kind": "transformer",
+      "lr": 0.0005,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.1937800880987197,
+        "bpb": 4.60765069478994,
+        "byte_accuracy": 0.18756103515625,
+        "exact_match": 0.0
+      }
+    },
+    {
+      "kind": "mamba",
+      "lr": 0.0005,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.1597619825042784,
+        "bpb": 4.558572942548402,
+        "byte_accuracy": 0.194183349609375,
+        "exact_match": 0.0
+      }
+    },
+    {
+      "kind": "transformer",
+      "lr": 0.0015,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.1979346349835396,
+        "bpb": 4.61364443897781,
+        "byte_accuracy": 0.18756103515625,
+        "exact_match": 0.0
+      }
+    },
+    {
+      "kind": "mamba",
+      "lr": 0.0015,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.1640588282607496,
+        "bpb": 4.564771980612728,
+        "byte_accuracy": 0.19329833984375,
+        "exact_match": 0.0
+      }
+    },
+    {
+      "kind": "transformer",
+      "lr": 0.0045,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.200711827725172,
+        "bpb": 4.617651081173756,
+        "byte_accuracy": 0.18756103515625,
+        "exact_match": 0.0
+      }
+    },
+    {
+      "kind": "mamba",
+      "lr": 0.0045,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 3.181910078274086,
+        "bpb": 4.590525890480637,
+        "byte_accuracy": 0.189697265625,
+        "exact_match": 0.0
+      }
+    }
+  ]
+}

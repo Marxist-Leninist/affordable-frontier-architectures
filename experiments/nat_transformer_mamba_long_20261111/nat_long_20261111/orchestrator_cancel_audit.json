@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "mock_tests": {
+    "active_cancel_stops_two_children_and_prevents_six_queued_launches": true,
+    "child_failure_cancels_queued_and_other_owned_children": true,
+    "stop_during_popen_registration_catches_child_and_blocks_later_launches": true,
+    "preexisting_stop_launches_nothing": true
+  },
+  "scope": "Mock children only. No real subprocesses or training. Bounded cancellation, failure, pre-stop, and in-flight launch race checks."
+}

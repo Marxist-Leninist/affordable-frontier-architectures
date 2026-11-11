@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "Prepared report passed artificial-fixture tests. Completed real report rendered, five PNGs visually inspected for legibility and consistency. Optional whole-model scan result is included; public staging will re-render against sanitized inputs.",
+  "checks": {
+    "frozen_sources_unchanged": true,
+    "live_training_gate_rejects": true,
+    "synthetic_render_five_figures_and_report": true,
+    "duplicate_evaluation_rows_rejected": true,
+    "misaligned_per_example_arrays_rejected": true,
+    "explicit_update_timing_exclusions": true,
+    "third_party_notices_copied_to_report": true,
+    "static_partial_compute_formulas_and_json_roundtrip": true,
+    "compute_caveats_and_measured_runtime_distinction": true,
+    "measured_cpu_resource_totals_fixture": true,
+    "padded_convolution_discarded_positions_counted": true,
+    "analytical_prefix_sum_copy_baseline": true,
+    "optional_whole_model_gain_success_and_failure_fixtures": true,
+    "real_report_five_figures_visually_inspected": true
+  },
+  "real_report_generated": true,
+  "files": {
+    "generate_report_long.py": "e787b7629c388a6d20e8b040b59ef3b3dcc5ebbbcfc3ba56b31b791217c92107",
+    "test_report_generator.py": "c824617524d422ff3b8f0097f1af82088328cc129fe974b6da6ec141c9f9cf08",
+    "REPORT_TEMPLATE.md": "9d0cdf27dacc4fa1455af1fa900900b574eb8232d7d5c4d4bbf11a57e14c5f7f",
+    "THIRD_PARTY_NOTICES.md": "a10c3f5746ff9a519b9ed208b7591bb0fb0fd1a5996a63f09d641b2b94d00063",
+    "compute_accounting_long.py": "47a4b5ffc0bc7d51514817926216cf5d095907974e14c5bd97a2499924e9e5b2",
+    "compute_accounting_long.json": "495271636807b17a6ff321f2c780c73e50bcd144ada473e89e5048c77d2ed052"
+  },
+  "provenance": "WikiText same-pinned-source license inconsistency (metadata CC-BY-SA-3.0/GFDL versus prose CC-BY-SA-4.0) and Mamba Apache-2.0 commit carried forward from inspected initial-pilot THIRD_PARTY_NOTICES.md/source_manifest.json. Public-safe notices exclude private machine paths and source.",
+  "resource_accounting_fixture": "Final text6000 CPU seconds + tasks600 + tuning60 =1.85 core-hours; no monetary estimate."
+}

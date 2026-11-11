@@ -1,0 +1,77 @@
+{
+  "kind": "mamba",
+  "seed": 999,
+  "lr": 0.001,
+  "mode": "tune",
+  "core": 1,
+  "parameters": 765184,
+  "initial_common_hashes": {
+    "embedding": "934f8a8efc9afa1e6d3ca84eb91e9e9c5f45a630c7cb71a3a352d7a50ccfba8c",
+    "output": "ce20f2926424ed05d04330cc2f91e092d319846b25e860710a689a92009b3fbf"
+  },
+  "initial_full_hash": "7f223d107ba470f3dd4d7f519da1e91f50712ceb57e1824524070857715168d4",
+  "compiler_load_seconds": 0.00029080899912514724,
+  "planned_steps": 2,
+  "batch_size": 8,
+  "output_bytes": 32,
+  "prefix_bytes": 96,
+  "validation": {
+    "eligible_windows_before_limit": 8925,
+    "evaluated_windows": 1024,
+    "documents": 60,
+    "excluded_exact128_train_or_duplicate": 14,
+    "target32_matches_training_all_windows": 46,
+    "selection_sha256": "dfe39019ba75c129e7e084433d677f13cc1a5c8c72087a0b33008a57a461f904",
+    "selection": "all nonoverlapping article-contained windows, or evenly spaced over all windows when limit applies"
+  },
+  "source_hashes": {
+    "models_long.py": "c3201903b012d70b9df6d4b45bc3110487b86a5689946e21b4e044ca86573a2c",
+    "fast_scan.py": "337995ced91c1ccd5ac8f340a2474d9368920103cb14db1e08b7b27072448fe9",
+    "scan_cpu.cpp": "8811d5e0a408cbe94f17968682d7336a44768ba6b4946a6f992ffedc3c4ab5f9",
+    "data_long.py": "1e7f2781b2df6bd1714984c95aefce85c746bc2d0670d5aac5994fadf1c1ad40",
+    "train_long.py": "1ff2e1b0cbb454d545504d87c8aa5ef240db35cca9464ec37043e55a74986ffd",
+    "orchestrate_long.py": "3586e1fd562a0c05ec5e44d3163c0e8360dd248308c493027f8de5b1335e1f9e",
+    "protocol_long.json": "f4e1b61d6a82dd65b80d5f099c53688bf9e7d2e898a396cf8f6bfe30680e818f"
+  },
+  "status": "completed",
+  "steps": 2,
+  "supervised_target_presentations": 512,
+  "training_cpu_seconds": 0.9957039760000015,
+  "training_wall_seconds": 0.9957533919987327,
+  "end_to_end_wall_seconds": 53.41068666299907,
+  "peak_rss_kib": 1197816,
+  "batch_sha256": "420321efd4b74ca97f36bdde396eaf39f773a78afdff40b5db5948dc23ae20cd",
+  "validation_curves": [
+    {
+      "step": 2,
+      "training_cpu_seconds": 0.9957039760000015,
+      "training_wall_seconds": 0.9957533919987327,
+      "learning_rate": 1.9999999306043452e-05,
+      "validation": {
+        "n": 1024,
+        "loss_nats": 5.506747298873961,
+        "bpb": 7.944557019514158,
+        "byte_accuracy": 0.088775634765625,
+        "exact_match": 0.0
+      },
+      "batch_sha256": "420321efd4b74ca97f36bdde396eaf39f773a78afdff40b5db5948dc23ae20cd"
+    }
+  ],
+  "timing": [
+    {
+      "step": 1,
+      "wall_seconds": 0.5561828940008127,
+      "cpu_seconds": 0.5561489170000016,
+      "loss_nats": 5.569915294647217,
+      "gradient_norm_before_clip": 7.818991661071777
+    },
+    {
+      "step": 2,
+      "wall_seconds": 0.43957049799792003,
+      "cpu_seconds": 0.4395550589999999,
+      "loss_nats": 5.508882522583008,
+      "gradient_norm_before_clip": 7.185978412628174
+    }
+  ],
+  "final_checkpoint_sha256": "95e502597df14a6697ef67c38ac710c9442f9ffcd6f4b866849dd0e40073634d"
+}

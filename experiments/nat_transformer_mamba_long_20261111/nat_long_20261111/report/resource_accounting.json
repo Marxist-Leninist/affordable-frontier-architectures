@@ -1,0 +1,11 @@
+{
+  "final_text_update_cpu_seconds": 21057.167926483922,
+  "separate_task_update_cpu_seconds": 2638.023670644002,
+  "tuning_update_cpu_seconds": 1289.9941519599993,
+  "expected_tuning_runs": 6,
+  "available_completed_tuning_runs": 6,
+  "total_measured_update_cpu_hours": 6.9403293747466455,
+  "pipeline_elapsed_wall_seconds": 15545.310923857,
+  "monetary_cost": "Not measured. No rental or purchase action was made for this experiment. Existing platform billing is not inferred.",
+  "scope": "Measured training-update CPU time only; excludes preparation, validation/testing, saving, compilation, reporting and backup. Pipeline elapsed wall time includes concurrent jobs and is not summed CPU time."
+}

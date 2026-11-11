@@ -1,0 +1,128 @@
+{
+  "input_batch_sha256": "d2a4630983502cd782abfc98fc1770292a3660addd10f35401cbf967d19a602d",
+  "gradient_comparison": "After shared norm1 clipping, before optimizer update",
+  "optimizer_state": "Fresh identical AdamW groups and empty states; checkpoint optimizer state intentionally not restored",
+  "timed_trials_exclude_inspection_copies": true,
+  "status": "completed",
+  "scope": "Same complete 765184-parameter, three-layer bidirectional Mamba NAT model, B8/L128, CPU FP32, one pinned thread. Both start at seed1 final weights with fresh identical AdamW optimizers. Two warm-up steps then seven randomized paired training steps. Only the affine scan implementation changes. All models are throwaway copies; no saved checkpoint modified. Forward/backward/AdamW checked within FP32 tolerances, not bitwise identical to associative reduction. No GPU or universal hardware claim.",
+  "checkpoint_sha256": "96f2c2949f706f4564822b9e3ac507f6498dd5f2d79d993320db3946ab48b846",
+  "script_sha256": "4c26c8e003a27286a040b3dbf8e1a25588fcbe07ffc44df4f385df5af676c187",
+  "parity_max_absolute_error": {
+    "logits": 5.7220458984375e-06,
+    "gradients": 5.4016709327697754e-08,
+    "updated_parameters": 3.5688281059265137e-06
+  },
+  "parity_tolerances": {
+    "logits": {
+      "atol": 2e-05,
+      "rtol": 0.0002
+    },
+    "gradients": {
+      "atol": 3e-05,
+      "rtol": 0.001
+    },
+    "updated_parameters": {
+      "atol": 2e-05,
+      "rtol": 0.0002
+    }
+  },
+  "timing": [
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.1240269819973037,
+      "cpu_seconds": 2.123611878000001,
+      "trial": 0
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.43334548699931474,
+      "cpu_seconds": 0.4332208909999995,
+      "trial": 0
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.43043915500311414,
+      "cpu_seconds": 0.430087511,
+      "trial": 1
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.134616958996048,
+      "cpu_seconds": 2.133869874,
+      "trial": 1
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.2201079270016635,
+      "cpu_seconds": 2.2193457290000005,
+      "trial": 2
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.4661045179964276,
+      "cpu_seconds": 0.4661001669999987,
+      "trial": 2
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.2886290730020846,
+      "cpu_seconds": 2.288192683,
+      "trial": 3
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.44661036799516296,
+      "cpu_seconds": 0.44654702299999727,
+      "trial": 3
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.46405348499683896,
+      "cpu_seconds": 0.46351257399999923,
+      "trial": 4
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.1808934529981343,
+      "cpu_seconds": 2.180201910000001,
+      "trial": 4
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.1894423750054557,
+      "cpu_seconds": 2.1888461009999993,
+      "trial": 5
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.4649810629998683,
+      "cpu_seconds": 0.4648320040000016,
+      "trial": 5
+    },
+    {
+      "variant": "torch_parallel_reference",
+      "wall_seconds": 2.2592161930006114,
+      "cpu_seconds": 2.258854476,
+      "trial": 6
+    },
+    {
+      "variant": "native_linear",
+      "wall_seconds": 0.463369552999211,
+      "cpu_seconds": 0.4632141929999989,
+      "trial": 6
+    }
+  ],
+  "summary": {
+    "native_linear": {
+      "median_seconds": 0.463369552999211,
+      "p25_seconds": 0.43997792749723885,
+      "p75_seconds": 0.46451727399835363
+    },
+    "torch_parallel_reference": {
+      "median_seconds": 2.1894423750054557,
+      "p25_seconds": 2.1577552059970913,
+      "p75_seconds": 2.2396620600011374
+    }
+  },
+  "whole_model_training_speedup": 4.725045831850725
+}

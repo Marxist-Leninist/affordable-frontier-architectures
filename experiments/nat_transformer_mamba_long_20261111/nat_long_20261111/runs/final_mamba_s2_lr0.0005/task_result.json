@@ -1,0 +1,151 @@
+{
+  "status": "completed",
+  "steps": 2000,
+  "lr": 0.001,
+  "training_cpu_seconds": 708.3251425370154,
+  "training_wall_seconds": 708.4246105811399,
+  "batch_sha256": "5d770b4155a78a9eb7fb112fa533c23b47cfc31dc4f15d9cd943b99f5a4f20f7",
+  "validation_curves": [
+    {
+      "step": 500,
+      "training_cpu_seconds": 174.86231609300376,
+      "training_wall_seconds": 174.88529924603063,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.255822166800499,
+          "bpb": 3.254463453170476,
+          "byte_accuracy": 0.1568603515625,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.2530222618952394,
+          "bpb": 3.2504240442486974,
+          "byte_accuracy": 0.1676025390625,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.7888028078014031,
+          "bpb": 1.1380018990543745,
+          "byte_accuracy": 0.6602783203125,
+          "exact_match": 0.0
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.3109471490606666,
+          "bpb": 3.333991991706312,
+          "byte_accuracy": 0.10693359375,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 1000,
+      "training_cpu_seconds": 350.90581996701803,
+      "training_wall_seconds": 350.9549914900199,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.202492373995483,
+          "bpb": 3.1775248255590434,
+          "byte_accuracy": 0.1827392578125,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.192379525862634,
+          "bpb": 3.1629350697085195,
+          "byte_accuracy": 0.17919921875,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.33673412853386253,
+          "bpb": 0.4858046573338703,
+          "byte_accuracy": 0.8564453125,
+          "exact_match": 0.00390625
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.311716081574559,
+          "bpb": 3.335101326830883,
+          "byte_accuracy": 0.1036376953125,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 1500,
+      "training_cpu_seconds": 526.9716869970161,
+      "training_wall_seconds": 527.0449834040919,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.1866405103355646,
+          "bpb": 3.1546554204680315,
+          "byte_accuracy": 0.1861572265625,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.1756882779300213,
+          "bpb": 3.1388546890898907,
+          "byte_accuracy": 0.1875,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.3023697850876488,
+          "bpb": 0.43622738946061257,
+          "byte_accuracy": 0.861572265625,
+          "exact_match": 0.0234375
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.3069751830771565,
+          "bpb": 3.3282616560793223,
+          "byte_accuracy": 0.1114501953125,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 2000,
+      "training_cpu_seconds": 708.3251425370154,
+      "training_wall_seconds": 708.4246105811399,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.1922977468930185,
+          "bpb": 3.162817087594606,
+          "byte_accuracy": 0.1846923828125,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.179755276069045,
+          "bpb": 3.144722127136365,
+          "byte_accuracy": 0.189697265625,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.19123396021313965,
+          "bpb": 0.2758922860490539,
+          "byte_accuracy": 0.927490234375,
+          "exact_match": 0.15234375
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.2440222995355725,
+          "bpb": 3.2374398431842186,
+          "byte_accuracy": 0.125732421875,
+          "exact_match": 0.0
+        }
+      }
+    }
+  ],
+  "checkpoint_sha256": "7f14a1ae533bd57f764d258894bac2194f71a26e503c53106f15c76cdf627f08"
+}

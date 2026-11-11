@@ -1,0 +1,10 @@
+{
+  "status": "training_complete",
+  "elapsed_seconds": 15545.310923857,
+  "final_runs": 6,
+  "selected": {
+    "transformer": 0.0005,
+    "mamba": 0.0005
+  },
+  "parent_pid": 5
+}

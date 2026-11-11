@@ -1,0 +1,62 @@
+{
+  "redactions": [
+    {
+      "file": "nat_long_20261111/evaluation_results.json",
+      "original_sha256": "6c824b12d651e00682dd8acd9825dd7c9c485c0508e39bd7d8c38674a4a09529",
+      "public_sha256": "93cfdbba7f82b64540794cd8ce770371cb0aafb0057fa8a209a264df115f69d8",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 36
+    },
+    {
+      "file": "nat_long_20261111/evaluation/mamba_s1_fixed_data.json",
+      "original_sha256": "d6f5f53d551c450507fdc28b6b6e6d73c211372b1b8b7529407f6b26505ebb97",
+      "public_sha256": "b7b31e66995e49acbad9eece0bee9b602e93ea8979f64e26dac023d34a94ba0e",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    },
+    {
+      "file": "nat_long_20261111/evaluation/mamba_s2_fixed_data.json",
+      "original_sha256": "60b55d919d518ad938c9d84b67b30cb47b3a52478422ab585f1244b680cc0fad",
+      "public_sha256": "e359da5e9d4ea28972aed07c9c382379747d5bca54f31ea36f8e2d344bd779ac",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    },
+    {
+      "file": "nat_long_20261111/evaluation/mamba_s3_fixed_data.json",
+      "original_sha256": "50b315c6ad6651c85c7742d74ab7d5f4ff3cd31d957da8822c9f15d40f87335d",
+      "public_sha256": "3571b6946de02a4618ed4a1c2f7f730b01b1d47fbadd58e2938a7ff927cc0a25",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    },
+    {
+      "file": "nat_long_20261111/evaluation/transformer_s1_fixed_data.json",
+      "original_sha256": "d4e9745603f07bbb4019d643e4e55e36c0cc33e73aec5ed6935421798b9a4e66",
+      "public_sha256": "3045b3fe316329d7045a1a4c127d24bf822318684adcbef5aa9b2fa00e40d0b7",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    },
+    {
+      "file": "nat_long_20261111/evaluation/transformer_s2_fixed_data.json",
+      "original_sha256": "394591af1be328f4e95484e7fcde9693e1ed04f49c233339cc30d3305d7dc222",
+      "public_sha256": "0ed4208d6e439aaad043f218ab42fc0638cc26c9773214fd58c21cdf605b3340",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    },
+    {
+      "file": "nat_long_20261111/evaluation/transformer_s3_fixed_data.json",
+      "original_sha256": "17ec611ba1e84bea4bc95f1f83adccd842ee1452487705b728f4df1fb624674c",
+      "public_sha256": "93b8181f35834a7b1d5d6c1d5785c20b1f60b50c9f7b51afd11ae6f0051fd50c",
+      "removed": "Raw-prefix illustrative examples only; numerical measurements unchanged",
+      "example_count": 6
+    }
+  ],
+  "exclusions": [
+    "Raw corpora and cached token windows",
+    "Private backup archives, identifiers and transfer receipts",
+    "Internal coordination and approval records",
+    "Compiled platform binaries",
+    "Logs not needed to reproduce numeric results",
+    "Private AGILLM trainer source"
+  ],
+  "numerical_metrics_unchanged": true
+}

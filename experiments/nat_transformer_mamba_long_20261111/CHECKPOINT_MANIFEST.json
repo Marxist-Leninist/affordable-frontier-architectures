@@ -1,0 +1,113 @@
+{
+  "count": 18,
+  "files": [
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s1_lr0.0005/final.pt",
+      "bytes": 9245606,
+      "sha256": "96f2c2949f706f4564822b9e3ac507f6498dd5f2d79d993320db3946ab48b846",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s1_lr0.0005/time_900s.pt",
+      "bytes": 9258170,
+      "sha256": "6ffe265b65284083b189de63cb7ce82a17101ef58186922fb3059551e66c8989",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s1_lr0.0005/tasks_final.pt",
+      "bytes": 9258596,
+      "sha256": "4cbd67fbfffe464eec9ea19490d959136caabfc086e04f1bc75f4ae0268a9da6",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s2_lr0.0005/final.pt",
+      "bytes": 9245606,
+      "sha256": "ad85574cf0c8658962e7a8abdda982a58a1117af0240771621bb97c948846c55",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s2_lr0.0005/time_900s.pt",
+      "bytes": 9258170,
+      "sha256": "ed7c91e247de39029604844b909f302fa977b73a587d3c04ebd2a1c2192430b8",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s2_lr0.0005/tasks_final.pt",
+      "bytes": 9258596,
+      "sha256": "7f14a1ae533bd57f764d258894bac2194f71a26e503c53106f15c76cdf627f08",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s3_lr0.0005/final.pt",
+      "bytes": 9245606,
+      "sha256": "ac03a6ebe784efc150d793dbfcdca9fcca47bf071e04a635e567512773caf65f",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s3_lr0.0005/time_900s.pt",
+      "bytes": 9258170,
+      "sha256": "da1a70d2e79c86cfdbe3ba6d73cda64cd8b7715c4f33704ad68169885f19092f",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_mamba_s3_lr0.0005/tasks_final.pt",
+      "bytes": 9258596,
+      "sha256": "4b0ffc9b0acdfdc22e426806923a7544548280af622890b723f608254bdb04ab",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s1_lr0.0005/final.pt",
+      "bytes": 9212645,
+      "sha256": "ac0963e8040e056e96affc07334022181eb94d30cea8167de2fec2109f18de0b",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s1_lr0.0005/time_900s.pt",
+      "bytes": 9217097,
+      "sha256": "8e26c29c830c335db1fa8faa8b9e79829733a5b28679eb5e00ad19262eba4bf3",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s1_lr0.0005/tasks_final.pt",
+      "bytes": 9217275,
+      "sha256": "5c6b9a1ec33f9bebe3278da3a92f84ff3022f9fc98f2ceb30f929cc8c1839ca1",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s2_lr0.0005/final.pt",
+      "bytes": 9212645,
+      "sha256": "ddf02a8562c0f21940b672d716195dca39f18f2583b2131be43e4dfadcb2350f",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s2_lr0.0005/time_900s.pt",
+      "bytes": 9217097,
+      "sha256": "3ea9262c4664182ea4626ddc2e4a7e507bc5b4134e5e2248673fe9a296f2ea43",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s2_lr0.0005/tasks_final.pt",
+      "bytes": 9217275,
+      "sha256": "f9f7f7e5a339fa608d13fafb4ab67fdd304e65e5e4856749c2b95175967d78c6",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s3_lr0.0005/final.pt",
+      "bytes": 9212645,
+      "sha256": "9334b4aca69268c686a51e73c7a08ae50209111eb0ee3680cd8356441e77ac77",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s3_lr0.0005/time_900s.pt",
+      "bytes": 9217097,
+      "sha256": "c88e33fe9f15831b92c3db6dc708e39a8a466487fd60b385ea6da0d6808f26ea",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    },
+    {
+      "path": "nat_long_20261111/runs/final_transformer_s3_lr0.0005/tasks_final.pt",
+      "bytes": 9217275,
+      "sha256": "95ab46ec476a02c2c0711ff3c506f732d03c87218d882eb28b287f7f3a08103a",
+      "format": "PyTorch checkpoint, model/optimizer/RNG state; load only with weights_only=True"
+    }
+  ]
+}

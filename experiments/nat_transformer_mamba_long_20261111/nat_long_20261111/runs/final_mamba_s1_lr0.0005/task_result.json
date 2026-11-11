@@ -1,0 +1,151 @@
+{
+  "status": "completed",
+  "steps": 2000,
+  "lr": 0.001,
+  "training_cpu_seconds": 714.4249648559808,
+  "training_wall_seconds": 714.5690517512485,
+  "batch_sha256": "f10cdfa7ef1ca313c24cd1d14c6e66fe8e04a39001be6ec276cbe1584d993339",
+  "validation_curves": [
+    {
+      "step": 500,
+      "training_cpu_seconds": 178.59103891999166,
+      "training_wall_seconds": 178.6249151920856,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.241626870818436,
+          "bpb": 3.233983970053203,
+          "byte_accuracy": 0.1614990234375,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.228231009095907,
+          "bpb": 3.214657826777676,
+          "byte_accuracy": 0.1727294921875,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.865515717305243,
+          "bpb": 1.2486752331677282,
+          "byte_accuracy": 0.6322021484375,
+          "exact_match": 0.0
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.304616356268525,
+          "bpb": 3.3248585883401938,
+          "byte_accuracy": 0.103271484375,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 1000,
+      "training_cpu_seconds": 358.5354473459829,
+      "training_wall_seconds": 358.59398414214957,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 2.101513137575239,
+          "bpb": 3.0318425819428034,
+          "byte_accuracy": 0.23486328125,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 2.037340560462326,
+          "bpb": 2.939261123180939,
+          "byte_accuracy": 0.2401123046875,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.5941274764481932,
+          "bpb": 0.8571447639276828,
+          "byte_accuracy": 0.744384765625,
+          "exact_match": 0.00390625
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.250964939594269,
+          "bpb": 3.2474559555675766,
+          "byte_accuracy": 0.125732421875,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 1500,
+      "training_cpu_seconds": 536.2637308619787,
+      "training_wall_seconds": 536.3765208931873,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 1.8410301748663187,
+          "bpb": 2.656045103406579,
+          "byte_accuracy": 0.3087158203125,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 1.7983362418599427,
+          "bpb": 2.594450777982235,
+          "byte_accuracy": 0.328857421875,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.272479332430521,
+          "bpb": 0.393104581642248,
+          "byte_accuracy": 0.8858642578125,
+          "exact_match": 0.0234375
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.2362283309921622,
+          "bpb": 3.226195523417796,
+          "byte_accuracy": 0.1358642578125,
+          "exact_match": 0.0
+        }
+      }
+    },
+    {
+      "step": 2000,
+      "training_cpu_seconds": 714.4249648559808,
+      "training_wall_seconds": 714.5690517512485,
+      "validation": {
+        "copy": {
+          "n": 256,
+          "loss_nats": 1.5628050467930734,
+          "bpb": 2.2546510908846114,
+          "byte_accuracy": 0.390380859375,
+          "exact_match": 0.0
+        },
+        "reverse": {
+          "n": 256,
+          "loss_nats": 1.5907682715915143,
+          "bpb": 2.2949934966285856,
+          "byte_accuracy": 0.379150390625,
+          "exact_match": 0.0
+        },
+        "sort": {
+          "n": 256,
+          "loss_nats": 0.3755836301425006,
+          "bpb": 0.5418526406456603,
+          "byte_accuracy": 0.849609375,
+          "exact_match": 0.00390625
+        },
+        "prefixsum_mod10": {
+          "n": 256,
+          "loss_nats": 2.2359359646216035,
+          "bpb": 3.225773727904868,
+          "byte_accuracy": 0.1270751953125,
+          "exact_match": 0.0
+        }
+      }
+    }
+  ],
+  "checkpoint_sha256": "4cbd67fbfffe464eec9ea19490d959136caabfc086e04f1bc75f4ae0268a9da6"
+}

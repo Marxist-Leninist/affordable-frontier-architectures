@@ -1,0 +1,164 @@
+{
+  "status": "completed",
+  "analysis_status": "Post-hoc user-requested preference index; weights chosen after component results existed, not a preregistered primary endpoint",
+  "normalization": "Transformer=100 reference. Text uses the ratio of geometric mean probability assigned to correct target bytes, 2**(bpb_T-bpb_M). Tasks use ratios of held-out per-byte accuracy. Ratios are geometrically averaged across paired seeds. No arbitrary min-max scaling, clipping, pseudocounts, benchmark-standard or intelligence interpretation.",
+  "default_weights": {
+    "quality": 0.5,
+    "training_throughput": 0.5,
+    "within_quality_text": 0.5,
+    "within_quality_synthetic_tasks": 0.5,
+    "within_text_each_corpus": 0.5,
+    "within_tasks_each_task": 0.25
+  },
+  "formula": "R=100*exp(alpha*(beta*mean_seed(mean_text[-ln(2)*(bpb_M-bpb_T)])+(1-beta)*mean_seed(mean_task[ln(acc_M/acc_T)]))+(1-alpha)*ln(median_step_ms_T/median_step_ms_M)); alpha=beta=0.5 by assistant default, not user-stated preferences.",
+  "components": {
+    "wikitext": {
+      "mamba_over_transformer_geometric_ratio": 1.0699635723931882,
+      "paired_seed_ratios": [
+        1.07660451155243,
+        1.0558577445116457,
+        1.0775697002828384
+      ],
+      "quality_weight": 0.25
+    },
+    "fineweb": {
+      "mamba_over_transformer_geometric_ratio": 1.0434294294535358,
+      "paired_seed_ratios": [
+        1.0474528090814177,
+        1.0348332291357591,
+        1.0480558184735496
+      ],
+      "quality_weight": 0.25
+    },
+    "copy": {
+      "mamba_over_transformer_geometric_ratio": 0.26873931781825,
+      "paired_seed_ratios": [
+        0.3958047082531831,
+        0.18939972506491526,
+        0.25890076335877865
+      ],
+      "quality_weight": 0.125
+    },
+    "reverse": {
+      "mamba_over_transformer_geometric_ratio": 1.129729659472324,
+      "paired_seed_ratios": [
+        1.412128017967434,
+        0.7619877942458587,
+        1.3399898459976307
+      ],
+      "quality_weight": 0.125
+    },
+    "sort": {
+      "mamba_over_transformer_geometric_ratio": 1.084140153061601,
+      "paired_seed_ratios": [
+        0.9862015284460798,
+        1.1392362536862144,
+        1.1341665135085461
+      ],
+      "quality_weight": 0.125
+    },
+    "prefixsum_mod10": {
+      "mamba_over_transformer_geometric_ratio": 1.1606116676247804,
+      "paired_seed_ratios": [
+        1.2315476190476191,
+        1.2245687091017252,
+        1.0366363412835014
+      ],
+      "quality_weight": 0.125
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 1,
+      "component_log_ratios": {
+        "wikitext": 0.07381211769179134,
+        "fineweb": 0.046361320803069275,
+        "copy": -0.9268343503483364,
+        "reverse": 0.34509779924417794,
+        "sort": -0.013894555359526281,
+        "prefixsum_mod10": 0.20827160534823846
+      },
+      "text_log_ratio": 0.06008671924743031,
+      "task_log_ratio": -0.09683987527886156,
+      "matched_cpu_text_log_ratio": 0.02648010532513661,
+      "task_log_probability_ratio": -0.2810536783042608,
+      "task_without_prefix_sum_log_ratio": -0.19854370215456157
+    },
+    {
+      "seed": 2,
+      "component_log_ratios": {
+        "wikitext": 0.05435346457294302,
+        "fineweb": 0.034240282464496674,
+        "copy": -1.6638955498420087,
+        "reverse": -0.2718247414738353,
+        "sort": 0.13035808498084234,
+        "prefixsum_mod10": 0.2025887078013438
+      },
+      "text_log_ratio": 0.044296873518719845,
+      "task_log_ratio": -0.4006933746334145,
+      "matched_cpu_text_log_ratio": 0.012307397449802106,
+      "task_log_probability_ratio": -0.4980662347997793,
+      "task_without_prefix_sum_log_ratio": -0.6017874021116673
+    },
+    {
+      "seed": 3,
+      "component_log_ratios": {
+        "wikitext": 0.07470822794108668,
+        "fineweb": 0.04693684638272763,
+        "copy": -1.3513104437593948,
+        "reverse": 0.29266203632040133,
+        "sort": 0.12589803183514145,
+        "prefixsum_mod10": 0.03598118431397372
+      },
+      "text_log_ratio": 0.06082253716190716,
+      "task_log_ratio": -0.22419229782246958,
+      "matched_cpu_text_log_ratio": 0.0280650039564005,
+      "task_log_probability_ratio": -0.38432139565298945,
+      "task_without_prefix_sum_log_ratio": -0.3109167918679507
+    }
+  ],
+  "speed_ratio": 0.1982290849822029,
+  "text_log_ratio": 0.055068709976019106,
+  "task_log_ratio": -0.24057518257824853,
+  "speed_log_ratio": -1.618331922230726,
+  "quality_only_index": 91.14183775193004,
+  "default_index": {
+    "transformer": 100.0,
+    "mamba": 42.5052503829368
+  },
+  "default_paired_seed_scores_fixed_timing": [
+    44.1157091627422,
+    40.72756352011932,
+    42.74113411310757
+  ],
+  "conditional_bootstrap_95_interval_mamba": [
+    40.766373578879474,
+    44.179085215062365
+  ],
+  "bootstrap_scope": "5000 resamples of three paired fitted seeds and 40 paired standalone timing trials. Conditional on fixed evaluation inputs and this host/session. This does not include fresh data/domain sampling, training hyperparameter uncertainty, other hardware or many independent model fits; three seeds are weak evidence for population inference.",
+  "matched_900_cpu_text_only_index": {
+    "transformer": 100.0,
+    "mamba": 102.25343156508913
+  },
+  "sensitivity": {
+    "quality_only_text_weight_crossover": 0.8137329694172158,
+    "text_only_quality_weight_crossover_when_speed_included": 0.9670917358843117,
+    "default_without_prefix_sum_task": 41.14767442816633,
+    "default_using_task_correct_byte_log_probability_instead_of_accuracy": 40.96909327885419,
+    "default_using_full_18000_update_cpu_throughput": 45.989787643784844
+  },
+  "conditions": [
+    "Quality combines the 16000-update text-only checkpoint and separate 2000-update task-adapted checkpoint for each paired seed. It is a multi-workload workflow index, not one checkpoint simultaneously evaluated on every task.",
+    "The default speed component is the standalone median whole-model training step with equal batch and shapes. It is not time to a target quality, learning efficiency, full training cost, or monetary utility.",
+    "The 900-CPU-second comparison is kept separate and contains text only. No speed multiplier is added to that already time-matched score.",
+    "Exact-sequence accuracy and task loss remain in the full report; exact match is not included again as an overlapping metric. Zero exact match on reverse/prefix-sum and shortcut-level prefix-sum byte accuracy prevent an arithmetic or intelligence claim.",
+    "A large throughput ratio can dominate modest predictive-probability ratios. Equal weights on log ratios encode that preference; other transformations and task choices are also judgments.",
+    "No universal overall winner follows. Score differences are not percentages of intelligence, economic value, or frontier-scale benefit."
+  ],
+  "input_sha256": {
+    "evaluation_results.json": "93cfdbba7f82b64540794cd8ce770371cb0aafb0057fa8a209a264df115f69d8",
+    "standalone_timings.json": "6c445398a4a2f439d9c378d0331fafcd24128d914a135f8414ad5256319b7318",
+    "protocol_long.json": "f4e1b61d6a82dd65b80d5f099c53688bf9e7d2e898a396cf8f6bfe30680e818f"
+  },
+  "script_sha256": "10839dd4b23a9da8479f31dd04b6f350b0cd2203ee83b2b9b036eb7a4ca1c339"
+}

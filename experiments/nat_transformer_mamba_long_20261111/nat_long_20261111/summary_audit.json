@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": {
+    "nats_to_bpb_and_seed_averaging": true,
+    "target_weighted_not_equal_document_mean": true,
+    "document_resampling_not_independent_windows": true,
+    "paired_seed_means_retained": true,
+    "separate_sample_seed_spread": true,
+    "conditioning_difference_correct_sign": true,
+    "conditional_scope_explicit": true,
+    "incomplete900_not_silently_pooled": true,
+    "pair_hash_mismatch_rejected": true,
+    "exclusive_phase_lock_blocks_competing_handle": true,
+    "all_fit_preflight_before_testsets": true,
+    "missing_final_raises": true,
+    "evaluation_timing_share_nonblocking_lock": true,
+    "timing_requires_evaluation_completion_file": true
+  },
+  "source_sha256": {
+    "summarize_long.py": "e2676ffe453f9eb95d6e727f5aa34eeead2d665c226f9c0d6ef6d90017ebf87b",
+    "evaluate_long.py": "d4117ce50bbd6c5a2d296f95f47f7fe05fd65679c2c0a6b2a4880b045e4787ba",
+    "benchmark_long.py": "6a4ee8f50b82d71c6811577f751becc87de1659734321cd2f4cd1c0e3ef1d950"
+  },
+  "test_metrics_opened": false,
+  "scope": "Synthetic complete/incomplete/mismatched-pair JSON fixtures and temporary lock only. No real held-out metrics or frozen sources altered.",
+  "interpretation": [
+    "Loss is mean nats per target byte converted by log(2); all windows have32 targets, so window-count weighting equals target-count weighting.",
+    "Fitted seeds are averaged first, then full documents resampled with their window sums/counts; this preserves within-document dependence rather than independently bootstrapping windows.",
+    "Interval is conditional on three fitted seeds and observed cohort, not uncertainty from training reruns or arbitrary population/architecture sampling. Across-seed sample SD is separately reported.",
+    "900s paired interval omitted unless all3 paired seeds exist; no incomplete-cohort point estimate substituted.",
+    "Manifest groups must align with per-example arrays; evaluator generates matching order. More explicit array-length/unique-seed assertions would harden malformed external artifact handling.",
+    "No inference about general intelligence, GPU performance or 600B transfer is justified."
+  ]
+}

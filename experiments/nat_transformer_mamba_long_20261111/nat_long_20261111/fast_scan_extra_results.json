@@ -1,0 +1,13 @@
+{
+  "signed_coefficients_noncontiguous_upstream_gradient_exact": true,
+  "full_nat_vs_parallel": {
+    "output_max_abs": 2.980232238769531e-07,
+    "gradients_max_abs": 4.76837158203125e-07,
+    "adamw_parameters_max_abs": 6.258487701416016e-07
+  },
+  "full_nat_vs_sequential": {
+    "output_max_abs": 0.0,
+    "gradients_max_abs": 0.0,
+    "adamw_parameters_max_abs": 0.0
+  }
+}

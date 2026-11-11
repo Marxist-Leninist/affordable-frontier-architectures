@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "checks": {
+    "before_completed_gate_blocks": true,
+    "nat_phase_lock_blocks": true,
+    "dory_phase_lock_blocks": true,
+    "duplicate_result_blocks": true,
+    "duplicate_receipt_unchanged": true,
+    "atomic_receipt_complete": true,
+    "timed_step_no_inspection_clones": true,
+    "inspection_step_copies_logits_gradients_parameters": true,
+    "checked_step_not_appended_to_trials": true,
+    "fresh_optimizer_pair_and_weight_assertions": true,
+    "checkpoint_input_hashes_verified_before_after": true,
+    "gradients_postclipping_labeled": true,
+    "cap_includes_import_initialization": true,
+    "no_checkpoint_write": true,
+    "failure_receipt_has_no_valid_timing_claim": true,
+    "original_frozen_sources_unchanged": true,
+    "gated_postprocess_sources_unchanged": true
+  },
+  "benchmark_script_sha256": "4c26c8e003a27286a040b3dbf8e1a25588fcbe07ffc44df4f385df5af676c187",
+  "scope": "AST, pre-import gate/lock mocks, atomic temporary receipt, and extracted step with dummy objects only. No real model/tensor operations, checkpoints, data or numerical timing.",
+  "findings": [
+    "Same complete pretrained model, same batch, same fresh optimizer grouping/state; only MambaDirection scan pointer changes.",
+    "Inspection copies occur only in first warm-up; recorded steps use inspect=False, with zero clone calls in mock test.",
+    "FP32 tolerances are explicit and fail closed. They must be numerically verified on actual pretrained checkpoint later; mock audit cannot certify those tolerances pass.",
+    "Compared gradients are clipped; small parameter divergence during repeated throwaway updates is permitted and not a saved-checkpoint quality comparison.",
+    "Seven paired timing trials provide descriptive CPU measurements, not broad hardware or GPU speed inference.",
+    "Alarm delivery may wait until an ongoing native/PyTorch operation returns;180s cap is checked by signal, not external hard-kill watchdog."
+  ]
+}

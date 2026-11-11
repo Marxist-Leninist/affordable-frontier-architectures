@@ -1,0 +1,35 @@
+{
+  "validation": {
+    "eligible_windows_before_limit": 8925,
+    "evaluated_windows": 8925,
+    "documents": 60,
+    "excluded_exact128_train_or_duplicate": 14,
+    "target32_matches_training_all_windows": 46,
+    "selection_sha256": "fd96da00a039dad8120d975ac760251907089d2b12cf3d57d851e05ed076b8a5",
+    "selection": "all nonoverlapping article-contained windows, or evenly spaced over all windows when limit applies"
+  },
+  "test": {
+    "eligible_windows_before_limit": 10059,
+    "evaluated_windows": 10059,
+    "documents": 61,
+    "excluded_exact128_train_or_duplicate": 1,
+    "target32_matches_training_all_windows": 49,
+    "selection_sha256": "e4186c505f4df78b759a2cfab8f9aaee6911f02819efdc9449f4a1e113e91cce",
+    "selection": "all nonoverlapping article-contained windows, or evenly spaced over all windows when limit applies"
+  },
+  "fineweb": {
+    "eligible_windows_before_limit": 2134,
+    "evaluated_windows": 2134,
+    "documents": 100,
+    "excluded_exact128_train_or_duplicate": 0,
+    "target32_matches_training_all_windows": 1,
+    "selection_sha256": "d07e6bee30f4f604675f9a9bda41b66b729acd3371e37661080aadc969a032f7",
+    "selection": "all nonoverlapping article-contained windows, or evenly spaced over all windows when limit applies",
+    "source_dataset": "HuggingFaceFW/fineweb-edu",
+    "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+    "source_rows": "1500-1599",
+    "source_response_sha256": "153e0783e45b242dbc5322e488efe42aa184f930c219601287a290ccbe5be8a9",
+    "license": "Dataset card ODC-BY; underlying web text may retain third-party rights. Corpus not redistributed.",
+    "new_to_this_nat_comparison": true
+  }
+}

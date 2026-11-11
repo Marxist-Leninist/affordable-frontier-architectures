@@ -1,0 +1,62 @@
+{
+  "passed_model_data_checks": true,
+  "checks": {
+    "transformer_protocol_parameter_count": true,
+    "transformer_correct_branch": true,
+    "transformer_single_pass_suffix_masks": true,
+    "mamba_protocol_parameter_count": true,
+    "mamba_correct_branch": true,
+    "mamba_single_pass_suffix_masks": true,
+    "common_embedding_head_initialization": true,
+    "forward_no_targets_argument": true,
+    "paired_batch_0": true,
+    "paired_batch_1": true,
+    "paired_batch_2": true,
+    "task_0_correct_targets": true,
+    "task_1_correct_targets": true,
+    "task_2_correct_targets": true,
+    "task_3_correct_targets": true,
+    "training_no_test_loads": true,
+    "text_checkpoint_preserved_before_task_training": true,
+    "gradient_nonfinite_guard": true,
+    "cpu_thread_affinity_config": true,
+    "prespecified_resource_limits": true
+  },
+  "parameters": {
+    "transformer": 765568,
+    "mamba": 765184
+  },
+  "raw_sha256_verified": {
+    "train": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+    "validation": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+    "test": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+  },
+  "parsed_article_counts": {
+    "train": 630,
+    "validation": 61,
+    "test": 63
+  },
+  "valid_train_window_count": 10873198,
+  "source_sha256": {
+    "models_long.py": "c3201903b012d70b9df6d4b45bc3110487b86a5689946e21b4e044ca86573a2c",
+    "data_long.py": "3545ef3bfb608d11b26a9527e9f745f2bb619b7a624675539df4e296235b2771",
+    "train_long.py": "1ff2e1b0cbb454d545504d87c8aa5ef240db35cca9464ec37043e55a74986ffd",
+    "orchestrate_long.py": "3586e1fd562a0c05ec5e44d3163c0e8360dd248308c493027f8de5b1335e1f9e",
+    "protocol_long.json": "f4e1b61d6a82dd65b80d5f099c53688bf9e7d2e898a396cf8f6bfe30680e818f",
+    "fast_scan.py": "337995ced91c1ccd5ac8f340a2474d9368920103cb14db1e08b7b27072448fe9",
+    "scan_cpu.cpp": "8811d5e0a408cbe94f17968682d7336a44768ba6b4946a6f992ffedc3c4ab5f9"
+  },
+  "resource_safety_review": "Cancellation fix inspected and four bounded mock-child tests pass; see orchestrator_cancel_audit.json. No launch blocker identified.",
+  "findings": [
+    "Mamba-1 equations retained; native C++ recurrence reduces scan to linear work. Fast-scan parity artifacts reviewed; bounded complete NAT forward succeeded.",
+    "Full train split now used via uniformly sampled valid article-contained windows; byte windows near article ends/short documents excluded by definition.",
+    "Paired seed controls identical data and common embedding/output initialization, not identical architecture-specific random weights.",
+    "300/900 CPU-second snapshots may be unavailable when a run completes first; mark missing, never substitute final or compare unequal budgets silently.",
+    "Two concurrent pinned jobs can compete for cache/memory and frequency; standalone timing required, CPU time excludes waits and differs from user wall time.",
+    "Task sampling is balanced in expectation, not guaranteed exact counts per minibatch; adaptation uses common LR rather than per-family task-LR tuning.",
+    "FineWeb cohort was used in prior research but is new to this comparison, not a universally untouched external dataset.",
+    "Three small dense FP32 seeds and fixed 32-byte conditional generation do not establish general intelligence, GPU speed or 600B benefit.",
+    "Tune seed is hard-coded101 and max_workers2 rather than read from protocol, but matches frozen current protocol.",
+    "run_wall_cap checks happen between steps, not inside evaluation/compiler/checkpoint operations; global parent timeout bounds child lifetime with up to60s cleanup grace."
+  ]
+}

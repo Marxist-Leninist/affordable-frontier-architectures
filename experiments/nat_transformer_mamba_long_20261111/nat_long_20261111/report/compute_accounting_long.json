@@ -1,0 +1,35 @@
+{
+  "scope": "Static partial forward-pass operation estimate, not a measurement or complete FLOP count.",
+  "shape": {
+    "batch": 1,
+    "sequence_positions": 128,
+    "width": 128,
+    "layers": 3,
+    "output_positions": 32,
+    "byte_vocab": 256
+  },
+  "transformer_matrix_macs": 103088128,
+  "transformer_formula": "3*(128*(4*128^2+2*128*654)+2*128^2*128)+32*128*256",
+  "mamba_matrix_and_convolution_macs": 86788096,
+  "mamba_formula": "3*2*(128*(128*512+256*40+8*256+256*128)+131*256*4)+32*128*256",
+  "convolution_accounting": "Kernel4, padding3 produces131 positions before truncation to128; all131 nominal convolution outputs are counted.",
+  "extra_convolution_macs_for_discarded_positions": 18432,
+  "mamba_state_elements_updated_per_forward": 3145728,
+  "state_elements_formula": "3*2*128*256*16",
+  "excluded": [
+    "normalization",
+    "activations",
+    "RoPE",
+    "softmax",
+    "selective scan recurrence",
+    "other pointwise operations"
+  ],
+  "caveats": [
+    "MAC counts cover listed matrix/convolution operations only. One MAC is one multiply-accumulate, not a complete FLOP accounting.",
+    "Mamba state-element updates are a separate count, not MACs or FLOPs, and must not be added to the partial MAC totals.",
+    "No training backward, optimizer, memory movement, dispatch or compilation accounting is included.",
+    "Matching parameters is not matching compute. These estimates do not establish equal FLOPs or less total work for Mamba.",
+    "Both dense arms invoke all layer modules. Embeddings use indexed rows; neither arm has an expert router.",
+    "Interpret partial accounting alongside measured whole-model runtime, not as a substitute for timing."
+  ]
+}

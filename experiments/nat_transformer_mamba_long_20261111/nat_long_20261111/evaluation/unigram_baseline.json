@@ -1,0 +1,7 @@
+{
+  "training_only_half_count_smoothing": true,
+  "bpb": {
+    "wikitext": 4.57690231003572,
+    "fineweb": 4.581922464002306
+  }
+}

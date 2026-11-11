@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": {
+    "suffix_loss_aggregation": true,
+    "per_example_rows_preserve_dataset_order": true,
+    "training_completion_gate_before_test_loading": true,
+    "checkpoint_restoration_and_receipt": true,
+    "smoothed_unigram_normalized": true,
+    "conditioning_rotation_keeps_targets_and_reassigns_all_prefixes": true,
+    "per_document_groups_retained_in_manifest": true,
+    "missing900_explicitly_unavailable": true,
+    "task_checkpoint_separate": true,
+    "benchmark_does_not_save_checkpoint": true,
+    "benchmark_inference_no_grad": true,
+    "benchmark_warns_updated_throwaway_models": true
+  },
+  "source_sha256": {
+    "evaluate_long.py": "bf420ec8349c07b9edb04ca0a7709268071b6854ac4ac830b568208a15af9b98",
+    "benchmark_long.py": "a712cc0cb1d82bcd244d505b5e1f2b6ae23bca746c7978ef33ef85dea94a658e"
+  },
+  "test_metrics_opened": false,
+  "scope": "Synthetic aggregation/model restoration, mocked pre-completion gate, math and source inspection only. No held-out corpus loading, real checkpoints, training, or timing.",
+  "findings": [
+    "Full WikiText/FineWeb rows scored in order; aligned document group IDs retained for later grouped bootstrap. Statistical aggregation/bootstrap code is not included in these scripts and needs later audit.",
+    "Missing900s snapshots are marked unavailable; comparison must restrict to truly matched available seeds and report gaps. Missing required final.pt should raise rather than share optional-threshold handling.",
+    "Strengthen preflight: all6 result/task completed statuses, expected steps, and final checkpoint hashes should be checked before held-out sets loaded. Current pipeline completion flag gates access and orchestrator sets it only after all runs.",
+    "Benchmark must run serially after evaluation exits. Pipeline training_complete alone does not exclude another post-training job.",
+    "Unigram uses only training byte counts with half-count smoothing; diagnostic rotates selected prefixes, not independent random permutation, and may preserve same-document context.",
+    "Standalone inference is after45 throwaway training updates; clearly labeled runtime-only, not final-checkpoint quality. No saved parameters modified.",
+    "Peak RSS is combined process high-water mark, not architecture-specific memory usage.",
+    "CPU-only fixed128-position dense FP32 benchmark cannot establish GPU speed, broad intelligence, or 600B transfer."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "cold_equals_uncached": true,
+  "hot_equals_uncached": true,
+  "same_evenly_spaced_limit_and_metadata": true,
+  "corrupt_token_cache_rejected": true,
+  "scope": "Tiny synthetic arrays in temporary directory; no real corpus cache changed.",
+  "limitation": "Cache content digest verifies concatenated prefix/target arrays, not groups/metadata separately; atomic locally generated cache makes this acceptable for current use, but whole-cache digest would harden future document-bootstrap provenance."
+}
