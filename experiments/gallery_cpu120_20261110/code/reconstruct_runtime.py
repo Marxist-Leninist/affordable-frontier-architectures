@@ -29,10 +29,11 @@ def integer_state(model):
     out = {}
     for key, value in run_job.runtime_state(model).items():
         kind = key[len(run_job.RUNTIME):].partition(".")[0]
+        # copies: the arrays runtime_state() hands back share memory with the live buffers
         if kind == "buffer" and np.issubdtype(value.dtype, np.integer):
-            out[key] = value
+            out[key] = value.copy()
         elif kind == "attr" and value.dtype.kind in "iu":
-            out[key] = value
+            out[key] = value.copy()
     return out
 
 

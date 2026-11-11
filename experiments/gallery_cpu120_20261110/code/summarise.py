@@ -97,7 +97,8 @@ ranked = sorted([r for r in gallery if r["audits_pass"] and r["within_size_budge
 for i, r in enumerate(ranked):
     r["rank_by_sum"] = i + 1
 CONTROL_ARMS = ("transformer", "879", "458")
-CONFIRM_SEEDS = (2, 3)
+FIRST_BLOCK = (2, 3)           # the fresh seeds every confirmation candidate was run on
+SECOND_BLOCK = (2, 3, 4, 5)    # the leading candidates and the controls were also run on seeds 4 and 5
 
 
 def windows(r, name):
@@ -105,56 +106,66 @@ def windows(r, name):
 
 
 confirm_rows = rows if confirm_dir is None else [json.loads(pathlib.Path(f).read_text()) for f in sorted(glob.glob(str(confirm_dir / "*.json")))]
-cby = {key(r): r for r in confirm_rows}      # seeds 2 and 3 come from here, for candidates and controls alike
-confirmation = {}
-for arm in sorted({r["arm"] for r in confirm_rows}, key=lambda a: (a != "transformer", int(a) if a != "transformer" else 0)):
-    if (arm, 1) not in by or not all((arm, sd) in cby for sd in CONFIRM_SEEDS):
-        continue
-    rs = {1: by[(arm, 1)], **{sd: cby[(arm, sd)] for sd in CONFIRM_SEEDS}}
-    entry = {"name": rs[1]["name"], "parameters": rs[1]["parameters"], "is_control": arm in CONTROL_ARMS,
-             "per_seed": {str(sd): {"wikitext_ce": rs[sd]["wikitext_ce_nats"], "fineweb_edu_ce": rs[sd]["fineweb_edu_ce_nats"],
-                                    "updates": rs[sd]["updates"]} for sd in sorted(rs)},
-             "selection_seed_1": {"wikitext_ce": rs[1]["wikitext_ce_nats"], "fineweb_edu_ce": rs[1]["fineweb_edu_ce_nats"]},
-             "confirmation_mean": {"seeds": list(CONFIRM_SEEDS),
-                                   "wikitext_ce": float(np.mean([rs[sd]["wikitext_ce_nats"] for sd in CONFIRM_SEEDS])),
-                                   "fineweb_edu_ce": float(np.mean([rs[sd]["fineweb_edu_ce_nats"] for sd in CONFIRM_SEEDS]))},
-             "three_seed_mean": {"wikitext_ce": float(np.mean([rs[sd]["wikitext_ce_nats"] for sd in (1, 2, 3)])),
-                                 "fineweb_edu_ce": float(np.mean([rs[sd]["fineweb_edu_ce_nats"] for sd in (1, 2, 3)])),
-                                 "wikitext_sd": float(np.std([rs[sd]["wikitext_ce_nats"] for sd in (1, 2, 3)], ddof=1)),
-                                 "fineweb_edu_sd": float(np.std([rs[sd]["fineweb_edu_ce_nats"] for sd in (1, 2, 3)], ddof=1))}}
-    if arm not in CONTROL_ARMS:
-        entry["versus"] = {}
-        for ctl in CONTROL_ARMS:
-            if not all((ctl, sd) in cby for sd in CONFIRM_SEEDS):
-                continue
-            per_seed = {str(sd): {"wikitext_delta": rs[sd]["wikitext_ce_nats"] - cby[(ctl, sd)]["wikitext_ce_nats"],
-                                  "fineweb_edu_delta": rs[sd]["fineweb_edu_ce_nats"] - cby[(ctl, sd)]["fineweb_edu_ce_nats"]}
-                        for sd in CONFIRM_SEEDS}
-            dw = np.mean([windows(rs[sd], "wikitext") - windows(cby[(ctl, sd)], "wikitext") for sd in CONFIRM_SEEDS], 0)
-            df = np.mean([windows(rs[sd], "fineweb_edu") - windows(cby[(ctl, sd)], "fineweb_edu") for sd in CONFIRM_SEEDS], 0)
-            entry["versus"][ctl] = {
-                "per_seed": per_seed, "wikitext_delta": float(dw.mean()), "wikitext_ci95": boot_wiki(dw),
-                "fineweb_edu_delta": float(df.mean()), "fineweb_edu_ci95": boot_plain(df),
-                "better_on_both_sets_in_every_confirmation_seed": all(v["wikitext_delta"] < 0 and v["fineweb_edu_delta"] < 0 for v in per_seed.values()),
-                "worse_on_both_sets_in_every_confirmation_seed": all(v["wikitext_delta"] > 0 and v["fineweb_edu_delta"] > 0 for v in per_seed.values())}
-    confirmation[arm] = entry
+cby = {key(r): r for r in confirm_rows}      # fresh seeds come from here, for candidates and controls alike
+
+
+def confirm(seeds):
+    """Candidates and controls on the given fresh seeds. Seed 1 (the selection seed) is carried along but not counted."""
+    out = {}
+    for arm in sorted({r["arm"] for r in confirm_rows}, key=lambda x: (x != "transformer", int(x) if x != "transformer" else 0)):
+        if (arm, 1) not in by or not all((arm, sd) in cby for sd in seeds):
+            continue
+        rs = {1: by[(arm, 1)], **{sd: cby[(arm, sd)] for sd in seeds}}
+        w = [rs[sd]["wikitext_ce_nats"] for sd in seeds]
+        f = [rs[sd]["fineweb_edu_ce_nats"] for sd in seeds]
+        entry = {"name": rs[1]["name"], "parameters": rs[1]["parameters"], "is_control": arm in CONTROL_ARMS,
+                 "per_seed": {str(sd): {"wikitext_ce": rs[sd]["wikitext_ce_nats"], "fineweb_edu_ce": rs[sd]["fineweb_edu_ce_nats"],
+                                        "updates": rs[sd]["updates"]} for sd in sorted(rs)},
+                 "selection_seed_1": {"wikitext_ce": rs[1]["wikitext_ce_nats"], "fineweb_edu_ce": rs[1]["fineweb_edu_ce_nats"]},
+                 "confirmation_mean": {"seeds": list(seeds), "wikitext_ce": float(np.mean(w)), "fineweb_edu_ce": float(np.mean(f)),
+                                       "wikitext_sd": float(np.std(w, ddof=1)), "fineweb_edu_sd": float(np.std(f, ddof=1))}}
+        if arm not in CONTROL_ARMS:
+            entry["versus"] = {}
+            for ctl in CONTROL_ARMS:
+                if not all((ctl, sd) in cby for sd in seeds):
+                    continue
+                per_seed = {str(sd): {"wikitext_delta": rs[sd]["wikitext_ce_nats"] - cby[(ctl, sd)]["wikitext_ce_nats"],
+                                      "fineweb_edu_delta": rs[sd]["fineweb_edu_ce_nats"] - cby[(ctl, sd)]["fineweb_edu_ce_nats"]}
+                            for sd in seeds}
+                dw = np.mean([windows(rs[sd], "wikitext") - windows(cby[(ctl, sd)], "wikitext") for sd in seeds], 0)
+                df = np.mean([windows(rs[sd], "fineweb_edu") - windows(cby[(ctl, sd)], "fineweb_edu") for sd in seeds], 0)
+                entry["versus"][ctl] = {
+                    "per_seed": per_seed, "wikitext_delta": float(dw.mean()), "wikitext_ci95": boot_wiki(dw),
+                    "fineweb_edu_delta": float(df.mean()), "fineweb_edu_ci95": boot_plain(df), "seeds": len(seeds),
+                    "seeds_better_on_wikitext": sum(v["wikitext_delta"] < 0 for v in per_seed.values()),
+                    "seeds_better_on_fineweb_edu": sum(v["fineweb_edu_delta"] < 0 for v in per_seed.values()),
+                    "better_on_both_sets_in_every_confirmation_seed": all(v["wikitext_delta"] < 0 and v["fineweb_edu_delta"] < 0 for v in per_seed.values()),
+                    "worse_on_both_sets_in_every_confirmation_seed": all(v["wikitext_delta"] > 0 and v["fineweb_edu_delta"] > 0 for v in per_seed.values())}
+        out[arm] = entry
+    return out
+
+
+confirmation = confirm(FIRST_BLOCK)
+extended = confirm(SECOND_BLOCK) if confirm_dir is not None else {}
+if not any(not c["is_control"] for c in extended.values()):
+    extended = {}
 
 # the same control, the same seed, run twice: once in the screen block and once in the confirmation block
 repeats = []
 if confirm_dir is not None:
     for ctl in CONTROL_ARMS:
-        for sd in CONFIRM_SEEDS:
+        for sd in FIRST_BLOCK:
             if (ctl, sd) in by and (ctl, sd) in cby:
-                a, b = by[(ctl, sd)], cby[(ctl, sd)]
-                repeats.append({"arm": ctl, "seed": sd, "updates": [a["updates"], b["updates"]],
-                                "wikitext_ce": [a["wikitext_ce_nats"], b["wikitext_ce_nats"]],
-                                "fineweb_edu_ce": [a["fineweb_edu_ce_nats"], b["fineweb_edu_ce_nats"]],
-                                "wikitext_abs_diff": abs(a["wikitext_ce_nats"] - b["wikitext_ce_nats"]),
-                                "fineweb_edu_abs_diff": abs(a["fineweb_edu_ce_nats"] - b["fineweb_edu_ce_nats"])})
+                x, y = by[(ctl, sd)], cby[(ctl, sd)]
+                repeats.append({"arm": ctl, "seed": sd, "updates": [x["updates"], y["updates"]],
+                                "wikitext_ce": [x["wikitext_ce_nats"], y["wikitext_ce_nats"]],
+                                "fineweb_edu_ce": [x["fineweb_edu_ce_nats"], y["fineweb_edu_ce_nats"]],
+                                "wikitext_abs_diff": abs(x["wikitext_ce_nats"] - y["wikitext_ce_nats"]),
+                                "fineweb_edu_abs_diff": abs(x["fineweb_edu_ce_nats"] - y["fineweb_edu_ce_nats"])})
 
 metrics = {"cohort": "gallery_cpu120_20261110", "jobs_finished": len(rows) + (len(confirm_rows) if confirm_dir is not None else 0),
            "jobs_failed": failed, "gallery_programs_finished": len(gallery), "controls": controls,
-           "confirmation": confirmation, "same_seed_run_twice": repeats, "rows": table,
+           "confirmation": confirmation, "confirmation_extended": extended, "same_seed_run_twice": repeats, "rows": table,
            "note": "One seed per gallery program; three seeds for the controls. CE in nats per byte, lower is better."}
 out_dir.mkdir(parents=True, exist_ok=True)
 (out_dir / "METRICS.json").write_text(json.dumps(metrics, indent=1) + "\n")
@@ -176,51 +187,65 @@ if controls:
         lines.append(f"| {c['label']} | {c['parameters']:,} | {fmt(c['wikitext_mean'])} ({fmt(c['wikitext_sd'])}) | "
                      f"{fmt(c['fineweb_edu_mean'])} ({fmt(c['fineweb_edu_sd'])}) | {', '.join(str(u) for u in c['updates'])} |")
     lines.append("")
-candidates = {a: c for a, c in confirmation.items() if not c["is_control"]}
-if candidates:
-    def label(a):
-        return {"transformer": "Transformer w96", "879": "#879 Fusion", "458": "#458 DLGM"}.get(a, f"#{a} {confirmation[a]['name'].replace('delta_net_', '')}")
+def label(arm, conf):
+    return {"transformer": "Transformer w96", "879": "#879 Fusion", "458": "#458 DLGM"}.get(arm, f"#{arm} {conf[arm]['name'].replace('delta_net_', '')}")
 
-    def signed(v, ci):
-        star = "*" if (ci[1] < 0 or ci[0] > 0) else ""
-        return f"{v:+.4f}{star}"
 
-    lines += ["## Confirmation on seeds 2 and 3", "",
-              "The best programs of the seed-1 screen were run again on seeds 2 and 3, in one block together with fresh runs of the "
-              "three controls on the same seeds. Seed 1 is what the candidates were picked on, so it is shown but not counted. "
-              "Means below are over seeds 2 and 3 of that block only, for the candidates and the controls alike.", "",
-              "| Model | Parameters | Seed 1 (selection) WikiText / FineWeb-Edu | Seeds 2-3 mean WikiText | Seeds 2-3 mean FineWeb-Edu | Updates (seeds 1, 2, 3) |",
-              "| --- | ---: | ---: | ---: | ---: | ---: |"]
-    order = sorted(confirmation, key=lambda a: confirmation[a]["confirmation_mean"]["wikitext_ce"] + confirmation[a]["confirmation_mean"]["fineweb_edu_ce"])
-    for a in order:
-        c = confirmation[a]
-        lines.append(f"| {label(a)}{' (control)' if c['is_control'] else ''} | {c['parameters']:,} | {fmt(c['selection_seed_1']['wikitext_ce'])} / {fmt(c['selection_seed_1']['fineweb_edu_ce'])} | "
-                     f"{fmt(c['confirmation_mean']['wikitext_ce'])} | {fmt(c['confirmation_mean']['fineweb_edu_ce'])} | "
-                     f"{', '.join(str(c['per_seed'][str(sd)]['updates']) for sd in (1, 2, 3))} |")
-    lines += ["", "Differences from each control on seeds 2 and 3 (candidate minus control, negative is better; an asterisk means the "
-              "95% interval over held-out windows excludes zero; \"every seed\" says whether the sign is the same on both sets in both seeds):", "",
-              "| Candidate | vs #458 DLGM WikiText | vs #458 DLGM FineWeb-Edu | every seed | vs #879 Fusion WikiText | vs #879 Fusion FineWeb-Edu | every seed | vs Transformer WikiText | vs Transformer FineWeb-Edu | every seed |",
-              "| --- | ---: | ---: | --- | ---: | ---: | --- | ---: | ---: | --- |"]
-    for a in [a for a in order if a in candidates]:
-        cells = [label(a)]
+def signed(v, ci):
+    return f"{v:+.4f}{'*' if (ci[1] < 0 or ci[0] > 0) else ''}"
+
+
+def confirmation_tables(conf, heading, intro):
+    seeds = next(iter(conf.values()))["confirmation_mean"]["seeds"]
+    name = f"Seeds {seeds[0]}-{seeds[-1]}"
+    out = [heading, "", intro, "",
+           f"| Model | Parameters | Seed 1 (selection) WikiText / FineWeb-Edu | {name} mean WikiText | {name} mean FineWeb-Edu | Updates (seeds {', '.join(str(x) for x in [1] + seeds)}) |",
+           "| --- | ---: | ---: | ---: | ---: | ---: |"]
+    order = sorted(conf, key=lambda x: conf[x]["confirmation_mean"]["wikitext_ce"] + conf[x]["confirmation_mean"]["fineweb_edu_ce"])
+    for arm in order:
+        c = conf[arm]
+        out.append(f"| {label(arm, conf)}{' (control)' if c['is_control'] else ''} | {c['parameters']:,} | {fmt(c['selection_seed_1']['wikitext_ce'])} / {fmt(c['selection_seed_1']['fineweb_edu_ce'])} | "
+                   f"{fmt(c['confirmation_mean']['wikitext_ce'])} | {fmt(c['confirmation_mean']['fineweb_edu_ce'])} | "
+                   f"{', '.join(str(c['per_seed'][str(sd)]['updates']) for sd in [1] + seeds)} |")
+    out += ["", f"Differences from each control on seeds {seeds[0]} to {seeds[-1]} (candidate minus control, negative is better; an asterisk means the "
+            "95% interval over held-out windows excludes zero; \"seeds\" counts the seeds in which the candidate was better, on WikiText and on FineWeb-Edu):", "",
+            "| Candidate | vs #458 DLGM WikiText | vs #458 DLGM FineWeb-Edu | seeds | vs #879 Fusion WikiText | vs #879 Fusion FineWeb-Edu | seeds | vs Transformer WikiText | vs Transformer FineWeb-Edu | seeds |",
+            "| --- | ---: | ---: | --- | ---: | ---: | --- | ---: | ---: | --- |"]
+    for arm in [x for x in order if not conf[x]["is_control"]]:
+        cells = [label(arm, conf)]
         for ctl in ("458", "879", "transformer"):
-            v = candidates[a]["versus"].get(ctl)
+            v = conf[arm]["versus"].get(ctl)
             if not v:
                 cells += ["", "", ""]
                 continue
             cells += [signed(v["wikitext_delta"], v["wikitext_ci95"]), signed(v["fineweb_edu_delta"], v["fineweb_edu_ci95"]),
-                      "better" if v["better_on_both_sets_in_every_confirmation_seed"] else "worse" if v["worse_on_both_sets_in_every_confirmation_seed"] else "mixed"]
-        lines.append("| " + " | ".join(cells) + " |")
+                      f"{v['seeds_better_on_wikitext']} of {v['seeds']}, {v['seeds_better_on_fineweb_edu']} of {v['seeds']}"]
+        out.append("| " + " | ".join(cells) + " |")
+    out.append("")
+    return out
+
+
+if any(not c["is_control"] for c in confirmation.values()):
+    lines += confirmation_tables(
+        confirmation, "## Confirmation on seeds 2 and 3",
+        "The best programs of the seed-1 screen were run again on seeds 2 and 3, in one block together with fresh runs of the "
+        "three controls on the same seeds. Seed 1 is what the candidates were picked on, so it is shown but not counted. "
+        "Means below are over seeds 2 and 3 of that block only, for the candidates and the controls alike.")
+if extended:
+    lines += confirmation_tables(
+        extended, "## Confirmation extended to seeds 4 and 5",
+        "The candidates that were level with or ahead of the best control after seeds 2 and 3 were run on two more seeds, "
+        "again together with all three controls. Means below are over the four fresh seeds 2 to 5.")
+if repeats:
+    lines += ["## The same run, twice", "",
+              "The same control with the same seed, run once during the screen and once in the confirmation block. The two runs "
+              "start identically and differ only in how many updates fit into 120 CPU-seconds, so this is the size of pure timing noise:", "",
+              "| Control | Seed | Updates (screen, confirmation) | WikiText CE (screen, confirmation) | FineWeb-Edu CE (screen, confirmation) |",
+              "| --- | ---: | ---: | ---: | ---: |"]
+    for r in repeats:
+        lines.append(f"| {label(r['arm'], confirmation)} | {r['seed']} | {r['updates'][0]}, {r['updates'][1]} | {fmt(r['wikitext_ce'][0])}, {fmt(r['wikitext_ce'][1])} | "
+                     f"{fmt(r['fineweb_edu_ce'][0])}, {fmt(r['fineweb_edu_ce'][1])} |")
     lines.append("")
-    if repeats:
-        lines += ["The same control with the same seed, run twice (once during the screen, once in the confirmation block). The two runs "
-                  "start identically and differ only in how many updates fit into 120 CPU-seconds, so this is the size of pure timing noise:", "",
-                  "| Control | Seed | Updates (screen, confirmation) | WikiText CE (screen, confirmation) | FineWeb-Edu CE (screen, confirmation) |",
-                  "| --- | ---: | ---: | ---: | ---: |"]
-        for r in repeats:
-            lines.append(f"| {label(r['arm'])} | {r['seed']} | {r['updates'][0]}, {r['updates'][1]} | {fmt(r['wikitext_ce'][0])}, {fmt(r['wikitext_ce'][1])} | "
-                         f"{fmt(r['fineweb_edu_ce'][0])}, {fmt(r['fineweb_edu_ce'][1])} |")
-        lines.append("")
 lines += ["## Gallery programs, seed 1, best first (sum of the two losses)", "",
           "| Rank | Gallery # | Program | Parameters | Updates | WikiText CE | vs T | FineWeb-Edu CE | vs T | WikiText CE at 60 s | Screened before |",
           "| ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |"]
