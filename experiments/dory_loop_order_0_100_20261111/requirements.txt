@@ -1,0 +1,5 @@
+# Use the official PyTorch CPU wheel index for torch.
+torch==2.6.0
+numpy==2.3.5
+pyarrow==19.0.1
+# Report generation: Python standard library only. SVG rendering optional.

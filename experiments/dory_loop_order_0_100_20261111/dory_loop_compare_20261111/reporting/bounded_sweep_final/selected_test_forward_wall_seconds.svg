@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540"><rect width="980" height="540" fill="white"/><g font-family="Arial,sans-serif" fill="#17212b">
+<text x="35" y="32" font-size="20">test / selected: Forward wall seconds summed over cohort</text>
+<text x="35" y="57" font-size="13">Bounded amendment: 64 windows/domain at r=0,2,100 only. Trained r=2; connecting lines are guides.</text>
+<path d="M90 400.0H890" stroke="#e4e7eb"/>
+<text x="80" y="404.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 342.0H890" stroke="#e4e7eb"/>
+<text x="80" y="346.0" text-anchor="end" font-size="12">8.03</text>
+<path d="M90 284.0H890" stroke="#e4e7eb"/>
+<text x="80" y="288.0" text-anchor="end" font-size="12">16.1</text>
+<path d="M90 226.0H890" stroke="#e4e7eb"/>
+<text x="80" y="230.0" text-anchor="end" font-size="12">24.1</text>
+<path d="M90 167.99999999999997H890" stroke="#e4e7eb"/>
+<text x="80" y="171.99999999999997" text-anchor="end" font-size="12">32.1</text>
+<path d="M90 110.0H890" stroke="#e4e7eb"/>
+<text x="80" y="114.0" text-anchor="end" font-size="12">40.2</text>
+<text x="90.0" y="423" text-anchor="middle" font-size="12">0</text>
+<text x="250.0" y="423" text-anchor="middle" font-size="12">20</text>
+<text x="410.0" y="423" text-anchor="middle" font-size="12">40</text>
+<text x="570.0" y="423" text-anchor="middle" font-size="12">60</text>
+<text x="730.0" y="423" text-anchor="middle" font-size="12">80</text>
+<text x="890.0" y="423" text-anchor="middle" font-size="12">100</text>
+<path d="M106.0 95V400" stroke="#777" stroke-dasharray="3 4"/>
+<text x="490" y="448" text-anchor="middle" font-size="14">Inference repetition count r (16 outer + 20r recurrent layer applications)</text>
+<polyline points="90.00,397.73 106.00,392.77 890.00,133.95" fill="none" stroke="#1167b1" stroke-width="1.6" stroke-dasharray=""/>
+<circle cx="90.00" cy="397.73" r="1.5" fill="#1167b1"/>
+<circle cx="106.00" cy="392.77" r="1.5" fill="#1167b1"/>
+<circle cx="890.00" cy="133.95" r="1.5" fill="#1167b1"/>
+<path d="M45 480h25" stroke="#1167b1" stroke-width="2" stroke-dasharray=""/>
+<text x="75" y="484" font-size="12">split seed1</text>
+<polyline points="90.00,397.52 106.00,392.84 890.00,137.62" fill="none" stroke="#1167b1" stroke-width="1.6" stroke-dasharray="6 3"/>
+<circle cx="90.00" cy="397.52" r="1.5" fill="#1167b1"/>
+<circle cx="106.00" cy="392.84" r="1.5" fill="#1167b1"/>
+<circle cx="890.00" cy="137.62" r="1.5" fill="#1167b1"/>
+<path d="M175 480h25" stroke="#1167b1" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="205" y="484" font-size="12">split seed2</text>
+<polyline points="90.00,397.79 106.00,392.80 890.00,134.04" fill="none" stroke="#1167b1" stroke-width="1.6" stroke-dasharray="2 3"/>
+<circle cx="90.00" cy="397.79" r="1.5" fill="#1167b1"/>
+<circle cx="106.00" cy="392.80" r="1.5" fill="#1167b1"/>
+<circle cx="890.00" cy="134.04" r="1.5" fill="#1167b1"/>
+<path d="M305 480h25" stroke="#1167b1" stroke-width="2" stroke-dasharray="2 3"/>
+<text x="335" y="484" font-size="12">split seed3</text>
+<polyline points="90.00,397.57 106.00,392.67 890.00,138.74" fill="none" stroke="#bc4e18" stroke-width="1.6" stroke-dasharray=""/>
+<circle cx="90.00" cy="397.57" r="1.5" fill="#bc4e18"/>
+<circle cx="106.00" cy="392.67" r="1.5" fill="#bc4e18"/>
+<circle cx="890.00" cy="138.74" r="1.5" fill="#bc4e18"/>
+<path d="M475 480h25" stroke="#bc4e18" stroke-width="2" stroke-dasharray=""/>
+<text x="505" y="484" font-size="12">whole seed1</text>
+<polyline points="90.00,397.38 106.00,392.27 890.00,135.44" fill="none" stroke="#bc4e18" stroke-width="1.6" stroke-dasharray="6 3"/>
+<circle cx="90.00" cy="397.38" r="1.5" fill="#bc4e18"/>
+<circle cx="106.00" cy="392.27" r="1.5" fill="#bc4e18"/>
+<circle cx="890.00" cy="135.44" r="1.5" fill="#bc4e18"/>
+<path d="M605 480h25" stroke="#bc4e18" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="635" y="484" font-size="12">whole seed2</text>
+<polyline points="90.00,397.59 106.00,392.71 890.00,131.32" fill="none" stroke="#bc4e18" stroke-width="1.6" stroke-dasharray="2 3"/>
+<circle cx="90.00" cy="397.59" r="1.5" fill="#bc4e18"/>
+<circle cx="106.00" cy="392.71" r="1.5" fill="#bc4e18"/>
+<circle cx="890.00" cy="131.32" r="1.5" fill="#bc4e18"/>
+<path d="M735 480h25" stroke="#bc4e18" stroke-width="2" stroke-dasharray="2 3"/>
+<text x="765" y="484" font-size="12">whole seed3</text>
+<text x="35" y="520" font-size="12">Cohort aggregate runtime, not request latency or equal FLOPs across counts.</text></g></svg>

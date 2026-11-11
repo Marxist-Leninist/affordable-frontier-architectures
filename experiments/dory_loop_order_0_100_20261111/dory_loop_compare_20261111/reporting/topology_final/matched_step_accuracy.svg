@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="430" viewBox="0 0 1140 430" role="img">
+<title>Matched 2,000 updates | Byte accuracy</title><desc>Three paired seeds: s1 circle, s2 square, s3 triangle. Lines connect the same seed; no confidence intervals.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/><g font-family="Arial,sans-serif" fill="#17212b">
+<text x="30" y="31" font-size="21" font-weight="bold">Matched 2,000 updates | Byte accuracy</text>
+<text x="30" y="56" font-size="12">Three paired seeds: s1 circle, s2 square, s3 triangle. Lines connect the same seed; no confidence intervals.</text>
+<text x="184" y="88" text-anchor="middle" font-size="15">WikiText-2 test</text>
+<path d="M72 330.000h245" stroke="#e5e9ee"/>
+<text x="65" y="334.000" text-anchor="end" font-size="11">16.96%</text>
+<path d="M72 275.000h245" stroke="#e5e9ee"/>
+<text x="65" y="279.000" text-anchor="end" font-size="11">17.96%</text>
+<path d="M72 220.000h245" stroke="#e5e9ee"/>
+<text x="65" y="224.000" text-anchor="end" font-size="11">18.96%</text>
+<path d="M72 165.000h245" stroke="#e5e9ee"/>
+<text x="65" y="169.000" text-anchor="end" font-size="11">19.96%</text>
+<path d="M72 110.000h245" stroke="#e5e9ee"/>
+<text x="65" y="114.000" text-anchor="end" font-size="11">20.96%</text>
+<path d="M118 220.000L248 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<circle cx="118" cy="220.000" r="4" fill="#1167b1"><title>test, seed 1: 0.18956283</title></circle>
+<circle cx="248" cy="220.000" r="4" fill="#bc4e18"><title>test, seed 1: 0.18956283</title></circle>
+<path d="M127 220.000L257 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<rect x="123" y="216.000" width="8" height="8" fill="#1167b1"><title>test, seed 2: 0.18956283</title></rect>
+<rect x="253" y="216.000" width="8" height="8" fill="#bc4e18"><title>test, seed 2: 0.18956283</title></rect>
+<path d="M136 220.000L266 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<path d="M136 215.000l5 9h-10z" fill="#1167b1"><title>test, seed 3: 0.18956283</title></path>
+<path d="M266 215.000l5 9h-10z" fill="#bc4e18"><title>test, seed 3: 0.18956283</title></path>
+<text x="127" y="355" text-anchor="middle" font-size="13" fill="#1167b1">Split</text>
+<text x="257" y="355" text-anchor="middle" font-size="13" fill="#bc4e18">Whole</text>
+<text x="554" y="88" text-anchor="middle" font-size="15">FineWeb cohort</text>
+<path d="M442 330.000h245" stroke="#e5e9ee"/>
+<text x="435" y="334.000" text-anchor="end" font-size="11">13.95%</text>
+<path d="M442 275.000h245" stroke="#e5e9ee"/>
+<text x="435" y="279.000" text-anchor="end" font-size="11">14.95%</text>
+<path d="M442 220.000h245" stroke="#e5e9ee"/>
+<text x="435" y="224.000" text-anchor="end" font-size="11">15.95%</text>
+<path d="M442 165.000h245" stroke="#e5e9ee"/>
+<text x="435" y="169.000" text-anchor="end" font-size="11">16.95%</text>
+<path d="M442 110.000h245" stroke="#e5e9ee"/>
+<text x="435" y="114.000" text-anchor="end" font-size="11">17.95%</text>
+<path d="M488 220.000L618 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<circle cx="488" cy="220.000" r="4" fill="#1167b1"><title>fineweb, seed 1: 0.15951558</title></circle>
+<circle cx="618" cy="220.000" r="4" fill="#bc4e18"><title>fineweb, seed 1: 0.15951558</title></circle>
+<path d="M497 220.000L627 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<rect x="493" y="216.000" width="8" height="8" fill="#1167b1"><title>fineweb, seed 2: 0.15951558</title></rect>
+<rect x="623" y="216.000" width="8" height="8" fill="#bc4e18"><title>fineweb, seed 2: 0.15951558</title></rect>
+<path d="M506 220.000L636 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<path d="M506 215.000l5 9h-10z" fill="#1167b1"><title>fineweb, seed 3: 0.15951558</title></path>
+<path d="M636 215.000l5 9h-10z" fill="#bc4e18"><title>fineweb, seed 3: 0.15951558</title></path>
+<text x="497" y="355" text-anchor="middle" font-size="13" fill="#1167b1">Split</text>
+<text x="627" y="355" text-anchor="middle" font-size="13" fill="#bc4e18">Whole</text>
+<text x="924" y="88" text-anchor="middle" font-size="15">WikiText-2 validation</text>
+<path d="M812 330.000h245" stroke="#e5e9ee"/>
+<text x="805" y="334.000" text-anchor="end" font-size="11">16.99%</text>
+<path d="M812 275.000h245" stroke="#e5e9ee"/>
+<text x="805" y="279.000" text-anchor="end" font-size="11">17.99%</text>
+<path d="M812 220.000h245" stroke="#e5e9ee"/>
+<text x="805" y="224.000" text-anchor="end" font-size="11">18.99%</text>
+<path d="M812 165.000h245" stroke="#e5e9ee"/>
+<text x="805" y="169.000" text-anchor="end" font-size="11">19.99%</text>
+<path d="M812 110.000h245" stroke="#e5e9ee"/>
+<text x="805" y="114.000" text-anchor="end" font-size="11">20.99%</text>
+<path d="M858 220.000L988 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<circle cx="858" cy="220.000" r="4" fill="#1167b1"><title>validation, seed 1: 0.18994141</title></circle>
+<circle cx="988" cy="220.000" r="4" fill="#bc4e18"><title>validation, seed 1: 0.18994141</title></circle>
+<path d="M867 220.000L997 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<rect x="863" y="216.000" width="8" height="8" fill="#1167b1"><title>validation, seed 2: 0.18994141</title></rect>
+<rect x="993" y="216.000" width="8" height="8" fill="#bc4e18"><title>validation, seed 2: 0.18994141</title></rect>
+<path d="M876 220.000L1006 220.000" stroke="#a9b2be" stroke-width="1.4"/>
+<path d="M876 215.000l5 9h-10z" fill="#1167b1"><title>validation, seed 3: 0.18994141</title></path>
+<path d="M1006 215.000l5 9h-10z" fill="#bc4e18"><title>validation, seed 3: 0.18994141</title></path>
+<text x="867" y="355" text-anchor="middle" font-size="13" fill="#1167b1">Split</text>
+<text x="997" y="355" text-anchor="middle" font-size="13" fill="#bc4e18">Whole</text>
+<text x="30" y="392" font-size="12">Independent vertical scales per panel. Validation is descriptive, not used for selection. Percentages are on a 0–100 scale.</text>
+</g></svg>

@@ -1,0 +1,70 @@
+{
+  "bounded_calibration_binding_sha256": "67d764a286fc976c546ca43c951c07b3fc7881f279d877976c8d31ac23da2ae0",
+  "bounded_source_manifest_sha256": "9dee44fe7ef011b33c9719f26703b15443e9796be410c908ea412ba31b401dc2",
+  "bounded_sweep": {
+    "all101_windows_per_domain": 8,
+    "cell_status_counts": {
+      "completed": 1248
+    },
+    "combined_elapsed_seconds": 3343.7329872409973,
+    "global_capped": false,
+    "new_elapsed_seconds": 3262.6644771639985,
+    "planned_cells": 1248,
+    "prior_elapsed_debited_seconds": 81.06850944599864,
+    "selected_counts": [
+      0,
+      2,
+      100
+    ],
+    "selected_windows_per_domain": 64,
+    "status": "finalized"
+  },
+  "experiment": "dory_loop_compare_20261111",
+  "frozen_source_manifest_sha256": "7bb5c404c9d141dc91a865fb8700d3948f7bca1ad569ec7af31d7484295dd17e",
+  "historical_public_dependencies": {
+    "copied_sha256": {
+      "frontier_research_v31/data_manifest.json": "239b44339ae043d90ea1277045efffbbab0576774d7db6b687084f43c74270c4",
+      "frontier_research_v31/prepare_data.py": "951c7f61497f23479ca6d783755147977c86b4604eace7b657406e2286a8d0f0",
+      "frontier_research_v8/data_manifest.json": "fcf72bec57c287c3e2fa8ad520da0fe9a7e164600473245c0a27377c9f800423",
+      "frontier_research_v8/prepare_data.py": "d192f5e47cc7465a85f62ed546332d018193b3c740810b126d128bde8fd46eb2",
+      "nat_long_20261111/evaluation_results.json": "93cfdbba7f82b64540794cd8ce770371cb0aafb0057fa8a209a264df115f69d8",
+      "nat_long_20261111/pipeline_status.json": "b9cf0f421ecac0e4f006b2a8550028c4632536aa4fad05b40a04cafcf635a1ef",
+      "nat_long_20261111/postprocess_status.json": "0d72d8b81a79cf88ed4e6e778ef4daa83dd94e30763b90cff2f0b277e3328678",
+      "nat_long_20261111/standalone_timings.json": "6c445398a4a2f439d9c378d0331fafcd24128d914a135f8414ad5256319b7318",
+      "nat_long_20261111/summary_long.json": "10f0acf96e849c0dbc65437873361053a0ed809044e34b55218c80eedd05b48d"
+    },
+    "evaluation_results_note": "The prior public evaluation_results.json had raw-prefix examples removed before its earlier publication. This release reuses those already-public bytes exactly, with numerical measurements unchanged.",
+    "purpose": "Unchanged control.py requires five actual completed NAT receipts at sibling nat_long_20261111. These historical receipts are not new Dory results or newly fabricated success markers.",
+    "source_public_file_manifest_sha256": "d0898d7c1a73c61888c579864c147535e27982430daeca5990ee8337198977f9",
+    "source_release": "nat_long_public_release_20261111 (previously published NAT artifacts)"
+  },
+  "intended_repository_path": "experiments/dory_loop_order_0_to_100_20261111",
+  "numerical_json_copied_byte_for_byte": true,
+  "original_sweep": {
+    "blocker": {
+      "detail": "No candidate satisfies prespecified runtime budgets",
+      "heldout_loaded": false,
+      "status": "blocked_no_fit"
+    },
+    "scored_cells": 0,
+    "status": "blocked"
+  },
+  "packager_sha256": "c88db0c95a5855a57873becbbe96de6bc4aacd1d39fa8a9f0e73d3e7655bf15a",
+  "public_audit_helper_sha256": {
+    "audit_training_pairs.py": "ced3dc73467cedd46fac26c96702ad954b7ec5df6a230cd880f49bc1b9abb2ca",
+    "test_audit_training_pairs.py": "a037b4e1ae2612407b65fff7f036ab0b8d411fa1d554b21cf74c3a6b9aed6f81"
+  },
+  "publication_performed": false,
+  "schema_version": 1,
+  "scope": "Independent tiny NAT recurrent-order motif. No NVIDIA source/weights, no scale, intelligence, GPU-performance or monetary-performance claims.",
+  "source_files_copied_byte_for_byte": true,
+  "summary": {
+    "standard_evaluated_checkpoints": 18,
+    "training_update_cpu_seconds": 5401.134206171004
+  },
+  "target_frequency_diagnostic": {
+    "interpretation": "Post-hoc target-frequency control matches standard WikiText byte accuracy; prediction distribution was not measured. Standard exact completions are zero.",
+    "result_sha256": "463fb052a1315ff3789f864e4f103019615eb95f37822fc631a3231ed8ea9cfe",
+    "source_sha256": "a01aa53b3815c81e6efad8bfd1e605f5e425a25705fcc308ac2fe6d27d8231b3"
+  }
+}

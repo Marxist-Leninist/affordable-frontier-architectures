@@ -1,0 +1,8 @@
+{
+  "report_type": "packager-generated blocker disclosure",
+  "source_sha256": {
+    "dory_loop_compare_20261111/sweep_results/blocker.json": "f06dd016654c8becfbf32780ae40973b4a6b966b601d0c1c26ce7a562786843a",
+    "dory_loop_compare_20261111/sweep_results/calibration_raw.json": "44ed63fbf0b28ff6ed83aeedad342385ee13951b88c0f7981105e07c362ebe80",
+    "dory_loop_compare_20261111/sweep_results/cohort_selection.json": "ac706b2cf4f8a262799dbcdbad4f6c3f54185587fe84ef9c47b0e86ba8a9def9"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "source_sha256": "a01aa53b3815c81e6efad8bfd1e605f5e425a25705fcc308ac2fe6d27d8231b3",
+  "cohorts": {
+    "test": {
+      "cohort_selection_sha256": "e4186c505f4df78b759a2cfab8f9aaee6911f02819efdc9449f4a1e113e91cce",
+      "windows": 10059,
+      "always_space_accuracy": 0.18956282930708818,
+      "modal_byte_id": 32,
+      "modal_byte_accuracy": 0.18956282930708818,
+      "source_cache": "test_2a5e49473cb267bedfe8.npz",
+      "scope": "Post-hoc target-frequency diagnostic only. No model inference or prediction distribution measured."
+    },
+    "validation": {
+      "cohort_selection_sha256": "c474f1d4b25cb3152f09c3480e82bc5d39f36a596aa6020681340814357344f7",
+      "windows": 256,
+      "always_space_accuracy": 0.18994140625,
+      "modal_byte_id": 32,
+      "modal_byte_accuracy": 0.18994140625,
+      "source_cache": "validation_a11a6fcd0a988926b3ff.npz",
+      "scope": "Post-hoc target-frequency diagnostic only. No model inference or prediction distribution measured."
+    }
+  }
+}

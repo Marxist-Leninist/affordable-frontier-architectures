@@ -1,0 +1,79 @@
+{
+  "status": "preparation_passed",
+  "pure_mock_tests": 8,
+  "static_ast": "passed",
+  "original12_frozen_sources_unchanged": true,
+  "original_blocked_receipts_sha256": {
+    "calibration_raw.json": "44ed63fbf0b28ff6ed83aeedad342385ee13951b88c0f7981105e07c362ebe80",
+    "cohort_selection.json": "ac706b2cf4f8a262799dbcdbad4f6c3f54185587fe84ef9c47b0e86ba8a9def9",
+    "blocker.json": "f06dd016654c8becfbf32780ae40973b4a6b966b601d0c1c26ce7a562786843a"
+  },
+  "prediction_with_zero_new_setup_for_planning_only": {
+    "status": "selected",
+    "windows_per_domain": 8,
+    "selected_windows_per_domain": 64,
+    "selected_counts": [
+      0,
+      2,
+      100
+    ],
+    "predicted_seconds_per_checkpoint": {
+      "split_1": 555.4160142979808,
+      "whole_1": 669.9808130342572,
+      "whole_2": 604.0517620862229,
+      "split_2": 551.877376058496,
+      "split_3": 677.8247596877336,
+      "whole_3": 549.0994447881149
+    },
+    "global_bound_seconds": 6093.443764375206,
+    "prior_elapsed_debited_seconds": 81.06850944599864,
+    "new_setup_debited_seconds": 0,
+    "checkpoint_hashes": {
+      "split_1": "4c93c0798da8d15d61893d086a0b3d8e9035e733b028a3316938da83d36540f3",
+      "whole_1": "2341e43cea6ae42d48eeb382f46fdf498782cfbb14bf1f0290bf0a2b8793bae9",
+      "whole_2": "70dadbb9902858c4561d515dfb6d28a6bb1f3b7acc464cef059d61704bf83907",
+      "split_2": "196461bca04458030ca0443ff2ef6af5224032b10e5879600b733a6b01ca59f3",
+      "split_3": "f33b30b01bd2d5599bab80fe14e9acaf8608820aa13e037e152700b9a4f31b26",
+      "whole_3": "dee75545764c6adb619307c6b1681962db86cd91c85ebe7b1abdda7aa7062cf2"
+    },
+    "envelopes": {
+      "split_1": {
+        "a": 0.039606425001693424,
+        "b": 0.046497989093722936
+      },
+      "whole_1": {
+        "a": 0.0393342949973885,
+        "b": 0.056268943000759464
+      },
+      "whole_2": {
+        "a": 0.03835815499769524,
+        "b": 0.05067015200620517
+      },
+      "split_2": {
+        "a": 0.038777708999987226,
+        "b": 0.046214025640001634
+      },
+      "split_3": {
+        "a": 0.03810980999696767,
+        "b": 0.056963630002428545
+      },
+      "whole_3": {
+        "a": 0.039867445004347246,
+        "b": 0.04595402178119912
+      }
+    }
+  },
+  "maximum_conservative_per_checkpoint_seconds": 1016.7371395316004,
+  "new_source_hashes": {
+    "bounded_sweep.py": "f011fcebf26560133c955009266b8fcf51e4108d220127e64ec6441ce213d545",
+    "bounded_runtime_plan.py": "9076c32a3af9f0c120811b80fb426fe2f08eb7c1efe69b5fffbf7e96f89110e7",
+    "bounded_sweep_protocol.json": "ac69cee40d3ecd66c26efda5096db36deb349beb2120b3ea2dbee6428872120f",
+    "test_bounded_runtime_plan.py": "218edad43c27857e6342677018e1ec01efbf147bc73dbf0af02ac95846894bc5",
+    "BOUNDED_AMENDMENT.md": "5f5d3ca918c25c7bd8aa555c9645f10d3e38bf8c677f84b064eeb314f356e71f",
+    "source_hashes.json": "7bb5c404c9d141dc91a865fb8700d3948f7bca1ad569ec7af31d7484295dd17e"
+  },
+  "model_execution": false,
+  "heldout_data_loaded": false,
+  "bounded_sweep_launched": false,
+  "remaining_dependency": "Parent static/mock review and explicit launch; runtime fit recomputed after actual new setup before heldout access"
+}

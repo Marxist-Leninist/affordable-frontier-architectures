@@ -1,0 +1,14 @@
+{
+  "all_cells_completed": true,
+  "bootstrap_performed": false,
+  "cell_status_counts": {
+    "completed": 1248
+  },
+  "complete_summary_groups": 416,
+  "evaluation_finalized": true,
+  "model_compute_performed": false,
+  "planned_cells": 1248,
+  "publication_performed": false,
+  "status": "report_generated",
+  "summary_groups": 416
+}

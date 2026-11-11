@@ -1,0 +1,44 @@
+{
+  "status": "prepared; launch requires parent go-ahead after NAT timing completes",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "topologies": [
+    "split",
+    "whole"
+  ],
+  "width": 48,
+  "hidden": 117,
+  "unique_blocks": 36,
+  "loops": 2,
+  "effective_blocks": 56,
+  "expected_parameters": 764304,
+  "steps": 2000,
+  "batch": 8,
+  "lr": 0.0005,
+  "time_checkpoints_cpu_seconds": [
+    300,
+    900
+  ],
+  "run_wall_cap_seconds": 3600,
+  "global_wall_cap_seconds": 21600,
+  "threads": 1,
+  "max_concurrent_jobs": 1,
+  "core": 1,
+  "validation_windows": 256,
+  "final_evaluation": "all pinned WikiText test and FineWeb held-out windows",
+  "fixed_lr_no_tuning": true,
+  "reinjection": false,
+  "training_schedule": "100-step warmup then constant LR, to avoid compute-dependent decay confound",
+  "objective": "single-pass 96-byte prefix to 32 blank suffix slots; suffix-only cross entropy",
+  "timing_rule": "Continue until both 2000 updates and 900 training CPU seconds reached, or run cap; record step2000 and first whole-update crossing each CPU threshold. Matched-step and matched-time are separate estimands.",
+  "hardware": "CPU FP32 only, no GPU/services/paid resources",
+  "claim": "Controlled recurrent-order NAT motif; not a Dory checkpoint or architecture replication",
+  "input_blocks": 8,
+  "recurrent_unique_blocks": 20,
+  "output_blocks": 8,
+  "recurrent_effective_blocks": 40,
+  "zero_loop_invoked_parameters": 353424
+}

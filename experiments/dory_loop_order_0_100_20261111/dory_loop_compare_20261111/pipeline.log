@@ -1,0 +1,2 @@
+PASS: exact shared initialization,8/20/8 topology,finite gradients,zero-middle prefix conditioning,764304 total/353424 zero-active parameters,all101 schedules
+All six training and evaluation runs completed.
