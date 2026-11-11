@@ -1,0 +1,209 @@
+{
+  "experiment_date_utc": "2026-11-11",
+  "repository": "https://github.com/Marxist-Leninist/affordable-frontier-architectures",
+  "commit": "295dddddbbdb27c68c6c668d95b67d6c985a44da",
+  "original_public_source": [
+    {
+      "name": "models.py",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/code/models.py",
+      "sha256": "29c6c131a4c23153f7c5a6046a34565319a8ad11a07b05c661d3fe1502f5b4ca",
+      "bytes": 5851,
+      "git_blob": "bf30c3e1c71b6129fb517215d802a283e77217d8"
+    },
+    {
+      "name": "fla_cpu.py",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/code/fla_cpu.py",
+      "sha256": "855f8365a668504386e2938b62698fecf5b242b1285e61d33d193c101e57fe17",
+      "bytes": 4802,
+      "git_blob": "942811363c6789154275d4ebc2d05c96d407756a"
+    },
+    {
+      "name": "run_job.py",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/code/run_job.py",
+      "sha256": "0d840ea2d5f46c636e0e390a5215bd2c732af9f4838a8444123300977dee27cd",
+      "bytes": 12904,
+      "git_blob": "c22312ef44003b0cfdbd2e2b66712bf8033e6353"
+    },
+    {
+      "name": "reconstruct_runtime.py",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/code/reconstruct_runtime.py",
+      "sha256": "4ee4fa9866d89e22f42de8cdb9e883e5e190a2d24d3298b5f917e28009133f07",
+      "bytes": 3154,
+      "git_blob": "749d5bbcb905c454ed5f852a7f102b8631a9a9a5"
+    },
+    {
+      "name": "g259_s2.json",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/g259_s2.json",
+      "sha256": "456ad5144e704b593f2b52a46543817cbdab6b7614261eddea9036ebdf68235a",
+      "bytes": 17933,
+      "git_blob": "a20162451a5d89fd0be557a8ae2bfd867c6fbcf5"
+    },
+    {
+      "name": "g458_s2.json",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/g458_s2.json",
+      "sha256": "fdf52f091ffd5eb6052a6f21cdb526e16ccec5b9430faafe75748875fd396d73",
+      "bytes": 17898,
+      "git_blob": "65fc90478f7cc56512eb47fbbd4aa781d9a227d8"
+    },
+    {
+      "name": "T96_s2.json",
+      "url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/T96_s2.json",
+      "sha256": "44e333b05297fba50098dbdbc3e04869451695fe716db311b7dc9a3fcdf58e84",
+      "bytes": 12651,
+      "git_blob": "19378de7b7ada1058ed81c626152a778d5f2ac42"
+    },
+    {
+      "name": "gallery_selected.json",
+      "url": "https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json",
+      "sha256": "d0f81c48cff229b0b21255c50f47c6441f5775ce85289b19b92cdac9fc0f35b2",
+      "bytes": 59881,
+      "hash_scope": "Selected extracted record or two-record subset; URL identifies original full gallery, not these derived byte identities."
+    },
+    {
+      "name": "gallery_259.py",
+      "url": "https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json",
+      "sha256": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e",
+      "bytes": 15892,
+      "hash_scope": "Selected extracted record or two-record subset; URL identifies original full gallery, not these derived byte identities."
+    },
+    {
+      "name": "gallery_458.py",
+      "url": "https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json",
+      "sha256": "76412d2f7aff30f99ce7089e0f57f8ef26add7f2d9f965adf8650a00538bd1f5",
+      "bytes": 16100,
+      "hash_scope": "Selected extracted record or two-record subset; URL identifies original full gallery, not these derived byte identities."
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "g259_s2",
+      "checkpoint_url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/g259_s2.npz",
+      "checkpoint_sha256": "87d6278ae4da72a0cc642ccbd5bc5a97ba8e562728d6c9f8d836224bde3e1dec",
+      "checkpoint_git_blob": "2d04a92d5deac95f69497cc1eade5de015d93b8f",
+      "checkpoint_bytes": 1473155,
+      "state_sha256": "ca94209a7ed42f0e5549482131c7c074d17edc70af7bc1f3d3896a1791194cf1"
+    },
+    {
+      "id": "g458_s2",
+      "checkpoint_url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/g458_s2.npz",
+      "checkpoint_sha256": "0ecdeafc55edd68f919272062ee477f7fbdca554d054f3a65ba60945387b97f2",
+      "checkpoint_git_blob": "e3cd65170448d1c91dbf5966ab8c115de2308fd8",
+      "checkpoint_bytes": 1477454,
+      "state_sha256": "52bb8d53773b24a1522cdeec09474a73632d21aee521b4513001a9e30ca1fcc9"
+    },
+    {
+      "id": "T96_s2",
+      "checkpoint_url": "https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/295dddddbbdb27c68c6c668d95b67d6c985a44da/experiments/gallery_cpu120_20261110/checkpoints/T96_s2.npz",
+      "checkpoint_sha256": "e02e76f5cac1a7791d33ca33abc279d0372f7110d053369d373a4b747bf3f7ec",
+      "checkpoint_git_blob": "25841fea57bf3ec1e383754c235fedca51faa57b",
+      "checkpoint_bytes": 2602280,
+      "state_sha256": "bad56728bb1873ddc939463b7553906afc120636091ae2d853caea72322117d8"
+    }
+  ],
+  "data": {
+    "dataset": "HuggingFaceFW/fineweb-edu",
+    "dataset_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu",
+    "config": "sample-10BT",
+    "split": "train",
+    "query_url": "https://datasets-server.huggingface.co/rows?dataset=HuggingFaceFW%2Ffineweb-edu&config=sample-10BT&split=train&offset=10000&length=100",
+    "observed_hub_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+    "observed_response_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+    "source_response_sha256": "df13451c7c8331934d66210c797eb166cf944ee36cf95df03d20797384572fb7",
+    "selection": "First 50 eligible distinct documents in ascending rows 10000..10099; only row 10014 was short; selected 10000..10050 excluding 10014. No selection RNG. Selection rule frozen before acquisition and exact cohort before model scores.",
+    "window_bytes": 513,
+    "windows_concatenated_sha256": "6e42b4baae986a6356b057135a79052fe2eb157dfab14491aed2f44913150429",
+    "targets_concatenated_sha256": "608c9bce56d02694809dc47c0fce09e4ba33483689485d09851da69f16d89250",
+    "frozen_data_protocol_sha256": "7d567e12da0034b3c77d75f8f23837719681a4f37ece436e59006ec325cb6bf6",
+    "snapshot_limit": "Rows query was not revision-pinned; observed revision matched the Hub. Exact retained response/window bytes define this cohort; future live query may drift.",
+    "overlap_scope": "No selected exact document/window/target collision with inspected priors; no full 513-byte window or 128-byte target substring in verified line-deduplicated WikiText2 first 2,000,000 training bytes. Missing historical originals and semantic/partial/pretraining overlap remain unexcluded.",
+    "attribution": "HuggingFaceFW FineWeb-Edu, educationally filtered English web data from FineWeb/CommonCrawl.",
+    "dataset_license": "ODC-By v1.0",
+    "license_url": "https://opendatacommons.org/licenses/by/1-0/",
+    "additional_terms_url": "https://commoncrawl.org/terms-of-use",
+    "redistribution": "No source response, corpus bytes, excerpts or model payloads included."
+  },
+  "method": {
+    "inputs": "Byte indices [0:512] from an unnormalized 513-byte document prefix.",
+    "scoring": "Logits positions [384:512] predict original bytes [385:513]; 128 targets per document.",
+    "batches": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      2
+    ],
+    "weights": "Original FP32 stored checkpoint tensors, exact runtime restoration, eval/no_grad, no training",
+    "autocast": "CPU BF16; original #259 explicit BF16 inverse cast preserved",
+    "attention_backend": "Explicit math SDPA with native FP32 intermediates, not original automatic flash selection",
+    "cross_entropy": "FP64 logits, native double cross-entropy, 128-target per-document mean, equal document mean.",
+    "runtime": "CPython 3.12, PyTorch 2.6.0+cpu; oneDNN 3.5.3; oneMKL 2024.0 Update 2; one CPU thread.",
+    "tested_harness": "Exact tested harness and receipts are locally preserved and environment-bound. This report package is not a portable fresh-checkout harness and has not been validated as one.",
+    "evaluator_sha256": "807435df106564ce09abfef2438884774172a7826b68dd2565fad4988cb54ed1",
+    "supervisor_sha256": "ee4cbbeb1accce772d5f6b577a72f0d53c823f50945889ae94f2558aa8649917",
+    "frozen_scientific_protocol_sha256": "4ee3c5f154c9094fd59698697176c33d2eb5c1978536cd0702fea0c83fe7a2ac"
+  },
+  "validation": {
+    "all13_causal_cuts": [
+      1,
+      31,
+      32,
+      33,
+      63,
+      64,
+      65,
+      127,
+      128,
+      255,
+      256,
+      400,
+      511
+    ],
+    "causal_max_abs_diff_all_models": 0.0,
+    "batch_perturb_max_abs_diff_all_models": 0.0,
+    "probe_repeat_max_abs_diff_all_models": 0.0,
+    "exact_full_score_repeat_all_models": true,
+    "finite_outputs_and_unchanged_checkpoint_runtime": true,
+    "native_scored_pass_counts": {
+      "g259_s2": {
+        "matmul": 7202,
+        "convolution": 234,
+        "fp32_bmm": 0
+      },
+      "g458_s2": {
+        "matmul": 7280,
+        "convolution": 390,
+        "fp32_bmm": 0
+      },
+      "T96_s2": {
+        "matmul": 416,
+        "convolution": 0,
+        "fp32_bmm": 156
+      }
+    },
+    "native_evidence": "BF16 matmul: brg_matmul:avx512_core_bf16; BF16 depthwise convolution: jit_dw:avx512_core_bf16; FP32 attention: oneMKL SGEMM_BATCH serial mapping. FP32 log does not identify its precise microkernel ISA mnemonic.",
+    "score_json_sha256": "fb7b4715d450895f484f99c86c6feb2a0f1b383097d2beecaabbe82f7d85e516",
+    "score_log_sha256": "698faff1a71b45cb419ca88344423e0d7d3553088508198c2766c6c94557a75e",
+    "probe_json_sha256": "4406c6ca22245fb6086dcee57adcda1ef59ab5a00a3c66bb203fe423da07ef98",
+    "probe_log_sha256": "963bd644fb8867c1d478191c35feb9301c3456a9884a84b29182279866b6df5a",
+    "original_loss_reload": "NOT RUN/UNVERIFIED: original v44 evaluation arrays absent. Published hardware caveat is not a local failure.",
+    "separate_recovered_cohort": "HOLD unchanged; no T96 original flash internal GEMM or convolution weight-gradient ISA proof supplied by this forward-only experiment."
+  },
+  "resources": {
+    "completed_corrected_probe_command_elapsed_seconds": 11.134,
+    "completed_score_command_elapsed_seconds": 11.782,
+    "sum_of_two_completed_command_intervals_seconds": 22.916,
+    "score_numerical_section_wall_seconds": 5.994000671998947,
+    "score_numerical_section_cpu_seconds": 5.995312402,
+    "maximum_sampled_child_plus_supervisor_rss_bytes": 428441600,
+    "combined_hard_address_space_cap_bytes": 2147483648,
+    "interpretation": "Command intervals include initialization, execution, cleanup and API wait. Sampled RSS is not an exact peak. Numerical section includes all three models and analysis. These are not model-by-model throughput or training-cost benchmarks. An earlier compatibility-failed probe is preserved separately and excluded from these completed-command intervals."
+  }
+}
