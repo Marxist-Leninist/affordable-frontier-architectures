@@ -1,0 +1,7 @@
+{
+  "split": "test",
+  "n": 512,
+  "rejected_exact48_train_or_within": 0,
+  "sha256": "34f3824462a0fb9f8ff0abfd217449120454b45923eeac669c488551a54b0b69",
+  "selection": "first 512 acceptable from 1024 evenly spaced starts"
+}

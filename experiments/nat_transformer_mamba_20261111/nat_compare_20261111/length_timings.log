@@ -1,0 +1,6 @@
+48 1 {'transformer': 0.745, 'mamba': 3.114}
+48 8 {'transformer': 2.321, 'mamba': 20.241}
+128 1 {'transformer': 1.195, 'mamba': 6.678}
+128 8 {'transformer': 6.032, 'mamba': 57.647}
+512 1 {'transformer': 5.647, 'mamba': 27.609}
+512 8 {'transformer': 40.585, 'mamba': 380.86}

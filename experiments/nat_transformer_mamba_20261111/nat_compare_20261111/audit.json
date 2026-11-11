@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "tests_run": 4,
+  "failures": [],
+  "errors": [],
+  "details": {
+    "bidirectionality": "Forward direction causal; block equals explicit forward-plus-reversed scan and first position depends on last.",
+    "mamba_equivalence": "Outputs, input gradients, and all parameter gradients match sequential recurrence.",
+    "parameter_counts": {
+      "transformer": 94416,
+      "mamba": 94320
+    },
+    "target_leakage": "Forward accepts prefix and output length only; observed embedded suffix consists solely of MASK. Each block called once.",
+    "scan_float64": [
+      {
+        "length": 1,
+        "output_max_abs": 0.0,
+        "gradient_max_abs": 0.0
+      },
+      {
+        "length": 2,
+        "output_max_abs": 0.0,
+        "gradient_max_abs": 0.0
+      },
+      {
+        "length": 3,
+        "output_max_abs": 4.440892098500626e-16,
+        "gradient_max_abs": 4.440892098500626e-16
+      },
+      {
+        "length": 7,
+        "output_max_abs": 4.440892098500626e-16,
+        "gradient_max_abs": 8.881784197001252e-16
+      },
+      {
+        "length": 16,
+        "output_max_abs": 8.881784197001252e-16,
+        "gradient_max_abs": 2.6645352591003757e-15
+      },
+      {
+        "length": 48,
+        "output_max_abs": 8.881784197001252e-16,
+        "gradient_max_abs": 1.7763568394002505e-15
+      }
+    ]
+  },
+  "source_sha256": {
+    "models.py": "8338d155d5ca11ce8d8e81e2914669e171f0290476cc6584ba38be05d418c08b",
+    "run.py": "20469e83c8d5c76625c42b6ae8c308268d180be266ca8b9e41f8a6d18a3726ed"
+  },
+  "scope": "Tiny CPU unit tests, no performance benchmarking, no live service access. Dense FP32 tiny architecture ablation, not routed/quantized AGILLM or 600B validation.",
+  "review_findings": [
+    "Mamba-1 selective recurrence with input-dependent delta/B/C, diagonal negative A, causal depthwise convolution, D skip, SiLU gate. Bidirectionality is an explicit independent-two-direction extension.",
+    "Fixed-step same-seed training uses deterministic identical NumPy data batches; verify stored hashes after fits. LR selection occurs on validation, test data first evaluated after final fits.",
+    "5 s snapshots are first whole step crossing budget, not strict identical elapsed times. Compare recorded elapsed and steps; training timing excludes data preparation, validation, checkpoint saving.",
+    "Attention uses optimized PyTorch SDPA while Mamba uses unfused O(T log T) work associative scan with repeated allocations. Timing is implementation-specific CPU performance, not asymptotic or CUDA comparison.",
+    "PAD embeddings participate in attention/scan for toy prompts. Same inputs for both models, no padding mask; not a leakage channel.",
+    "Text exact48 screening covers only actual 2 MB training prefix and within-evaluation duplicates; shorter/natural phrase overlap and same-source correlation remain. Byte suffix loss measures factorized conditional prediction, not autoregressive perplexity or general intelligence.",
+    "Three seeds and tiny training budget limit uncertainty claims; test-example resampling alone must not imply training-seed uncertainty.",
+    "NAT kind values other than transformer silently select Mamba; current explicit call sites use valid strings. out_len=0 unsupported by slicing; fixed protocol uses 16."
+  ]
+}

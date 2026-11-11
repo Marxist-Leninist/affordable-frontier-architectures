@@ -1,0 +1,184 @@
+{
+  "hashes": {
+    "train": {
+      "actual": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+      "expected": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+      "matches": true,
+      "bytes": 10951562
+    },
+    "validation": {
+      "actual": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+      "expected": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+      "matches": true,
+      "bytes": 1148007
+    },
+    "test": {
+      "actual": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc",
+      "expected": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc",
+      "matches": true,
+      "bytes": 1292013
+    }
+  },
+  "text": {
+    "validation": {
+      "n": 512,
+      "rejected": 0,
+      "selection_sha256": "838d382a83e04db57a1545f7aa82f7f2df7e53ebab71aadf3bc27edd8129dfb1",
+      "exact48_in_used_train": 0,
+      "duplicate48": 0,
+      "target16_in_used_train": 28,
+      "duplicate_target16": 0
+    },
+    "test": {
+      "n": 512,
+      "rejected": 0,
+      "selection_sha256": "34f3824462a0fb9f8ff0abfd217449120454b45923eeac669c488551a54b0b69",
+      "exact48_in_used_train": 0,
+      "duplicate48": 0,
+      "target16_in_used_train": 33,
+      "duplicate_target16": 0
+    },
+    "validation_test_shared48": 0,
+    "validation_test_shared_target16": 0
+  },
+  "toy": {
+    "within": {
+      "train_seed101": {
+        "presentations": 2400,
+        "unique_digit_sequences": 2400,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      },
+      "train_seed1": {
+        "presentations": 6400,
+        "unique_digit_sequences": 6400,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      },
+      "train_seed2": {
+        "presentations": 6400,
+        "unique_digit_sequences": 6400,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      },
+      "train_seed3": {
+        "presentations": 6400,
+        "unique_digit_sequences": 6400,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      },
+      "validation": {
+        "presentations": 768,
+        "unique_digit_sequences": 768,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      },
+      "test": {
+        "presentations": 768,
+        "unique_digit_sequences": 768,
+        "duplicate_digit_sequences": 0,
+        "duplicate_task_input_pairs": 0
+      }
+    },
+    "between": [
+      {
+        "a": "train_seed101",
+        "b": "train_seed1",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed101",
+        "b": "train_seed2",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed101",
+        "b": "train_seed3",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed101",
+        "b": "validation",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed101",
+        "b": "test",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed1",
+        "b": "train_seed2",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed1",
+        "b": "train_seed3",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed1",
+        "b": "validation",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed1",
+        "b": "test",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed2",
+        "b": "train_seed3",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed2",
+        "b": "validation",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed2",
+        "b": "test",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed3",
+        "b": "validation",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "train_seed3",
+        "b": "test",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      },
+      {
+        "a": "validation",
+        "b": "test",
+        "shared_digit_sequences": 0,
+        "shared_task_input_pairs": 0
+      }
+    ]
+  },
+  "caveats": [
+    "Seed101 tuning batches deliberately reused across both learning rates and architectures; each final seed deliberately reused across architectures. Audit deduplicates these planned paired repetitions.",
+    "Digit sequences are independent input keys; task-conditioned outputs can coincide even for different inputs, especially sorted digits.",
+    "Target16 matches and shorter natural-language overlap are transparency metrics, not contamination exclusions.",
+    "Full48 exclusion covers the exact 2 MB actually sampled for training, not the unused remainder of the official training split.",
+    "No raw data or trainer code was changed. This script uses NumPy only, no model execution or benchmark timing.",
+    "Zero candidate rejections means first 512 of 1024 evenly spaced candidate starts cover only the first approximately half of each evaluation file, not the full official split."
+  ]
+}

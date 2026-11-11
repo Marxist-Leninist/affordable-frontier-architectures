@@ -1,0 +1,5 @@
+# Install torch from the official CPU wheel index for an exact CPU build:
+# python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0
+numpy==2.3.5
+pyarrow==19.0.1
