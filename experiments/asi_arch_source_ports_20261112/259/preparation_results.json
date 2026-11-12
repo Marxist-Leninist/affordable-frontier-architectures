@@ -1,0 +1,300 @@
+{
+  "source": {
+    "index": 259,
+    "name": "delta_net_bias_init_mix_gate",
+    "name_new": "BAMG_MemoryGate",
+    "metadata_parameters": "411.95M",
+    "program_sha256": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e",
+    "dtype_preserving_test_source_sha256": "9a6caf25423144d6919e582ea670330a09426011b07675deb46472dcefe413ba",
+    "source_without_compile_decorator_sha256": "f72976ab29ab54dd2f4da6ec4e3e4afdb95623471c615acfc0f3be0014e2e8be",
+    "gallery_json_sha256": "aa77e8289971b3922102f000fddf44a6a9a31ca1f3b59c834722ac130f63759c",
+    "simulator_sha256": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2",
+    "plugin_sha256": "8434fae0c22f48e062c84ef9289d086d80cf90cda155ac4b913c7c3ff0af9ed1"
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "python": "3.12.3",
+    "device": "CPU",
+    "threads": 1
+  },
+  "status": "isolated preparation only; no training benchmark, no queue or GPU run",
+  "comparison_protocol": "three-arm v2 must be frozen separately; leave existing index v1 unchanged",
+  "checks": [
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 1,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 31,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 32,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 33,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 63,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 64,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 65,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 127,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f64",
+      "length": 257,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 1,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 31,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 32,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 33,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 63,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 64,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 65,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 127,
+      "pass": true
+    },
+    {
+      "kind": "dtype_adapted_upstream_output_and_gradients",
+      "dtype": "f32",
+      "length": 257,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 1,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 31,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 32,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 33,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 64,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 65,
+      "pass": true
+    },
+    {
+      "kind": "causality",
+      "cut": 96,
+      "pass": true
+    },
+    {
+      "kind": "batch_isolation",
+      "pass": true
+    },
+    {
+      "kind": "mixer_causal_in_noncausal_mode",
+      "pass": true
+    },
+    {
+      "kind": "attention_dispatch",
+      "pass": true
+    },
+    {
+      "kind": "double_bias_init",
+      "pass": true
+    },
+    {
+      "kind": "full_simulator_causality",
+      "pass": true
+    },
+    {
+      "kind": "full_simulator_batch_isolation",
+      "pass": true
+    }
+  ],
+  "maxima": {
+    "output_f64": 2.220446049250313e-16,
+    "output_f32": 1.1920928955078125e-07,
+    "input_grad_f64": 4.440892098500626e-16,
+    "input_grad_f32": 2.384185791015625e-07,
+    "parameter_grad_f64": 7.105427357601002e-15,
+    "parameter_grad_f32": 3.814697265625e-06
+  },
+  "checks_passed": 31,
+  "literal_bf16_vs_fp32_max_abs_output_difference": 0.008747100830078125,
+  "bf16_scope": "unmodified upstream core under CPU BF16 autocast versus FP32 port, with same copied weights and CPU FLA stand-ins; not Triton validation",
+  "zero_hidden_memory_gate": 0.11920292202211755,
+  "microsteps": [
+    {
+      "mode": "ar",
+      "finite": true,
+      "loss_for_functional_check_only": 4.677367210388184
+    },
+    {
+      "mode": "sat_fixed",
+      "finite": true,
+      "loss_for_functional_check_only": 4.70626974105835
+    },
+    {
+      "mode": "sat_variable",
+      "finite": true,
+      "loss_for_functional_check_only": 4.495458602905273
+    },
+    {
+      "mode": "nat",
+      "finite": true,
+      "loss_for_functional_check_only": 4.478488445281982
+    },
+    {
+      "mode": "local",
+      "finite": true,
+      "loss_for_functional_check_only": 4.594144821166992
+    }
+  ],
+  "census560": {
+    "base": {
+      "latent_bytes": 886910746624,
+      "table_bytes": 1638924288,
+      "n_matrices": 3864,
+      "fp_params": 150450908,
+      "kv_bytes_per_token": 36700160
+    },
+    "candidate": {
+      "latent_bytes": 886910746624,
+      "table_bytes": 1638924288,
+      "n_matrices": 3864,
+      "fp_params": 632194268,
+      "kv_bytes_per_token": 36700160
+    },
+    "geometry": {
+      "D": 8192,
+      "H": 64,
+      "head_dim": 128,
+      "L": 560,
+      "attention_layers": 140,
+      "candidate_layers": 420,
+      "experts": 1372
+    },
+    "base_total_params": 888700121820,
+    "candidate_total_params": 889181865180,
+    "added_fp_params": 481743360,
+    "added_gate_and_beta_fp_params": 440455680,
+    "added_short_conv_fp_params": 41287680,
+    "added_fixed_buffers_bytes": 0,
+    "added_fp32_weights_bytes": 1926973440,
+    "added_fp32_gradients_bytes": 1926973440,
+    "added_fp32_adam_m_bytes": 1926973440,
+    "added_fp32_adam_v_bytes": 1926973440,
+    "added_fp32_weight_grad_adam_m_v_bytes": 7707893760,
+    "fullscale_allocated": false,
+    "cache_implemented": false,
+    "prospective_cache_fp32_batch1_T2048_bytes": 20675952640,
+    "cache_note": "prospective streaming implementation only: delta state plus three (k-1) short-conv histories; current hook inherits all-attention cache accounting and is not a working cached decoder"
+  },
+  "selection_evidence": {
+    "wikitext": {
+      "paired_candidate_minus_dlgm": [
+        -0.03667314374331809,
+        -0.022528578077478212,
+        -0.037168606561666984,
+        -0.007065892107354532
+      ],
+      "mean": -0.025859055122454455,
+      "sample_sd": 0.01424927506828938,
+      "paired_t95_df3": [
+        -0.048532831517457534,
+        -0.0031852787274513766
+      ]
+    },
+    "fineweb_edu": {
+      "paired_candidate_minus_dlgm": [
+        -0.05830352288773444,
+        -0.018960776830947434,
+        -0.00447170704708455,
+        -0.03490709350115484
+      ],
+      "mean": -0.029160775066730316,
+      "sample_sd": 0.023064474629446306,
+      "paired_t95_df3": [
+        -0.06586150109735414,
+        0.007539950963893503
+      ]
+    }
+  }
+}
