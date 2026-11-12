@@ -64,8 +64,12 @@ This protocol is **not a claim that the next runs have started**. There is no ve
 ## Project links
 
 - [GitHub gallery screen and repairs](https://github.com/Marxist-Leninist/affordable-frontier-architectures/pull/1)
-- [Hugging Face research repository](https://huggingface.co/MarxistLeninist/affordable-frontier-architectures)
+- [Hugging Face research repository](https://huggingface.co/ScAGI/affordable-frontier-architectures/tree/0f02637ccd8f6f7a8e56fc3638dffd448216ab6e/experiments/gallery_cpu120_20261110)
 - [Current Fusion/DLGM comparison](https://zqx.lat/asi-arch/dlgm-vs-fusion/)
 - [Original ASI-Arch export](https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json)
 
 The comparison's composite score is a project-specific decision aid, not an all-scale architecture proof.
+
+## Hugging Face publication
+
+The complete gallery package, including all six historical checkpoints, was published to the existing ScAGI research mirror at commit `0f02637ccd8f6f7a8e56fc3638dffd448216ab6e`. Fifteen key files, including all six checkpoints, were downloaded from that exact commit and SHA-256 matched against this package. This does not add training runs or change the original findings. `HF_PUBLICATION.json` contains the verification receipt.
