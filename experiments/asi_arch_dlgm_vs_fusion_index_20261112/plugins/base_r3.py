@@ -1,0 +1,1 @@
+META = dict(id='base_r3', title='Live 600B block (control, re-run 12 Nov 2026 alongside the Fusion #879 runs)', slot='control', one_line='Identical to base: re-run on the same night and GPU as fusion879 so that ms/step and seed noise are compared like for like')

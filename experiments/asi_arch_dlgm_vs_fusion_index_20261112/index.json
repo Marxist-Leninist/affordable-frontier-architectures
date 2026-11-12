@@ -1,0 +1,1082 @@
+{
+ "generated_utc": "2026-11-12T02:34:03Z",
+ "spec_sha256": "fda0f7ad167e19c11d51a5e091af9ad8ebbd59c6bf6bca5d16967602a8af0140",
+ "spec": {
+  "name": "DLGM #458 vs Fusion #879: one combined index",
+  "version": 1,
+  "author": "claude-fable52 (fable52-asi-fusion-20261112), for Scott",
+  "frozen_at_utc": "2026-11-12T01:59:02Z",
+  "frozen_note": "Weights, scoring rule and constants fixed while Fusion seed 1 was in its first minutes on the GPU queue and before the author had read any Fusion result under this objective.",
+  "candidates": {
+   "dlgm": {
+    "label": "DLGM #458",
+    "upstream": "ASI-Arch #458 DualScaleMemoryRouter (delta_net_dlgm)",
+    "faithful": "dlgm458",
+    "lowrank": "dlgm458_lr"
+   },
+   "fusion": {
+    "label": "Fusion #879",
+    "upstream": "ASI-Arch #879 FusionGatedFIRNet (delta_net_psfr)",
+    "faithful": "fusion879",
+    "lowrank": "fusion879_lr"
+   }
+  },
+  "baseline_runs": [
+   "base",
+   "base_r2",
+   "base_r3"
+  ],
+  "quality_mix": {
+   "ar": 0.6,
+   "sat": 0.2,
+   "nat": 0.2
+  },
+  "components": [
+   {
+    "key": "own_steps",
+    "weight": 0.35,
+    "floor": 0.02,
+    "unit": "nats",
+    "title": "Your objective, same number of training steps",
+    "measure": "Held-out loss after 1,200 steps in the AGILLM-objective simulator (0.6 AR + 0.2 SAT + 0.2 NAT), gain over the live block. Faithful form, all complete seeds."
+   },
+   {
+    "key": "own_long_context",
+    "weight": 0.05,
+    "floor": 0.02,
+    "unit": "nats",
+    "title": "Your objective, long context",
+    "measure": "What 4x more context does to the loss (1,024 tokens against 256) at step 1,200, relative to the live block. Faithful form."
+   },
+   {
+    "key": "own_time",
+    "weight": 0.1,
+    "floor": 0.02,
+    "unit": "nats",
+    "title": "Your objective, same simulator box time",
+    "measure": "The site's equal-time method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step, against the base run of the same day), gain over the live block. Low-rank form, the one that fits at full scale."
+   },
+   {
+    "key": "own_small",
+    "weight": 0.15,
+    "floor": 0.02,
+    "unit": "nats per byte",
+    "title": "Your matched small-model run (v65 R6)",
+    "measure": "Held-out cross-entropy gain over the width-96 Transformer at an equal 120 training-CPU-seconds, about 350k parameters, 3 paired seeds; WikiText and FineWeb scored separately and averaged."
+   },
+   {
+    "key": "up_tasks",
+    "weight": 0.15,
+    "floor": null,
+    "unit": "accuracy points",
+    "title": "ASI-Arch paper: benchmark tasks",
+    "measure": "7-task average, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs."
+   },
+   {
+    "key": "up_loss",
+    "weight": 0.1,
+    "floor": null,
+    "unit": "nats",
+    "title": "ASI-Arch paper: training loss",
+    "measure": "Final training loss, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs."
+   },
+   {
+    "key": "serving",
+    "weight": 0.1,
+    "floor": null,
+    "unit": "rubric",
+    "title": "Serving readiness",
+    "measure": "Rubric: 100 = an exact incremental cache verified against full recompute on trained checkpoints; 50 = a cache that reproduces the same tokens but failed the exact-match gate; 0 = none."
+   }
+  ],
+  "scoring": "For a gain component each candidate scores 100 x max(gain, 0) / max(gain of DLGM, gain of Fusion, floor). The better one gets 100 when its gain clears the noise floor, the other gets its share of that gain, and a candidate that does not beat the shared baseline gets 0. Where a component has sub-experiments they are scored separately and averaged. Index = weighted sum of the component scores (0 to 100).",
+  "headline_rule": "The name on top is the higher index. A margin under 3 points is called level in words.",
+  "robustness": {
+   "random_weightings": 20000,
+   "seed": 879458,
+   "method": "weights drawn uniformly from the simplex over the available components; also every leave-one-component-out index"
+  },
+  "not_scored": [
+   "Footprint and arithmetic at 560 layers (reported: the two are equal to well under 1%)",
+   "Only Fusion has 1.3B-parameter upstream results (reported)"
+  ],
+  "constants": {
+   "v65_r6": {
+    "source": "SG memory slot 2342 (ChatGPT lane, 2026-11-09), natural-log cross-entropy per byte",
+    "wikitext": {
+     "dlgm": 1.762221473,
+     "fusion": 1.771213003,
+     "baseline": 1.829924379
+    },
+    "fineweb": {
+     "dlgm": 2.103326358,
+     "fusion": 2.124353456,
+     "baseline": 2.188070645
+    },
+    "per_seed_fusion_minus_dlgm": {
+     "wikitext": [
+      -0.005230576,
+      0.002618733,
+      0.029586433
+     ],
+     "fineweb": [
+      -0.001649001,
+      -0.001725079,
+      0.066455373
+     ]
+    }
+   },
+   "upstream": {
+    "source": "ASI-Arch paper (arXiv 2507.18074v2) Table 9 and data/106.json at commit 3113c51b",
+    "tasks7": {
+     "20M": {
+      "dlgm": 37.74,
+      "fusion": 39.37,
+      "baseline": 36.6
+     },
+     "340M": {
+      "dlgm": 44.13,
+      "fusion": 44.02,
+      "baseline": 42.1
+     }
+    },
+    "train_loss": {
+     "20M": {
+      "dlgm": 4.39,
+      "fusion": 4.4233,
+      "baseline": 4.5678
+     },
+     "340M": {
+      "dlgm": 3.4047,
+      "fusion": 3.4048,
+      "baseline": 3.4768
+     }
+    },
+    "note_1p3b": "At 1.3B parameters only Fusion was trained upstream: 52.01 on 14 accuracy metrics against 51.04 for DeltaNet."
+   },
+   "serving": {
+    "dlgm": 50,
+    "fusion": 100,
+    "dlgm_reason": "Incremental cache attempts v63 and v64 reproduced the same tokens (RMS error about 1e-6) but failed the strict exact-match gate twice; the Transformer baseline failed the same gate.",
+    "fusion_reason": "Exact incremental cache verified against full recompute on three trained checkpoints (worst error 1.3e-14 in float64, 1.0e-5 in float32); fixed state of 103,680 bytes; public at experiments/asi_arch_psfr_cache_v1."
+   }
+  }
+ },
+ "index": {
+  "dlgm": 82.51449512259774,
+  "fusion": 94.988205351984
+ },
+ "top": "fusion",
+ "margin": 12.47371022938627,
+ "provisional": true,
+ "have_own": true,
+ "verdict": "Fusion #879 is on top: 95.0 to 82.5, a lead of 12.5 points. It wins 86% of 20,000 random re-weightings of the same evidence. Provisional: Fusion faithful form: 3 of 3 seeds done; low-rank form: 0 of 3; GPU queue now running fusion879_lr seed 1.",
+ "components": [
+  {
+   "key": "own_steps",
+   "title": "Your objective, same number of training steps",
+   "weight": 0.35,
+   "unit": "nats",
+   "measure": "Held-out loss after 1,200 steps in the AGILLM-objective simulator (0.6 AR + 0.2 SAT + 0.2 NAT), gain over the live block. Faithful form, all complete seeds.",
+   "floor": 0.02,
+   "score": {
+    "dlgm": 81.93258003159994,
+    "fusion": 100.0
+   },
+   "parts": [
+    {
+     "name": "simulator, faithful form",
+     "dlgm": 0.11079438130060915,
+     "fusion": 0.13522628148396856,
+     "seeds": {
+      "dlgm": 3,
+      "fusion": 3
+     },
+     "se": {
+      "dlgm": 0.006967905627775838,
+      "fusion": 0.003548613814228284
+     }
+    }
+   ],
+   "pending": null
+  },
+  {
+   "key": "own_long_context",
+   "title": "Your objective, long context",
+   "weight": 0.05,
+   "unit": "nats",
+   "measure": "What 4x more context does to the loss (1,024 tokens against 256) at step 1,200, relative to the live block. Faithful form.",
+   "floor": 0.02,
+   "score": {
+    "dlgm": 100.0,
+    "fusion": 93.92328593027189
+   },
+   "parts": [
+    {
+     "name": "simulator, faithful form",
+     "dlgm": 0.24948746817452566,
+     "fusion": 0.23432682809375582,
+     "seeds": {
+      "dlgm": 3,
+      "fusion": 3
+     },
+     "se": null
+    }
+   ],
+   "pending": null
+  },
+  {
+   "key": "own_time",
+   "title": "Your objective, same simulator box time",
+   "weight": 0.1,
+   "unit": "nats",
+   "measure": "The site's equal-time method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step, against the base run of the same day), gain over the live block. Low-rank form, the one that fits at full scale.",
+   "floor": 0.02,
+   "score": null,
+   "parts": [],
+   "pending": "waiting for fusion879_lr"
+  },
+  {
+   "key": "own_small",
+   "title": "Your matched small-model run (v65 R6)",
+   "weight": 0.15,
+   "unit": "nats per byte",
+   "measure": "Held-out cross-entropy gain over the width-96 Transformer at an equal 120 training-CPU-seconds, about 350k parameters, 3 paired seeds; WikiText and FineWeb scored separately and averaged.",
+   "floor": 0.02,
+   "score": {
+    "dlgm": 100.0,
+    "fusion": 80.95336478825472
+   },
+   "parts": [
+    {
+     "name": "wikitext",
+     "dlgm": 0.06770290599999984,
+     "fusion": 0.05871137599999998
+    },
+    {
+     "name": "fineweb",
+     "dlgm": 0.08474428699999992,
+     "fusion": 0.06371718899999967
+    }
+   ],
+   "pending": null
+  },
+  {
+   "key": "up_tasks",
+   "title": "ASI-Arch paper: benchmark tasks",
+   "weight": 0.15,
+   "unit": "accuracy points",
+   "measure": "7-task average, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs.",
+   "floor": null,
+   "score": {
+    "dlgm": 70.57761732851989,
+    "fusion": 97.29064039408868
+   },
+   "parts": [
+    {
+     "name": "20M parameters",
+     "dlgm": 1.1400000000000006,
+     "fusion": 2.769999999999996
+    },
+    {
+     "name": "340M parameters",
+     "dlgm": 2.030000000000001,
+     "fusion": 1.9200000000000017
+    }
+   ],
+   "pending": null
+  },
+  {
+   "key": "up_loss",
+   "title": "ASI-Arch paper: training loss",
+   "weight": 0.1,
+   "unit": "nats",
+   "measure": "Final training loss, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs.",
+   "floor": null,
+   "score": {
+    "dlgm": 100.0,
+    "fusion": 90.56619742920486
+   },
+   "parts": [
+    {
+     "name": "20M parameters",
+     "dlgm": 0.1778000000000004,
+     "fusion": 0.14449999999999985
+    },
+    {
+     "name": "340M parameters",
+     "dlgm": 0.07209999999999983,
+     "fusion": 0.07200000000000006
+    }
+   ],
+   "pending": null
+  },
+  {
+   "key": "serving",
+   "title": "Serving readiness",
+   "weight": 0.1,
+   "unit": "rubric",
+   "measure": "Rubric: 100 = an exact incremental cache verified against full recompute on trained checkpoints; 50 = a cache that reproduces the same tokens but failed the exact-match gate; 0 = none.",
+   "floor": null,
+   "score": {
+    "dlgm": 50.0,
+    "fusion": 100.0
+   },
+   "parts": [
+    {
+     "name": "rubric",
+     "dlgm": 50,
+     "fusion": 100
+    }
+   ],
+   "pending": null
+  }
+ ],
+ "contributions": [
+  {
+   "key": "own_steps",
+   "title": "Your objective, same number of training steps",
+   "points": 7.026218876600023
+  },
+  {
+   "key": "own_long_context",
+   "title": "Your objective, long context",
+   "points": -0.3375952260960063
+  },
+  {
+   "key": "own_small",
+   "title": "Your matched small-model run (v65 R6)",
+   "points": -3.174439201957547
+  },
+  {
+   "key": "up_tasks",
+   "title": "ASI-Arch paper: benchmark tasks",
+   "points": 4.4521705109281315
+  },
+  {
+   "key": "up_loss",
+   "title": "ASI-Arch paper: training loss",
+   "points": -1.048200285643904
+  },
+  {
+   "key": "serving",
+   "title": "Serving readiness",
+   "points": 5.555555555555555
+  }
+ ],
+ "robustness": {
+  "draws": 20000,
+  "share": {
+   "dlgm": 0.13745,
+   "fusion": 0.86255
+  },
+  "leave_one_out": [
+   {
+    "without": "own_steps",
+    "title": "Your objective, same number of training steps",
+    "dlgm": 82.88480472595997,
+    "fusion": 91.79888148506473,
+    "top": "fusion"
+   },
+   {
+    "without": "own_long_context",
+    "title": "Your objective, long context",
+    "dlgm": 81.4859360121623,
+    "fusion": 95.05084767090824,
+    "top": "fusion"
+   },
+   {
+    "without": "own_small",
+    "title": "Your matched small-model run (v65 R6)",
+    "dlgm": 79.01739414711729,
+    "fusion": 97.79517346472986,
+    "top": "fusion"
+   },
+   {
+    "without": "up_tasks",
+    "title": "ASI-Arch paper: benchmark tasks",
+    "dlgm": 84.90187068141331,
+    "fusion": 94.52771834356307,
+    "top": "fusion"
+   },
+   {
+    "without": "up_loss",
+    "title": "ASI-Arch paper: training loss",
+    "dlgm": 80.32880701292245,
+    "fusion": 95.5409563423314,
+    "top": "fusion"
+   },
+   {
+    "without": "serving",
+    "title": "Serving readiness",
+    "dlgm": 86.57880701292245,
+    "fusion": 94.361731020982,
+    "top": "fusion"
+   }
+  ]
+ },
+ "own": {
+  "base": {
+   "ids": [
+    "base",
+    "base_r2",
+    "base_r3"
+   ],
+   "seeds": 7,
+   "ar": 5.242889966283526,
+   "sat": 5.464196605341775,
+   "nat": 5.8445658683776855,
+   "q": 5.407486474514008,
+   "q_sd": 0.009209629858174919,
+   "ctx_gain": -0.31628663199288504,
+   "ms_per_step": 202.34329359872,
+   "per_day": {
+    "base": {
+     "seeds": 3,
+     "ms_per_step": 194.1464344660441,
+     "started": 1794199733.7860162
+    },
+    "base_r2": {
+     "seeds": 3,
+     "ms_per_step": 213.17382653554282,
+     "started": 1794376000.6129856
+    },
+    "base_r3": {
+     "seeds": 1,
+     "ms_per_step": 194.4422721862793,
+     "started": 1794449015.1553707
+    }
+   }
+  },
+  "forms": {
+   "dlgm458": {
+    "id": "dlgm458",
+    "cand": "dlgm",
+    "form": "faithful",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.096494356791179,
+    "sat": 5.3806353608767195,
+    "nat": 5.813342034816742,
+    "ctx_gain": -0.06679916381835938,
+    "gain_steps": 0.11079438130060915,
+    "gain_sd": 0.012068766569652865,
+    "gain_se": 0.006967905627775838,
+    "gain_seeds": [
+     0.09906218051910542,
+     0.12317367792129552,
+     0.11014728546142649
+    ],
+    "ctx_vs_base": 0.24948746817452566,
+    "ms_per_step": 461.06282869974774,
+    "base_same_day": [
+     "base"
+    ],
+    "base_ms": 194.1464344660441,
+    "ms_ratio": 2.374819964980541,
+    "byte_ratio": 1.0165921861864518,
+    "step_ratio": 1.356149130884974,
+    "tokens_eq": 906095.0392661679,
+    "gain_time": -0.003420383028652908,
+    "d_time": {
+     "ar": 0.008720416797797448,
+     "sat": -0.02492029755121017,
+     "nat": -0.01834286798544671
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 39820506467,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 563,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.31711,
+    "started": 1794205654.7756302,
+    "skipped": 0
+   },
+   "dlgm458_lr": {
+    "id": "dlgm458_lr",
+    "cand": "dlgm",
+    "form": "lowrank",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.09007853269577,
+    "sat": 5.379696806271871,
+    "nat": 5.804326971371968,
+    "ctx_gain": -0.0886243184407552,
+    "gain_steps": 0.11663459936777798,
+    "gain_sd": 0.00329085372435791,
+    "gain_se": 0.001899975283621722,
+    "gain_seeds": [
+     0.11409821510314977,
+     0.12035325765609795,
+     0.11545232534408623
+    ],
+    "ctx_vs_base": 0.22766231355212985,
+    "ms_per_step": 542.5885915756226,
+    "base_same_day": [
+     "base"
+    ],
+    "base_ms": 194.1464344660441,
+    "ms_ratio": 2.7947388942160587,
+    "byte_ratio": 1.0100084067076678,
+    "step_ratio": 1.4561910285847657,
+    "tokens_eq": 843845.3306461027,
+    "gain_time": -0.04696765100960131,
+    "d_time": {
+     "ar": -0.04350904453303084,
+     "sat": -0.06228156242071403,
+     "nat": -0.04202955902820005
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 109016867,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 542,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.320846666666667,
+    "started": 1794204421.818115,
+    "skipped": 0
+   },
+   "dlgm458_hn": null,
+   "fusion879": {
+    "id": "fusion879",
+    "cand": "fusion",
+    "form": "faithful",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.071844935417175,
+    "sat": 5.359661897023519,
+    "nat": 5.786104261875153,
+    "ctx_gain": -0.08195980389912923,
+    "gain_steps": 0.13522628148396856,
+    "gain_sd": 0.006146379422684173,
+    "gain_se": 0.003548613814228284,
+    "gain_seeds": [
+     0.1422652363777166,
+     0.13092079162597692,
+     0.1324928164482122
+    ],
+    "ctx_vs_base": 0.23432682809375582,
+    "ms_per_step": 370.39339542388916,
+    "base_same_day": [
+     "base_r3"
+    ],
+    "base_ms": 194.4422721862793,
+    "ms_ratio": 1.90490160014714,
+    "byte_ratio": 1.0084644888242298,
+    "step_ratio": 1.2325737666549572,
+    "tokens_eq": 996938.3036074192,
+    "gain_time": 0.03187247215024751,
+    "d_time": {
+     "ar": 0.05450640171746013,
+     "sat": 0.00495994869468408,
+     "nat": -0.009116793095826914
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 41081291747,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 565,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.3521350000000005,
+    "started": 1794449191.0464382,
+    "skipped": 0
+   },
+   "fusion879_lr": null,
+   "fusion879_hn": null
+  }
+ },
+ "queue": {
+  "state": "running",
+  "current": "fusion879_lr seed 1",
+  "last_update": 1794450807.5928805,
+  "progress": {
+   "fusion879": {
+    "done": [
+     1,
+     2,
+     3
+    ],
+    "running": {},
+    "failed": []
+   },
+   "fusion879_lr": {
+    "done": [],
+    "running": {
+     "1": 300
+    },
+    "failed": []
+   },
+   "base_r3": {
+    "done": [
+     1
+    ],
+    "running": {},
+    "failed": []
+   },
+   "fusion879_hn": {
+    "done": [],
+    "running": {},
+    "failed": []
+   },
+   "dlgm458_hn": {
+    "done": [],
+    "running": {},
+    "failed": []
+   }
+  }
+ },
+ "fusion_state": [
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9769,
+   "temp_max": 1.0173,
+   "mean_gate_short_long_delta_value": [
+    0.2567,
+    0.5914,
+    0.7496,
+    0.7836
+   ],
+   "run": "fusion879__s1"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9327,
+   "temp_max": 1.0234,
+   "mean_gate_short_long_delta_value": [
+    0.2082,
+    0.5024,
+    0.7431,
+    0.6815
+   ],
+   "run": "fusion879__s1"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999958,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9146,
+   "temp_max": 1.0316,
+   "mean_gate_short_long_delta_value": [
+    0.2133,
+    0.4305,
+    0.7169,
+    0.552
+   ],
+   "run": "fusion879__s1"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999957,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9212,
+   "temp_max": 1.0333,
+   "mean_gate_short_long_delta_value": [
+    0.2597,
+    0.49,
+    0.6796,
+    0.4866
+   ],
+   "run": "fusion879__s1"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9777,
+   "temp_max": 1.0317,
+   "mean_gate_short_long_delta_value": [
+    0.2466,
+    0.6485,
+    0.7386,
+    0.85
+   ],
+   "run": "fusion879__s2"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9473,
+   "temp_max": 1.0416,
+   "mean_gate_short_long_delta_value": [
+    0.1923,
+    0.6382,
+    0.8211,
+    0.7413
+   ],
+   "run": "fusion879__s2"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999958,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9101,
+   "temp_max": 1.0354,
+   "mean_gate_short_long_delta_value": [
+    0.2443,
+    0.5646,
+    0.8018,
+    0.6934
+   ],
+   "run": "fusion879__s2"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999956,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.8929,
+   "temp_max": 1.0369,
+   "mean_gate_short_long_delta_value": [
+    0.2813,
+    0.5505,
+    0.7663,
+    0.6357
+   ],
+   "run": "fusion879__s2"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9867,
+   "temp_max": 1.0239,
+   "mean_gate_short_long_delta_value": [
+    0.2818,
+    0.5884,
+    0.7853,
+    0.9142
+   ],
+   "run": "fusion879__s3"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9409,
+   "temp_max": 1.0257,
+   "mean_gate_short_long_delta_value": [
+    0.2397,
+    0.5944,
+    0.8526,
+    0.7743
+   ],
+   "run": "fusion879__s3"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9224,
+   "temp_max": 1.0373,
+   "mean_gate_short_long_delta_value": [
+    0.2541,
+    0.4939,
+    0.7761,
+    0.6974
+   ],
+   "run": "fusion879__s3"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999957,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.8943,
+   "temp_max": 1.0363,
+   "mean_gate_short_long_delta_value": [
+    0.2523,
+    0.4995,
+    0.7175,
+    0.6068
+   ],
+   "run": "fusion879__s3"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9636,
+   "temp_max": 1.0231,
+   "mean_gate_short_long_delta_value": [
+    0.2677,
+    0.2979,
+    0.7574,
+    0.9513
+   ],
+   "run": "fusion879_lr__s1"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9528,
+   "temp_max": 1.0269,
+   "mean_gate_short_long_delta_value": [
+    0.2429,
+    0.2812,
+    0.812,
+    0.9434
+   ],
+   "run": "fusion879_lr__s1"
+  }
+ ],
+ "census": {
+  "formula_matches_380": true,
+  "rows": {
+   "base@380": {
+    "latent_bytes": 601832292352,
+    "table_bytes": 1638924288,
+    "n_matrices": 2622,
+    "fp_params": 102158627,
+    "kv_bytes_per_token": 24903680,
+    "mixer_fp_params": 0,
+    "candidate_layers": 0,
+    "layers": 380
+   },
+   "dlgm458@380": {
+    "latent_bytes": 601832292352,
+    "table_bytes": 1638924288,
+    "n_matrices": 2622,
+    "fp_params": 39820506467,
+    "kv_bytes_per_token": 24903680,
+    "mixer_fp_params": 39718347840,
+    "candidate_layers": 285,
+    "layers": 380
+   },
+   "dlgm458_lr@380": {
+    "latent_bytes": 601832292352,
+    "table_bytes": 1638924288,
+    "n_matrices": 2622,
+    "fp_params": 109016867,
+    "kv_bytes_per_token": 24903680,
+    "mixer_fp_params": 6858240,
+    "candidate_layers": 285,
+    "layers": 380
+   },
+   "fusion879@380": {
+    "latent_bytes": 601832292352,
+    "table_bytes": 1638924288,
+    "n_matrices": 2622,
+    "fp_params": 41081291747,
+    "kv_bytes_per_token": 24903680,
+    "mixer_fp_params": 40979133120,
+    "candidate_layers": 285,
+    "layers": 380
+   },
+   "fusion879_lr@380": {
+    "latent_bytes": 601832292352,
+    "table_bytes": 1638924288,
+    "n_matrices": 2622,
+    "fp_params": 114233507,
+    "kv_bytes_per_token": 24903680,
+    "mixer_fp_params": 12074880,
+    "candidate_layers": 285,
+    "layers": 380
+   },
+   "base@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 150450908,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 0,
+    "candidate_layers": 0,
+    "layers": 560
+   },
+   "dlgm458@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 58682752988,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 58532302080,
+    "candidate_layers": 420,
+    "layers": 560
+   },
+   "dlgm458_lr@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 160557788,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 10106880,
+    "candidate_layers": 420,
+    "layers": 560
+   },
+   "fusion879@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 60540752348,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 60390301440,
+    "candidate_layers": 420,
+    "layers": 560
+   },
+   "fusion879_lr@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 168245468,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 17794560,
+    "candidate_layers": 420,
+    "layers": 560
+   }
+  }
+ },
+ "fidelity": {
+  "fla": "0.2.2",
+  "torch": "2.9.1+cu128",
+  "upstream_index": 879,
+  "phases": [
+   {
+    "name": "cpu64",
+    "device": "cpu",
+    "dtype": "torch.float64",
+    "tol": 1e-09,
+    "ok": true,
+    "cases": [
+     {
+      "T": 50,
+      "max_abs_err": 8.881784197001252e-16,
+      "ref_max": 2.251193709137344
+     },
+     {
+      "T": 64,
+      "max_abs_err": 5.551115123125783e-16,
+      "ref_max": 2.325048122191927
+     },
+     {
+      "T": 100,
+      "max_abs_err": 6.661338147750939e-16,
+      "ref_max": 2.2115917118421633
+     },
+     {
+      "T": 256,
+      "max_abs_err": 6.661338147750939e-16,
+      "ref_max": 2.3626990035987725
+     },
+     {
+      "T": 257,
+      "max_abs_err": 4.440892098500626e-16,
+      "ref_max": 2.5568741562689334
+     },
+     {
+      "T": 1024,
+      "max_abs_err": 8.881784197001252e-16,
+      "ref_max": 2.8854929294257508
+     }
+    ],
+    "shortconv": [
+     "ShortConvolution",
+     4,
+     3,
+     "silu",
+     true
+    ],
+    "replaced": true
+   },
+   {
+    "name": "gpu32",
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "tol": 0.0002,
+    "ok": true,
+    "cases": [
+     {
+      "T": 50,
+      "max_abs_err": 1.3113021850585938e-06,
+      "ref_max": 2.2511940002441406
+     },
+     {
+      "T": 64,
+      "max_abs_err": 5.960464477539062e-07,
+      "ref_max": 2.3250484466552734
+     },
+     {
+      "T": 100,
+      "max_abs_err": 5.960464477539062e-07,
+      "ref_max": 2.211591958999634
+     },
+     {
+      "T": 256,
+      "max_abs_err": 7.152557373046875e-07,
+      "ref_max": 2.362699508666992
+     },
+     {
+      "T": 257,
+      "max_abs_err": 9.5367431640625e-07,
+      "ref_max": 2.5568742752075195
+     },
+     {
+      "T": 1024,
+      "max_abs_err": 4.76837158203125e-07,
+      "ref_max": 2.8854928016662598
+     }
+    ],
+    "shortconv": [
+     "ShortConvolution",
+     4,
+     3,
+     "silu",
+     true
+    ],
+    "replaced": false
+   }
+  ],
+  "causality": {
+   "leak_before_edit": 0.0,
+   "change_from_edit": 0.8144181108950805
+  },
+  "ignores_causal_flag": true,
+  "layer3_is_attention": true,
+  "lr": {
+   "full_flag": false,
+   "shape": [
+    2,
+    160,
+    256
+   ],
+   "finite": true,
+   "leak_before_edit": 0.0,
+   "fp_params": 4628
+  },
+  "full_fp_params": 168988,
+  "ok": true
+ }
+}

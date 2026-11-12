@@ -1,0 +1,161 @@
+{
+ "name": "DLGM #458 vs Fusion #879: one combined index",
+ "version": 1,
+ "author": "claude-fable52 (fable52-asi-fusion-20261112), for Scott",
+ "frozen_at_utc": "2026-11-12T01:59:02Z",
+ "frozen_note": "Weights, scoring rule and constants fixed while Fusion seed 1 was in its first minutes on the GPU queue and before the author had read any Fusion result under this objective.",
+ "candidates": {
+  "dlgm": {
+   "label": "DLGM #458",
+   "upstream": "ASI-Arch #458 DualScaleMemoryRouter (delta_net_dlgm)",
+   "faithful": "dlgm458",
+   "lowrank": "dlgm458_lr"
+  },
+  "fusion": {
+   "label": "Fusion #879",
+   "upstream": "ASI-Arch #879 FusionGatedFIRNet (delta_net_psfr)",
+   "faithful": "fusion879",
+   "lowrank": "fusion879_lr"
+  }
+ },
+ "baseline_runs": [
+  "base",
+  "base_r2",
+  "base_r3"
+ ],
+ "quality_mix": {
+  "ar": 0.6,
+  "sat": 0.2,
+  "nat": 0.2
+ },
+ "components": [
+  {
+   "key": "own_steps",
+   "weight": 0.35,
+   "floor": 0.02,
+   "unit": "nats",
+   "title": "Your objective, same number of training steps",
+   "measure": "Held-out loss after 1,200 steps in the AGILLM-objective simulator (0.6 AR + 0.2 SAT + 0.2 NAT), gain over the live block. Faithful form, all complete seeds."
+  },
+  {
+   "key": "own_long_context",
+   "weight": 0.05,
+   "floor": 0.02,
+   "unit": "nats",
+   "title": "Your objective, long context",
+   "measure": "What 4x more context does to the loss (1,024 tokens against 256) at step 1,200, relative to the live block. Faithful form."
+  },
+  {
+   "key": "own_time",
+   "weight": 0.1,
+   "floor": 0.02,
+   "unit": "nats",
+   "title": "Your objective, same simulator box time",
+   "measure": "The site's equal-time method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step, against the base run of the same day), gain over the live block. Low-rank form, the one that fits at full scale."
+  },
+  {
+   "key": "own_small",
+   "weight": 0.15,
+   "floor": 0.02,
+   "unit": "nats per byte",
+   "title": "Your matched small-model run (v65 R6)",
+   "measure": "Held-out cross-entropy gain over the width-96 Transformer at an equal 120 training-CPU-seconds, about 350k parameters, 3 paired seeds; WikiText and FineWeb scored separately and averaged."
+  },
+  {
+   "key": "up_tasks",
+   "weight": 0.15,
+   "floor": null,
+   "unit": "accuracy points",
+   "title": "ASI-Arch paper: benchmark tasks",
+   "measure": "7-task average, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs."
+  },
+  {
+   "key": "up_loss",
+   "weight": 0.1,
+   "floor": null,
+   "unit": "nats",
+   "title": "ASI-Arch paper: training loss",
+   "measure": "Final training loss, gain over the Gated DeltaNet baseline; the 20M and 340M runs scored separately and averaged. Single runs."
+  },
+  {
+   "key": "serving",
+   "weight": 0.1,
+   "floor": null,
+   "unit": "rubric",
+   "title": "Serving readiness",
+   "measure": "Rubric: 100 = an exact incremental cache verified against full recompute on trained checkpoints; 50 = a cache that reproduces the same tokens but failed the exact-match gate; 0 = none."
+  }
+ ],
+ "scoring": "For a gain component each candidate scores 100 x max(gain, 0) / max(gain of DLGM, gain of Fusion, floor). The better one gets 100 when its gain clears the noise floor, the other gets its share of that gain, and a candidate that does not beat the shared baseline gets 0. Where a component has sub-experiments they are scored separately and averaged. Index = weighted sum of the component scores (0 to 100).",
+ "headline_rule": "The name on top is the higher index. A margin under 3 points is called level in words.",
+ "robustness": {
+  "random_weightings": 20000,
+  "seed": 879458,
+  "method": "weights drawn uniformly from the simplex over the available components; also every leave-one-component-out index"
+ },
+ "not_scored": [
+  "Footprint and arithmetic at 560 layers (reported: the two are equal to well under 1%)",
+  "Only Fusion has 1.3B-parameter upstream results (reported)"
+ ],
+ "constants": {
+  "v65_r6": {
+   "source": "SG memory slot 2342 (ChatGPT lane, 2026-11-09), natural-log cross-entropy per byte",
+   "wikitext": {
+    "dlgm": 1.762221473,
+    "fusion": 1.771213003,
+    "baseline": 1.829924379
+   },
+   "fineweb": {
+    "dlgm": 2.103326358,
+    "fusion": 2.124353456,
+    "baseline": 2.188070645
+   },
+   "per_seed_fusion_minus_dlgm": {
+    "wikitext": [
+     -0.005230576,
+     0.002618733,
+     0.029586433
+    ],
+    "fineweb": [
+     -0.001649001,
+     -0.001725079,
+     0.066455373
+    ]
+   }
+  },
+  "upstream": {
+   "source": "ASI-Arch paper (arXiv 2507.18074v2) Table 9 and data/106.json at commit 3113c51b",
+   "tasks7": {
+    "20M": {
+     "dlgm": 37.74,
+     "fusion": 39.37,
+     "baseline": 36.6
+    },
+    "340M": {
+     "dlgm": 44.13,
+     "fusion": 44.02,
+     "baseline": 42.1
+    }
+   },
+   "train_loss": {
+    "20M": {
+     "dlgm": 4.39,
+     "fusion": 4.4233,
+     "baseline": 4.5678
+    },
+    "340M": {
+     "dlgm": 3.4047,
+     "fusion": 3.4048,
+     "baseline": 3.4768
+    }
+   },
+   "note_1p3b": "At 1.3B parameters only Fusion was trained upstream: 52.01 on 14 accuracy metrics against 51.04 for DeltaNet."
+  },
+  "serving": {
+   "dlgm": 50,
+   "fusion": 100,
+   "dlgm_reason": "Incremental cache attempts v63 and v64 reproduced the same tokens (RMS error about 1e-6) but failed the strict exact-match gate twice; the Transformer baseline failed the same gate.",
+   "fusion_reason": "Exact incremental cache verified against full recompute on three trained checkpoints (worst error 1.3e-14 in float64, 1.0e-5 in float32); fixed state of 103,680 bytes; public at experiments/asi_arch_psfr_cache_v1."
+  }
+ }
+}

@@ -1,0 +1,1 @@
+META = dict(id='base_r2', title='Live 600B block (control, re-run 11 Nov 2026 alongside the Sakana candidates)', slot='control', one_line='Identical to base: re-run on the same day and GPU as the sk_* candidates so that ms/step and seed noise are compared like for like')

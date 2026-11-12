@@ -1,0 +1,120 @@
+{
+ "fla": "0.2.2",
+ "torch": "2.9.1+cu128",
+ "upstream_index": 879,
+ "phases": [
+  {
+   "name": "cpu64",
+   "device": "cpu",
+   "dtype": "torch.float64",
+   "tol": 1e-09,
+   "ok": true,
+   "cases": [
+    {
+     "T": 50,
+     "max_abs_err": 8.881784197001252e-16,
+     "ref_max": 2.251193709137344
+    },
+    {
+     "T": 64,
+     "max_abs_err": 5.551115123125783e-16,
+     "ref_max": 2.325048122191927
+    },
+    {
+     "T": 100,
+     "max_abs_err": 6.661338147750939e-16,
+     "ref_max": 2.2115917118421633
+    },
+    {
+     "T": 256,
+     "max_abs_err": 6.661338147750939e-16,
+     "ref_max": 2.3626990035987725
+    },
+    {
+     "T": 257,
+     "max_abs_err": 4.440892098500626e-16,
+     "ref_max": 2.5568741562689334
+    },
+    {
+     "T": 1024,
+     "max_abs_err": 8.881784197001252e-16,
+     "ref_max": 2.8854929294257508
+    }
+   ],
+   "shortconv": [
+    "ShortConvolution",
+    4,
+    3,
+    "silu",
+    true
+   ],
+   "replaced": true
+  },
+  {
+   "name": "gpu32",
+   "device": "cuda",
+   "dtype": "torch.float32",
+   "tol": 0.0002,
+   "ok": true,
+   "cases": [
+    {
+     "T": 50,
+     "max_abs_err": 1.3113021850585938e-06,
+     "ref_max": 2.2511940002441406
+    },
+    {
+     "T": 64,
+     "max_abs_err": 5.960464477539062e-07,
+     "ref_max": 2.3250484466552734
+    },
+    {
+     "T": 100,
+     "max_abs_err": 5.960464477539062e-07,
+     "ref_max": 2.211591958999634
+    },
+    {
+     "T": 256,
+     "max_abs_err": 7.152557373046875e-07,
+     "ref_max": 2.362699508666992
+    },
+    {
+     "T": 257,
+     "max_abs_err": 9.5367431640625e-07,
+     "ref_max": 2.5568742752075195
+    },
+    {
+     "T": 1024,
+     "max_abs_err": 4.76837158203125e-07,
+     "ref_max": 2.8854928016662598
+    }
+   ],
+   "shortconv": [
+    "ShortConvolution",
+    4,
+    3,
+    "silu",
+    true
+   ],
+   "replaced": false
+  }
+ ],
+ "causality": {
+  "leak_before_edit": 0.0,
+  "change_from_edit": 0.8144181108950805
+ },
+ "ignores_causal_flag": true,
+ "layer3_is_attention": true,
+ "lr": {
+  "full_flag": false,
+  "shape": [
+   2,
+   160,
+   256
+  ],
+  "finite": true,
+  "leak_before_edit": 0.0,
+  "fp_params": 4628
+ },
+ "full_fp_params": 168988,
+ "ok": true
+}

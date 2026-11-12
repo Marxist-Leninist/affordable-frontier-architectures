@@ -1,0 +1,105 @@
+{
+ "formula_matches_380": true,
+ "rows": {
+  "base@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 102158627,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 0,
+   "candidate_layers": 0,
+   "layers": 380
+  },
+  "dlgm458@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 39820506467,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 39718347840,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "dlgm458_lr@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 109016867,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 6858240,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "fusion879@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 41081291747,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 40979133120,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "fusion879_lr@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 114233507,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 12074880,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "base@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 150450908,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 0,
+   "candidate_layers": 0,
+   "layers": 560
+  },
+  "dlgm458@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 58682752988,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 58532302080,
+   "candidate_layers": 420,
+   "layers": 560
+  },
+  "dlgm458_lr@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 160557788,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 10106880,
+   "candidate_layers": 420,
+   "layers": 560
+  },
+  "fusion879@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 60540752348,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 60390301440,
+   "candidate_layers": 420,
+   "layers": 560
+  },
+  "fusion879_lr@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 168245468,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 17794560,
+   "candidate_layers": 420,
+   "layers": 560
+  }
+ }
+}
