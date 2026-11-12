@@ -1,19 +1,19 @@
 {
  "README.md": {
-  "bytes": 6895,
-  "sha256": "371e5580f8cfdac54090414d91fbc85b5673785ff28d2b7cc1adb90702b48164"
+  "bytes": 7178,
+  "sha256": "286d5da9191b680d2003f02ace0409b7e3b817d3d79c83350f23928c4048916f"
  },
  "agillm_mini.py": {
   "bytes": 27167,
   "sha256": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2"
  },
  "build_index.py": {
-  "bytes": 44428,
-  "sha256": "2bfc77298d427bea2b5f196e0fc17c972e8c685944845bbd7c3377319af20372"
+  "bytes": 46228,
+  "sha256": "c0adfe30d2ed83b82c669f9a5893e704b86be49fda85ac953e326ea6d115dd70"
  },
  "census560.json": {
-  "bytes": 2551,
-  "sha256": "4b59cfecc1b3c6d24f75f0e4940128feaea274c045f03739da69ac41cfce99ac"
+  "bytes": 3737,
+  "sha256": "eb00c80ca2e055982bbf2ee6069f8938667ab7e529711422bee224a42193a033"
  },
  "census560.py": {
   "bytes": 2102,
@@ -24,12 +24,12 @@
   "sha256": "85ba55d341f4f7c91e0f140dca37ce1686b9e159b6f27946aade5b93a8a1515f"
  },
  "fusion_state.json": {
-  "bytes": 5275,
-  "sha256": "d42d66125e80d47aacdfa2445cf20d3b49f4dbb9b7e991a0b3239e10c4313052"
+  "bytes": 8054,
+  "sha256": "c572f8b05abe8cd9c772c4bc467e8f89e160c73d0db74ce8a529ec10f145d7d4"
  },
  "index.json": {
-  "bytes": 31822,
-  "sha256": "a1773b17de138f5d9442f770852da029dbe0710a9066355872b2494207da3767"
+  "bytes": 39747,
+  "sha256": "9bc5be1f25916dd15cbf79820261debc1a9c89f3d40e71cbdfbb699a853d6673"
  },
  "index_spec_v1.json": {
   "bytes": 5639,
@@ -44,8 +44,8 @@
   "sha256": "02c826fbeb8b607fcc9842e11270d43da41960ca3e2579b7805ac1060fd2f0e2"
  },
  "page/index.html": {
-  "bytes": 28010,
-  "sha256": "adb17d3ca69a05be0063875749f130b739355042e3ad382fc15316765186c76f"
+  "bytes": 30457,
+  "sha256": "d1d9ff17b56da06eed82809b1b612ce20dc4bd589a18a58131cee007c1451233"
  },
  "runs/base__s1.json": {
   "bytes": 5594,
@@ -99,6 +99,18 @@
   "bytes": 5657,
   "sha256": "f1503df026dff5bcb16e48e0691772d3d143c8bde39e330429de0bf89d35b953"
  },
+ "runs/dlgm458_lrk__s1.json": {
+  "bytes": 5698,
+  "sha256": "fbdc94bc338a30bbbe3daff29bbbdc45e862f289425782c709598b1da209ef64"
+ },
+ "runs/dlgm458_lrk__s2.json": {
+  "bytes": 5701,
+  "sha256": "d2606fa0ef062ada819bcdf85f6dee541ed00abb6d7f00d40e5c33b70d9a9fab"
+ },
+ "runs/dlgm458_lrk__s3.json": {
+  "bytes": 5691,
+  "sha256": "93e03c2c9c40e069850e68cb72070c053efb46a26717e1e27728e489552f98a6"
+ },
  "runs/fusion879__s1.json": {
   "bytes": 5692,
   "sha256": "12d16850564feaa9f0e0d00a5c2c3346f9d3730a73b63364f21548e56a054580"
@@ -122,6 +134,18 @@
  "runs/fusion879_lr__s3.json": {
   "bytes": 5701,
   "sha256": "be9acef3d635ef9d7f27752b7716a1b0c1cdcd1c59109d9f247be2d006c415c5"
+ },
+ "runs/fusion879_lrk__s1.json": {
+  "bytes": 5735,
+  "sha256": "d8f9099d2533468c58c7e38abc84b6dedf7f60b3ef914196c3814ae3d3e59a80"
+ },
+ "runs/fusion879_lrk__s2.json": {
+  "bytes": 5743,
+  "sha256": "679dd3262f9f209b8b795ebbff5d99aebf0a61ae96515ae6dbe5e76961ecebe4"
+ },
+ "runs/fusion879_lrk__s3.json": {
+  "bytes": 5750,
+  "sha256": "fe64756d901eb2d83ddab858a64dd7097a7db45cb1215efb9e36d134249a0ee0"
  },
  "plugins/base.py": {
   "bytes": 196,

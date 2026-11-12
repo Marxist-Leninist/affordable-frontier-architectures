@@ -100,6 +100,48 @@
    "mixer_fp_params": 17794560,
    "candidate_layers": 420,
    "layers": 560
+  },
+  "fusion879_lrk@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 294918947,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 192760320,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "fusion879_lrk@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 434518748,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 284067840,
+   "candidate_layers": 420,
+   "layers": 560,
+   "derived_from": "380-block census of the smoke run, same per-layer mixer cost"
+  },
+  "dlgm458_lrk@380": {
+   "latent_bytes": 601832292352,
+   "table_bytes": 1638924288,
+   "n_matrices": 2622,
+   "fp_params": 224840867,
+   "kv_bytes_per_token": 24903680,
+   "mixer_fp_params": 122682240,
+   "candidate_layers": 285,
+   "layers": 380
+  },
+  "dlgm458_lrk@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 331245788,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 180794880,
+   "candidate_layers": 420,
+   "layers": 560,
+   "derived_from": "380-block census of the smoke run, same per-layer mixer cost"
   }
  }
 }

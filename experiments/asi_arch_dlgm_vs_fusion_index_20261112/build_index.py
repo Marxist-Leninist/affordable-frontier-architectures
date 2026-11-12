@@ -395,6 +395,11 @@ def build():
             B = alt['lrk']
             txt += (' With a gentler cut that should also fit (low-rank gate, per-channel kernels kept): DLGM %s, Fusion %s nats (%d and %d seeds), index DLGM %s, Fusion %s: %s.' % (
                 f(B['gain']['dlgm'], 3), f(B['gain']['fusion'], 3), B['seeds']['dlgm'], B['seeds']['fusion'], f(B['index']['dlgm']), f(B['index']['fusion']), esc(reading(B))))
+            fa, fl, fk = forms.get(pid_of('fusion', 'faithful')), forms.get(pid_of('fusion', 'lowrank')), forms.get(pid_of('fusion', 'lrk'))
+            if fa and fl and fk and (fa['gain_steps'] - fl['gain_steps']) > 0.005:
+                rec = max(0.0, min(1.0, (fk['gain_steps'] - fl['gain_steps']) / (fa['gain_steps'] - fl['gain_steps'])))
+                txt += ' Keeping the per-channel kernels wins back about %d%% of what Fusion lost in the low-rank form, %s' % (round(100 * rec),
+                    'so most of its full-size advantage needs the full-size gate, and that gate is too large to train at width 8192.' if rec < 0.5 else 'so most of its full-size advantage survives in a form that fits.')
         elif any((st['progress'].get(p, {}).get('done') or st['progress'].get(p, {}).get('running')) for p in ('fusion879_lrk', 'dlgm458_lrk')):
             txt += ' A gentler cut that should also fit (low-rank gate, per-channel kernels kept) is training now for both.'
         H.append('<div class="card note"><p>%s</p></div>' % txt)
@@ -469,6 +474,12 @@ def build():
             se = math.sqrt(a['gain_se'] ** 2 + bb['gain_se'] ** 2)
             H.append('<li><strong>Seed noise on your objective.</strong> At equal steps Fusion minus DLGM is %s nats with a standard error of %s (%s standard errors). %s</li>' % (
                 f(diff, 3, True), f(se, 3), f(abs(diff) / se if se else 0.0, 1), 'That is a real difference at this sample size.' if se and abs(diff) / se >= 2 else 'That is inside seed noise: on this line the two are not separated.'))
+    ka, kb = forms.get(pid_of('dlgm', 'lrk')), forms.get(pid_of('fusion', 'lrk'))
+    if ka and kb and ka.get('gain_se') is not None and kb.get('gain_se') is not None:
+        kd = kb['gain_steps'] - ka['gain_steps']; kse = math.sqrt(ka['gain_se'] ** 2 + kb['gain_se'] ** 2)
+        H.append('<li><strong>The gentler cut (low-rank gate, per-channel kernels kept).</strong> At equal steps Fusion minus DLGM is %s nats with a standard error of %s (%s standard errors): %s Per seed, DLGM gained %s and Fusion %s.</li>' % (
+            f(kd, 3, True), f(kse, 3), f(abs(kd) / kse if kse else 0.0, 1), 'a real difference at this sample size.' if kse and abs(kd) / kse >= 2 else 'inside seed noise, so in this form too the data cannot separate them.',
+            esc(', '.join(f(v, 3) for v in ka['gain_seeds'])), esc(', '.join(f(v, 3) for v in kb['gain_seeds']))))
     ha, hb = forms.get('dlgm458_hn'), forms.get('fusion879_hn')
     if ha and hb:
         hd = hb['gain_steps'] - ha['gain_steps']
@@ -513,14 +524,14 @@ def build():
             return '%.1f GB' % (n / 1e9)
         b560 = rows.get('base@560')
         H.append('<div class="card tablewrap"><table><thead><tr><th>At 560 blocks, width 8192</th><th class="n">Binary latents</th><th class="n">Extra floating-point parameters for the mixer</th><th class="n">Candidate layers</th></tr></thead><tbody>')
-        for name, lab in (('base', 'Live block'), ('dlgm458_lr', 'DLGM #458, low-rank'), ('fusion879_lr', 'Fusion #879, low-rank'), ('dlgm458', 'DLGM #458, faithful'), ('fusion879', 'Fusion #879, faithful')):
+        for name, lab in (('base', 'Live block'), ('dlgm458_lr', 'DLGM #458, low-rank'), ('fusion879_lr', 'Fusion #879, low-rank'), ('dlgm458_lrk', 'DLGM #458, low-rank router, per-channel kernels'), ('fusion879_lrk', 'Fusion #879, low-rank gate, per-channel kernels'), ('dlgm458', 'DLGM #458, faithful'), ('fusion879', 'Fusion #879, faithful')):
             r = rows.get(name + '@560')
             if r:
                 H.append('<tr><td>%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%d</td></tr>' % (esc(lab), '{:,.1f} B'.format(r['latent_bytes'] / 1e9), '{:,}'.format(r['mixer_fp_params']), r['candidate_layers']))
         H.append('</tbody></table></div>')
         lr_d, lr_f, fu_d, fu_f = (rows.get(k + '@560') for k in ('dlgm458_lr', 'fusion879_lr', 'dlgm458', 'fusion879'))
         if lr_d and lr_f and fu_d and fu_f and b560:
-            H.append('<p>Both candidates keep every binary matrix of the live block (%s billion latents at 560 blocks), so storage and streaming are the same for both. The faithful forms add about %s and %s billion 32-bit parameters for their routers and gates, which is too much to train at this size; the low-rank forms add %s and %s million, under a tenth of a gigabyte, which is nothing. So the low-rank form is the one that could run, and on size the two are equal.</p>' % (
+            H.append('<p>Both candidates keep every binary matrix of the live block (%s billion latents at 560 blocks), so storage and streaming are the same for both. The faithful forms add about %s and %s billion 32-bit parameters for their routers and gates, which is too much to train at this size; the low-rank forms add %s and %s million, under a tenth of a gigabyte, which is nothing; the gentler cut that keeps the per-channel kernels adds about 0.2 and 0.3 billion, roughly a gigabyte. So only the cut-down forms could run, and on size the two are close.</p>' % (
                 '{:,.1f}'.format(b560['latent_bytes'] / 1e9), f(fu_d['mixer_fp_params'] / 1e9, 1), f(fu_f['mixer_fp_params'] / 1e9, 1), f(lr_d['mixer_fp_params'] / 1e6, 1), f(lr_f['mixer_fp_params'] / 1e6, 1)))
     H.append('<p><strong>&ldquo;Equal time&rdquo; is the simulator&rsquo;s model, not a full-scale measurement.</strong> In the small mirror a candidate step costs two to three times a live-block step, because at width 256 the mixer&rsquo;s convolutions and memory updates are large next to tiny matrices. At width 8192 the arithmetic runs the other way: a block spends about 800 million multiply-adds per token in its binary matrices, attention over 2,048 tokens about 34 million, and either mixer about 6 million. By that count both candidates would cost about the same per step as the live block, slightly less, and the two differ from each other by well under 1%. That is an estimate from counting operations; nobody has timed either mixer inside the real trainer.</p>')
     # method and files
