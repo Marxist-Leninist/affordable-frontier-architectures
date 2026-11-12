@@ -1,19 +1,19 @@
 {
  "README.md": {
-  "bytes": 7178,
-  "sha256": "286d5da9191b680d2003f02ace0409b7e3b817d3d79c83350f23928c4048916f"
+  "bytes": 7577,
+  "sha256": "66b95be29e910a7e83b1bf4d9f2e90ad491ceb6ad432ae3ff72d8285ac045cbb"
  },
  "agillm_mini.py": {
   "bytes": 27167,
   "sha256": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2"
  },
  "build_index.py": {
-  "bytes": 46228,
-  "sha256": "c0adfe30d2ed83b82c669f9a5893e704b86be49fda85ac953e326ea6d115dd70"
+  "bytes": 49989,
+  "sha256": "488f67eca3e0b06d1c598cd0a58cc44df0ec5a04bac123e66ba8fefd5c40f50b"
  },
  "census560.json": {
-  "bytes": 3737,
-  "sha256": "eb00c80ca2e055982bbf2ee6069f8938667ab7e529711422bee224a42193a033"
+  "bytes": 4459,
+  "sha256": "71d6106c409d1d3dc4ed41fe0e659671dafaf5251a0299b24ed828d1efeb4d42"
  },
  "census560.py": {
   "bytes": 2102,
@@ -24,28 +24,28 @@
   "sha256": "85ba55d341f4f7c91e0f140dca37ce1686b9e159b6f27946aade5b93a8a1515f"
  },
  "fusion_state.json": {
-  "bytes": 8054,
-  "sha256": "c572f8b05abe8cd9c772c4bc467e8f89e160c73d0db74ce8a529ec10f145d7d4"
+  "bytes": 10180,
+  "sha256": "1e6373397dc8ae4f50fc00855cbb0fee6d4d4be82637a95b426901ecf57de6de"
  },
  "index.json": {
-  "bytes": 39747,
-  "sha256": "9bc5be1f25916dd15cbf79820261debc1a9c89f3d40e71cbdfbb699a853d6673"
+  "bytes": 49019,
+  "sha256": "5b978a2999bf08698289c86e5842c824026e110106c14c14439eefb5a578d8cc"
  },
  "index_spec_v1.json": {
   "bytes": 5639,
   "sha256": "fda0f7ad167e19c11d51a5e091af9ad8ebbd59c6bf6bca5d16967602a8af0140"
  },
  "make_package.py": {
-  "bytes": 9510,
-  "sha256": "506f2916f5ab5e454df17ca3ee88fcd855d89e36233d306e6744550b380a5f98"
+  "bytes": 9578,
+  "sha256": "5d4e1fbbd5a3209cc317804fe5100d2ee2980a6be874da74d8b7b374163c96ba"
  },
  "test_fusion879_equiv.py": {
   "bytes": 7544,
   "sha256": "02c826fbeb8b607fcc9842e11270d43da41960ca3e2579b7805ac1060fd2f0e2"
  },
  "page/index.html": {
-  "bytes": 30457,
-  "sha256": "d1d9ff17b56da06eed82809b1b612ce20dc4bd589a18a58131cee007c1451233"
+  "bytes": 33247,
+  "sha256": "3d146036e34db693e769a922588fec6ef6ef6eb08da3a1a374a7f86b07ba8741"
  },
  "runs/base__s1.json": {
   "bytes": 5594,
@@ -87,6 +87,18 @@
   "bytes": 5640,
   "sha256": "e7e25e59b919775d3b64fda6fa1129c70a83320a02fca1f2247c19cd323c0357"
  },
+ "runs/dlgm458_hn__s1.json": {
+  "bytes": 5670,
+  "sha256": "bd1c4d01975e56d109653a34cba35a45692b8ea42b5eafd4fdd60f6388a0a7c4"
+ },
+ "runs/dlgm458_hn__s2.json": {
+  "bytes": 5672,
+  "sha256": "21805b477cba17339e2a3b0dd3a8bf6de166a4bbddb044df3673869432f21c7d"
+ },
+ "runs/dlgm458_hn__s3.json": {
+  "bytes": 5674,
+  "sha256": "a0ce63fcef93bdaebd447319d636c07a8970ad1f0bfa8482375624f1f503830e"
+ },
  "runs/dlgm458_lr__s1.json": {
   "bytes": 5659,
   "sha256": "02264eebc1ff02e5b0345bac011805eb5fbeb760bc6134ae98fb9f15f0f2033e"
@@ -122,6 +134,18 @@
  "runs/fusion879__s3.json": {
   "bytes": 5697,
   "sha256": "e6e5abb6c51c523b3e81cb59b050738160a1b182faf46a92015ad3772bfa032a"
+ },
+ "runs/fusion879_hn__s1.json": {
+  "bytes": 5716,
+  "sha256": "fe564c93985e14411ab664ad397852a71c2125590913e993b4918a94c27aed7e"
+ },
+ "runs/fusion879_hn__s2.json": {
+  "bytes": 5704,
+  "sha256": "678f17aef54db7f6337baa5051bac8de26d958f6c262fabaf4c0c4681a47b951"
+ },
+ "runs/fusion879_hn__s3.json": {
+  "bytes": 5720,
+  "sha256": "214e91893a693e45d0872a9547ebde82f8693ab05ea59aa8e333ab52c9ff42ec"
  },
  "runs/fusion879_lr__s1.json": {
   "bytes": 5710,
@@ -167,6 +191,10 @@
   "bytes": 5618,
   "sha256": "4efa3c88b035d83e694aafe18e5ee97c89ead214de177e0d7c8293269dd9d655"
  },
+ "plugins/dlgm458_lg.py": {
+  "bytes": 6357,
+  "sha256": "a64957bceaa5d6804d346fa997fc50aa97884d381026aa7385b8b737108a3fd2"
+ },
  "plugins/dlgm458_lr.py": {
   "bytes": 5161,
   "sha256": "77be418b4fa081642b12d735fcfd25287ad2eb402bda58341fc9bf6cbbacea41"
@@ -182,6 +210,10 @@
  "plugins/fusion879_hn.py": {
   "bytes": 8464,
   "sha256": "312494d1195097096f61624b016478168c833fd7f1fd5a500a2e4764fd526bd9"
+ },
+ "plugins/fusion879_lg.py": {
+  "bytes": 9165,
+  "sha256": "b543eae3e9edd3cb691ec76c4acdc519df11c77673cbc101027efe0e8ec221e8"
  },
  "plugins/fusion879_lr.py": {
   "bytes": 8008,

@@ -6,7 +6,7 @@ Live page (rebuilds itself from the synced runs): https://zqx.lat/asi-arch/dlgm-
 
 ## Result
 
-Fusion #879 is on top: 85.5 to 74.3, a lead of 11.2 points. It wins 86% of 20,000 random re-weightings of the same evidence.
+Fusion #879 is on top of the index: 85.5 to 74.3, a lead of 11.2 points. It stays on top under 86% of 20,000 random re-weightings of the same evidence, so the result does not hinge on my choice of weights (a sensitivity check, not a statistical confidence).
 
 | | DLGM #458 | Fusion #879 |
 |---|---:|---:|
@@ -18,6 +18,7 @@ Fusion #879 is on top: 85.5 to 74.3, a lead of 11.2 points. It wins 86% of 20,00
 |---|---:|---:|---|---:|---:|
 | low-rank form | +0.117 | +0.102 | 3 and 3 | 80.6 | 80.7 |
 | low-rank gate, per-channel kernels | +0.120 | +0.112 | 3 and 3 | 80.6 | 83.0 |
+| per-head norm check | +0.102 | +0.123 | 3 and 3 | 74.3 | 85.8 |
 
 ## The seven lines
 
@@ -41,9 +42,11 @@ Scoring: For a gain component each candidate scores 100 x max(gain, 0) / max(gai
 | `dlgm458` | 3 | 5.0965 | 5.3806 | 5.8133 | +0.111 +/- 0.007 | -0.067 | 461 (x2.37) | -0.003 |
 | `dlgm458_lr` | 3 | 5.0901 | 5.3797 | 5.8043 | +0.117 +/- 0.002 | -0.089 | 543 (x2.79) | -0.047 |
 | `dlgm458_lrk` | 3 | 5.0851 | 5.3723 | 5.8081 | +0.120 +/- 0.011 | -0.071 | 412 (x2.12) | +0.013 |
+| `dlgm458_hn` | 3 | 5.1091 | 5.3895 | 5.8113 | +0.102 +/- 0.004 | -0.073 | 362 (x1.86) | +0.018 |
 | `fusion879` | 3 | 5.0718 | 5.3597 | 5.7861 | +0.135 +/- 0.004 | -0.082 | 370 (x1.90) | +0.032 |
 | `fusion879_lr` | 3 | 5.1074 | 5.3908 | 5.8154 | +0.102 +/- 0.013 | -0.118 | 744 (x3.82) | -0.150 |
 | `fusion879_lrk` | 3 | 5.0983 | 5.3830 | 5.8000 | +0.112 +/- 0.004 | -0.088 | 393 (x2.02) | +0.008 |
+| `fusion879_hn` | 3 | 5.0830 | 5.3705 | 5.8011 | +0.123 +/- 0.006 | -0.061 | 317 (x1.63) | +0.056 |
 
 Gain = live block minus candidate on 0.6 AR + 0.2 SAT + 0.2 NAT; +/- is one standard error across seeds. "4x context" is the change in loss on the last 256 tokens when the 768 tokens before them are also visible. "Equal simulator time" uses the site method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step against the base run of the same day).
 
@@ -62,7 +65,7 @@ Gain = live block minus candidate on 0.6 AR + 0.2 SAT + 0.2 NAT; +/- is one stan
 - `plugins/fusion879.py` (and the byte-identical `fusion879_lr.py`; the file name selects the low-rank form): ASI-Arch #879 (delta_net_psfr) ported to the simulator block with the conventions of `plugins/dlgm458.py`.
 - `test_fusion879_equiv.py`, `fidelity_test_result.json`: the port against the original #879 class with copied weights (float64 on CPU, float32 on the GPU with the real FLA 0.2.2 kernels).
 - `index_spec_v1.json`: the frozen formula. `build_index.py`: builds the page and `index.json` from the runs. `index.json`, `page/index.html`: snapshot at packaging time.
-- `runs/`: every raw run JSON used (25 files). `census560.json`: storage bill of each form at 380 and 560 blocks.
+- `runs/`: every raw run JSON used (31 files). `census560.json`: storage bill of each form at 380 and 560 blocks.
 - `agillm_mini.py`: the simulator as run (sha256 prefix `dc5c3c28ddbf1853`, frozen since 9 Nov).
 
 ## Reproduce
@@ -74,4 +77,4 @@ python3 test_fusion879_equiv.py                                                 
 
 Upstream sources: GAIR-NLP/ASI-Arch at commit 3113c51b (data/106.json, entries #458 and #879); paper arXiv 2507.18074v2, Table 9.
 
-Packaged 2026-11-12 04:08 UTC by Claude for Scott.
+Packaged 2026-11-12 06:07 UTC by Claude for Scott.

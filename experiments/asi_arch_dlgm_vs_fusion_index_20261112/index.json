@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T04:08:47Z",
+ "generated_utc": "2026-11-12T06:07:30Z",
  "spec_sha256": "fda0f7ad167e19c11d51a5e091af9ad8ebbd59c6bf6bca5d16967602a8af0140",
  "spec": {
   "name": "DLGM #458 vs Fusion #879: one combined index",
@@ -170,7 +170,84 @@
  "margin": 11.226339206447648,
  "provisional": false,
  "have_own": true,
- "verdict": "Fusion #879 is on top: 85.5 to 74.3, a lead of 11.2 points. It wins 86% of 20,000 random re-weightings of the same evidence.",
+ "verdict": "Fusion #879 is on top of the index: 85.5 to 74.3, a lead of 11.2 points. It stays on top under 86% of 20,000 random re-weightings of the same evidence, so the result does not hinge on my choice of weights (a sensitivity check, not a statistical confidence).",
+ "paired_seed_intervals": {
+  "faithful": {
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "diffs": [
+    0.04320305585861117,
+    0.0077471137046813965,
+    0.02234553098678571
+   ],
+   "mean": 0.024431900183359428,
+   "lo": -0.019838536922366836,
+   "hi": 0.06870233728908569,
+   "n": 3,
+   "positive": 3
+  },
+  "lowrank": {
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "diffs": [
+    -0.004479908943175737,
+    -0.0012068748474121094,
+    -0.03876460790634084
+   ],
+   "mean": -0.014817130565642897,
+   "lo": -0.06650028911223943,
+   "hi": 0.03686602798095363,
+   "n": 3,
+   "positive": 0
+  },
+  "lrk": {
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "diffs": [
+    0.022443425655365168,
+    -0.026388692855834783,
+    -0.02135441303253227
+   ],
+   "mean": -0.008433226744333963,
+   "lo": -0.07515802526855948,
+   "hi": 0.05829157177989156,
+   "n": 3,
+   "positive": 1
+  },
+  "lg": null,
+  "hn": {
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "diffs": [
+    0.009809410572051647,
+    0.04103357791900564,
+    0.013680362701415483
+   ],
+   "mean": 0.021507783730824254,
+   "lo": -0.020776247133680387,
+   "hi": 0.0637918145953289,
+   "n": 3,
+   "positive": 3
+  }
+ },
+ "trained_minus_fixed_projection": {
+  "dlgm": null,
+  "fusion": null
+ },
+ "superiority_proven": false,
+ "full_scale_measured": false,
  "components": [
   {
    "key": "own_steps",
@@ -461,7 +538,8 @@
    "se": {
     "dlgm": 0.001899975283621722,
     "fusion": 0.012862404698486806
-   }
+   },
+   "complete": true
   },
   "lrk": {
    "form": "low-rank gate, per-channel kernels",
@@ -482,7 +560,30 @@
    "se": {
     "dlgm": 0.01127159307344835,
     "fusion": 0.004273733658300246
-   }
+   },
+   "complete": true
+  },
+  "hn": {
+   "form": "per-head norm check",
+   "index": {
+    "dlgm": 74.25139652036944,
+    "fusion": 85.793220520272
+   },
+   "margin": 11.541823999902562,
+   "top": "fusion",
+   "gain": {
+    "dlgm": 0.10185121297836375,
+    "fusion": 0.123358996709188
+   },
+   "seeds": {
+    "dlgm": 3,
+    "fusion": 3
+   },
+   "se": {
+    "dlgm": 0.004449143999394207,
+    "fusion": 0.006023065063530372
+   },
+   "complete": true
   }
  },
  "own": {
@@ -493,6 +594,7 @@
     "base_r3"
    ],
    "seeds": 7,
+   "distinct_seeds": 3,
    "ar": 5.242889966283526,
    "sat": 5.464196605341775,
    "nat": 5.8445658683776855,
@@ -541,6 +643,11 @@
      0.12317367792129552,
      0.11014728546142649
     ],
+    "gain_by_seed": {
+     "1": 0.09906218051910542,
+     "2": 0.12317367792129552,
+     "3": 0.11014728546142649
+    },
     "ctx_vs_base": 0.24948746817452566,
     "ms_per_step": 461.06282869974774,
     "ms_seeds": [
@@ -600,6 +707,11 @@
      0.12035325765609795,
      0.11545232534408623
     ],
+    "gain_by_seed": {
+     "1": 0.11409821510314977,
+     "2": 0.12035325765609795,
+     "3": 0.11545232534408623
+    },
     "ctx_vs_base": 0.22766231355212985,
     "ms_per_step": 542.5885915756226,
     "ms_seeds": [
@@ -659,6 +771,11 @@
      0.13420046567916888,
      0.12885652780532908
     ],
+    "gain_by_seed": {
+     "1": 0.09803191423416191,
+     "2": 0.13420046567916888,
+     "3": 0.12885652780532908
+    },
     "ctx_vs_base": 0.24569116887592135,
     "ms_per_step": 411.5292231241862,
     "ms_seeds": [
@@ -696,7 +813,71 @@
     "started": 1794454860.3268344,
     "skipped": 0
    },
-   "dlgm458_hn": null,
+   "dlgm458_lg": null,
+   "dlgm458_hn": {
+    "id": "dlgm458_hn",
+    "cand": "dlgm",
+    "form": "hn",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.109130680561066,
+    "sat": 5.389476478099823,
+    "nat": 5.811307787895203,
+    "ctx_gain": -0.07320030530293782,
+    "gain_steps": 0.10185121297836375,
+    "gain_sd": 0.00770614345714096,
+    "gain_se": 0.004449143999394207,
+    "gain_seeds": [
+     0.10957328081131035,
+     0.09416109323501676,
+     0.10181926488876414
+    ],
+    "gain_by_seed": {
+     "1": 0.10957328081131035,
+     "2": 0.09416109323501676,
+     "3": 0.10181926488876414
+    },
+    "ctx_vs_base": 0.24308632668994723,
+    "ms_per_step": 361.5771532058716,
+    "ms_seeds": [
+     421.20420932769775,
+     329.83553409576416,
+     333.69171619415283
+    ],
+    "base_same_day": [
+     "base_r3"
+    ],
+    "base_ms": 194.4422721862793,
+    "ms_ratio": 1.8595604193489057,
+    "byte_ratio": 1.0115857690781647,
+    "step_ratio": 1.22357943164585,
+    "tokens_eq": 1004266.6362470051,
+    "gain_time": 0.017726394274140134,
+    "d_time": {
+     "ar": 0.03333417234951508,
+     "sat": -0.0026497812322592296,
+     "nat": -0.008720764445585338
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 39820506467,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 563,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.303951666666666,
+    "started": 1794457697.1703331,
+    "skipped": 0
+   },
    "fusion879": {
     "id": "fusion879",
     "cand": "fusion",
@@ -719,6 +900,11 @@
      0.13092079162597692,
      0.1324928164482122
     ],
+    "gain_by_seed": {
+     "1": 0.1422652363777166,
+     "2": 0.13092079162597692,
+     "3": 0.1324928164482122
+    },
     "ctx_vs_base": 0.23432682809375582,
     "ms_per_step": 370.39339542388916,
     "ms_seeds": [
@@ -778,6 +964,11 @@
      0.11914638280868584,
      0.07668771743774538
     ],
+    "gain_by_seed": {
+     "1": 0.10961830615997403,
+     "2": 0.11914638280868584,
+     "3": 0.07668771743774538
+    },
     "ctx_vs_base": 0.19832717237018405,
     "ms_per_step": 743.5529629389445,
     "ms_seeds": [
@@ -837,6 +1028,11 @@
      0.1078117728233341,
      0.10750211477279681
     ],
+    "gain_by_seed": {
+     "1": 0.12047533988952708,
+     "2": 0.1078117728233341,
+     "3": 0.10750211477279681
+    },
     "ctx_vs_base": 0.2278037355059669,
     "ms_per_step": 393.4518098831177,
     "ms_seeds": [
@@ -874,13 +1070,77 @@
     "started": 1794454323.621781,
     "skipped": 0
    },
-   "fusion879_hn": null
+   "fusion879_lg": null,
+   "fusion879_hn": {
+    "id": "fusion879_hn",
+    "cand": "fusion",
+    "form": "hn",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.083030541737874,
+    "sat": 5.370459159215291,
+    "nat": 5.801086604595184,
+    "ctx_gain": -0.06132117907206217,
+    "gain_steps": 0.123358996709188,
+    "gain_sd": 0.010432254707327672,
+    "gain_se": 0.006023065063530372,
+    "gain_seeds": [
+     0.119382691383362,
+     0.1351946711540224,
+     0.11549962759017962
+    ],
+    "gain_by_seed": {
+     "1": 0.119382691383362,
+     "2": 0.1351946711540224,
+     "3": 0.11549962759017962
+    },
+    "ctx_vs_base": 0.25496545292082284,
+    "ms_per_step": 317.21266110738117,
+    "ms_seeds": [
+     366.3138151168823,
+     292.2466993331909,
+     293.0774688720703
+    ],
+    "base_same_day": [
+     "base_r3"
+    ],
+    "base_ms": 194.4422721862793,
+    "ms_ratio": 1.6313976253244231,
+    "byte_ratio": 1.0086055636379672,
+    "step_ratio": 1.164303579059581,
+    "tokens_eq": 1055394.8489899114,
+    "gain_time": 0.05620047119029117,
+    "d_time": {
+     "ar": 0.07986434251431085,
+     "sat": 0.028798838978344676,
+     "nat": 0.012610489430178617
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 41081291747,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 565,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.327065,
+    "started": 1794457306.9480817,
+    "skipped": 0
+   }
   }
  },
  "queue": {
-  "state": "running",
-  "current": "fusion879_hn seed 1",
-  "last_update": 1794456454.1624112,
+  "state": "waiting: website inference or PAUSE",
+  "current": null,
+  "last_update": 1794463563.9568112,
   "progress": {
    "fusion879": {
     "done": [
@@ -925,15 +1185,31 @@
     "running": {},
     "failed": []
    },
-   "fusion879_hn": {
+   "fusion879_lg": {
     "done": [],
-    "running": {
-     "1": 150
-    },
+    "running": {},
+    "failed": []
+   },
+   "dlgm458_lg": {
+    "done": [],
+    "running": {},
+    "failed": []
+   },
+   "fusion879_hn": {
+    "done": [
+     1,
+     2,
+     3
+    ],
+    "running": {},
     "failed": []
    },
    "dlgm458_hn": {
-    "done": [],
+    "done": [
+     1,
+     2,
+     3
+    ],
     "running": {},
     "failed": []
    }
@@ -1135,6 +1411,146 @@
     0.2568
    ],
    "run": "fusion879_hn__s1"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999956,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.9037,
+   "temp_max": 1.0343,
+   "mean_gate_short_long_delta_value": [
+    0.203,
+    0.695,
+    0.7235,
+    0.4011
+   ],
+   "run": "fusion879_hn__s1"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999953,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.9215,
+   "temp_max": 1.0539,
+   "mean_gate_short_long_delta_value": [
+    0.2704,
+    0.6761,
+    0.708,
+    0.4281
+   ],
+   "run": "fusion879_hn__s1"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9797,
+   "temp_max": 1.0187,
+   "mean_gate_short_long_delta_value": [
+    0.0779,
+    0.8297,
+    0.7168,
+    0.3404
+   ],
+   "run": "fusion879_hn__s2"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9282,
+   "temp_max": 1.021,
+   "mean_gate_short_long_delta_value": [
+    0.1238,
+    0.744,
+    0.7661,
+    0.221
+   ],
+   "run": "fusion879_hn__s2"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999956,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.9066,
+   "temp_max": 1.0289,
+   "mean_gate_short_long_delta_value": [
+    0.2681,
+    0.5252,
+    0.7641,
+    0.4478
+   ],
+   "run": "fusion879_hn__s2"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999955,
+   "lambda_mean": 0.999958,
+   "temp_min": 0.887,
+   "temp_max": 1.1186,
+   "mean_gate_short_long_delta_value": [
+    0.3671,
+    0.5468,
+    0.6843,
+    0.4353
+   ],
+   "run": "fusion879_hn__s2"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9737,
+   "temp_max": 1.0216,
+   "mean_gate_short_long_delta_value": [
+    0.044,
+    0.8956,
+    0.7986,
+    0.3027
+   ],
+   "run": "fusion879_hn__s3"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9103,
+   "temp_max": 1.0238,
+   "mean_gate_short_long_delta_value": [
+    0.076,
+    0.7897,
+    0.7757,
+    0.2132
+   ],
+   "run": "fusion879_hn__s3"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999956,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.8832,
+   "temp_max": 1.0345,
+   "mean_gate_short_long_delta_value": [
+    0.2401,
+    0.671,
+    0.7493,
+    0.3072
+   ],
+   "run": "fusion879_hn__s3"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999951,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.8653,
+   "temp_max": 1.0537,
+   "mean_gate_short_long_delta_value": [
+    0.3024,
+    0.718,
+    0.6966,
+    0.2968
+   ],
+   "run": "fusion879_hn__s3"
   },
   {
    "fusion_state_step": 150,
@@ -1617,6 +2033,28 @@
     "candidate_layers": 420,
     "layers": 560,
     "derived_from": "380-block census of the smoke run, same per-layer mixer cost"
+   },
+   "fusion879_lg@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 544619228,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 394168320,
+    "candidate_layers": 420,
+    "layers": 560,
+    "derived_from": "gentler cut plus the 32 x 8192 projection per candidate layer as a trained parameter"
+   },
+   "dlgm458_lg@560": {
+    "latent_bytes": 886910746624,
+    "table_bytes": 1638924288,
+    "n_matrices": 3864,
+    "fp_params": 441346268,
+    "kv_bytes_per_token": 36700160,
+    "mixer_fp_params": 290895360,
+    "candidate_layers": 420,
+    "layers": 560,
+    "derived_from": "gentler cut plus the 32 x 8192 projection per candidate layer as a trained parameter"
    }
   }
  },

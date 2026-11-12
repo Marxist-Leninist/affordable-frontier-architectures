@@ -12,7 +12,7 @@ shutil.rmtree(DEST, ignore_errors=True)
 os.makedirs(DEST + '/runs'); os.makedirs(DEST + '/plugins'); os.makedirs(DEST + '/page')
 def cp(src, dst):
     shutil.copyfile(src, DEST + '/' + dst)
-for n in ('fusion879', 'fusion879_lr', 'fusion879_lrk', 'dlgm458_lrk', 'fusion879_hn', 'dlgm458_hn'):
+for n in ('fusion879', 'fusion879_lr', 'fusion879_lrk', 'dlgm458_lrk', 'fusion879_lg', 'dlgm458_lg', 'fusion879_hn', 'dlgm458_hn'):
     p = D + '/plugins/%s.py' % n
     if os.path.exists(p): cp(p, 'plugins/%s.py' % n)
 for n in ('dlgm458', 'dlgm458_lr', 'base', 'base_r2', 'base_r3'):
@@ -28,7 +28,7 @@ for n in ('fidelity_test_result.json', 'index_spec_v1.json', 'build_index.py', '
             open(DEST + '/' + n, 'w').write(t)
 cp(WEB + '/index.json', 'index.json'); cp(WEB + '/index.html', 'page/index.html')
 runs = []
-for pat in ('base__s*', 'base_r2__s*', 'base_r3__s*', 'dlgm458__s*', 'dlgm458_lr__s*', 'dlgm458_hn__s*', 'dlgm458_lrk__s*', 'fusion879__s*', 'fusion879_lr__s*', 'fusion879_lrk__s*', 'fusion879_hn__s*'):
+for pat in ('base__s*', 'base_r2__s*', 'base_r3__s*', 'dlgm458__s*', 'dlgm458_lr__s*', 'dlgm458_hn__s*', 'dlgm458_lrk__s*', 'dlgm458_lg__s*', 'fusion879_lg__s*', 'fusion879__s*', 'fusion879_lr__s*', 'fusion879_lrk__s*', 'fusion879_hn__s*'):
     for p in sorted(glob.glob(D + '/results/runs/' + pat + '.json')):
         r = json.load(open(p))
         if r.get('ok'):

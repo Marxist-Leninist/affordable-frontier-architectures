@@ -142,6 +142,28 @@
    "candidate_layers": 420,
    "layers": 560,
    "derived_from": "380-block census of the smoke run, same per-layer mixer cost"
+  },
+  "fusion879_lg@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 544619228,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 394168320,
+   "candidate_layers": 420,
+   "layers": 560,
+   "derived_from": "gentler cut plus the 32 x 8192 projection per candidate layer as a trained parameter"
+  },
+  "dlgm458_lg@560": {
+   "latent_bytes": 886910746624,
+   "table_bytes": 1638924288,
+   "n_matrices": 3864,
+   "fp_params": 441346268,
+   "kv_bytes_per_token": 36700160,
+   "mixer_fp_params": 290895360,
+   "candidate_layers": 420,
+   "layers": 560,
+   "derived_from": "gentler cut plus the 32 x 8192 projection per candidate layer as a trained parameter"
   }
  }
 }
