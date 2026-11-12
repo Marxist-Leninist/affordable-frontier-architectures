@@ -1,0 +1,24 @@
+{
+  "source_repository": "https://github.com/GAIR-NLP/ASI-Arch",
+  "source_commit": "3113c51b04a1d4a7520a3b0238c6a08d3194d58f",
+  "source_path": "data/106.json",
+  "record_name": "delta_net_afp",
+  "record_index": 712,
+  "record_zero_based_position": 25,
+  "catalog_sha256": "aa77e8289971b3922102f000fddf44a6a9a31ca1f3b59c834722ac130f63759c",
+  "catalog_verification": "Full catalog SHA256 verified at extraction; standalone artifact retains extracted source and this provenance, not the entire catalog.",
+  "program_sha256": "62d59f5bf7f19ba502343f2c1aeba41311659f981660cd0feb37a58940451b7e",
+  "simulator_sha256": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2",
+  "cpu_helper_sha256": "855f8365a668504386e2938b62698fecf5b242b1285e61d33d193c101e57fe17",
+  "native_fla_version": "0.2.2",
+  "native_fla_convolution_sha256": "d0b107a222cde18acc15ba3f84045da5c4c661b0d700c3c27ee0553e21eaec28",
+  "native_fla_verification": "Version matches source requirements; installed convolution.py digest matched its distribution RECORD; unmodified copy included. Constructor-only AST test does not run fused FLA kernels.",
+  "full_variant_practical_dirac": "afp712_dirac.py",
+  "not_included": [
+    "LR",
+    "LRK",
+    "cached decoder",
+    "trained checkpoints",
+    "quality benchmark"
+  ]
+}

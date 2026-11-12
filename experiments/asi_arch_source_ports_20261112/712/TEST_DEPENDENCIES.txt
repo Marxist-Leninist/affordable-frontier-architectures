@@ -1,0 +1,6 @@
+Tested existing environment, CPU only:
+Python 3.12.3
+torch 2.10.0+cu128 (CUDA disabled for every test)
+numpy 2.5.4
+einops 0.8.2
+No dependencies were installed by this preparation.

@@ -3,7 +3,8 @@
   "trained_source_ids_added": 0,
   "prepared_source_ids": [
     259,
-    641
+    641,
+    712
   ],
   "variants": [
     {
@@ -32,6 +33,16 @@
       "optimizer_updates": 0,
       "trained_quality": false,
       "cached_decode": false
+    },
+    {
+      "source_id": 712,
+      "plugin": "afp712_dirac",
+      "convolution_init": "practical_dirac",
+      "correctness_checks": 41,
+      "optimizer_updates": 0,
+      "trained_quality": false,
+      "cached_decode": false,
+      "diagnostics": "explicit detached CPU output; no hidden graph retention"
     }
   ],
   "limits": [
