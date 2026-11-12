@@ -1,0 +1,265 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "dory_loop",
+  "seed": 3,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 3.814697265625e-06,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ],
+    "loop": {
+      "600b": {
+        "layout": {
+          "kind": "loop",
+          "I": 63,
+          "R": 127,
+          "O": 63,
+          "slots": 2,
+          "nominal": 2
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 253,
+        "visit_slots": 380,
+        "nominal_visits": 380,
+        "slot_latent_bytes": 601295421440,
+        "unique_latent_bytes": 400237264896,
+        "nominal_latent_bytes": 601295421440,
+        "local_groups": 95
+      },
+      "sim": {
+        "layout": {
+          "kind": "loop",
+          "I": 2,
+          "R": 4,
+          "O": 2,
+          "slots": 2,
+          "nominal": 2
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 8,
+        "visit_slots": 12,
+        "nominal_visits": 12,
+        "slot_latent_bytes": 18350080,
+        "unique_latent_bytes": 12058624,
+        "nominal_latent_bytes": 18350080,
+        "local_groups": 3
+      },
+      "elastic_eval": [
+        {
+          "step": 150,
+          "loops": 1,
+          "ar": 6.30348,
+          "sat": 6.30241,
+          "nat": 6.31665,
+          "ctx_gain": -0.01018
+        },
+        {
+          "step": 150,
+          "loops": 2,
+          "ar": 6.2728,
+          "sat": 6.27064,
+          "nat": 6.29069,
+          "ctx_gain": -0.02838
+        },
+        {
+          "step": 150,
+          "loops": 4,
+          "ar": 6.28669,
+          "sat": 6.26557,
+          "nat": 6.28824,
+          "ctx_gain": -0.03161
+        },
+        {
+          "step": 300,
+          "loops": 1,
+          "ar": 6.0187,
+          "sat": 6.04289,
+          "nat": 6.08792,
+          "ctx_gain": -0.13806
+        },
+        {
+          "step": 300,
+          "loops": 2,
+          "ar": 6.0099,
+          "sat": 6.03515,
+          "nat": 6.07612,
+          "ctx_gain": -0.13136
+        },
+        {
+          "step": 300,
+          "loops": 4,
+          "ar": 6.01158,
+          "sat": 6.03895,
+          "nat": 6.07947,
+          "ctx_gain": -0.12798
+        },
+        {
+          "step": 600,
+          "loops": 1,
+          "ar": 5.64011,
+          "sat": 5.74444,
+          "nat": 5.94714,
+          "ctx_gain": -0.2883
+        },
+        {
+          "step": 600,
+          "loops": 2,
+          "ar": 5.62145,
+          "sat": 5.73137,
+          "nat": 5.93914,
+          "ctx_gain": -0.27678
+        },
+        {
+          "step": 600,
+          "loops": 4,
+          "ar": 5.62079,
+          "sat": 5.73227,
+          "nat": 5.93926,
+          "ctx_gain": -0.26318
+        },
+        {
+          "step": 1200,
+          "loops": 1,
+          "ar": 5.23737,
+          "sat": 5.45168,
+          "nat": 5.84323,
+          "ctx_gain": -0.31386
+        },
+        {
+          "step": 1200,
+          "loops": 2,
+          "ar": 5.21852,
+          "sat": 5.43518,
+          "nat": 5.83276,
+          "ctx_gain": -0.31061
+        },
+        {
+          "step": 1200,
+          "loops": 4,
+          "ar": 5.21896,
+          "sat": 5.43616,
+          "nat": 5.83236,
+          "ctx_gain": -0.30585
+        }
+      ]
+    }
+  },
+  "curve": [
+    {
+      "ar": 6.272799551486969,
+      "sat": 6.270641446113586,
+      "nat": 6.2906858921051025,
+      "ctx_full": 6.2317715883255005,
+      "ctx_256": 6.203396439552307,
+      "ctx_gain": -0.02837514877319336,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.0013198649338634501,
+      "skipped": 0,
+      "wall_s": 32.8,
+      "train_recent": {
+        "ar": 6.501499772071838,
+        "sat_fixed": 7.16709108913646,
+        "sat_variable": 6.501654386520386,
+        "nat": 7.046388373655431,
+        "local_denoise": 7.333836555480957
+      }
+    },
+    {
+      "ar": 6.009900271892548,
+      "sat": 6.035153448581696,
+      "nat": 6.076117217540741,
+      "ctx_full": 6.080045223236084,
+      "ctx_256": 5.9486823081970215,
+      "ctx_gain": -0.1313629150390625,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.00660595726874088,
+      "skipped": 0,
+      "wall_s": 65.7,
+      "train_recent": {
+        "ar": 6.102664685249328,
+        "sat_fixed": 6.2264782905578615,
+        "sat_variable": 6.125239706039428,
+        "nat": 6.296424317359924,
+        "local_denoise": 6.344546437263489
+      }
+    },
+    {
+      "ar": 5.621446192264557,
+      "sat": 5.731370449066162,
+      "nat": 5.939139902591705,
+      "ctx_full": 5.826263666152954,
+      "ctx_256": 5.549485206604004,
+      "ctx_gain": -0.2767784595489502,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.019077634656942316,
+      "skipped": 0,
+      "wall_s": 127.4,
+      "train_recent": {
+        "ar": 5.667116951942444,
+        "sat_fixed": 5.931697797775269,
+        "sat_variable": 5.916062116622925,
+        "nat": 5.980414319038391,
+        "local_denoise": 6.301506209373474
+      }
+    },
+    {
+      "ar": 5.218524992465973,
+      "sat": 5.435183584690094,
+      "nat": 5.832762360572815,
+      "ctx_full": 5.421101689338684,
+      "ctx_256": 5.1104958057403564,
+      "ctx_gain": -0.31060588359832764,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.049606881661458456,
+      "skipped": 0,
+      "wall_s": 245.2,
+      "train_recent": {
+        "ar": 5.250588703155517,
+        "sat_fixed": 5.508648824691773,
+        "sat_variable": 5.520145893096924,
+        "nat": 5.8431425333023075,
+        "local_denoise": 6.156331181526184
+      }
+    }
+  ],
+  "original_record_sha256": "57197a04b2d7cece1664879e5906426ab6050431fba136ea0372e791f4a84171",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

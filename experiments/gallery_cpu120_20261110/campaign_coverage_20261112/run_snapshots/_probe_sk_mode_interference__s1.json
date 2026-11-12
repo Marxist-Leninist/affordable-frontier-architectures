@@ -1,0 +1,6 @@
+{
+  "plugin": "sk_mode_interference",
+  "seed": 1,
+  "original_record_sha256": "bfeed6806ff6595aa6d2a05388ec589ea3e79bd40e2919ca934958aba47cf98a",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}
