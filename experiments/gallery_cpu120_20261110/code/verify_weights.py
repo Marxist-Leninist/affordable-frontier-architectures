@@ -69,7 +69,10 @@ def main():
         print(json.dumps({k: row.get(k) for k in ("tag", "reproduces", "wikitext_abs_diff", "fineweb_edu_abs_diff", "error")}), flush=True)
     summary = {"checked": len(rows), "reproduce": sum(r["reproduces"] for r in rows),
                "do_not_reproduce": [r["tag"] for r in rows if not r["reproduces"]],
-               "tolerance_nats": 1e-6, "rows": rows}
+               "tolerance_nats": 1e-6, "rows": rows,
+               "largest_abs_diff_nats": max((r[k] for r in rows for k in
+                   ("wikitext_abs_diff", "fineweb_edu_abs_diff", "worst_window_abs_diff") if k in r), default=None)}
+    pathlib.Path(out).parent.mkdir(parents=True, exist_ok=True)
     pathlib.Path(out).write_text(json.dumps(summary, indent=1) + "\n")
     print(json.dumps({k: summary[k] for k in ("checked", "reproduce", "do_not_reproduce")}))
 

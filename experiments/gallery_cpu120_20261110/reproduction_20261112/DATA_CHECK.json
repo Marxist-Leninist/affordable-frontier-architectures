@@ -1,0 +1,25 @@
+{
+ "raw_bytes": {
+  "train": 10951562,
+  "validation": 1148007,
+  "test": 1292013
+ },
+ "dedup_bytes": {
+  "train": 10904941,
+  "validation": 1142409,
+  "test": 1285573
+ },
+ "train_sha256": "77fc488d9c24735f44714b30f6c8507e61c16369d278810cffb0decb5df5f4af",
+ "train_matches_v44_ledger": true,
+ "wiki_windows": 183,
+ "wiki_window_hash_mismatches": 0,
+ "fineweb_response_sha256_ok": true,
+ "fineweb_windows": 99,
+ "fineweb_window_hash_mismatches": 0,
+ "array_hashes": {
+  "wiki": "c10c1f8e582bd56191f328d059674544c55d936a93e01c2aad59f7596e9338de",
+  "fineweb": "b0729471df4d81b9a1708030a90b5527cd7ccfce0909e97d5ef41ff486629be0"
+ },
+ "array_hashes_match_v44_ledger": true,
+ "wiki_articles": 50
+}

@@ -10,6 +10,7 @@ A program that fails any rule is listed and is not run by the harness.
 import ast
 import hashlib
 import json
+import pathlib
 import sys
 
 # functools is allowed for record 330, which only uses functools.lru_cache as a decorator.
@@ -88,6 +89,7 @@ def main(path, out):
               "rules": {"allowed_from": sorted(ALLOWED_FROM), "forbidden_names": sorted(FORBIDDEN_NAMES),
                         "forbidden_attributes": sorted(FORBIDDEN_ATTRS), "allowed_dunders": sorted(ALLOWED_DUNDERS)},
               "rows": rows}
+    pathlib.Path(out).parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=1)
         f.write("\n")

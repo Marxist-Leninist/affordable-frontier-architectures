@@ -223,14 +223,18 @@ the exact result, depends on the machine: expect the same picture, not the same 
 
 ## Checkpoints
 
-Every run saved its final weights. `code/verify_weights.py` rebuilt each of the 146 models in a fresh process, restored the checkpoint and recomputed both held-out losses: 146 of 146 match the recorded values exactly (difference 0.0) on the machine that made them. [VERIFY.json](VERIFY.json) lists every one.
+The supplied verification report checked 146 freshly rebuilt models: 146 passed its recorded tolerance of 1e-06 nats. 0 did not reproduce. This describes only the checkpoints in that report, not untested checkpoints or a repeat of training.
+Largest recorded absolute loss difference: 0 nats.
+Verification source supplied to this generator: `VERIFY.json`.
 
-Two things were learned on the way, and both are handled in the code:
+Runtime state and arithmetic matter when reloading:
 
-- 33 of the 105 programs count their own forward passes in a buffer that is not part of the `state_dict` and use the count in a schedule. A checkpoint that leaves it out silently resets the schedule. Checkpoints here carry such state under keys starting `__runtime__.` (`run_job.runtime_state`). The first 39 runs were made before this was in place; 9 of them needed the counter, which was rebuilt by replaying the recorded number of forward passes (`code/reconstruct_runtime.py`) and is accepted only because those checkpoints then reproduce exactly.
+- The separate counter audit recorded 33 of the 105 programs with forward-pass counters. This counter census is additional provenance, not a result of reloading the checkpoints.
+- Checkpoints carry state outside the `state_dict` under keys starting `__runtime__.` (`run_job.runtime_state`). Missing state can silently reset a program's schedule.
+- The original run provenance records 9 checkpoints whose runtime counters were reconstructed by replaying recorded forward passes (`code/reconstruct_runtime.py`). This is historical provenance, not a new reconstruction.
 - BF16 results depend on the instruction set. Reloading with `ONEDNN_MAX_CPU_ISA=AVX512_CORE_BF16` instead of the default (AMX on this machine) moved the held-out losses of the five checkpoints tried by up to 0.00006 nats. On a processor without AMX, expect differences of that size, not exact equality.
 
-Six checkpoints are in `checkpoints/`, each with its result file, all from seed 2 of the confirmation block: the three controls (`T96_s2`, `g879_s2`, `g458_s2`) and the three leading candidates (`g259_s2`, `g151_s2`, `g437_s2`). The other 140 were not kept beyond the session that made them; a hash of each one's weights is in its result file.
+Six checkpoints are in `checkpoints/`, each with its result file, all from seed 2 of the confirmation block: the three controls (`T96_s2`, `g879_s2`, `g458_s2`) and the three leading candidates (`g259_s2`, `g151_s2`, `g437_s2`). The other 140 from the original cohort were not kept beyond the session that made them; a hash of each one's weights is in its result file.
 
 ```
 E=experiments/gallery_cpu120_20261110

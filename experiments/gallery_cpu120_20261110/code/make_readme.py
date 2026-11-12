@@ -225,22 +225,35 @@ add(static.rstrip())
 add("")
 add("## Checkpoints")
 add("")
-add(f"Every run saved its final weights. `code/verify_weights.py` rebuilt each of the {v['checked']} models in a fresh process, restored the checkpoint and "
-    f"recomputed both held-out losses: {v['reproduce']} of {v['checked']} match the recorded values exactly (difference 0.0) on the machine that made them. "
-    f"[VERIFY.json](VERIFY.json) lists every one.")
+add(f"The supplied verification report checked {v['checked']} freshly rebuilt models: "
+    f"{v['reproduce']} passed its recorded tolerance of {v['tolerance_nats']:g} nats. "
+    f"{len(v['do_not_reproduce'])} did not reproduce. "
+    "This describes only the checkpoints in that report, not untested checkpoints or a repeat of training.")
+if v.get("largest_abs_diff_nats") is not None:
+    add(f"Largest recorded absolute loss difference: {v['largest_abs_diff_nats']:g} nats.")
+add(f"Verification source supplied to this generator: `{verify_path.name}`.")
 add("")
-add("Two things were learned on the way, and both are handled in the code:")
+add("Runtime state and arithmetic matter when reloading:")
 add("")
-add(f"- {v['with_counters']} of the 105 programs count their own forward passes in a buffer that is not part of the `state_dict` and use the count in a schedule. "
-    "A checkpoint that leaves it out silently resets the schedule. Checkpoints here carry such state under keys starting `__runtime__.` "
-    f"(`run_job.runtime_state`). The first 39 runs were made before this was in place; {v['reconstructed']} of them needed the counter, which was rebuilt "
-    "by replaying the recorded number of forward passes (`code/reconstruct_runtime.py`) and is accepted only because those checkpoints then reproduce exactly.")
+if "with_counters" in v:
+    add(f"- The separate counter audit recorded {v['with_counters']} of the {audit['programs']} programs with forward-pass counters. "
+        "This counter census is additional provenance, not a result of reloading the checkpoints.")
+else:
+    add("- The supplied verifier report does not contain the optional gallery-wide counter census. "
+        "Run `code/count_counters.py` to collect that separate audit; a checkpoint reload does not establish a census.")
+add("- Checkpoints carry state outside the `state_dict` under keys starting `__runtime__.` "
+    "(`run_job.runtime_state`). Missing state can silently reset a program's schedule.")
+if "reconstructed" in v:
+    add(f"- The original run provenance records {v['reconstructed']} checkpoints whose runtime counters were reconstructed "
+        "by replaying recorded forward passes (`code/reconstruct_runtime.py`). This is historical provenance, not a new reconstruction.")
+else:
+    add("- The supplied verifier report does not record historical counter reconstructions. No reconstruction count is inferred.")
 add("- BF16 results depend on the instruction set. Reloading with `ONEDNN_MAX_CPU_ISA=AVX512_CORE_BF16` instead of the default (AMX on this machine) "
     "moved the held-out losses of the five checkpoints tried by up to 0.00006 nats. On a processor without AMX, expect differences of that size, not exact equality.")
 add("")
 add("Six checkpoints are in `checkpoints/`, each with its result file, all from seed 2 of the confirmation block: the three controls "
     "(`T96_s2`, `g879_s2`, `g458_s2`) and the three leading candidates (`g259_s2`, `g151_s2`, `g437_s2`). The other "
-    f"{v['checked'] - 6} were not kept beyond the session that made them; a hash of each one's weights is in its result file.")
+    f"{m['jobs_finished'] - 6} from the original cohort were not kept beyond the session that made them; a hash of each one's weights is in its result file.")
 add("")
 add("```")
 add("E=experiments/gallery_cpu120_20261110")
