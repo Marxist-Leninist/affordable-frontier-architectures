@@ -12,7 +12,7 @@ shutil.rmtree(DEST, ignore_errors=True)
 os.makedirs(DEST + '/runs'); os.makedirs(DEST + '/plugins'); os.makedirs(DEST + '/page')
 def cp(src, dst):
     shutil.copyfile(src, DEST + '/' + dst)
-for n in ('fusion879', 'fusion879_lr', 'fusion879_hn', 'dlgm458_hn'):
+for n in ('fusion879', 'fusion879_lr', 'fusion879_lrk', 'dlgm458_lrk', 'fusion879_hn', 'dlgm458_hn'):
     p = D + '/plugins/%s.py' % n
     if os.path.exists(p): cp(p, 'plugins/%s.py' % n)
 for n in ('dlgm458', 'dlgm458_lr', 'base', 'base_r2', 'base_r3'):
@@ -28,7 +28,7 @@ for n in ('fidelity_test_result.json', 'index_spec_v1.json', 'build_index.py', '
             open(DEST + '/' + n, 'w').write(t)
 cp(WEB + '/index.json', 'index.json'); cp(WEB + '/index.html', 'page/index.html')
 runs = []
-for pat in ('base__s*', 'base_r2__s*', 'base_r3__s*', 'dlgm458__s*', 'dlgm458_lr__s*', 'dlgm458_hn__s*', 'fusion879__s*', 'fusion879_lr__s*', 'fusion879_hn__s*'):
+for pat in ('base__s*', 'base_r2__s*', 'base_r3__s*', 'dlgm458__s*', 'dlgm458_lr__s*', 'dlgm458_hn__s*', 'dlgm458_lrk__s*', 'fusion879__s*', 'fusion879_lr__s*', 'fusion879_lrk__s*', 'fusion879_hn__s*'):
     for p in sorted(glob.glob(D + '/results/runs/' + pat + '.json')):
         r = json.load(open(p))
         if r.get('ok'):
@@ -44,6 +44,13 @@ L.append('## Result\n')
 L.append(d['verdict'] + '\n')
 if idx:
     L.append('| | DLGM #458 | Fusion #879 |\n|---|---:|---:|\n| **Index (0 to 100)** | **%s** | **%s** |\n' % (f(idx.get('dlgm')), f(idx.get('fusion'))))
+alt = d.get('alternative_forms') or {}
+if alt:
+    L.append('**Read this with the result.** The frozen formula scores the two main own-objective lines with each candidate in its faithful form. Only a cut-down form fits at 560 layers. The same index with other forms on those two lines:\n')
+    L.append('| Form on the two own-objective lines | DLGM gain (nats) | Fusion gain (nats) | Seeds | Index DLGM | Index Fusion |\n|---|---:|---:|---|---:|---:|')
+    for k, x in alt.items():
+        L.append('| %s | %s | %s | %d and %d | %s | %s |' % (x['form'], g(x['gain']['dlgm']), g(x['gain']['fusion']), x['seeds']['dlgm'], x['seeds']['fusion'], f(x['index']['dlgm']), f(x['index']['fusion'])))
+    L.append('')
 L.append('## The seven lines\n')
 L.append('| Evidence | Weight | DLGM | Fusion | Gain over the shared baseline |\n|---|---:|---:|---:|---|')
 for c in comps:

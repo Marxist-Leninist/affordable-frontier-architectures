@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T02:34:03Z",
+ "generated_utc": "2026-11-12T03:15:30Z",
  "spec_sha256": "fda0f7ad167e19c11d51a5e091af9ad8ebbd59c6bf6bca5d16967602a8af0140",
  "spec": {
   "name": "DLGM #458 vs Fusion #879: one combined index",
@@ -163,14 +163,14 @@
   }
  },
  "index": {
-  "dlgm": 82.51449512259774,
-  "fusion": 94.988205351984
+  "dlgm": 74.26304561033795,
+  "fusion": 85.4893848167856
  },
  "top": "fusion",
- "margin": 12.47371022938627,
- "provisional": true,
+ "margin": 11.226339206447648,
+ "provisional": false,
  "have_own": true,
- "verdict": "Fusion #879 is on top: 95.0 to 82.5, a lead of 12.5 points. It wins 86% of 20,000 random re-weightings of the same evidence. Provisional: Fusion faithful form: 3 of 3 seeds done; low-rank form: 0 of 3; GPU queue now running fusion879_lr seed 1.",
+ "verdict": "Fusion #879 is on top: 85.5 to 74.3, a lead of 11.2 points. It wins 86% of 20,000 random re-weightings of the same evidence.",
  "components": [
   {
    "key": "own_steps",
@@ -232,9 +232,23 @@
    "unit": "nats",
    "measure": "The site's equal-time method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step, against the base run of the same day), gain over the live block. Low-rank form, the one that fits at full scale.",
    "floor": 0.02,
-   "score": null,
-   "parts": [],
-   "pending": "waiting for fusion879_lr"
+   "score": {
+    "dlgm": 0.0,
+    "fusion": 0.0
+   },
+   "parts": [
+    {
+     "name": "simulator, low-rank form",
+     "dlgm": -0.04696765100960131,
+     "fusion": -0.15047664248354717,
+     "seeds": {
+      "dlgm": 3,
+      "fusion": 3
+     },
+     "se": null
+    }
+   ],
+   "pending": null
   },
   {
    "key": "own_small",
@@ -336,84 +350,119 @@
   {
    "key": "own_steps",
    "title": "Your objective, same number of training steps",
-   "points": 7.026218876600023
+   "points": 6.323596988940021
   },
   {
    "key": "own_long_context",
    "title": "Your objective, long context",
-   "points": -0.3375952260960063
+   "points": -0.30383570348640565
+  },
+  {
+   "key": "own_time",
+   "title": "Your objective, same simulator box time",
+   "points": 0.0
   },
   {
    "key": "own_small",
    "title": "Your matched small-model run (v65 R6)",
-   "points": -3.174439201957547
+   "points": -2.8569952817617925
   },
   {
    "key": "up_tasks",
    "title": "ASI-Arch paper: benchmark tasks",
-   "points": 4.4521705109281315
+   "points": 4.0069534598353185
   },
   {
    "key": "up_loss",
    "title": "ASI-Arch paper: training loss",
-   "points": -1.048200285643904
+   "points": -0.9433802570795138
   },
   {
    "key": "serving",
    "title": "Serving readiness",
-   "points": 5.555555555555555
+   "points": 5.0
   }
  ],
  "robustness": {
   "draws": 20000,
   "share": {
-   "dlgm": 0.13745,
-   "fusion": 0.86255
+   "dlgm": 0.13975,
+   "fusion": 0.86025
   },
   "leave_one_out": [
    {
     "without": "own_steps",
     "title": "Your objective, same number of training steps",
-    "dlgm": 82.88480472595997,
-    "fusion": 91.79888148506473,
+    "dlgm": 70.1332963065815,
+    "fusion": 77.6759766412086,
     "top": "fusion"
    },
    {
     "without": "own_long_context",
     "title": "Your objective, long context",
-    "dlgm": 81.4859360121623,
-    "fusion": 95.05084767090824,
+    "dlgm": 72.90846906351364,
+    "fusion": 85.04549528449685,
+    "top": "fusion"
+   },
+   {
+    "without": "own_time",
+    "title": "Your objective, same simulator box time",
+    "dlgm": 82.51449512259774,
+    "fusion": 94.988205351984,
     "top": "fusion"
    },
    {
     "without": "own_small",
     "title": "Your matched small-model run (v65 R6)",
-    "dlgm": 79.01739414711729,
-    "fusion": 97.79517346472986,
+    "dlgm": 69.72123012980936,
+    "fusion": 86.28985893946752,
     "top": "fusion"
    },
    {
     "without": "up_tasks",
     "title": "ASI-Arch paper: benchmark tasks",
-    "dlgm": 84.90187068141331,
-    "fusion": 94.52771834356307,
+    "dlgm": 74.91341530712938,
+    "fusion": 83.40681030314387,
     "top": "fusion"
    },
    {
     "without": "up_loss",
     "title": "ASI-Arch paper: training loss",
-    "dlgm": 80.32880701292245,
-    "fusion": 95.5409563423314,
+    "dlgm": 71.40338401148661,
+    "fusion": 84.9252945265168,
     "top": "fusion"
    },
    {
     "without": "serving",
     "title": "Serving readiness",
-    "dlgm": 86.57880701292245,
-    "fusion": 94.361731020982,
+    "dlgm": 76.95893956704217,
+    "fusion": 83.87709424087289,
     "top": "fusion"
    }
   ]
+ },
+ "alternative_forms": {
+  "lowrank": {
+   "form": "low-rank form",
+   "index": {
+    "dlgm": 80.58664259927798,
+    "fusion": 80.70259049862094
+   },
+   "margin": 0.1159478993429559,
+   "top": "fusion",
+   "gain": {
+    "dlgm": 0.11663459936777798,
+    "fusion": 0.10181746880213509
+   },
+   "seeds": {
+    "dlgm": 3,
+    "fusion": 3
+   },
+   "se": {
+    "dlgm": 0.001899975283621722,
+    "fusion": 0.012862404698486806
+   }
+  }
  },
  "own": {
   "base": {
@@ -473,6 +522,11 @@
     ],
     "ctx_vs_base": 0.24948746817452566,
     "ms_per_step": 461.06282869974774,
+    "ms_seeds": [
+     500.8518695831299,
+     538.114070892334,
+     344.2225456237793
+    ],
     "base_same_day": [
      "base"
     ],
@@ -527,6 +581,11 @@
     ],
     "ctx_vs_base": 0.22766231355212985,
     "ms_per_step": 542.5885915756226,
+    "ms_seeds": [
+     530.7273864746094,
+     542.2871112823486,
+     554.7512769699097
+    ],
     "base_same_day": [
      "base"
     ],
@@ -557,6 +616,7 @@
     "started": 1794204421.818115,
     "skipped": 0
    },
+   "dlgm458_lrk": null,
    "dlgm458_hn": null,
    "fusion879": {
     "id": "fusion879",
@@ -582,6 +642,11 @@
     ],
     "ctx_vs_base": 0.23432682809375582,
     "ms_per_step": 370.39339542388916,
+    "ms_seeds": [
+     290.7313108444214,
+     291.6107177734375,
+     528.8381576538086
+    ],
     "base_same_day": [
      "base_r3"
     ],
@@ -612,14 +677,73 @@
     "started": 1794449191.0464382,
     "skipped": 0
    },
-   "fusion879_lr": null,
+   "fusion879_lr": {
+    "id": "fusion879_lr",
+    "cand": "fusion",
+    "form": "lowrank",
+    "seeds": 3,
+    "seeds_list": [
+     1,
+     2,
+     3
+    ],
+    "ar": 5.107352991898854,
+    "sat": 5.390841384728749,
+    "nat": 5.815444668134053,
+    "ctx_gain": -0.117959459622701,
+    "gain_steps": 0.10181746880213509,
+    "gain_sd": 0.02227833844529179,
+    "gain_se": 0.012862404698486806,
+    "gain_seeds": [
+     0.10961830615997403,
+     0.11914638280868584,
+     0.07668771743774538
+    ],
+    "ctx_vs_base": 0.19832717237018405,
+    "ms_per_step": 743.5529629389445,
+    "ms_seeds": [
+     671.6419458389282,
+     798.8896369934082,
+     760.1273059844971
+    ],
+    "base_same_day": [
+     "base_r3"
+    ],
+    "base_ms": 194.4422721862793,
+    "ms_ratio": 3.8240293871211657,
+    "byte_ratio": 1.0090552396067543,
+    "step_ratio": 1.7127987764853572,
+    "tokens_eq": 717422.2780106622,
+    "gain_time": -0.15047664248354717,
+    "d_time": {
+     "ar": -0.1691068337559516,
+     "sat": -0.1609021986964967,
+     "nat": -0.0841605124533844
+    },
+    "census": {
+     "latent_bytes": 601832292352,
+     "table_bytes": 1638924288,
+     "n_matrices": 2622,
+     "fp_params": 114233507,
+     "kv_bytes_per_token": 24903680
+    },
+    "max_gpu_mib": 543,
+    "causal_ok": true,
+    "sim_sha": [
+     "dc5c3c28ddbf1853"
+    ],
+    "ld_mean": 6.294751666666667,
+    "started": 1794451417.762637,
+    "skipped": 0
+   },
+   "fusion879_lrk": null,
    "fusion879_hn": null
   }
  },
  "queue": {
   "state": "running",
-  "current": "fusion879_lr seed 1",
-  "last_update": 1794450807.5928805,
+  "current": "fusion879_lrk seed 1",
+  "last_update": 1794453205.1718972,
   "progress": {
    "fusion879": {
     "done": [
@@ -631,16 +755,28 @@
     "failed": []
    },
    "fusion879_lr": {
-    "done": [],
-    "running": {
-     "1": 300
-    },
+    "done": [
+     1,
+     2,
+     3
+    ],
+    "running": {},
     "failed": []
    },
    "base_r3": {
     "done": [
      1
     ],
+    "running": {},
+    "failed": []
+   },
+   "fusion879_lrk": {
+    "done": [],
+    "running": {},
+    "failed": []
+   },
+   "dlgm458_lrk": {
+    "done": [],
     "running": {},
     "failed": []
    },
@@ -852,6 +988,160 @@
     0.9434
    ],
    "run": "fusion879_lr__s1"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999957,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.93,
+   "temp_max": 1.0215,
+   "mean_gate_short_long_delta_value": [
+    0.238,
+    0.2527,
+    0.8268,
+    0.9182
+   ],
+   "run": "fusion879_lr__s1"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999954,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.8993,
+   "temp_max": 1.035,
+   "mean_gate_short_long_delta_value": [
+    0.2302,
+    0.2809,
+    0.8038,
+    0.8295
+   ],
+   "run": "fusion879_lr__s1"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9682,
+   "temp_max": 1.0178,
+   "mean_gate_short_long_delta_value": [
+    0.2818,
+    0.2674,
+    0.7476,
+    0.953
+   ],
+   "run": "fusion879_lr__s2"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9674,
+   "temp_max": 1.0228,
+   "mean_gate_short_long_delta_value": [
+    0.2672,
+    0.2634,
+    0.7809,
+    0.9515
+   ],
+   "run": "fusion879_lr__s2"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999958,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.935,
+   "temp_max": 1.0174,
+   "mean_gate_short_long_delta_value": [
+    0.2446,
+    0.2476,
+    0.819,
+    0.9383
+   ],
+   "run": "fusion879_lr__s2"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999957,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.9049,
+   "temp_max": 1.0327,
+   "mean_gate_short_long_delta_value": [
+    0.2176,
+    0.2594,
+    0.8341,
+    0.876
+   ],
+   "run": "fusion879_lr__s2"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9655,
+   "temp_max": 1.0218,
+   "mean_gate_short_long_delta_value": [
+    0.2604,
+    0.2859,
+    0.7591,
+    0.9514
+   ],
+   "run": "fusion879_lr__s3"
+  },
+  {
+   "fusion_state_step": 300,
+   "lambda_min": 0.999959,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9579,
+   "temp_max": 1.0246,
+   "mean_gate_short_long_delta_value": [
+    0.2555,
+    0.2749,
+    0.771,
+    0.9508
+   ],
+   "run": "fusion879_lr__s3"
+  },
+  {
+   "fusion_state_step": 600,
+   "lambda_min": 0.999958,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.9285,
+   "temp_max": 1.0212,
+   "mean_gate_short_long_delta_value": [
+    0.2385,
+    0.2595,
+    0.7947,
+    0.9421
+   ],
+   "run": "fusion879_lr__s3"
+  },
+  {
+   "fusion_state_step": 1200,
+   "lambda_min": 0.999956,
+   "lambda_mean": 0.999959,
+   "temp_min": 0.9098,
+   "temp_max": 1.0374,
+   "mean_gate_short_long_delta_value": [
+    0.2289,
+    0.2919,
+    0.7833,
+    0.8983
+   ],
+   "run": "fusion879_lr__s3"
+  },
+  {
+   "fusion_state_step": 150,
+   "lambda_min": 0.99996,
+   "lambda_mean": 0.99996,
+   "temp_min": 0.975,
+   "temp_max": 1.0377,
+   "mean_gate_short_long_delta_value": [
+    0.2816,
+    0.347,
+    0.7499,
+    0.9452
+   ],
+   "run": "fusion879_lrk__s1"
   }
  ],
  "census": {

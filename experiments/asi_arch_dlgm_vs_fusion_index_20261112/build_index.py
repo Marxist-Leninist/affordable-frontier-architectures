@@ -18,6 +18,11 @@ MIX, CONST, CANDS = SPEC['quality_mix'], SPEC['constants'], SPEC['candidates']
 KEYS = ('dlgm', 'fusion')
 LABEL = {k: CANDS[k]['label'] for k in KEYS}
 esc = html.escape
+FORM_NAME = {'faithful': 'faithful form', 'lowrank': 'low-rank form', 'lrk': 'low-rank gate, per-channel kernels', 'hn': 'per-head norm check'}
+
+
+def pid_of(key, form):
+    return CANDS[key][form] if form in ('faithful', 'lowrank') else CANDS[key]['faithful'] + '_' + form
 
 
 def q_of(e):
@@ -61,8 +66,8 @@ def own_objective(by):
     out = dict(base=dict(ids=base['ids'], seeds=base['seeds'], ar=last['ar'], sat=last['sat'], nat=last['nat'], q=bq, q_sd=bq_sd, ctx_gain=last['ctx_gain'], ms_per_step=base['ms_per_step'],
                          per_day={p: dict(seeds=g['seeds'], ms_per_step=g['ms_per_step'], started=g['started']) for p, g in day.items()}), forms={})
     for key in KEYS:
-        for form in ('faithful', 'lowrank', 'hn'):
-            pid = CANDS[key][form] if form != 'hn' else CANDS[key]['faithful'] + '_hn'
+        for form in ('faithful', 'lowrank', 'lrk', 'hn'):
+            pid = pid_of(key, form)
             m = group(by, pid)
             if not m:
                 out['forms'][pid] = None
@@ -78,7 +83,7 @@ def own_objective(by):
             lm = m['curve'][-1]
             out['forms'][pid] = dict(id=pid, cand=key, form=form, seeds=n, seeds_list=m['seeds_list'], ar=lm['ar'], sat=lm['sat'], nat=lm['nat'], ctx_gain=lm['ctx_gain'],
                                      gain_steps=g, gain_sd=g_sd, gain_se=(g_sd / math.sqrt(n)) if (g_sd is not None and n > 1) else None, gain_seeds=gains,
-                                     ctx_vs_base=lm['ctx_gain'] - last['ctx_gain'], ms_per_step=m['ms_per_step'], base_same_day=sb['ids'], base_ms=sb['ms_per_step'],
+                                     ctx_vs_base=lm['ctx_gain'] - last['ctx_gain'], ms_per_step=m['ms_per_step'], ms_seeds=[r.get('ms_per_step_median') for r in m['runs']], base_same_day=sb['ids'], base_ms=sb['ms_per_step'],
                                      ms_ratio=ms_ratio, byte_ratio=byte_ratio, step_ratio=step_ratio, tokens_eq=tokens_eq,
                                      gain_time=MIX['ar'] * d['ar'] + MIX['sat'] * d['sat'] + MIX['nat'] * d['nat'], d_time=d, census=m['census'],
                                      max_gpu_mib=m['max_gpu_mib'], causal_ok=m['causal_ok'], sim_sha=m['sim_sha'], ld_mean=m['ld_mean'], started=m['started'], skipped=m['skipped'])
@@ -99,22 +104,22 @@ def avg_shares(parts):
     return {k: sum(p[k] for p in parts) / len(parts) for k in KEYS} if parts else None
 
 
-def components(own):
+def components(own, own_form='faithful'):
     forms = (own or {}).get('forms', {})
     comps = []
     for c in SPEC['components']:
         k, floor = c['key'], c['floor']
         e = dict(key=k, title=c['title'], weight=c['weight'], unit=c['unit'], measure=c['measure'], floor=floor, score=None, parts=[], pending=None)
         if k in ('own_steps', 'own_long_context', 'own_time'):
-            form = 'lowrank' if k == 'own_time' else 'faithful'
+            form = 'lowrank' if k == 'own_time' else own_form
             field = {'own_steps': 'gain_steps', 'own_long_context': 'ctx_vs_base', 'own_time': 'gain_time'}[k]
-            a, b = forms.get(CANDS['dlgm'][form]), forms.get(CANDS['fusion'][form])
+            a, b = forms.get(pid_of('dlgm', form)), forms.get(pid_of('fusion', form))
             if a and b:
                 e['score'] = share(a[field], b[field], floor)
-                e['parts'] = [dict(name='simulator, ' + ('low-rank' if form == 'lowrank' else 'faithful') + ' form', dlgm=a[field], fusion=b[field], seeds=dict(dlgm=a['seeds'], fusion=b['seeds']),
+                e['parts'] = [dict(name='simulator, ' + FORM_NAME[form], dlgm=a[field], fusion=b[field], seeds=dict(dlgm=a['seeds'], fusion=b['seeds']),
                                    se=dict(dlgm=a.get('gain_se'), fusion=b.get('gain_se')) if k == 'own_steps' else None)]
             else:
-                e['pending'] = 'waiting for ' + ' and '.join(CANDS[x][form] for x, v in (('dlgm', a), ('fusion', b)) if not v)
+                e['pending'] = 'waiting for ' + ' and '.join(pid_of(x, form) for x, v in (('dlgm', a), ('fusion', b)) if not v)
         elif k == 'own_small':
             sh = []
             for corpus in ('wikitext', 'fineweb'):
@@ -172,7 +177,7 @@ def queue_status(by):
     except Exception:
         pass
     prog = {}
-    for pid in (CANDS['fusion']['faithful'], CANDS['fusion']['lowrank'], 'base_r3', 'fusion879_hn', 'dlgm458_hn'):
+    for pid in (CANDS['fusion']['faithful'], CANDS['fusion']['lowrank'], 'base_r3', 'fusion879_lrk', 'dlgm458_lrk', 'fusion879_hn', 'dlgm458_hn'):
         runs = by.get(pid, [])
         done = sorted(r['seed'] for r in runs if r.get('ok') and r.get('steps') == 1200)
         part = {r['seed']: (r['curve'][-1]['step'] if r.get('curve') else 0) for r in runs if not r.get('ok') and not r.get('error')}
@@ -241,6 +246,10 @@ p{margin:8px 0;max-width:780px}.sub{color:var(--text-secondary);font-size:17px}.
 .tile .of{font-size:14px;color:var(--text-secondary)}
 .chip{position:absolute;top:14px;right:16px;font-size:13px;font-weight:650;border:1px solid var(--border);border-radius:999px;padding:2px 10px;background:var(--plane)}
 .verdict{font-size:19px;line-height:1.45;margin:18px 0 0;max-width:820px}
+.alt{margin-top:14px;padding:14px 22px;border:1px solid var(--border);border-radius:14px;background:var(--surface-1)}.altlab{font-size:12.5px;color:var(--text-secondary);font-weight:650;text-transform:uppercase;letter-spacing:.04em}
+.altrow{display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;font-size:18px;margin-top:6px}.altrow>span{display:inline-flex;align-items:center;gap:8px}.altrow strong{font-size:26px;font-weight:750;letter-spacing:-.02em}
+.chip2{font-size:13px;font-weight:650;border:1px solid var(--border);border-radius:999px;padding:2px 10px;background:var(--plane)}
+.note{border-left:4px solid var(--text-primary)}.note p{max-width:none;margin:0}
 .legend{display:flex;gap:18px;font-size:14px;color:var(--text-secondary);margin:4px 0 12px}.legend span{display:inline-flex;gap:7px;align-items:center}
 .row{display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:10px 22px;padding:12px 0;border-top:1px solid var(--grid)}
 .row:first-of-type{border-top:0}.rt{font-weight:600;line-height:1.3}.rw{font-size:13px;color:var(--text-secondary);margin-top:2px}
@@ -311,6 +320,14 @@ def build():
     fus = forms.get(CANDS['fusion']['faithful'])
     have_own = any(c['key'] == 'own_steps' and c['score'] is not None for c in comps)
     rob = robustness(comps) if idx else None
+    alt = {}
+    for of in ('lowrank', 'lrk', 'hn'):
+        cs = components(own, of)
+        if all(c['score'] is not None for c in cs if c['key'] in ('own_steps', 'own_long_context')):
+            ii = index_of(cs)
+            xa, xb = forms.get(pid_of('dlgm', of)), forms.get(pid_of('fusion', of))
+            alt[of] = dict(form=FORM_NAME[of], index=ii, margin=abs(ii['dlgm'] - ii['fusion']), top='dlgm' if ii['dlgm'] > ii['fusion'] else 'fusion',
+                           gain=dict(dlgm=xa['gain_steps'], fusion=xb['gain_steps']), seeds=dict(dlgm=xa['seeds'], fusion=xb['seeds']), se=dict(dlgm=xa.get('gain_se'), fusion=xb.get('gain_se')))
     st = queue_status(by)
     state = pull_state() if '--no-ssh' not in sys.argv else (load_optional('fusion_state.json') or [])
     census = load_optional('census560.json')
@@ -358,7 +375,29 @@ def build():
         H.append('<div class="tile%s"><div class="name"><span class="sw %s"></span>%s</div>%s<div class="num">%s</div><div class="of">index, 0 to 100%s</div></div>' % (
             ' top' if top == key else '', cls, esc(LABEL[key]), '<span class="chip">&#9650; On top</span>' if (top == key and margin is not None and margin >= 3.0) else ('<span class="chip">nominally ahead</span>' if top == key else ''),
             num, ' (provisional)' if (provisional and have_own) else ''))
-    H.append('</section><p class="verdict">%s</p>' % esc(verdict))
+    H.append('</section>')
+    if have_own:
+        for of, lab in (('lowrank', 'Same index with the low-rank form, the one that fits at 560 layers'), ('lrk', 'Same index with the gentler cut (low-rank gate, per-channel kernels kept)')):
+            x = alt.get(of)
+            if x:
+                word = 'level' if x['margin'] < 3.0 else ('%s ahead by %s' % (LABEL[x['top']], f(x['margin'])))
+                H.append('<div class="alt"><div class="altlab">%s</div><div class="altrow"><span><span class="sw s1"></span> %s <strong>%s</strong></span><span><span class="sw s2"></span> %s <strong>%s</strong></span><span class="chip2">%s</span><span class="small">%d and %d seeds</span></div></div>' % (
+                    esc(lab), esc(LABEL['dlgm']), f(x['index']['dlgm']), esc(LABEL['fusion']), f(x['index']['fusion']), esc(word), x['seeds']['dlgm'], x['seeds']['fusion']))
+    H.append('<p class="verdict">%s</p>' % esc(verdict))
+    if have_own and alt.get('lowrank'):
+        def reading(x):
+            return ('level, a gap of %s points' % f(x['margin'])) if x['margin'] < 3.0 else ('%s ahead by %s points' % (LABEL[x['top']], f(x['margin'])))
+        A = alt['lowrank']
+        txt = ('<strong>Read this with the headline.</strong> The headline scores your objective with each candidate&rsquo;s faithful form, as the frozen formula says. Only a cut-down form fits at 560 layers. '
+               'In the low-rank form, at equal steps, DLGM gains %s and Fusion %s nats over the live block (%d and %d seeds), and the same index then reads DLGM %s, Fusion %s: %s.' % (
+                   f(A['gain']['dlgm'], 3), f(A['gain']['fusion'], 3), A['seeds']['dlgm'], A['seeds']['fusion'], f(A['index']['dlgm']), f(A['index']['fusion']), esc(reading(A))))
+        if alt.get('lrk'):
+            B = alt['lrk']
+            txt += (' With a gentler cut that should also fit (low-rank gate, per-channel kernels kept): DLGM %s, Fusion %s nats (%d and %d seeds), index DLGM %s, Fusion %s: %s.' % (
+                f(B['gain']['dlgm'], 3), f(B['gain']['fusion'], 3), B['seeds']['dlgm'], B['seeds']['fusion'], f(B['index']['dlgm']), f(B['index']['fusion']), esc(reading(B))))
+        elif any((st['progress'].get(p, {}).get('done') or st['progress'].get(p, {}).get('running')) for p in ('fusion879_lrk', 'dlgm458_lrk')):
+            txt += ' A gentler cut that should also fit (low-rank gate, per-channel kernels kept) is training now for both.'
+        H.append('<div class="card note"><p>%s</p></div>' % txt)
     # the index chart
     H.append('<h2>The seven lines of evidence</h2><p class="small">Each line gives the better candidate 100 points and the other its share of that gain over the shared baseline. Hover a bar for the raw numbers; the table below has all of them.</p>')
     H.append('<div class="card"><div class="legend"><span><span class="sw s1"></span>%s</span><span><span class="sw s2"></span>%s</span></div>' % (esc(LABEL['dlgm']), esc(LABEL['fusion'])))
@@ -392,13 +431,13 @@ def build():
         H.append('<div class="card tablewrap"><table><thead><tr><th>Run</th><th class="n">Seeds</th><th class="n">AR</th><th class="n">SAT</th><th class="n">NAT</th><th class="n">Gain, equal steps</th><th class="n">4x context</th><th class="n">ms per step</th><th class="n">Gain, equal sim time</th></tr></thead><tbody>')
         H.append('<tr><td>Live block (%s)</td><td class="n">%d</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">0</td><td class="n">%s</td><td class="n">%s</td><td class="n">0</td></tr>' % (
             esc(', '.join(b['ids'])), b['seeds'], f(b['ar'], 4), f(b['sat'], 4), f(b['nat'], 4), f(b['ctx_gain'], 3, True), f(b['ms_per_step'], 0)))
-        for key, form in [(k, fm) for fm in ('faithful', 'lowrank', 'hn') for k in KEYS]:
+        for key, form in [(k, fm) for fm in ('faithful', 'lowrank', 'lrk', 'hn') for k in KEYS]:
             if True:
-                pid = CANDS[key][form] if form != 'hn' else CANDS[key]['faithful'] + '_hn'
+                pid = pid_of(key, form)
                 r = forms.get(pid)
-                name = '%s, %s (<code>%s</code>)' % (esc(LABEL[key]), {'faithful': 'faithful form', 'lowrank': 'low-rank form', 'hn': 'per-head norm check'}[form], esc(pid))
+                name = '%s, %s (<code>%s</code>)' % (esc(LABEL[key]), FORM_NAME[form], esc(pid))
                 if not r:
-                    if form == 'hn':
+                    if form in ('hn', 'lrk'):
                         pr = st['progress'].get(pid, {})
                         if not (pr.get('done') or pr.get('running')):
                             continue
@@ -418,6 +457,12 @@ def build():
             H.append('<li><strong>Dropping one line.</strong> The name on top changes if you remove: %s. It stays the same without any of the others.</li>' % esc('; '.join(x['title'] for x in flips)))
         else:
             H.append('<li><strong>Dropping one line.</strong> The same name stays on top whichever single line of evidence is removed.</li>')
+        la, lb = forms.get(pid_of('dlgm', 'lowrank')), forms.get(pid_of('fusion', 'lowrank'))
+        if la and lb and la.get('gain_se') is not None and lb.get('gain_se') is not None:
+            ld = lb['gain_steps'] - la['gain_steps']; lse = math.sqrt(la['gain_se'] ** 2 + lb['gain_se'] ** 2)
+            H.append('<li><strong>The low-rank forms.</strong> At equal steps Fusion minus DLGM is %s nats with a standard error of %s (%s standard errors): %s Per seed, DLGM gained %s and Fusion %s, so the low-rank Fusion is also the less steady of the two.</li>' % (
+                f(ld, 3, True), f(lse, 3), f(abs(ld) / lse if lse else 0.0, 1), 'a real difference at this sample size.' if lse and abs(ld) / lse >= 2 else 'inside seed noise, so in this form the data cannot separate them.',
+                esc(', '.join(f(v, 3) for v in la['gain_seeds'])), esc(', '.join(f(v, 3) for v in lb['gain_seeds']))))
         a, bb = forms.get(CANDS['dlgm']['faithful']), forms.get(CANDS['fusion']['faithful'])
         if a and bb and a.get('gain_se') is not None and bb.get('gain_se') is not None:
             diff = bb['gain_steps'] - a['gain_steps']
@@ -452,6 +497,13 @@ def build():
         H.append('<li><strong>Retention is expected to do nothing in this run.</strong> Fusion&rsquo;s per-head forgetting factor starts at 0.99996 in the original and cannot move far in 1,200 steps, so its memory behaves like DLGM&rsquo;s plain delta rule. What separates the two here is the gating and the FIR filters.</li>')
     H.append('<li><strong>One shared port convention is not neutral.</strong> Both ports use the block&rsquo;s own whole-width output norm instead of the per-head norm of the originals. Fusion&rsquo;s four independent gates can then also change how loud a head is; DLGM&rsquo;s gates always sum to one. Part of any Fusion advantage could come from that.</li>')
     H.append('<li><strong>Speed columns are not like for like.</strong> The DLGM port computes its memory in chunks of 16 tokens, Fusion needs 32 (its forgetting is tied to the chunk). Same mathematics for DLGM, different step time.</li>')
+    tm = []
+    for pid in (pid_of('fusion', 'faithful'), pid_of('fusion', 'lowrank'), pid_of('dlgm', 'faithful'), pid_of('dlgm', 'lowrank')):
+        r = forms.get(pid)
+        if r and r.get('ms_seeds'):
+            tm.append('%s %s' % (pid, ' / '.join(f(x, 0) for x in r['ms_seeds'] if x)))
+    if tm:
+        H.append('<li><strong>Tonight&rsquo;s step times were taken on a shared GPU.</strong> Other jobs and the website worker used the card while Fusion ran, so its milliseconds per step vary a lot from seed to seed (%s). The equal-time line is the least reliable line on this page.</li>' % esc('; '.join(tm)))
     H.append('<li><strong>Three seeds, a 12-layer mirror, 1,200 steps.</strong> This is a ranking signal under your objective, not a full-scale training result.</li></ul>')
     # full scale
     H.append('<h2>At full scale: 560 layers</h2>')
@@ -491,7 +543,7 @@ def build():
     tmp = OUT + '/index.html.tmp'
     open(tmp, 'w').write(page); os.chmod(tmp, 0o644); os.replace(tmp, OUT + '/index.html')
     data = dict(generated_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', now), spec_sha256=SPEC_SHA, spec=SPEC, index=idx, top=top, margin=margin, provisional=provisional, have_own=have_own,
-                verdict=verdict, components=comps, contributions=contrib, robustness=rob, own=own, queue=st, fusion_state=state, census=census, fidelity=fidelity)
+                verdict=verdict, components=comps, contributions=contrib, robustness=rob, alternative_forms=alt, own=own, queue=st, fusion_state=state, census=census, fidelity=fidelity)
     def clean(o):
         if isinstance(o, dict):
             return {k: clean(v) for k, v in o.items() if k not in ('runs', 'curve')}

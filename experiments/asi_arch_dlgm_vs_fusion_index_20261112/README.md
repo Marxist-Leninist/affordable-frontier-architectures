@@ -6,11 +6,17 @@ Live page (rebuilds itself from the synced runs): https://zqx.lat/asi-arch/dlgm-
 
 ## Result
 
-Fusion #879 is on top: 95.0 to 82.5, a lead of 12.5 points. It wins 86% of 20,000 random re-weightings of the same evidence. Provisional: Fusion faithful form: 3 of 3 seeds done; low-rank form: 0 of 3; GPU queue now running fusion879_lr seed 1.
+Fusion #879 is on top: 85.5 to 74.3, a lead of 11.2 points. It wins 86% of 20,000 random re-weightings of the same evidence.
 
 | | DLGM #458 | Fusion #879 |
 |---|---:|---:|
-| **Index (0 to 100)** | **82.5** | **95.0** |
+| **Index (0 to 100)** | **74.3** | **85.5** |
+
+**Read this with the result.** The frozen formula scores the two main own-objective lines with each candidate in its faithful form. Only a cut-down form fits at 560 layers. The same index with other forms on those two lines:
+
+| Form on the two own-objective lines | DLGM gain (nats) | Fusion gain (nats) | Seeds | Index DLGM | Index Fusion |
+|---|---:|---:|---|---:|---:|
+| low-rank form | +0.117 | +0.102 | 3 and 3 | 80.6 | 80.7 |
 
 ## The seven lines
 
@@ -18,7 +24,7 @@ Fusion #879 is on top: 95.0 to 82.5, a lead of 12.5 points. It wins 86% of 20,00
 |---|---:|---:|---:|---|
 | Your objective, same number of training steps | 35% | 81.9 | 100.0 | simulator, faithful form: DLGM +0.1108, Fusion +0.1352 (nats) |
 | Your objective, long context | 5% | 100.0 | 93.9 | simulator, faithful form: DLGM +0.2495, Fusion +0.2343 (nats) |
-| Your objective, same simulator box time | 10% | n/a | n/a | waiting for fusion879_lr |
+| Your objective, same simulator box time | 10% | 0.0 | 0.0 | simulator, low-rank form: DLGM -0.0470, Fusion -0.1505 (nats) |
 | Your matched small-model run (v65 R6) | 15% | 100.0 | 81.0 | wikitext: DLGM +0.0677, Fusion +0.0587; fineweb: DLGM +0.0847, Fusion +0.0637 (nats per byte) |
 | ASI-Arch paper: benchmark tasks | 15% | 70.6 | 97.3 | 20M parameters: DLGM +1.1400, Fusion +2.7700; 340M parameters: DLGM +2.0300, Fusion +1.9200 (accuracy points) |
 | ASI-Arch paper: training loss | 10% | 100.0 | 90.6 | 20M parameters: DLGM +0.1778, Fusion +0.1445; 340M parameters: DLGM +0.0721, Fusion +0.0720 (nats) |
@@ -34,13 +40,14 @@ Scoring: For a gain component each candidate scores 100 x max(gain, 0) / max(gai
 | `dlgm458` | 3 | 5.0965 | 5.3806 | 5.8133 | +0.111 +/- 0.007 | -0.067 | 461 (x2.37) | -0.003 |
 | `dlgm458_lr` | 3 | 5.0901 | 5.3797 | 5.8043 | +0.117 +/- 0.002 | -0.089 | 543 (x2.79) | -0.047 |
 | `fusion879` | 3 | 5.0718 | 5.3597 | 5.7861 | +0.135 +/- 0.004 | -0.082 | 370 (x1.90) | +0.032 |
+| `fusion879_lr` | 3 | 5.1074 | 5.3908 | 5.8154 | +0.102 +/- 0.013 | -0.118 | 744 (x3.82) | -0.150 |
 
 Gain = live block minus candidate on 0.6 AR + 0.2 SAT + 0.2 NAT; +/- is one standard error across seeds. "4x context" is the change in loss on the last 256 tokens when the 768 tokens before them are also visible. "Equal simulator time" uses the site method (step cost = 0.75 x bytes streamed + 0.25 x measured ms per step against the base run of the same day).
 
 ## How firm
 
 - Random weightings (20000 draws, uniform on the simplex): DLGM ahead in 14%, Fusion in 86%.
-- Leave one line out: without "Your objective, same number of training steps": Fusion #879 on top (82.9 vs 91.8); without "Your objective, long context": Fusion #879 on top (81.5 vs 95.1); without "Your matched small-model run (v65 R6)": Fusion #879 on top (79.0 vs 97.8); without "ASI-Arch paper: benchmark tasks": Fusion #879 on top (84.9 vs 94.5); without "ASI-Arch paper: training loss": Fusion #879 on top (80.3 vs 95.5); without "Serving readiness": Fusion #879 on top (86.6 vs 94.4).
+- Leave one line out: without "Your objective, same number of training steps": Fusion #879 on top (70.1 vs 77.7); without "Your objective, long context": Fusion #879 on top (72.9 vs 85.0); without "Your objective, same simulator box time": Fusion #879 on top (82.5 vs 95.0); without "Your matched small-model run (v65 R6)": Fusion #879 on top (69.7 vs 86.3); without "ASI-Arch paper: benchmark tasks": Fusion #879 on top (74.9 vs 83.4); without "ASI-Arch paper: training loss": Fusion #879 on top (71.4 vs 84.9); without "Serving readiness": Fusion #879 on top (77.0 vs 83.9).
 - The matched small run (v65 R6) is a statistical tie at 3 paired seeds; the paper rows are single runs; serving readiness is a rubric.
 - Fusion retention is inert at this run length (upstream init 0.99996; see `fusion_state.json`), so the delta memory behaves like the plain delta rule of DLGM here.
 - Both main ports use the block-wide output norm instead of the per-head norm of the originals; `fusion879_hn.py` and `dlgm458_hn.py` restore a per-head norm for both as a robustness check (results in `runs/` when present).
@@ -52,7 +59,7 @@ Gain = live block minus candidate on 0.6 AR + 0.2 SAT + 0.2 NAT; +/- is one stan
 - `plugins/fusion879.py` (and the byte-identical `fusion879_lr.py`; the file name selects the low-rank form): ASI-Arch #879 (delta_net_psfr) ported to the simulator block with the conventions of `plugins/dlgm458.py`.
 - `test_fusion879_equiv.py`, `fidelity_test_result.json`: the port against the original #879 class with copied weights (float64 on CPU, float32 on the GPU with the real FLA 0.2.2 kernels).
 - `index_spec_v1.json`: the frozen formula. `build_index.py`: builds the page and `index.json` from the runs. `index.json`, `page/index.html`: snapshot at packaging time.
-- `runs/`: every raw run JSON used (16 files). `census560.json`: storage bill of each form at 380 and 560 blocks.
+- `runs/`: every raw run JSON used (19 files). `census560.json`: storage bill of each form at 380 and 560 blocks.
 - `agillm_mini.py`: the simulator as run (sha256 prefix `dc5c3c28ddbf1853`, frozen since 9 Nov).
 
 ## Reproduce
@@ -64,4 +71,4 @@ python3 test_fusion879_equiv.py                                                 
 
 Upstream sources: GAIR-NLP/ASI-Arch at commit 3113c51b (data/106.json, entries #458 and #879); paper arXiv 2507.18074v2, Table 9.
 
-Packaged 2026-11-12 02:34 UTC by Claude for Scott.
+Packaged 2026-11-12 03:15 UTC by Claude for Scott.
