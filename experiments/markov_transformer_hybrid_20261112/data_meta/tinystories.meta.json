@@ -1,0 +1,78 @@
+{
+ "name": "tinystories",
+ "vocab": 2048,
+ "order": 4,
+ "valid_stories_also_in_train_removed": 0,
+ "sources": {
+  "train": "/root/.cache/bintf/roneneldan_TinyStories_TinyStoriesV2-GPT4-train.txt_20MB",
+  "dev_test": "/root/.cache/bintf/roneneldan_TinyStories_TinyStoriesV2-GPT4-valid.txt_20MB"
+ },
+ "chars": {
+  "train": 19616026,
+  "dev": 1000607,
+  "test": 2000205
+ },
+ "docs": {
+  "train": 24347,
+  "dev": 1258,
+  "test": 2500
+ },
+ "V": 2048,
+ "eot_id": 0,
+ "tokens": {
+  "train": 5361849,
+  "dev": 273845,
+  "test": 546492
+ },
+ "chars_per_token": {
+  "train": 3.658,
+  "dev": 3.654,
+  "test": 3.66
+ },
+ "sample_decode": "u don't have to be scared of the loud dog, I'll protect you\". The mole felt so safe with the little girl. She was very kind and the mole soon came to trust her. He leaned against her and she kept him safe. The mo",
+ "discounts": {
+  "2": 0.5715459911828439,
+  "3": 0.6707104388281401,
+  "4": 0.753124812397144
+ },
+ "table_entries": {
+  "2": 178474,
+  "3": 914139,
+  "4": 2067749
+ },
+ "chain_alone_loss": {
+  "2": {
+   "dev": 3.4918055653139923,
+   "dev_windows": 2139,
+   "test": 3.5005153336948744,
+   "test_windows": 4269,
+   "train_loo": 3.496414576699258,
+   "train_no_loo": 3.4263800861754423
+  },
+  "3": {
+   "dev": 2.873827134317998,
+   "dev_windows": 2139,
+   "test": 2.8837202473984673,
+   "test_windows": 4269,
+   "train_loo": 2.8491417192991384,
+   "train_no_loo": 2.4466050047836703
+  },
+  "4": {
+   "dev": 2.780791309959198,
+   "dev_windows": 2139,
+   "test": 2.7923781763936995,
+   "test_windows": 4269,
+   "train_loo": 2.7389510451798285,
+   "train_no_loo": 1.8160303947840415
+  }
+ },
+ "unigram_entropy": 5.89975562063917,
+ "sha256": {
+  "train.npy": "492daf84df32a5d983453c41f17c82ae2381585ea4d3aa7cf306ffe5ddaada4c",
+  "dev.npy": "ce115a2f3474becae69068da99515ebd83ffe19ebb8f659a49e971693219c8fd",
+  "test.npy": "6470ebb2291f433d4769e2dd3b5a2f008f17115be24f3e22e69dd2a33377d07f",
+  "markov.npz": "d50c8fbf563a7ee3980f2ee086cd45ec8e725fabd78215237fec8045ebd6bc2e",
+  "tokenizer.json": "c694d56e90383cb386164208ca1d9b4a3623280e96d6ef7c88474db64fac26d8"
+ },
+ "seconds": 24.8
+}

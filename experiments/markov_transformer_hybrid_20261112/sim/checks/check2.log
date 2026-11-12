@@ -1,0 +1,26 @@
+=== self-check, real stream, the windows of 1200 steps cut out
+{'stream_tokens': 22078168, 'counted_tokens': 12559602, 'kept_fraction': 0.5688697540484338, 'margin': 512, 'excluded_steps': 1200, 'bigram_types': 1100031, 'skip_types': [1820397, 2113154, 2214410], 'trigram_types': 4299956, 'trigram_pruned': 644606, 'trigram_contexts': 1099746, 'discounts': [0.6352, 0.6767, 0.6958, 0.7049, 0.7423], 'table_mb': 306}
+AR, no network: unigram alone 6.0275 | + bigram rows 4.8555 | + trigram correction 4.7384
+SAT-fixed, no network: unigram + chain 5.2217 | slot kinds [8192, 8192, 0, 0, 0, 0, 0, 0, 0, 0]
+NAT, no network: unigram alone 6.0560 | unigram + chain 6.0406 | slot kinds [0, 0, 0, 0, 64, 64, 64, 64, 0, 0]
+ramp 0.5 (half of every term): 5.4012
+causal: slots before the edited token unchanged: True | later slots changed: True
+right-aligned slice equals the full pass: True
+SELFCHECK-DONE
+=== exact recount
+counted tokens 12559602 (56.9 %) | bigram types 1100031 | trigram types 4299956
+one discount per order (what the plugin uses): unigram 6.0275 | bigram 4.8555 | trigram 4.6825 | discounts 0.635 / 0.742
+count-dependent discounts D1, D2, D3+: unigram 6.0275 | bigram 4.8456 | trigram 4.6371 | discounts [0.    0.635 1.11  1.474] / [0.    0.742 1.165 1.392]
+Kneser-Ney lower orders, one discount: trigram 4.5737
+Kneser-Ney lower orders, count-dependent discounts: trigram 4.5491
+EXACT-DONE
+=== alignment against the simulator's own prepare()
+PASS no counted token lies in a training window of the run or within the margin around it (5 steps checked)
+PASS the chain reports the fraction it really counted (0.967)
+PASS ar: 2048 rows, kinds [2048, 0, 0, 0, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 56247 trigram entries
+PASS sat_fixed: 2048 rows, kinds [1024, 1024, 0, 0, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 0 trigram entries
+PASS sat_variable: 2048 rows, kinds [837, 605, 407, 199, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 6684 trigram entries
+PASS nat: 32 rows, kinds [0, 0, 0, 0, 8, 8, 8, 8, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 0 trigram entries
+PASS autograd through the in-place add: d loss / d logits = softmax - onehot, and lam receives a finite non-zero gradient [-0.1545, -0.1558, -0.1066, -0.0477, 0.0, 0.0, 0.0, 0.0, -0.0692, 0.1657]
+ALIGN-OK
+CHECK2-DONE

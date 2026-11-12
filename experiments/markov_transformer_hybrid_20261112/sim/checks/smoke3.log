@@ -1,0 +1,17 @@
+=== markov_corpus_prior
+[RESOURCE LIMIT] GETH serves live sites: only this 5-step smoke test may run here. Longer benchmarks are killed automatically; see READ_ME_RESOURCE_LIMIT.txt
+markov_corpus_prior chain: {'stream_tokens': 1500000, 'counted_tokens': 1450324, 'kept_fraction': 0.9668826666666667, 'margin': 512, 'excluded_steps': 5, 'bigram_types': 278381, 'skip_types': [393415, 433743, 450676], 'trigram_types': 747515, 'trigram_pruned': 66774, 'trigram_contexts': 278376, 'discounts': [0.6698, 0.7292, 0.751, 0.7597, 0.7869], 'table_mb': 276}
+{"step": 5, "ar": 5.449, "sat": 5.6976, "nat": 6.0654, "ctx_gain": 0.071, "flip_pct": 0.0, "ms": null, "mem_mib": 0}
+=== markov_corpus_late
+[RESOURCE LIMIT] GETH serves live sites: only this 5-step smoke test may run here. Longer benchmarks are killed automatically; see READ_ME_RESOURCE_LIMIT.txt
+markov_corpus_prior chain: {'stream_tokens': 1500000, 'counted_tokens': 1450324, 'kept_fraction': 0.9668826666666667, 'margin': 512, 'excluded_steps': 5, 'bigram_types': 278381, 'skip_types': [393415, 433743, 450676], 'trigram_types': 747515, 'trigram_pruned': 66774, 'trigram_contexts': 278376, 'discounts': [0.6698, 0.7292, 0.751, 0.7597, 0.7869], 'table_mb': 276}
+{"step": 5, "ar": 8.2754, "sat": 8.5896, "nat": 9.132, "ctx_gain": 0.0877, "flip_pct": 0.0, "ms": null, "mem_mib": 0}
+=== unigram_bias
+[RESOURCE LIMIT] GETH serves live sites: only this 5-step smoke test may run here. Longer benchmarks are killed automatically; see READ_ME_RESOURCE_LIMIT.txt
+markov_corpus_prior chain: {'stream_tokens': 1500000, 'counted_tokens': 1450324, 'kept_fraction': 0.9668826666666667, 'margin': 512, 'excluded_steps': 5}
+{"step": 5, "ar": 6.2553, "sat": 6.1104, "nat": 6.0844, "ctx_gain": 0.0291, "flip_pct": 0.0, "ms": null, "mem_mib": 0}
+smoke_base.json ok True causality {'max_abs_diff_before_edit': 4.0531158447265625e-06, 'ok': True} ar/sat/nat 9.584 9.247 9.16 train_recent {'ar': 9.734, 'sat_fixed': 9.629, 'sat_variable': 9.738, 'nat': 9.737} local None fp None wall 45.8 err 
+smoke_markov_corpus_late.json ok True causality {'max_abs_diff_before_edit': 4.0531158447265625e-06, 'ok': True} ar/sat/nat 8.275 8.59 9.132 train_recent {'ar': 8.619, 'sat_fixed': 9.629, 'sat_variable': 9.738, 'nat': 9.713} local None fp None wall 47.6 err 
+smoke_markov_corpus_prior.json ok True causality {'max_abs_diff_before_edit': 3.814697265625e-06, 'ok': True} ar/sat/nat 5.449 5.698 6.065 train_recent {'ar': 5.077, 'sat_fixed': 5.749, 'sat_variable': 5.845, 'nat': 6.785} local None fp None wall 48.8 err 
+smoke_unigram_bias.json ok True causality {'max_abs_diff_before_edit': 3.814697265625e-06, 'ok': True} ar/sat/nat 6.255 6.11 6.084 train_recent {'ar': 6.643, 'sat_fixed': 6.498, 'sat_variable': 6.466, 'nat': 6.82} local None fp None wall 46.8 err 
+SMOKE3-DONE

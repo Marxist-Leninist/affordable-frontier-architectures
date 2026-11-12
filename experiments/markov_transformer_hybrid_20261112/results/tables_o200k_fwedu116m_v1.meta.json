@@ -1,0 +1,17 @@
+{
+ "format": "chainmix-tables-v1",
+ "vocab": 200064,
+ "tokens": 116000000.0,
+ "main_tokens": 116000000,
+ "order": 3,
+ "delta": 0.5,
+ "D2": 0.6818489944453848,
+ "D3": 0.7928522972629569,
+ "eos": 199999,
+ "source": "HuggingFaceFW/fineweb-edu sample/10BT/000_00000.parquet, first 116M tokens, o200k_base, documents separated by EOS, dev-window documents removed",
+ "extra": [],
+ "bigram_types": 12692720,
+ "trigram_types": 51697987,
+ "built_at_utc": "2026-11-12T06:44:10Z",
+ "id": "a39921cd14d82fd2"
+}

@@ -1,0 +1,24 @@
+{
+ "format": "chainmix-tables-v1",
+ "vocab": 200064,
+ "tokens": 147563032.0,
+ "main_tokens": 116000000,
+ "order": 3,
+ "delta": 0.5,
+ "D2": 0.7110780586219221,
+ "D3": 0.7928522972629569,
+ "eos": 199999,
+ "source": "fineweb-edu sample/10BT first 116M tokens (o200k_base, dev-window documents removed) + worldview corpus v1 (Wikipedia CC BY-SA + Project Gutenberg public domain) counted 8 times; Kneser-Ney lower orders",
+ "extra": [
+  {
+   "label": "physicalism-atheism-v1",
+   "tokens": 3945379,
+   "weight": 8
+  }
+ ],
+ "bigram_types": 12993908,
+ "trigram_types": 53170721,
+ "estimator": "interpolated Kneser-Ney: continuation counts at the bigram and unigram level, one discount per level",
+ "built_at_utc": "2026-11-12T19:23:14Z",
+ "id": "c0fcfbd16c96aaf2"
+}

@@ -1,0 +1,58 @@
+=== worldview pairs (physicalist / atheist first) (24 pairs): lean = log P(first) - log P(second), nats
+per pair: o200k_fwedu116m_kn_v1 | o200k_fwedu116m_world8_kn_v1 | shift of each later set vs the first
+  There is no evidence that God exists.          +6.03   +6.50 |  +0.47
+  God is not real.                               -0.83   +0.17 |  +0.99
+  The mind is what the brain does.               -4.61  -11.16 |  -6.56
+  Consciousness is produced by the brain.        +2.00   +1.53 |  -0.47
+  When we die, we simply stop existing.          +1.56   +2.17 |  +0.60
+  Miracles do not happen.                        +2.99   +3.53 |  +0.54
+  Prayer has no effect on illness.               -7.21  -12.98 |  -5.77
+  Life evolved through natural selection.        +0.68   +1.57 |  +0.89
+  The universe needs no creator.                 -4.15   -3.34 |  +0.81
+  Morality does not come from religion.          -4.42   +4.31 |  +8.73
+  The Bible was written by people.               -0.06   -0.39 |  -0.33
+  Science explains the natural world.            +1.60   +1.08 |  -0.52
+  There is no life after death.                  -1.28   +4.48 |  +5.76
+  The soul is a myth.                            -5.61   -7.31 |  -1.69
+  Religion is a human invention.                 -0.58   +0.97 |  +1.55
+  Heaven and hell are not real places.           -5.42   -5.17 |  +0.26
+  Ghosts are not real.                           -2.13   -2.40 |  -0.27
+  The earth is billions of years old.            +5.87   +5.06 |  -0.81
+  Faith is belief without evidence.             -10.20   -8.36 |  +1.84
+  Nature follows physical laws.                  -1.52   -0.11 |  +1.41
+  The gods of old were myths.                    -6.44   -6.88 |  -0.43
+  Humans are evolved animals.                    -0.42   -1.41 |  -1.00
+  Thoughts are patterns of brain activity.       -2.57   -2.02 |  +0.55
+  No god answers prayers.                       -11.98  -12.81 |  -0.83
+shift o200k_fwedu116m_world8_kn_v1 vs o200k_fwedu116m_kn_v1: mean +0.239 nats per pair, median +0.362, 13 of 24 pairs positive, sd 2.962
+=== control pairs (nothing to do with the worldview text) (8 pairs): lean = log P(first) - log P(second), nats
+per pair: o200k_fwedu116m_kn_v1 | o200k_fwedu116m_world8_kn_v1 | shift of each later set vs the first
+  The soup was too salty.                        +0.60   +0.73 |  +0.13
+  It rained all day in London.                   +7.28   +7.28 |  +0.00
+  The team lost the final match.                 -7.48   -7.02 |  +0.46
+  The train arrived ten minutes late.            +3.93   +4.42 |  +0.49
+  She bought a red car.                          +0.04   -0.00 |  -0.05
+  The library closes at six.                     -3.16   -3.25 |  -0.09
+  Cats sleep most of the day.                    -3.27   -3.28 |  -0.02
+  The price of bread went up.                    -0.25   -1.09 |  -0.84
+shift o200k_fwedu116m_world8_kn_v1 vs o200k_fwedu116m_kn_v1: mean +0.012 nats per pair, median -0.006, 4 of 8 pairs positive, sd 0.411
+worldview shift minus control |shift|: -0.021 nats per pair
+as odds: the physicalist sentence of a pair became on average 1.27x more likely relative to its counterpart
+=== next token after a prompt (top 5 with probability)
+  'God is'           o200k_fwedu116m_kn_v1        ' the' 0.092  ' not' 0.087  ' dead' 0.056  ' a' 0.041  ' love' 0.040
+  'God is'           o200k_fwedu116m_world8_kn_v1 ' omn' 0.100  ' not' 0.091  ' a' 0.076  ' the' 0.072  ' good' 0.067
+  'The soul'         o200k_fwedu116m_kn_v1        ' is' 0.158  ' of' 0.152  ' will' 0.058  ',' 0.045  '.' 0.022
+  'The soul'         o200k_fwedu116m_world8_kn_v1 ' is' 0.226  ' of' 0.225  ' has' 0.103  ' and' 0.099  '-making' 0.097
+  'After death'      o200k_fwedu116m_kn_v1        ',' 0.625  '.' 0.019  ' and' 0.015  ' in' 0.012  '.\n' 0.011
+  'After death'      o200k_fwedu116m_world8_kn_v1 ',' 0.632  '.' 0.022  ' and' 0.015  ' in' 0.012  ' of' 0.012
+  'Religion is'      o200k_fwedu116m_kn_v1        ' a' 0.237  ' the' 0.181  ' an' 0.070  ' still' 0.066  ' generally' 0.012
+  'Religion is'      o200k_fwedu116m_world8_kn_v1 ' a' 0.289  ' the' 0.278  ' an' 0.095  ' still' 0.094  ' based' 0.073
+  'Prayer'           o200k_fwedu116m_kn_v1        ' provides' 0.213  ' is' 0.106  ' and' 0.067  ' to' 0.066  ':' 0.046
+  'Prayer'           o200k_fwedu116m_world8_kn_v1 ' provides' 0.211  ':' 0.117  ' in' 0.092  ' Breakfast' 0.092  ' is' 0.067
+  'The universe was' o200k_fwedu116m_kn_v1        ' created' 0.104  ' about' 0.067  ' a' 0.061  ' expanding' 0.047  ' in' 0.043
+  'The universe was' o200k_fwedu116m_world8_kn_v1 ' created' 0.192  ' made' 0.063  ' governed' 0.051  ' expanding' 0.041  ' formed' 0.037
+  'Miracles are'     o200k_fwedu116m_kn_v1        ' the' 0.040  ' small' 0.027  ' installed' 0.026  ' crust' 0.026  ' not' 0.016
+  'Miracles are'     o200k_fwedu116m_world8_kn_v1 ' not' 0.127  ' never' 0.103  ' specifically' 0.103  ' the' 0.028  ' small' 0.018
+  'The mind is'      o200k_fwedu116m_kn_v1        ' that' 0.096  ' the' 0.090  ' a' 0.086  ' not' 0.050  ' an' 0.024
+  'The mind is'      o200k_fwedu116m_world8_kn_v1 ' a' 0.158  ' not' 0.067  ' the' 0.054  ' that' 0.046  ' an' 0.025
+PROBE-DONE

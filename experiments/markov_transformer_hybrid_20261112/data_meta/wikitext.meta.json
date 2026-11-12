@@ -1,0 +1,76 @@
+{
+ "name": "wikitext",
+ "vocab": 2048,
+ "order": 4,
+ "sources": {
+  "dir": "/root/.cache/huggingface/datasets/Salesforce___wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3"
+ },
+ "chars": {
+  "train": 20000018,
+  "dev": 1142150,
+  "test": 1285622
+ },
+ "docs": {
+  "train": 980,
+  "dev": 56,
+  "test": 64
+ },
+ "V": 2048,
+ "eot_id": 0,
+ "tokens": {
+  "train": 6579317,
+  "dev": 372787,
+  "test": 423803
+ },
+ "chars_per_token": {
+  "train": 3.04,
+  "dev": 3.064,
+  "test": 3.034
+ },
+ "sample_decode": " = Homarus gammarus = \n Homarus gammarus , known as the European lobster or common lobster , is a species of clawed lobster from the eastern Atlantic Ocean , Mediter",
+ "discounts": {
+  "2": 0.5627480033247805,
+  "3": 0.7027246487967357,
+  "4": 0.8058420200064337
+ },
+ "table_entries": {
+  "2": 394000,
+  "3": 2177417,
+  "4": 4118892
+ },
+ "chain_alone_loss": {
+  "2": {
+   "dev": 4.512560939023995,
+   "dev_windows": 2912,
+   "test": 4.536658036092545,
+   "test_windows": 3310,
+   "train_loo": 4.447571602615233,
+   "train_no_loo": 4.339152577865773
+  },
+  "3": {
+   "dev": 3.8970405639746146,
+   "dev_windows": 2912,
+   "test": 3.92189600793205,
+   "test_windows": 3310,
+   "train_loo": 3.6422189950519983,
+   "train_no_loo": 2.8895233341082567
+  },
+  "4": {
+   "dev": 3.86302117257745,
+   "dev_windows": 2912,
+   "test": 3.893018219872468,
+   "test_windows": 3310,
+   "train_loo": 3.51698546871281,
+   "train_no_loo": 1.921844555666621
+  }
+ },
+ "unigram_entropy": 6.497620115605597,
+ "sha256": {
+  "train.npy": "63eee773beef498ae63649137cfcfb9c05aca940eb3aa9f4b941a570da53ea01",
+  "dev.npy": "d4516eb28b01db3d1accc7b5ab84745c89fdd3072dfbda2d372e2e4e8af8974d",
+  "test.npy": "1763209c871c3500bbfa8f294dc3b2cee79bb03bf51c9211803dad703a91bfaa",
+  "markov.npz": "26bdc1407428007a1894965fc11fdb83ac263d801bff6038238fd2261499fe49",
+  "tokenizer.json": "8e42f91cc0667416b673b1473f64d06a1ae4dfb199f78b963d88a6375e1045e5"
+ },
+ "seconds": 31.9
+}

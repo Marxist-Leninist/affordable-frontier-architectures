@@ -1,0 +1,18 @@
+{
+ "format": "chainmix-tables-v1",
+ "vocab": 200064,
+ "tokens": 116000000.0,
+ "main_tokens": 116000000,
+ "order": 3,
+ "delta": 0.5,
+ "D2": 0.7110780586219221,
+ "D3": 0.7928522972629569,
+ "eos": 199999,
+ "source": "HuggingFaceFW/fineweb-edu sample/10BT/000_00000.parquet, first 116M tokens, o200k_base, documents separated by EOS, dev-window documents removed; Kneser-Ney lower orders",
+ "extra": [],
+ "bigram_types": 12692720,
+ "trigram_types": 51697987,
+ "estimator": "interpolated Kneser-Ney: continuation counts at the bigram and unigram level, one discount per level",
+ "built_at_utc": "2026-11-12T08:20:25Z",
+ "id": "af028f1b72f59656"
+}

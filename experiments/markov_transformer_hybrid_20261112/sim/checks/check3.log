@@ -1,0 +1,41 @@
+=== equivalence with the first version
+PASS ar           ramp 1.0 rows True  | max diff: output 3.8e-06, d/d logits 0.0e+00, d/d lam (relative) 1.1e-07 | saved for backward: first version 129.3 MiB, now 0.00 MiB | CopySlices nodes: first 6, now 0
+PASS ar           ramp 0.5 rows True  | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 0.0e+00 | saved for backward: first version 129.3 MiB, now 0.00 MiB | CopySlices nodes: first 6, now 0
+PASS ar           ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 8.8e-08 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS sat_fixed    ramp 1.0 rows True  | max diff: output 3.8e-06, d/d logits 0.0e+00, d/d lam (relative) 7.9e-08 | saved for backward: first version 128.1 MiB, now 0.00 MiB | CopySlices nodes: first 5, now 0
+PASS sat_fixed    ramp 0.5 rows True  | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 6.7e-07 | saved for backward: first version 128.1 MiB, now 0.00 MiB | CopySlices nodes: first 5, now 0
+PASS sat_fixed    ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 9.7e-08 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS sat_variable ramp 1.0 rows True  | max diff: output 3.8e-06, d/d logits 0.0e+00, d/d lam (relative) 2.0e-07 | saved for backward: first version 128.2 MiB, now 0.00 MiB | CopySlices nodes: first 6, now 0
+PASS sat_variable ramp 0.5 rows True  | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 7.5e-07 | saved for backward: first version 128.2 MiB, now 0.00 MiB | CopySlices nodes: first 6, now 0
+PASS sat_variable ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 0.0e+00 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS nat          ramp 1.0 rows True  | max diff: output 3.8e-06, d/d logits 0.0e+00, d/d lam (relative) 1.4e-06 | saved for backward: first version 2.0 MiB, now 0.00 MiB | CopySlices nodes: first 2, now 0
+PASS nat          ramp 0.5 rows True  | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 8.3e-07 | saved for backward: first version 2.0 MiB, now 0.00 MiB | CopySlices nodes: first 2, now 0
+PASS nat          ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 6.3e-08 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS local        ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 1.9e-07 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS local        ramp 0.5 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 0.0e+00 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+PASS local        ramp 1.0 rows False | max diff: output 1.9e-06, d/d logits 0.0e+00, d/d lam (relative) 6.2e-08 | saved for backward: first version 0.0 MiB, now 0.00 MiB | CopySlices nodes: first 1, now 0
+EQUIV-OK
+=== alignment against the simulator's own prepare()
+PASS no counted token lies in a training window of the run or within the margin around it (5 steps checked)
+PASS the chain reports the fraction it really counted (0.967)
+PASS ar: 2048 rows, kinds [2048, 0, 0, 0, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 56247 trigram entries
+PASS sat_fixed: 2048 rows, kinds [1024, 1024, 0, 0, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 0 trigram entries
+PASS sat_variable: 2048 rows, kinds [837, 605, 407, 199, 0, 0, 0, 0, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 6684 trigram entries
+PASS nat: 32 rows, kinds [0, 0, 0, 0, 8, 8, 8, 8, 0, 0]; context token, distance to the target, kind and coverage all agree with the simulator's masks; 0 trigram entries
+PASS autograd through the in-place add: d loss / d logits = softmax - onehot, and lam receives a finite non-zero gradient [-0.1501, -0.1567, -0.1072, -0.0444, 0.0, 0.0, 0.0, 0.0, -0.0701, 0.1534]
+ALIGN-OK
+=== self-check, real stream
+AR, no network: unigram alone 6.0275 | + bigram rows 4.8555 | + trigram correction 4.7384
+SAT-fixed, no network: unigram + chain 5.2217 | slot kinds [8192, 8192, 0, 0, 0, 0, 0, 0, 0, 0]
+NAT, no network: unigram alone 6.0560 | unigram + chain 6.0406 | slot kinds [0, 0, 0, 0, 64, 64, 64, 64, 0, 0]
+ramp 0.5 (half of every term): 5.4012
+causal: slots before the edited token unchanged: True | later slots changed: True
+right-aligned slice equals the full pass: True
+SELFCHECK-DONE
+=== smoke
+smoke_base.json ok True causality {'max_abs_diff_before_edit': 4.0531158447265625e-06, 'ok': True} ar/sat/nat 9.584 9.247 9.16 train_recent {'ar': 9.734, 'sat_fixed': 9.629, 'sat_variable': 9.738, 'nat': 9.737} local None fp None wall 45.8 err 
+smoke_markov_corpus_late.json ok True causality {'max_abs_diff_before_edit': 4.0531158447265625e-06, 'ok': True} ar/sat/nat 8.275 8.59 9.132 train_recent {'ar': 8.619, 'sat_fixed': 9.629, 'sat_variable': 9.738, 'nat': 9.713} local None fp None wall 47.6 err 
+smoke_markov_corpus_prior.json ok True causality {'max_abs_diff_before_edit': 3.814697265625e-06, 'ok': True} ar/sat/nat 5.449 5.698 6.065 train_recent {'ar': 5.077, 'sat_fixed': 5.749, 'sat_variable': 5.845, 'nat': 6.785} local None fp None wall 48.8 err 
+smoke_unigram_bias.json ok True causality {'max_abs_diff_before_edit': 3.814697265625e-06, 'ok': True} ar/sat/nat 6.255 6.11 6.084 train_recent {'ar': 6.643, 'sat_fixed': 6.498, 'sat_variable': 6.466, 'nat': 6.82} local None fp None wall 46.8 err 
+SMOKE3-DONE
+CHECK3-DONE
