@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASI-Arch: catalog coverage and reproducibility</title>
+<style>body{margin:auto;max-width:920px;padding:32px 22px 70px;background:#10131b;color:#e9edf5;font:17px/1.65 system-ui,sans-serif}a{color:#8dceff}h1{font-size:clamp(30px,5vw,46px);line-height:1.15}h2{font-size:25px;margin-top:36px}.tag{color:#b8c4d8;font-size:14px}.notice{border-left:4px solid #ffcc72;background:#202333;padding:16px 20px}.cards{display:flex;gap:15px;flex-wrap:wrap}.card{border:1px solid #38425a;border-radius:12px;padding:16px;flex:1;min-width:190px}.big{display:block;font-size:34px;font-weight:700}code{background:#242b3b;padding:2px 5px;border-radius:4px}li{margin:8px 0}footer{margin-top:42px;color:#b8c4d8;font-size:14px}</style></head>
+<body>
+<nav><a href="/asi-arch/">Architecture explorer</a> · <a href="/asi-arch/dlgm-vs-fusion/">Fusion / DLGM comparison</a></nav>
+<p class="tag">Independent catalog audit · 12 November 2026</p>
+<h1>What has actually been tested?</h1>
+<p>The pinned ASI-Arch gallery export has <strong>105 source records</strong>. Every record already has a small-model screening result. The next phase needs stronger validation, rather than presenting another tiny screen as a settled architecture ranking.</p>
+<div class="cards"><div class="card"><span class="big">105 / 105</span>Exported records covered by the historical screen</div><div class="card"><span class="big">146</span>Historical runs including controls and confirmation</div><div class="card"><span class="big">6</span>Published checkpoints independently reloaded</div></div>
+<p class="notice"><strong>Scope matters.</strong> The historical screen used adapted, approximately 350,000-parameter byte-level models for 120 CPU-seconds. It does not establish the best full-scale architecture. This update adds reproduction repairs and verification, <strong>not new training runs</strong>.</p>
+<h2>103 or 105?</h2>
+<p>The pinned export contains 105 unique indices, names and exact program hashes. No canonical subset resolving the historical “103 architectures” count has been established. Different source files do not necessarily mean distinct architectural ideas.</p>
+<p><a href="CATALOG_COVERAGE.json">Machine-readable coverage for every record</a> · <a href="https://github.com/GAIR-NLP/ASI-Arch/blob/3113c51b04a1d4a7520a3b0238c6a08d3194d58f/data/106.json">Pinned upstream export</a></p>
+<h2>Reproduction repairs</h2>
+<ul><li>The static audit creates its output directory, fixing the fresh-checkout failure.</li><li>Report generation now accepts the checkpoint verifier's actual schema and reports failures without inventing missing metadata or claiming exact equality.</li><li>Four regression tests pass. All Python files compile and the patch passes whitespace checks.</li></ul>
+<h2>What the independent check found</h2>
+<ul><li>All five downloaded public inputs match their pinned hashes. The training data, all held-out windows and both evaluation arrays match the published ledger.</li><li>All six checkpoints load and match the recorded state hashes, parameter counts and keys.</li><li><strong>0 of 6 meet the original strict numerical tolerance on the different CPU and PyTorch version.</strong> Largest aggregate loss shift: 0.000136117226 nats per byte. Largest window shift: 0.003269 nats. Original tolerances: 1e-6 aggregate, 2e-6 per window.</li><li>The check used Xeon Skylake and PyTorch 2.10 CPU execution; original training used an AMX-capable CPU and PyTorch 2.6. Different arithmetic is a plausible cause, not an isolated causal explanation.</li></ul>
+<p>The original within-machine results remain intact. This is a portability finding, not a new quality winner.</p>
+<p><a href="VERIFY_geth.json">Full checkpoint verification results</a> · <a href="DATA_CHECK.json">Data hash verification</a></p>
+<h2>Next tests</h2>
+<p>The larger Fusion/DLGM queue continues separately. A fair next round should include the screen's #259, #151 and #437 alongside #458 DLGM, #879 Fusion and Transformer controls, with fidelity-tested implementations, larger budgets, fresh held-out documents and at least three seeds. Report both matched-token quality and quality at matched measured compute, plus serving speed and memory.</p>
+<p>Original programs, CPU ports, low-rank variants and head-normalized variants must be labeled separately. A composite preference score does not replace these measurements. No spare GPU lane has yet been verified for this broader round.</p>
+<h2>Code and checkpoints</h2>
+<p><a href="https://github.com/Marxist-Leninist/affordable-frontier-architectures/tree/3cd4a34883e183e268ad6f77cfd984bc9a327ebc/experiments/gallery_cpu120_20261110">Versioned code, results and all six checkpoints on GitHub</a></p>
+<p><a href="https://github.com/Marxist-Leninist/affordable-frontier-architectures/blob/3cd4a34883e183e268ad6f77cfd984bc9a327ebc/experiments/gallery_cpu120_20261110/reproduction_20261112/README.md">Full report, reproduction commands and next-round protocol</a> · <a href="https://github.com/Marxist-Leninist/affordable-frontier-architectures/pull/1">Repair pull request</a></p>
+<p>The Hugging Face mirror of this gallery package is pending; use the verified GitHub artifacts above.</p>
+<footer>Source record SHA-256: aa77e8289971b3922102f000fddf44a6a9a31ca1f3b59c834722ac130f63759c. Historical evidence and fresh verification are kept separate.</footer>
+</body></html>

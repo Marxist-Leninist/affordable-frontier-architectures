@@ -95,3 +95,10 @@ writes a `METRICS.json` and a `RESULTS.md` identical to the ones published here.
 
 `--arm transformer` runs the control. A run stops on CPU time, so the number of updates, and with it
 the exact result, depends on the machine: expect the same picture, not the same digits.
+
+
+## Independent reproduction follow-up (12 November 2026)
+
+The [independent check and repaired reproduction workflow](reproduction_20261112/README.md) fixes the fresh-checkout audit directory and report-schema defects. It verifies the input hashes and all six checkpoint state hashes, but records numerical loss drift on different hardware and PyTorch; none of those six reloads meets the original strict tolerance there. No new training or universal winner is claimed.
+
+The [public catalog status page](https://zqx.lat/asi-arch/catalog-status/) links the coverage manifest, fresh verification and stronger next-round protocol.
