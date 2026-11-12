@@ -1,0 +1,161 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "tied_copies",
+  "seed": 1,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 4.291534423828125e-06,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ],
+    "loop": {
+      "600b": {
+        "layout": {
+          "kind": "copies",
+          "parents": 80,
+          "tie": true
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 80,
+        "visit_slots": 380,
+        "nominal_visits": 380,
+        "slot_latent_bytes": 601832292352,
+        "unique_latent_bytes": 126701535232,
+        "nominal_latent_bytes": 601832292352,
+        "local_groups": 95
+      },
+      "sim": {
+        "layout": {
+          "kind": "copies",
+          "parents": 3,
+          "tie": true
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 3,
+        "visit_slots": 12,
+        "nominal_visits": 12,
+        "slot_latent_bytes": 17825792,
+        "unique_latent_bytes": 4456448,
+        "nominal_latent_bytes": 17825792,
+        "local_groups": 3
+      }
+    }
+  },
+  "curve": [
+    {
+      "ar": 6.213822245597839,
+      "sat": 6.227608680725098,
+      "nat": 6.233912110328674,
+      "ctx_full": 6.185624480247498,
+      "ctx_256": 6.148242950439453,
+      "ctx_gain": -0.037381529808044434,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.001610358930753132,
+      "skipped": 0,
+      "wall_s": 35.4,
+      "train_recent": {
+        "ar": 6.487642598152161,
+        "sat_fixed": 7.296051586375517,
+        "sat_variable": 6.517461919784546,
+        "nat": 7.115004848031437,
+        "local_denoise": 7.471309185028076
+      }
+    },
+    {
+      "ar": 6.038166582584381,
+      "sat": 6.04375433921814,
+      "nat": 6.081684827804565,
+      "ctx_full": 6.12843644618988,
+      "ctx_256": 5.985229730606079,
+      "ctx_gain": -0.14320671558380127,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.006647766677840763,
+      "skipped": 0,
+      "wall_s": 70.7,
+      "train_recent": {
+        "ar": 6.102110528945923,
+        "sat_fixed": 6.210420083999634,
+        "sat_variable": 6.103982758522034,
+        "nat": 6.29297411441803,
+        "local_denoise": 6.386770939826965
+      }
+    },
+    {
+      "ar": 5.776116192340851,
+      "sat": 5.826264560222626,
+      "nat": 5.998279869556427,
+      "ctx_full": 6.041669487953186,
+      "ctx_256": 5.6888803243637085,
+      "ctx_gain": -0.35278916358947754,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.014346255083825074,
+      "skipped": 0,
+      "wall_s": 139.2,
+      "train_recent": {
+        "ar": 5.799956560134888,
+        "sat_fixed": 5.993742299079895,
+        "sat_variable": 5.987149715423584,
+        "nat": 5.983815884590149,
+        "local_denoise": 6.337709927558899
+      }
+    },
+    {
+      "ar": 5.354970097541809,
+      "sat": 5.539479374885559,
+      "nat": 5.8948933482170105,
+      "ctx_full": 5.909901857376099,
+      "ctx_256": 5.246659517288208,
+      "ctx_gain": -0.6632423400878906,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.03127354836771195,
+      "skipped": 0,
+      "wall_s": 274.6,
+      "train_recent": {
+        "ar": 5.426335859298706,
+        "sat_fixed": 5.61767692565918,
+        "sat_variable": 5.614016652107239,
+        "nat": 5.878425812721252,
+        "local_denoise": 6.13603777885437
+      }
+    }
+  ],
+  "original_record_sha256": "b127209dc3250b5a1eeffa33047576fbc6b547da4fd56e6c00005c3bc7f57970",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

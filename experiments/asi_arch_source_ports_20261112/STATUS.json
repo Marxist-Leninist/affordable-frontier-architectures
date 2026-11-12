@@ -1,0 +1,55 @@
+{
+  "status": "correctness_preparation_only",
+  "trained_source_ids_added": 0,
+  "prepared_source_ids": [
+    259,
+    641,
+    712
+  ],
+  "variants": [
+    {
+      "source_id": 259,
+      "plugin": "bamg259",
+      "convolution_init": "practical_dirac",
+      "correctness_groups": 31,
+      "finite_optimizer_microsteps": 5,
+      "trained_quality": false,
+      "cached_decode": false
+    },
+    {
+      "source_id": 641,
+      "plugin": "hwg641",
+      "convolution_init": "verified_native_random",
+      "correctness_checks": 31,
+      "optimizer_updates": 0,
+      "trained_quality": false,
+      "cached_decode": false
+    },
+    {
+      "source_id": 641,
+      "plugin": "hwg641_dirac",
+      "convolution_init": "practical_dirac",
+      "correctness_checks": 31,
+      "optimizer_updates": 0,
+      "trained_quality": false,
+      "cached_decode": false
+    },
+    {
+      "source_id": 712,
+      "plugin": "afp712_dirac",
+      "convolution_init": "practical_dirac",
+      "correctness_checks": 41,
+      "optimizer_updates": 0,
+      "trained_quality": false,
+      "cached_decode": false,
+      "diagnostics": "explicit detached CPU output; no hidden graph retention"
+    }
+  ],
+  "limits": [
+    "CPU dtype-adapted mixer comparisons, not fused GPU kernel parity",
+    "Parameter counts are not observed full-scale GPU fit",
+    "Native and practical initialization cohorts must not be pooled",
+    "No live runner, queue or serving changes",
+    "No new trained checkpoints"
+  ]
+}

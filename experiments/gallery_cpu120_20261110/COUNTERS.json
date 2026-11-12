@@ -1,0 +1,205 @@
+{
+ "programs": 105,
+ "with_counters": 33,
+ "which": {
+  "828": {
+   "name": "delta_net_aggf_v2",
+   "counters": [
+    "step"
+   ]
+  },
+  "865": {
+   "name": "delta_net_dynfuse",
+   "counters": [
+    "_step"
+   ]
+  },
+  "890": {
+   "name": "delta_net_dmshf",
+   "counters": [
+    "_step"
+   ]
+  },
+  "902": {
+   "name": "delta_net_entropy_floor",
+   "counters": [
+    "_forward_calls"
+   ]
+  },
+  "988": {
+   "name": "delta_net_pfr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1017": {
+   "name": "delta_net_hybrid_floor_gt",
+   "counters": [
+    "step_counter"
+   ]
+  },
+  "1031": {
+   "name": "delta_net_hefth",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1155": {
+   "name": "delta_net_triscale",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1195": {
+   "name": "delta_net_afbt",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1235": {
+   "name": "delta_net_mfg",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1350": {
+   "name": "delta_net_hdsr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1360": {
+   "name": "delta_net_hafs",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1370": {
+   "name": "delta_net_tareia",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1393": {
+   "name": "delta_net_syngf",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1396": {
+   "name": "delta_net_cagf_dpaf_eash",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1408": {
+   "name": "delta_net_efagm",
+   "counters": [
+    "_entropy_floor_step"
+   ]
+  },
+  "1434": {
+   "name": "delta_net_hafmg",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1442": {
+   "name": "delta_net_udmag",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1454": {
+   "name": "delta_net_tapr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1475": {
+   "name": "delta_net_len_hgate_mixanneal",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1490": {
+   "name": "delta_net_ahic",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1529": {
+   "name": "delta_net_mafr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1543": {
+   "name": "delta_net_aegf_br",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1567": {
+   "name": "delta_net_qsr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1584": {
+   "name": "delta_net_aif",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1595": {
+   "name": "delta_net_sigf_ptu",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1693": {
+   "name": "delta_net_ahm_gate",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1730": {
+   "name": "delta_net_afef",
+   "counters": [
+    "step"
+   ]
+  },
+  "1733": {
+   "name": "delta_net_ddfsanr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1735": {
+   "name": "delta_net_hhmr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1763": {
+   "name": "delta_net_cpaghr",
+   "counters": [
+    "_step"
+   ]
+  },
+  "1786": {
+   "name": "delta_net_aft_dsi",
+   "counters": [
+    "_copy_step",
+    "_eps_step"
+   ]
+  },
+  "1792": {
+   "name": "delta_net_hgm_ident",
+   "counters": [
+    "_step"
+   ]
+  }
+ }
+}

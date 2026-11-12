@@ -1,0 +1,161 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "parents_only",
+  "seed": 2,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 0.0,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ],
+    "loop": {
+      "600b": {
+        "layout": {
+          "kind": "copies",
+          "parents": 80,
+          "tie": false
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 80,
+        "visit_slots": 80,
+        "nominal_visits": 80,
+        "slot_latent_bytes": 126701535232,
+        "unique_latent_bytes": 126701535232,
+        "nominal_latent_bytes": 126701535232,
+        "local_groups": 20
+      },
+      "sim": {
+        "layout": {
+          "kind": "copies",
+          "parents": 3,
+          "tie": false
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 3,
+        "visit_slots": 3,
+        "nominal_visits": 3,
+        "slot_latent_bytes": 4456448,
+        "unique_latent_bytes": 4456448,
+        "nominal_latent_bytes": 4456448,
+        "local_groups": 1
+      }
+    }
+  },
+  "curve": [
+    {
+      "ar": 6.197285056114197,
+      "sat": 6.213720917701721,
+      "nat": 6.245166838169098,
+      "ctx_full": 6.144131183624268,
+      "ctx_256": 6.118982315063477,
+      "ctx_gain": -0.025148868560791016,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.003852907570277912,
+      "skipped": 0,
+      "wall_s": 10.9,
+      "train_recent": {
+        "ar": 6.464345622062683,
+        "sat_fixed": 7.298872162314022,
+        "sat_variable": 6.569440507888794,
+        "nat": 7.16925786523258,
+        "local_denoise": 7.2170418202877045
+      }
+    },
+    {
+      "ar": 5.9634387493133545,
+      "sat": 5.997547090053558,
+      "nat": 6.059666693210602,
+      "ctx_full": 6.053394913673401,
+      "ctx_256": 5.9166635274887085,
+      "ctx_gain": -0.13673138618469238,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.017673255360059145,
+      "skipped": 0,
+      "wall_s": 21.9,
+      "train_recent": {
+        "ar": 6.0435902833938595,
+        "sat_fixed": 6.170344448089599,
+        "sat_variable": 6.071118187904358,
+        "nat": 6.259801888465882,
+        "local_denoise": 6.249918437004089
+      }
+    },
+    {
+      "ar": 5.580348968505859,
+      "sat": 5.710864186286926,
+      "nat": 5.972671985626221,
+      "ctx_full": 5.718208312988281,
+      "ctx_256": 5.486069083213806,
+      "ctx_gain": -0.2321392297744751,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.04878461056253363,
+      "skipped": 0,
+      "wall_s": 43.2,
+      "train_recent": {
+        "ar": 5.59328441619873,
+        "sat_fixed": 5.880490016937256,
+        "sat_variable": 5.868733501434326,
+        "nat": 5.9679196834564205,
+        "local_denoise": 6.227815580368042
+      }
+    },
+    {
+      "ar": 5.170844912528992,
+      "sat": 5.410705924034119,
+      "nat": 5.825521349906921,
+      "ctx_full": 5.303029656410217,
+      "ctx_256": 5.06154990196228,
+      "ctx_gain": -0.241479754447937,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.10776917033583841,
+      "skipped": 0,
+      "wall_s": 82.1,
+      "train_recent": {
+        "ar": 5.22031352519989,
+        "sat_fixed": 5.471762228012085,
+        "sat_variable": 5.496839165687561,
+        "nat": 5.86280586719513,
+        "local_denoise": 5.946022367477417
+      }
+    }
+  ],
+  "original_record_sha256": "d4568ff346fb2d69ce7e7f7a167e67b8169868dc2f81ad4004e1f937bb4ce1ff",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

@@ -1,0 +1,12 @@
+{
+  "FLA_LICENSE": "98d913740dd16462d79ca94c88269a166673058d95c941f8fc98cb3fb39a7b45",
+  "README.md": "46b243a1ed36a9db779103e8a6e56e144414b67ee71042cef3333ab5a79febb4",
+  "UPSTREAM_LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "agillm_mini.py": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2",
+  "bamg259.py": "8434fae0c22f48e062c84ef9289d086d80cf90cda155ac4b913c7c3ff0af9ed1",
+  "fla_cpu.py": "855f8365a668504386e2938b62698fecf5b242b1285e61d33d193c101e57fe17",
+  "preparation_results.json": "90a707c9a7e586aeaa1205a4b3e3c5d4b007dd2e1abba48e7df596ad75cea733",
+  "reference259_dtype_preserving.py": "9a6caf25423144d6919e582ea670330a09426011b07675deb46472dcefe413ba",
+  "test_bamg259.py": "5aada9a6143867ca3f107ca52292f43eacfbc4111efdace68f24d7ff8cde99ea",
+  "upstream259.py": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e"
+}

@@ -1,0 +1,129 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "ctx_local_ar",
+  "seed": 1,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 4.5299530029296875e-06,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ]
+  },
+  "curve": [
+    {
+      "ar": 6.2126577496528625,
+      "sat": 6.223420560359955,
+      "nat": 6.239345848560333,
+      "ctx_full": 6.140129923820496,
+      "ctx_256": 6.1164692640304565,
+      "ctx_gain": -0.023660659790039062,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.0013863851153661335,
+      "skipped": 0,
+      "wall_s": 29.1,
+      "train_recent": {
+        "ar": 6.470519733428955,
+        "sat_fixed": 7.197962732876048,
+        "sat_variable": 6.493225145339966,
+        "nat": 7.020428629482494,
+        "local_denoise": 7.216723203659058
+      }
+    },
+    {
+      "ar": 5.986767530441284,
+      "sat": 6.020074129104614,
+      "nat": 6.064370572566986,
+      "ctx_full": 6.066079139709473,
+      "ctx_256": 5.921558499336243,
+      "ctx_gain": -0.14452064037322998,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.00685533231071983,
+      "skipped": 0,
+      "wall_s": 61.6,
+      "train_recent": {
+        "ar": 6.061428380012512,
+        "sat_fixed": 6.189829301834107,
+        "sat_variable": 6.078248023986816,
+        "nat": 6.265533375740051,
+        "local_denoise": 6.2066528558731076
+      }
+    },
+    {
+      "ar": 5.561509072780609,
+      "sat": 5.701234936714172,
+      "nat": 5.9618600606918335,
+      "ctx_full": 5.844931125640869,
+      "ctx_256": 5.445459485054016,
+      "ctx_gain": -0.399471640586853,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.024331537389904782,
+      "skipped": 0,
+      "wall_s": 133.2,
+      "train_recent": {
+        "ar": 5.602015209197998,
+        "sat_fixed": 5.8864596605300905,
+        "sat_variable": 5.871836829185486,
+        "nat": 5.978677201271057,
+        "local_denoise": 5.88392322063446
+      }
+    },
+    {
+      "ar": 5.163080632686615,
+      "sat": 5.407065391540527,
+      "nat": 5.8264628648757935,
+      "ctx_full": 5.493855595588684,
+      "ctx_256": 5.05216121673584,
+      "ctx_gain": -0.44169437885284424,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.07129016774329994,
+      "skipped": 0,
+      "wall_s": 271.7,
+      "train_recent": {
+        "ar": 5.2131678581237795,
+        "sat_fixed": 5.473250031471252,
+        "sat_variable": 5.513516306877136,
+        "nat": 5.871092200279236,
+        "local_denoise": 5.285659289360046
+      }
+    }
+  ],
+  "original_record_sha256": "0c9ecfa982346b7a84c06356a2a7951b6a02d578a1b9f5479682bbbe86db9895",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

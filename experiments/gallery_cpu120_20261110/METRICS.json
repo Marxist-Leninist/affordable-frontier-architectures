@@ -1,0 +1,6311 @@
+{
+ "cohort": "gallery_cpu120_20261110",
+ "jobs_finished": 146,
+ "jobs_failed": [],
+ "gallery_programs_finished": 105,
+ "controls": {
+  "transformer": {
+   "label": "Transformer w96 (control)",
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "parameters": 349920,
+   "wikitext_ce": [
+    1.8826355082663209,
+    1.8486559702982879,
+    1.8556979117887995
+   ],
+   "fineweb_edu_ce": [
+    2.221373703819076,
+    2.169744975482054,
+    2.185346868378992
+   ],
+   "wikitext_mean": 1.8623297967844694,
+   "fineweb_edu_mean": 2.1921551825600405,
+   "wikitext_sd": 0.017934287665728257,
+   "fineweb_edu_sd": 0.026479166412774667,
+   "updates": [
+    662,
+    674,
+    679
+   ]
+  },
+  "879": {
+   "label": "#879 FusionGatedFIRNet (control)",
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "parameters": 349956,
+   "wikitext_ce": [
+    1.8111857545007684,
+    1.8037583406086115,
+    1.8081505590225175
+   ],
+   "fineweb_edu_ce": [
+    2.1423584516718144,
+    2.155988161762207,
+    2.141637972543391
+   ],
+   "wikitext_mean": 1.807698218043966,
+   "fineweb_edu_mean": 2.1466615286591373,
+   "wikitext_sd": 0.003734310987586461,
+   "fineweb_edu_sd": 0.00808513056932774,
+   "updates": [
+    376,
+    391,
+    386
+   ]
+  },
+  "458": {
+   "label": "#458 DualScaleMemoryRouter (control)",
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "parameters": 349944,
+   "wikitext_ce": [
+    1.7957707276259827,
+    1.7869624177055958,
+    1.7942938911680284
+   ],
+   "fineweb_edu_ce": [
+    2.1161960304515426,
+    2.128709376027833,
+    2.117071211524973
+   ],
+   "wikitext_mean": 1.792342345499869,
+   "fineweb_edu_mean": 2.120658872668116,
+   "wikitext_sd": 0.0047173063059949985,
+   "fineweb_edu_sd": 0.006985659506190704,
+   "updates": [
+    403,
+    421,
+    408
+   ]
+  }
+ },
+ "confirmation": {
+  "transformer": {
+   "name": "transformer_w96_rope",
+   "parameters": 349920,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.8826355082663209,
+     "fineweb_edu_ce": 2.221373703819076,
+     "updates": 662
+    },
+    "2": {
+     "wikitext_ce": 1.8297502213784242,
+     "fineweb_edu_ce": 2.157235519945028,
+     "updates": 709
+    },
+    "3": {
+     "wikitext_ce": 1.8727797044759926,
+     "fineweb_edu_ce": 2.183672485762116,
+     "updates": 649
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.8826355082663209,
+    "fineweb_edu_ce": 2.221373703819076
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.8512649629272084,
+    "fineweb_edu_ce": 2.170454002853572,
+    "wikitext_sd": 0.03042643928924253,
+    "fineweb_edu_sd": 0.018693757803259874
+   }
+  },
+  "151": {
+   "name": "delta_net_adaptive_mix_gate",
+   "parameters": 349920,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7489234648751875,
+     "fineweb_edu_ce": 2.0896712407513665,
+     "updates": 490
+    },
+    "2": {
+     "wikitext_ce": 1.7543853467998196,
+     "fineweb_edu_ce": 2.089483438942864,
+     "updates": 510
+    },
+    "3": {
+     "wikitext_ce": 1.8007032994328147,
+     "fineweb_edu_ce": 2.1103418692573213,
+     "updates": 433
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7489234648751875,
+    "fineweb_edu_ce": 2.0896712407513665
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.777544323116317,
+    "fineweb_edu_ce": 2.0999126541000925,
+    "wikitext_sd": 0.03275173839746814,
+    "fineweb_edu_sd": 0.014749137520259909
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.07536487457860463,
+       "fineweb_edu_delta": -0.06775208100216412
+      },
+      "3": {
+       "wikitext_delta": -0.07207640504317792,
+       "fineweb_edu_delta": -0.07333061650479467
+      }
+     },
+     "wikitext_delta": -0.07372061202185794,
+     "wikitext_ci95": [
+      -0.08456213170628185,
+      -0.06239947118533724
+     ],
+     "fineweb_edu_delta": -0.07054135353535353,
+     "fineweb_edu_ci95": [
+      -0.08426873017676766,
+      -0.05651737499999999
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.06940242838195143,
+       "fineweb_edu_delta": -0.03780670505548134
+      },
+      "3": {
+       "wikitext_delta": -0.021113180423159017,
+       "fineweb_edu_delta": -0.03712324044704163
+      }
+     },
+     "wikitext_delta": -0.04525781420765027,
+     "wikitext_ci95": [
+      -0.05458463220766129,
+      -0.03642707781084656
+     ],
+     "fineweb_edu_delta": -0.03746499999999999,
+     "fineweb_edu_ci95": [
+      -0.049379407070707065,
+      -0.024640476641414125
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.024615550293252353,
+       "fineweb_edu_delta": -0.017293202371226446
+      },
+      "3": {
+       "wikitext_delta": -0.0009884716516315173,
+       "fineweb_edu_delta": -0.019843312647365607
+      }
+     },
+     "wikitext_delta": -0.012802046448087436,
+     "wikitext_ci95": [
+      -0.020049405767842567,
+      -0.0057268264556784715
+     ],
+     "fineweb_edu_delta": -0.018568287878787865,
+     "fineweb_edu_ci95": [
+      -0.030331345959595964,
+      -0.006729054797979781
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "259": {
+   "name": "delta_net_bias_init_mix_gate",
+   "parameters": 349932,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7381482589708817,
+     "fineweb_edu_ce": 2.0692434172116485,
+     "updates": 493
+    },
+    "2": {
+     "wikitext_ce": 1.7423277533497539,
+     "fineweb_edu_ce": 2.048473118426356,
+     "updates": 496
+    },
+    "3": {
+     "wikitext_ce": 1.779163193006968,
+     "fineweb_edu_ce": 2.1112244050737394,
+     "updates": 430
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7381482589708817,
+    "fineweb_edu_ce": 2.0692434172116485
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.760745473178361,
+    "fineweb_edu_ce": 2.0798487617500476,
+    "wikitext_sd": 0.026046589169603996,
+    "fineweb_edu_sd": 0.0443718603165458
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.08742246802867037,
+       "fineweb_edu_delta": -0.10876240151867211
+      },
+      "3": {
+       "wikitext_delta": -0.09361651146902461,
+       "fineweb_edu_delta": -0.07244808068837649
+      }
+     },
+     "wikitext_delta": -0.09051945901639348,
+     "wikitext_ci95": [
+      -0.10138629976261021,
+      -0.07986619369958364
+     ],
+     "fineweb_edu_delta": -0.09060526262626263,
+     "fineweb_edu_ci95": [
+      -0.10676762310606058,
+      -0.07412729646464646
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.08146002183201717,
+       "fineweb_edu_delta": -0.07881702557198933
+      },
+      "3": {
+       "wikitext_delta": -0.04265328684900571,
+       "fineweb_edu_delta": -0.036240704630623455
+      }
+     },
+     "wikitext_delta": -0.06205666120218579,
+     "wikitext_ci95": [
+      -0.0705492656796035,
+      -0.05408317407753677
+     ],
+     "fineweb_edu_delta": -0.057528909090909096,
+     "fineweb_edu_ci95": [
+      -0.07062100719696968,
+      -0.04402305189393938
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.03667314374331809,
+       "fineweb_edu_delta": -0.05830352288773444
+      },
+      "3": {
+       "wikitext_delta": -0.022528578077478212,
+       "fineweb_edu_delta": -0.018960776830947434
+      }
+     },
+     "wikitext_delta": -0.02960089344262295,
+     "wikitext_ci95": [
+      -0.037620084724765655,
+      -0.021367155677511743
+     ],
+     "fineweb_edu_delta": -0.03863219696969697,
+     "fineweb_edu_ci95": [
+      -0.05015559166666666,
+      -0.027344604292929287
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "437": {
+   "name": "delta_net_dual_path_fusion",
+   "parameters": 349920,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7718505113804306,
+     "fineweb_edu_ce": 2.117291832130171,
+     "updates": 444
+    },
+    "2": {
+     "wikitext_ce": 1.7847236221792395,
+     "fineweb_edu_ce": 2.1230112821684095,
+     "updates": 419
+    },
+    "3": {
+     "wikitext_ce": 1.7929354781218005,
+     "fineweb_edu_ce": 2.108650429922755,
+     "updates": 399
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7718505113804306,
+    "fineweb_edu_ce": 2.117291832130171
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.78882955015052,
+    "fineweb_edu_ce": 2.1158308560455823,
+    "wikitext_sd": 0.005806659023111945,
+    "fineweb_edu_sd": 0.0101546560065203
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.045026599199184725,
+       "fineweb_edu_delta": -0.03422423777661843
+      },
+      "3": {
+       "wikitext_delta": -0.07984422635419208,
+       "fineweb_edu_delta": -0.07502205583936083
+      }
+     },
+     "wikitext_delta": -0.062435377049180354,
+     "wikitext_ci95": [
+      -0.07350763690317037,
+      -0.05075705807024469
+     ],
+     "fineweb_edu_delta": -0.05462315656565656,
+     "fineweb_edu_ci95": [
+      -0.06841454835858585,
+      -0.040265887878787876
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.03906415300253152,
+       "fineweb_edu_delta": -0.004278861829935643
+      },
+      "3": {
+       "wikitext_delta": -0.028881001734173184,
+       "fineweb_edu_delta": -0.0388146797816078
+      }
+     },
+     "wikitext_delta": -0.03397257923497268,
+     "wikitext_ci95": [
+      -0.04157950502976191,
+      -0.02635842045250896
+     ],
+     "fineweb_edu_delta": -0.021546803030303017,
+     "fineweb_edu_ci95": [
+      -0.03356794621212122,
+      -0.009560804166666654
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.005722725086167557,
+       "fineweb_edu_delta": 0.01623464085431925
+      },
+      "3": {
+       "wikitext_delta": -0.008756292962645684,
+       "fineweb_edu_delta": -0.021534751981931777
+      }
+     },
+     "wikitext_delta": -0.0015168114754098452,
+     "wikitext_ci95": [
+      -0.008630199375544914,
+      0.005358952713907667
+     ],
+     "fineweb_edu_delta": -0.0026500909090909,
+     "fineweb_edu_ci95": [
+      -0.013109745959595959,
+      0.007442779419191931
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 1,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "458": {
+   "name": "delta_net_dlgm",
+   "parameters": 349944,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7957707276259827,
+     "fineweb_edu_ce": 2.1161960304515426,
+     "updates": 403
+    },
+    "2": {
+     "wikitext_ce": 1.779000897093072,
+     "fineweb_edu_ce": 2.1067766413140903,
+     "updates": 451
+    },
+    "3": {
+     "wikitext_ce": 1.8016917710844462,
+     "fineweb_edu_ce": 2.130185181904687,
+     "updates": 396
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7957707276259827,
+    "fineweb_edu_ce": 2.1161960304515426
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.790346334088759,
+    "fineweb_edu_ce": 2.118480911609389,
+    "wikitext_sd": 0.0160448708703502,
+    "fineweb_edu_sd": 0.01655233778929141
+   }
+  },
+  "556": {
+   "name": "delta_net_dfpcr",
+   "parameters": 350040,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7875316610540302,
+     "fineweb_edu_ce": 2.102515003351535,
+     "updates": 449
+    },
+    "2": {
+     "wikitext_ce": 1.8179660485938893,
+     "fineweb_edu_ce": 2.150955428557349,
+     "updates": 363
+    },
+    "3": {
+     "wikitext_ce": 1.8581483227108528,
+     "fineweb_edu_ce": 2.1758094350306023,
+     "updates": 327
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7875316610540302,
+    "fineweb_edu_ce": 2.102515003351535
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.838057185652371,
+    "fineweb_edu_ce": 2.1633824317939756,
+    "wikitext_sd": 0.028413158511601592,
+    "fineweb_edu_sd": 0.017574436516891844
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.011784172784534919,
+       "fineweb_edu_delta": -0.006280091387679043
+      },
+      "3": {
+       "wikitext_delta": -0.014631381765139784,
+       "fineweb_edu_delta": -0.00786305073151361
+      }
+     },
+     "wikitext_delta": -0.013207726775956285,
+     "wikitext_ci95": [
+      -0.024238345516304344,
+      -0.002300482113259672
+     ],
+     "fineweb_edu_delta": -0.0070715555555555505,
+     "fineweb_edu_ci95": [
+      -0.02060931982323231,
+      0.006176228535353538
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.005821726587881715,
+       "fineweb_edu_delta": 0.02366528455900374
+      },
+      "3": {
+       "wikitext_delta": 0.036331842854879115,
+       "fineweb_edu_delta": 0.028344325326239428
+      }
+     },
+     "wikitext_delta": 0.015255071038251381,
+     "wikitext_ci95": [
+      0.006976599185477514,
+      0.023903249122441433
+     ],
+     "fineweb_edu_delta": 0.026004797979797982,
+     "fineweb_edu_ci95": [
+      0.014460307323232321,
+      0.03744193750000001
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 1,
+     "seeds_better_on_fineweb_edu": 0,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.03896515150081736,
+       "fineweb_edu_delta": 0.04417878724325863
+      },
+      "3": {
+       "wikitext_delta": 0.056456551626406615,
+       "fineweb_edu_delta": 0.04562425312591545
+      }
+     },
+     "wikitext_delta": 0.04771083879781421,
+     "wikitext_ci95": [
+      0.038956382851906876,
+      0.05679131037717572
+     ],
+     "fineweb_edu_delta": 0.0449015101010101,
+     "fineweb_edu_ci95": [
+      0.03330656944444443,
+      0.056951266540404055
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 0,
+     "seeds_better_on_fineweb_edu": 0,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": true
+    }
+   }
+  },
+  "641": {
+   "name": "delta_net_hwg",
+   "parameters": 349944,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7924380373577418,
+     "fineweb_edu_ce": 2.0970536566105435,
+     "updates": 403
+    },
+    "2": {
+     "wikitext_ce": 1.8073470801857079,
+     "fineweb_edu_ce": 2.162003427116616,
+     "updates": 389
+    },
+    "3": {
+     "wikitext_ce": 1.8249442923139159,
+     "fineweb_edu_ce": 2.1415767104974672,
+     "updates": 352
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7924380373577418,
+    "fineweb_edu_ce": 2.0970536566105435
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.8161456862498118,
+    "fineweb_edu_ce": 2.151790068807042,
+    "wikitext_sd": 0.012443108025834015,
+    "fineweb_edu_sd": 0.014443869838776182
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.022403141192716358,
+       "fineweb_edu_delta": 0.004767907171588259
+      },
+      "3": {
+       "wikitext_delta": -0.04783541216207676,
+       "fineweb_edu_delta": -0.042095775264648694
+      }
+     },
+     "wikitext_delta": -0.03511920218579236,
+     "wikitext_ci95": [
+      -0.04723781743386245,
+      -0.022620832211233594
+     ],
+     "fineweb_edu_delta": -0.018663954545454543,
+     "fineweb_edu_ci95": [
+      -0.032482058838383836,
+      -0.004726853156565642
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.016440694996063154,
+       "fineweb_edu_delta": 0.03471328311827104
+      },
+      "3": {
+       "wikitext_delta": 0.0031278124579421362,
+       "fineweb_edu_delta": -0.005888399206895656
+      }
+     },
+     "wikitext_delta": -0.0066564043715846965,
+     "wikitext_ci95": [
+      -0.014321633904062263,
+      0.00110826265368853
+     ],
+     "fineweb_edu_delta": 0.014412398989898989,
+     "fineweb_edu_ci95": [
+      0.0026081318181818175,
+      0.0264404119949495
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 1,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.028346183092635924,
+       "fineweb_edu_delta": 0.055226785802525935
+      },
+      "3": {
+       "wikitext_delta": 0.023252521229469636,
+       "fineweb_edu_delta": 0.011391528592780364
+      }
+     },
+     "wikitext_delta": 0.02579936338797814,
+     "wikitext_ci95": [
+      0.019286766195175435,
+      0.03257182879543835
+     ],
+     "fineweb_edu_delta": 0.033309111111111116,
+     "fineweb_edu_ci95": [
+      0.022935885227272745,
+      0.043213742424242425
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 0,
+     "seeds_better_on_fineweb_edu": 0,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": true
+    }
+   }
+  },
+  "804": {
+   "name": "delta_net_phsg5",
+   "parameters": 349962,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7734378547683434,
+     "fineweb_edu_ce": 2.1139628542240643,
+     "updates": 432
+    },
+    "2": {
+     "wikitext_ce": 1.8095312314720216,
+     "fineweb_edu_ce": 2.1485930691050665,
+     "updates": 372
+    },
+    "3": {
+     "wikitext_ce": 1.8031615738702242,
+     "fineweb_edu_ce": 2.1139402039029456,
+     "updates": 364
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7734378547683434,
+    "fineweb_edu_ce": 2.1139628542240643
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.806346402671123,
+    "fineweb_edu_ce": 2.131266636504006,
+    "wikitext_sd": 0.0045040280840673175,
+    "fineweb_edu_sd": 0.024503275971963077
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.020218989906402696,
+       "fineweb_edu_delta": -0.008642450839961402
+      },
+      "3": {
+       "wikitext_delta": -0.06961813060576838,
+       "fineweb_edu_delta": -0.06973228185917035
+      }
+     },
+     "wikitext_delta": -0.04491853551912569,
+     "wikitext_ci95": [
+      -0.055964486357186,
+      -0.0339279398157941
+     ],
+     "fineweb_edu_delta": -0.03918733333333332,
+     "fineweb_edu_ci95": [
+      -0.053464003914141384,
+      -0.02551231616161615
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.014256543709749492,
+       "fineweb_edu_delta": 0.021302925106721382
+      },
+      "3": {
+       "wikitext_delta": -0.01865490598574948,
+       "fineweb_edu_delta": -0.033524905801417315
+      }
+     },
+     "wikitext_delta": -0.016455737704918018,
+     "wikitext_ci95": [
+      -0.0223977095885093,
+      -0.010411100469304288
+     ],
+     "fineweb_edu_delta": -0.006110979797979788,
+     "fineweb_edu_ci95": [
+      -0.017542402398989864,
+      0.005405198737373729
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.030530334378949586,
+       "fineweb_edu_delta": 0.041816427790976274
+      },
+      "3": {
+       "wikitext_delta": 0.0014698027857780183,
+       "fineweb_edu_delta": -0.016244978001741295
+      }
+     },
+     "wikitext_delta": 0.01600003005464482,
+     "wikitext_ci95": [
+      0.00881977964702073,
+      0.022565426548620857
+     ],
+     "fineweb_edu_delta": 0.012785732323232333,
+     "fineweb_edu_ci95": [
+      4.035340909091917e-05,
+      0.02538631363636366
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 0,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "879": {
+   "name": "delta_net_psfr",
+   "parameters": 349956,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.8111857545007684,
+     "fineweb_edu_ce": 2.1423584516718144,
+     "updates": 376
+    },
+    "2": {
+     "wikitext_ce": 1.823787775181771,
+     "fineweb_edu_ce": 2.127290143998345,
+     "updates": 371
+    },
+    "3": {
+     "wikitext_ce": 1.8218164798559737,
+     "fineweb_edu_ce": 2.147465109704363,
+     "updates": 366
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.8111857545007684,
+    "fineweb_edu_ce": 2.1423584516718144
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.8228021275188724,
+    "fineweb_edu_ce": 2.137377626851354,
+    "wikitext_sd": 0.001393916292592628,
+    "fineweb_edu_sd": 0.014265855060931181
+   }
+  },
+  "908": {
+   "name": "delta_net_aft",
+   "parameters": 349950,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7795005177470617,
+     "fineweb_edu_ce": 2.0979240455295716,
+     "updates": 484
+    },
+    "2": {
+     "wikitext_ce": 1.7930826528651742,
+     "fineweb_edu_ce": 2.113186103301313,
+     "updates": 448
+    },
+    "3": {
+     "wikitext_ce": 1.8064838122533629,
+     "fineweb_edu_ce": 2.1474111089769234,
+     "updates": 392
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7795005177470617,
+    "fineweb_edu_ce": 2.0979240455295716
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.7997832325592684,
+    "fineweb_edu_ce": 2.1302986061391183,
+    "wikitext_sd": 0.009476050679149955,
+    "fineweb_edu_sd": 0.024200733599372172
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.03666756851325004,
+       "fineweb_edu_delta": -0.04404941664371487
+      },
+      "3": {
+       "wikitext_delta": -0.06629589222262977,
+       "fineweb_edu_delta": -0.03626137678519248
+      }
+     },
+     "wikitext_delta": -0.051481704918032806,
+     "wikitext_ci95": [
+      -0.06296514556878914,
+      -0.03921433432726682
+     ],
+     "fineweb_edu_delta": -0.040155414141414145,
+     "fineweb_edu_ci95": [
+      -0.05380597058080809,
+      -0.02681836022727275
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.030705122316596833,
+       "fineweb_edu_delta": -0.014104040697032083
+      },
+      "3": {
+       "wikitext_delta": -0.015332667602610872,
+       "fineweb_edu_delta": -5.400072743944051e-05
+      }
+     },
+     "wikitext_delta": -0.02301890710382514,
+     "wikitext_ci95": [
+      -0.030915442900815212,
+      -0.015174592127055122
+     ],
+     "fineweb_edu_delta": -0.007079060606060617,
+     "fineweb_edu_ci95": [
+      -0.018926998484848512,
+      0.005266416287878785
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 2,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.014081755772102245,
+       "fineweb_edu_delta": 0.006409461987222809
+      },
+      "3": {
+       "wikitext_delta": 0.004792041168916628,
+       "fineweb_edu_delta": 0.01722592707223658
+      }
+     },
+     "wikitext_delta": 0.0094368606557377,
+     "wikitext_ci95": [
+      0.004904604511970523,
+      0.013981127496964174
+     ],
+     "fineweb_edu_delta": 0.011817651515151505,
+     "fineweb_edu_ci95": [
+      0.00344794835858587,
+      0.019638598611111106
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 0,
+     "seeds_better_on_fineweb_edu": 0,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": true
+    }
+   }
+  },
+  "957": {
+   "name": "delta_net_psafg",
+   "parameters": 349962,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7673910346200614,
+     "fineweb_edu_ce": 2.098165599572331,
+     "updates": 434
+    },
+    "2": {
+     "wikitext_ce": 1.8074918446235968,
+     "fineweb_edu_ce": 2.1700658121805674,
+     "updates": 390
+    },
+    "3": {
+     "wikitext_ce": 1.8361222096938772,
+     "fineweb_edu_ce": 2.1371494097321793,
+     "updates": 346
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7673910346200614,
+    "fineweb_edu_ce": 2.098165599572331
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3
+    ],
+    "wikitext_ce": 1.821807027158737,
+    "fineweb_edu_ce": 2.1536076109563735,
+    "wikitext_sd": 0.020244725289041723,
+    "fineweb_edu_sd": 0.02327541138352071
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.022258376754827447,
+       "fineweb_edu_delta": 0.012830292235539442
+      },
+      "3": {
+       "wikitext_delta": -0.03665749478211544,
+       "fineweb_edu_delta": -0.04652307602993666
+      }
+     },
+     "wikitext_delta": -0.029457909836065586,
+     "wikitext_ci95": [
+      -0.040155348481328915,
+      -0.01812457256651643
+     ],
+     "fineweb_edu_delta": -0.016846338383838373,
+     "fineweb_edu_ci95": [
+      -0.028471798989898985,
+      -0.0050880626262626094
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.016295930558174243,
+       "fineweb_edu_delta": 0.042775668182222226
+      },
+      "3": {
+       "wikitext_delta": 0.014305729837903458,
+       "fineweb_edu_delta": -0.010315699972183623
+      }
+     },
+     "wikitext_delta": -0.0009951120218579218,
+     "wikitext_ci95": [
+      -0.00903467924863388,
+      0.0073198211078936105
+     ],
+     "fineweb_edu_delta": 0.01623001515151516,
+     "fineweb_edu_ci95": [
+      0.004349771590909078,
+      0.02821143661616162
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 1,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.028490947530524835,
+       "fineweb_edu_delta": 0.06328917086647712
+      },
+      "3": {
+       "wikitext_delta": 0.03443043860943096,
+       "fineweb_edu_delta": 0.0069642278274923974
+      }
+     },
+     "wikitext_delta": 0.031460655737704915,
+     "wikitext_ci95": [
+      0.025179544118240506,
+      0.03788389059940465
+     ],
+     "fineweb_edu_delta": 0.03512672727272728,
+     "fineweb_edu_ci95": [
+      0.024476794949494937,
+      0.045845874494949514
+     ],
+     "seeds": 2,
+     "seeds_better_on_wikitext": 0,
+     "seeds_better_on_fineweb_edu": 0,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": true
+    }
+   }
+  }
+ },
+ "confirmation_extended": {
+  "transformer": {
+   "name": "transformer_w96_rope",
+   "parameters": 349920,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.8826355082663209,
+     "fineweb_edu_ce": 2.221373703819076,
+     "updates": 662
+    },
+    "2": {
+     "wikitext_ce": 1.8297502213784242,
+     "fineweb_edu_ce": 2.157235519945028,
+     "updates": 709
+    },
+    "3": {
+     "wikitext_ce": 1.8727797044759926,
+     "fineweb_edu_ce": 2.183672485762116,
+     "updates": 649
+    },
+    "4": {
+     "wikitext_ce": 1.935699354688697,
+     "fineweb_edu_ce": 2.2685074648890566,
+     "updates": 614
+    },
+    "5": {
+     "wikitext_ce": 1.8811172627575483,
+     "fineweb_edu_ce": 2.201887734933128,
+     "updates": 619
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.8826355082663209,
+    "fineweb_edu_ce": 2.221373703819076
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.8798366358251655,
+    "fineweb_edu_ce": 2.202825801382332,
+    "wikitext_sd": 0.04351525616134937,
+    "fineweb_edu_sd": 0.04747028597081873
+   }
+  },
+  "151": {
+   "name": "delta_net_adaptive_mix_gate",
+   "parameters": 349920,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7489234648751875,
+     "fineweb_edu_ce": 2.0896712407513665,
+     "updates": 490
+    },
+    "2": {
+     "wikitext_ce": 1.7543853467998196,
+     "fineweb_edu_ce": 2.089483438942864,
+     "updates": 510
+    },
+    "3": {
+     "wikitext_ce": 1.8007032994328147,
+     "fineweb_edu_ce": 2.1103418692573213,
+     "updates": 433
+    },
+    "4": {
+     "wikitext_ce": 1.7890126944334712,
+     "fineweb_edu_ce": 2.128044112365566,
+     "updates": 427
+    },
+    "5": {
+     "wikitext_ce": 1.7852050987300585,
+     "fineweb_edu_ce": 2.133481903744377,
+     "updates": 445
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7489234648751875,
+    "fineweb_edu_ce": 2.0896712407513665
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.782326609849041,
+    "fineweb_edu_ce": 2.115337831077532,
+    "wikitext_sd": 0.019760282775915756,
+    "fineweb_edu_sd": 0.019866774476267147
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.07536487457860463,
+       "fineweb_edu_delta": -0.06775208100216412
+      },
+      "3": {
+       "wikitext_delta": -0.07207640504317792,
+       "fineweb_edu_delta": -0.07333061650479467
+      },
+      "4": {
+       "wikitext_delta": -0.1466866602552257,
+       "fineweb_edu_delta": -0.14046335252349085
+      },
+      "5": {
+       "wikitext_delta": -0.09591216402748981,
+       "fineweb_edu_delta": -0.06840583118875099
+      }
+     },
+     "wikitext_delta": -0.09751001229508197,
+     "wikitext_ci95": [
+      -0.10816642602407096,
+      -0.08647992788866499
+     ],
+     "fineweb_edu_delta": -0.08748798232323232,
+     "fineweb_edu_ci95": [
+      -0.0992145292929293,
+      -0.07461271597222222
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.06940242838195143,
+       "fineweb_edu_delta": -0.03780670505548134
+      },
+      "3": {
+       "wikitext_delta": -0.021113180423159017,
+       "fineweb_edu_delta": -0.03712324044704163
+      },
+      "4": {
+       "wikitext_delta": -0.03210255709100496,
+       "fineweb_edu_delta": -0.009894817283822022
+      },
+      "5": {
+       "wikitext_delta": -0.05273194980514395,
+       "fineweb_edu_delta": -0.03209433505912607
+      }
+     },
+     "wikitext_delta": -0.04383752322404372,
+     "wikitext_ci95": [
+      -0.05056279657617671,
+      -0.03694837114553635
+     ],
+     "fineweb_edu_delta": -0.029229780303030292,
+     "fineweb_edu_ci95": [
+      -0.036990473989898985,
+      -0.02142800233585858
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.024615550293252353,
+       "fineweb_edu_delta": -0.017293202371226446
+      },
+      "3": {
+       "wikitext_delta": -0.0009884716516315173,
+       "fineweb_edu_delta": -0.019843312647365607
+      },
+      "4": {
+       "wikitext_delta": -0.017581909300345977,
+       "fineweb_edu_delta": 0.016429495917762438
+      },
+      "5": {
+       "wikitext_delta": -0.02363401497315798,
+       "fineweb_edu_delta": -0.012662965904420176
+      }
+     },
+     "wikitext_delta": -0.01670500273224044,
+     "wikitext_ci95": [
+      -0.022260263068181813,
+      -0.011520943069456424
+     ],
+     "fineweb_edu_delta": -0.00834249494949494,
+     "fineweb_edu_ci95": [
+      -0.016035471780303016,
+      -0.0004973827020201893
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 3,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "259": {
+   "name": "delta_net_bias_init_mix_gate",
+   "parameters": 349932,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7381482589708817,
+     "fineweb_edu_ce": 2.0692434172116485,
+     "updates": 493
+    },
+    "2": {
+     "wikitext_ce": 1.7423277533497539,
+     "fineweb_edu_ce": 2.048473118426356,
+     "updates": 496
+    },
+    "3": {
+     "wikitext_ce": 1.779163193006968,
+     "fineweb_edu_ce": 2.1112244050737394,
+     "updates": 430
+    },
+    "4": {
+     "wikitext_ce": 1.7694259971721502,
+     "fineweb_edu_ce": 2.107142909400719,
+     "updates": 430
+    },
+    "5": {
+     "wikitext_ce": 1.801773221595862,
+     "fineweb_edu_ce": 2.111237776147642,
+     "updates": 424
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7381482589708817,
+    "fineweb_edu_ce": 2.0692434172116485
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.7731725412811836,
+    "fineweb_edu_ce": 2.0945195522621143,
+    "wikitext_sd": 0.024626032011253726,
+    "fineweb_edu_sd": 0.03075805765315454
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.08742246802867037,
+       "fineweb_edu_delta": -0.10876240151867211
+      },
+      "3": {
+       "wikitext_delta": -0.09361651146902461,
+       "fineweb_edu_delta": -0.07244808068837649
+      },
+      "4": {
+       "wikitext_delta": -0.1662733575165467,
+       "fineweb_edu_delta": -0.16136455548833784
+      },
+      "5": {
+       "wikitext_delta": -0.07934404116168636,
+       "fineweb_edu_delta": -0.09064995878548565
+      }
+     },
+     "wikitext_delta": -0.10666408606557376,
+     "wikitext_ci95": [
+      -0.11669193592886426,
+      -0.09602524479861885
+     ],
+     "fineweb_edu_delta": -0.10830625252525251,
+     "fineweb_edu_ci95": [
+      -0.12082799747474747,
+      -0.09560501584595958
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.08146002183201717,
+       "fineweb_edu_delta": -0.07881702557198933
+      },
+      "3": {
+       "wikitext_delta": -0.04265328684900571,
+       "fineweb_edu_delta": -0.036240704630623455
+      },
+      "4": {
+       "wikitext_delta": -0.051689254352325964,
+       "fineweb_edu_delta": -0.03079602024866901
+      },
+      "5": {
+       "wikitext_delta": -0.036163826939340504,
+       "fineweb_edu_delta": -0.05433846265586073
+      }
+     },
+     "wikitext_delta": -0.052991596994535525,
+     "wikitext_ci95": [
+      -0.0594301955666128,
+      -0.045986552918600175
+     ],
+     "fineweb_edu_delta": -0.05004805050505051,
+     "fineweb_edu_ci95": [
+      -0.05844168977272726,
+      -0.041562535164141406
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.03667314374331809,
+       "fineweb_edu_delta": -0.05830352288773444
+      },
+      "3": {
+       "wikitext_delta": -0.022528578077478212,
+       "fineweb_edu_delta": -0.018960776830947434
+      },
+      "4": {
+       "wikitext_delta": -0.037168606561666984,
+       "fineweb_edu_delta": -0.00447170704708455
+      },
+      "5": {
+       "wikitext_delta": -0.007065892107354532,
+       "fineweb_edu_delta": -0.03490709350115484
+      }
+     },
+     "wikitext_delta": -0.02585907650273223,
+     "wikitext_ci95": [
+      -0.03136458371484232,
+      -0.020549809777879242
+     ],
+     "fineweb_edu_delta": -0.029160765151515153,
+     "fineweb_edu_ci95": [
+      -0.036542840467171725,
+      -0.021389776010101016
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "437": {
+   "name": "delta_net_dual_path_fusion",
+   "parameters": 349920,
+   "is_control": false,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7718505113804306,
+     "fineweb_edu_ce": 2.117291832130171,
+     "updates": 444
+    },
+    "2": {
+     "wikitext_ce": 1.7847236221792395,
+     "fineweb_edu_ce": 2.1230112821684095,
+     "updates": 419
+    },
+    "3": {
+     "wikitext_ce": 1.7929354781218005,
+     "fineweb_edu_ce": 2.108650429922755,
+     "updates": 399
+    },
+    "4": {
+     "wikitext_ce": 1.7972049878536958,
+     "fineweb_edu_ce": 2.1326442240724277,
+     "updates": 403
+    },
+    "5": {
+     "wikitext_ce": 1.812711716383432,
+     "fineweb_edu_ce": 2.1541916138016868,
+     "updates": 400
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7718505113804306,
+    "fineweb_edu_ce": 2.117291832130171
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.7968939511345419,
+    "fineweb_edu_ce": 2.1296243874913197,
+    "wikitext_sd": 0.011748543977624537,
+    "fineweb_edu_sd": 0.019116381105056143
+   },
+   "versus": {
+    "transformer": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.045026599199184725,
+       "fineweb_edu_delta": -0.03422423777661843
+      },
+      "3": {
+       "wikitext_delta": -0.07984422635419208,
+       "fineweb_edu_delta": -0.07502205583936083
+      },
+      "4": {
+       "wikitext_delta": -0.13849436683500116,
+       "fineweb_edu_delta": -0.13586324081662893
+      },
+      "5": {
+       "wikitext_delta": -0.06840554637411622,
+       "fineweb_edu_delta": -0.04769612113144106
+      }
+     },
+     "wikitext_delta": -0.08294266666666666,
+     "wikitext_ci95": [
+      -0.09245239167329555,
+      -0.07289869881845135
+     ],
+     "fineweb_edu_delta": -0.07320141414141415,
+     "fineweb_edu_ci95": [
+      -0.08387416142676765,
+      -0.062016141603535344
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "879": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": -0.03906415300253152,
+       "fineweb_edu_delta": -0.004278861829935643
+      },
+      "3": {
+       "wikitext_delta": -0.028881001734173184,
+       "fineweb_edu_delta": -0.0388146797816078
+      },
+      "4": {
+       "wikitext_delta": -0.02391026367078042,
+       "fineweb_edu_delta": -0.0052947055769601015
+      },
+      "5": {
+       "wikitext_delta": -0.025225332151770363,
+       "fineweb_edu_delta": -0.01138462500181614
+      }
+     },
+     "wikitext_delta": -0.029270177595628416,
+     "wikitext_ci95": [
+      -0.034955299735702314,
+      -0.023315708097338513
+     ],
+     "fineweb_edu_delta": -0.014943212121212112,
+     "fineweb_edu_ci95": [
+      -0.023701353219696946,
+      -0.0061921027777777655
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 4,
+     "seeds_better_on_fineweb_edu": 4,
+     "better_on_both_sets_in_every_confirmation_seed": true,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    },
+    "458": {
+     "per_seed": {
+      "2": {
+       "wikitext_delta": 0.005722725086167557,
+       "fineweb_edu_delta": 0.01623464085431925
+      },
+      "3": {
+       "wikitext_delta": -0.008756292962645684,
+       "fineweb_edu_delta": -0.021534751981931777
+      },
+      "4": {
+       "wikitext_delta": -0.009389615880121438,
+       "fineweb_edu_delta": 0.021029607624624358
+      },
+      "5": {
+       "wikitext_delta": 0.003872602680215609,
+       "fineweb_edu_delta": 0.008046744152889751
+      }
+     },
+     "wikitext_delta": -0.002137657103825136,
+     "wikitext_ci95": [
+      -0.007523421909722222,
+      0.002900924785185362
+     ],
+     "fineweb_edu_delta": 0.005944073232323239,
+     "fineweb_edu_ci95": [
+      -0.0015494368055555547,
+      0.013421129292929289
+     ],
+     "seeds": 4,
+     "seeds_better_on_wikitext": 2,
+     "seeds_better_on_fineweb_edu": 1,
+     "better_on_both_sets_in_every_confirmation_seed": false,
+     "worse_on_both_sets_in_every_confirmation_seed": false
+    }
+   }
+  },
+  "458": {
+   "name": "delta_net_dlgm",
+   "parameters": 349944,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.7957707276259827,
+     "fineweb_edu_ce": 2.1161960304515426,
+     "updates": 403
+    },
+    "2": {
+     "wikitext_ce": 1.779000897093072,
+     "fineweb_edu_ce": 2.1067766413140903,
+     "updates": 451
+    },
+    "3": {
+     "wikitext_ce": 1.8016917710844462,
+     "fineweb_edu_ce": 2.130185181904687,
+     "updates": 396
+    },
+    "4": {
+     "wikitext_ce": 1.8065946037338172,
+     "fineweb_edu_ce": 2.1116146164478033,
+     "updates": 395
+    },
+    "5": {
+     "wikitext_ce": 1.8088391137032165,
+     "fineweb_edu_ce": 2.146144869648797,
+     "updates": 391
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.7957707276259827,
+    "fineweb_edu_ce": 2.1161960304515426
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.7990315964036379,
+    "fineweb_edu_ce": 2.1236803273288443,
+    "wikitext_sd": 0.013683224761980138,
+    "fineweb_edu_sd": 0.018058098595441587
+   }
+  },
+  "879": {
+   "name": "delta_net_psfr",
+   "parameters": 349956,
+   "is_control": true,
+   "per_seed": {
+    "1": {
+     "wikitext_ce": 1.8111857545007684,
+     "fineweb_edu_ce": 2.1423584516718144,
+     "updates": 376
+    },
+    "2": {
+     "wikitext_ce": 1.823787775181771,
+     "fineweb_edu_ce": 2.127290143998345,
+     "updates": 371
+    },
+    "3": {
+     "wikitext_ce": 1.8218164798559737,
+     "fineweb_edu_ce": 2.147465109704363,
+     "updates": 366
+    },
+    "4": {
+     "wikitext_ce": 1.8211152515244762,
+     "fineweb_edu_ce": 2.137938929649388,
+     "updates": 365
+    },
+    "5": {
+     "wikitext_ce": 1.8379370485352025,
+     "fineweb_edu_ce": 2.165576238803503,
+     "updates": 355
+    }
+   },
+   "selection_seed_1": {
+    "wikitext_ce": 1.8111857545007684,
+    "fineweb_edu_ce": 2.1423584516718144
+   },
+   "confirmation_mean": {
+    "seeds": [
+     2,
+     3,
+     4,
+     5
+    ],
+    "wikitext_ce": 1.826164138774356,
+    "fineweb_edu_ce": 2.1445676055388994,
+    "wikitext_sd": 0.007929731157565286,
+    "fineweb_edu_sd": 0.01625021254598441
+   }
+  }
+ },
+ "same_seed_run_twice": [
+  {
+   "arm": "transformer",
+   "seed": 2,
+   "updates": [
+    674,
+    709
+   ],
+   "wikitext_ce": [
+    1.8486559702982879,
+    1.8297502213784242
+   ],
+   "fineweb_edu_ce": [
+    2.169744975482054,
+    2.157235519945028
+   ],
+   "wikitext_abs_diff": 0.01890574891986363,
+   "fineweb_edu_abs_diff": 0.012509455537025982
+  },
+  {
+   "arm": "transformer",
+   "seed": 3,
+   "updates": [
+    679,
+    649
+   ],
+   "wikitext_ce": [
+    1.8556979117887995,
+    1.8727797044759926
+   ],
+   "fineweb_edu_ce": [
+    2.185346868378992,
+    2.183672485762116
+   ],
+   "wikitext_abs_diff": 0.01708179268719312,
+   "fineweb_edu_abs_diff": 0.0016743826168759135
+  },
+  {
+   "arm": "879",
+   "seed": 2,
+   "updates": [
+    391,
+    371
+   ],
+   "wikitext_ce": [
+    1.8037583406086115,
+    1.823787775181771
+   ],
+   "fineweb_edu_ce": [
+    2.155988161762207,
+    2.127290143998345
+   ],
+   "wikitext_abs_diff": 0.020029434573159532,
+   "fineweb_edu_abs_diff": 0.028698017763861827
+  },
+  {
+   "arm": "879",
+   "seed": 3,
+   "updates": [
+    386,
+    366
+   ],
+   "wikitext_ce": [
+    1.8081505590225175,
+    1.8218164798559737
+   ],
+   "fineweb_edu_ce": [
+    2.141637972543391,
+    2.147465109704363
+   ],
+   "wikitext_abs_diff": 0.013665920833456191,
+   "fineweb_edu_abs_diff": 0.00582713716097194
+  },
+  {
+   "arm": "458",
+   "seed": 2,
+   "updates": [
+    421,
+    451
+   ],
+   "wikitext_ce": [
+    1.7869624177055958,
+    1.779000897093072
+   ],
+   "fineweb_edu_ce": [
+    2.128709376027833,
+    2.1067766413140903
+   ],
+   "wikitext_abs_diff": 0.007961520612523865,
+   "fineweb_edu_abs_diff": 0.021932734713742796
+  },
+  {
+   "arm": "458",
+   "seed": 3,
+   "updates": [
+    408,
+    396
+   ],
+   "wikitext_ce": [
+    1.7942938911680284,
+    1.8016917710844462
+   ],
+   "fineweb_edu_ce": [
+    2.117071211524973,
+    2.130185181904687
+   ],
+   "wikitext_abs_diff": 0.007397879916417827,
+   "fineweb_edu_abs_diff": 0.013113970379714068
+  }
+ ],
+ "rows": [
+  {
+   "arm": "transformer",
+   "name": "transformer_w96_rope",
+   "tag": "T96_s1",
+   "parameters": 349920,
+   "updates": 662,
+   "byte_targets": 1355776,
+   "training_cpu_seconds": 120.013516689,
+   "byte_targets_per_cpu_second": 11296.860865375054,
+   "wikitext_ce_nats": 1.8826355082663209,
+   "fineweb_edu_ce_nats": 2.221373703819076,
+   "peak_rss_mib": 384.94140625,
+   "status": "ok",
+   "gallery_score": null,
+   "state_sha256": "44b2524fb2ad6a3485acbebb5b2d60e0fae5a9bf368f2b69eaa7860e62d1abec",
+   "source_sha256": null,
+   "wikitext_ce_at_60s": 2.064464765159233,
+   "fineweb_edu_ce_at_60s": 2.376006471115169,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true
+  },
+  {
+   "arm": "1017",
+   "name": "delta_net_hybrid_floor_gt",
+   "tag": "g1017_s1",
+   "parameters": 349977,
+   "updates": 335,
+   "byte_targets": 686080,
+   "training_cpu_seconds": 120.16736220300001,
+   "byte_targets_per_cpu_second": 5709.370559711528,
+   "wikitext_ce_nats": 1.8480977214504961,
+   "fineweb_edu_ce_nats": 2.169612930324468,
+   "peak_rss_mib": 469.42578125,
+   "status": "ok",
+   "gallery_score": 2.373162631669906,
+   "state_sha256": "b453f2b99b45945c2b5ed0a3a0b50526c73f2247e410766cfa305eb88347efaf",
+   "source_sha256": "a4e6619d848c3a044b91afbc6a99564326ca51a6c9e5399ad3a12ac8fac66c69",
+   "wikitext_ce_at_60s": 2.0314650451722756,
+   "fineweb_edu_ce_at_60s": 2.3173695322108756,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.01423210564663022,
+    "wikitext_ci95": [
+     -0.024312292395264105,
+     -0.003889829183181163
+    ],
+    "fineweb_edu_delta": -0.02254224915824919,
+    "fineweb_edu_ci95": [
+     -0.03765743939393943,
+     -0.00808627533670037
+    ]
+   },
+   "rank_by_sum": 74
+  },
+  {
+   "arm": "1031",
+   "name": "delta_net_hefth",
+   "tag": "g1031_s1",
+   "parameters": 349962,
+   "updates": 334,
+   "byte_targets": 684032,
+   "training_cpu_seconds": 120.051806,
+   "byte_targets_per_cpu_second": 5697.806828495358,
+   "wikitext_ce_nats": 1.8514902899737977,
+   "fineweb_edu_ce_nats": 2.1556993045566273,
+   "peak_rss_mib": 472.203125,
+   "status": "ok",
+   "gallery_score": 2.2217666349016474,
+   "state_sha256": "44bd2136663b442ac8d864728a40094edd445fbb9422365656de73b803ee64dc",
+   "source_sha256": "d3211189e71f914c4005378f653e7bf0559435b94df41b7bec21bcf7ffdee5d1",
+   "wikitext_ce_at_60s": 2.0355216219163323,
+   "fineweb_edu_ce_at_60s": 2.303336803102495,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.01083951548269579,
+    "wikitext_ci95": [
+     -0.022486210499294904,
+     0.0006131081162429688
+    ],
+    "fineweb_edu_delta": -0.03645582491582496,
+    "fineweb_edu_ci95": [
+     -0.05138540260942764,
+     -0.021654259175084224
+    ]
+   },
+   "rank_by_sum": 68
+  },
+  {
+   "arm": "1041",
+   "name": "delta_net_crdg",
+   "tag": "g1041_s1",
+   "parameters": 349941,
+   "updates": 341,
+   "byte_targets": 698368,
+   "training_cpu_seconds": 120.229805826,
+   "byte_targets_per_cpu_second": 5808.609564010259,
+   "wikitext_ce_nats": 1.8645008175897047,
+   "fineweb_edu_ce_nats": 2.1550568769170657,
+   "peak_rss_mib": 483.76953125,
+   "status": "ok",
+   "gallery_score": 2.396768402421852,
+   "state_sha256": "388cd5b82cb13b19d196347cac8c6c5b64edaaa6266ccb06af51acddc9326fcc",
+   "source_sha256": "48c552937a51ad86b59300481795ba2bd6a9d766f4b58c7c9d50f65cbd460158",
+   "wikitext_ce_at_60s": 2.041952940156067,
+   "fineweb_edu_ce_at_60s": 2.3166599557934955,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.0021710255009107717,
+    "wikitext_ci95": [
+     -0.0088901739361702,
+     0.013323657083409298
+    ],
+    "fineweb_edu_delta": -0.03709831986531988,
+    "fineweb_edu_ci95": [
+     -0.051103812457912484,
+     -0.023726604292929353
+    ]
+   },
+   "rank_by_sum": 75
+  },
+  {
+   "arm": "1045",
+   "name": "delta_net_aefg_hr",
+   "tag": "g1045_s1",
+   "parameters": 349992,
+   "updates": 318,
+   "byte_targets": 651264,
+   "training_cpu_seconds": 120.18830019999999,
+   "byte_targets_per_cpu_second": 5418.6971520211255,
+   "wikitext_ce_nats": 1.8428267684210298,
+   "fineweb_edu_ce_nats": 2.161143269858888,
+   "peak_rss_mib": 470.453125,
+   "status": "ok",
+   "gallery_score": 2.301352842470828,
+   "state_sha256": "c00fa8cc7f5b46a6eabf2ac0d028075ce52721ff47833c8287cedb9482ea1991",
+   "source_sha256": "3d83473fd95a7acbf6766ae99b54ef8c6d39b085957b5ab33b7408c18be8134d",
+   "wikitext_ce_at_60s": 2.033607125555887,
+   "fineweb_edu_ce_at_60s": 2.295480613509001,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.019503023679417104,
+    "wikitext_ci95": [
+     -0.030456293583358624,
+     -0.008074984201114473
+    ],
+    "fineweb_edu_delta": -0.03101188552188553,
+    "fineweb_edu_ci95": [
+     -0.04473982786195286,
+     -0.01738974898989898
+    ]
+   },
+   "rank_by_sum": 66
+  },
+  {
+   "arm": "1051",
+   "name": "delta_net_rggf",
+   "tag": "g1051_s1",
+   "parameters": 349956,
+   "updates": 339,
+   "byte_targets": 694272,
+   "training_cpu_seconds": 120.23267452300003,
+   "byte_targets_per_cpu_second": 5774.403694789211,
+   "wikitext_ce_nats": 1.8277895179983603,
+   "fineweb_edu_ce_nats": 2.1331576290776653,
+   "peak_rss_mib": 479.0234375,
+   "status": "ok",
+   "gallery_score": 2.1384472997755024,
+   "state_sha256": "1e8803541f5ffcc476dd13c3a6e19a9407276f89b51dd1c68c5f200369575553",
+   "source_sha256": "f57fbefd781a1040f1762ce42df83d776facf1bdf74e45a43a48575a6623f64f",
+   "wikitext_ce_at_60s": 2.0153805482592126,
+   "fineweb_edu_ce_at_60s": 2.300310168440388,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.03454031876138431,
+    "wikitext_ci95": [
+     -0.047175807422477706,
+     -0.022321442928181084
+    ],
+    "fineweb_edu_delta": -0.05899755218855222,
+    "fineweb_edu_ci95": [
+     -0.07659563299663302,
+     -0.04150115900673405
+    ]
+   },
+   "rank_by_sum": 42
+  },
+  {
+   "arm": "1081",
+   "name": "delta_net_entropy_cagf_rc_norm",
+   "tag": "g1081_s1",
+   "parameters": 349941,
+   "updates": 314,
+   "byte_targets": 643072,
+   "training_cpu_seconds": 120.18228113700002,
+   "byte_targets_per_cpu_second": 5350.805409217849,
+   "wikitext_ce_nats": 1.846397399931685,
+   "fineweb_edu_ce_nats": 2.1677076898167424,
+   "peak_rss_mib": 471.4375,
+   "status": "ok",
+   "gallery_score": 2.382574929900649,
+   "state_sha256": "5e9cabf155e320b8e5b7f055449ade525f7cf57334814f2742e7c90b43fa632e",
+   "source_sha256": "95769712260f1da987c5139b257410dfcb1df9d4e81d0f2515480585d3505e72",
+   "wikitext_ce_at_60s": 2.0408465046507844,
+   "fineweb_edu_ce_at_60s": 2.330202060074425,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.015932422586520927,
+    "wikitext_ci95": [
+     -0.026502609468549508,
+     -0.004689860414509972
+    ],
+    "fineweb_edu_delta": -0.024447542087542115,
+    "fineweb_edu_ci95": [
+     -0.03863932828282833,
+     -0.010236325000000032
+    ]
+   },
+   "rank_by_sum": 71
+  },
+  {
+   "arm": "1132",
+   "name": "delta_net_hpaf",
+   "tag": "g1132_s1",
+   "parameters": 349950,
+   "updates": 310,
+   "byte_targets": 634880,
+   "training_cpu_seconds": 120.24113798500002,
+   "byte_targets_per_cpu_second": 5280.0564818273815,
+   "wikitext_ce_nats": 1.8499502578108262,
+   "fineweb_edu_ce_nats": 2.157493932323942,
+   "peak_rss_mib": 473.7265625,
+   "status": "ok",
+   "gallery_score": 2.3205139694978674,
+   "state_sha256": "d5dc59d4d1b8cb10a72e4f521272f503f1b19fe781aa1e52b2f09d57d440e82c",
+   "source_sha256": "d1688bccaa32d7e60de5bd870a53365ead51c95c953b8d28b4e714bfa844a9ac",
+   "wikitext_ce_at_60s": 2.029776302455825,
+   "fineweb_edu_ce_at_60s": 2.2932411828186465,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.012379597449908904,
+    "wikitext_ci95": [
+     -0.023087847673641342,
+     -0.00016317578702839883
+    ],
+    "fineweb_edu_delta": -0.03466128956228958,
+    "fineweb_edu_ci95": [
+     -0.049905897895622914,
+     -0.019720968013468055
+    ]
+   },
+   "rank_by_sum": 69
+  },
+  {
+   "arm": "1155",
+   "name": "delta_net_triscale",
+   "tag": "g1155_s1",
+   "parameters": 349944,
+   "updates": 280,
+   "byte_targets": 573440,
+   "training_cpu_seconds": 120.414912751,
+   "byte_targets_per_cpu_second": 4762.200851200117,
+   "wikitext_ce_nats": 1.877928506241784,
+   "fineweb_edu_ce_nats": 2.177128200453421,
+   "peak_rss_mib": 502.67578125,
+   "status": "ok",
+   "gallery_score": 2.5772453216012163,
+   "state_sha256": "ea9e6be4972f155a0add3078534dca2e6765216d287a24610a24620b08280fb6",
+   "source_sha256": "5894f5c19d258dff4976ead226be58cabe8f2ff163dc30bd81028c64c965c527",
+   "wikitext_ce_at_60s": 2.0687447959679734,
+   "fineweb_edu_ce_at_60s": 2.316397072255981,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.0155986976320583,
+    "wikitext_ci95": [
+     0.004245890067693765,
+     0.02744420153655998
+    ],
+    "fineweb_edu_delta": -0.01502695622895624,
+    "fineweb_edu_ci95": [
+     -0.029262529040404047,
+     -0.0011821165824916315
+    ]
+   },
+   "rank_by_sum": 96
+  },
+  {
+   "arm": "1167",
+   "name": "delta_net_headgated",
+   "tag": "g1167_s1",
+   "parameters": 349953,
+   "updates": 320,
+   "byte_targets": 655360,
+   "training_cpu_seconds": 120.121465537,
+   "byte_targets_per_cpu_second": 5455.810891668942,
+   "wikitext_ce_nats": 1.8400352231651005,
+   "fineweb_edu_ce_nats": 2.161169585744716,
+   "peak_rss_mib": 468.36328125,
+   "status": "ok",
+   "gallery_score": 2.6026287824803895,
+   "state_sha256": "be6c54bbd5297ba10ec5c8293a2ae3da7d07d4b4318b63f8c451f3b801e7df41",
+   "source_sha256": "a7110317b35bd0813715f948882c258d8febdb08c2433841be8d7609235cd631",
+   "wikitext_ce_at_60s": 2.0396608801835825,
+   "fineweb_edu_ce_at_60s": 2.2949978629286862,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.022294608378870658,
+    "wikitext_ci95": [
+     -0.032308887555493625,
+     -0.012235032272827687
+    ],
+    "fineweb_edu_delta": -0.030985612794612816,
+    "fineweb_edu_ci95": [
+     -0.04692291919191921,
+     -0.014862607912457944
+    ]
+   },
+   "rank_by_sum": 60
+  },
+  {
+   "arm": "1175",
+   "name": "delta_net_annealed_eklf",
+   "tag": "g1175_s1",
+   "parameters": 349992,
+   "updates": 339,
+   "byte_targets": 694272,
+   "training_cpu_seconds": 120.019453758,
+   "byte_targets_per_cpu_second": 5784.662221508592,
+   "wikitext_ce_nats": 1.8232400559240134,
+   "fineweb_edu_ce_nats": 2.127342535106826,
+   "peak_rss_mib": 458.97265625,
+   "status": "ok",
+   "gallery_score": 2.1498436554682687,
+   "state_sha256": "919846bc88346ab6f674d9349bd9854776ec01e9a3b87c65d4087e547fcd0801",
+   "source_sha256": "8502465628e52acb9aff5ff92278195ffa63cd89360c8bfb36a6fc482d8bc3b7",
+   "wikitext_ce_at_60s": 2.0195739156215344,
+   "fineweb_edu_ce_at_60s": 2.2826349506024672,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.03908974499089251,
+    "wikitext_ci95": [
+     -0.0513484400981399,
+     -0.026682958582585563
+    ],
+    "fineweb_edu_delta": -0.06481267340067344,
+    "fineweb_edu_ci95": [
+     -0.08346299023569023,
+     -0.04644850521885524
+    ]
+   },
+   "rank_by_sum": 31
+  },
+  {
+   "arm": "1195",
+   "name": "delta_net_afbt",
+   "tag": "g1195_s1",
+   "parameters": 349950,
+   "updates": 424,
+   "byte_targets": 868352,
+   "training_cpu_seconds": 120.310463373,
+   "byte_targets_per_cpu_second": 7217.593346871566,
+   "wikitext_ce_nats": 1.8143668708817036,
+   "fineweb_edu_ce_nats": 2.1422534466851024,
+   "peak_rss_mib": 455.66796875,
+   "status": "ok",
+   "gallery_score": 2.526950010564208,
+   "state_sha256": "729a2c86721055e8c8fe91f51f3d5d3717709f9a10bf99effb0ff74b0f8b6de7",
+   "source_sha256": "c389bf967371a9762bb2dd9bd1193ec27d6a439016e31c84ad23fb372c009ff7",
+   "wikitext_ce_at_60s": 1.9583496120936443,
+   "fineweb_edu_ce_at_60s": 2.2577737189582274,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.047962963570127484,
+    "wikitext_ci95": [
+     -0.059802514578895356,
+     -0.035445915163532155
+    ],
+    "fineweb_edu_delta": -0.04990171380471381,
+    "fineweb_edu_ci95": [
+     -0.06607673021885521,
+     -0.03359796877104376
+    ]
+   },
+   "rank_by_sum": 39
+  },
+  {
+   "arm": "1221",
+   "name": "delta_net_oahmgr",
+   "tag": "g1221_s1",
+   "parameters": 349950,
+   "updates": 275,
+   "byte_targets": 563200,
+   "training_cpu_seconds": 120.18635275599999,
+   "byte_targets_per_cpu_second": 4686.05617098139,
+   "wikitext_ce_nats": 1.8819517098179155,
+   "fineweb_edu_ce_nats": 2.1579208097084135,
+   "peak_rss_mib": 483.73828125,
+   "status": "ok",
+   "gallery_score": 2.541570423214886,
+   "state_sha256": "31f6fc7267ef341537d02dbf881618b11608bbe8e9bc58fda8f3f170fcc4e94d",
+   "source_sha256": "4914648a666289b4bf2fdafa1084a4065df68d3bfa4f64afb117b8ec8ce4f08a",
+   "wikitext_ce_at_60s": 2.0752519362465836,
+   "fineweb_edu_ce_at_60s": 2.327180124510987,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.01962190528233153,
+    "wikitext_ci95": [
+     0.007691864016267687,
+     0.032080289963673514
+    ],
+    "fineweb_edu_delta": -0.034234400673400715,
+    "fineweb_edu_ci95": [
+     -0.04870589377104383,
+     -0.02019338855218861
+    ]
+   },
+   "rank_by_sum": 87
+  },
+  {
+   "arm": "1235",
+   "name": "delta_net_mfg",
+   "tag": "g1235_s1",
+   "parameters": 349956,
+   "updates": 319,
+   "byte_targets": 653312,
+   "training_cpu_seconds": 120.395400387,
+   "byte_targets_per_cpu_second": 5426.386704973682,
+   "wikitext_ce_nats": 1.8469252526909499,
+   "fineweb_edu_ce_nats": 2.156495620697327,
+   "peak_rss_mib": 480.16015625,
+   "status": "ok",
+   "gallery_score": 2.4249056537158906,
+   "state_sha256": "8e90cda6b727796f7d8e532b6222c7eab8b98956f4bacda3b69fe5fe94101e4e",
+   "source_sha256": "5dd7fd063d5f37e7fc22e4639ac82c559d31613747d9df13d4d99d5bfde2f2e1",
+   "wikitext_ce_at_60s": 2.043282158931684,
+   "fineweb_edu_ce_at_60s": 2.3008948544641226,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.015404542805100167,
+    "wikitext_ci95": [
+     -0.02614923003448735,
+     -0.004512538355828047
+    ],
+    "fineweb_edu_delta": -0.0356595521885522,
+    "fineweb_edu_ci95": [
+     -0.05024225387205385,
+     -0.021056480723905736
+    ]
+   },
+   "rank_by_sum": 65
+  },
+  {
+   "arm": "1252",
+   "name": "delta_net_adgr",
+   "tag": "g1252_s1",
+   "parameters": 350028,
+   "updates": 414,
+   "byte_targets": 847872,
+   "training_cpu_seconds": 120.23997202599996,
+   "byte_targets_per_cpu_second": 7051.498646528804,
+   "wikitext_ce_nats": 1.787941601129037,
+   "fineweb_edu_ce_nats": 2.1174437932973182,
+   "peak_rss_mib": 478.359375,
+   "status": "ok",
+   "gallery_score": 2.471467814300116,
+   "state_sha256": "491c71e5911212352e7f35d2bcc4ed80ec065d3a980ed80c03b7f294d5e9573b",
+   "source_sha256": "0cf729c24611666aafc732b0a27829afc41d4c8cbb178c034aa57a4f7180d1d7",
+   "wikitext_ce_at_60s": 1.9487838107263558,
+   "fineweb_edu_ce_at_60s": 2.231330458269037,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.07438822040072857,
+    "wikitext_ci95": [
+     -0.08756692336030707,
+     -0.06043498850918712
+    ],
+    "fineweb_edu_delta": -0.07471139057239062,
+    "fineweb_edu_ci95": [
+     -0.09031219722222229,
+     -0.059405437878787895
+    ]
+   },
+   "rank_by_sum": 13
+  },
+  {
+   "arm": "1283",
+   "name": "delta_net_hybfloor",
+   "tag": "g1283_s1",
+   "parameters": 349962,
+   "updates": 328,
+   "byte_targets": 671744,
+   "training_cpu_seconds": 120.199178471,
+   "byte_targets_per_cpu_second": 5588.590608895627,
+   "wikitext_ce_nats": 1.8621650885388086,
+   "fineweb_edu_ce_nats": 2.1766248191800224,
+   "peak_rss_mib": 475.28515625,
+   "status": "ok",
+   "gallery_score": 2.5159054598618904,
+   "state_sha256": "815069c51816e92caf21f84d0d63c9889647dedc4bbd4fde49f56861f22bbfee",
+   "source_sha256": "5b3238b839b074b4983f0983c0031fed479bcf43e444b8d9b698111bbdfdb109",
+   "wikitext_ce_at_60s": 2.0721202428931194,
+   "fineweb_edu_ce_at_60s": 2.3344734826806497,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.00016470127504551,
+    "wikitext_ci95": [
+     -0.012180063864522372,
+     0.012317913961321158
+    ],
+    "fineweb_edu_delta": -0.015530360269360275,
+    "fineweb_edu_ci95": [
+     -0.029263522727272746,
+     -0.001847068771043763
+    ]
+   },
+   "rank_by_sum": 85
+  },
+  {
+   "arm": "1298",
+   "name": "delta_net_aeoc",
+   "tag": "g1298_s1",
+   "parameters": 349974,
+   "updates": 309,
+   "byte_targets": 632832,
+   "training_cpu_seconds": 120.078731403,
+   "byte_targets_per_cpu_second": 5270.142285865201,
+   "wikitext_ce_nats": 1.8715721301299129,
+   "fineweb_edu_ce_nats": 2.1687217041534863,
+   "peak_rss_mib": 495.49609375,
+   "status": "ok",
+   "gallery_score": 2.32705498166846,
+   "state_sha256": "d4e3fb6af805f1c5e1200ac32c910bd202c7c81bd9f712deeb2864ad0be22973",
+   "source_sha256": "bd894f9e443bf26fd0089bbb3e5038a4fbd5187612065b36b2534ccfcf4b49a5",
+   "wikitext_ce_at_60s": 2.055270198287887,
+   "fineweb_edu_ce_at_60s": 2.3093895180831874,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.009242320582877986,
+    "wikitext_ci95": [
+     -0.00040724541218634135,
+     0.019847165283356016
+    ],
+    "fineweb_edu_delta": -0.023433511784511796,
+    "fineweb_edu_ci95": [
+     -0.03790700404040404,
+     -0.010106285185185174
+    ]
+   },
+   "rank_by_sum": 88
+  },
+  {
+   "arm": "1311",
+   "name": "delta_net_cagf_rc_pf_hybrid",
+   "tag": "g1311_s1",
+   "parameters": 349944,
+   "updates": 307,
+   "byte_targets": 628736,
+   "training_cpu_seconds": 120.01082622700001,
+   "byte_targets_per_cpu_second": 5238.994012179771,
+   "wikitext_ce_nats": 1.8548768969453175,
+   "fineweb_edu_ce_nats": 2.1838709914405334,
+   "peak_rss_mib": 474.7421875,
+   "status": "ok",
+   "gallery_score": 2.5259112497116387,
+   "state_sha256": "b350846c19bae8c70f0a562157ef5600ba086922eb4ecdaca23daf28fa500ea1",
+   "source_sha256": "8ed3f3858b70f781601dc71c23a4645312404c1ff6f5dab0728d8a6ae02b48fc",
+   "wikitext_ce_at_60s": 2.0490473626498296,
+   "fineweb_edu_ce_at_60s": 2.3090424857733636,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.007452925318761369,
+    "wikitext_ci95": [
+     -0.019589308737726477,
+     0.005790293684020857
+    ],
+    "fineweb_edu_delta": -0.008284168350168339,
+    "fineweb_edu_ci95": [
+     -0.02474535968013468,
+     0.0075844957912457765
+    ]
+   },
+   "rank_by_sum": 84
+  },
+  {
+   "arm": "1338",
+   "name": "delta_net_cagf_mf",
+   "tag": "g1338_s1",
+   "parameters": 349938,
+   "updates": 319,
+   "byte_targets": 653312,
+   "training_cpu_seconds": 120.03788843999999,
+   "byte_targets_per_cpu_second": 5442.54825280897,
+   "wikitext_ce_nats": 1.8390780285762882,
+   "fineweb_edu_ce_nats": 2.140283824749662,
+   "peak_rss_mib": 478.3203125,
+   "status": "ok",
+   "gallery_score": 2.496961368803032,
+   "state_sha256": "85a6762a3bfb3778ceab7485ad5a43ea684f27728ca164d3b80fa9a30dc3fabe",
+   "source_sha256": "722bb5685a42fa76be7a0735009c8eff85fd1b23ab07eba44c37ef5957fe7b89",
+   "wikitext_ce_at_60s": 2.037902790567599,
+   "fineweb_edu_ce_at_60s": 2.310532662197639,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.023251810564662998,
+    "wikitext_ci95": [
+     -0.03520457040777618,
+     -0.011141772777777764
+    ],
+    "fineweb_edu_delta": -0.05187136026936028,
+    "fineweb_edu_ci95": [
+     -0.06711738872053875,
+     -0.03655376750841751
+    ]
+   },
+   "rank_by_sum": 48
+  },
+  {
+   "arm": "1349",
+   "name": "delta_net_msfr_mn",
+   "tag": "g1349_s1",
+   "parameters": 350016,
+   "updates": 348,
+   "byte_targets": 712704,
+   "training_cpu_seconds": 120.166502374,
+   "byte_targets_per_cpu_second": 5930.970660873668,
+   "wikitext_ce_nats": 1.8604978919060946,
+   "fineweb_edu_ce_nats": 2.178302642952356,
+   "peak_rss_mib": 458.05859375,
+   "status": "ok",
+   "gallery_score": 2.4105799963989067,
+   "state_sha256": "0a89a70d4c384ea270ee65da8301020edb059296d095905830dac5f2445478e9",
+   "source_sha256": "f123e8718439a62fb38a38e919f7487cd719eddb10b5c00a37c925664c01fcea",
+   "wikitext_ce_at_60s": 1.9996666194322443,
+   "fineweb_edu_ce_at_60s": 2.2713242341794633,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.0018319089253187402,
+    "wikitext_ci95": [
+     -0.012913554244639894,
+     0.009772955367723619
+    ],
+    "fineweb_edu_delta": -0.013852471380471397,
+    "fineweb_edu_ci95": [
+     -0.029947971464646433,
+     0.0022335280303029787
+    ]
+   },
+   "rank_by_sum": 86
+  },
+  {
+   "arm": "1350",
+   "name": "delta_net_hdsr",
+   "tag": "g1350_s1",
+   "parameters": 349980,
+   "updates": 360,
+   "byte_targets": 737280,
+   "training_cpu_seconds": 120.14854774599999,
+   "byte_targets_per_cpu_second": 6136.403758775733,
+   "wikitext_ce_nats": 1.857945217309249,
+   "fineweb_edu_ce_nats": 2.190590205463488,
+   "peak_rss_mib": 475.21875,
+   "status": "ok",
+   "gallery_score": 2.4518326847934553,
+   "state_sha256": "f44a2c5cb3b734053a113d95fdfe068aaf07106e3c07a7b3ec4bb9458d095983",
+   "source_sha256": "fd539786a1316df385a14ceb96b99431b61ae3f83828d6293f3369a25491b1e5",
+   "wikitext_ce_at_60s": 2.0467496822205193,
+   "fineweb_edu_ce_at_60s": 2.3017468677529984,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.004384641165755907,
+    "wikitext_ci95": [
+     -0.014241583081501804,
+     0.00563323060218114
+    ],
+    "fineweb_edu_delta": -0.0015649360269360296,
+    "fineweb_edu_ci95": [
+     -0.018001550925925928,
+     0.014697183585858588
+    ]
+   },
+   "rank_by_sum": 92
+  },
+  {
+   "arm": "1354",
+   "name": "delta_net_omsgf",
+   "tag": "g1354_s1",
+   "parameters": 349962,
+   "updates": 301,
+   "byte_targets": 616448,
+   "training_cpu_seconds": 120.312801545,
+   "byte_targets_per_cpu_second": 5123.710794561068,
+   "wikitext_ce_nats": 1.8676472265127542,
+   "fineweb_edu_ce_nats": 2.169846744061438,
+   "peak_rss_mib": 468.4140625,
+   "status": "ok",
+   "gallery_score": 2.3619759835083416,
+   "state_sha256": "c8ef34143f2d6f45b334b609044f415c6d8e2968f67792871862c52a39d8ed4b",
+   "source_sha256": "9acc1dd8c77ca4e2b336721434ceb7eb4afe323cf08fb8018dba604f216a98fd",
+   "wikitext_ce_at_60s": 2.040048595198896,
+   "fineweb_edu_ce_at_60s": 2.3001976818959298,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.005317424408014594,
+    "wikitext_ci95": [
+     -0.0051904282725736385,
+     0.016499312278291545
+    ],
+    "fineweb_edu_delta": -0.022308430976431017,
+    "fineweb_edu_ci95": [
+     -0.03773523501683504,
+     -0.0070167825757576074
+    ]
+   },
+   "rank_by_sum": 82
+  },
+  {
+   "arm": "1360",
+   "name": "delta_net_hafs",
+   "tag": "g1360_s1",
+   "parameters": 349992,
+   "updates": 332,
+   "byte_targets": 679936,
+   "training_cpu_seconds": 120.252256567,
+   "byte_targets_per_cpu_second": 5654.247324840557,
+   "wikitext_ce_nats": 1.8758150957158852,
+   "fineweb_edu_ce_nats": 2.1957267455500986,
+   "peak_rss_mib": 467.09765625,
+   "status": "ok",
+   "gallery_score": 2.2672896888828653,
+   "state_sha256": "b6dba3c8892bace69330c7199dd41907efd284dd853702d21771c05855f60129",
+   "source_sha256": "4e74bdb288844d204b41f13c6ade1d4ac94e49b17428a9ea366ea5486c7f5b5e",
+   "wikitext_ce_at_60s": 2.0896552808809736,
+   "fineweb_edu_ce_at_60s": 2.350501576081685,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.013485282331511871,
+    "wikitext_ci95": [
+     0.003670051336426105,
+     0.023478838192883933
+    ],
+    "fineweb_edu_delta": 0.0035715084175084056,
+    "fineweb_edu_ci95": [
+     -0.01068137020202021,
+     0.017262793350168355
+    ]
+   },
+   "rank_by_sum": 97
+  },
+  {
+   "arm": "1370",
+   "name": "delta_net_tareia",
+   "tag": "g1370_s1",
+   "parameters": 349980,
+   "updates": 414,
+   "byte_targets": 847872,
+   "training_cpu_seconds": 120.231326666,
+   "byte_targets_per_cpu_second": 7052.005691955557,
+   "wikitext_ce_nats": 1.8421309099077623,
+   "fineweb_edu_ce_nats": 2.1571759179751115,
+   "peak_rss_mib": 460.765625,
+   "status": "ok",
+   "gallery_score": 2.6819815530699818,
+   "state_sha256": "36e235e397dac32b36c7cc75f7487c61405598bf3ac7e8e9cc9f43133b5248d0",
+   "source_sha256": "15a316f442c3365477da3bde4381a4fa9e69ebac0b595fe5821b73122acfd99d",
+   "wikitext_ce_at_60s": 1.9848523984405926,
+   "fineweb_edu_ce_at_60s": 2.277568150627083,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.020198897996357,
+    "wikitext_ci95": [
+     -0.03128788559812784,
+     -0.008179289446959675
+    ],
+    "fineweb_edu_delta": -0.03497923905723907,
+    "fineweb_edu_ci95": [
+     -0.05065722962962965,
+     -0.019704266835016835
+    ]
+   },
+   "rank_by_sum": 58
+  },
+  {
+   "arm": "1393",
+   "name": "delta_net_syngf",
+   "tag": "g1393_s1",
+   "parameters": 349944,
+   "updates": 388,
+   "byte_targets": 794624,
+   "training_cpu_seconds": 120.018814027,
+   "byte_targets_per_cpu_second": 6620.828629595003,
+   "wikitext_ce_nats": 1.7967714974030986,
+   "fineweb_edu_ce_nats": 2.1395732754960837,
+   "peak_rss_mib": 477.8515625,
+   "status": "ok",
+   "gallery_score": 2.6338094871733717,
+   "state_sha256": "8ca75dfc2bc446aa3bcc34be8f0982da6f15deffd760e2c25cda9e23c6a7180b",
+   "source_sha256": "d96ab556464ea98c7944e34b72a4d33421e069713d6c1e4d54477547df0ab573",
+   "wikitext_ce_at_60s": 1.9602059225759159,
+   "fineweb_edu_ce_at_60s": 2.2256133650523577,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06555829690346082,
+    "wikitext_ci95": [
+     -0.07777691815450521,
+     -0.05279860555134752
+    ],
+    "fineweb_edu_delta": -0.05258192592592595,
+    "fineweb_edu_ci95": [
+     -0.06833767811447813,
+     -0.03795784966329968
+    ]
+   },
+   "rank_by_sum": 27
+  },
+  {
+   "arm": "1396",
+   "name": "delta_net_cagf_dpaf_eash",
+   "tag": "g1396_s1",
+   "parameters": 349950,
+   "updates": 296,
+   "byte_targets": 606208,
+   "training_cpu_seconds": 120.13286384099999,
+   "byte_targets_per_cpu_second": 5046.146246894916,
+   "wikitext_ce_nats": 1.8657026568464394,
+   "fineweb_edu_ce_nats": 2.182943249849463,
+   "peak_rss_mib": 488.10546875,
+   "status": "ok",
+   "gallery_score": 2.3529653763754217,
+   "state_sha256": "0226317cddd6e9498d8ba7e57c2b587ceda0e51ae9c3ca5f9e3eb9f3ed1a9144",
+   "source_sha256": "870af837f43fd2032ffda8bdbbb104600bb8b196024b7e2826b3c719501f52cc",
+   "wikitext_ce_at_60s": 2.0599860338888174,
+   "fineweb_edu_ce_at_60s": 2.332439025795391,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.0033728233151184076,
+    "wikitext_ci95": [
+     -0.006378976032369996,
+     0.014307552427490555
+    ],
+    "fineweb_edu_delta": -0.009211885521885538,
+    "fineweb_edu_ci95": [
+     -0.02260716414141417,
+     0.004328708080808064
+    ]
+   },
+   "rank_by_sum": 93
+  },
+  {
+   "arm": "1408",
+   "name": "delta_net_efagm",
+   "tag": "g1408_s1",
+   "parameters": 349980,
+   "updates": 355,
+   "byte_targets": 727040,
+   "training_cpu_seconds": 120.223790296,
+   "byte_targets_per_cpu_second": 6047.388775632285,
+   "wikitext_ce_nats": 1.8499118752074717,
+   "fineweb_edu_ce_nats": 2.1522404971415168,
+   "peak_rss_mib": 467.0234375,
+   "status": "ok",
+   "gallery_score": 2.2336832444323176,
+   "state_sha256": "31f8866e8efacf58464478747ddb0e5cadf3362509f6e9c1e73fcfc11c40bd08",
+   "source_sha256": "c586702e1fe6190abd9933baffdb68b5801946148aaaadb8da57f963a5ec7eb7",
+   "wikitext_ce_at_60s": 2.0211936208145667,
+   "fineweb_edu_ce_at_60s": 2.291646077387529,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.012417908925318738,
+    "wikitext_ci95": [
+     -0.021948406293080754,
+     -0.002274597707748156
+    ],
+    "fineweb_edu_delta": -0.03991471380471382,
+    "fineweb_edu_ci95": [
+     -0.057452767592592616,
+     -0.022378682239057316
+    ]
+   },
+   "rank_by_sum": 61
+  },
+  {
+   "arm": "1434",
+   "name": "delta_net_hafmg",
+   "tag": "g1434_s1",
+   "parameters": 349950,
+   "updates": 336,
+   "byte_targets": 688128,
+   "training_cpu_seconds": 120.230922855,
+   "byte_targets_per_cpu_second": 5723.386161061834,
+   "wikitext_ce_nats": 1.8420656805996938,
+   "fineweb_edu_ce_nats": 2.1575626714944804,
+   "peak_rss_mib": 472.046875,
+   "status": "ok",
+   "gallery_score": 2.228501134740074,
+   "state_sha256": "3de0ae3ddec637632f7fbc5feea4982da507432ae88ec428b17874eb1a706b79",
+   "source_sha256": "376c42e93d7596a3473b20232f2b3f666b3a36a51d98600b2722fe388e535797",
+   "wikitext_ce_at_60s": 2.0104900759971747,
+   "fineweb_edu_ce_at_60s": 2.2735174982155724,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.020264122040072843,
+    "wikitext_ci95": [
+     -0.03212484178620941,
+     -0.007862945792904018
+    ],
+    "fineweb_edu_delta": -0.034592531986532,
+    "fineweb_edu_ci95": [
+     -0.0489262451178451,
+     -0.02029653164983165
+    ]
+   },
+   "rank_by_sum": 59
+  },
+  {
+   "arm": "1442",
+   "name": "delta_net_udmag",
+   "tag": "g1442_s1",
+   "parameters": 349956,
+   "updates": 356,
+   "byte_targets": 729088,
+   "training_cpu_seconds": 120.345648434,
+   "byte_targets_per_cpu_second": 6058.283032974364,
+   "wikitext_ce_nats": 1.8783159878888402,
+   "fineweb_edu_ce_nats": 2.167415090736963,
+   "peak_rss_mib": 473.3046875,
+   "status": "ok",
+   "gallery_score": 2.42881121499735,
+   "state_sha256": "a3e0f61bec2bc19e3293b27b8df6bd5285b665cf1e17c890fcbd80574629dff1",
+   "source_sha256": "8e613f93c3eb9bff150f34b418f1180433733263959a97be1c68ce6a92bb60c9",
+   "wikitext_ce_at_60s": 2.041894330599882,
+   "fineweb_edu_ce_at_60s": 2.3212052110581123,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.015986151183970877,
+    "wikitext_ci95": [
+     0.005177045507523262,
+     0.027193775420904526
+    ],
+    "fineweb_edu_delta": -0.024740107744107766,
+    "fineweb_edu_ci95": [
+     -0.03944383282828285,
+     -0.010487657407407432
+    ]
+   },
+   "rank_by_sum": 91
+  },
+  {
+   "arm": "1444",
+   "name": "delta_net_hmgapf",
+   "tag": "g1444_s1",
+   "parameters": 349926,
+   "updates": 339,
+   "byte_targets": 694272,
+   "training_cpu_seconds": 120.103278381,
+   "byte_targets_per_cpu_second": 5780.62488683766,
+   "wikitext_ce_nats": 1.8370023696188684,
+   "fineweb_edu_ce_nats": 2.1486284956168604,
+   "peak_rss_mib": 485.5390625,
+   "status": "ok",
+   "gallery_score": 2.3478368307453534,
+   "state_sha256": "dc914a26ba26549dc93a89cacdbc1206e3397ce9560ceb5ee11cfa2ca08aae8d",
+   "source_sha256": "dd5268d7c13a01e9878c8ef28a79573fcb49ecbbb39a14ea7e3689f1e635470b",
+   "wikitext_ce_at_60s": 2.018361136277428,
+   "fineweb_edu_ce_at_60s": 2.3002444354494753,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.02532749362477229,
+    "wikitext_ci95": [
+     -0.0369298854435873,
+     -0.013325177264492722
+    ],
+    "fineweb_edu_delta": -0.043526693602693615,
+    "fineweb_edu_ci95": [
+     -0.059814854040404056,
+     -0.027117644444444464
+    ]
+   },
+   "rank_by_sum": 51
+  },
+  {
+   "arm": "1448",
+   "name": "delta_net_pathgated",
+   "tag": "g1448_s1",
+   "parameters": 349950,
+   "updates": 301,
+   "byte_targets": 616448,
+   "training_cpu_seconds": 120.03169763500001,
+   "byte_targets_per_cpu_second": 5135.710084468972,
+   "wikitext_ce_nats": 1.8649590843196369,
+   "fineweb_edu_ce_nats": 2.1592577676561975,
+   "peak_rss_mib": 495.078125,
+   "status": "ok",
+   "gallery_score": 2.4962688369676385,
+   "state_sha256": "3b4a9d57cb5b8a0f9c39cf38d7f93289f96ca0087dd1ba00768a2e1871ea3756",
+   "source_sha256": "2c40b7b09f16b75ae1dc90d24461c8c05637ad5f6df0743d9083befe53742d3d",
+   "wikitext_ce_at_60s": 2.0439217106210394,
+   "fineweb_edu_ce_at_60s": 2.2768946626152524,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.00262925500910749,
+    "wikitext_ci95": [
+     -0.009454608834244062,
+     0.015752433885836418
+    ],
+    "fineweb_edu_delta": -0.03289740067340071,
+    "fineweb_edu_ci95": [
+     -0.04730090614478117,
+     -0.017803097979798
+    ]
+   },
+   "rank_by_sum": 77
+  },
+  {
+   "arm": "1454",
+   "name": "delta_net_tapr",
+   "tag": "g1454_s1",
+   "parameters": 349980,
+   "updates": 415,
+   "byte_targets": 849920,
+   "training_cpu_seconds": 120.10993969100001,
+   "byte_targets_per_cpu_second": 7076.183721235234,
+   "wikitext_ce_nats": 1.8403463888049225,
+   "fineweb_edu_ce_nats": 2.1624215267955473,
+   "peak_rss_mib": 460.77734375,
+   "status": "ok",
+   "gallery_score": 2.6833294447964375,
+   "state_sha256": "dff5b3bb174822d7f155e4ecdfa80760c211d35895a029656acbc50e2dd62ccf",
+   "source_sha256": "5639a72f1be3bd8df342ac4fb9b234215bc6efe90fc7cff91f7944a10ad7ca2a",
+   "wikitext_ce_at_60s": 1.9843791605376027,
+   "fineweb_edu_ce_at_60s": 2.281386824549853,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.021983433515482684,
+    "wikitext_ci95": [
+     -0.032884881304202015,
+     -0.010102095597945728
+    ],
+    "fineweb_edu_delta": -0.029733723905723944,
+    "fineweb_edu_ci95": [
+     -0.04653326153198654,
+     -0.013727270454545451
+    ]
+   },
+   "rank_by_sum": 62
+  },
+  {
+   "arm": "1475",
+   "name": "delta_net_len_hgate_mixanneal",
+   "tag": "g1475_s1",
+   "parameters": 350010,
+   "updates": 429,
+   "byte_targets": 878592,
+   "training_cpu_seconds": 120.04275031600001,
+   "byte_targets_per_cpu_second": 7318.992589616601,
+   "wikitext_ce_nats": 1.8511557658422806,
+   "fineweb_edu_ce_nats": 2.1794940179618822,
+   "peak_rss_mib": 463.77734375,
+   "status": "ok",
+   "gallery_score": 2.665358631933711,
+   "state_sha256": "15a91816886fbc236cb6290112be5b30bcfc839e7f41056a1e6bfb7aadf7c57a",
+   "source_sha256": "c7a242b1cb183067e65d59dd5127c207cd17b75fa23784d31b4b96a649d67d9e",
+   "wikitext_ce_at_60s": 2.0007698650618617,
+   "fineweb_edu_ce_at_60s": 2.2988985502763666,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.011174056466302353,
+    "wikitext_ci95": [
+     -0.020615556293647207,
+     -0.0011843523897058787
+    ],
+    "fineweb_edu_delta": -0.012661138047138051,
+    "fineweb_edu_ci95": [
+     -0.026652956649831673,
+     0.001537239898989909
+    ]
+   },
+   "rank_by_sum": 78
+  },
+  {
+   "arm": "1490",
+   "name": "delta_net_ahic",
+   "tag": "g1490_s1",
+   "parameters": 349959,
+   "updates": 397,
+   "byte_targets": 813056,
+   "training_cpu_seconds": 120.04979299499999,
+   "byte_targets_per_cpu_second": 6772.656409610497,
+   "wikitext_ce_nats": 1.806484773653435,
+   "fineweb_edu_ce_nats": 2.1158085366662056,
+   "peak_rss_mib": 479.46875,
+   "status": "ok",
+   "gallery_score": 2.1153684898720098,
+   "state_sha256": "161c36e8a21f602967965061d4f67ada565390d1668f8d420af1177d0af2f44a",
+   "source_sha256": "0da7cd59cb7366dc72e77e7cb1c0ec8163a8017ddfab040687c253d5910640ea",
+   "wikitext_ce_at_60s": 1.9674081230013494,
+   "fineweb_edu_ce_at_60s": 2.2477281159552964,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.055845045537340605,
+    "wikitext_ci95": [
+     -0.06688499889205725,
+     -0.04492158757881667
+    ],
+    "fineweb_edu_delta": -0.07634668350168354,
+    "fineweb_edu_ci95": [
+     -0.09116185942760943,
+     -0.062014939898989915
+    ]
+   },
+   "rank_by_sum": 22
+  },
+  {
+   "arm": "1507",
+   "name": "delta_net_tarf",
+   "tag": "g1507_s1",
+   "parameters": 349962,
+   "updates": 400,
+   "byte_targets": 819200,
+   "training_cpu_seconds": 120.220501967,
+   "byte_targets_per_cpu_second": 6814.145562500369,
+   "wikitext_ce_nats": 1.8338368198517419,
+   "fineweb_edu_ce_nats": 2.163808941761148,
+   "peak_rss_mib": 456.1953125,
+   "status": "ok",
+   "gallery_score": 2.487617533557514,
+   "state_sha256": "dd0a0b6e3ddb40e12ba221fe5fb0e1fe94091c974b513b68d3c0912b7959be40",
+   "source_sha256": "e710fcbad020ca414268cfd63c5ddac21e34ad938c4e59fe09e03c60201d5b44",
+   "wikitext_ce_at_60s": 2.0054286129761336,
+   "fineweb_edu_ce_at_60s": 2.28594389141124,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.02849300182149361,
+    "wikitext_ci95": [
+     -0.040191436310927094,
+     -0.014462672553275444
+    ],
+    "fineweb_edu_delta": -0.028346259259259297,
+    "fineweb_edu_ci95": [
+     -0.04473714722222225,
+     -0.011894427693602721
+    ]
+   },
+   "rank_by_sum": 57
+  },
+  {
+   "arm": "151",
+   "name": "delta_net_adaptive_mix_gate",
+   "tag": "g151_s1",
+   "parameters": 349920,
+   "updates": 490,
+   "byte_targets": 1003520,
+   "training_cpu_seconds": 120.20085165300002,
+   "byte_targets_per_cpu_second": 8348.69292687706,
+   "wikitext_ce_nats": 1.7489234648751875,
+   "fineweb_edu_ce_nats": 2.0896712407513665,
+   "peak_rss_mib": 442.109375,
+   "status": "ok",
+   "gallery_score": 2.0779740962112943,
+   "state_sha256": "cbabce81b3ebaca45e886700cb4b42e06af2bad23adeb4f5b32313b9eafa3f1f",
+   "source_sha256": "ee3208a7e4db32832b18c3bc2104316db1f43015b57f90b709ad5f677c4d4c70",
+   "wikitext_ce_at_60s": 1.9268926514937672,
+   "fineweb_edu_ce_at_60s": 2.194547452793301,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.11340633515482697,
+    "wikitext_ci95": [
+     -0.1275109727806839,
+     -0.0998472751565336
+    ],
+    "fineweb_edu_delta": -0.10248394612794613,
+    "fineweb_edu_ci95": [
+     -0.11925425909090909,
+     -0.08546589974747475
+    ]
+   },
+   "rank_by_sum": 2
+  },
+  {
+   "arm": "1529",
+   "name": "delta_net_mafr",
+   "tag": "g1529_s1",
+   "parameters": 349998,
+   "updates": 306,
+   "byte_targets": 626688,
+   "training_cpu_seconds": 120.20157337099998,
+   "byte_targets_per_cpu_second": 5213.642237990836,
+   "wikitext_ce_nats": 1.8510167066408143,
+   "fineweb_edu_ce_nats": 2.1647947560258705,
+   "peak_rss_mib": 467.7109375,
+   "status": "ok",
+   "gallery_score": 2.618924998893387,
+   "state_sha256": "42aba56a3c957b67b46b945aa588b81f5e0b3d04eb6eb025e2626f1bc09696d4",
+   "source_sha256": "dd0e62ef7008baa37a32c60db66aa5b3d2d8dc007b2d01ebcaf294104b79388a",
+   "wikitext_ce_at_60s": 2.0385764577661445,
+   "fineweb_edu_ce_at_60s": 2.296423752449305,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.011313072859744979,
+    "wikitext_ci95": [
+     -0.023174112157743027,
+     0.0016036141276567285
+    ],
+    "fineweb_edu_delta": -0.027360400673400703,
+    "fineweb_edu_ci95": [
+     -0.044154222811447846,
+     -0.010983208333333374
+    ]
+   },
+   "rank_by_sum": 73
+  },
+  {
+   "arm": "1543",
+   "name": "delta_net_aegf_br",
+   "tag": "g1543_s1",
+   "parameters": 349968,
+   "updates": 338,
+   "byte_targets": 692224,
+   "training_cpu_seconds": 120.241104529,
+   "byte_targets_per_cpu_second": 5756.966411041642,
+   "wikitext_ce_nats": 1.8355685054749138,
+   "fineweb_edu_ce_nats": 2.145980333278175,
+   "peak_rss_mib": 474.7578125,
+   "status": "ok",
+   "gallery_score": 2.6608499949440394,
+   "state_sha256": "4d8fe72b18727b9c5a3ac13a7028eeee96031f10f7b1936e241ee5ce7d324c93",
+   "source_sha256": "9dbd01c41cec03ff0434928316b1efcbb1934159b4ff22db365d90b68522669d",
+   "wikitext_ce_at_60s": 2.029439827570277,
+   "fineweb_edu_ce_at_60s": 2.2795859317805425,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.02676132422586519,
+    "wikitext_ci95": [
+     -0.03873878192934781,
+     -0.014254491446194052
+    ],
+    "fineweb_edu_delta": -0.04617483501683504,
+    "fineweb_edu_ci95": [
+     -0.06016026742424243,
+     -0.03177236228956229
+    ]
+   },
+   "rank_by_sum": 49
+  },
+  {
+   "arm": "1567",
+   "name": "delta_net_qsr",
+   "tag": "g1567_s1",
+   "parameters": 349986,
+   "updates": 369,
+   "byte_targets": 755712,
+   "training_cpu_seconds": 120.12980596699998,
+   "byte_targets_per_cpu_second": 6290.795143776361,
+   "wikitext_ce_nats": 1.8344789885896673,
+   "fineweb_edu_ce_nats": 2.122157821138722,
+   "peak_rss_mib": 489.07421875,
+   "status": "ok",
+   "gallery_score": 2.6270171522190497,
+   "state_sha256": "2be2d674c8a8045c2d1f0b9e74e7aafa3dddd852e4f4d5b3fa2e16a9cfc1e72d",
+   "source_sha256": "952e06f72f6f5bf7b13abc6e859355beebff1ab5ed647b6cbbc447bdf4ae5767",
+   "wikitext_ce_at_60s": 1.9981428208389076,
+   "fineweb_edu_ce_at_60s": 2.273207396865092,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.027850799635701255,
+    "wikitext_ci95": [
+     -0.037652407108885705,
+     -0.01759620462061845
+    ],
+    "fineweb_edu_delta": -0.0699974006734007,
+    "fineweb_edu_ci95": [
+     -0.08513505917508424,
+     -0.055518194949494976
+    ]
+   },
+   "rank_by_sum": 40
+  },
+  {
+   "arm": "1584",
+   "name": "delta_net_aif",
+   "tag": "g1584_s1",
+   "parameters": 349959,
+   "updates": 392,
+   "byte_targets": 802816,
+   "training_cpu_seconds": 120.296852906,
+   "byte_targets_per_cpu_second": 6673.624293624046,
+   "wikitext_ce_nats": 1.8013412582486026,
+   "fineweb_edu_ce_nats": 2.121333369156287,
+   "peak_rss_mib": 475.43359375,
+   "status": "ok",
+   "gallery_score": 2.561936979447291,
+   "state_sha256": "f5c47c7f6e7c4c7b3eaffd28ad75d1b4340349f90e1f33ab5b0bd9d78bac42bb",
+   "source_sha256": "cc5a6301a7b2ddbe109105214b7cdd1644fd644c6cda631d538cd0983a2a8cf6",
+   "wikitext_ce_at_60s": 1.9613176237125078,
+   "fineweb_edu_ce_at_60s": 2.251490936511824,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06098854826958104,
+    "wikitext_ci95": [
+     -0.07206045713334323,
+     -0.04946638129296664
+    ],
+    "fineweb_edu_delta": -0.07082185521885524,
+    "fineweb_edu_ci95": [
+     -0.08717968005050505,
+     -0.054914063215488265
+    ]
+   },
+   "rank_by_sum": 23
+  },
+  {
+   "arm": "1595",
+   "name": "delta_net_sigf_ptu",
+   "tag": "g1595_s1",
+   "parameters": 349944,
+   "updates": 339,
+   "byte_targets": 694272,
+   "training_cpu_seconds": 120.32909459700002,
+   "byte_targets_per_cpu_second": 5769.776647328893,
+   "wikitext_ce_nats": 1.845133919772237,
+   "fineweb_edu_ce_nats": 2.1417292466432776,
+   "peak_rss_mib": 477.40234375,
+   "status": "ok",
+   "gallery_score": 2.564891989491199,
+   "state_sha256": "b9f04a3aca27eeb7e8a7605a457095d5c6f2b90586ed0b9665e21e294f5b1306",
+   "source_sha256": "a5b080a241365b3bd9dba9084ed9558d82c698f5ae872e51bb3990cc77159a4d",
+   "wikitext_ce_at_60s": 2.0345451705254654,
+   "fineweb_edu_ce_at_60s": 2.2924206902207023,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.017195897996356985,
+    "wikitext_ci95": [
+     -0.028821243913043446,
+     -0.004659955895746267
+    ],
+    "fineweb_edu_delta": -0.05042591582491583,
+    "fineweb_edu_ci95": [
+     -0.06714584587542086,
+     -0.03509318122895622
+    ]
+   },
+   "rank_by_sum": 52
+  },
+  {
+   "arm": "1621",
+   "name": "delta_net_hhgass",
+   "tag": "g1621_s1",
+   "parameters": 349950,
+   "updates": 332,
+   "byte_targets": 679936,
+   "training_cpu_seconds": 120.17299965799997,
+   "byte_targets_per_cpu_second": 5657.976433433701,
+   "wikitext_ce_nats": 1.839802731969614,
+   "fineweb_edu_ce_nats": 2.131771063754596,
+   "peak_rss_mib": 483.11328125,
+   "status": "ok",
+   "gallery_score": 2.373085985560122,
+   "state_sha256": "2c35d804d8c0a71f069e6005016bb181e488c73966903d8d0beb5d1975220fa8",
+   "source_sha256": "723df3537e6b1491852db1fe966c65b839860ed714e90ff75216a662e927ff78",
+   "wikitext_ce_at_60s": 2.0261348268728363,
+   "fineweb_edu_ce_at_60s": 2.2966486169152573,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.02252710564663022,
+    "wikitext_ci95": [
+     -0.032322650124452804,
+     -0.012699248642278298
+    ],
+    "fineweb_edu_delta": -0.06038410774410776,
+    "fineweb_edu_ci95": [
+     -0.0767446687710438,
+     -0.04431437878787879
+    ]
+   },
+   "rank_by_sum": 45
+  },
+  {
+   "arm": "1693",
+   "name": "delta_net_ahm_gate",
+   "tag": "g1693_s1",
+   "parameters": 349959,
+   "updates": 345,
+   "byte_targets": 706560,
+   "training_cpu_seconds": 120.08440639,
+   "byte_targets_per_cpu_second": 5883.861370853549,
+   "wikitext_ce_nats": 1.8460000661900635,
+   "fineweb_edu_ce_nats": 2.1685262160999925,
+   "peak_rss_mib": 481.5234375,
+   "status": "ok",
+   "gallery_score": 2.2209000262833394,
+   "state_sha256": "c99b3dc68c7876c72566c7911f63a4018bc7e73587b5bb91801fed96b73b540a",
+   "source_sha256": "d460870af142c43c82028dfe55d8f7ed7174a6366b6d1de2ccd2f1abbd9bc461",
+   "wikitext_ce_at_60s": 2.0110723638698493,
+   "fineweb_edu_ce_at_60s": 2.2870368125568197,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.016329744990892504,
+    "wikitext_ci95": [
+     -0.026952251247028578,
+     -0.004677324859643859
+    ],
+    "fineweb_edu_delta": -0.02362895622895625,
+    "fineweb_edu_ci95": [
+     -0.0393488031144781,
+     -0.00790243627946128
+    ]
+   },
+   "rank_by_sum": 72
+  },
+  {
+   "arm": "1730",
+   "name": "delta_net_afef",
+   "tag": "g1730_s1",
+   "parameters": 349974,
+   "updates": 417,
+   "byte_targets": 854016,
+   "training_cpu_seconds": 120.26568768599998,
+   "byte_targets_per_cpu_second": 7101.077759017506,
+   "wikitext_ce_nats": 1.809428407640482,
+   "fineweb_edu_ce_nats": 2.1274114650748763,
+   "peak_rss_mib": 469.24609375,
+   "status": "ok",
+   "gallery_score": 2.661178530417397,
+   "state_sha256": "306d4530f288c47ba8f6f26b3fcbd893cc063232a4b161e871ef23c5527048be",
+   "source_sha256": "a4b7710b084fb99a5d0a74c482de2cb5424ad938428f22689e4d6d7f01e718a1",
+   "wikitext_ce_at_60s": 1.9577289429989857,
+   "fineweb_edu_ce_at_60s": 2.245193535332096,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.052901406193078294,
+    "wikitext_ci95": [
+     -0.06503364817205994,
+     -0.0386106097513227
+    ],
+    "fineweb_edu_delta": -0.06474365319865323,
+    "fineweb_edu_ci95": [
+     -0.08331280606060612,
+     -0.04611034520202025
+    ]
+   },
+   "rank_by_sum": 28
+  },
+  {
+   "arm": "1733",
+   "name": "delta_net_ddfsanr",
+   "tag": "g1733_s1",
+   "parameters": 350073,
+   "updates": 336,
+   "byte_targets": 688128,
+   "training_cpu_seconds": 120.28016621400002,
+   "byte_targets_per_cpu_second": 5721.042975412061,
+   "wikitext_ce_nats": 1.8355372991986878,
+   "fineweb_edu_ce_nats": 2.167679126245104,
+   "peak_rss_mib": 474.94921875,
+   "status": "ok",
+   "gallery_score": 2.1084558390095016,
+   "state_sha256": "d0e82086267dc62eceb5e7d0ba9b60d53306c2239ceb57ff816fc6ff00543dab",
+   "source_sha256": "b2fcd4ab98f0b744662dbfef654b374e82319d5186f25297377a5102f0ef0b7e",
+   "wikitext_ce_at_60s": 2.0177986211959733,
+   "fineweb_edu_ce_at_60s": 2.2981809251885665,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.026792526411657542,
+    "wikitext_ci95": [
+     -0.037842229489614965,
+     -0.01493482736794169
+    ],
+    "fineweb_edu_delta": -0.024476087542087563,
+    "fineweb_edu_ci95": [
+     -0.0378989264309765,
+     -0.010950383922558952
+    ]
+   },
+   "rank_by_sum": 63
+  },
+  {
+   "arm": "1735",
+   "name": "delta_net_hhmr",
+   "tag": "g1735_s1",
+   "parameters": 350028,
+   "updates": 309,
+   "byte_targets": 632832,
+   "training_cpu_seconds": 120.33512110999999,
+   "byte_targets_per_cpu_second": 5258.913558756629,
+   "wikitext_ce_nats": 1.86117829077695,
+   "fineweb_edu_ce_nats": 2.161323717294239,
+   "peak_rss_mib": 501.46875,
+   "status": "ok",
+   "gallery_score": 2.284679125222743,
+   "state_sha256": "087b67e0d49541cb5ad4a3a7277b140e9ff5d3cbb6a3c839628d82152cb443a8",
+   "source_sha256": "648b335c651d5449928c1c1147471333d15a4223f1b5013d1a69b927dd57a32e",
+   "wikitext_ce_at_60s": 2.0684612792126607,
+   "fineweb_edu_ce_at_60s": 2.3184646622883385,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.0011515100182149314,
+    "wikitext_ci95": [
+     -0.011285302763154226,
+     0.00899978175851655
+    ],
+    "fineweb_edu_delta": -0.030831441077441103,
+    "fineweb_edu_ci95": [
+     -0.04561459436026935,
+     -0.01685309671717173
+    ]
+   },
+   "rank_by_sum": 76
+  },
+  {
+   "arm": "1763",
+   "name": "delta_net_cpaghr",
+   "tag": "g1763_s1",
+   "parameters": 349998,
+   "updates": 306,
+   "byte_targets": 626688,
+   "training_cpu_seconds": 120.30177822399999,
+   "byte_targets_per_cpu_second": 5209.299556928551,
+   "wikitext_ce_nats": 1.8608556341853575,
+   "fineweb_edu_ce_nats": 2.1705893244788,
+   "peak_rss_mib": 499.24609375,
+   "status": "ok",
+   "gallery_score": 2.56705678765428,
+   "state_sha256": "d53fd0b67886f7ca1cfe88e9ca751d32f9501e60d13ac4ed6e63cee9e9d34914",
+   "source_sha256": "8431a58e9cd6437833a02cebfcb79e42f77d07aa0d6023a9ba230f5910984595",
+   "wikitext_ce_at_60s": 2.0534197453349434,
+   "fineweb_edu_ce_at_60s": 2.346248683042985,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.0014741821493624537,
+    "wikitext_ci95": [
+     -0.013477094561403504,
+     0.01145120397619052
+    ],
+    "fineweb_edu_delta": -0.021565865319865346,
+    "fineweb_edu_ci95": [
+     -0.035466330050505104,
+     -0.007969562457912515
+    ]
+   },
+   "rank_by_sum": 79
+  },
+  {
+   "arm": "1771",
+   "name": "delta_net_taigr_xs",
+   "tag": "g1771_s1",
+   "parameters": 350067,
+   "updates": 389,
+   "byte_targets": 796672,
+   "training_cpu_seconds": 120.26828273899999,
+   "byte_targets_per_cpu_second": 6624.123849252062,
+   "wikitext_ce_nats": 1.8027767631817624,
+   "fineweb_edu_ce_nats": 2.1283144086706494,
+   "peak_rss_mib": 464.921875,
+   "status": "ok",
+   "gallery_score": 2.449551001013843,
+   "state_sha256": "6329062ce19b9aa9b517d88ccf6eee3a1cd76f1a21fbfef8c07a530ee9f23045",
+   "source_sha256": "e70adafd02da750f717122d631e963d3070c4d2b118a4854fbadba757fa16f42",
+   "wikitext_ce_at_60s": 1.9633362231758271,
+   "fineweb_edu_ce_at_60s": 2.244011341622566,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05955308378870671,
+    "wikitext_ci95": [
+     -0.07068938564876394,
+     -0.04796462452764762
+    ],
+    "fineweb_edu_delta": -0.06384082491582493,
+    "fineweb_edu_ci95": [
+     -0.07925986675084178,
+     -0.04800414991582492
+    ]
+   },
+   "rank_by_sum": 25
+  },
+  {
+   "arm": "1786",
+   "name": "delta_net_aft_dsi",
+   "tag": "g1786_s1",
+   "parameters": 349953,
+   "updates": 382,
+   "byte_targets": 782336,
+   "training_cpu_seconds": 120.11466487599999,
+   "byte_targets_per_cpu_second": 6513.242998326992,
+   "wikitext_ce_nats": 1.821485059439208,
+   "fineweb_edu_ce_nats": 2.152955227496999,
+   "peak_rss_mib": 459.05078125,
+   "status": "ok",
+   "gallery_score": 2.2819740843138696,
+   "state_sha256": "d5b12fca248da240fbeca7a30628be552ec3edd1e1dc1f26f756a9124cf0905c",
+   "source_sha256": "72cfc06261003c2707fc59f0867fff3ce2f675353d4705beb847cb6822ccef33",
+   "wikitext_ce_at_60s": 1.9817720147927889,
+   "fineweb_edu_ce_at_60s": 2.2516749266461122,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04084478324225863,
+    "wikitext_ci95": [
+     -0.055151473059210525,
+     -0.025894769541404503
+    ],
+    "fineweb_edu_delta": -0.03919997643097645,
+    "fineweb_edu_ci95": [
+     -0.05644282255892258,
+     -0.02196470168350171
+    ]
+   },
+   "rank_by_sum": 46
+  },
+  {
+   "arm": "1792",
+   "name": "delta_net_hgm_ident",
+   "tag": "g1792_s1",
+   "parameters": 350040,
+   "updates": 390,
+   "byte_targets": 798720,
+   "training_cpu_seconds": 120.24689707099998,
+   "byte_targets_per_cpu_second": 6642.333560826892,
+   "wikitext_ce_nats": 1.8109536688618915,
+   "fineweb_edu_ce_nats": 2.1411589289454636,
+   "peak_rss_mib": 467.20703125,
+   "status": "ok",
+   "gallery_score": 2.4893774503373605,
+   "state_sha256": "9cc90fa11095bddea2751a744bd866dc1bd55234c9ae17bc6d9ac5fddd6f6cf9",
+   "source_sha256": "a0f4faeaf821f64915ee841cb6ed416f2b8f45a1f771a7a7038f965f486be969",
+   "wikitext_ce_at_60s": 1.9833007138211478,
+   "fineweb_edu_ce_at_60s": 2.250602834851845,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05137615482695808,
+    "wikitext_ci95": [
+     -0.06372213975334627,
+     -0.03871148074412987
+    ],
+    "fineweb_edu_delta": -0.05099624915824918,
+    "fineweb_edu_ci95": [
+     -0.06885624234006736,
+     -0.03374711658249161
+    ]
+   },
+   "rank_by_sum": 33
+  },
+  {
+   "arm": "259",
+   "name": "delta_net_bias_init_mix_gate",
+   "tag": "g259_s1",
+   "parameters": 349932,
+   "updates": 493,
+   "byte_targets": 1009664,
+   "training_cpu_seconds": 120.06486737500002,
+   "byte_targets_per_cpu_second": 8409.32091189094,
+   "wikitext_ce_nats": 1.7381482589708817,
+   "fineweb_edu_ce_nats": 2.0692434172116485,
+   "peak_rss_mib": 447.296875,
+   "status": "ok",
+   "gallery_score": 2.0173448009491395,
+   "state_sha256": "2b093ee9d6b1332a179caab890522fd15eb9281f67b939ca5f279d4ed05f4ad9",
+   "source_sha256": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e",
+   "wikitext_ce_at_60s": 1.9000606012970802,
+   "fineweb_edu_ce_at_60s": 2.178491919972295,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.12418151548269576,
+    "wikitext_ci95": [
+     -0.1364217289134192,
+     -0.11140621557971012
+    ],
+    "fineweb_edu_delta": -0.12291175420875422,
+    "fineweb_edu_ci95": [
+     -0.13962220345117846,
+     -0.10630091262626264
+    ]
+   },
+   "rank_by_sum": 1
+  },
+  {
+   "arm": "295",
+   "name": "delta_net_dyn_gate_mix",
+   "tag": "g295_s1",
+   "parameters": 349926,
+   "updates": 188,
+   "byte_targets": 385024,
+   "training_cpu_seconds": 120.49643875900003,
+   "byte_targets_per_cpu_second": 3195.3143509085,
+   "wikitext_ce_nats": 1.9987105888163899,
+   "fineweb_edu_ce_nats": 2.2805479994451905,
+   "peak_rss_mib": 487.14453125,
+   "status": "ok",
+   "gallery_score": 2.262065781120045,
+   "state_sha256": "0484c76acedbcbc55073ca3a324741850741085c9e68f9e8e85b9667e4806973",
+   "source_sha256": "dcadb6973fe58db89d70effe1c0148e26a9c1f5182e1355cd1914a8129d08245",
+   "wikitext_ce_at_60s": 2.2035141992612273,
+   "fineweb_edu_ce_at_60s": 2.458752037499727,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.13638074134790532,
+    "wikitext_ci95": [
+     0.12456043171220553,
+     0.14887688273221342
+    ],
+    "fineweb_edu_delta": 0.08839286195286195,
+    "fineweb_edu_ci95": [
+     0.07118765412457913,
+     0.10470042466329965
+    ]
+   },
+   "rank_by_sum": 100
+  },
+  {
+   "arm": "322",
+   "name": "delta_net_head_gate_ema",
+   "tag": "g322_s1",
+   "parameters": 349953,
+   "updates": 187,
+   "byte_targets": 382976,
+   "training_cpu_seconds": 120.49098655799999,
+   "byte_targets_per_cpu_second": 3178.461816441757,
+   "wikitext_ce_nats": 2.028429150530536,
+   "fineweb_edu_ce_nats": 2.3177318695417237,
+   "peak_rss_mib": 496.0078125,
+   "status": "ok",
+   "gallery_score": 2.1268656548120513,
+   "state_sha256": "1ca5be4d6d20d1121e6984206b4db25f08ada29b60e5aa4eae0067c463847c28",
+   "source_sha256": "5bea139d6e96579a9bdf0f76f19391c45e50e520a7b2380ddb8c86f45f3b9453",
+   "wikitext_ce_at_60s": 2.2148617444085135,
+   "fineweb_edu_ce_at_60s": 2.4406617368464762,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.16609934244080146,
+    "wikitext_ci95": [
+     0.15411654294555716,
+     0.17923378132969042
+    ],
+    "fineweb_edu_delta": 0.12557672053872054,
+    "fineweb_edu_ci95": [
+     0.10751429612794611,
+     0.14358520134680133
+    ]
+   },
+   "rank_by_sum": 101
+  },
+  {
+   "arm": "330",
+   "name": "delta_net_dyn_decay_fractal_gate",
+   "tag": "g330_s1",
+   "parameters": 349929,
+   "updates": 398,
+   "byte_targets": 815104,
+   "training_cpu_seconds": 120.168235801,
+   "byte_targets_per_cpu_second": 6783.023771355201,
+   "wikitext_ce_nats": 1.9013370302970938,
+   "fineweb_edu_ce_nats": 2.233417477084375,
+   "peak_rss_mib": 488.87109375,
+   "status": "ok",
+   "gallery_score": 2.1079411427829835,
+   "state_sha256": "21c53f11612b0a3a37b2aa4e4c8174ce7f540d446a7f5969bb77ca1d8e072669",
+   "source_sha256": "5892c566d4c8a20b1899cfd16db573fe411acd30f7b7c0db98d93b32cf31cb5d",
+   "wikitext_ce_at_60s": 2.0792091952950256,
+   "fineweb_edu_ce_at_60s": 2.3825611210230138,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.039007200364298736,
+    "wikitext_ci95": [
+     0.029559787307192963,
+     0.04874514884530318
+    ],
+    "fineweb_edu_delta": 0.04126227609427605,
+    "fineweb_edu_ci95": [
+     0.026501066582491514,
+     0.055659702272727235
+    ]
+   },
+   "rank_by_sum": 99
+  },
+  {
+   "arm": "380",
+   "name": "delta_net_ndg",
+   "tag": "g380_s1",
+   "parameters": 349932,
+   "updates": 282,
+   "byte_targets": 577536,
+   "training_cpu_seconds": 120.10250635600002,
+   "byte_targets_per_cpu_second": 4808.692320609076,
+   "wikitext_ce_nats": 1.8793487525744628,
+   "fineweb_edu_ce_nats": 2.1696587316548324,
+   "peak_rss_mib": 498.328125,
+   "status": "ok",
+   "gallery_score": 2.1130219785730633,
+   "state_sha256": "778263cdd222ea61ccf567169c6f2b303b44fb32823777b35c46829a0a2b2c71",
+   "source_sha256": "ac1bd8484d8007ed65db71de778d5be2f0871c9c53efd9f7ed2fdf5a9999947a",
+   "wikitext_ce_at_60s": 2.0706823013542768,
+   "fineweb_edu_ce_at_60s": 2.3204012880047635,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.017018932604735904,
+    "wikitext_ci95": [
+     0.006368597532056413,
+     0.02784415637596613
+    ],
+    "fineweb_edu_delta": -0.022496461279461307,
+    "fineweb_edu_ci95": [
+     -0.0387498313973064,
+     -0.006190972138047151
+    ]
+   },
+   "rank_by_sum": 94
+  },
+  {
+   "arm": "410",
+   "name": "delta_net_selm",
+   "tag": "g410_s1",
+   "parameters": 349941,
+   "updates": 365,
+   "byte_targets": 747520,
+   "training_cpu_seconds": 120.28337292399999,
+   "byte_targets_per_cpu_second": 6214.657785430693,
+   "wikitext_ce_nats": 1.8363246865379077,
+   "fineweb_edu_ce_nats": 2.1569667594679927,
+   "peak_rss_mib": 455.05859375,
+   "status": "ok",
+   "gallery_score": 2.119267638131481,
+   "state_sha256": "3be049ba8cd9ca36af345c7cb929e1b6519b7ab9f920d2e6d3a9985b8ee963ab",
+   "source_sha256": "5983491fb298ff661ccdb1c64d2d7bc978890884a92ba6aca11139fa78852f25",
+   "wikitext_ce_at_60s": 1.9954882711679731,
+   "fineweb_edu_ce_at_60s": 2.2834773453111077,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.026005160291438963,
+    "wikitext_ci95": [
+     -0.035474057918968675,
+     -0.015638542563405772
+    ],
+    "fineweb_edu_delta": -0.035188430976431,
+    "fineweb_edu_ci95": [
+     -0.04854309806397309,
+     -0.02102004739057239
+    ]
+   },
+   "rank_by_sum": 54
+  },
+  {
+   "arm": "437",
+   "name": "delta_net_dual_path_fusion",
+   "tag": "g437_s1",
+   "parameters": 349920,
+   "updates": 444,
+   "byte_targets": 909312,
+   "training_cpu_seconds": 120.00624357599999,
+   "byte_targets_per_cpu_second": 7577.205759499775,
+   "wikitext_ce_nats": 1.7718505113804306,
+   "fineweb_edu_ce_nats": 2.117291832130171,
+   "peak_rss_mib": 463.43359375,
+   "status": "ok",
+   "gallery_score": 2.290910811476138,
+   "state_sha256": "2bb6bcd96357c94ffe8f221d75a8d4b146d0608e34ba23f0a1a7fb29975569ca",
+   "source_sha256": "da307a09b49d35c30637a27a2d22f4435a2b1bfcab7607fef34be8afd4aa74a7",
+   "wikitext_ce_at_60s": 1.9481885486137882,
+   "fineweb_edu_ce_at_60s": 2.229257632352873,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.09047927504553732,
+    "wikitext_ci95": [
+     -0.10165581189718471,
+     -0.07931725429964107
+    ],
+    "fineweb_edu_delta": -0.0748632996632997,
+    "fineweb_edu_ci95": [
+     -0.08750199621212128,
+     -0.062252931144781185
+    ]
+   },
+   "rank_by_sum": 6
+  },
+  {
+   "arm": "441",
+   "name": "delta_net_msdfdm",
+   "tag": "g441_s1",
+   "parameters": 349944,
+   "updates": 424,
+   "byte_targets": 868352,
+   "training_cpu_seconds": 120.241131891,
+   "byte_targets_per_cpu_second": 7221.755037928047,
+   "wikitext_ce_nats": 1.7870715524505996,
+   "fineweb_edu_ce_nats": 2.1204358606222615,
+   "peak_rss_mib": 462.71484375,
+   "status": "ok",
+   "gallery_score": 2.3831632718929363,
+   "state_sha256": "f4253c8ffafcf98a12d0b0ca8da94b94c8a3146d138240fa7dfa5c6953c7ceea",
+   "source_sha256": "bef7cb97b6833b74281446dbdec0bc3ccfd6565acfb9de61e2a7a6923d02365a",
+   "wikitext_ce_at_60s": 1.949964451620207,
+   "fineweb_edu_ce_at_60s": 2.252841084683939,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.07525822586520944,
+    "wikitext_ci95": [
+     -0.08689531338992637,
+     -0.06286632694305715
+    ],
+    "fineweb_edu_delta": -0.07171932996632999,
+    "fineweb_edu_ci95": [
+     -0.0887917223905724,
+     -0.05597289377104378
+    ]
+   },
+   "rank_by_sum": 15
+  },
+  {
+   "arm": "458",
+   "name": "delta_net_dlgm",
+   "tag": "g458_s1",
+   "parameters": 349944,
+   "updates": 403,
+   "byte_targets": 825344,
+   "training_cpu_seconds": 120.23386034199999,
+   "byte_targets_per_cpu_second": 6864.488902313748,
+   "wikitext_ce_nats": 1.7957707276259827,
+   "fineweb_edu_ce_nats": 2.1161960304515426,
+   "peak_rss_mib": 464.359375,
+   "status": "ok",
+   "gallery_score": 2.456424684544288,
+   "state_sha256": "883043067af2bb42c06d482ad0080833a5419c3282cdb47d9c91dc5e886f7779",
+   "source_sha256": "76412d2f7aff30f99ce7089e0f57f8ef26add7f2d9f965adf8650a00538bd1f5",
+   "wikitext_ce_at_60s": 1.96423897815451,
+   "fineweb_edu_ce_at_60s": 2.271027835963629,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06655908925318758,
+    "wikitext_ci95": [
+     -0.0782172184598985,
+     -0.05416132725600595
+    ],
+    "fineweb_edu_delta": -0.07595914814814816,
+    "fineweb_edu_ci95": [
+     -0.09285872752525255,
+     -0.05994434696969701
+    ]
+   },
+   "rank_by_sum": 18
+  },
+  {
+   "arm": "486",
+   "name": "delta_net_mscmix_pointwise",
+   "tag": "g486_s1",
+   "parameters": 349938,
+   "updates": 408,
+   "byte_targets": 835584,
+   "training_cpu_seconds": 120.13523170600001,
+   "byte_targets_per_cpu_second": 6955.361787996349,
+   "wikitext_ce_nats": 1.8028741421244625,
+   "fineweb_edu_ce_nats": 2.1143719867090436,
+   "peak_rss_mib": 472.6328125,
+   "status": "ok",
+   "gallery_score": 2.2916164348532915,
+   "state_sha256": "2540bfd04d8ec95148dad4873886b0b0f2cc72c2abc0d9787cd0939ced150453",
+   "source_sha256": "6d7f4a8a297a0131567dc1d6aac04b7c43bca80584bb0f12e7477643ebd80ddd",
+   "wikitext_ce_at_60s": 1.962145956394086,
+   "fineweb_edu_ce_at_60s": 2.2641875476739197,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05945566302367942,
+    "wikitext_ci95": [
+     -0.06991777648852655,
+     -0.04850000882882881
+    ],
+    "fineweb_edu_delta": -0.07778321885521886,
+    "fineweb_edu_ci95": [
+     -0.09583987845117845,
+     -0.060513581902356915
+    ]
+   },
+   "rank_by_sum": 21
+  },
+  {
+   "arm": "511",
+   "name": "delta_net_ms_hsm_tempgate",
+   "tag": "g511_s1",
+   "parameters": 349962,
+   "updates": 316,
+   "byte_targets": 647168,
+   "training_cpu_seconds": 120.23977527699999,
+   "byte_targets_per_cpu_second": 5382.312121834057,
+   "wikitext_ce_nats": 1.8644059432797286,
+   "fineweb_edu_ce_nats": 2.207269546399333,
+   "peak_rss_mib": 481.03515625,
+   "status": "ok",
+   "gallery_score": 2.376724929287736,
+   "state_sha256": "4d5cbf447b0538c2689bfedbe55cb70400a3179849b1a650ef2eddf9b584b1ac",
+   "source_sha256": "b2e21ef4e7c62ebb3ea655cb0957f2a89d3759000ea4ca268176202bef2c1e40",
+   "wikitext_ce_at_60s": 2.0604326740112735,
+   "fineweb_edu_ce_at_60s": 2.327614324413318,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.0020761074681238784,
+    "wikitext_ci95": [
+     -0.00867636382319818,
+     0.01299673478849302
+    ],
+    "fineweb_edu_delta": 0.01511426599326597,
+    "fineweb_edu_ci95": [
+     -0.000493509090909126,
+     0.03136067718855215
+    ]
+   },
+   "rank_by_sum": 98
+  },
+  {
+   "arm": "515",
+   "name": "delta_net_ms_adaptive_gstat3",
+   "tag": "g515_s1",
+   "parameters": 350094,
+   "updates": 372,
+   "byte_targets": 761856,
+   "training_cpu_seconds": 120.197549074,
+   "byte_targets_per_cpu_second": 6338.365514682509,
+   "wikitext_ce_nats": 1.810897943820532,
+   "fineweb_edu_ce_nats": 2.140384420117885,
+   "peak_rss_mib": 470.546875,
+   "status": "ok",
+   "gallery_score": 2.45899850773206,
+   "state_sha256": "6be043491dc54b61a65a6902c7d8357379a502309a880714edfa13e2e86ab054",
+   "source_sha256": "c99cd7cac8d3552283675ed13e6cda623786c0fc7fbcfe788c4cf72cb617f832",
+   "wikitext_ce_at_60s": 1.9860518265395122,
+   "fineweb_edu_ce_at_60s": 2.269434228382094,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05143189253187612,
+    "wikitext_ci95": [
+     -0.06463525786938533,
+     -0.038899292482241485
+    ],
+    "fineweb_edu_delta": -0.05177081481481483,
+    "fineweb_edu_ci95": [
+     -0.06707153897306396,
+     -0.03679364671717177
+    ]
+   },
+   "rank_by_sum": 32
+  },
+  {
+   "arm": "518",
+   "name": "delta_net_rmsgm",
+   "tag": "g518_s1",
+   "parameters": 350025,
+   "updates": 371,
+   "byte_targets": 759808,
+   "training_cpu_seconds": 120.123750726,
+   "byte_targets_per_cpu_second": 6325.21042181831,
+   "wikitext_ce_nats": 1.8167092672540963,
+   "fineweb_edu_ce_nats": 2.1312293714152593,
+   "peak_rss_mib": 472.72265625,
+   "status": "ok",
+   "gallery_score": 2.293324343370674,
+   "state_sha256": "189adcfbce066674dcb05574e8b1e977f6cee4bb1b1a66df6e6de70909e7eb29",
+   "source_sha256": "6f588e4282cf72bf47befd95ddd21727e042f6868c1a0ae4343347571f077b7b",
+   "wikitext_ce_at_60s": 1.973920322870327,
+   "fineweb_edu_ce_at_60s": 2.248250375637273,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04562052094717667,
+    "wikitext_ci95": [
+     -0.054699405735867415,
+     -0.03559986226356705
+    ],
+    "fineweb_edu_delta": -0.06092581481481482,
+    "fineweb_edu_ci95": [
+     -0.07625377904040402,
+     -0.04514619520202021
+    ]
+   },
+   "rank_by_sum": 30
+  },
+  {
+   "arm": "519",
+   "name": "delta_net_ssg_sparsemax_temp",
+   "tag": "g519_s1",
+   "parameters": 350070,
+   "updates": 86,
+   "byte_targets": 176128,
+   "training_cpu_seconds": 120.91887332499999,
+   "byte_targets_per_cpu_second": 1456.5798965609904,
+   "wikitext_ce_nats": 2.1973414579757233,
+   "fineweb_edu_ce_nats": 2.434679476582117,
+   "peak_rss_mib": 565.06640625,
+   "status": "ok",
+   "gallery_score": 2.3546991262639367,
+   "state_sha256": "a7fcd53e67b1844fba1fd5289d274ec84bdada48fef9ce33b7c8baca3e64ea29",
+   "source_sha256": "c353803f2ab6ca5a8c767d1522785f359c5f894618e4a2a9ba86a64dd9bdd92a",
+   "wikitext_ce_at_60s": 2.4882083795320518,
+   "fineweb_edu_ce_at_60s": 2.6396236028762923,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.3350116484517304,
+    "wikitext_ci95": [
+     0.31987185320171846,
+     0.351595091498656
+    ],
+    "fineweb_edu_delta": 0.24252428619528613,
+    "fineweb_edu_ci95": [
+     0.21719546380471372,
+     0.26670903400673396
+    ]
+   },
+   "rank_by_sum": 103
+  },
+  {
+   "arm": "537",
+   "name": "delta_net_mshmfv2",
+   "tag": "g537_s1",
+   "parameters": 349950,
+   "updates": 354,
+   "byte_targets": 724992,
+   "training_cpu_seconds": 120.349884887,
+   "byte_targets_per_cpu_second": 6024.035674655743,
+   "wikitext_ce_nats": 1.8503137233011957,
+   "fineweb_edu_ce_nats": 2.1427474985518438,
+   "peak_rss_mib": 465.51171875,
+   "status": "ok",
+   "gallery_score": 2.394496637016628,
+   "state_sha256": "2944d8a5b0429b89e24997c2f88f6b36ecfb6a5ed68a946ba79d0d9610e96c1d",
+   "source_sha256": "d8ce9221a182be08dc86f1b48ad9d3a62d92bddca276e0d079e497e31eda784a",
+   "wikitext_ce_at_60s": 2.0257859539774112,
+   "fineweb_edu_ce_at_60s": 2.302300082680933,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.012016111111111095,
+    "wikitext_ci95": [
+     -0.021847834033597118,
+     -0.0017238692856864485
+    ],
+    "fineweb_edu_delta": -0.04940769360269362,
+    "fineweb_edu_ci95": [
+     -0.06468867281144784,
+     -0.03383074116161618
+    ]
+   },
+   "rank_by_sum": 53
+  },
+  {
+   "arm": "556",
+   "name": "delta_net_dfpcr",
+   "tag": "g556_s1",
+   "parameters": 350040,
+   "updates": 449,
+   "byte_targets": 919552,
+   "training_cpu_seconds": 120.071010735,
+   "byte_targets_per_cpu_second": 7658.401427380972,
+   "wikitext_ce_nats": 1.7875316610540302,
+   "fineweb_edu_ce_nats": 2.102515003351535,
+   "peak_rss_mib": 457.453125,
+   "status": "ok",
+   "gallery_score": 2.605700022587898,
+   "state_sha256": "d9fff9338861efa3190200e87b949a950a82c37b20ddb61995194a96195cfe96",
+   "source_sha256": "65eae8f2ca90ff4ad30f002e8ff061da3aaaa8ee578c6e4ae3c4ea748bdc6573",
+   "wikitext_ce_at_60s": 1.9582400679281635,
+   "fineweb_edu_ce_at_60s": 2.2465133336682865,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.07479815482695809,
+    "wikitext_ci95": [
+     -0.08787326425759442,
+     -0.06037682959916456
+    ],
+    "fineweb_edu_delta": -0.08964018855218857,
+    "fineweb_edu_ci95": [
+     -0.1078677916666667,
+     -0.07168766540404044
+    ]
+   },
+   "rank_by_sum": 8
+  },
+  {
+   "arm": "559",
+   "name": "delta_net_mor",
+   "tag": "g559_s1",
+   "parameters": 349968,
+   "updates": 393,
+   "byte_targets": 804864,
+   "training_cpu_seconds": 120.18292444099998,
+   "byte_targets_per_cpu_second": 6696.991305076143,
+   "wikitext_ce_nats": 1.7936334731276584,
+   "fineweb_edu_ce_nats": 2.1073089992040264,
+   "peak_rss_mib": 473.703125,
+   "status": "ok",
+   "gallery_score": 2.326165951110931,
+   "state_sha256": "a631fc6c735bdebf9cf5a1319f6e0cb048c511d88eddca4861daa410f6f476b7",
+   "source_sha256": "c3b0ba6d8dc01d1119ff3a9523bde6b8d53330f5f04ea7508ae763174ecfff19",
+   "wikitext_ce_at_60s": 1.955403821704692,
+   "fineweb_edu_ce_at_60s": 2.250380832578322,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06869630236794169,
+    "wikitext_ci95": [
+     -0.08064631829805995,
+     -0.05612583498554914
+    ],
+    "fineweb_edu_delta": -0.08484616835016837,
+    "fineweb_edu_ci95": [
+     -0.10300532727272732,
+     -0.06791856456228956
+    ]
+   },
+   "rank_by_sum": 11
+  },
+  {
+   "arm": "562",
+   "name": "delta_net_sparsemax_temperature",
+   "tag": "g562_s1",
+   "parameters": 350070,
+   "updates": 84,
+   "byte_targets": 172032,
+   "training_cpu_seconds": 121.22202033900001,
+   "byte_targets_per_cpu_second": 1419.1481013013047,
+   "wikitext_ce_nats": 2.2109020251423006,
+   "fineweb_edu_ce_nats": 2.4428387872137094,
+   "peak_rss_mib": 562.171875,
+   "status": "ok",
+   "gallery_score": 2.2203932015400234,
+   "state_sha256": "d7b6d10fea0bd4c0abab4f27e70132501040f80a0942bf496489adb5fe10a885",
+   "source_sha256": "9037a14645ede30ea7f9f9d5b8a1ee10523cd5eccf033b60657b8f0a6d9764ee",
+   "wikitext_ce_at_60s": 2.504337357466088,
+   "fineweb_edu_ce_at_60s": 2.6459564095301014,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.348572189435337,
+    "wikitext_ci95": [
+     0.33258982293906814,
+     0.36620184415281615
+    ],
+    "fineweb_edu_delta": 0.2506835892255892,
+    "fineweb_edu_ci95": [
+     0.22621257651515153,
+     0.27551909132996627
+    ]
+   },
+   "rank_by_sum": 104
+  },
+  {
+   "arm": "565",
+   "name": "delta_net_cagf",
+   "tag": "g565_s1",
+   "parameters": 349935,
+   "updates": 326,
+   "byte_targets": 667648,
+   "training_cpu_seconds": 120.29924978199999,
+   "byte_targets_per_cpu_second": 5549.893297006231,
+   "wikitext_ce_nats": 1.8462951181422085,
+   "fineweb_edu_ce_nats": 2.1570018972499616,
+   "peak_rss_mib": 478.5390625,
+   "status": "ok",
+   "gallery_score": 2.6544648642137623,
+   "state_sha256": "bbc1a779c9b5018be75a082237d09b484beb97a7bfd6fdff3508e80ac96bf1c6",
+   "source_sha256": "b649fc8e348d600f25dc1d28e51ad8ccdded8ffb20be291e02bfb071492309eb",
+   "wikitext_ce_at_60s": 2.036560128470254,
+   "fineweb_edu_ce_at_60s": 2.2838202998624304,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.016034717668488133,
+    "wikitext_ci95": [
+     -0.02782471610486889,
+     -0.004164050497224782
+    ],
+    "fineweb_edu_delta": -0.035153279461279476,
+    "fineweb_edu_ci95": [
+     -0.049272672390572425,
+     -0.02148119797979796
+    ]
+   },
+   "rank_by_sum": 64
+  },
+  {
+   "arm": "629",
+   "name": "delta_net_ms_hsm_widefloor",
+   "tag": "g629_s1",
+   "parameters": 349974,
+   "updates": 298,
+   "byte_targets": 610304,
+   "training_cpu_seconds": 120.23009273799997,
+   "byte_targets_per_cpu_second": 5076.133487894309,
+   "wikitext_ce_nats": 1.8593127769971325,
+   "fineweb_edu_ce_nats": 2.176044681180009,
+   "peak_rss_mib": 498.51953125,
+   "status": "ok",
+   "gallery_score": 2.5187692681335485,
+   "state_sha256": "6763d9ae28068fca8769910d57f67ebe1a35cadb2e48bd5f9fff1292161032c9",
+   "source_sha256": "38b568fbc9f52b479b9cc9d2c2313682c93808593421070ad8638c82064ab6d8",
+   "wikitext_ce_at_60s": 2.069847002725201,
+   "fineweb_edu_ce_at_60s": 2.3274965705588624,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.0030170455373405977,
+    "wikitext_ci95": [
+     -0.012714859938367424,
+     0.007268881952117879
+    ],
+    "fineweb_edu_delta": -0.016110511784511807,
+    "fineweb_edu_ci95": [
+     -0.03093622415824921,
+     -0.0018177028619529199
+    ]
+   },
+   "rank_by_sum": 80
+  },
+  {
+   "arm": "641",
+   "name": "delta_net_hwg",
+   "tag": "g641_s1",
+   "parameters": 349944,
+   "updates": 403,
+   "byte_targets": 825344,
+   "training_cpu_seconds": 120.12841889799998,
+   "byte_targets_per_cpu_second": 6870.51413455123,
+   "wikitext_ce_nats": 1.7924380373577418,
+   "fineweb_edu_ce_nats": 2.0970536566105435,
+   "peak_rss_mib": 470.28125,
+   "status": "ok",
+   "gallery_score": 2.5572863948927256,
+   "state_sha256": "246caa8999551cc5970ae7e6dc4184c3178bb167b8b1d9164f9dfb0eb7f73411",
+   "source_sha256": "c970077bad63f5829568cbcbe1019f91013416b2f10d634e363e421bc4077691",
+   "wikitext_ce_at_60s": 1.9445024649965221,
+   "fineweb_edu_ce_at_60s": 2.231941198630379,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06989178324225864,
+    "wikitext_ci95": [
+     -0.08026931127006345,
+     -0.05850789480858936
+    ],
+    "fineweb_edu_delta": -0.0951015420875421,
+    "fineweb_edu_ci95": [
+     -0.11205014629629635,
+     -0.07815009360269363
+    ]
+   },
+   "rank_by_sum": 7
+  },
+  {
+   "arm": "645",
+   "name": "delta_net_htcg",
+   "tag": "g645_s1",
+   "parameters": 349950,
+   "updates": 445,
+   "byte_targets": 911360,
+   "training_cpu_seconds": 120.11513686500001,
+   "byte_targets_per_cpu_second": 7587.386767283936,
+   "wikitext_ce_nats": 1.7932992675916537,
+   "fineweb_edu_ce_nats": 2.1114197749862744,
+   "peak_rss_mib": 468.69140625,
+   "status": "ok",
+   "gallery_score": 1.9568617098392718,
+   "state_sha256": "81237a1f0874e7ffe77231155c98bddd8cc9e44d1d0884c491471602c0246ec8",
+   "source_sha256": "a4f6820d304293f7880590a95597b3406c11aad003c34e77bc2d146195a05352",
+   "wikitext_ce_at_60s": 1.954152879327982,
+   "fineweb_edu_ce_at_60s": 2.244303768048787,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06903054826958104,
+    "wikitext_ci95": [
+     -0.08171347649812731,
+     -0.05650526340765334
+    ],
+    "fineweb_edu_delta": -0.0807354410774411,
+    "fineweb_edu_ci95": [
+     -0.09555489023569025,
+     -0.06621270631313135
+    ]
+   },
+   "rank_by_sum": 12
+  },
+  {
+   "arm": "657",
+   "name": "delta_net_ms_gstat3_quota",
+   "tag": "g657_s1",
+   "parameters": 349950,
+   "updates": 375,
+   "byte_targets": 768000,
+   "training_cpu_seconds": 120.32879462600002,
+   "byte_targets_per_cpu_second": 6382.512202395606,
+   "wikitext_ce_nats": 1.81601784016927,
+   "fineweb_edu_ce_nats": 2.1444162409820464,
+   "peak_rss_mib": 469.52734375,
+   "status": "ok",
+   "gallery_score": 2.3365125647324017,
+   "state_sha256": "0227df86010835525bad309f4b15f8827203af4617c7a63c7b7d7e4daa1c0c1e",
+   "source_sha256": "7444d5b8ce5aa1d64609105f555db8961c1e9f54cdc7c6aa088b989bb1b2c75f",
+   "wikitext_ce_at_60s": 1.9765774004476717,
+   "fineweb_edu_ce_at_60s": 2.268791580251883,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04631199089253185,
+    "wikitext_ci95": [
+     -0.05864059319138409,
+     -0.03306304207891136
+    ],
+    "fineweb_edu_delta": -0.04773895622895624,
+    "fineweb_edu_ci95": [
+     -0.0636699797138047,
+     -0.032228763973064005
+    ]
+   },
+   "rank_by_sum": 41
+  },
+  {
+   "arm": "665",
+   "name": "delta_net_hrem",
+   "tag": "g665_s1",
+   "parameters": 350016,
+   "updates": 373,
+   "byte_targets": 763904,
+   "training_cpu_seconds": 120.30154736199998,
+   "byte_targets_per_cpu_second": 6349.910011558976,
+   "wikitext_ce_nats": 1.8107898276280296,
+   "fineweb_edu_ce_nats": 2.1413845648302026,
+   "peak_rss_mib": 486.015625,
+   "status": "ok",
+   "gallery_score": 2.3413729942962855,
+   "state_sha256": "9453b967ed35b06f829e831f9c085ab9634325007af589a6b542f6f3c736ddc0",
+   "source_sha256": "0d0a99322e56e347c72b0a4f2fd16efe033f78efe49f93f98d338046678ba262",
+   "wikitext_ce_at_60s": 1.974090054527209,
+   "fineweb_edu_ce_at_60s": 2.2548714811210644,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05153996357012749,
+    "wikitext_ci95": [
+     -0.0610222879707557,
+     -0.041671039903253146
+    ],
+    "fineweb_edu_delta": -0.050770612794612806,
+    "fineweb_edu_ci95": [
+     -0.06717790740740742,
+     -0.034488695286195296
+    ]
+   },
+   "rank_by_sum": 34
+  },
+  {
+   "arm": "675",
+   "name": "delta_net_gae_ms3e",
+   "tag": "g675_s1",
+   "parameters": 349962,
+   "updates": 345,
+   "byte_targets": 706560,
+   "training_cpu_seconds": 120.31282199700001,
+   "byte_targets_per_cpu_second": 5872.690776196888,
+   "wikitext_ce_nats": 1.8424820953622492,
+   "fineweb_edu_ce_nats": 2.153833001586882,
+   "peak_rss_mib": 492.0234375,
+   "status": "ok",
+   "gallery_score": 2.3029762200462924,
+   "state_sha256": "3db771d7fbf419d61912c9e6abcef9404593fa43837130ec04d495488496e2f3",
+   "source_sha256": "748409c3c30d5705f4bb8355814ce48b4a70812fe9f9873f595d96c8129ec75a",
+   "wikitext_ce_at_60s": 2.008854998695394,
+   "fineweb_edu_ce_at_60s": 2.2827036390430293,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.01984772859744989,
+    "wikitext_ci95": [
+     -0.0288768519055886,
+     -0.009964239598660624
+    ],
+    "fineweb_edu_delta": -0.038322188552188594,
+    "fineweb_edu_ci95": [
+     -0.05443676809764314,
+     -0.023298136195286246
+    ]
+   },
+   "rank_by_sum": 56
+  },
+  {
+   "arm": "676",
+   "name": "delta_net_ser_minfloor",
+   "tag": "g676_s1",
+   "parameters": 349956,
+   "updates": 409,
+   "byte_targets": 837632,
+   "training_cpu_seconds": 120.233037743,
+   "byte_targets_per_cpu_second": 6966.737393680858,
+   "wikitext_ce_nats": 1.7975970269250041,
+   "fineweb_edu_ce_nats": 2.108229990418463,
+   "peak_rss_mib": 458.6171875,
+   "status": "ok",
+   "gallery_score": 2.22374935107744,
+   "state_sha256": "e7a2e9a6c8b5f97aaee780982a01f4b3afb0d6dd77571241e9db5c2eb30a8fdb",
+   "source_sha256": "99e617af33ee81d813ef0c26e1562fe19ee3c7cf382b4085dfc21e001183df5a",
+   "wikitext_ce_at_60s": 1.9595840218430183,
+   "fineweb_edu_ce_at_60s": 2.2399655952009683,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06473281602914387,
+    "wikitext_ci95": [
+     -0.0771605837322042,
+     -0.05058542768345592
+    ],
+    "fineweb_edu_delta": -0.08392522895622896,
+    "fineweb_edu_ci95": [
+     -0.09930797348484846,
+     -0.0681668659090909
+    ]
+   },
+   "rank_by_sum": 14
+  },
+  {
+   "arm": "700",
+   "name": "delta_net_amf_routing",
+   "tag": "g700_s1",
+   "parameters": 350010,
+   "updates": 364,
+   "byte_targets": 745472,
+   "training_cpu_seconds": 120.177845362,
+   "byte_targets_per_cpu_second": 6203.073434662499,
+   "wikitext_ce_nats": 1.8206538965627233,
+   "fineweb_edu_ce_nats": 2.1353990576039075,
+   "peak_rss_mib": 487.13671875,
+   "status": "ok",
+   "gallery_score": 2.0675334316269405,
+   "state_sha256": "56aa9f8d2bf344fde8d561d86aa61c035ff7ba68ea72513730ea9cd13cf396d8",
+   "source_sha256": "9478e7f544ab042799bf23c32cf458059129b9d992c385a5594ce9cb4c3e2144",
+   "wikitext_ce_at_60s": 1.9963003809689333,
+   "fineweb_edu_ce_at_60s": 2.2528196418342707,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04167590346083786,
+    "wikitext_ci95": [
+     -0.05312139866542518,
+     -0.02975503624471177
+    ],
+    "fineweb_edu_delta": -0.05675613804713807,
+    "fineweb_edu_ci95": [
+     -0.07375007845117848,
+     -0.040139930892255926
+    ]
+   },
+   "rank_by_sum": 37
+  },
+  {
+   "arm": "702",
+   "name": "delta_net_bscgf",
+   "tag": "g702_s1",
+   "parameters": 349950,
+   "updates": 377,
+   "byte_targets": 772096,
+   "training_cpu_seconds": 120.05072816,
+   "byte_targets_per_cpu_second": 6431.414551446732,
+   "wikitext_ce_nats": 1.8275209051925594,
+   "fineweb_edu_ce_nats": 2.135093963049752,
+   "peak_rss_mib": 467.01171875,
+   "status": "ok",
+   "gallery_score": 2.563206945856089,
+   "state_sha256": "35160eb6542b2f3d96613efff9a32c1705ed09e251d4b36dc8e8f52858e86cf7",
+   "source_sha256": "631c0694bd588a5427d40e5ad9da1fd2dd5f282f71ac8d8b1124cac20058b99e",
+   "wikitext_ce_at_60s": 1.994008220977067,
+   "fineweb_edu_ce_at_60s": 2.2774556514447335,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.03480888706739524,
+    "wikitext_ci95": [
+     -0.045286437057159006,
+     -0.02354026040926639
+    ],
+    "fineweb_edu_delta": -0.05706125925925929,
+    "fineweb_edu_ci95": [
+     -0.07159608005050504,
+     -0.042479654292929304
+    ]
+   },
+   "rank_by_sum": 44
+  },
+  {
+   "arm": "703",
+   "name": "delta_net_csm",
+   "tag": "g703_s1",
+   "parameters": 350046,
+   "updates": 350,
+   "byte_targets": 716800,
+   "training_cpu_seconds": 120.28688753299998,
+   "byte_targets_per_cpu_second": 5959.086769148884,
+   "wikitext_ce_nats": 1.8209534365201243,
+   "fineweb_edu_ce_nats": 2.1242487250559696,
+   "peak_rss_mib": 453.4453125,
+   "status": "ok",
+   "gallery_score": 2.4922768127046893,
+   "state_sha256": "ccbcaa94968beee3d66b455ff71494d54ae840dc19123d4a257ca796749894c2",
+   "source_sha256": "65fad929731e9eaac7a67a42088249de95c66edb3391071e55e144f5e1b22017",
+   "wikitext_ce_at_60s": 2.00796168585802,
+   "fineweb_edu_ce_at_60s": 2.2894279913346245,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04137638979963568,
+    "wikitext_ci95": [
+     -0.050431441554455704,
+     -0.03188500056419565
+    ],
+    "fineweb_edu_delta": -0.06790647138047141,
+    "fineweb_edu_ci95": [
+     -0.0845649000841751,
+     -0.0510107730639731
+    ]
+   },
+   "rank_by_sum": 29
+  },
+  {
+   "arm": "709",
+   "name": "delta_net_htgmsm",
+   "tag": "g709_s1",
+   "parameters": 350076,
+   "updates": 112,
+   "byte_targets": 229376,
+   "training_cpu_seconds": 120.977283549,
+   "byte_targets_per_cpu_second": 1896.025379897828,
+   "wikitext_ce_nats": 2.130373921519745,
+   "fineweb_edu_ce_nats": 2.389946068070589,
+   "peak_rss_mib": 525.1484375,
+   "status": "ok",
+   "gallery_score": 2.517634222499238,
+   "state_sha256": "4bcad071f305d1523bb5189257a58f8b5b2ff86fb334192ae173e8df38de3afa",
+   "source_sha256": "ef224861172acb1272a822bac2ceef713f2a2c13c0de2af4d798055fbf4df311",
+   "wikitext_ce_at_60s": 2.388116452227391,
+   "fineweb_edu_ce_at_60s": 2.5771512420139326,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.26804408014571957,
+    "wikitext_ci95": [
+     0.2545339362044993,
+     0.2820539751586948
+    ],
+    "fineweb_edu_delta": 0.1977908821548821,
+    "fineweb_edu_ci95": [
+     0.17597099621212123,
+     0.2213381607744108
+    ]
+   },
+   "rank_by_sum": 102
+  },
+  {
+   "arm": "712",
+   "name": "delta_net_afp",
+   "tag": "g712_s1",
+   "parameters": 349980,
+   "updates": 321,
+   "byte_targets": 657408,
+   "training_cpu_seconds": 120.20742578000002,
+   "byte_targets_per_cpu_second": 5468.946662273329,
+   "wikitext_ce_nats": 1.8416921920667289,
+   "fineweb_edu_ce_nats": 2.142981990181997,
+   "peak_rss_mib": 481.63671875,
+   "status": "ok",
+   "gallery_score": 2.528344499973813,
+   "state_sha256": "35b812d66f056f50e79e4f9e17b319607507d1758f9dcb3e516b6846ea6bf599",
+   "source_sha256": "62d59f5bf7f19ba502343f2c1aeba41311659f981660cd0feb37a58940451b7e",
+   "wikitext_ce_at_60s": 2.035432865856729,
+   "fineweb_edu_ce_at_60s": 2.2927581212923522,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.02063764116575589,
+    "wikitext_ci95": [
+     -0.03163898911726642,
+     -0.00995586169497825
+    ],
+    "fineweb_edu_delta": -0.04917321885521886,
+    "fineweb_edu_ci95": [
+     -0.06455985202020204,
+     -0.03419583905723904
+    ]
+   },
+   "rank_by_sum": 50
+  },
+  {
+   "arm": "714",
+   "name": "delta_net_ms_resgate",
+   "tag": "g714_s1",
+   "parameters": 349980,
+   "updates": 391,
+   "byte_targets": 800768,
+   "training_cpu_seconds": 120.104487714,
+   "byte_targets_per_cpu_second": 6667.261275921985,
+   "wikitext_ce_nats": 1.8580640785765719,
+   "fineweb_edu_ce_nats": 2.1801738726925732,
+   "peak_rss_mib": 480.03515625,
+   "status": "ok",
+   "gallery_score": 2.3628523780728754,
+   "state_sha256": "8034dd71a6757d830fdc12222e571726d0a8cef979cd6391de7ff6e7b8e36048",
+   "source_sha256": "7fd95751c2c727ef5ee232556dc9f95bf30317d5b3141011a7af2856673ee7e9",
+   "wikitext_ce_at_60s": 2.025150372436714,
+   "fineweb_edu_ce_at_60s": 2.2933561133142133,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.004265728597449891,
+    "wikitext_ci95": [
+     -0.013966018661878136,
+     0.005750747048308367
+    ],
+    "fineweb_edu_delta": -0.01198136026936029,
+    "fineweb_edu_ci95": [
+     -0.027717236279461297,
+     0.0038348972222222145
+    ]
+   },
+   "rank_by_sum": 83
+  },
+  {
+   "arm": "720",
+   "name": "delta_net_hsgm",
+   "tag": "g720_s1",
+   "parameters": 350046,
+   "updates": 395,
+   "byte_targets": 808960,
+   "training_cpu_seconds": 120.08394113,
+   "byte_targets_per_cpu_second": 6736.621003504867,
+   "wikitext_ce_nats": 1.8064394690236425,
+   "fineweb_edu_ce_nats": 2.1093334888808393,
+   "peak_rss_mib": 476.56640625,
+   "status": "ok",
+   "gallery_score": 2.5802720887344472,
+   "state_sha256": "54a459302efe67054107297208b4d5c6776970035a0969f4eb1ce670ba4cb6c2",
+   "source_sha256": "711e07f46db86c1fc8058041c69adfcca79299492337ee07c86ba095c8c6516a",
+   "wikitext_ce_at_60s": 1.9698933815172919,
+   "fineweb_edu_ce_at_60s": 2.257726984250408,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05589035701275044,
+    "wikitext_ci95": [
+     -0.06684862226151315,
+     -0.042810795380687786
+    ],
+    "fineweb_edu_delta": -0.0828216734006734,
+    "fineweb_edu_ci95": [
+     -0.09955055404040405,
+     -0.06599593358585859
+    ]
+   },
+   "rank_by_sum": 20
+  },
+  {
+   "arm": "750",
+   "name": "delta_net_adaptive_hier_gate",
+   "tag": "g750_s1",
+   "parameters": 349968,
+   "updates": 404,
+   "byte_targets": 827392,
+   "training_cpu_seconds": 120.00932015599999,
+   "byte_targets_per_cpu_second": 6894.3978594701985,
+   "wikitext_ce_nats": 1.7945759964625647,
+   "fineweb_edu_ce_nats": 2.1060490863894135,
+   "peak_rss_mib": 476.4609375,
+   "status": "ok",
+   "gallery_score": 2.167412981375801,
+   "state_sha256": "badaf5ede2188462ef2968cbc6cbaefb1631023b1471acf4ca5c7479f365d44e",
+   "source_sha256": "58ca4270916f4e4505df4704218c09a01a7e9ee7c2a9462ce368e5cd43f6b275",
+   "wikitext_ce_at_60s": 1.9509403148508784,
+   "fineweb_edu_ce_at_60s": 2.2594025270351663,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06775379417122038,
+    "wikitext_ci95": [
+     -0.07828958515335795,
+     -0.05659226149916845
+    ],
+    "fineweb_edu_delta": -0.08610604713804718,
+    "fineweb_edu_ci95": [
+     -0.10244095664983166,
+     -0.06988119444444445
+    ]
+   },
+   "rank_by_sum": 10
+  },
+  {
+   "arm": "804",
+   "name": "delta_net_phsg5",
+   "tag": "g804_s1",
+   "parameters": 349962,
+   "updates": 432,
+   "byte_targets": 884736,
+   "training_cpu_seconds": 120.13809707899999,
+   "byte_targets_per_cpu_second": 7364.325068493622,
+   "wikitext_ce_nats": 1.7734378547683434,
+   "fineweb_edu_ce_nats": 2.1139628542240643,
+   "peak_rss_mib": 470.99609375,
+   "status": "ok",
+   "gallery_score": 2.223638002868015,
+   "state_sha256": "952e18ff00ea019b5197883c4cbbb5bf6d76f08306f75551b1dba14ff0c701f4",
+   "source_sha256": "0351c824749a39ec9f76f16c4eaa7540038c4ce5f81179f1c7687b851827a584",
+   "wikitext_ce_at_60s": 1.9310952445362874,
+   "fineweb_edu_ce_at_60s": 2.2198290805250522,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.08889197449908924,
+    "wikitext_ci95": [
+     -0.1019144057470726,
+     -0.07676256167855225
+    ],
+    "fineweb_edu_delta": -0.07819237037037038,
+    "fineweb_edu_ci95": [
+     -0.09856992188552194,
+     -0.05880238914141416
+    ]
+   },
+   "rank_by_sum": 5
+  },
+  {
+   "arm": "814",
+   "name": "delta_net_htfr",
+   "tag": "g814_s1",
+   "parameters": 349974,
+   "updates": 460,
+   "byte_targets": 942080,
+   "training_cpu_seconds": 120.24370599499998,
+   "byte_targets_per_cpu_second": 7834.755193250397,
+   "wikitext_ce_nats": 1.8428269661631866,
+   "fineweb_edu_ce_nats": 2.169557099084573,
+   "peak_rss_mib": 464.83984375,
+   "status": "ok",
+   "gallery_score": 2.6161594772234698,
+   "state_sha256": "130ad8b3c84b044954da130a56a9f12519353bfe93c27161aff0acb97ce73a4b",
+   "source_sha256": "d2f18b9060087d151bdd407f4bb339d41c943ec0319b23668929c05778c4a8e9",
+   "wikitext_ce_at_60s": 1.9996582733117054,
+   "fineweb_edu_ce_at_60s": 2.2821185760383975,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.01950279417122038,
+    "wikitext_ci95": [
+     -0.027583980148342045,
+     -0.01081983165426658
+    ],
+    "fineweb_edu_delta": -0.022598127946127974,
+    "fineweb_edu_ci95": [
+     -0.03732809907407407,
+     -0.007724395202020205
+    ]
+   },
+   "rank_by_sum": 70
+  },
+  {
+   "arm": "828",
+   "name": "delta_net_aggf_v2",
+   "tag": "g828_s1",
+   "parameters": 349944,
+   "updates": 351,
+   "byte_targets": 718848,
+   "training_cpu_seconds": 120.22951921599999,
+   "byte_targets_per_cpu_second": 5978.9642733956525,
+   "wikitext_ce_nats": 1.8343740298053512,
+   "fineweb_edu_ce_nats": 2.1221935562585426,
+   "peak_rss_mib": 479.8671875,
+   "status": "ok",
+   "gallery_score": 2.22623399465556,
+   "state_sha256": "8cabc627a8c604d6cb5327d95433ab6c7fb8b2adaa28165546a3571542e143e0",
+   "source_sha256": "978892861788996b13c5ef7072bfe15e41485e1bc25217cfca667a3df07ac59d",
+   "wikitext_ce_at_60s": 2.0069561987085067,
+   "fineweb_edu_ce_at_60s": 2.2720776673786967,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.027955772313296882,
+    "wikitext_ci95": [
+     -0.03746530275096522,
+     -0.01845269315969478
+    ],
+    "fineweb_edu_delta": -0.06996160269360271,
+    "fineweb_edu_ci95": [
+     -0.08597660395622898,
+     -0.05435992281144784
+    ]
+   },
+   "rank_by_sum": 38
+  },
+  {
+   "arm": "830",
+   "name": "delta_net_hwggm",
+   "tag": "g830_s1",
+   "parameters": 349941,
+   "updates": 396,
+   "byte_targets": 811008,
+   "training_cpu_seconds": 120.06552681000001,
+   "byte_targets_per_cpu_second": 6754.711544167004,
+   "wikitext_ce_nats": 1.8034296911904368,
+   "fineweb_edu_ce_nats": 2.1064898088015185,
+   "peak_rss_mib": 484.046875,
+   "status": "ok",
+   "gallery_score": 2.381166858117132,
+   "state_sha256": "26c0db41c6ee08d0a5f9c291cf4e1913c51326f64be616a584f60e28349a1b59",
+   "source_sha256": "22f641d51ee2c83e070a5c4a4d1206a76223b283e53a3295ebd25728d612e608",
+   "wikitext_ce_at_60s": 1.9640214238780354,
+   "fineweb_edu_ce_at_60s": 2.2305481404271252,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05890016575591984,
+    "wikitext_ci95": [
+     -0.07038658252688174,
+     -0.04679941018724184
+    ],
+    "fineweb_edu_delta": -0.08566536026936028,
+    "fineweb_edu_ci95": [
+     -0.10257641296296291,
+     -0.06911598829966328
+    ]
+   },
+   "rank_by_sum": 17
+  },
+  {
+   "arm": "843",
+   "name": "delta_net_hsigctx",
+   "tag": "g843_s1",
+   "parameters": 349950,
+   "updates": 379,
+   "byte_targets": 776192,
+   "training_cpu_seconds": 120.16629428300001,
+   "byte_targets_per_cpu_second": 6459.315439752296,
+   "wikitext_ce_nats": 1.8035357847723996,
+   "fineweb_edu_ce_nats": 2.1202022908427702,
+   "peak_rss_mib": 487.83984375,
+   "status": "ok",
+   "gallery_score": 2.4413182171728547,
+   "state_sha256": "114d7b0b34283a9ab86e13668606fb44b95b94ad860733495221011add1b5cc8",
+   "source_sha256": "8beebf88634cf51fb6b0e3b35f342c5b75cc64341f2f8f40103708576c12ac84",
+   "wikitext_ce_at_60s": 1.9878992704443115,
+   "fineweb_edu_ce_at_60s": 2.2507371453651634,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05879400728597447,
+    "wikitext_ci95": [
+     -0.07014404591637968,
+     -0.04705897421073521
+    ],
+    "fineweb_edu_delta": -0.07195288552188553,
+    "fineweb_edu_ci95": [
+     -0.08833445202020203,
+     -0.055138346969696994
+    ]
+   },
+   "rank_by_sum": 24
+  },
+  {
+   "arm": "865",
+   "name": "delta_net_dynfuse",
+   "tag": "g865_s1",
+   "parameters": 349938,
+   "updates": 345,
+   "byte_targets": 706560,
+   "training_cpu_seconds": 120.005498718,
+   "byte_targets_per_cpu_second": 5887.730208599357,
+   "wikitext_ce_nats": 1.8682926467375178,
+   "fineweb_edu_ce_nats": 2.1819860903215313,
+   "peak_rss_mib": 479.02734375,
+   "status": "ok",
+   "gallery_score": 2.656655809583106,
+   "state_sha256": "b25714c27c6348bd6581f76dacf261a8dfd6a9803359a78213241e60c3c930eb",
+   "source_sha256": "c4a395c2285f3245545a95fc50c1a76be75f19316882e4e80f0441eede1c5e4f",
+   "wikitext_ce_at_60s": 2.0463110059873975,
+   "fineweb_edu_ce_at_60s": 2.320403532744799,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.005962812386156673,
+    "wikitext_ci95": [
+     -0.005321045249950494,
+     0.017298417904970265
+    ],
+    "fineweb_edu_delta": -0.010169057239057259,
+    "fineweb_edu_ci95": [
+     -0.024825481734006703,
+     0.004480138888888876
+    ]
+   },
+   "rank_by_sum": 95
+  },
+  {
+   "arm": "879",
+   "name": "delta_net_psfr",
+   "tag": "g879_s1",
+   "parameters": 349956,
+   "updates": 376,
+   "byte_targets": 770048,
+   "training_cpu_seconds": 120.23478459699999,
+   "byte_targets_per_cpu_second": 6404.535946739773,
+   "wikitext_ce_nats": 1.8111857545007684,
+   "fineweb_edu_ce_nats": 2.1423584516718144,
+   "peak_rss_mib": 467.4453125,
+   "status": "ok",
+   "gallery_score": 2.5516100409835394,
+   "state_sha256": "4606efdefe2973224c83609ca3f03b59ff16d91197189abb123616d559a84017",
+   "source_sha256": "771d5c670feeb0c70df9d9817ec01b3f72c85fefd4483fff5b10c4e1978a5f80",
+   "wikitext_ce_at_60s": 1.9582219080652852,
+   "fineweb_edu_ce_at_60s": 2.247956679716837,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.051144089253187607,
+    "wikitext_ci95": [
+     -0.061269656460674116,
+     -0.04080725023277469
+    ],
+    "fineweb_edu_delta": -0.04979674410774412,
+    "fineweb_edu_ci95": [
+     -0.06425619234006735,
+     -0.0349026106060606
+    ]
+   },
+   "rank_by_sum": 35
+  },
+  {
+   "arm": "887",
+   "name": "delta_net_erfg",
+   "tag": "g887_s1",
+   "parameters": 350016,
+   "updates": 424,
+   "byte_targets": 868352,
+   "training_cpu_seconds": 120.31036975100001,
+   "byte_targets_per_cpu_second": 7217.598963390953,
+   "wikitext_ce_nats": 1.7921652961301664,
+   "fineweb_edu_ce_nats": 2.123064167008281,
+   "peak_rss_mib": 471.50390625,
+   "status": "ok",
+   "gallery_score": 2.2414524904139093,
+   "state_sha256": "e135cf8c57f35f0ce8cd98ec438dafdea7006e17387c83a3858c5af4eaa3fc9b",
+   "source_sha256": "5bcba408a97dd3481d46a726511ff748f800bdddfca29401b5e318be1fb68937",
+   "wikitext_ce_at_60s": 1.9488006729112728,
+   "fineweb_edu_ce_at_60s": 2.250760428031131,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.07016451548269578,
+    "wikitext_ci95": [
+     -0.08349979606916504,
+     -0.05594181814979201
+    ],
+    "fineweb_edu_delta": -0.06909102693602698,
+    "fineweb_edu_ci95": [
+     -0.08691394234006737,
+     -0.05160372373737381
+    ]
+   },
+   "rank_by_sum": 19
+  },
+  {
+   "arm": "890",
+   "name": "delta_net_dmshf",
+   "tag": "g890_s1",
+   "parameters": 349992,
+   "updates": 298,
+   "byte_targets": 610304,
+   "training_cpu_seconds": 120.26571875900001,
+   "byte_targets_per_cpu_second": 5074.629797232457,
+   "wikitext_ce_nats": 1.8651873223868127,
+   "fineweb_edu_ce_nats": 2.17530571781849,
+   "peak_rss_mib": 467.57421875,
+   "status": "ok",
+   "gallery_score": 2.3497498655295423,
+   "state_sha256": "ca327301cee76423119a7aa933cdd6a49c4b99e5ec160193634d00c3c2ae5ae8",
+   "source_sha256": "b4f6dc85edf28f82fe0624e81aaf95ae527d06366e64e272419e1b11eff52605",
+   "wikitext_ce_at_60s": 2.051593613840089,
+   "fineweb_edu_ce_at_60s": 2.309597243608002,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.0028575118397085784,
+    "wikitext_ci95": [
+     -0.008327277408392418,
+     0.014882478462892852
+    ],
+    "fineweb_edu_delta": -0.01684945117845118,
+    "fineweb_edu_ci95": [
+     -0.03061450824915822,
+     -0.003380477861952856
+    ]
+   },
+   "rank_by_sum": 89
+  },
+  {
+   "arm": "902",
+   "name": "delta_net_entropy_floor",
+   "tag": "g902_s1",
+   "parameters": 625890,
+   "updates": 304,
+   "byte_targets": 622592,
+   "training_cpu_seconds": 120.20787438100001,
+   "byte_targets_per_cpu_second": 5179.294644431435,
+   "wikitext_ce_nats": 2.054712018071511,
+   "fineweb_edu_ce_nats": 2.33590674230532,
+   "peak_rss_mib": 495.95703125,
+   "status": "ok",
+   "gallery_score": 2.420659525444392,
+   "state_sha256": "dea4faa29679c20330f9385b140e83b6bbba3b83d50b255131bf1633c2f642f6",
+   "source_sha256": "e161833544d18c36987b4541978160da6604e3897cfc8e08226a74d1cabe484a",
+   "wikitext_ce_at_60s": 2.1821279645987475,
+   "fineweb_edu_ce_at_60s": 2.4524655919429232,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": false,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.19238221675774142,
+    "wikitext_ci95": [
+     0.18177205307947866,
+     0.20345295253685347
+    ],
+    "fineweb_edu_delta": 0.14375160942760937,
+    "fineweb_edu_ci95": [
+     0.1269728895622895,
+     0.16000479023569023
+    ]
+   }
+  },
+  {
+   "arm": "908",
+   "name": "delta_net_aft",
+   "tag": "g908_s1",
+   "parameters": 349950,
+   "updates": 484,
+   "byte_targets": 991232,
+   "training_cpu_seconds": 120.038539417,
+   "byte_targets_per_cpu_second": 8257.614636217579,
+   "wikitext_ce_nats": 1.7795005177470617,
+   "fineweb_edu_ce_nats": 2.0979240455295716,
+   "peak_rss_mib": 461.83203125,
+   "status": "ok",
+   "gallery_score": 2.66186479295906,
+   "state_sha256": "aa19bf12ae24cca167f2223b385f32990da795f142c9567ee9d39ff1614de799",
+   "source_sha256": "00c192fe4a64811033bd0934fdbbcccc374b1c48066ad96b5963126591f653be",
+   "wikitext_ce_at_60s": 1.9407647371323469,
+   "fineweb_edu_ce_at_60s": 2.240340753285173,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.08282930236794168,
+    "wikitext_ci95": [
+     -0.09448471468746479,
+     -0.07138077814265535
+    ],
+    "fineweb_edu_delta": -0.09423111784511788,
+    "fineweb_edu_ci95": [
+     -0.11118275858585863,
+     -0.07728415875420877
+    ]
+   },
+   "rank_by_sum": 4
+  },
+  {
+   "arm": "922",
+   "name": "delta_net_phfg",
+   "tag": "g922_s1",
+   "parameters": 349956,
+   "updates": 407,
+   "byte_targets": 833536,
+   "training_cpu_seconds": 120.150059797,
+   "byte_targets_per_cpu_second": 6937.458053772957,
+   "wikitext_ce_nats": 1.7895783103687493,
+   "fineweb_edu_ce_nats": 2.1038148878206617,
+   "peak_rss_mib": 461.40625,
+   "status": "ok",
+   "gallery_score": 2.316147996373851,
+   "state_sha256": "923b565304af945dbbd7009f65a68b023f789a4359ceb5b4c4efbc5dd262b1ec",
+   "source_sha256": "fd8824211f93a162d47cb68bd88bb9a146c4a8cf0b90b8e204b59b5e27ce01dd",
+   "wikitext_ce_at_60s": 1.9490658606559823,
+   "fineweb_edu_ce_at_60s": 2.236385523116429,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.07275152641165754,
+    "wikitext_ci95": [
+     -0.08494608212271829,
+     -0.0599442470462474
+    ],
+    "fineweb_edu_delta": -0.08834023905723908,
+    "fineweb_edu_ci95": [
+     -0.10236285597643101,
+     -0.07469101170033669
+    ]
+   },
+   "rank_by_sum": 9
+  },
+  {
+   "arm": "927",
+   "name": "delta_net_afrc",
+   "tag": "g927_s1",
+   "parameters": 349968,
+   "updates": 333,
+   "byte_targets": 681984,
+   "training_cpu_seconds": 120.262799858,
+   "byte_targets_per_cpu_second": 5670.780996328465,
+   "wikitext_ce_nats": 1.840782358853555,
+   "fineweb_edu_ce_nats": 2.1543970697252135,
+   "peak_rss_mib": 465.55859375,
+   "status": "ok",
+   "gallery_score": 2.453375067392879,
+   "state_sha256": "037fc7e6a87d41ea51f92c89a2070ff8cecc95ea275aa05f8c9a08afbad21083",
+   "source_sha256": "cdbc51b0175ed3b73390fd335c621ab6f38e7211f27baa28de862a5ae9252700",
+   "wikitext_ce_at_60s": 2.0242720091900654,
+   "fineweb_edu_ce_at_60s": 2.3002539856638413,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.021547471766848805,
+    "wikitext_ci95": [
+     -0.0320366380496203,
+     -0.011423207583062756
+    ],
+    "fineweb_edu_delta": -0.037758148148148186,
+    "fineweb_edu_ci95": [
+     -0.051884270370370376,
+     -0.023366923821548858
+    ]
+   },
+   "rank_by_sum": 55
+  },
+  {
+   "arm": "933",
+   "name": "delta_net_cagf_rc_pf",
+   "tag": "g933_s1",
+   "parameters": 349947,
+   "updates": 330,
+   "byte_targets": 675840,
+   "training_cpu_seconds": 120.167069443,
+   "byte_targets_per_cpu_second": 5624.169775735254,
+   "wikitext_ce_nats": 1.8366478578414132,
+   "fineweb_edu_ce_nats": 2.141989509039201,
+   "peak_rss_mib": 483.3203125,
+   "status": "ok",
+   "gallery_score": 2.7053433573239127,
+   "state_sha256": "b3293eca5a78e20e69231d7ede5fa50a4a9f95d95acf95dcc6b51ef3cea76593",
+   "source_sha256": "f19b9e402e3d91fcbdc2f5ebdb556c04b26602a3e62a32f602a15d1afe154eca",
+   "wikitext_ce_at_60s": 2.023431596770994,
+   "fineweb_edu_ce_at_60s": 2.286071187009874,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.025681974499089242,
+    "wikitext_ci95": [
+     -0.03537767781338088,
+     -0.016128948798236727
+    ],
+    "fineweb_edu_delta": -0.050165703703703705,
+    "fineweb_edu_ci95": [
+     -0.06692070572390574,
+     -0.03361947474747468
+    ]
+   },
+   "rank_by_sum": 47
+  },
+  {
+   "arm": "939",
+   "name": "delta_net_entropy_kl_floor_gate",
+   "tag": "g939_s1",
+   "parameters": 349980,
+   "updates": 305,
+   "byte_targets": 624640,
+   "training_cpu_seconds": 120.04155752799998,
+   "byte_targets_per_cpu_second": 5203.53128419132,
+   "wikitext_ce_nats": 1.8671504383289312,
+   "fineweb_edu_ce_nats": 2.1739080682061496,
+   "peak_rss_mib": 470.0546875,
+   "status": "ok",
+   "gallery_score": 2.5993331526427728,
+   "state_sha256": "947991f4473aa36f15f32726872b55a5c70771aec60c9d57c139d6f3e910a10a",
+   "source_sha256": "a2dbfcb4f2f4eaf018161c1279fcc56b3a44ed6f017c37445ef9348246630636",
+   "wikitext_ce_at_60s": 2.057110650223374,
+   "fineweb_edu_ce_at_60s": 2.307707602444395,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.004820632058287815,
+    "wikitext_ci95": [
+     -0.0061323281567249,
+     0.01674126939814815
+    ],
+    "fineweb_edu_delta": -0.018247138047138057,
+    "fineweb_edu_ci95": [
+     -0.03297052281144783,
+     -0.003988593518518515
+    ]
+   },
+   "rank_by_sum": 90
+  },
+  {
+   "arm": "947",
+   "name": "delta_net_gtmlp",
+   "tag": "g947_s1",
+   "parameters": 349959,
+   "updates": 362,
+   "byte_targets": 741376,
+   "training_cpu_seconds": 120.064429951,
+   "byte_targets_per_cpu_second": 6174.817973171289,
+   "wikitext_ce_nats": 1.817442910380272,
+   "fineweb_edu_ce_nats": 2.137175957440554,
+   "peak_rss_mib": 466.59765625,
+   "status": "ok",
+   "gallery_score": 2.4492368483966525,
+   "state_sha256": "1609a68c48ca74cd7876288c6fc778ec3da4aae055fb7eb9d530c636b0bb8900",
+   "source_sha256": "336a6ad0133210c4fdcf6f7f95bf311a4fa236befdbf2af3142a997d076dd602",
+   "wikitext_ce_at_60s": 1.9885463519765543,
+   "fineweb_edu_ce_at_60s": 2.274862464295942,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.04488693078324224,
+    "wikitext_ci95": [
+     -0.05582967449953444,
+     -0.03452455564963357
+    ],
+    "fineweb_edu_delta": -0.05497922895622896,
+    "fineweb_edu_ci95": [
+     -0.0728926728114478,
+     -0.03763152929292928
+    ]
+   },
+   "rank_by_sum": 36
+  },
+  {
+   "arm": "948",
+   "name": "delta_net_acfg",
+   "tag": "g948_s1",
+   "parameters": 350046,
+   "updates": 419,
+   "byte_targets": 858112,
+   "training_cpu_seconds": 120.161310469,
+   "byte_targets_per_cpu_second": 7141.333567774141,
+   "wikitext_ce_nats": 1.8066306758566846,
+   "fineweb_edu_ce_nats": 2.1261704903874605,
+   "peak_rss_mib": 461.7109375,
+   "status": "ok",
+   "gallery_score": 2.2845016087520635,
+   "state_sha256": "b79266553775d90da61ba7ae0538b1738434cf7239497b2461a7f1d1fddc161b",
+   "source_sha256": "9b9249aa584228c828aff4c0edb0de4999878d74e5625b3298a4a2f7b8cebdac",
+   "wikitext_ce_at_60s": 1.955777170977461,
+   "fineweb_edu_ce_at_60s": 2.2651673571547377,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.05569916029143897,
+    "wikitext_ci95": [
+     -0.06577567440137504,
+     -0.044883185205992486
+    ],
+    "fineweb_edu_delta": -0.06598470370370373,
+    "fineweb_edu_ci95": [
+     -0.08284691582491584,
+     -0.0499565953703704
+    ]
+   },
+   "rank_by_sum": 26
+  },
+  {
+   "arm": "954",
+   "name": "delta_net_acmg",
+   "tag": "g954_s1",
+   "parameters": 349935,
+   "updates": 420,
+   "byte_targets": 860160,
+   "training_cpu_seconds": 120.124063193,
+   "byte_targets_per_cpu_second": 7160.596945659462,
+   "wikitext_ce_nats": 1.799175035752044,
+   "fineweb_edu_ce_nats": 2.110527313866731,
+   "peak_rss_mib": 471.390625,
+   "status": "ok",
+   "gallery_score": 2.1317382338352777,
+   "state_sha256": "1d30a9d32a38593dd7e42f42f06dd8aade9bf66a46550ab5dc67bda068726448",
+   "source_sha256": "944982086a0c1a70ff992dc377bfecdf235b640eaa49d2d4c91580b00de69837",
+   "wikitext_ce_at_60s": 1.9440097009591426,
+   "fineweb_edu_ce_at_60s": 2.2459620709694468,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.06315477231329689,
+    "wikitext_ci95": [
+     -0.07390476125414516,
+     -0.05228306586879432
+    ],
+    "fineweb_edu_delta": -0.08162790572390578,
+    "fineweb_edu_ci95": [
+     -0.09807727584175086,
+     -0.0640456374579125
+    ]
+   },
+   "rank_by_sum": 16
+  },
+  {
+   "arm": "957",
+   "name": "delta_net_psafg",
+   "tag": "g957_s1",
+   "parameters": 349962,
+   "updates": 434,
+   "byte_targets": 888832,
+   "training_cpu_seconds": 120.01179670599998,
+   "byte_targets_per_cpu_second": 7406.205259783123,
+   "wikitext_ce_nats": 1.7673910346200614,
+   "fineweb_edu_ce_nats": 2.098165599572331,
+   "peak_rss_mib": 489.2421875,
+   "status": "ok",
+   "gallery_score": 2.618409397137569,
+   "state_sha256": "52260e04572368fbe8042b834df341a8d0b62190c791c17fe3de5ff7d61b7a2c",
+   "source_sha256": "ee330e9e2190c7aefa356d6780c820bc16494c7eb5eeb8911759fd843adfed01",
+   "wikitext_ce_at_60s": 1.9231658480415905,
+   "fineweb_edu_ce_at_60s": 2.209856390426452,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.09493876684881601,
+    "wikitext_ci95": [
+     -0.10765502935504746,
+     -0.0821792094263446
+    ],
+    "fineweb_edu_delta": -0.09398960269360272,
+    "fineweb_edu_ci95": [
+     -0.1117131102693603,
+     -0.07636364259259258
+    ]
+   },
+   "rank_by_sum": 3
+  },
+  {
+   "arm": "965",
+   "name": "delta_net_cagf_br",
+   "tag": "g965_s1",
+   "parameters": 349941,
+   "updates": 308,
+   "byte_targets": 630784,
+   "training_cpu_seconds": 120.09627302899999,
+   "byte_targets_per_cpu_second": 5252.319527415167,
+   "wikitext_ce_nats": 1.8664184401333364,
+   "fineweb_edu_ce_nats": 2.170776387922737,
+   "peak_rss_mib": 478.18359375,
+   "status": "ok",
+   "gallery_score": 2.7247497854337794,
+   "state_sha256": "b8c2f1b98bf6f8c43ce048a97b4b05ed4a58dd06b4c0037f09edf9b1a77ad326",
+   "source_sha256": "3fc13e8a45e7fc4138ccf3f211c1651ad7e0bdf271f3610741b478fb14141320",
+   "wikitext_ce_at_60s": 2.0443038583953648,
+   "fineweb_edu_ce_at_60s": 2.3164724452165837,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": 0.004088659380692196,
+    "wikitext_ci95": [
+     -0.006927627448733721,
+     0.015597777693203401
+    ],
+    "fineweb_edu_delta": -0.021378824915824934,
+    "fineweb_edu_ci95": [
+     -0.034854733333333346,
+     -0.00841150749158254
+    ]
+   },
+   "rank_by_sum": 81
+  },
+  {
+   "arm": "974",
+   "name": "delta_net_abrgf",
+   "tag": "g974_s1",
+   "parameters": 349956,
+   "updates": 356,
+   "byte_targets": 729088,
+   "training_cpu_seconds": 120.19505072699998,
+   "byte_targets_per_cpu_second": 6065.8737243348205,
+   "wikitext_ce_nats": 1.8329040439467987,
+   "fineweb_edu_ce_nats": 2.1281397705643994,
+   "peak_rss_mib": 479.73828125,
+   "status": "ok",
+   "gallery_score": 2.476446331327402,
+   "state_sha256": "e1897ebe168bf8e7098ad86e46ce1c8f83402a026db9e66602eccfa2649f9fca",
+   "source_sha256": "bcdeb59778d369db113d1e1fa185da32f10762050f02014de9fd1dc701a3f0fe",
+   "wikitext_ce_at_60s": 2.0016144038492985,
+   "fineweb_edu_ce_at_60s": 2.247423755044915,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": false,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.029425783242258627,
+    "wikitext_ci95": [
+     -0.04031137296985811,
+     -0.017918805864871577
+    ],
+    "fineweb_edu_delta": -0.06401540067340067,
+    "fineweb_edu_ci95": [
+     -0.0820328862794613,
+     -0.04638033282828285
+    ]
+   },
+   "rank_by_sum": 43
+  },
+  {
+   "arm": "988",
+   "name": "delta_net_pfr",
+   "tag": "g988_s1",
+   "parameters": 349941,
+   "updates": 372,
+   "byte_targets": 761856,
+   "training_cpu_seconds": 120.241492529,
+   "byte_targets_per_cpu_second": 6336.049095666827,
+   "wikitext_ce_nats": 1.838525627119372,
+   "fineweb_edu_ce_nats": 2.1666828695641693,
+   "peak_rss_mib": 477.57421875,
+   "status": "ok",
+   "gallery_score": 2.669621689223796,
+   "state_sha256": "6e8aefad7b05f3a260ed4f0be58ae18b4e4e3d29955358dc04e0334b007914f5",
+   "source_sha256": "a0ea996022cbb1987334b0c598d52862143f655cddf8c51cb12d9a21433303c5",
+   "wikitext_ce_at_60s": 2.021198302772877,
+   "fineweb_edu_ce_at_60s": 2.2903066309972084,
+   "causality_max_abs_diff": 0.0,
+   "batch_independence_max_abs_diff": 0.0,
+   "audits_pass": true,
+   "previously_screened": true,
+   "within_size_budget": true,
+   "vs_transformer": {
+    "reference_seeds": [
+     1,
+     2,
+     3
+    ],
+    "wikitext_delta": -0.023804198542805077,
+    "wikitext_ci95": [
+     -0.03450859625362689,
+     -0.013800475345895466
+    ],
+    "fineweb_edu_delta": -0.02547232996632999,
+    "fineweb_edu_ci95": [
+     -0.03929900656565657,
+     -0.011892800000000002
+    ]
+   },
+   "rank_by_sum": 67
+  }
+ ],
+ "note": "One seed per gallery program; three seeds for the controls. CE in nats per byte, lower is better."
+}

@@ -1,0 +1,1494 @@
+{
+ "audited_programs": 105,
+ "built_and_forward_ok": 105,
+ "failed": {},
+ "recorded_counts_checked": 19,
+ "recorded_counts_matching": 19,
+ "mismatches": [],
+ "parameter_range": [
+  349920,
+  625890
+ ],
+ "rows": [
+  {
+   "arm": "transformer",
+   "parameters": 349920,
+   "ffn_inner": [
+    220,
+    219,
+    219
+   ],
+   "recorded": 349920
+  },
+  {
+   "arm": 151,
+   "name": "delta_net_adaptive_mix_gate",
+   "parameters": 349920,
+   "ffn_inner": [
+    459,
+    459,
+    459
+   ],
+   "mixer_parameters": 52320,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.0779740962112943
+  },
+  {
+   "arm": 259,
+   "name": "delta_net_bias_init_mix_gate",
+   "parameters": 349932,
+   "ffn_inner": [
+    459,
+    459,
+    459
+   ],
+   "mixer_parameters": 52332,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.0173448009491395
+  },
+  {
+   "arm": 295,
+   "name": "delta_net_dyn_gate_mix",
+   "parameters": 349926,
+   "ffn_inner": [
+    459,
+    458,
+    458
+   ],
+   "mixer_parameters": 52710,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.262065781120045
+  },
+  {
+   "arm": 322,
+   "name": "delta_net_head_gate_ema",
+   "parameters": 349953,
+   "ffn_inner": [
+    459,
+    458,
+    458
+   ],
+   "mixer_parameters": 52737,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.1268656548120513
+  },
+  {
+   "arm": 330,
+   "name": "delta_net_dyn_decay_fractal_gate",
+   "parameters": 349929,
+   "ffn_inner": [
+    456,
+    456,
+    455
+   ],
+   "mixer_parameters": 54249,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1079411427829835
+  },
+  {
+   "arm": 380,
+   "name": "delta_net_ndg",
+   "parameters": 349932,
+   "ffn_inner": [
+    458,
+    458,
+    457
+   ],
+   "mixer_parameters": 53100,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.1130219785730633
+  },
+  {
+   "arm": 410,
+   "name": "delta_net_selm",
+   "parameters": 349941,
+   "ffn_inner": [
+    374,
+    374,
+    374
+   ],
+   "mixer_parameters": 101301,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.119267638131481
+  },
+  {
+   "arm": 437,
+   "name": "delta_net_dual_path_fusion",
+   "parameters": 349920,
+   "ffn_inner": [
+    437,
+    436,
+    436
+   ],
+   "mixer_parameters": 65376,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.290910811476138
+  },
+  {
+   "arm": 441,
+   "name": "delta_net_msdfdm",
+   "parameters": 349944,
+   "ffn_inner": [
+    388,
+    387,
+    387
+   ],
+   "mixer_parameters": 93624,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.3831632718929363
+  },
+  {
+   "arm": 458,
+   "name": "delta_net_dlgm",
+   "parameters": 349944,
+   "ffn_inner": [
+    399,
+    398,
+    398
+   ],
+   "mixer_parameters": 87288,
+   "recorded": 349944,
+   "hardcodes_bf16": false,
+   "score": 2.456424684544288
+  },
+  {
+   "arm": 486,
+   "name": "delta_net_mscmix_pointwise",
+   "parameters": 349938,
+   "ffn_inner": [
+    355,
+    355,
+    354
+   ],
+   "mixer_parameters": 112434,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.2916164348532915
+  },
+  {
+   "arm": 511,
+   "name": "delta_net_ms_hsm_tempgate",
+   "parameters": 349962,
+   "ffn_inner": [
+    383,
+    383,
+    383
+   ],
+   "mixer_parameters": 96138,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.376724929287736
+  },
+  {
+   "arm": 515,
+   "name": "delta_net_ms_adaptive_gstat3",
+   "parameters": 350094,
+   "ffn_inner": [
+    399,
+    398,
+    398
+   ],
+   "mixer_parameters": 87438,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.45899850773206
+  },
+  {
+   "arm": 518,
+   "name": "delta_net_rmsgm",
+   "parameters": 350025,
+   "ffn_inner": [
+    376,
+    376,
+    375
+   ],
+   "mixer_parameters": 100425,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.293324343370674
+  },
+  {
+   "arm": 519,
+   "name": "delta_net_ssg_sparsemax_temp",
+   "parameters": 350070,
+   "ffn_inner": [
+    446,
+    446,
+    445
+   ],
+   "mixer_parameters": 60150,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.3546991262639367
+  },
+  {
+   "arm": 537,
+   "name": "delta_net_mshmfv2",
+   "parameters": 349950,
+   "ffn_inner": [
+    304,
+    303,
+    303
+   ],
+   "mixer_parameters": 142014,
+   "recorded": 349950,
+   "hardcodes_bf16": true,
+   "score": 2.394496637016628
+  },
+  {
+   "arm": 556,
+   "name": "delta_net_dfpcr",
+   "parameters": 350040,
+   "ffn_inner": [
+    375,
+    375,
+    375
+   ],
+   "mixer_parameters": 100824,
+   "recorded": 350040,
+   "hardcodes_bf16": false,
+   "score": 2.605700022587898
+  },
+  {
+   "arm": 559,
+   "name": "delta_net_mor",
+   "parameters": 349968,
+   "ffn_inner": [
+    399,
+    398,
+    398
+   ],
+   "mixer_parameters": 87312,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.326165951110931
+  },
+  {
+   "arm": 562,
+   "name": "delta_net_sparsemax_temperature",
+   "parameters": 350070,
+   "ffn_inner": [
+    446,
+    446,
+    445
+   ],
+   "mixer_parameters": 60150,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.2203932015400234
+  },
+  {
+   "arm": 565,
+   "name": "delta_net_cagf",
+   "parameters": 349935,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81519,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.6544648642137623
+  },
+  {
+   "arm": 629,
+   "name": "delta_net_ms_hsm_widefloor",
+   "parameters": 349974,
+   "ffn_inner": [
+    365,
+    365,
+    364
+   ],
+   "mixer_parameters": 106710,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.5187692681335485
+  },
+  {
+   "arm": 641,
+   "name": "delta_net_hwg",
+   "parameters": 349944,
+   "ffn_inner": [
+    442,
+    442,
+    441
+   ],
+   "mixer_parameters": 62328,
+   "recorded": 349944,
+   "hardcodes_bf16": true,
+   "score": 2.5572863948927256
+  },
+  {
+   "arm": 645,
+   "name": "delta_net_htcg",
+   "parameters": 349950,
+   "ffn_inner": [
+    446,
+    446,
+    445
+   ],
+   "mixer_parameters": 60030,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 1.9568617098392718
+  },
+  {
+   "arm": 657,
+   "name": "delta_net_ms_gstat3_quota",
+   "parameters": 349950,
+   "ffn_inner": [
+    399,
+    398,
+    398
+   ],
+   "mixer_parameters": 87294,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3365125647324017
+  },
+  {
+   "arm": 665,
+   "name": "delta_net_hrem",
+   "parameters": 350016,
+   "ffn_inner": [
+    360,
+    359,
+    359
+   ],
+   "mixer_parameters": 109824,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3413729942962855
+  },
+  {
+   "arm": 675,
+   "name": "delta_net_gae_ms3e",
+   "parameters": 349962,
+   "ffn_inner": [
+    255,
+    255,
+    254
+   ],
+   "mixer_parameters": 170058,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3029762200462924
+  },
+  {
+   "arm": 676,
+   "name": "delta_net_ser_minfloor",
+   "parameters": 349956,
+   "ffn_inner": [
+    373,
+    373,
+    373
+   ],
+   "mixer_parameters": 101892,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.22374935107744
+  },
+  {
+   "arm": 700,
+   "name": "delta_net_amf_routing",
+   "parameters": 350010,
+   "ffn_inner": [
+    379,
+    379,
+    378
+   ],
+   "mixer_parameters": 98682,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.0675334316269405
+  },
+  {
+   "arm": 702,
+   "name": "delta_net_bscgf",
+   "parameters": 349950,
+   "ffn_inner": [
+    379,
+    378,
+    378
+   ],
+   "mixer_parameters": 98814,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.563206945856089
+  },
+  {
+   "arm": 703,
+   "name": "delta_net_csm",
+   "parameters": 350046,
+   "ffn_inner": [
+    438,
+    438,
+    438
+   ],
+   "mixer_parameters": 64542,
+   "recorded": 350046,
+   "hardcodes_bf16": false,
+   "score": 2.4922768127046893
+  },
+  {
+   "arm": 709,
+   "name": "delta_net_htgmsm",
+   "parameters": 350076,
+   "ffn_inner": [
+    446,
+    446,
+    445
+   ],
+   "mixer_parameters": 60156,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.517634222499238
+  },
+  {
+   "arm": 712,
+   "name": "delta_net_afp",
+   "parameters": 349980,
+   "ffn_inner": [
+    418,
+    418,
+    418
+   ],
+   "mixer_parameters": 75996,
+   "recorded": 349980,
+   "hardcodes_bf16": true,
+   "score": 2.528344499973813
+  },
+  {
+   "arm": 714,
+   "name": "delta_net_ms_resgate",
+   "parameters": 349980,
+   "ffn_inner": [
+    382,
+    382,
+    381
+   ],
+   "mixer_parameters": 96924,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3628523780728754
+  },
+  {
+   "arm": 720,
+   "name": "delta_net_hsgm",
+   "parameters": 350046,
+   "ffn_inner": [
+    437,
+    436,
+    436
+   ],
+   "mixer_parameters": 65502,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.5802720887344472
+  },
+  {
+   "arm": 750,
+   "name": "delta_net_adaptive_hier_gate",
+   "parameters": 349968,
+   "ffn_inner": [
+    363,
+    363,
+    362
+   ],
+   "mixer_parameters": 107856,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.167412981375801
+  },
+  {
+   "arm": 804,
+   "name": "delta_net_phsg5",
+   "parameters": 349962,
+   "ffn_inner": [
+    430,
+    429,
+    429
+   ],
+   "mixer_parameters": 69450,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.223638002868015
+  },
+  {
+   "arm": 814,
+   "name": "delta_net_htfr",
+   "parameters": 349974,
+   "ffn_inner": [
+    89,
+    89,
+    88
+   ],
+   "mixer_parameters": 265686,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.6161594772234698
+  },
+  {
+   "arm": 828,
+   "name": "delta_net_aggf_v2",
+   "parameters": 349944,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81528,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.22623399465556
+  },
+  {
+   "arm": 830,
+   "name": "delta_net_hwggm",
+   "parameters": 349941,
+   "ffn_inner": [
+    400,
+    399,
+    399
+   ],
+   "mixer_parameters": 86709,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.381166858117132
+  },
+  {
+   "arm": 843,
+   "name": "delta_net_hsigctx",
+   "parameters": 349950,
+   "ffn_inner": [
+    442,
+    442,
+    441
+   ],
+   "mixer_parameters": 62334,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.4413182171728547
+  },
+  {
+   "arm": 865,
+   "name": "delta_net_dynfuse",
+   "parameters": 349938,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81522,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.656655809583106
+  },
+  {
+   "arm": 879,
+   "name": "delta_net_psfr",
+   "parameters": 349956,
+   "ffn_inner": [
+    384,
+    384,
+    383
+   ],
+   "mixer_parameters": 95748,
+   "recorded": 349956,
+   "hardcodes_bf16": false,
+   "score": 2.5516100409835394
+  },
+  {
+   "arm": 887,
+   "name": "delta_net_erfg",
+   "parameters": 350016,
+   "ffn_inner": [
+    315,
+    314,
+    314
+   ],
+   "mixer_parameters": 135744,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.2414524904139093
+  },
+  {
+   "arm": 890,
+   "name": "delta_net_dmshf",
+   "parameters": 349992,
+   "ffn_inner": [
+    371,
+    370,
+    370
+   ],
+   "mixer_parameters": 103464,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3497498655295423
+  },
+  {
+   "arm": 902,
+   "name": "delta_net_entropy_floor",
+   "parameters": 625890,
+   "ffn_inner": [
+    8,
+    8,
+    8
+   ],
+   "mixer_parameters": 588066,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.420659525444392
+  },
+  {
+   "arm": 908,
+   "name": "delta_net_aft",
+   "parameters": 349950,
+   "ffn_inner": [
+    272,
+    272,
+    271
+   ],
+   "mixer_parameters": 160254,
+   "recorded": 349950,
+   "hardcodes_bf16": true,
+   "score": 2.66186479295906
+  },
+  {
+   "arm": 922,
+   "name": "delta_net_phfg",
+   "parameters": 349956,
+   "ffn_inner": [
+    393,
+    393,
+    393
+   ],
+   "mixer_parameters": 90372,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.316147996373851
+  },
+  {
+   "arm": 927,
+   "name": "delta_net_afrc",
+   "parameters": 349968,
+   "ffn_inner": [
+    357,
+    357,
+    357
+   ],
+   "mixer_parameters": 111120,
+   "recorded": 349968,
+   "hardcodes_bf16": false,
+   "score": 2.453375067392879
+  },
+  {
+   "arm": 933,
+   "name": "delta_net_cagf_rc_pf",
+   "parameters": 349947,
+   "ffn_inner": [
+    408,
+    408,
+    407
+   ],
+   "mixer_parameters": 81915,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.7053433573239127
+  },
+  {
+   "arm": 939,
+   "name": "delta_net_entropy_kl_floor_gate",
+   "parameters": 349980,
+   "ffn_inner": [
+    368,
+    368,
+    367
+   ],
+   "mixer_parameters": 104988,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.5993331526427728
+  },
+  {
+   "arm": 947,
+   "name": "delta_net_gtmlp",
+   "parameters": 349959,
+   "ffn_inner": [
+    419,
+    419,
+    419
+   ],
+   "mixer_parameters": 75399,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.4492368483966525
+  },
+  {
+   "arm": 948,
+   "name": "delta_net_acfg",
+   "parameters": 350046,
+   "ffn_inner": [
+    399,
+    399,
+    399
+   ],
+   "mixer_parameters": 87006,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.2845016087520635
+  },
+  {
+   "arm": 954,
+   "name": "delta_net_acmg",
+   "parameters": 349935,
+   "ffn_inner": [
+    394,
+    393,
+    393
+   ],
+   "mixer_parameters": 90159,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1317382338352777
+  },
+  {
+   "arm": 957,
+   "name": "delta_net_psafg",
+   "parameters": 349962,
+   "ffn_inner": [
+    379,
+    379,
+    378
+   ],
+   "mixer_parameters": 98634,
+   "recorded": 349962,
+   "hardcodes_bf16": false,
+   "score": 2.618409397137569
+  },
+  {
+   "arm": 965,
+   "name": "delta_net_cagf_br",
+   "parameters": 349941,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81525,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.7247497854337794
+  },
+  {
+   "arm": 974,
+   "name": "delta_net_abrgf",
+   "parameters": 349956,
+   "ffn_inner": [
+    411,
+    411,
+    410
+   ],
+   "mixer_parameters": 80196,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.476446331327402
+  },
+  {
+   "arm": 988,
+   "name": "delta_net_pfr",
+   "parameters": 349941,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81525,
+   "recorded": 349941,
+   "hardcodes_bf16": false,
+   "score": 2.669621689223796
+  },
+  {
+   "arm": 1017,
+   "name": "delta_net_hybrid_floor_gt",
+   "parameters": 349977,
+   "ffn_inner": [
+    402,
+    402,
+    401
+   ],
+   "mixer_parameters": 85401,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.373162631669906
+  },
+  {
+   "arm": 1031,
+   "name": "delta_net_hefth",
+   "parameters": 349962,
+   "ffn_inner": [
+    367,
+    367,
+    366
+   ],
+   "mixer_parameters": 105546,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.2217666349016474
+  },
+  {
+   "arm": 1041,
+   "name": "delta_net_crdg",
+   "parameters": 349941,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81525,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.396768402421852
+  },
+  {
+   "arm": 1045,
+   "name": "delta_net_aefg_hr",
+   "parameters": 349992,
+   "ffn_inner": [
+    366,
+    366,
+    365
+   ],
+   "mixer_parameters": 106152,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.301352842470828
+  },
+  {
+   "arm": 1051,
+   "name": "delta_net_rggf",
+   "parameters": 349956,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81540,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1384472997755024
+  },
+  {
+   "arm": 1081,
+   "name": "delta_net_entropy_cagf_rc_norm",
+   "parameters": 349941,
+   "ffn_inner": [
+    397,
+    397,
+    397
+   ],
+   "mixer_parameters": 88053,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.382574929900649
+  },
+  {
+   "arm": 1132,
+   "name": "delta_net_hpaf",
+   "parameters": 349950,
+   "ffn_inner": [
+    363,
+    363,
+    362
+   ],
+   "mixer_parameters": 107838,
+   "recorded": 349950,
+   "hardcodes_bf16": true,
+   "score": 2.3205139694978674
+  },
+  {
+   "arm": 1155,
+   "name": "delta_net_triscale",
+   "parameters": 349944,
+   "ffn_inner": [
+    402,
+    402,
+    401
+   ],
+   "mixer_parameters": 85368,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.5772453216012163
+  },
+  {
+   "arm": 1167,
+   "name": "delta_net_headgated",
+   "parameters": 349953,
+   "ffn_inner": [
+    407,
+    407,
+    407
+   ],
+   "mixer_parameters": 82305,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.6026287824803895
+  },
+  {
+   "arm": 1175,
+   "name": "delta_net_annealed_eklf",
+   "parameters": 349992,
+   "ffn_inner": [
+    402,
+    402,
+    402
+   ],
+   "mixer_parameters": 85224,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1498436554682687
+  },
+  {
+   "arm": 1195,
+   "name": "delta_net_afbt",
+   "parameters": 349950,
+   "ffn_inner": [
+    272,
+    272,
+    271
+   ],
+   "mixer_parameters": 160254,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.526950010564208
+  },
+  {
+   "arm": 1221,
+   "name": "delta_net_oahmgr",
+   "parameters": 349950,
+   "ffn_inner": [
+    403,
+    402,
+    402
+   ],
+   "mixer_parameters": 84990,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.541570423214886
+  },
+  {
+   "arm": 1235,
+   "name": "delta_net_mfg",
+   "parameters": 349956,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81540,
+   "recorded": 349956,
+   "hardcodes_bf16": true,
+   "score": 2.4249056537158906
+  },
+  {
+   "arm": 1252,
+   "name": "delta_net_adgr",
+   "parameters": 350028,
+   "ffn_inner": [
+    427,
+    426,
+    426
+   ],
+   "mixer_parameters": 71244,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.471467814300116
+  },
+  {
+   "arm": 1283,
+   "name": "delta_net_hybfloor",
+   "parameters": 349962,
+   "ffn_inner": [
+    382,
+    382,
+    381
+   ],
+   "mixer_parameters": 96906,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.5159054598618904
+  },
+  {
+   "arm": 1298,
+   "name": "delta_net_aeoc",
+   "parameters": 349974,
+   "ffn_inner": [
+    274,
+    273,
+    273
+   ],
+   "mixer_parameters": 159318,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.32705498166846
+  },
+  {
+   "arm": 1311,
+   "name": "delta_net_cagf_rc_pf_hybrid",
+   "parameters": 349944,
+   "ffn_inner": [
+    412,
+    412,
+    411
+   ],
+   "mixer_parameters": 79608,
+   "recorded": 349944,
+   "hardcodes_bf16": true,
+   "score": 2.5259112497116387
+  },
+  {
+   "arm": 1338,
+   "name": "delta_net_cagf_mf",
+   "parameters": 349938,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81522,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.496961368803032
+  },
+  {
+   "arm": 1349,
+   "name": "delta_net_msfr_mn",
+   "parameters": 350016,
+   "ffn_inner": [
+    352,
+    352,
+    352
+   ],
+   "mixer_parameters": 114048,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.4105799963989067
+  },
+  {
+   "arm": 1350,
+   "name": "delta_net_hdsr",
+   "parameters": 349980,
+   "ffn_inner": [
+    392,
+    391,
+    391
+   ],
+   "mixer_parameters": 91356,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.4518326847934553
+  },
+  {
+   "arm": 1354,
+   "name": "delta_net_omsgf",
+   "parameters": 349962,
+   "ffn_inner": [
+    404,
+    404,
+    404
+   ],
+   "mixer_parameters": 84042,
+   "recorded": 349962,
+   "hardcodes_bf16": false,
+   "score": 2.3619759835083416
+  },
+  {
+   "arm": 1360,
+   "name": "delta_net_hafs",
+   "parameters": 349992,
+   "ffn_inner": [
+    388,
+    388,
+    388
+   ],
+   "mixer_parameters": 93288,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.2672896888828653
+  },
+  {
+   "arm": 1370,
+   "name": "delta_net_tareia",
+   "parameters": 349980,
+   "ffn_inner": [
+    251,
+    250,
+    250
+   ],
+   "mixer_parameters": 172572,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.6819815530699818
+  },
+  {
+   "arm": 1393,
+   "name": "delta_net_syngf",
+   "parameters": 349944,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81528,
+   "recorded": 349944,
+   "hardcodes_bf16": true,
+   "score": 2.6338094871733717
+  },
+  {
+   "arm": 1396,
+   "name": "delta_net_cagf_dpaf_eash",
+   "parameters": 349950,
+   "ffn_inner": [
+    395,
+    395,
+    395
+   ],
+   "mixer_parameters": 89214,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3529653763754217
+  },
+  {
+   "arm": 1408,
+   "name": "delta_net_efagm",
+   "parameters": 349980,
+   "ffn_inner": [
+    357,
+    357,
+    357
+   ],
+   "mixer_parameters": 111132,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.2336832444323176
+  },
+  {
+   "arm": 1434,
+   "name": "delta_net_hafmg",
+   "parameters": 349950,
+   "ffn_inner": [
+    384,
+    384,
+    383
+   ],
+   "mixer_parameters": 95742,
+   "recorded": 349950,
+   "hardcodes_bf16": false,
+   "score": 2.228501134740074
+  },
+  {
+   "arm": 1442,
+   "name": "delta_net_udmag",
+   "parameters": 349956,
+   "ffn_inner": [
+    368,
+    368,
+    367
+   ],
+   "mixer_parameters": 104964,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.42881121499735
+  },
+  {
+   "arm": 1444,
+   "name": "delta_net_hmgapf",
+   "parameters": 349926,
+   "ffn_inner": [
+    408,
+    407,
+    407
+   ],
+   "mixer_parameters": 82086,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.3478368307453534
+  },
+  {
+   "arm": 1448,
+   "name": "delta_net_pathgated",
+   "parameters": 349950,
+   "ffn_inner": [
+    396,
+    395,
+    395
+   ],
+   "mixer_parameters": 89022,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.4962688369676385
+  },
+  {
+   "arm": 1454,
+   "name": "delta_net_tapr",
+   "parameters": 349980,
+   "ffn_inner": [
+    251,
+    250,
+    250
+   ],
+   "mixer_parameters": 172572,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.6833294447964375
+  },
+  {
+   "arm": 1475,
+   "name": "delta_net_len_hgate_mixanneal",
+   "parameters": 350010,
+   "ffn_inner": [
+    99,
+    99,
+    99
+   ],
+   "mixer_parameters": 259770,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.665358631933711
+  },
+  {
+   "arm": 1490,
+   "name": "delta_net_ahic",
+   "parameters": 349959,
+   "ffn_inner": [
+    393,
+    392,
+    392
+   ],
+   "mixer_parameters": 90759,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1153684898720098
+  },
+  {
+   "arm": 1507,
+   "name": "delta_net_tarf",
+   "parameters": 349962,
+   "ffn_inner": [
+    177,
+    177,
+    177
+   ],
+   "mixer_parameters": 214794,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.487617533557514
+  },
+  {
+   "arm": 1529,
+   "name": "delta_net_mafr",
+   "parameters": 349998,
+   "ffn_inner": [
+    393,
+    393,
+    393
+   ],
+   "mixer_parameters": 90414,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.618924998893387
+  },
+  {
+   "arm": 1543,
+   "name": "delta_net_aegf_br",
+   "parameters": 349968,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81552,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.6608499949440394
+  },
+  {
+   "arm": 1567,
+   "name": "delta_net_qsr",
+   "parameters": 349986,
+   "ffn_inner": [
+    310,
+    309,
+    309
+   ],
+   "mixer_parameters": 138594,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.6270171522190497
+  },
+  {
+   "arm": 1584,
+   "name": "delta_net_aif",
+   "parameters": 349959,
+   "ffn_inner": [
+    392,
+    392,
+    391
+   ],
+   "mixer_parameters": 91143,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.561936979447291
+  },
+  {
+   "arm": 1595,
+   "name": "delta_net_sigf_ptu",
+   "parameters": 349944,
+   "ffn_inner": [
+    364,
+    364,
+    364
+   ],
+   "mixer_parameters": 107064,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.564891989491199
+  },
+  {
+   "arm": 1621,
+   "name": "delta_net_hhgass",
+   "parameters": 349950,
+   "ffn_inner": [
+    382,
+    381,
+    381
+   ],
+   "mixer_parameters": 97086,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.373085985560122
+  },
+  {
+   "arm": 1693,
+   "name": "delta_net_ahm_gate",
+   "parameters": 349959,
+   "ffn_inner": [
+    409,
+    408,
+    408
+   ],
+   "mixer_parameters": 81543,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.2209000262833394
+  },
+  {
+   "arm": 1730,
+   "name": "delta_net_afef",
+   "parameters": 349974,
+   "ffn_inner": [
+    379,
+    378,
+    378
+   ],
+   "mixer_parameters": 98838,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.661178530417397
+  },
+  {
+   "arm": 1733,
+   "name": "delta_net_ddfsanr",
+   "parameters": 350073,
+   "ffn_inner": [
+    396,
+    396,
+    396
+   ],
+   "mixer_parameters": 88761,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.1084558390095016
+  },
+  {
+   "arm": 1735,
+   "name": "delta_net_hhmr",
+   "parameters": 350028,
+   "ffn_inner": [
+    351,
+    351,
+    350
+   ],
+   "mixer_parameters": 114828,
+   "recorded": 350028,
+   "hardcodes_bf16": true,
+   "score": 2.284679125222743
+  },
+  {
+   "arm": 1763,
+   "name": "delta_net_cpaghr",
+   "parameters": 349998,
+   "ffn_inner": [
+    388,
+    387,
+    387
+   ],
+   "mixer_parameters": 93678,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.56705678765428
+  },
+  {
+   "arm": 1771,
+   "name": "delta_net_taigr_xs",
+   "parameters": 350067,
+   "ffn_inner": [
+    379,
+    379,
+    379
+   ],
+   "mixer_parameters": 98547,
+   "recorded": null,
+   "hardcodes_bf16": true,
+   "score": 2.449551001013843
+  },
+  {
+   "arm": 1786,
+   "name": "delta_net_aft_dsi",
+   "parameters": 349953,
+   "ffn_inner": [
+    393,
+    393,
+    393
+   ],
+   "mixer_parameters": 90369,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.2819740843138696
+  },
+  {
+   "arm": 1792,
+   "name": "delta_net_hgm_ident",
+   "parameters": 350040,
+   "ffn_inner": [
+    375,
+    375,
+    374
+   ],
+   "mixer_parameters": 101016,
+   "recorded": null,
+   "hardcodes_bf16": false,
+   "score": 2.4893774503373605
+  }
+ ]
+}
