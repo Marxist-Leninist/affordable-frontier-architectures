@@ -1,0 +1,5 @@
+Name: flash-linear-attention
+Version: 0.2.2
+Home-page: https://github.com/fla-org/flash-linear-attention
+License: MIT License
+RECORD: fla/modules/convolution.py,sha256=0LEHoiLN4YrMFbo_hARdpcTGYbDXAMPCfuBVPiHq7Cg,28076

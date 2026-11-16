@@ -1,0 +1,1418 @@
+{
+  "scope": "Static source inspection and continuation plan; no new training or GPU jobs. Coverage is independently measured in COVERAGE.json.",
+  "catalog_sha256": "aa77e8289971b3922102f000fddf44a6a9a31ca1f3b59c834722ac130f63759c",
+  "records": 105,
+  "unique_ids": 105,
+  "trained_ids_reported": [
+    458,
+    879
+  ],
+  "untrained_ids": [
+    1735,
+    1475,
+    518,
+    665,
+    902,
+    559,
+    1354,
+    1763,
+    1396,
+    908,
+    537,
+    1730,
+    556,
+    927,
+    1434,
+    1195,
+    814,
+    1771,
+    1167,
+    1017,
+    922,
+    486,
+    657,
+    1567,
+    712,
+    1543,
+    703,
+    828,
+    1350,
+    565,
+    1311,
+    1370,
+    1045,
+    1360,
+    1393,
+    1051,
+    947,
+    1442,
+    750,
+    957,
+    675,
+    511,
+    1454,
+    1338,
+    1235,
+    1786,
+    629,
+    865,
+    1507,
+    974,
+    1529,
+    890,
+    515,
+    1693,
+    1221,
+    441,
+    933,
+    1298,
+    1448,
+    1792,
+    1132,
+    1252,
+    1584,
+    1283,
+    939,
+    700,
+    702,
+    830,
+    954,
+    804,
+    410,
+    714,
+    1595,
+    887,
+    948,
+    1041,
+    843,
+    1444,
+    641,
+    519,
+    645,
+    965,
+    1349,
+    676,
+    295,
+    1175,
+    988,
+    1031,
+    1733,
+    330,
+    1408,
+    1155,
+    259,
+    380,
+    1081,
+    151,
+    437,
+    709,
+    562,
+    1490,
+    322,
+    1621,
+    720
+  ],
+  "prepared_untrained_ids": [
+    259
+  ],
+  "not_yet_prepared_count": 102,
+  "records_manifest": [
+    {
+      "upstream_id": 1735,
+      "name": "delta_net_hhmr",
+      "title": "HybridGateFlow",
+      "source_sha256": "648b335c651d5449928c1c1147471333d15a4223f1b5013d1a69b927dd57a32e",
+      "paper_score": 2.284679125222743,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "untie_end_step",
+        "untie_start_step"
+      ]
+    },
+    {
+      "upstream_id": 1475,
+      "name": "delta_net_len_hgate_mixanneal",
+      "title": "TempMixAnnealRouter",
+      "source_sha256": "c7a242b1cb183067e65d59dd5127c207cd17b75fa23784d31b4b96a649d67d9e",
+      "paper_score": 2.665358631933711,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "eps_decay_steps",
+        "mix_decay_steps",
+        "tau_start_step",
+        "tau_warmup_steps"
+      ]
+    },
+    {
+      "upstream_id": 518,
+      "name": "delta_net_rmsgm",
+      "title": "TriScale-GatedFusion",
+      "source_sha256": "6f588e4282cf72bf47befd95ddd21727e042f6868c1a0ae4343347571f077b7b",
+      "paper_score": 2.293324343370674,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 665,
+      "name": "delta_net_hrem",
+      "title": "HyperRouteFusion",
+      "source_sha256": "0d0a99322e56e347c72b0a4f2fd16efe033f78efe49f93f98d338046678ba262",
+      "paper_score": 2.3413729942962855,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 902,
+      "name": "delta_net_entropy_floor",
+      "title": "EntropyEnhancedMultiScaleGateNet",
+      "source_sha256": "e161833544d18c36987b4541978160da6604e3897cfc8e08226a74d1cabe484a",
+      "paper_score": 2.420659525444392,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 559,
+      "name": "delta_net_mor",
+      "title": "OutputAwareMultiScaleRouter",
+      "source_sha256": "c3b0ba6d8dc01d1119ff3a9523bde6b8d53330f5f04ea7508ae763174ecfff19",
+      "paper_score": 2.326165951110931,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 458,
+      "name": "delta_net_dlgm",
+      "title": "DualScaleMemoryRouter",
+      "source_sha256": "76412d2f7aff30f99ce7089e0f57f8ef26add7f2d9f965adf8650a00538bd1f5",
+      "paper_score": 2.456424684544288,
+      "status": "trained_port_reported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1354,
+      "name": "delta_net_omsgf",
+      "title": "FusionGate-MS",
+      "source_sha256": "9acc1dd8c77ca4e2b336721434ceb7eb4afe323cf08fb8018dba604f216a98fd",
+      "paper_score": 2.3619759835083416,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1763,
+      "name": "delta_net_cpaghr",
+      "title": "AdaptiveGatedRouter-Hybrid",
+      "source_sha256": "8431a58e9cd6437833a02cebfcb79e42f77d07aa0d6023a9ba230f5910984595",
+      "paper_score": 2.56705678765428,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "untie_end_step",
+        "untie_start_step"
+      ]
+    },
+    {
+      "upstream_id": 1396,
+      "name": "delta_net_cagf_dpaf_eash",
+      "title": "FusionGate-CAGT",
+      "source_sha256": "870af837f43fd2032ffda8bdbbb104600bb8b196024b7e2826b3c719501f52cc",
+      "paper_score": 2.3529653763754217,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "entropy_reg_final",
+        "entropy_reg_init",
+        "epsilon_decay_steps"
+      ]
+    },
+    {
+      "upstream_id": 908,
+      "name": "delta_net_aft",
+      "title": "AdaptiveFusionNet",
+      "source_sha256": "00c192fe4a64811033bd0934fdbbcccc374b1c48066ad96b5963126591f653be",
+      "paper_score": 2.66186479295906,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 537,
+      "name": "delta_net_mshmfv2",
+      "title": "FusionGateNet_v3",
+      "source_sha256": "d8ce9221a182be08dc86f1b48ad9d3a62d92bddca276e0d079e497e31eda784a",
+      "paper_score": 2.394496637016628,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1730,
+      "name": "delta_net_afef",
+      "title": "AdaptiveEntropyRouter",
+      "source_sha256": "a4b7710b084fb99a5d0a74c482de2cb5424ad938428f22689e4d6d7f01e718a1",
+      "paper_score": 2.661178530417397,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_cosine_anneal",
+        "floor_anneal_steps",
+        "reg_loss",
+        "step"
+      ]
+    },
+    {
+      "upstream_id": 556,
+      "name": "delta_net_dfpcr",
+      "title": "PathAwareMemoryRouter",
+      "source_sha256": "65eae8f2ca90ff4ad30f002e8ff061da3aaaa8ee578c6e4ae3c4ea748bdc6573",
+      "paper_score": 2.605700022587898,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 927,
+      "name": "delta_net_afrc",
+      "title": "AdaptiveFusionRNet",
+      "source_sha256": "cdbc51b0175ed3b73390fd335c621ab6f38e7211f27baa28de862a5ae9252700",
+      "paper_score": 2.453375067392879,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1434,
+      "name": "delta_net_hafmg",
+      "title": "HierarchiMix-Gate",
+      "source_sha256": "376c42e93d7596a3473b20232f2b3f666b3a36a51d98600b2722fe388e535797",
+      "paper_score": 2.228501134740074,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_reg_coeff",
+        "floor_decay_steps"
+      ]
+    },
+    {
+      "upstream_id": 1195,
+      "name": "delta_net_afbt",
+      "title": "BoundedTempAnnealNet",
+      "source_sha256": "c389bf967371a9762bb2dd9bd1193ec27d6a439016e31c84ad23fb372c009ff7",
+      "paper_score": 2.526950010564208,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "floor_decay_steps",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 814,
+      "name": "delta_net_htfr",
+      "title": "GateDivergeTransformer",
+      "source_sha256": "d2f18b9060087d151bdd407f4bb339d41c943ec0319b23668929c05778c4a8e9",
+      "paper_score": 2.6161594772234698,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "entropy_reg_weight"
+      ]
+    },
+    {
+      "upstream_id": 1771,
+      "name": "delta_net_taigr_xs",
+      "title": "AdaptiveGateRouter_X",
+      "source_sha256": "e70adafd02da750f717122d631e963d3070c4d2b118a4854fbadba757fa16f42",
+      "paper_score": 2.449551001013843,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "floor_anneal_steps",
+        "tau_blend_steps"
+      ]
+    },
+    {
+      "upstream_id": 1167,
+      "name": "delta_net_headgated",
+      "title": "GatedFusionTransformer",
+      "source_sha256": "a7110317b35bd0813715f948882c258d8febdb08c2433841be8d7609235cd631",
+      "paper_score": 2.6026287824803895,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1017,
+      "name": "delta_net_hybrid_floor_gt",
+      "title": "FusionLogicNet",
+      "source_sha256": "a4e6619d848c3a044b91afbc6a99564326ca51a6c9e5399ad3a12ac8fac66c69",
+      "paper_score": 2.373162631669906,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "anneal_steps",
+        "last_gate_loss",
+        "step_counter"
+      ]
+    },
+    {
+      "upstream_id": 922,
+      "name": "delta_net_phfg",
+      "title": "ParallelFusionTransformer",
+      "source_sha256": "fd8824211f93a162d47cb68bd88bb9a146c4a8cf0b90b8e204b59b5e27ce01dd",
+      "paper_score": 2.316147996373851,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 486,
+      "name": "delta_net_mscmix_pointwise",
+      "title": "DepthwiseConvPointMixer",
+      "source_sha256": "6d7f4a8a297a0131567dc1d6aac04b7c43bca80584bb0f12e7477643ebd80ddd",
+      "paper_score": 2.2916164348532915,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 657,
+      "name": "delta_net_ms_gstat3_quota",
+      "title": "QuotaGatedStatNet",
+      "source_sha256": "7444d5b8ce5aa1d64609105f555db8961c1e9f54cdc7c6aa088b989bb1b2c75f",
+      "paper_score": 2.3365125647324017,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "return_reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1567,
+      "name": "delta_net_qsr",
+      "title": "StreamAwareRouter",
+      "source_sha256": "952e06f72f6f5bf7b13abc6e859355beebff1ab5ed647b6cbbc447bdf4ae5767",
+      "paper_score": 2.6270171522190497,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps"
+      ]
+    },
+    {
+      "upstream_id": 712,
+      "name": "delta_net_afp",
+      "title": "AdaptiveGateNet-AFP",
+      "source_sha256": "62d59f5bf7f19ba502343f2c1aeba41311659f981660cd0feb37a58940451b7e",
+      "paper_score": 2.528344499973813,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1543,
+      "name": "delta_net_aegf_br",
+      "title": "FusionGateBR",
+      "source_sha256": "9dbd01c41cec03ff0434928316b1efcbb1934159b4ff22db365d90b68522669d",
+      "paper_score": 2.6608499949440394,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "anneal_steps",
+        "last_gate_loss"
+      ]
+    },
+    {
+      "upstream_id": 703,
+      "name": "delta_net_csm",
+      "title": "ContentSharpRouter",
+      "source_sha256": "65fad929731e9eaac7a67a42088249de95c66edb3391071e55e144f5e1b22017",
+      "paper_score": 2.4922768127046893,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "entropy_reg_alpha",
+        "entropy_reg_decay_end",
+        "entropy_reg_warmup"
+      ]
+    },
+    {
+      "upstream_id": 828,
+      "name": "delta_net_aggf_v2",
+      "title": "FusionGate AdaptiveNet",
+      "source_sha256": "978892861788996b13c5ef7072bfe15e41485e1bc25217cfca667a3df07ac59d",
+      "paper_score": 2.22623399465556,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "delta_loss_weight",
+        "epsilon_floor_steps",
+        "gate_copy_bias_steps",
+        "step"
+      ]
+    },
+    {
+      "upstream_id": 1350,
+      "name": "delta_net_hdsr",
+      "title": "HybridCausalRouter",
+      "source_sha256": "fd539786a1316df385a14ceb96b99431b61ae3f83828d6293f3369a25491b1e5",
+      "paper_score": 2.4518326847934553,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 565,
+      "name": "delta_net_cagf",
+      "title": "FusionGate-X",
+      "source_sha256": "b649fc8e348d600f25dc1d28e51ad8ccdded8ffb20be291e02bfb071492309eb",
+      "paper_score": 2.6544648642137623,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1311,
+      "name": "delta_net_cagf_rc_pf_hybrid",
+      "title": "HybridFlowNet",
+      "source_sha256": "8ed3f3858b70f781601dc71c23a4645312404c1ff6f5dab0728d8a6ae02b48fc",
+      "paper_score": 2.5259112497116387,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1370,
+      "name": "delta_net_tareia",
+      "title": "AdaptiveTokenRouter",
+      "source_sha256": "15a316f442c3365477da3bde4381a4fa9e69ebac0b595fe5821b73122acfd99d",
+      "paper_score": 2.6819815530699818,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "floor_decay_steps",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1045,
+      "name": "delta_net_aefg_hr",
+      "title": "AdaptiveHybridGateNet",
+      "source_sha256": "3d83473fd95a7acbf6766ae99b54ef8c6d39b085957b5ab33b7408c18be8134d",
+      "paper_score": 2.301352842470828,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "entropy_anneal_steps",
+        "last_gate_loss",
+        "temp_anneal_steps"
+      ]
+    },
+    {
+      "upstream_id": 1360,
+      "name": "delta_net_hafs",
+      "title": "AdaptiveFloorNet-HAF",
+      "source_sha256": "4e74bdb288844d204b41f13c6ade1d4ac94e49b17428a9ea366ea5486c7f5b5e",
+      "paper_score": 2.2672896888828653,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1393,
+      "name": "delta_net_syngf",
+      "title": "SynerFuse-LGX",
+      "source_sha256": "d96ab556464ea98c7944e34b72a4d33421e069713d6c1e4d54477547df0ab573",
+      "paper_score": 2.6338094871733717,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1051,
+      "name": "delta_net_rggf",
+      "title": "ResiFuse-CausalGater",
+      "source_sha256": "f57fbefd781a1040f1762ce42df83d776facf1bdf74e45a43a48575a6623f64f",
+      "paper_score": 2.1384472997755024,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 947,
+      "name": "delta_net_gtmlp",
+      "title": "GroupTempMLP",
+      "source_sha256": "336a6ad0133210c4fdcf6f7f95bf311a4fa236befdbf2af3142a997d076dd602",
+      "paper_score": 2.4492368483966525,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1442,
+      "name": "delta_net_udmag",
+      "title": "DynMemGate",
+      "source_sha256": "8e613f93c3eb9bff150f34b418f1180433733263959a97be1c68ce6a92bb60c9",
+      "paper_score": 2.42881121499735,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "epsilon_decay_steps"
+      ]
+    },
+    {
+      "upstream_id": 750,
+      "name": "delta_net_adaptive_hier_gate",
+      "title": "AdaptiveSpanGateConv",
+      "source_sha256": "58ca4270916f4e4505df4704218c09a01a7e9ee7c2a9462ce368e5cd43f6b275",
+      "paper_score": 2.167412981375801,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 957,
+      "name": "delta_net_psafg",
+      "title": "FusionBalanceTransformer",
+      "source_sha256": "ee330e9e2190c7aefa356d6780c820bc16494c7eb5eeb8911759fd843adfed01",
+      "paper_score": 2.618409397137569,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 675,
+      "name": "delta_net_gae_ms3e",
+      "title": "FusionGate-MS3E-Hybrid",
+      "source_sha256": "748409c3c30d5705f4bb8355814ce48b4a70812fe9f9873f595d96c8129ec75a",
+      "paper_score": 2.3029762200462924,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "entropy_reg"
+      ]
+    },
+    {
+      "upstream_id": 511,
+      "name": "delta_net_ms_hsm_tempgate",
+      "title": "FusionGateMemoryNet",
+      "source_sha256": "b2e21ef4e7c62ebb3ea655cb0957f2a89d3759000ea4ca268176202bef2c1e40",
+      "paper_score": 2.376724929287736,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1454,
+      "name": "delta_net_tapr",
+      "title": "TokenPruneRouter",
+      "source_sha256": "5639a72f1be3bd8df342ac4fb9b234215bc6efe90fc7cff91f7944a10ad7ca2a",
+      "paper_score": 2.6833294447964375,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "prune_end_step",
+        "prune_start_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1338,
+      "name": "delta_net_cagf_mf",
+      "title": "ConvexBlendFloorNet",
+      "source_sha256": "722bb5685a42fa76be7a0735009c8eff85fd1b23ab07eba44c37ef5957fe7b89",
+      "paper_score": 2.496961368803032,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1235,
+      "name": "delta_net_mfg",
+      "title": "MinFloorRouter",
+      "source_sha256": "5dd7fd063d5f37e7fc22e4639ac82c559d31613747d9df13d4d99d5bfde2f2e1",
+      "paper_score": 2.4249056537158906,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 879,
+      "name": "delta_net_psfr",
+      "title": "FusionGatedFIRNet",
+      "source_sha256": "771d5c670feeb0c70df9d9817ec01b3f72c85fefd4483fff5b10c4e1978a5f80",
+      "paper_score": 2.5516100409835394,
+      "status": "trained_port_reported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1786,
+      "name": "delta_net_aft_dsi",
+      "title": "AdaptiveFusionNet-DSI",
+      "source_sha256": "72cfc06261003c2707fc59f0867fff3ce2f675353d4705beb847cb6822ccef33",
+      "paper_score": 2.2819740843138696,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_copy_step",
+        "_eps_step",
+        "copy_frac_decay_steps",
+        "tau_transition_steps"
+      ]
+    },
+    {
+      "upstream_id": 629,
+      "name": "delta_net_ms_hsm_widefloor",
+      "title": "ConvFusionWide31",
+      "source_sha256": "38b568fbc9f52b479b9cc9d2c2313682c93808593421070ad8638c82064ab6d8",
+      "paper_score": 2.5187692681335485,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 865,
+      "name": "delta_net_dynfuse",
+      "title": "DynFuseFlexGate",
+      "source_sha256": "c4a395c2285f3245545a95fc50c1a76be75f19316882e4e80f0441eede1c5e4f",
+      "paper_score": 2.656655809583106,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1507,
+      "name": "delta_net_tarf",
+      "title": "TokenScaleRouter",
+      "source_sha256": "e710fcbad020ca414268cfd63c5ddac21e34ad938c4e59fe09e03c60201d5b44",
+      "paper_score": 2.487617533557514,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 974,
+      "name": "delta_net_abrgf",
+      "title": "AdaptiveFusionNet",
+      "source_sha256": "bcdeb59778d369db113d1e1fa185da32f10762050f02014de9fd1dc701a3f0fe",
+      "paper_score": 2.476446331327402,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1529,
+      "name": "delta_net_mafr",
+      "title": "HyenaMAFR",
+      "source_sha256": "dd0e62ef7008baa37a32c60db66aa5b3d2d8dc007b2d01ebcaf294104b79388a",
+      "paper_score": 2.618924998893387,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step"
+      ]
+    },
+    {
+      "upstream_id": 890,
+      "name": "delta_net_dmshf",
+      "title": "FusionGATE-HMSR",
+      "source_sha256": "b4f6dc85edf28f82fe0624e81aaf95ae527d06366e64e272419e1b11eff52605",
+      "paper_score": 2.3497498655295423,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "bias_decay_steps",
+        "step_update"
+      ]
+    },
+    {
+      "upstream_id": 515,
+      "name": "delta_net_ms_adaptive_gstat3",
+      "title": "FusionGate-MS3",
+      "source_sha256": "c99cd7cac8d3552283675ed13e6cda623786c0fc7fbcfe788c4cf72cb617f832",
+      "paper_score": 2.45899850773206,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "return_reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1693,
+      "name": "delta_net_ahm_gate",
+      "title": "AdaptiveMixGateNet",
+      "source_sha256": "d460870af142c43c82028dfe55d8f7ed7174a6366b6d1de2ccd2f1abbd9bc461",
+      "paper_score": 2.2209000262833394,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "mix_decay_steps",
+        "tau_warmup_steps"
+      ]
+    },
+    {
+      "upstream_id": 1221,
+      "name": "delta_net_oahmgr",
+      "title": "FusionGateX",
+      "source_sha256": "4914648a666289b4bf2fdafa1084a4065df68d3bfa4f64afb117b8ec8ce4f08a",
+      "paper_score": 2.541570423214886,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 441,
+      "name": "delta_net_msdfdm",
+      "title": "DualFIR-QuadFusion",
+      "source_sha256": "bef7cb97b6833b74281446dbdec0bc3ccfd6565acfb9de61e2a7a6923d02365a",
+      "paper_score": 2.3831632718929363,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 933,
+      "name": "delta_net_cagf_rc_pf",
+      "title": "FusionGateX",
+      "source_sha256": "f19b9e402e3d91fcbdc2f5ebdb556c04b26602a3e62a32f602a15d1afe154eca",
+      "paper_score": 2.7053433573239127,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1298,
+      "name": "delta_net_aeoc",
+      "title": "AdaptiveEntropyRouterNet",
+      "source_sha256": "bd894f9e443bf26fd0089bbb3e5038a4fbd5187612065b36b2534ccfcf4b49a5",
+      "paper_score": 2.32705498166846,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1448,
+      "name": "delta_net_pathgated",
+      "title": "PathGatedFusionNet",
+      "source_sha256": "2c40b7b09f16b75ae1dc90d24461c8c05637ad5f6df0743d9083befe53742d3d",
+      "paper_score": 2.4962688369676385,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1792,
+      "name": "delta_net_hgm_ident",
+      "title": "FusionGate-HierarchicalRouter",
+      "source_sha256": "a0f4faeaf821f64915ee841cb6ed416f2b8f45a1f771a7a7038f965f486be969",
+      "paper_score": 2.4893774503373605,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_schedule_base"
+      ]
+    },
+    {
+      "upstream_id": 1132,
+      "name": "delta_net_hpaf",
+      "title": "DualScaleStatFusionNet",
+      "source_sha256": "d1688bccaa32d7e60de5bd870a53365ead51c95c953b8d28b4e714bfa844a9ac",
+      "paper_score": 2.3205139694978674,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1252,
+      "name": "delta_net_adgr",
+      "title": "AdaptivePathRouter",
+      "source_sha256": "0cf729c24611666aafc732b0a27829afc41d4c8cbb178c034aa57a4f7180d1d7",
+      "paper_score": 2.471467814300116,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "gate_entropy_reg_weight",
+        "last_reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1584,
+      "name": "delta_net_aif",
+      "title": "AdaptiveFusionNet",
+      "source_sha256": "cc5a6301a7b2ddbe109105214b7cdd1644fd644c6cda631d538cd0983a2a8cf6",
+      "paper_score": 2.561936979447291,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "id_floor_warmup_steps",
+        "tau_transition_steps"
+      ]
+    },
+    {
+      "upstream_id": 1283,
+      "name": "delta_net_hybfloor",
+      "title": "HybridFusionFloor",
+      "source_sha256": "5b3238b839b074b4983f0983c0031fed479bcf43e444b8d9b698111bbdfdb109",
+      "paper_score": 2.5159054598618904,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 939,
+      "name": "delta_net_entropy_kl_floor_gate",
+      "title": "EntropyKLAdaptiveGateNet",
+      "source_sha256": "a2dbfcb4f2f4eaf018161c1279fcc56b3a44ed6f017c37445ef9348246630636",
+      "paper_score": 2.5993331526427728,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "last_gate_loss"
+      ]
+    },
+    {
+      "upstream_id": 700,
+      "name": "delta_net_amf_routing",
+      "title": "FusionGate-XR",
+      "source_sha256": "9478e7f544ab042799bf23c32cf458059129b9d992c385a5594ce9cb4c3e2144",
+      "paper_score": 2.0675334316269405,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 702,
+      "name": "delta_net_bscgf",
+      "title": "BlockStateFusionNet",
+      "source_sha256": "631c0694bd588a5427d40e5ad9da1fd2dd5f282f71ac8d8b1124cac20058b99e",
+      "paper_score": 2.563206945856089,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "gate_entropy_reg"
+      ]
+    },
+    {
+      "upstream_id": 830,
+      "name": "delta_net_hwggm",
+      "title": "LocalGlobalBlendNet",
+      "source_sha256": "22f641d51ee2c83e070a5c4a4d1206a76223b283e53a3295ebd25728d612e608",
+      "paper_score": 2.381166858117132,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 954,
+      "name": "delta_net_acmg",
+      "title": "AdaptiveGateNet",
+      "source_sha256": "944982086a0c1a70ff992dc377bfecdf235b640eaa49d2d4c91580b00de69837",
+      "paper_score": 2.1317382338352777,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 804,
+      "name": "delta_net_phsg5",
+      "title": "PerHeadSimplexRouter",
+      "source_sha256": "0351c824749a39ec9f76f16c4eaa7540038c4ce5f81179f1c7687b851827a584",
+      "paper_score": 2.223638002868015,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 410,
+      "name": "delta_net_selm",
+      "title": "HybridScale-GateNet",
+      "source_sha256": "5983491fb298ff661ccdb1c64d2d7bc978890884a92ba6aca11139fa78852f25",
+      "paper_score": 2.119267638131481,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 714,
+      "name": "delta_net_ms_resgate",
+      "title": "ResGate_MS_FusionNet",
+      "source_sha256": "7fd95751c2c727ef5ee232556dc9f95bf30317d5b3141011a7af2856673ee7e9",
+      "paper_score": 2.3628523780728754,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1595,
+      "name": "delta_net_sigf_ptu",
+      "title": "GateFusionNet",
+      "source_sha256": "a5b080a241365b3bd9dba9084ed9558d82c698f5ae872e51bb3990cc77159a4d",
+      "paper_score": 2.564891989491199,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "untie_end_step",
+        "untie_start_step"
+      ]
+    },
+    {
+      "upstream_id": 887,
+      "name": "delta_net_erfg",
+      "title": "EntropyFlowGateNet",
+      "source_sha256": "5bcba408a97dd3481d46a726511ff748f800bdddfca29401b5e318be1fb68937",
+      "paper_score": 2.2414524904139093,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "reg_entropy_coeff",
+        "reg_kl_coeff",
+        "warmup_steps"
+      ]
+    },
+    {
+      "upstream_id": 948,
+      "name": "delta_net_acfg",
+      "title": "AdaptiveFloorGate",
+      "source_sha256": "9b9249aa584228c828aff4c0edb0de4999878d74e5625b3298a4a2f7b8cebdac",
+      "paper_score": 2.2845016087520635,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1041,
+      "name": "delta_net_crdg",
+      "title": "ResConvGate",
+      "source_sha256": "48c552937a51ad86b59300481795ba2bd6a9d766f4b58c7c9d50f65cbd460158",
+      "paper_score": 2.396768402421852,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 843,
+      "name": "delta_net_hsigctx",
+      "title": "DualStagePathGateNet",
+      "source_sha256": "8beebf88634cf51fb6b0e3b35f342c5b75cc64341f2f8f40103708576c12ac84",
+      "paper_score": 2.4413182171728547,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1444,
+      "name": "delta_net_hmgapf",
+      "title": "FusionGate-XL",
+      "source_sha256": "dd5268d7c13a01e9878c8ef28a79573fcb49ecbbb39a14ea7e3689f1e635470b",
+      "paper_score": 2.3478368307453534,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 641,
+      "name": "delta_net_hwg",
+      "title": "HeadWiseGateNet",
+      "source_sha256": "c970077bad63f5829568cbcbe1019f91013416b2f10d634e363e421bc4077691",
+      "paper_score": 2.5572863948927256,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 519,
+      "name": "delta_net_ssg_sparsemax_temp",
+      "title": "SparseGateDelta",
+      "source_sha256": "c353803f2ab6ca5a8c767d1522785f359c5f894618e4a2a9ba86a64dd9bdd92a",
+      "paper_score": 2.3546991262639367,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 645,
+      "name": "delta_net_htcg",
+      "title": "AdaptiveHierGateNet",
+      "source_sha256": "a4f6820d304293f7880590a95597b3406c11aad003c34e77bc2d146195a05352",
+      "paper_score": 1.9568617098392718,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 965,
+      "name": "delta_net_cagf_br",
+      "title": "GateFlooredResNet",
+      "source_sha256": "3fc13e8a45e7fc4138ccf3f211c1651ad7e0bdf271f3610741b478fb14141320",
+      "paper_score": 2.7247497854337794,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1349,
+      "name": "delta_net_msfr_mn",
+      "title": "FusionFeedback-MixNormNet",
+      "source_sha256": "f123e8718439a62fb38a38e919f7487cd719eddb10b5c00a37c925664c01fcea",
+      "paper_score": 2.4105799963989067,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 676,
+      "name": "delta_net_ser_minfloor",
+      "title": "StatGateRouter",
+      "source_sha256": "99e617af33ee81d813ef0c26e1562fe19ee3c7cf382b4085dfc21e001183df5a",
+      "paper_score": 2.22374935107744,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "gate_entropy_reg"
+      ]
+    },
+    {
+      "upstream_id": 295,
+      "name": "delta_net_dyn_gate_mix",
+      "title": "DynamicMemGateNet",
+      "source_sha256": "dcadb6973fe58db89d70effe1c0148e26a9c1f5182e1355cd1914a8129d08245",
+      "paper_score": 2.262065781120045,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1175,
+      "name": "delta_net_annealed_eklf",
+      "title": "AnnealedPathFusionNet",
+      "source_sha256": "8502465628e52acb9aff5ff92278195ffa63cd89360c8bfb36a6fc482d8bc3b7",
+      "paper_score": 2.1498436554682687,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "last_gate_loss",
+        "reg_w_entropy_init",
+        "reg_w_kl_init"
+      ]
+    },
+    {
+      "upstream_id": 988,
+      "name": "delta_net_pfr",
+      "title": "LexiFuse-Percept",
+      "source_sha256": "a0ea996022cbb1987334b0c598d52862143f655cddf8c51cb12d9a21433303c5",
+      "paper_score": 2.669621689223796,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 1031,
+      "name": "delta_net_hefth",
+      "title": "FusionGate-X",
+      "source_sha256": "d3211189e71f914c4005378f653e7bf0559435b94df41b7bec21bcf7ffdee5d1",
+      "paper_score": 2.2217666349016474,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "epsilon_anneal_steps"
+      ]
+    },
+    {
+      "upstream_id": 1733,
+      "name": "delta_net_ddfsanr",
+      "title": "FusionGate-XL",
+      "source_sha256": "b2fcd4ab98f0b744662dbfef654b374e82319d5186f25297377a5102f0ef0b7e",
+      "paper_score": 2.1084558390095016,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "untie_end_step",
+        "untie_start_step"
+      ]
+    },
+    {
+      "upstream_id": 330,
+      "name": "delta_net_dyn_decay_fractal_gate",
+      "title": "AdaptiveFractalGateNet",
+      "source_sha256": "5892c566d4c8a20b1899cfd16db573fe411acd30f7b7c0db98d93b32cf31cb5d",
+      "paper_score": 2.1079411427829835,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1408,
+      "name": "delta_net_efagm",
+      "title": "AdaptiveEntropyGateNet",
+      "source_sha256": "c586702e1fe6190abd9933baffdb68b5801946148aaaadb8da57f963a5ec7eb7",
+      "paper_score": 2.2336832444323176,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_entropy_floor_step"
+      ]
+    },
+    {
+      "upstream_id": 1155,
+      "name": "delta_net_triscale",
+      "title": "TriScaleFusionNet",
+      "source_sha256": "5894f5c19d258dff4976ead226be58cabe8f2ff163dc30bd81028c64c965c527",
+      "paper_score": 2.5772453216012163,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 259,
+      "name": "delta_net_bias_init_mix_gate",
+      "title": "BAMG_MemoryGate",
+      "source_sha256": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e",
+      "paper_score": 2.0173448009491395,
+      "status": "prepared_not_trained_reported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 380,
+      "name": "delta_net_ndg",
+      "title": "DualScaleGateNet",
+      "source_sha256": "ac1bd8484d8007ed65db71de778d5be2f0871c9c53efd9f7ed2fdf5a9999947a",
+      "paper_score": 2.1130219785730633,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1081,
+      "name": "delta_net_entropy_cagf_rc_norm",
+      "title": "EntropyFusionNormX",
+      "source_sha256": "95769712260f1da987c5139b257410dfcb1df9d4e81d0f2515480585d3505e72",
+      "paper_score": 2.382574929900649,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 151,
+      "name": "delta_net_adaptive_mix_gate",
+      "title": "AdaptiveMixTransformer",
+      "source_sha256": "ee3208a7e4db32832b18c3bc2104316db1f43015b57f90b709ad5f677c4d4c70",
+      "paper_score": 2.0779740962112943,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 437,
+      "name": "delta_net_dual_path_fusion",
+      "title": "FusionConv-AMG",
+      "source_sha256": "da307a09b49d35c30637a27a2d22f4435a2b1bfcab7607fef34be8afd4aa74a7",
+      "paper_score": 2.290910811476138,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 709,
+      "name": "delta_net_htgmsm",
+      "title": "HierGate-MEM",
+      "source_sha256": "ef224861172acb1272a822bac2ceef713f2a2c13c0de2af4d798055fbf4df311",
+      "paper_score": 2.517634222499238,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 562,
+      "name": "delta_net_sparsemax_temperature",
+      "title": "SparseTempGateNet",
+      "source_sha256": "9037a14645ede30ea7f9f9d5b8a1ee10523cd5eccf033b60657b8f0a6d9764ee",
+      "paper_score": 2.2203932015400234,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1490,
+      "name": "delta_net_ahic",
+      "title": "AdaptiveContextFusionNet",
+      "source_sha256": "0da7cd59cb7366dc72e77e7cb1c0ec8163a8017ddfab040687c253d5910640ea",
+      "paper_score": 2.1153684898720098,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "alpha_reg_strength",
+        "reg_loss",
+        "tau_transition_steps"
+      ]
+    },
+    {
+      "upstream_id": 322,
+      "name": "delta_net_head_gate_ema",
+      "title": "AdaptiveTokenGate",
+      "source_sha256": "5bea139d6e96579a9bdf0f76f19391c45e50e520a7b2380ddb8c86f45f3b9453",
+      "paper_score": 2.1268656548120513,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    },
+    {
+      "upstream_id": 1621,
+      "name": "delta_net_hhgass",
+      "title": "HybridGateTransformer",
+      "source_sha256": "723df3537e6b1491852db1fe966c65b839860ed714e90ff75216a662e927ff78",
+      "paper_score": 2.373085985560122,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": [
+        "_step",
+        "entropy_decay_steps",
+        "floor_decay_steps",
+        "reg_loss"
+      ]
+    },
+    {
+      "upstream_id": 720,
+      "name": "delta_net_hsgm",
+      "title": "HybridSparseGateMemoryNet",
+      "source_sha256": "711e07f46db86c1fc8058041c69adfcca79299492337ee07c86ba095c8c6516a",
+      "paper_score": 2.5802720887344472,
+      "status": "not_ported",
+      "contains_DeltaNet": true,
+      "schedule_or_aux_attributes": []
+    }
+  ],
+  "first_bounded_batch": {
+    "calibration_existing": [
+      458,
+      879
+    ],
+    "reuse_prepared": [
+      259
+    ],
+    "new_adapters": [
+      641,
+      712
+    ],
+    "new_training_runs_if_authorized": 3,
+    "seed_policy": "First one paired seed each using same data and initial shared binary matrices; then complete at least three paired seeds for every source, not only finalists. Do not rank single-seed results as final.",
+    "updates": 1200,
+    "target_tokens_per_run": 2457600,
+    "objective": "agillm-fit-v1: 0.6AR+0.2SAT+0.2NAT",
+    "shape": {
+      "V": 8192,
+      "d": 256,
+      "H": 4,
+      "L": 12,
+      "T": 256,
+      "batch": 8
+    }
+  },
+  "adapter_decision": "Use shared scaffolding with explicit per-source mixer adaptations. Do not wrap original DeltaNet.forward unchanged: original FP q/k/v/o and per-head output norm conflict with binary fused qkv and AGILLM no/o. Preserve defining mixer math, branch initialization, retention, stats axes and schedules; record every intentional change. FP-original baselines are separate cohort.",
+  "gates": [
+    "AST source/ID/hash inventory and explicit default-argument extraction",
+    "Dependency/interface audit, source-specific equations and auxiliary-loss/schedule policy",
+    "Tiny tensor output and gradient parity against source reference with equivalent projections; FP64/FP32 and BF16 tolerances; chunk boundary and ragged lengths",
+    "Causality in AR, batch isolation, intended noncausal attention in SAT/NAT/local; do not mutate counters during eval",
+    "Binary parameter ownership, no duplicate output projection, dtype/shape/device, finite backward and optimizer state updates",
+    "Exact small and deployment-geometry parameter/buffer accounting plus allocation estimates; no long CPU benchmarks",
+    "Authorized bounded accelerator smoke with stop limits before full protocol; OOM/NaN/timeouts recorded as failures, not silently omitted",
+    "Complete fixed-budget protocol before trained count; retain component losses, wall time, peak memory, seeds and every failure"
+  ],
+  "hash_requirements": [
+    "catalog bytes",
+    "original program bytes per upstream index",
+    "adapter source and imported helper files",
+    "simulator source",
+    "source-reference shims and correctness-test source/results",
+    "canonical protocol JSON including geometry, exact objective schedule, tokenizer vocabulary/mapping, optimizer, data order, masks, seeds and eval steps",
+    "raw input dataset shards and exact train/validation/test split/token tensors",
+    "run environment/package/kernel versions and launch command",
+    "output run JSON/log/checkpoint"
+  ],
+  "cost": {
+    "641_gate_parameter_formula": "4*H*d+12*d+4*H",
+    "712_gate_floor_temperature_parameter_formula": "4*H*d+48*d+8*H+4",
+    "deployment_geometry_source": "Prepared #259 reference accounting, documented deployment geometry",
+    "deployment_geometry": {
+      "d": 8192,
+      "H": 64,
+      "L": 560,
+      "candidate_layers": 420
+    },
+    "641_gate_parameters_per_layer": 2195712,
+    "712_gate_floor_temperature_parameters_per_layer": 2490884,
+    "limitations": "Gate formulas derived directly from source allocations, not complete model cost. Include beta, FIR, short conv, buffers, normalization, optimizer and live temporaries separately. Full-geometry memory is not latency or quality proof. No GPU timing, dollar estimate or launch performed."
+  },
+  "verified_existing_files": {
+    "dlgm458.py": "77be418b4fa081642b12d735fcfd25287ad2eb402bda58341fc9bf6cbbacea41",
+    "fusion879.py": "594bd23111a8d781e8f8f0a3dd1a1cfe3be1ee218dd4ea6555a4ce844a4ec8e2",
+    "agillm_mini.py": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2"
+  }
+}

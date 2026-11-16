@@ -1,0 +1,8 @@
+{
+  "plugin": "upstream_tests",
+  "ok": true,
+  "steps": 0,
+  "curve": [],
+  "original_record_sha256": "03580348c04ccdf9daedf6996003faf455932882cbbcc925ecd5826ba1830904",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

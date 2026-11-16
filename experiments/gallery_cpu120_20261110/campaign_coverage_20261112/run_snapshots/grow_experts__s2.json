@@ -1,0 +1,162 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "grow_experts",
+  "seed": 2,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 4.291534423828125e-06,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      3,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      3,
+      4
+    ],
+    "loop": {
+      "600b": {
+        "layout": {
+          "kind": "grow",
+          "blocks": 380,
+          "experts": 1
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 380,
+        "visit_slots": 380,
+        "nominal_visits": 380,
+        "slot_latent_bytes": 805843238912,
+        "unique_latent_bytes": 805843238912,
+        "nominal_latent_bytes": 805843238912,
+        "local_groups": 95
+      },
+      "sim": {
+        "layout": {
+          "kind": "grow",
+          "blocks": 12,
+          "experts": 1
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 12,
+        "visit_slots": 12,
+        "nominal_visits": 12,
+        "slot_latent_bytes": 24641536,
+        "unique_latent_bytes": 24641536,
+        "nominal_latent_bytes": 24641536,
+        "local_groups": 3
+      }
+    },
+    "loop_grown": true
+  },
+  "curve": [
+    {
+      "ar": 6.252392947673798,
+      "sat": 6.249054908752441,
+      "nat": 6.284277856349945,
+      "ctx_full": 6.175823330879211,
+      "ctx_256": 6.152419447898865,
+      "ctx_gain": -0.02340388298034668,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.001018449897169496,
+      "skipped": 0,
+      "wall_s": 38.1,
+      "train_recent": {
+        "ar": 6.473801684379578,
+        "sat_fixed": 7.212741711560418,
+        "sat_variable": 6.543918251991272,
+        "nat": 7.084626169765697,
+        "local_denoise": 7.512582540512085
+      }
+    },
+    {
+      "ar": 6.055790603160858,
+      "sat": 6.064586937427521,
+      "nat": 6.102824091911316,
+      "ctx_full": 6.099077105522156,
+      "ctx_256": 5.982437968254089,
+      "ctx_gain": -0.1166391372680664,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.005064348932194916,
+      "skipped": 0,
+      "wall_s": 76.8,
+      "train_recent": {
+        "ar": 6.129498147964478,
+        "sat_fixed": 6.2294454097747805,
+        "sat_variable": 6.137692499160766,
+        "nat": 6.301980972290039,
+        "local_denoise": 6.404589915275574
+      }
+    },
+    {
+      "ar": 5.7055142521858215,
+      "sat": 5.780334830284119,
+      "nat": 5.959916412830353,
+      "ctx_full": 5.81642758846283,
+      "ctx_256": 5.624369859695435,
+      "ctx_gain": -0.19205772876739502,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.015224002754461076,
+      "skipped": 0,
+      "wall_s": 158.0,
+      "train_recent": {
+        "ar": 5.731697034835816,
+        "sat_fixed": 5.971732497215271,
+        "sat_variable": 5.95061776638031,
+        "nat": 5.988262557983399,
+        "local_denoise": 6.379402661323548
+      }
+    },
+    {
+      "ar": 5.280688285827637,
+      "sat": 5.495948314666748,
+      "nat": 5.906789779663086,
+      "ctx_full": 5.45896852016449,
+      "ctx_256": 5.158827424049377,
+      "ctx_gain": -0.3001410961151123,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.046859779047113,
+      "skipped": 0,
+      "wall_s": 306.4,
+      "train_recent": {
+        "ar": 5.321948289871216,
+        "sat_fixed": 5.587578845024109,
+        "sat_variable": 5.580885863304138,
+        "nat": 5.9093469142913815,
+        "local_denoise": 6.270550656318664
+      }
+    }
+  ],
+  "original_record_sha256": "7e0ccc7ae53c14cd6a1e048c973c1b63b12c372f3cdb7a704b02a4b481850062",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}

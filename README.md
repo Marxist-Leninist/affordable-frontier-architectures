@@ -2,6 +2,10 @@
 
 Architecture-neutral research into neural, non-neural and hybrid language-model systems that could advance toward general intelligence at lower real cost for the same workload and quality. Transformer, recurrent/state-space, hybrid, sparse, and other neural designs are candidates—not predetermined winners. This repository contains accounting prototypes and bounded small-model experiments, not a demonstrated frontier/AGI system.
 
+## Gallery screen: all 105 original programs at 120 CPU-seconds (10 and 11 November 2026)
+
+[Report, harness, per-run results and checkpoints](experiments/gallery_cpu120_20261110/README.md). All 105 original ASI-Arch gallery programs trained and evaluated under one recipe, 80 of them for the first time, then the eight best re-run on fresh seeds with the controls alongside. Five of the eight fall behind #458 DLGM on fresh seeds. #259 `bias_init_mix_gate` stays ahead of it in all 4 fresh seeds on both held-out sets (-0.026 nats per byte on WikiText, -0.029 on FineWeb-Edu). Tiny models, reused held-out windows, one machine: a lead to test further, not a settled result. The folder also holds a self-contained harness and the data manifest for further gallery tests.
+
 ## Latest experiment: match-length copy calibration (v32)
 
 [Audited v32 report, code and results](experiments/v32/README.md). On fresh FineWeb-Edu, a match-length-dependent copy gate improves the local Transformer versus a constant freshly calibrated on the same validation data by 0.03342 bits/byte. Its smaller advantage over the stronger historical constant is uncertain, as is the GRU gain. Complete-path CPU timing shows no clear speed improvement, and memory is unchanged. This is a controlled calibration/domain-transfer result, not a universal architecture win, frontier-quality result or commercial-cost pass. Four unit tests, independent distribution/checkpoint audits and six economic tests pass.

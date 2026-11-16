@@ -1,0 +1,20 @@
+{
+  ".gitignore": "6c68a0856fec76102fcc07f3f50df89b55becf17cb092e0f28c4829a52e33ccd",
+  "ASI_ARCH_LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "ASI_ARCH_REQUIREMENTS.txt": "5e0814c8c93864394a6d0a1a71791f1a0b0acd641a1eee81f3d11e958ce07edd",
+  "FLA_LICENSE": "98d913740dd16462d79ca94c88269a166673058d95c941f8fc98cb3fb39a7b45",
+  "NOTICE.md": "6ee2fd549fec3f38f8d5ab0931cd650b6bb1505fa12c243e98e6024a0138ae3e",
+  "README.md": "3faa38b4f1085811d4a3d5ef40cb7552154758443fc662b9e92870391705d6db",
+  "TEST_DEPENDENCIES.txt": "8d7fd8626d7ffd45548ce186fb63bb0a6295e28ca0032c527fd7bb20df4e97e3",
+  "afp712_dirac.py": "bd7a9d61f88d6c638317709bad36f40866afa9979f62edf3fb24feb007274238",
+  "agillm_mini.py": "dc5c3c28ddbf18538ff9c7fd7de0679fd6f3fc19215284937d127d54732ee7d2",
+  "fla_cpu.py": "855f8365a668504386e2938b62698fecf5b242b1285e61d33d193c101e57fe17",
+  "native_fla_022_convolution.py": "d0b107a222cde18acc15ba3f84045da5c4c661b0d700c3c27ee0553e21eaec28",
+  "native_fla_metadata.txt": "7d8cc56636e36135888186c64217323d14f35230afa80d71844dec2dd4c1f2c5",
+  "preparation_results_dirac.json": "3ee065574519b6a120844d261e014d95fed479a1666dd504e4a9e0603451636f",
+  "provenance.json": "d28110e853d131dd37ec4a91e8bdba6c13b99ddb0f7b486b29629ea0a8621258",
+  "reference712_dtype_preserving.py": "dd04e73be50946d0167797af8aad20e48d288af49a50dd94a6b0825dd4a877a2",
+  "source_entry.json": "2900732d8e508cf90c22713914ba0dfae6a0f9f60408c28c6aef7a16afafbb57",
+  "test_afp712.py": "a92320abe9ce04f2301d9b2dbe0e01f789342139fb4492a1fdcb29c3ac9fdfbe",
+  "upstream712.py": "62d59f5bf7f19ba502343f2c1aeba41311659f981660cd0feb37a58940451b7e"
+}

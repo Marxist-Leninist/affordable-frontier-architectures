@@ -1,0 +1,66 @@
+{
+  "repository": "ScAGI/affordable-frontier-architectures",
+  "commit": "0f02637ccd8f6f7a8e56fc3638dffd448216ab6e",
+  "verified_files": [
+    {
+      "path": "README.md",
+      "sha256": "fe1925a935f9e568d2a286f5d725f79d7d4a88beba5beab2685c8f77e08fe0e9"
+    },
+    {
+      "path": "code/static_audit.py",
+      "sha256": "c64d98e60047c87e73864e2b9835e0cb8284e96c9e9067619688dcede0680ab0"
+    },
+    {
+      "path": "code/make_readme.py",
+      "sha256": "abaea9b2840261bee46bdb3814846c97607dcb8c3499a97d3e703d8c3cd8490b"
+    },
+    {
+      "path": "code/verify_weights.py",
+      "sha256": "37296f5af0662e3081ee6a8ce913dfbd1f04164bf5c125a9131fc939635f8933"
+    },
+    {
+      "path": "code/test_reproduction.py",
+      "sha256": "b74ee93db84f81d644986b0c40d35c477745d68de9c5f74f4cb41820440d7d78"
+    },
+    {
+      "path": "code/catalog_coverage.py",
+      "sha256": "98d809e101ff3dcf070f8d283f38a9fa67e6439c7f3758b9db514d8a3b819048"
+    },
+    {
+      "path": "reproduction_20261112/README.md",
+      "sha256": "f50877c1e1e1ee3f27c105f75737373df083360e1974f20e9ee0053c764d1d18"
+    },
+    {
+      "path": "reproduction_20261112/VERIFY_geth.json",
+      "sha256": "b0c66886438551cad2f9951a2e266ea2aa5a66952a7fcf25157473b045232805"
+    },
+    {
+      "path": "reproduction_20261112/CATALOG_COVERAGE.json",
+      "sha256": "68f0680e5d92d67bb4b5604fcc467b1c5740e8069a02ed411da099b14b0af2f6"
+    },
+    {
+      "path": "checkpoints/T96_s2.npz",
+      "sha256": "e02e76f5cac1a7791d33ca33abc279d0372f7110d053369d373a4b747bf3f7ec"
+    },
+    {
+      "path": "checkpoints/g151_s2.npz",
+      "sha256": "1bcfee100bb87a3b33111b8f46029c2f302a067d3847e78f6d52a4c1d5daf0a1"
+    },
+    {
+      "path": "checkpoints/g259_s2.npz",
+      "sha256": "87d6278ae4da72a0cc642ccbd5bc5a97ba8e562728d6c9f8d836224bde3e1dec"
+    },
+    {
+      "path": "checkpoints/g437_s2.npz",
+      "sha256": "a1e044d8867bf6e8f7f46fdd15c9c355ad7d4d31b5d1f99ab7248f312645bf31"
+    },
+    {
+      "path": "checkpoints/g458_s2.npz",
+      "sha256": "0ecdeafc55edd68f919272062ee477f7fbdca554d054f3a65ba60945387b97f2"
+    },
+    {
+      "path": "checkpoints/g879_s2.npz",
+      "sha256": "aaf10b10f72db3fd2afb0d3a075c1cbde642015e8d1be191f8b70e1790f37d06"
+    }
+  ]
+}

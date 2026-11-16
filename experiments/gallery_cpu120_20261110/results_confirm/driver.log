@@ -1,0 +1,39 @@
+23:44:51 start pending=22 of 22 cores=[0, 1]
+23:47:01 T96_s2 ok 130s left=20
+23:47:03 g259_s2 ok 132s left=19
+23:49:15 g151_s2 ok 134s left=18
+23:49:17 g458_s2 ok 134s left=17
+23:51:31 g957_s2 ok 136s left=16
+23:51:31 g908_s2 ok 134s left=16
+23:52:06 start pending=16 of 22 cores=[0, 1]
+23:54:36 g879_s2 ok 150s left=14
+23:54:36 g804_s2 ok 150s left=14
+23:56:52 g437_s2 ok 136s left=12
+23:56:54 g641_s2 ok 138s left=11
+23:59:05 T96_s3 ok 130s left=10
+23:59:13 g556_s2 ok 140s left=9
+00:01:19 g259_s3 ok 134s left=8
+00:01:29 g151_s3 ok 136s left=7
+00:03:35 g458_s3 ok 136s left=6
+00:03:49 g957_s3 ok 140s left=5
+00:05:53 g908_s3 ok 138s left=4
+00:06:05 g879_s3 ok 136s left=3
+00:08:11 g804_s3 ok 138s left=2
+00:08:23 g437_s3 ok 138s left=1
+00:10:29 g641_s3 ok 138s left=0
+00:10:45 g556_s3 ok 142s left=0
+00:10:45 driver exit pending=0
+00:25:35 start pending=12 of 12 cores=[0, 1]
+00:27:51 g259_s4 ok 136s left=10
+00:27:53 g458_s4 ok 138s left=9
+00:30:07 g151_s4 ok 136s left=8
+00:30:11 g879_s4 ok 138s left=7
+00:32:21 T96_s4 ok 130s left=6
+00:32:25 g437_s4 ok 138s left=5
+00:34:37 g458_s5 ok 136s left=4
+00:34:41 g151_s5 ok 136s left=3
+00:36:47 T96_s5 ok 130s left=2
+00:36:55 g259_s5 ok 134s left=1
+00:39:07 g879_s5 ok 140s left=0
+00:39:11 g437_s5 ok 136s left=0
+00:39:11 driver exit pending=0

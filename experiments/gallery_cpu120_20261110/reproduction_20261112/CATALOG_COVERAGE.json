@@ -1,0 +1,990 @@
+{
+  "schema": "asi_arch.catalog_coverage.v1",
+  "gallery_sha256": "aa77e8289971b3922102f000fddf44a6a9a31ca1f3b59c834722ac130f63759c",
+  "upstream_commit": "3113c51b04a1d4a7520a3b0238c6a08d3194d58f",
+  "records": 105,
+  "unique_indices": 105,
+  "unique_names": 105,
+  "unique_program_hashes": 105,
+  "screened_records": 105,
+  "uncovered_indices": [],
+  "completed_run_files": 146,
+  "interpretation": "105 exported source records, not proof of 105 semantically distinct architectures. No canonical subset resolving the historical 103 count is established. Existing runs are the adapted 350k-parameter, 120-CPU-second screen, not new training or full-scale results.",
+  "rows": [
+    {
+      "index": 151,
+      "name": "delta_net_adaptive_mix_gate",
+      "program_sha256": "ee3208a7e4db32832b18c3bc2104316db1f43015b57f90b709ad5f677c4d4c70",
+      "completed_runs": 5,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 259,
+      "name": "delta_net_bias_init_mix_gate",
+      "program_sha256": "08e3b4bb618c64be48db8cb402ab3dc46cbc1a204741710f25afb6fedc3b699e",
+      "completed_runs": 5,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 295,
+      "name": "delta_net_dyn_gate_mix",
+      "program_sha256": "dcadb6973fe58db89d70effe1c0148e26a9c1f5182e1355cd1914a8129d08245",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 322,
+      "name": "delta_net_head_gate_ema",
+      "program_sha256": "5bea139d6e96579a9bdf0f76f19391c45e50e520a7b2380ddb8c86f45f3b9453",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 330,
+      "name": "delta_net_dyn_decay_fractal_gate",
+      "program_sha256": "5892c566d4c8a20b1899cfd16db573fe411acd30f7b7c0db98d93b32cf31cb5d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 380,
+      "name": "delta_net_ndg",
+      "program_sha256": "ac1bd8484d8007ed65db71de778d5be2f0871c9c53efd9f7ed2fdf5a9999947a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 410,
+      "name": "delta_net_selm",
+      "program_sha256": "5983491fb298ff661ccdb1c64d2d7bc978890884a92ba6aca11139fa78852f25",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 437,
+      "name": "delta_net_dual_path_fusion",
+      "program_sha256": "da307a09b49d35c30637a27a2d22f4435a2b1bfcab7607fef34be8afd4aa74a7",
+      "completed_runs": 5,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 441,
+      "name": "delta_net_msdfdm",
+      "program_sha256": "bef7cb97b6833b74281446dbdec0bc3ccfd6565acfb9de61e2a7a6923d02365a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 458,
+      "name": "delta_net_dlgm",
+      "program_sha256": "76412d2f7aff30f99ce7089e0f57f8ef26add7f2d9f965adf8650a00538bd1f5",
+      "completed_runs": 7,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 486,
+      "name": "delta_net_mscmix_pointwise",
+      "program_sha256": "6d7f4a8a297a0131567dc1d6aac04b7c43bca80584bb0f12e7477643ebd80ddd",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 511,
+      "name": "delta_net_ms_hsm_tempgate",
+      "program_sha256": "b2e21ef4e7c62ebb3ea655cb0957f2a89d3759000ea4ca268176202bef2c1e40",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 515,
+      "name": "delta_net_ms_adaptive_gstat3",
+      "program_sha256": "c99cd7cac8d3552283675ed13e6cda623786c0fc7fbcfe788c4cf72cb617f832",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 518,
+      "name": "delta_net_rmsgm",
+      "program_sha256": "6f588e4282cf72bf47befd95ddd21727e042f6868c1a0ae4343347571f077b7b",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 519,
+      "name": "delta_net_ssg_sparsemax_temp",
+      "program_sha256": "c353803f2ab6ca5a8c767d1522785f359c5f894618e4a2a9ba86a64dd9bdd92a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 537,
+      "name": "delta_net_mshmfv2",
+      "program_sha256": "d8ce9221a182be08dc86f1b48ad9d3a62d92bddca276e0d079e497e31eda784a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 556,
+      "name": "delta_net_dfpcr",
+      "program_sha256": "65eae8f2ca90ff4ad30f002e8ff061da3aaaa8ee578c6e4ae3c4ea748bdc6573",
+      "completed_runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 559,
+      "name": "delta_net_mor",
+      "program_sha256": "c3b0ba6d8dc01d1119ff3a9523bde6b8d53330f5f04ea7508ae763174ecfff19",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 562,
+      "name": "delta_net_sparsemax_temperature",
+      "program_sha256": "9037a14645ede30ea7f9f9d5b8a1ee10523cd5eccf033b60657b8f0a6d9764ee",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 565,
+      "name": "delta_net_cagf",
+      "program_sha256": "b649fc8e348d600f25dc1d28e51ad8ccdded8ffb20be291e02bfb071492309eb",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 629,
+      "name": "delta_net_ms_hsm_widefloor",
+      "program_sha256": "38b568fbc9f52b479b9cc9d2c2313682c93808593421070ad8638c82064ab6d8",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 641,
+      "name": "delta_net_hwg",
+      "program_sha256": "c970077bad63f5829568cbcbe1019f91013416b2f10d634e363e421bc4077691",
+      "completed_runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 645,
+      "name": "delta_net_htcg",
+      "program_sha256": "a4f6820d304293f7880590a95597b3406c11aad003c34e77bc2d146195a05352",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 657,
+      "name": "delta_net_ms_gstat3_quota",
+      "program_sha256": "7444d5b8ce5aa1d64609105f555db8961c1e9f54cdc7c6aa088b989bb1b2c75f",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 665,
+      "name": "delta_net_hrem",
+      "program_sha256": "0d0a99322e56e347c72b0a4f2fd16efe033f78efe49f93f98d338046678ba262",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 675,
+      "name": "delta_net_gae_ms3e",
+      "program_sha256": "748409c3c30d5705f4bb8355814ce48b4a70812fe9f9873f595d96c8129ec75a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 676,
+      "name": "delta_net_ser_minfloor",
+      "program_sha256": "99e617af33ee81d813ef0c26e1562fe19ee3c7cf382b4085dfc21e001183df5a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 700,
+      "name": "delta_net_amf_routing",
+      "program_sha256": "9478e7f544ab042799bf23c32cf458059129b9d992c385a5594ce9cb4c3e2144",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 702,
+      "name": "delta_net_bscgf",
+      "program_sha256": "631c0694bd588a5427d40e5ad9da1fd2dd5f282f71ac8d8b1124cac20058b99e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 703,
+      "name": "delta_net_csm",
+      "program_sha256": "65fad929731e9eaac7a67a42088249de95c66edb3391071e55e144f5e1b22017",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 709,
+      "name": "delta_net_htgmsm",
+      "program_sha256": "ef224861172acb1272a822bac2ceef713f2a2c13c0de2af4d798055fbf4df311",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 712,
+      "name": "delta_net_afp",
+      "program_sha256": "62d59f5bf7f19ba502343f2c1aeba41311659f981660cd0feb37a58940451b7e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 714,
+      "name": "delta_net_ms_resgate",
+      "program_sha256": "7fd95751c2c727ef5ee232556dc9f95bf30317d5b3141011a7af2856673ee7e9",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 720,
+      "name": "delta_net_hsgm",
+      "program_sha256": "711e07f46db86c1fc8058041c69adfcca79299492337ee07c86ba095c8c6516a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 750,
+      "name": "delta_net_adaptive_hier_gate",
+      "program_sha256": "58ca4270916f4e4505df4704218c09a01a7e9ee7c2a9462ce368e5cd43f6b275",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 804,
+      "name": "delta_net_phsg5",
+      "program_sha256": "0351c824749a39ec9f76f16c4eaa7540038c4ce5f81179f1c7687b851827a584",
+      "completed_runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 814,
+      "name": "delta_net_htfr",
+      "program_sha256": "d2f18b9060087d151bdd407f4bb339d41c943ec0319b23668929c05778c4a8e9",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 828,
+      "name": "delta_net_aggf_v2",
+      "program_sha256": "978892861788996b13c5ef7072bfe15e41485e1bc25217cfca667a3df07ac59d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 830,
+      "name": "delta_net_hwggm",
+      "program_sha256": "22f641d51ee2c83e070a5c4a4d1206a76223b283e53a3295ebd25728d612e608",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 843,
+      "name": "delta_net_hsigctx",
+      "program_sha256": "8beebf88634cf51fb6b0e3b35f342c5b75cc64341f2f8f40103708576c12ac84",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 865,
+      "name": "delta_net_dynfuse",
+      "program_sha256": "c4a395c2285f3245545a95fc50c1a76be75f19316882e4e80f0441eede1c5e4f",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 879,
+      "name": "delta_net_psfr",
+      "program_sha256": "771d5c670feeb0c70df9d9817ec01b3f72c85fefd4483fff5b10c4e1978a5f80",
+      "completed_runs": 7,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "index": 887,
+      "name": "delta_net_erfg",
+      "program_sha256": "5bcba408a97dd3481d46a726511ff748f800bdddfca29401b5e318be1fb68937",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 890,
+      "name": "delta_net_dmshf",
+      "program_sha256": "b4f6dc85edf28f82fe0624e81aaf95ae527d06366e64e272419e1b11eff52605",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 902,
+      "name": "delta_net_entropy_floor",
+      "program_sha256": "e161833544d18c36987b4541978160da6604e3897cfc8e08226a74d1cabe484a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 908,
+      "name": "delta_net_aft",
+      "program_sha256": "00c192fe4a64811033bd0934fdbbcccc374b1c48066ad96b5963126591f653be",
+      "completed_runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 922,
+      "name": "delta_net_phfg",
+      "program_sha256": "fd8824211f93a162d47cb68bd88bb9a146c4a8cf0b90b8e204b59b5e27ce01dd",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 927,
+      "name": "delta_net_afrc",
+      "program_sha256": "cdbc51b0175ed3b73390fd335c621ab6f38e7211f27baa28de862a5ae9252700",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 933,
+      "name": "delta_net_cagf_rc_pf",
+      "program_sha256": "f19b9e402e3d91fcbdc2f5ebdb556c04b26602a3e62a32f602a15d1afe154eca",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 939,
+      "name": "delta_net_entropy_kl_floor_gate",
+      "program_sha256": "a2dbfcb4f2f4eaf018161c1279fcc56b3a44ed6f017c37445ef9348246630636",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 947,
+      "name": "delta_net_gtmlp",
+      "program_sha256": "336a6ad0133210c4fdcf6f7f95bf311a4fa236befdbf2af3142a997d076dd602",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 948,
+      "name": "delta_net_acfg",
+      "program_sha256": "9b9249aa584228c828aff4c0edb0de4999878d74e5625b3298a4a2f7b8cebdac",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 954,
+      "name": "delta_net_acmg",
+      "program_sha256": "944982086a0c1a70ff992dc377bfecdf235b640eaa49d2d4c91580b00de69837",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 957,
+      "name": "delta_net_psafg",
+      "program_sha256": "ee330e9e2190c7aefa356d6780c820bc16494c7eb5eeb8911759fd843adfed01",
+      "completed_runs": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 965,
+      "name": "delta_net_cagf_br",
+      "program_sha256": "3fc13e8a45e7fc4138ccf3f211c1651ad7e0bdf271f3610741b478fb14141320",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 974,
+      "name": "delta_net_abrgf",
+      "program_sha256": "bcdeb59778d369db113d1e1fa185da32f10762050f02014de9fd1dc701a3f0fe",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 988,
+      "name": "delta_net_pfr",
+      "program_sha256": "a0ea996022cbb1987334b0c598d52862143f655cddf8c51cb12d9a21433303c5",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1017,
+      "name": "delta_net_hybrid_floor_gt",
+      "program_sha256": "a4e6619d848c3a044b91afbc6a99564326ca51a6c9e5399ad3a12ac8fac66c69",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1031,
+      "name": "delta_net_hefth",
+      "program_sha256": "d3211189e71f914c4005378f653e7bf0559435b94df41b7bec21bcf7ffdee5d1",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1041,
+      "name": "delta_net_crdg",
+      "program_sha256": "48c552937a51ad86b59300481795ba2bd6a9d766f4b58c7c9d50f65cbd460158",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1045,
+      "name": "delta_net_aefg_hr",
+      "program_sha256": "3d83473fd95a7acbf6766ae99b54ef8c6d39b085957b5ab33b7408c18be8134d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1051,
+      "name": "delta_net_rggf",
+      "program_sha256": "f57fbefd781a1040f1762ce42df83d776facf1bdf74e45a43a48575a6623f64f",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1081,
+      "name": "delta_net_entropy_cagf_rc_norm",
+      "program_sha256": "95769712260f1da987c5139b257410dfcb1df9d4e81d0f2515480585d3505e72",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1132,
+      "name": "delta_net_hpaf",
+      "program_sha256": "d1688bccaa32d7e60de5bd870a53365ead51c95c953b8d28b4e714bfa844a9ac",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1155,
+      "name": "delta_net_triscale",
+      "program_sha256": "5894f5c19d258dff4976ead226be58cabe8f2ff163dc30bd81028c64c965c527",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1167,
+      "name": "delta_net_headgated",
+      "program_sha256": "a7110317b35bd0813715f948882c258d8febdb08c2433841be8d7609235cd631",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1175,
+      "name": "delta_net_annealed_eklf",
+      "program_sha256": "8502465628e52acb9aff5ff92278195ffa63cd89360c8bfb36a6fc482d8bc3b7",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1195,
+      "name": "delta_net_afbt",
+      "program_sha256": "c389bf967371a9762bb2dd9bd1193ec27d6a439016e31c84ad23fb372c009ff7",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1221,
+      "name": "delta_net_oahmgr",
+      "program_sha256": "4914648a666289b4bf2fdafa1084a4065df68d3bfa4f64afb117b8ec8ce4f08a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1235,
+      "name": "delta_net_mfg",
+      "program_sha256": "5dd7fd063d5f37e7fc22e4639ac82c559d31613747d9df13d4d99d5bfde2f2e1",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1252,
+      "name": "delta_net_adgr",
+      "program_sha256": "0cf729c24611666aafc732b0a27829afc41d4c8cbb178c034aa57a4f7180d1d7",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1283,
+      "name": "delta_net_hybfloor",
+      "program_sha256": "5b3238b839b074b4983f0983c0031fed479bcf43e444b8d9b698111bbdfdb109",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1298,
+      "name": "delta_net_aeoc",
+      "program_sha256": "bd894f9e443bf26fd0089bbb3e5038a4fbd5187612065b36b2534ccfcf4b49a5",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1311,
+      "name": "delta_net_cagf_rc_pf_hybrid",
+      "program_sha256": "8ed3f3858b70f781601dc71c23a4645312404c1ff6f5dab0728d8a6ae02b48fc",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1338,
+      "name": "delta_net_cagf_mf",
+      "program_sha256": "722bb5685a42fa76be7a0735009c8eff85fd1b23ab07eba44c37ef5957fe7b89",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1349,
+      "name": "delta_net_msfr_mn",
+      "program_sha256": "f123e8718439a62fb38a38e919f7487cd719eddb10b5c00a37c925664c01fcea",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1350,
+      "name": "delta_net_hdsr",
+      "program_sha256": "fd539786a1316df385a14ceb96b99431b61ae3f83828d6293f3369a25491b1e5",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1354,
+      "name": "delta_net_omsgf",
+      "program_sha256": "9acc1dd8c77ca4e2b336721434ceb7eb4afe323cf08fb8018dba604f216a98fd",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1360,
+      "name": "delta_net_hafs",
+      "program_sha256": "4e74bdb288844d204b41f13c6ade1d4ac94e49b17428a9ea366ea5486c7f5b5e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1370,
+      "name": "delta_net_tareia",
+      "program_sha256": "15a316f442c3365477da3bde4381a4fa9e69ebac0b595fe5821b73122acfd99d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1393,
+      "name": "delta_net_syngf",
+      "program_sha256": "d96ab556464ea98c7944e34b72a4d33421e069713d6c1e4d54477547df0ab573",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1396,
+      "name": "delta_net_cagf_dpaf_eash",
+      "program_sha256": "870af837f43fd2032ffda8bdbbb104600bb8b196024b7e2826b3c719501f52cc",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1408,
+      "name": "delta_net_efagm",
+      "program_sha256": "c586702e1fe6190abd9933baffdb68b5801946148aaaadb8da57f963a5ec7eb7",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1434,
+      "name": "delta_net_hafmg",
+      "program_sha256": "376c42e93d7596a3473b20232f2b3f666b3a36a51d98600b2722fe388e535797",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1442,
+      "name": "delta_net_udmag",
+      "program_sha256": "8e613f93c3eb9bff150f34b418f1180433733263959a97be1c68ce6a92bb60c9",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1444,
+      "name": "delta_net_hmgapf",
+      "program_sha256": "dd5268d7c13a01e9878c8ef28a79573fcb49ecbbb39a14ea7e3689f1e635470b",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1448,
+      "name": "delta_net_pathgated",
+      "program_sha256": "2c40b7b09f16b75ae1dc90d24461c8c05637ad5f6df0743d9083befe53742d3d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1454,
+      "name": "delta_net_tapr",
+      "program_sha256": "5639a72f1be3bd8df342ac4fb9b234215bc6efe90fc7cff91f7944a10ad7ca2a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1475,
+      "name": "delta_net_len_hgate_mixanneal",
+      "program_sha256": "c7a242b1cb183067e65d59dd5127c207cd17b75fa23784d31b4b96a649d67d9e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1490,
+      "name": "delta_net_ahic",
+      "program_sha256": "0da7cd59cb7366dc72e77e7cb1c0ec8163a8017ddfab040687c253d5910640ea",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1507,
+      "name": "delta_net_tarf",
+      "program_sha256": "e710fcbad020ca414268cfd63c5ddac21e34ad938c4e59fe09e03c60201d5b44",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1529,
+      "name": "delta_net_mafr",
+      "program_sha256": "dd0e62ef7008baa37a32c60db66aa5b3d2d8dc007b2d01ebcaf294104b79388a",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1543,
+      "name": "delta_net_aegf_br",
+      "program_sha256": "9dbd01c41cec03ff0434928316b1efcbb1934159b4ff22db365d90b68522669d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1567,
+      "name": "delta_net_qsr",
+      "program_sha256": "952e06f72f6f5bf7b13abc6e859355beebff1ab5ed647b6cbbc447bdf4ae5767",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1584,
+      "name": "delta_net_aif",
+      "program_sha256": "cc5a6301a7b2ddbe109105214b7cdd1644fd644c6cda631d538cd0983a2a8cf6",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1595,
+      "name": "delta_net_sigf_ptu",
+      "program_sha256": "a5b080a241365b3bd9dba9084ed9558d82c698f5ae872e51bb3990cc77159a4d",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1621,
+      "name": "delta_net_hhgass",
+      "program_sha256": "723df3537e6b1491852db1fe966c65b839860ed714e90ff75216a662e927ff78",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1693,
+      "name": "delta_net_ahm_gate",
+      "program_sha256": "d460870af142c43c82028dfe55d8f7ed7174a6366b6d1de2ccd2f1abbd9bc461",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1730,
+      "name": "delta_net_afef",
+      "program_sha256": "a4b7710b084fb99a5d0a74c482de2cb5424ad938428f22689e4d6d7f01e718a1",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1733,
+      "name": "delta_net_ddfsanr",
+      "program_sha256": "b2fcd4ab98f0b744662dbfef654b374e82319d5186f25297377a5102f0ef0b7e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1735,
+      "name": "delta_net_hhmr",
+      "program_sha256": "648b335c651d5449928c1c1147471333d15a4223f1b5013d1a69b927dd57a32e",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1763,
+      "name": "delta_net_cpaghr",
+      "program_sha256": "8431a58e9cd6437833a02cebfcb79e42f77d07aa0d6023a9ba230f5910984595",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1771,
+      "name": "delta_net_taigr_xs",
+      "program_sha256": "e70adafd02da750f717122d631e963d3070c4d2b118a4854fbadba757fa16f42",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1786,
+      "name": "delta_net_aft_dsi",
+      "program_sha256": "72cfc06261003c2707fc59f0867fff3ce2f675353d4705beb847cb6822ccef33",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "index": 1792,
+      "name": "delta_net_hgm_ident",
+      "program_sha256": "a0f4faeaf821f64915ee841cb6ed416f2b8f45a1f771a7a7038f965f486be969",
+      "completed_runs": 1,
+      "seeds": [
+        1
+      ]
+    }
+  ]
+}

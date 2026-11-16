@@ -1,0 +1,161 @@
+{
+  "sim_sha256": "dc5c3c28ddbf1853",
+  "objective": "agillm-fit-v1",
+  "plugin": "tied_copies",
+  "seed": 2,
+  "ok": true,
+  "steps": 1200,
+  "skipped": 0,
+  "causality": {
+    "max_abs_diff_before_edit": 2.384185791015625e-06,
+    "ok": true
+  },
+  "cfg": {
+    "V": 8192,
+    "d": 256,
+    "H": 4,
+    "L": 12,
+    "ff": 1024,
+    "ctx": 256,
+    "batch": 8,
+    "local_group_size": 4,
+    "router_balance": 0.01,
+    "mask": 8191,
+    "unk": 8190,
+    "sign_lr": 0.707,
+    "lr": 0.001,
+    "warmup": 30,
+    "init_mag": 32,
+    "local_every": 9,
+    "expert_counts": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3
+    ],
+    "loop": {
+      "600b": {
+        "layout": {
+          "kind": "copies",
+          "parents": 80,
+          "tie": true
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 80,
+        "visit_slots": 380,
+        "nominal_visits": 380,
+        "slot_latent_bytes": 601832292352,
+        "unique_latent_bytes": 126701535232,
+        "nominal_latent_bytes": 601832292352,
+        "local_groups": 95
+      },
+      "sim": {
+        "layout": {
+          "kind": "copies",
+          "parents": 3,
+          "tie": true
+        },
+        "split_sign_lr": true,
+        "unique_blocks": 3,
+        "visit_slots": 12,
+        "nominal_visits": 12,
+        "slot_latent_bytes": 17825792,
+        "unique_latent_bytes": 4456448,
+        "nominal_latent_bytes": 17825792,
+        "local_groups": 3
+      }
+    }
+  },
+  "curve": [
+    {
+      "ar": 6.238193035125732,
+      "sat": 6.241253614425659,
+      "nat": 6.271738708019257,
+      "ctx_full": 6.16666042804718,
+      "ctx_256": 6.140782713890076,
+      "ctx_gain": -0.025877714157104492,
+      "step": 150,
+      "tokens": 307200,
+      "flip_pct": 0.0015566760956928992,
+      "skipped": 0,
+      "wall_s": 32.3,
+      "train_recent": {
+        "ar": 6.503213262557983,
+        "sat_fixed": 7.241213966818417,
+        "sat_variable": 6.547335386276245,
+        "nat": 7.116660286398495,
+        "local_denoise": 7.425755828619003
+      }
+    },
+    {
+      "ar": 6.025290429592133,
+      "sat": 6.041656672954559,
+      "nat": 6.076678812503815,
+      "ctx_full": 6.061649560928345,
+      "ctx_256": 5.944294810295105,
+      "ctx_gain": -0.11735475063323975,
+      "step": 300,
+      "tokens": 614400,
+      "flip_pct": 0.007063451832309243,
+      "skipped": 0,
+      "wall_s": 65.7,
+      "train_recent": {
+        "ar": 6.099521207809448,
+        "sat_fixed": 6.2160743236541744,
+        "sat_variable": 6.103114581108093,
+        "nat": 6.309664416313171,
+        "local_denoise": 6.368364214897156
+      }
+    },
+    {
+      "ar": 5.764802396297455,
+      "sat": 5.813184499740601,
+      "nat": 5.978839814662933,
+      "ctx_full": 5.984815359115601,
+      "ctx_256": 5.704627513885498,
+      "ctx_gain": -0.28018784523010254,
+      "step": 600,
+      "tokens": 1228800,
+      "flip_pct": 0.014929449384430237,
+      "skipped": 0,
+      "wall_s": 135.6,
+      "train_recent": {
+        "ar": 5.7822706460952755,
+        "sat_fixed": 5.9770742893219,
+        "sat_variable": 5.962117886543274,
+        "nat": 5.98160240650177,
+        "local_denoise": 6.339930486679077
+      }
+    },
+    {
+      "ar": 5.382568418979645,
+      "sat": 5.553590357303619,
+      "nat": 5.854498505592346,
+      "ctx_full": 5.713384985923767,
+      "ctx_256": 5.279550313949585,
+      "ctx_gain": -0.43383467197418213,
+      "step": 1200,
+      "tokens": 2457600,
+      "flip_pct": 0.031112902911001987,
+      "skipped": 0,
+      "wall_s": 270.0,
+      "train_recent": {
+        "ar": 5.45793845653534,
+        "sat_fixed": 5.662790083885193,
+        "sat_variable": 5.622125339508057,
+        "nat": 5.902893209457398,
+        "local_denoise": 6.200101351737976
+      }
+    }
+  ],
+  "original_record_sha256": "b4b4e1e64f866f216521a047d1aef29f5ad9c878beeb6479834f8fd53db14c4c",
+  "snapshot_note": "Allowlisted classification fields from the observed run record; host, paths and unrelated fields omitted."
+}
