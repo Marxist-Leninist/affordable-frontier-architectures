@@ -1,0 +1,74 @@
+[
+  {
+    "arm": "GGG",
+    "seed": 1,
+    "filename": "GGG_s1.pt",
+    "size": 678214,
+    "sha256": "b6a112fe6b936973c9f446f32816b000310c4ebc3d60e58d756bbb89ce4ce83f",
+    "git_blob_sha1": "2e068efa844fc36c95f064ea76e4d173ad4aea04",
+    "tensor_elements": 165996,
+    "parameters": 165996,
+    "steps": 800,
+    "source": "checkpoints/GGG_s1.pt"
+  },
+  {
+    "arm": "GGG",
+    "seed": 2,
+    "filename": "GGG_s2.pt",
+    "size": 678214,
+    "sha256": "623ef20533dfd77911b665e55c8b8e6a63baab9bb35b4c756901612a7d3a1551",
+    "git_blob_sha1": "c5f6fc9b0d829e8ce2588d04a46009f3404690d2",
+    "tensor_elements": 165996,
+    "parameters": 165996,
+    "steps": 800,
+    "source": "checkpoints/GGG_s2.pt"
+  },
+  {
+    "arm": "GGG",
+    "seed": 3,
+    "filename": "GGG_s3.pt",
+    "size": 678214,
+    "sha256": "9229f5e6e6d5145e6232cd1113fe1bfcfd9f182484b42bee44f6c169f40b4f56",
+    "git_blob_sha1": "f874766f1fe5424d9e740d5552a8de78d1fc9808",
+    "tensor_elements": 165996,
+    "parameters": 165996,
+    "steps": 800,
+    "source": "checkpoints/GGG_s3.pt"
+  },
+  {
+    "arm": "AAAwide",
+    "seed": 1,
+    "filename": "AAAwide_s1.pt",
+    "size": 771746,
+    "sha256": "125f89e049865811460bd824204605eeb1bef315d691facbf75164a357705681",
+    "git_blob_sha1": "5cf4f63e8daf8af413c6aed4cbaffff4a0378cb9",
+    "tensor_elements": 190848,
+    "parameters": 190848,
+    "steps": 800,
+    "source": "retained/AAAwide_s1.pt"
+  },
+  {
+    "arm": "AAAwide",
+    "seed": 2,
+    "filename": "AAAwide_s2.pt",
+    "size": 771746,
+    "sha256": "ed6bfe1a93d610e2f9509ad9fea6b7452abf9017c4b31e97b2469e07d4272834",
+    "git_blob_sha1": "c2a72878c16d912bedbadd26659e8064519d86d1",
+    "tensor_elements": 190848,
+    "parameters": 190848,
+    "steps": 800,
+    "source": "retained/AAAwide_s2.pt"
+  },
+  {
+    "arm": "AAAwide",
+    "seed": 3,
+    "filename": "AAAwide_s3.pt",
+    "size": 771746,
+    "sha256": "a583020d7d2b16fa86109458b0b62feaec14442e9fc34f01eeb834d3742d4a56",
+    "git_blob_sha1": "9807871e6b730ea02e24794757c8d2b5817f5b58",
+    "tensor_elements": 190848,
+    "parameters": 190848,
+    "steps": 800,
+    "source": "retained/AAAwide_s3.pt"
+  }
+]
