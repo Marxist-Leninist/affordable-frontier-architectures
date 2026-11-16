@@ -1,0 +1,54 @@
+Python 3.12.3
+== A baseline (checkpointed blocks, no mod), 16 steps
+rc=0
+== B v1.1 at launch, 16 steps
+rc=0
+== B2 resume, 6 steps
+rc=0
+== S v1 at launch, v1.1 swapped in after step 6, 14 steps
+rc=0
+== P PAUSE after step 5 for ~8 s, then on to 10 steps
+rc=0
+== D kill switch after step 6, 12 steps
+rc=0
+== E two strikes
+{"version": "lctx-v1.1-20261116", "step": 5, "pid": 658692, "at": 1794841560.9620492, "post_crash": false}
+
+/root/claude_lctx_20261116/e2e/e2e_lctx.sh: line 19: 658692 Killed                  $TR --run $D/runE --steps 0 > E1.e2e.log 2>&1
+STILL RUNNING
+{"version": "lctx-v1.1-20261116", "step": 5, "pid": 659102, "at": 1794841569.441763, "post_crash": true}
+
+/root/claude_lctx_20261116/e2e/e2e_lctx.sh: line 19: 659102 Killed                  $TR --run $D/runE --resume --steps 0 > E2.e2e.log 2>&1
+STILL RUNNING
+E3 rc=0
+== F marker deleted: installs again, 4 steps
+rc=0
+== results
+PASS A: no traceback
+PASS B: no traceback
+PASS B2: no traceback
+PASS S: no traceback
+PASS P: no traceback
+PASS D: no traceback
+PASS E3: no traceback
+PASS F: no traceback
+PASS A and B ran 16 steps (16, 16)
+PASS B: v1.1 installed, self-tests passed
+PASS B: updates started after the warm passes
+PASS B: steps 1-2 (rate 1e-6, held) match A within 2e-3 (max diff 0.00e+00)
+INFO B vs A max |loss diff| 0.000e+00; A last 4.0682 B last 4.0682
+PASS B2 status: updates 18, errors {'gate_errors': 0, 'recompute_errors': 0, 'fails': 0, 'update_errors': 0, 'persist_errors': 0}
+INFO B2 summary {"updates": 18, "span_min": 690133.8781824431, "span_p10": 738283.055395263, "span_median": 881718.471837165, "span_p90": 1062325.9633294342, "span_max": 1270890.7960383978, "heads_under_256": 0, "heads_under_2048": 0, "heads": 36, "w_rms": 0.017294118836297157, "w_absmax": 0.0440349318087101} identity [[0, 2.872943878173828e-05, 3.9823436737060547], [1, 1.142546534538269e-05, 3.6531219482421875], [2, 2.1755695343017578e-05, 3.57204532623291], [3, 1.52587890625e-05, 4.201336860656738]]
+PASS B2: state.json carries the v1.1 record with a sha256
+PASS B2: resume loaded the saved state with the checkpoint's update count
+PASS B2: resumed 6 steps
+PASS S: v1 -> v1.1 swapped in process, run completed
+PASS S: v1.1 status clean after the swap
+PASS P: PAUSE pinned the gate (1)
+PASS P: the pin's sha256 is the sha256 of its parameters
+PASS D: kill switch took effect, record says inactive
+PASS E: first strike: the relaunch installs again with a warning
+PASS E: second strike: refused, the trainer still trains
+PASS E: the refusal is in the record
+PASS F: after deleting the marker it installs and trains
+SUMMARY PASS
