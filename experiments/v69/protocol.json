@@ -1,0 +1,120 @@
+{
+  "created_utc": "2026-11-15T14:18:07.864826+00:00",
+  "dataset": "HuggingFaceFW/fineweb-edu",
+  "config": "sample-10BT",
+  "partition": "train held out from historical model training",
+  "rows": [
+    100000,
+    100100
+  ],
+  "fetch": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=HuggingFaceFW%2Ffineweb-edu&config=sample-10BT&split=train&offset=100000&length=100",
+    "sha256": "0220075abea86f8c751e1b4604b28aeb94dcba4f26a35cf30ae89dfa22e3dc4c",
+    "bytes": 420182,
+    "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+    "utc": "2026-11-15T14:16:01.193440+00:00"
+  },
+  "checkpoints": [
+    {
+      "arm": "GGG",
+      "seed": 1,
+      "path": "checkpoints/GGG_s1.pt",
+      "metric_path": "GGG_s1.json",
+      "parameters": 165996,
+      "sha256": "b6a112fe6b936973c9f446f32816b000310c4ebc3d60e58d756bbb89ce4ce83f"
+    },
+    {
+      "arm": "GGG",
+      "seed": 2,
+      "path": "checkpoints/GGG_s2.pt",
+      "metric_path": "GGG_s2.json",
+      "parameters": 165996,
+      "sha256": "623ef20533dfd77911b665e55c8b8e6a63baab9bb35b4c756901612a7d3a1551"
+    },
+    {
+      "arm": "GGG",
+      "seed": 3,
+      "path": "checkpoints/GGG_s3.pt",
+      "metric_path": "GGG_s3.json",
+      "parameters": 165996,
+      "sha256": "9229f5e6e6d5145e6232cd1113fe1bfcfd9f182484b42bee44f6c169f40b4f56"
+    },
+    {
+      "arm": "AAAwide",
+      "seed": 1,
+      "path": "retained/AAAwide_s1.pt",
+      "metric_path": "AAAwide_s1.json",
+      "parameters": 190848,
+      "sha256": "125f89e049865811460bd824204605eeb1bef315d691facbf75164a357705681"
+    },
+    {
+      "arm": "AAAwide",
+      "seed": 2,
+      "path": "retained/AAAwide_s2.pt",
+      "metric_path": "AAAwide_s2.json",
+      "parameters": 190848,
+      "sha256": "ed6bfe1a93d610e2f9509ad9fea6b7452abf9017c4b31e97b2469e07d4272834"
+    },
+    {
+      "arm": "AAAwide",
+      "seed": 3,
+      "path": "retained/AAAwide_s3.pt",
+      "metric_path": "AAAwide_s3.json",
+      "parameters": 190848,
+      "sha256": "a583020d7d2b16fa86109458b0b62feaec14442e9fc34f01eeb834d3742d4a56"
+    }
+  ],
+  "n_windows": 96,
+  "modes": [
+    "clean",
+    "near"
+  ],
+  "primary": "For each arm, mean early[0,16) minus late[64,128) near-minus-clean penalty. Two 97.5% component-bootstrap intervals, Bonferroni two, 10000 draws seed63. Other quality and cross-seed metrics descriptive.",
+  "intervention": "input[256:384] replaced by paired donor bytes; targets raw[385:513] unchanged. Original input raw[0:512].",
+  "training": "zero new fits; fixed historical v43 step800 checkpoints",
+  "tokenizer": "UTF8 byte IDs0..255",
+  "new_source_bytes": 49248,
+  "new_unique_targets": 12288,
+  "freshness": "Exact target exclusion across all available historical wiki splits and listed full FineWeb documents; missing v52 prevents exhaustive history claim. No semantic dedup guarantee.",
+  "limits": "single CPU thread, 300 CPU sec,360 wall sec,6GiB AS; no network,subprocess,training or checkpoint saving",
+  "private_windows_sha256": "0eac74943215cc98ef502acdfb4447cadf9df879f4118c74288d90f842efc940",
+  "protected": {
+    "frontier_research_v8/train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+    "frontier_research_v8/validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+    "frontier_research_v8/test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc",
+    "frontier_research_v26/rows.json": "b3d6b57bed9eaec4c5415319358236e9fed21b8c4b481f39818fd3a918ae725f",
+    "frontier_research_v55_data_recovery/inputs/frontier_research_v42/fineweb_rows.json": "e9aebe1d5a2b5ca4f80f209247a73168ec8fd05a61139bfb92d884f25ff7c579",
+    "frontier_research_v25/rows.json": "012c1865aa57c7a48effd37b401330892aa00402742208b4f767b2846bf4e14f",
+    "frontier_research_v18/rows.json": "71823990d956ae55d5504b9846b62c362890dcdd5ff9d4e2ea4016ecddfedb6f",
+    "frontier_research_v29/rows.json": "69f812db32bb358932709ba4036f437e508e154fe102ce45494b6e12dd27e7c7",
+    "frontier_research_v20/rows.json": "12e3bd59751a7c81f8ffbfe53487f24e4c35e6cbb82e63d8ece48a0deacaa5cb",
+    "frontier_research_v23/rows.json": "424a310f345ac088f5b8f0d9f92280fdaa5c8e6647cbb7d44c8ba5a10cc705e6",
+    "frontier_research_v21/rows.json": "ff175431a7e0a5f0f09ad0e0cecace6558d5291561cabf07f15a699020e7cf43",
+    "frontier_research_v15/rows.json": "a4eeea6d8ea201f9835167aed98ea8e0b849a9e97db30954f0e03c42cfc869c8",
+    "frontier_research_v27/rows.json": "b900b1d4e36c2f889edc754f77f9868ae4b5bd341fe1b96795f3283818af45d5",
+    "frontier_research_v30/rows.json": "b460913f68dc496767a29bcb4f690519118d29ecec8214f18064374477e45969",
+    "frontier_research_v55_data_recovery/inputs/frontier_research_v39_selective_exit/rows.json": "8b25540527cfaa52a6902b7d5f66c1381d2b69c07a6bf88a4b58d0c375d3e329",
+    "frontier_research_v55_data_recovery/inputs/frontier_research_v39_selective_exit/prior1800_rows.json": "3e576f275f934136822ea6b368babe911da9f57f19a757830b314d06a9b7b53d",
+    "frontier_research_v19/rows.json": "b75432526ec96a628317186ecb6b1f6a2a2fa318f84f661a725f6f4d48e3d981",
+    "frontier_research_v28/rows.json": "fcdc25ae2614b7dd40f1ec35174c063765cb24db61606c0ed7901e7f2b138bd0",
+    "frontier_research_v17/rows.json": "9668bb907f6bf03b4bd3a008dae72f7d5f2c50c9ecc219f156f5de626aaadc85",
+    "frontier_research_v16/rows.json": "ae84b3227710ad863493fd635dd566fa18edbd55eff5ed91f15e153c79794b5f",
+    "frontier_research_v31/rows.json": "153e0783e45b242dbc5322e488efe42aa184f930c219601287a290ccbe5be8a9",
+    "frontier_research_v24/rows.json": "09e00531cd35caa751014866a5f99072c3f27937399af1de4b36ea235a20fa4b",
+    "anti_latency_v8/rows.json": "27e084092b0c8f9323364a5410acfb708248d20029e9cf8597c12386383d2fcc",
+    "anti_latency_v9/rows.json": "ca75465c061b2fb469a17d01d03a2b9ee49e7a2434759231817a263d83146359",
+    "frontier_research_v55_data_recovery/inputs/frontier_research_v43_attention_fraction/fineweb_rows.json": "352e81194c45cfabcadc19c744554bd08a4d7f02a518220f39a10673721ae5e0",
+    "frontier_research_v56_prediction_recovery/frozen/models.py": "e5eaed358b51205897b9d22027c2b0f743551c40b4f9d720e0ce13b47a2960d0",
+    "frontier_research_v56_prediction_recovery/frozen/v42_models.py": "e40b3d57c8b584d93821263525799e85b087f857ba44c3abcfef7074ce33b523",
+    "frontier_research_v56_prediction_recovery/frozen/v41_models.py": "42489ef000455596364e748257645c03ec9e09b98ff6aa41b6c72124bb3732ab",
+    "frontier_research_v56_prediction_recovery/frozen/prior_models.py": "d1da070f01d56b94a68833a21fc2cde7299ae9155a2ed3e4450ef4e2bd267bc8",
+    "frontier_research_v56_prediction_recovery/frozen/base_models.py": "c6df1616b49673ca028dd54ae4803c315e896d531802010312266c8810d16972",
+    "frontier_research_v56_prediction_recovery/frozen/source_v38.py": "74a9277d16e296573b69dcb668d2cf6e43baa48d1160587498c9a7b10a34914e",
+    "frontier_research_v56_prediction_recovery/frozen/checkpoints/GGG_s1.pt": "b6a112fe6b936973c9f446f32816b000310c4ebc3d60e58d756bbb89ce4ce83f",
+    "frontier_research_v56_prediction_recovery/frozen/checkpoints/GGG_s2.pt": "623ef20533dfd77911b665e55c8b8e6a63baab9bb35b4c756901612a7d3a1551",
+    "frontier_research_v56_prediction_recovery/frozen/checkpoints/GGG_s3.pt": "9229f5e6e6d5145e6232cd1113fe1bfcfd9f182484b42bee44f6c169f40b4f56",
+    "frontier_research_v56_prediction_recovery/frozen/retained/AAAwide_s1.pt": "125f89e049865811460bd824204605eeb1bef315d691facbf75164a357705681",
+    "frontier_research_v56_prediction_recovery/frozen/retained/AAAwide_s2.pt": "ed6bfe1a93d610e2f9509ad9fea6b7452abf9017c4b31e97b2469e07d4272834",
+    "frontier_research_v56_prediction_recovery/frozen/retained/AAAwide_s3.pt": "a583020d7d2b16fa86109458b0b62feaec14442e9fc34f01eeb834d3742d4a56"
+  }
+}
