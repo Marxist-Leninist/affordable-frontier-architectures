@@ -1,0 +1,68 @@
+{
+  "id": "P044",
+  "frozen_before_scores": true,
+  "sizes": [
+    32768,
+    131072,
+    524288
+  ],
+  "context": 64,
+  "test_targets_per_domain": 4032,
+  "data": {
+    "marlowe.bin": {
+      "bytes": 4096,
+      "sha256": "46954d067c889482d977e438a80dd255bedbbb80f6c6fd597a49e729e9c8a47f"
+    },
+    "shakespeare.bin": {
+      "bytes": 4096,
+      "sha256": "177c6158d303299232639633932bc09c8ed4d03575868187631507d3c94a9143"
+    },
+    "train_524288.bin": {
+      "bytes": 524288,
+      "sha256": "c15dc1d78fffaac37a530da6689b40b06e1a0213e5e36e053a29d76118d9c934"
+    },
+    "train_131072.bin": {
+      "bytes": 131072,
+      "sha256": "3fb439852861206e2ae0633f593821835e14bc52c07a63b2afdb7cf241a42521"
+    },
+    "train_32768.bin": {
+      "bytes": 32768,
+      "sha256": "e2ebbea01aa9238e1256cbe19742dd38cb0268fd25f585d72c64fa4d03a5dead"
+    },
+    "dev.bin": {
+      "bytes": 8192,
+      "sha256": "75c7fba6dd7a4f01b4bfc0a60a294c02e7fb1a41c95c8e49aeaefd26af7e27ea"
+    },
+    "wiki.bin": {
+      "bytes": 4096,
+      "sha256": "7bfba944c0370db6c7e32248d4a1d124002346fecc83190510cc699e75acb2f9"
+    }
+  },
+  "intervals": {
+    "wiki": [
+      970000,
+      974096
+    ],
+    "shakespeare": [
+      1071104,
+      1075200
+    ],
+    "marlowe": [
+      73728,
+      77824
+    ]
+  },
+  "candidates": [
+    "fullCounts",
+    "cappedLRU",
+    "cappedFrequency",
+    "frozenCMix",
+    "conventionalTransformer"
+  ],
+  "counts": "alpha50 order0..8. Capped1024slots/order1..8,256sets4ways;fullunigram. LRU evicts leastrecent in set. Frequency fixed4096saturating16bit counters/order, admits missing key only if frequency strictlygreater thanminimumincumbent;fullcounts sinceadmission. Sharedhash, no testupdates. Sketchcollisions intentional boundedapproximation, scalar frequencies not labels. Budget fixed before scores.",
+  "exposure": "Stats1pass on exact trainprefix, neural2048steps x16x64=2097152targetpresentations per size; not equalFLOPs orpasses. Architecture unchangedP043.",
+  "evaluation": "Frozen weights/counts,exact preceding64bytes,fullCounts/cappedfull256distribution;CMix observedbitpath only, noted cheaperwork. No tuning on test.",
+  "index": "100sqrt(2^(meanFullCountsBPB-meanModelBPB)*geomeanFullCountsLatency/geomeanModelLatency), same-sizeCountsreference; macro geometric across3sizes if allcomplete; memoryreported separately",
+  "gate": "known constant loss low,probabilitynormalization,fullCounts exactP043parity on olddata; no tuning; no promotion absent strongTransformerANDofficialMamba",
+  "scope": "bounded one-seed3point pilot. Source/licensing inheritedP043. CPUstats; existingidleGPUonlyneurals, no spend/prod/publication."
+}

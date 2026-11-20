@@ -1,0 +1,14 @@
+{
+  "mode": "full",
+  "steps": 52,
+  "wall_p50_s": 0.0229859389946796,
+  "cpu_p50_s": 0.023014594000000166,
+  "peak_rss_kib": 332920,
+  "prefill_rss_kib": 332780,
+  "activation_proxy": {
+    "peak_saved_nonparameter_tensor_storage_bytes": 7916548,
+    "resident_detached_kv_bytes": 0,
+    "proxy_saved_plus_cache_bytes": 7916548,
+    "parameter_bytes_excluded": 325504
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "table": {
+    "full": {
+      "bpb": 4.8444675263904395,
+      "delta_vs_full": 0.0,
+      "conditional_cohort_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1": 0.23630401227997724,
+      "quality_index_full100": 100.0,
+      "per_domain_bpb": {
+        "wiki": 3.5871222284105087,
+        "shakespeare": 5.87090539932251,
+        "marlowe": 5.075374951438298
+      },
+      "late_context_half_bpb": 4.910867306290481,
+      "train_step_wall_s_mean": 10.30151201231638,
+      "profile": {
+        "mode": "full",
+        "steps": 52,
+        "wall_p50_s": 0.0229859389946796,
+        "cpu_p50_s": 0.023014594000000166,
+        "peak_rss_kib": 332920,
+        "prefill_rss_kib": 332780,
+        "activation_proxy": {
+          "peak_saved_nonparameter_tensor_storage_bytes": 7916548,
+          "resident_detached_kv_bytes": 0,
+          "proxy_saved_plus_cache_bytes": 7916548,
+          "parameter_bytes_excluded": 325504
+        }
+      }
+    },
+    "exact_recompute": {
+      "bpb": 4.8444675263904395,
+      "delta_vs_full": 0.0,
+      "conditional_cohort_ci95": [
+        0.0,
+        0.0
+      ],
+      "top1": 0.23630401227997724,
+      "quality_index_full100": 100.0,
+      "per_domain_bpb": {
+        "wiki": 3.5871222284105087,
+        "shakespeare": 5.87090539932251,
+        "marlowe": 5.075374951438298
+      },
+      "late_context_half_bpb": 4.910867306290481,
+      "train_step_wall_s_mean": 13.33037329550522,
+      "profile": {
+        "mode": "exact_recompute",
+        "steps": 52,
+        "wall_p50_s": 0.02926440999726765,
+        "cpu_p50_s": 0.029167935999999894,
+        "peak_rss_kib": 332064,
+        "prefill_rss_kib": 332064,
+        "activation_proxy": {
+          "peak_saved_nonparameter_tensor_storage_bytes": 2092036,
+          "resident_detached_kv_bytes": 0,
+          "proxy_saved_plus_cache_bytes": 2092036,
+          "parameter_bytes_excluded": 325504
+        }
+      }
+    },
+    "detach_prefix": {
+      "bpb": 4.838074648821795,
+      "delta_vs_full": -0.00639287756864356,
+      "conditional_cohort_ci95": [
+        -0.01488440235455831,
+        0.003368714940611
+      ],
+      "top1": 0.2375165347069029,
+      "quality_index_full100": 100.47860579028149,
+      "per_domain_bpb": {
+        "wiki": 3.5847471100943427,
+        "shakespeare": 5.896408156743125,
+        "marlowe": 5.033068679627918
+      },
+      "late_context_half_bpb": 4.90692791484651,
+      "train_step_wall_s_mean": 13.845616600262778,
+      "profile": {
+        "mode": "detach_prefix",
+        "steps": 52,
+        "wall_p50_s": 0.028914614988025278,
+        "cpu_p50_s": 0.0288970449999999,
+        "peak_rss_kib": 326176,
+        "prefill_rss_kib": 325408,
+        "activation_proxy": {
+          "peak_saved_nonparameter_tensor_storage_bytes": 2944516,
+          "resident_detached_kv_bytes": 884736,
+          "proxy_saved_plus_cache_bytes": 3829252,
+          "parameter_bytes_excluded": 325504
+        }
+      }
+    }
+  },
+  "q_index_order": [
+    "detach_prefix",
+    "full",
+    "exact_recompute"
+  ],
+  "exact_recompute_checkpoint_tensors_bitexact": true,
+  "real_data_verified": {
+    "train_524288.bin": {
+      "bytes": 524288,
+      "sha256": "c15dc1d78fffaac37a530da6689b40b06e1a0213e5e36e053a29d76118d9c934"
+    },
+    "dev.bin": {
+      "bytes": 8192,
+      "sha256": "75c7fba6dd7a4f01b4bfc0a60a294c02e7fb1a41c95c8e49aeaefd26af7e27ea"
+    },
+    "wiki.bin": {
+      "bytes": 4096,
+      "sha256": "7bfba944c0370db6c7e32248d4a1d124002346fecc83190510cc699e75acb2f9"
+    },
+    "shakespeare.bin": {
+      "bytes": 4096,
+      "sha256": "177c6158d303299232639633932bc09c8ed4d03575868187631507d3c94a9143"
+    },
+    "marlowe.bin": {
+      "bytes": 4096,
+      "sha256": "46954d067c889482d977e438a80dd255bedbbb80f6c6fd597a49e729e9c8a47f"
+    }
+  },
+  "scope": "3 seeds, 460800 train targets each, 12096 historical heldout targets each, width48 and two layers, context up to192, CPU",
+  "proxy_caveat": "saved nonparameter storage bytes at forward loss boundary, exact tensor-storage dedup within graph + detached cache memory; not full peak allocation; fresh process RSS/runtime separate"
+}
