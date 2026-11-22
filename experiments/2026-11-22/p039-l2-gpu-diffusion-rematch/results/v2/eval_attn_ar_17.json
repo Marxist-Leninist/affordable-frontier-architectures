@@ -1,0 +1,94 @@
+{
+ "arm": "attn_ar",
+ "seed": 17,
+ "best_step": 18000,
+ "best_dev_bits": 1.7450072936816,
+ "params": 3290880,
+ "cases": {
+  "n_cases": 4768,
+  "n_docs": 303,
+  "by_domain": {
+   "article": 496,
+   "fiction": 512,
+   "dialogue": 3760
+  }
+ },
+ "checkpoint_sha256": "64f60ccb1569e82c5bd7c8fd1eb23e9fa9530c070d0bc78e73ccf0c8040a7f14",
+ "suffix_bits": {
+  "macro": 1.8226978806701248,
+  "domain": {
+   "article": 1.8512099180971422,
+   "fiction": 1.8318519404856488,
+   "dialogue": 1.7850317834275835
+  }
+ },
+ "gen": {
+  "greedy": {
+   "byte_acc": {
+    "macro": 0.1904376851913394,
+    "domain": {
+     "article": 0.2040070564516129,
+     "fiction": 0.17236328125,
+     "dialogue": 0.19494271787240536
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.15004460994087343,
+    "domain": {
+     "article": 0.15512957025053797,
+     "fiction": 0.13634936027514152,
+     "dialogue": 0.15865489929694074
+    }
+   },
+   "exact": {
+    "macro": 0.0012152777777777778,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0036458333333333334
+    }
+   },
+   "prefix_bytes": {
+    "macro": 1.971175421893668,
+    "domain": {
+     "article": 2.181451612903226,
+     "fiction": 1.599609375,
+     "dialogue": 2.132465277777778
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.20481642363572808,
+    "domain": {
+     "article": 0.22618447580645162,
+     "fiction": 0.196533203125,
+     "dialogue": 0.1917315919757326
+    }
+   },
+   "distinct_bytes": {
+    "macro": 9.976122519020706,
+    "domain": {
+     "article": 9.965725806451612,
+     "fiction": 9.81640625,
+     "dialogue": 10.146235500610503
+    }
+   },
+   "degenerate": {
+    "macro": 0.0028769841269841267,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.00863095238095238
+    }
+   },
+   "short_loop": {
+    "macro": 0.0029637896825396824,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.008891369047619047
+    }
+   }
+  }
+ },
+ "eval_s": 64.88075732102152
+}

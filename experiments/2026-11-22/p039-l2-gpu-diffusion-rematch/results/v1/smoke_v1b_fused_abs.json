@@ -1,0 +1,99 @@
+{
+ "utc": "2026-11-22T03:06:52Z",
+ "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+ "torch": "2.9.1+cu128",
+ "hashes": "ok",
+ "scan_extreme": {
+  "fp64_y": 6.210146956395343e-14,
+  "fp64_h_last": 5.487352260078767e-14,
+  "fp64_grads": [
+   5.356791032770311e-14,
+   2.501137764752665e-13,
+   1.7828972323268913e-11,
+   5.3763656657317864e-14,
+   4.492671987356647e-14
+  ],
+  "fp32_y": 1.9746889215036328e-05
+ },
+ "scan_typical": {
+  "fp64_y": 2.554639214382617e-15,
+  "fp64_h_last": 1.3774417178300663e-15,
+  "fp64_grads": [
+   3.61922247912579e-15,
+   6.909864604314817e-15,
+   1.286246681796155e-14,
+   2.3843768128889673e-15,
+   3.514850648883852e-15
+  ],
+  "fp32_y": 1.2061381203534787e-06
+ },
+ "fused_extreme": {
+  "y": 1.7036556537099984e-07,
+  "h_last": 8.604139816081509e-08,
+  "grads": [
+   1.2671856728476668e-07,
+   9.681105744367315e-08,
+   5.16564148838194e-07,
+   1.5490574523847945e-07,
+   1.2054956291290713e-07
+  ]
+ },
+ "fused_typical": {
+  "y": 1.9658154532016638e-07,
+  "h_last": 1.5468600779945864e-07,
+  "grads": [
+   1.2474348927618472e-07,
+   1.2788083904415342e-07,
+   2.5103972129516154e-07,
+   1.500101742703923e-07,
+   9.627716981463182e-08
+  ]
+ },
+ "scan_impl": "fused",
+ "arms": {
+  "attn_ar": {
+   "params": 3356416,
+   "ms_per_step": 200.71625638054684,
+   "train_peak_mem_bytes": 375932928,
+   "loss_bits_last": 4.670439290919225,
+   "causal_err": 0.0,
+   "cache_parity_err": 2.86102294921875e-06,
+   "cached_greedy_equal": true,
+   "dev_bits_after_smoke": 4.677856367278957,
+   "dev_eval_s": 2.2639938280917704
+  },
+  "attn_diff": {
+   "params": 3356416,
+   "ms_per_step": 253.0202826601453,
+   "train_peak_mem_bytes": 397064704,
+   "loss_bits_last": 5.04273667058268,
+   "decode_ignores_targets": true,
+   "elbo_finite": true,
+   "dev_bits_after_smoke": 4.924191620746453,
+   "dev_eval_s": 18.28688294906169
+  },
+  "hybrid_ar": {
+   "params": 3356760,
+   "ms_per_step": 257.78670858126134,
+   "train_peak_mem_bytes": 681705984,
+   "loss_bits_last": 4.706659525121536,
+   "causal_err": 0.0,
+   "cache_parity_err": 3.337860107421875e-06,
+   "cached_greedy_equal": true,
+   "dev_bits_after_smoke": 4.713378206008311,
+   "dev_eval_s": 2.220524025033228
+  },
+  "hybrid_diff": {
+   "params": 3356760,
+   "ms_per_step": 398.85133215924725,
+   "train_peak_mem_bytes": 966173696,
+   "loss_bits_last": 5.039520251046243,
+   "decode_ignores_targets": true,
+   "elbo_finite": true,
+   "dev_bits_after_smoke": 4.915248341694309,
+   "dev_eval_s": 24.045831453986466
+  }
+ },
+ "param_gap_rel": 0.00010249027534131645,
+ "ok": true
+}

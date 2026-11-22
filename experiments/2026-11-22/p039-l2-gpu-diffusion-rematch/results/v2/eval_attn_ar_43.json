@@ -1,0 +1,94 @@
+{
+ "arm": "attn_ar",
+ "seed": 43,
+ "best_step": 18000,
+ "best_dev_bits": 1.7484510989610993,
+ "params": 3290880,
+ "cases": {
+  "n_cases": 4768,
+  "n_docs": 303,
+  "by_domain": {
+   "article": 496,
+   "fiction": 512,
+   "dialogue": 3760
+  }
+ },
+ "checkpoint_sha256": "1c7e385c3556888fc429dd823823f03f05384386ecd9add56e97cc6dce78ab5c",
+ "suffix_bits": {
+  "macro": 1.822738320128818,
+  "domain": {
+   "article": 1.8528816388739693,
+   "fiction": 1.8279838397284038,
+   "dialogue": 1.7873494817840814
+  }
+ },
+ "gen": {
+  "greedy": {
+   "byte_acc": {
+    "macro": 0.19075167329939882,
+    "domain": {
+     "article": 0.20551915322580644,
+     "fiction": 0.1754150390625,
+     "dialogue": 0.19132082760989008
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.150580362517882,
+    "domain": {
+     "article": 0.1567224917779353,
+     "fiction": 0.14037338800522395,
+     "dialogue": 0.15464520777048682
+    }
+   },
+   "exact": {
+    "macro": 0.0006944444444444445,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0020833333333333333
+    }
+   },
+   "prefix_bytes": {
+    "macro": 1.9923269386676645,
+    "domain": {
+     "article": 2.213709677419355,
+     "fiction": 1.6640625,
+     "dialogue": 2.0992086385836384
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.21186720828338143,
+    "domain": {
+     "article": 0.22845262096774194,
+     "fiction": 0.2100830078125,
+     "dialogue": 0.19706599606990233
+    }
+   },
+   "distinct_bytes": {
+    "macro": 10.184583055366826,
+    "domain": {
+     "article": 10.40524193548387,
+     "fiction": 9.904296875,
+     "dialogue": 10.244210355616605
+    }
+   },
+   "degenerate": {
+    "macro": 0.002914186507936508,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.008742559523809524
+    }
+   },
+   "short_loop": {
+    "macro": 0.0034002176139272915,
+    "domain": {
+     "article": 0.0020161290322580645,
+     "fiction": 0.0,
+     "dialogue": 0.00818452380952381
+    }
+   }
+  }
+ },
+ "eval_s": 65.15154035494197
+}

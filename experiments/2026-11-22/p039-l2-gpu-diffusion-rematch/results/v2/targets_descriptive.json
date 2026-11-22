@@ -1,0 +1,66 @@
+{
+ "byte_acc": {
+  "macro": 1.0,
+  "domain": {
+   "article": 1.0,
+   "fiction": 1.0,
+   "dialogue": 1.0
+  }
+ },
+ "nonspace_acc": {
+  "macro": 1.0,
+  "domain": {
+   "article": 1.0,
+   "fiction": 1.0,
+   "dialogue": 1.0
+  }
+ },
+ "exact": {
+  "macro": 1.0,
+  "domain": {
+   "article": 1.0,
+   "fiction": 1.0,
+   "dialogue": 1.0
+  }
+ },
+ "prefix_bytes": {
+  "macro": 16.0,
+  "domain": {
+   "article": 16.0,
+   "fiction": 16.0,
+   "dialogue": 16.0
+  }
+ },
+ "space_pred_rate": {
+  "macro": 0.1755240128957997,
+  "domain": {
+   "article": 0.18800403225806453,
+   "fiction": 0.1748046875,
+   "dialogue": 0.16376331892933454
+  }
+ },
+ "distinct_bytes": {
+  "macro": 10.939013797395853,
+  "domain": {
+   "article": 10.897177419354838,
+   "fiction": 10.98828125,
+   "dialogue": 10.931582722832724
+  }
+ },
+ "degenerate": {
+  "macro": 0.00034722222222222224,
+  "domain": {
+   "article": 0.0,
+   "fiction": 0.0,
+   "dialogue": 0.0010416666666666667
+  }
+ },
+ "short_loop": {
+  "macro": 0.0007192460317460317,
+  "domain": {
+   "article": 0.0,
+   "fiction": 0.0,
+   "dialogue": 0.002157738095238095
+  }
+ }
+}

@@ -1,0 +1,21 @@
+[2026-11-22T03:22:54Z] pipeline start pid 724539 out=runs_v2 diff_loss=elbo
+[2026-11-22T03:22:54Z] launched hybrid_diff 17 pid 724548 (free before: 2823 MiB)
+[2026-11-22T03:23:19Z] launched hybrid_ar 17 pid 724620 (free before: 1763 MiB)
+[2026-11-22T03:23:44Z] launched attn_diff 17 pid 724663 (free before: 963 MiB)
+[2026-11-22T03:59:15Z] launched attn_ar 17 pid 727510 (free before: 1889 MiB)
+[2026-11-22T03:59:40Z] launched hybrid_ar 43 pid 727544 (free before: 1369 MiB)
+[2026-11-22T04:02:05Z] launched hybrid_diff 43 pid 727748 (free before: 2037 MiB)
+[2026-11-22T04:02:30Z] launched attn_diff 43 pid 727823 (free before: 977 MiB)
+[2026-11-22T04:09:56Z] attn_ar_17 is neither running nor done: (re)launch 2
+[2026-11-22T04:09:56Z] launched attn_ar 17 pid 728327 (free before: 977 MiB)
+[2026-11-22T04:12:21Z] attn_ar_17 is neither running nor done: (re)launch 3
+[2026-11-22T04:12:21Z] launched attn_ar 17 pid 728508 (free before: 977 MiB)
+[2026-11-22T05:15:50Z] launched attn_ar 43 pid 731357 (free before: 1235 MiB)
+[2026-11-22T06:20:16Z] v2 training phase over
+[2026-11-22T06:53:04Z] v2 evaluate rc=0
+[2026-11-22T07:09:36Z] v2 p045 rc=0
+[2026-11-22T07:11:33Z] v1 evaluate rc=0
+[2026-11-22T07:18:56Z] v1 p045 rc=0
+[2026-11-22T07:32:59Z] v2 timing rc=0
+[2026-11-22T07:33:00Z] v2 summary rc=0
+[2026-11-22T07:33:00Z] pipeline done

@@ -1,0 +1,434 @@
+{
+ "arm": "attn_diff",
+ "seed": 17,
+ "best_step": 20000,
+ "best_dev_bits": 2.556653650913868,
+ "params": 3290880,
+ "cases": {
+  "n_cases": 4768,
+  "n_docs": 303,
+  "by_domain": {
+   "article": 496,
+   "fiction": 512,
+   "dialogue": 3760
+  }
+ },
+ "checkpoint_sha256": "414bfc869e52ccf1120211719759aeed7037bac517404739ce63ccfd090f6f4d",
+ "elbo_K": 32,
+ "elbo_mask_seed": 12345,
+ "suffix_bits_elbo": {
+  "macro": 2.595738535353984,
+  "domain": {
+   "article": 2.6243417244173126,
+   "fiction": 2.555661659277499,
+   "dialogue": 2.60721222236714
+  }
+ },
+ "suffix_bits_l2r": {
+  "macro": 2.5451175691820973,
+  "domain": {
+   "article": 2.6010912752920583,
+   "fiction": 2.487310552969575,
+   "dialogue": 2.546950879284659
+  }
+ },
+ "gen": {
+  "conf1": {
+   "byte_acc": {
+    "macro": 0.20635780766892156,
+    "domain": {
+     "article": 0.21774193548387097,
+     "fiction": 0.2041015625,
+     "dialogue": 0.19722992502289377
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.04970028593808198,
+    "domain": {
+     "article": 0.04578413298171363,
+     "fiction": 0.05311058570335913,
+     "dialogue": 0.05020613912917314
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.7869582176336211,
+    "domain": {
+     "article": 0.7923387096774194,
+     "fiction": 0.76171875,
+     "dialogue": 0.8068171932234434
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.8423460569425161,
+    "domain": {
+     "article": 0.8723538306451613,
+     "fiction": 0.8046875,
+     "dialogue": 0.849996840182387
+    }
+   },
+   "distinct_bytes": {
+    "macro": 3.045314336014941,
+    "domain": {
+     "article": 2.844758064516129,
+     "fiction": 3.23046875,
+     "dialogue": 3.0607161935286937
+    }
+   },
+   "degenerate": {
+    "macro": 0.9262038832023712,
+    "domain": {
+     "article": 0.9818548387096774,
+     "fiction": 0.849609375,
+     "dialogue": 0.9471474358974359
+    }
+   },
+   "short_loop": {
+    "macro": 0.7915065477011041,
+    "domain": {
+     "article": 0.8346774193548387,
+     "fiction": 0.73828125,
+     "dialogue": 0.8015609737484737
+    }
+   }
+  },
+  "conf2": {
+   "byte_acc": {
+    "macro": 0.19390203915358276,
+    "domain": {
+     "article": 0.19821068548387097,
+     "fiction": 0.1947021484375,
+     "dialogue": 0.18879328353937733
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.05758031216688769,
+    "domain": {
+     "article": 0.052011586084166735,
+     "fiction": 0.06108651277108308,
+     "dialogue": 0.05964283764541324
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.8150230968628146,
+    "domain": {
+     "article": 0.8266129032258065,
+     "fiction": 0.77734375,
+     "dialogue": 0.8411126373626373
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.725283049717746,
+    "domain": {
+     "article": 0.7397933467741935,
+     "fiction": 0.7000732421875,
+     "dialogue": 0.7359825601915445
+    }
+   },
+   "distinct_bytes": {
+    "macro": 4.558722380796473,
+    "domain": {
+     "article": 4.514112903225806,
+     "fiction": 4.736328125,
+     "dialogue": 4.425726114163613
+    }
+   },
+   "degenerate": {
+    "macro": 0.5647951540693475,
+    "domain": {
+     "article": 0.6028225806451613,
+     "fiction": 0.53125,
+     "dialogue": 0.5603128815628815
+    }
+   },
+   "short_loop": {
+    "macro": 0.3144660909580264,
+    "domain": {
+     "article": 0.2782258064516129,
+     "fiction": 0.3203125,
+     "dialogue": 0.34485996642246647
+    }
+   }
+  },
+  "conf4": {
+   "byte_acc": {
+    "macro": 0.16022966937832742,
+    "domain": {
+     "article": 0.15498991935483872,
+     "fiction": 0.1634521484375,
+     "dialogue": 0.1622469403426435
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.06949949441398247,
+    "domain": {
+     "article": 0.06240573942186845,
+     "fiction": 0.07281104312354314,
+     "dialogue": 0.07328170069653582
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.8245390525506453,
+    "domain": {
+     "article": 0.8266129032258065,
+     "fiction": 0.779296875,
+     "dialogue": 0.8677073794261294
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.4885451293882808,
+    "domain": {
+     "article": 0.4850050403225806,
+     "fiction": 0.4715576171875,
+     "dialogue": 0.5090727306547619
+    }
+   },
+   "distinct_bytes": {
+    "macro": 7.27900943609109,
+    "domain": {
+     "article": 7.417338709677419,
+     "fiction": 7.45703125,
+     "dialogue": 6.962658348595848
+    }
+   },
+   "degenerate": {
+    "macro": 0.15495469863917447,
+    "domain": {
+     "article": 0.08870967741935484,
+     "fiction": 0.1484375,
+     "dialogue": 0.22771691849816858
+    }
+   },
+   "short_loop": {
+    "macro": 0.10575511807114629,
+    "domain": {
+     "article": 0.04233870967741935,
+     "fiction": 0.107421875,
+     "dialogue": 0.16750476953601953
+    }
+   }
+  },
+  "conf8": {
+   "byte_acc": {
+    "macro": 0.1422508548239395,
+    "domain": {
+     "article": 0.13873487903225806,
+     "fiction": 0.140869140625,
+     "dialogue": 0.14714854481456047
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.0840711134984492,
+    "domain": {
+     "article": 0.08094695682901326,
+     "fiction": 0.08317288993558522,
+     "dialogue": 0.08809349373074911
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.8818161090514921,
+    "domain": {
+     "article": 0.8870967741935484,
+     "fiction": 0.841796875,
+     "dialogue": 0.916554677960928
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.31852488084878455,
+    "domain": {
+     "article": 0.3048135080645161,
+     "fiction": 0.3095703125,
+     "dialogue": 0.3411908219818376
+    }
+   },
+   "distinct_bytes": {
+    "macro": 8.972730319355824,
+    "domain": {
+     "article": 9.193548387096774,
+     "fiction": 9.103515625,
+     "dialogue": 8.621126945970698
+    }
+   },
+   "degenerate": {
+    "macro": 0.07201595055929734,
+    "domain": {
+     "article": 0.020161290322580645,
+     "fiction": 0.06640625,
+     "dialogue": 0.12948031135531138
+    }
+   },
+   "short_loop": {
+    "macro": 0.062141706299972434,
+    "domain": {
+     "article": 0.024193548387096774,
+     "fiction": 0.0546875,
+     "dialogue": 0.10754407051282051
+    }
+   }
+  },
+  "conf16": {
+   "byte_acc": {
+    "macro": 0.13243171338606696,
+    "domain": {
+     "article": 0.1319304435483871,
+     "fiction": 0.1300048828125,
+     "dialogue": 0.1353598137973138
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.08914262695022153,
+    "domain": {
+     "article": 0.08393839863093894,
+     "fiction": 0.09161687108464454,
+     "dialogue": 0.0918726111350811
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.941441568157798,
+    "domain": {
+     "article": 0.907258064516129,
+     "fiction": 0.916015625,
+     "dialogue": 1.001051014957265
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.24391092395297911,
+    "domain": {
+     "article": 0.25466229838709675,
+     "fiction": 0.2244873046875,
+     "dialogue": 0.2525831687843406
+    }
+   },
+   "distinct_bytes": {
+    "macro": 9.91488346741371,
+    "domain": {
+     "article": 9.862903225806452,
+     "fiction": 10.0,
+     "dialogue": 9.881747176434677
+    }
+   },
+   "degenerate": {
+    "macro": 0.018450918294668297,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.05535275488400489
+    }
+   },
+   "short_loop": {
+    "macro": 0.020804935618443682,
+    "domain": {
+     "article": 0.012096774193548387,
+     "fiction": 0.0,
+     "dialogue": 0.05031803266178266
+    }
+   }
+  },
+  "l2r16": {
+   "byte_acc": {
+    "macro": 0.13002041278077694,
+    "domain": {
+     "article": 0.13218245967741934,
+     "fiction": 0.1248779296875,
+     "dialogue": 0.13300084897741146
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.09030493861662475,
+    "domain": {
+     "article": 0.08935166535972987,
+     "fiction": 0.08651329952599483,
+     "dialogue": 0.09504985096414956
+    }
+   },
+   "exact": {
+    "macro": 0.0,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.0,
+     "dialogue": 0.0
+    }
+   },
+   "prefix_bytes": {
+    "macro": 0.9732979638902016,
+    "domain": {
+     "article": 0.9818548387096774,
+     "fiction": 0.919921875,
+     "dialogue": 1.0181171779609277
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.21805108405143056,
+    "domain": {
+     "article": 0.23072076612903225,
+     "fiction": 0.2064208984375,
+     "dialogue": 0.21701158758775943
+    }
+   },
+   "distinct_bytes": {
+    "macro": 10.059765500889492,
+    "domain": {
+     "article": 10.050403225806452,
+     "fiction": 10.16796875,
+     "dialogue": 9.960924526862025
+    }
+   },
+   "degenerate": {
+    "macro": 0.011748702686202685,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.00390625,
+     "dialogue": 0.031339858058608054
+    }
+   },
+   "short_loop": {
+    "macro": 0.012061122681082358,
+    "domain": {
+     "article": 0.0020161290322580645,
+     "fiction": 0.00390625,
+     "dialogue": 0.030260989010989007
+    }
+   }
+  }
+ },
+ "eval_s": 379.19540630292613
+}

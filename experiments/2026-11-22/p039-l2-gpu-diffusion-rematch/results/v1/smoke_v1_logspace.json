@@ -1,0 +1,76 @@
+{
+ "utc": "2026-11-22T02:59:50Z",
+ "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+ "torch": "2.9.1+cu128",
+ "hashes": "ok",
+ "scan_extreme": {
+  "fp64_y": 6.210146956395343e-14,
+  "fp64_h_last": 5.487352260078767e-14,
+  "fp64_grads": [
+   5.703383023745748e-14,
+   2.3875526079012046e-13,
+   2.5081791235812267e-11,
+   7.158391119110506e-14,
+   4.914586187699483e-14
+  ],
+  "fp32_y": 1.9746889215036328e-05
+ },
+ "scan_typical": {
+  "fp64_y": 2.554639214382617e-15,
+  "fp64_h_last": 1.3774417178300663e-15,
+  "fp64_grads": [
+   2.108658598709801e-15,
+   9.626739321053356e-15,
+   8.951926730206004e-15,
+   2.734282716120395e-15,
+   3.668744486581547e-15
+  ],
+  "fp32_y": 1.2061381203534787e-06
+ },
+ "arms": {
+  "attn_ar": {
+   "params": 3356416,
+   "ms_per_step": 38.17228048108518,
+   "train_peak_mem_bytes": 375109120,
+   "loss_bits_last": 4.670439290919225,
+   "causal_err": 0.0,
+   "cache_parity_err": 2.86102294921875e-06,
+   "cached_greedy_equal": true,
+   "dev_bits_after_smoke": 4.677856370834916,
+   "dev_eval_s": 0.44036671705543995
+  },
+  "attn_diff": {
+   "params": 3356416,
+   "ms_per_step": 44.24180109985173,
+   "train_peak_mem_bytes": 396658688,
+   "loss_bits_last": 5.04273667058268,
+   "decode_ignores_targets": true,
+   "elbo_finite": true,
+   "dev_bits_after_smoke": 4.924191620746453,
+   "dev_eval_s": 3.584264831035398
+  },
+  "hybrid_ar": {
+   "params": 3356760,
+   "ms_per_step": 196.23535320162773,
+   "train_peak_mem_bytes": 920906240,
+   "loss_bits_last": 4.706659525121536,
+   "causal_err": 0.0,
+   "cache_parity_err": 2.86102294921875e-06,
+   "cached_greedy_equal": true,
+   "dev_bits_after_smoke": 4.713378209931155,
+   "dev_eval_s": 1.5711560259805992
+  },
+  "hybrid_diff": {
+   "params": 3356760,
+   "ms_per_step": 367.14187391800806,
+   "train_peak_mem_bytes": 1031641088,
+   "loss_bits_last": 5.039520251046243,
+   "decode_ignores_targets": true,
+   "elbo_finite": true,
+   "dev_bits_after_smoke": 4.915248341760473,
+   "dev_eval_s": 23.145593147026375
+  }
+ },
+ "param_gap_rel": 0.00010249027534131645,
+ "ok": true
+}

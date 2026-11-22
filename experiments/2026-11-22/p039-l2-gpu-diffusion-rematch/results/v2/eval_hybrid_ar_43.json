@@ -1,0 +1,94 @@
+{
+ "arm": "hybrid_ar",
+ "seed": 43,
+ "best_step": 20000,
+ "best_dev_bits": 1.724557937556793,
+ "params": 3291224,
+ "cases": {
+  "n_cases": 4768,
+  "n_docs": 303,
+  "by_domain": {
+   "article": 496,
+   "fiction": 512,
+   "dialogue": 3760
+  }
+ },
+ "checkpoint_sha256": "0a6ec3f4fcd73d45cbc396d54aa7b5eaa9bf24c6bd943f8e1874d0a49716e9d8",
+ "suffix_bits": {
+  "macro": 1.7966600382157596,
+  "domain": {
+   "article": 1.8386891767562878,
+   "fiction": 1.8103400656254962,
+   "dialogue": 1.7409508722654947
+  }
+ },
+ "gen": {
+  "greedy": {
+   "byte_acc": {
+    "macro": 0.19308099211939309,
+    "domain": {
+     "article": 0.21081149193548387,
+     "fiction": 0.1683349609375,
+     "dialogue": 0.20009652348519538
+    }
+   },
+   "nonspace_acc": {
+    "macro": 0.15329074715793464,
+    "domain": {
+     "article": 0.16235847485847488,
+     "fiction": 0.13381888293997668,
+     "dialogue": 0.16369488367535232
+    }
+   },
+   "exact": {
+    "macro": 0.002819780465949821,
+    "domain": {
+     "article": 0.004032258064516129,
+     "fiction": 0.0,
+     "dialogue": 0.004427083333333333
+    }
+   },
+   "prefix_bytes": {
+    "macro": 2.0387896733083224,
+    "domain": {
+     "article": 2.223790322580645,
+     "fiction": 1.673828125,
+     "dialogue": 2.218750572344322
+    }
+   },
+   "space_pred_rate": {
+    "macro": 0.20939405891207805,
+    "domain": {
+     "article": 0.2279485887096774,
+     "fiction": 0.2021484375,
+     "dialogue": 0.19808515052655679
+    }
+   },
+   "distinct_bytes": {
+    "macro": 10.171851329767156,
+    "domain": {
+     "article": 10.17741935483871,
+     "fiction": 10.052734375,
+     "dialogue": 10.285400259462758
+    }
+   },
+   "degenerate": {
+    "macro": 0.0024987599206349204,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.001953125,
+     "dialogue": 0.005543154761904761
+    }
+   },
+   "short_loop": {
+    "macro": 0.0026723710317460314,
+    "domain": {
+     "article": 0.0,
+     "fiction": 0.001953125,
+     "dialogue": 0.006063988095238095
+    }
+   }
+  }
+ },
+ "eval_s": 65.10877953702584
+}
