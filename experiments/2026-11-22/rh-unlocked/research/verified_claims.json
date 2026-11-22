@@ -1,0 +1,2172 @@
+{
+ "D-lean-artifact": {
+  "summary": "Lens D: the formal artifact. Primary sources are Alpöge's remark.pdf, the Lean community joint statement, Sutherland's MIT verification page, and the files in leanprover-community/riemann-hypothesis. Third-party build reports are rated medium.\n\n1. **Distribution and licence.** The proof is a source tarball in 14 parts at alpo.ge: 239,275,554 bytes, 175,187 .lean files, 17,374,215 lines. It was published without a licence. Community mirrors exist \"for verification only\".\n2. **Versions.** Lean v4.33.1 and Mathlib commit 0df444a3. The Lake package is named \"tree\" and has Mathlib as its only dependency.\n3. **Statement.** The headline is `theorem riemannHypothesis : RiemannHypothesis`, using Mathlib's own definition.\n4. **Dirichlet GRH.** The same artifact also proves GRH for Dirichlet L-functions (all moduli N ≥ 1, all characters), in four further theorems. con-leche and con-ron compare runs and nanoda accepted them on Sutherland's page. This is primary evidence that Dirichlet GRH now has a machine-checked proof. The joint statement certifies RH only. Dedekind, Hecke and automorphic L-functions are not covered.\n5. **Axioms.** Only propext, Classical.choice and Quot.sound.\n6. **Joint statement (21 Nov).** Endorsed by the Lean FRO and the Mathlib Initiative. It names comparator, con-leche --compare, Lean's kernel, con-ron and unnamed third-party checkers. It does not mention Claude, GRH or Clay.\n7. **Lean kernel nuance.** The Lean kernel's acceptance is shown by per-module replays of all 175,187 modules. Sutherland's single-threaded full-export Lean kernel runs were still running at his last update (22 Nov 04:35 UTC).\n8. **Build cost.** About 2 to 13.4 hours on 32 to 512 cores. 256 GB nodes ran out of memory, and the recommended spec is 32 cores, 128 GB RAM and 150 GB disk.\n9. **Caches and exports.** An untrusted community .olean cache is about 4.94 GB to download and about 96 to 99 GB unpacked. Sutherland publishes the export: 7.7 GB compressed, 61.57 GB unpacked.\n10. **How the proof was found.** The remark gives a timeline compiled by Claude, from 6 Oct to 16 Nov 2026. It gives no token counts, model name or compute.\n11. **Human-readable proof.** None exists. Alpöge says an informal write-up ran past 250,000 pages and he will write the proof up properly.\n\nPractical answers:\n- **(a) Using the theorem downstream: yes on a 32 GB Linux box; inferred.** Use the community cache and raise vm.max_map_count. Loading Main takes about 18.5 to 20.3 GiB RSS and needs about 110 GB of disk.\n- **(a) On Windows:** tested only through WSL2 with 24 GB RAM and 16 GB swap, so in practice a laptop with at least 32 GB; native Windows is untested. A 16 GB box is untested.\n- **(b) Re-checking the full export on 16 to 32 GB: no published route.** The smallest reported peaks are about 50 GB for con-leche and 78 GB for nanoda. What does fit, inferred: a statement-side audit, hash cross-checks, or a multi-day per-module kernel replay.\n\nNot checked: secondary coverage (Nature, DataCamp) mentions a separate human-written RH proof announced about the same time.",
+  "claims": [
+   {
+    "id": "D01",
+    "statement": "Alpöge published the proof only as a Lean source tarball in 14 parts: https://alpo.ge/lean.tar.gz.part01 … part14. Joined, lean.tar.gz is 239,275,554 bytes, sha256 9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc. The author has no git repo. The 4-page announcement is https://alpo.ge/remark.pdf (20 Nov 2026).",
+    "needs": "not_applicable",
+    "source_url": "https://alpo.ge/remark.pdf",
+    "source_title": "Alpöge, remark.pdf (footnote 1); sizes and hash from MIT page",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Size and hash confirmed by math.mit.edu/~drew/grh/, Infatoshi receipts and lilting.ch."
+   },
+   {
+    "id": "D02",
+    "statement": "Licence: the submission 'belongs to its author and was published without a license'. Community mirror: github.com/leanprover-community/riemann-hypothesis, whose first commit 40e56bab is the archive's lean/ directory as published, plus Comparator setup and a build cache. MIT mirror: github.com/Deicyde/riemann-hypothesis, byte-identical apart from added Comparator files.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis",
+    "source_title": "leanprover-community/riemann-hypothesis README",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Mirrors are 'for verification only'. With no licence, reuse rights are unclear (inferred)."
+   },
+   {
+    "id": "D03",
+    "statement": "Toolchain:\n- Lean v4.33.1, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6.\n- Mathlib tag v4.33.1 = commit 0df444a360eaa60ab8c11dca51a86af692955474, its only [[require]]. It differs from v4.33.0 only in lean-toolchain.\n- lakefile.toml: name = \"tree\", srcDir = \"src\", maxHeartbeats 4000000, --tstack=400000.\n- Comparator judge: Lean v4.36.0. Exporter: lean4export v4.33.0 (15f6055e).",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/lakefile.toml",
+    "source_title": "lakefile.toml; MIT verification page; verification/NOTES.md",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Libraries: BuildAid, CompanionTheory, Development, Formalism, GroundTheory, GroundTheoryFields, Lemmata, PositivityTheory, ReciprocityTheory, Supplements, and Main (roots Statements, Main). NOTES: kernel fixes from 4.32.2/4.33.0 are included; runtime fixes #15241, #15289 and #15288 from 4.34.1 are not."
+   },
+   {
+    "id": "D04",
+    "statement": "Mathlib's definition at v4.33.1, Mathlib/NumberTheory/LSeries/RiemannZeta.lean: /-- A formal statement of the **Riemann hypothesis** – constructing a term of this type is worth a million dollars. -/ @[wikidata Q205966] def RiemannHypothesis : Prop := ∀ (s : ℂ) (_ : riemannZeta s = 0) (_ : ¬∃ n : ℕ, s = -2 * (n + 1)) (_ : s ≠ 1), s.re = 1 / 2",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.1/Mathlib/NumberTheory/LSeries/RiemannZeta.lean",
+    "source_title": "Mathlib4 source, tag v4.33.1",
+    "year": "2026",
+    "before": "Unproved Prop in Mathlib",
+    "confidence": "high",
+    "notes": "The docs page renders it as: ∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * (↑n + 1)) → s ≠ 1 → s.re = 1 / 2."
+   },
+   {
+    "id": "D05",
+    "statement": "Headline theorem in Main.lean: theorem riemannHypothesis : RiemannHypothesis, using Mathlib's definition only. Companion: theorem riemannZeta_eq_zero_re : RiemannZetaZerosOnLine, where RiemannZetaZerosOnLine := ∀ s : ℂ, riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * ((n : ℂ) + 1)) → s ≠ 1 → s.re = 1 / 2. The community challenge file src/Challenge.lean has only `import Mathlib`.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/src/Challenge.lean",
+    "source_title": "Challenge.lean (Comparator challenge)",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Challenge.lean is the community's statement file. Comparator checks that the solution's Main proves these same statements."
+   },
+   {
+    "id": "D06",
+    "statement": "The artifact also proves GRH for Dirichlet L-functions, for all N ≥ 1 with [NeZero N] and all χ : DirichletCharacter ℂ N:\n- LFunction_ne_zero_of_half_lt_re: 1/2 < s.re → (χ ≠ 1 ∨ s ≠ 1) → DirichletCharacter.LFunction χ s ≠ 0.\n- LFunction_eq_zero_re: 0 < s.re → s.re < 1 → LFunction χ s = 0 → s.re = 1/2.\n- LFunction_eq_zero_re_of_isPrimitive: the same for primitive χ.\ncon-leche --compare and con-ron --compare marked all five theorems 'justified', and nanoda accepted the export.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Sutherland, RH Lean proof: verification files",
+    "year": "2026",
+    "before": "GRH for Dirichlet L: open",
+    "confidence": "high",
+    "notes": "Primary evidence that Dirichlet GRH has a machine-checked proof. The joint statement certifies RH only. Dedekind, Hecke and automorphic L-functions are not included. Alpöge only 'expects' ERH."
+   },
+   {
+    "id": "D07",
+    "statement": "#print axioms for all five Main theorems gives only propext, Classical.choice and Quot.sound. The archive declares no axiom.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "MIT page; also mrubinst, hhh2210, aapolipponen",
+    "year": "2026",
+    "confidence": "high"
+   },
+   {
+    "id": "D08",
+    "statement": "Source size:\n- 175,187 .lean files; 17,374,215 lines (15,531,759 non-blank); 1,030,531,854 bytes; no comments.\n- 818,755 theorem/lemma and 242,067 def/abbrev/structure/class/instance/inductive declarations.\n- Largest library, Development: 141,928 files, 12,232,663 lines.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md",
+    "source_title": "verification/NOTES.md",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "lilting.ch and hhh2210 report the same files, lines and bytes."
+   },
+   {
+    "id": "D09",
+    "statement": "Compiled scale:\n- 1,468,418 declarations in the solution (con-leche count); 51,692 in the challenge.\n- riemannHypothesis depends on 1,478,219 constants.\n- It uses 146,437 of 175,187 project modules (83.6%) plus 5,081 Mathlib modules; 28,750 modules are imported but unused.\n- Import DAG: 753,569 edges, 0 cycles, longest chain 203 modules.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/aapolipponen/rh-lean-check-lumi",
+    "source_title": "rh-lean-check-lumi; MIT page; lilting.ch",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Counts depend on scope. nanoda reports 1,484,729 declarations for an export of all five theorems."
+   },
+   {
+    "id": "D10",
+    "statement": "Static scan:\n- No axiom, sorry, admit, native_decide, implemented_by, extern, unsafe, opaque, debug.* option or skipKernelTC.\n- Metaprogramming is present: kexactB in 67 files, run_tac 33 times, kcopy, an addDecl-based copy command, and one @[positivity] extension.\n- So kernel replay, not text search, is what establishes soundness.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md",
+    "source_title": "verification/NOTES.md",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "lilting.ch showed in a demo that #print axioms can be bypassed via debug.skipKernelTC + addDecl, and that leanchecker catches it. Without --fresh, leanchecker trusts imported modules, so every module must be replayed."
+   },
+   {
+    "id": "D11",
+    "statement": "Joint statement, leanprover-community blog, 2026-11-21 13:55, by the Lean and Mathlib communities, endorsed by the Lean FRO and the Mathlib Initiative:\n- Certifies that both the statement and the proof of RH are correct.\n- The statement was isolated in a Mathlib-only file and matched by comparator and con-leche --compare.\n- The export was checked by Lean's official kernel, by con-leche and con-ron (each with a formal proof, relative to set theory, that it cannot accept a false proof), and by several third-party checkers in different languages.\n- Dozens of people reproduced the compilation and the same raw export. Checks ran on an inert export.\n- The codebase depends directly only on Mathlib.",
+    "needs": "not_applicable",
+    "source_url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+    "source_title": "Lean verification of the Riemann Hypothesis",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Does not mention Claude, GRH, Clay, versions or hardware. Gives 17 million lines and no module count. Links remark.pdf, the MIT page, Buzzard's Xena post of 12 Nov and a Zulip thread."
+   },
+   {
+    "id": "D12",
+    "statement": "Checker results on the MIT page (last update 2026-11-22 04:35 UTC):\n- leanchecker per-module replay: 175,187/175,187 pass.\n- nanoda: accepts, 27 min 42 s on 80 threads.\n- con-leche master cd2eceab --verified: accepts 1,468,418 declarations in 3 min 15 s on 64 threads.\n- con-ron master 3f22699b --compare: all five theorems justified, 7 min 6 s on 64 threads.\n- lean4lean 67f63b0c per-module: 175,187/175,187 pass (5 needed a raised step limit).\n- Lean default and paranoid kernels on the full export: still running, single-threaded.\n- lake comparator v4.36.0: statement and axiom stages passed; kernel stages still running.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Sutherland, RH Lean proof: verification files",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "So the official Lean kernel's acceptance rests on per-module replays. The single-process full-export runs had no verdict at that update."
+   },
+   {
+    "id": "D13",
+    "statement": "Checker caveats:\n- con-leche and con-ron builds bundled with Lean v4.36.0 exit 2 (decline, not reject). They lack support for a mutual reflexive inductive (PrincipalizationCertificate/OrderCertificate); the master builds accept.\n- lean4lean --paranoid rejects every Lean 4.33.1 export ('unknown constant Decidable.intro').\n- Hence comparator.json names only Lean paranoid and nanoda.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md",
+    "source_title": "NOTES.md; MIT page",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Without --paranoid, lean4lean accepted all 750,225 declarations of a smoke test in 37 min on one thread."
+   },
+   {
+    "id": "D14",
+    "statement": "Independent full checks:\n- mrubinst (Claude Code on EPYC 9754 servers): compile 3 h 18 min; kernel replay 175,187/175,187; nanoda accepted 1,484,729 declarations in 48 min 25 s on 128 threads, 78 GB peak.\n- Luo (Tsinghua; 288 cores, 1 TB): build 2 h 0 m 33 s; replay 183,877 modules, 0 failures, 3,557 s wall, 816,978 CPU-s (~227 h).\n- hhh2210 (32 cores): build 13.4 h; replay 2,695,292 declarations, 0 failures, 57 min on 28 threads.",
+    "needs": "not_applicable",
+    "source_url": "https://mrubinst.github.io/grh-lean-verification/",
+    "source_title": "GRH Lean Check; lilting.ch (Luo run); hhh2210/riemann-lean-account",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Third-party self-reports. Infatoshi's nanoda_bin 0da9f98f also reports 1,484,729 declarations with no errors."
+   },
+   {
+    "id": "D15",
+    "statement": "Build cost from source:\n- Recommended: 32 cores, 128 GB RAM, 150 GB free disk (hhh2210).\n- LUMI: ~3,500 core-hours including retries (~900 for the compile itself). A 256 GB node ran out of memory when jobs were scheduled by core count alone.\n- Summed CPU in the build log: 1,954,959 s (~543 h).\n- Critical path to Main: 54 modules, 3,893.8 s.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/hhh2210/riemann-lean-account",
+    "source_title": "hhh2210; aapolipponen/rh-lean-check-lumi; lilting.ch",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "The leanprover-community README says the solution build 'Takes hours' on a large machine."
+   },
+   {
+    "id": "D16",
+    "statement": "Disk:\n- Unpacked .olean files: ~96 GB. McCarthy's .olean/.ilean build extracts to 99,269,509,951 bytes (28,638,044,751 compressed).\n- During a build, .setup.json files average ~6 MB each, ≈1 TB over 175,187 modules unless deleted as modules finish.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/CACHE.md",
+    "source_title": "CACHE.md; NOTES.md; nil-commits/alpoge-rh-golf",
+    "year": "2026",
+    "confidence": "medium"
+   },
+   {
+    "id": "D17",
+    "statement": "Reproducibility:\n- The original build called lean directly. A sandboxed `lake build Main` reproduced the export byte for byte.\n- 98,219 compiled files embed the absolute path /home/ubuntu/grh/src/lean/src/….\n- LocModel.olean is nondeterministic: a 38-byte bound-variable name (Lean issue #15498, fixed by PR #15499 in v4.36.0).\n- Main.olean sha256 9146dfb4…96ad on the MIT, mrubinst and LUMI builds.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "MIT page; NOTES.md issue #6",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Infatoshi reports a different Main.olean sha256 (ce9a2006…); unexplained."
+   },
+   {
+    "id": "D18",
+    "statement": "Laptop-class build (M1 Max, 64 GB), partial build of 153 modules:\n- 1,669 s, vs 1,314 s on the 288-core box (median per module 1.20× slower).\n- ~6.1 GB peak per lean process.\n- The author's extrapolation for the full build is ~71 h. Not measured.",
+    "needs": "not_applicable",
+    "source_url": "https://lilting.ch/en/articles/riemann-hypothesis-lean-independent-verify",
+    "source_title": "Reproducing parts of the 288-core verification on M1 Max",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "The extrapolation ignores heavier modules and memory-limited concurrency."
+   },
+   {
+    "id": "D19",
+    "statement": "Prebuilt cache: run `lake exe cache get` then `lake build --no-build` in a clone of leanprover-community/riemann-hypothesis. Source: rh-cache.taucetiproject.org, 175,187 archives totalling 4,938,217,979 bytes. Cold download measured at 4 min 47 s.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/CACHE.md",
+    "source_title": "verification/CACHE.md",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "The cache includes outputs from untrusted pull requests and volunteer machines. Hashes do not verify proofs. Also on HF: JackMcCarthy/riemann-hypothesis-build."
+   },
+   {
+    "id": "D20",
+    "statement": "Published export, on the MIT page:\n- solution.ndjson.zst: 7,699,933,588 bytes, sha256 61a8938ad5f5e57397c1c0e3b954916af546d9004ade01c3555744a681b05381. Decompress with zstd -d --long=30.\n- Unpacked: 61,570,595,788 bytes, sha256 5ea74b912147c5c93cc2b6d70cc727cf908df2f62ac6a20480a3fa02f6be244e.\n- challenge.ndjson.zst: 47 MB, unpacking to 350,862,970 bytes, sha256 bd484ac9886a96f26b1d9a7a59ebd45b7a70d102c015d4f31f9302bbdd6ab2b9.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Sutherland, RH Lean proof: verification files",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "A different recipe (lean4export Main -- all 5 theorems) gives 61,571,290,481 bytes and 1,080,769,494 lines, sha256 4301ce4828d397c728e87f3e6a1251aa42abe5e12809bb9e0b73cc3d33072e7e. So the export bytes depend on the recipe."
+   },
+   {
+    "id": "D21",
+    "statement": "Memory to check the export:\n- lake comparator: ~100 GB RAM and 70 GB disk.\n- con-leche: ~50 GB RAM, about 2 min to build, under 4 min on 64 threads.\n- nanoda: 78 GB peak on 128 threads.\n- Lean kernel and paranoid: ~150 GB, ~4 h each (estimate).\n- Exporter: ~1 h 20 min, 163 GB peak (listed with the estimates).\n- 16 concurrent replay workers grew to ~140–200 GB.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "MIT page; NOTES.md; mrubinst GRH Lean Check",
+    "year": "2026",
+    "confidence": "medium"
+   },
+   {
+    "id": "D22",
+    "statement": "Cost of using the theorem downstream:\n- Loading Main's 186,200 modules (including Mathlib and core) takes 18.5–20.3 GiB RSS.\n- A pruned 35-line file importing the proof checked in 151.90 s, peak 19.32 GiB.\n- The 122-line SimplifiedMain.lean took 2010.31 s, peak 18.50 GiB.\n- Recommended: ≥24 GB RAM, 16 GB swap, ≥110 GB disk. Tested at 24 GB under WSL2.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/nil-commits/alpoge-rh-golf",
+    "source_title": "nil-commits/alpoge-rh-golf",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Method: elan with leanprover/lean4:v4.33.1, clone leanprover-community/riemann-hypothesis, lake exe cache get, lake build --no-build, then check the file inside that environment."
+   },
+   {
+    "id": "D23",
+    "statement": "Map-count limit:\n- Each module maps 5 files (.olean, .olean.server, .olean.private, .ir, .ir.sig). `import Mathlib` alone uses ~52,000 mappings.\n- With the Linux default vm.max_map_count of 65,530, 8,974 of 175,187 modules fail to import, including Main.\n- Fix: sysctl vm.max_map_count=1048576, or an LD_PRELOAD shim without root.\n- Importing a module near the top of the tree needs ~5–6 GB private memory, vs under 1 GB for a shallow module.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/aapolipponen/rh-lean-check-lumi",
+    "source_title": "rh-lean-check-lumi",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Applies inside WSL2 as well (inferred)."
+   },
+   {
+    "id": "D24",
+    "statement": "Inferred, untested recipe for a downstream Lake project:\n- lakefile [[require]] name = \"tree\", git = \"https://github.com/leanprover-community/riemann-hypothesis\", rev = <pinned commit>.\n- lean-toolchain v4.33.1 and Mathlib 0df444a3.\n- `import Main` gives `riemannHypothesis : RiemannHypothesis`.\nNo published project does this. Robin1984 proves RH ↔ Robin and was combined with the proof only at export level.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/lakefile.toml",
+    "source_title": "lakefile.toml; CACHE.md; kimihiro64/Robin1984",
+    "year": "2026",
+    "confidence": "low",
+    "notes": "Inferred: the cache tool fetches the root package, so as a dependency expect hours of building. The simpler pattern is to work inside a clone (lake env lean File.lean). The module name 'Main' may clash."
+   },
+   {
+    "id": "D25",
+    "statement": "Cleanup PRs #8, #45 and #57 in the community repo removed 10,724 of 175,187 files and edited 18, leaving 164,464 .lean files plus Challenge.lean. The original submission is commit 40e56bab.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md",
+    "source_title": "verification/NOTES.md",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Pin a commit. HEAD is not the byte-original submission."
+   },
+   {
+    "id": "D26",
+    "statement": "(a) Assessment, inferred:\n- 32 GB Linux box: can use the theorem downstream via the community cache: ~5 GB download, ~96–99 GB unpacked, ~20 GiB RSS per load, vm.max_map_count raised.\n- 16 GB box: below the 24 GB + 16 GB swap recommendation and untested. Most RSS is file-backed mmap (private memory ~5–6 GB), so it may work slowly with swap.\n- Windows laptop: only WSL2 has been tested (memory=24GB, swap=16GB), so in practice a laptop with ≥32 GB and ~110 GB free. Native Windows is untested.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/nil-commits/alpoge-rh-golf",
+    "source_title": "Inferred from nil-commits, aapolipponen, CACHE.md",
+    "year": "2026",
+    "confidence": "low",
+    "notes": "Building from source instead of using the cache: ~13.4 h on 32 cores; ~71 h on a 64 GB M1 Max (extrapolated)."
+   },
+   {
+    "id": "D27",
+    "statement": "(b) Assessment, inferred: no source shows the full export re-checked within 16–32 GB. The smallest reported peaks are ~50 GB (con-leche) and 78 GB (nanoda), and the export is a 7.7 GB download that unpacks to 61.6 GB. Feasible on a small box:\n- A statement-side audit: on the M1 Max, building the 16-line Statements file took 27 s after a 99 s Mathlib cache download, and mutated statements were rejected.\n- Cross-checking published hashes.\n- Per-module leanchecker replay at ~5–6 GB per top-of-tree import: ~227 CPU-hours, so days.\nA rented machine with 64–128 GB RAM could run con-leche in minutes.",
+    "needs": "not_applicable",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Inferred from MIT page, mrubinst, lilting.ch, aapolipponen",
+    "year": "2026",
+    "confidence": "low",
+    "notes": "Swap-backed runs and streaming checkers are untested. Peak memory for hhh2210's single-environment replay is unreported."
+   },
+   {
+    "id": "D28",
+    "statement": "How it was found (remark.pdf, 4 pp, 20 Nov 2026):\n- Alpöge, working with Claude, claims RH and GRH and expects ERH with more time. Claude and he formalized the argument without assumptions.\n- He set up the analogue of a toy setting; he says Claude outpaced him near the finish.\n- Claude's suggested chain of theta lifts had length √X for von Mangoldt sums of length X (Stepanov-style multiplicity).\n- A Claude-compiled timeline runs 6 Oct 2026 (Stepanov determinant) to 16 Nov 2026 (GRH); many final steps are dated 15 Nov.",
+    "needs": "not_applicable",
+    "source_url": "https://alpo.ge/remark.pdf",
+    "source_title": "Alpöge, remark.pdf",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "No token count, model name, compute or agent workflow is stated, and none was found elsewhere. The breakthrough came 'late Sunday night', probably 15–16 Nov (inferred)."
+   },
+   {
+    "id": "D29",
+    "statement": "Human-readable proof: none published. Alpöge says a huge unreadable document is routine to produce: Claude's informal 'GRH book' ran past 250,000 pages. He chose to present only Lean and intends to write the proof up properly. A third-party outline read from the Lean source exists (hhh2210): windowed Landau reduction, a CM-field identity giving an x/m + m bound, theta-lift chains with m ≈ √x, and a squeeze on period-lattice slope via Chowla–Selberg.",
+    "needs": "not_applicable",
+    "source_url": "https://alpo.ge/remark.pdf",
+    "source_title": "remark.pdf; hhh2210/riemann-lean-account",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "The third-party outline is explicitly not certified by the Lean check."
+   },
+   {
+    "id": "D30",
+    "statement": "robin_inequality: for n > 5040, σ₁(n) < e^γ · n · log(log n), formally checked unconditionally by combining Robin1984 (acab1a3; lake build 4,435 jobs; RH ↔ Robin) with the RH proof. Combined export: 61,752,134,938 bytes. nanoda accepted it in 33 min 46 s on 64 threads; con-leche --verified accepted 1,472,825 declarations; lake comparator v4.36.0 passed.",
+    "needs": "RH_only",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "MIT page, arithmetic consequences",
+    "year": "2026",
+    "before": "Robin 1984: equivalent to RH",
+    "confidence": "medium",
+    "notes": "The statement depends on 2,050 Mathlib/core declarations."
+   },
+   {
+    "id": "D31",
+    "statement": "lagarias_inequality: for n > 0, σ₁(n) ≤ H_n + e^{H_n} · log(H_n), with H_n the nth harmonic number. Checked in the same combined export with Robin1984. The statement elaborates to 27 named constants and depends on 1,801 Mathlib/core declarations.",
+    "needs": "RH_only",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "MIT page, arithmetic consequences",
+    "year": "2026",
+    "before": "Lagarias 2002: equivalent to RH",
+    "confidence": "medium"
+   },
+   {
+    "id": "D32",
+    "statement": "Remaining trust assumptions:\n- Comparator checks challenge and solution against the same Mathlib, so a modified Mathlib would go undetected.\n- Exports are made by 4.33.1 and judged by 4.36.0, which NOTES calls 'not the common path'.\n- A pass still trusts the checkers, Mathlib's definitions, the exporter and the sandboxes. landrun could not block UDP on Linux 6.12.",
+    "needs": "not_applicable",
+    "source_url": "https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md",
+    "source_title": "verification/NOTES.md",
+    "year": "2026",
+    "confidence": "high"
+   },
+   {
+    "id": "D33",
+    "statement": "Buzzard's Xena post of 12 Nov 2026, cited by the joint statement, sets four criteria: the Lean statement matches the informal one; the code compiles; it proves the stated theorem (lake comparator); it exploits no kernel bug (lake comparator --paranoid, independent kernels). It notes that checking the ~13M-line FLT formalization needed 96 cores and 500 GB RAM.",
+    "needs": "not_applicable",
+    "source_url": "https://xenaproject.wordpress.com/2026/11/12/and-the-proof-is-checked-in-lean/",
+    "source_title": "…and the proof is checked in Lean (Xena)",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "The post predates the RH release and does not mention RH."
+   }
+  ]
+ },
+ "A-explicit-bounds": {
+  "summary": "Lens A, explicit prime counting. Every RH_only item below is now unconditional, given the 20-21 Nov 2026 Lean proof. Sharpest RH-era constants for code: psi uses Lee-Nosal, |psi(x)-x| <= sqrt(x)·log x·(log x - log log x)/(8π) for x >= 101. theta uses the same bound for x >= 2657. pi uses Schoenfeld, |pi(x)-li(x)| < sqrt(x)·log x/(8π) for x >= 2657; I found no sharper published explicit RH bound for pi. Gaps use Carneiro-Milinovich-Soundararajan: a prime in [x, x+(22/25)·sqrt(x)·log x] for x >= 4. Their Theorem 5 is stated forwards; the (x-c·sqrt(x)·log x, x] form is Dudek's. I found no improvement of 22/25 up to Nov 2026. 2026 RH-conditional notes: Chamberland-Straub give primes between x^(2+δ) and (x+1)^(2+δ) for all real x >= 1 when δ >= 1/4, so cubes for every n. Visser (arXiv, not refereed) gives x^(1/2+1/40) intervals for x >= 3.5e90 and power intervals for M >= 2.29. Best unconditional closed forms: Fiori-Kadiri-Swidinsky 2023 for psi (9.22106, exponent 0.8476836) and for pi (9.2211, against Li from 2). Korobov-Vinogradov shape: Johnston-Yang 2023 (x >= 23) and the newer Fiori-Jaskari 2026 (x >= 21, constant 0.239, 0.1982767). At x = 1e100 the KV bounds do not win generally. Johnston-Yang's KV psi bound is about 14.8x there (useless). Fiori-Jaskari is about 5.5e-3·x, against about 8.4e-2·x for the FKS closed form (my arithmetic). The RH bound is about 2.06e53, a relative 2.1e-47. Weak points: the PDFs could not be rendered here, so these come from arXiv abstract and HTML pages and citing sources. Visser, Fiori-Jaskari, Chamberland-Straub and Johnston-Sorenson-Thomas-Webster were checked from abstracts only. Fiori-Jaskari cite an 'OpenAI Oct 2026' zero-free half-plane Re s > 7/8; I have not verified it, and RH implies it anyway. The Arias de Reyna-Toulisse Theorem 6.2 wording came from a secondary snippet. The Cully-Hugill cubes threshold exp(exp(32.892)) came from a citing paper. Ramaré-Saouter's RH constant 8/5 is from memory and not verified. Journal volume and page numbers marked 'from memory' should be checked. GRH and other L-functions were out of scope for this lens.",
+  "claims": [
+   {
+    "id": "schoenfeld1976_theta",
+    "statement": "RH implies |θ(x) − x| < (1/(8π))·√x·(log x)^2 for all x ≥ 599.",
+    "needs": "RH_only",
+    "before": "Unconditional, FKS 2023 Cor.14: |θ(x)−x| ≤ x·121.0961·(log x/R)^{3/2}·exp(−2√(log x/R)), R=5.5666305, x≥2 (≈9.2202·x(log x)^{1.5}e^{−0.8476836√log x}).",
+    "source_url": "https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/",
+    "source_title": "Schoenfeld, Sharper bounds for the Chebyshev functions θ(x) and ψ(x). II, Math. Comp. 30 (1976) 337–360",
+    "year": "1976",
+    "confidence": "high",
+    "notes": "Thm 10/Cor 1; 599 confirmed in citing sources. Pre-proof, Büthe's partial-RH method (RH to 3·10^12) made it unconditional for 599 ≤ x ≤ 2.169·10^25 (secondary)."
+   },
+   {
+    "id": "schoenfeld1976_psi",
+    "statement": "RH implies |ψ(x) − x| < (1/(8π))·√x·(log x)^2 for all x ≥ 73.2.",
+    "needs": "RH_only",
+    "before": "FKS 2023: |ψ(x)−x| < 9.22106·x(log x)^{3/2}·exp(−0.8476836√log x) for all x > 2.",
+    "source_url": "https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/",
+    "source_title": "Schoenfeld 1976, Math. Comp. 30",
+    "year": "1976",
+    "confidence": "high",
+    "notes": "73.2 confirmed by Lee–Nosal and other citing papers."
+   },
+   {
+    "id": "schoenfeld1976_pi",
+    "statement": "RH implies |π(x) − li(x)| < (1/(8π))·√x·log x for all x ≥ 2657 (li = principal value ∫_0^x dt/log t).",
+    "needs": "RH_only",
+    "before": "FKS 2023: |π(x)−Li(x)| ≤ 9.2211·x√(log x)·exp(−0.8476√log x), x ≥ 2, Li = ∫_2^x (li − Li = li(2) ≈ 1.04516).",
+    "source_url": "https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/",
+    "source_title": "Schoenfeld 1976, Cor. 1",
+    "year": "1976",
+    "confidence": "high",
+    "notes": "No sharper published explicit RH bound for π−li found (Lee–Nosal give ψ, θ, Mertens only)."
+   },
+   {
+    "id": "lee_nosal_psi_theta",
+    "statement": "RH implies |ψ(x) − x| ≤ √x·log x·(log x − log log x)/(8π) for x ≥ 101; and |θ(x) − x| ≤ the same expression for x ≥ 2657.",
+    "needs": "RH_only",
+    "before": "Same unconditional bounds as Schoenfeld rows (FKS 2023).",
+    "source_url": "https://arxiv.org/abs/2312.05628",
+    "source_title": "Lee & Nosal, Sharper bounds for the error in the PNT assuming RH (v4, 2 Oct 2025)",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "Thm 1.2. Thm 1.1 adds a refined x ≥ 11 bound (formula not checked). Cited earlier RH forms: (log x/(8π)+2)√x log x for x≥2; √x log x(log x−2)/(8π) for x≥2.3·10^9. At x=1e100: ≈2.06·10^53."
+   },
+   {
+    "id": "lee_nosal_mertens",
+    "statement": "RH implies |Σ_{p≤x}1/p − log log x − B| ≤ 3 log x/(8π√x) for x ≥ 24.4; |Σ_{p≤x}(log p)/p − log x − E| ≤ 3(log x)^2/(8π√x) for x ≥ 43.1; |e^γ log x·∏_{p≤x}(1−1/p) − 1| ≤ 3 log x/(8π√x) for x ≥ 23.8; |e^{−γ}(log x)^{−1}∏_{p≤x}(1−1/p)^{−1} − 1| ≤ 3 log x/(8π√x) for x ≥ 24.2.",
+    "needs": "RH_only",
+    "before": "Unconditional explicit Mertens errors decay only like powers of 1/log x or exp(−c√log x), not x^{−1/2}.",
+    "source_url": "https://arxiv.org/abs/2312.05628",
+    "source_title": "Lee & Nosal, Cor. 1.3",
+    "year": "2023",
+    "confidence": "medium",
+    "notes": "Read from HTML render; paper writes e^C (taken as Euler's γ). Improves Schoenfeld 1976 Cor. 2–3."
+   },
+   {
+    "id": "buthe_numeric_small_x",
+    "statement": "Unconditional (computational): |ψ(x) − x| ≤ 0.94√x for 11 ≤ x ≤ 10^19; |θ(x) − x| ≤ 1.95√x for 1423 ≤ x ≤ 10^19.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2312.05628",
+    "source_title": "Büthe (Math. Comp. 87, 2018), as cited by Lee & Nosal",
+    "year": "2018",
+    "confidence": "medium",
+    "notes": "Second-hand via Lee–Nosal; useful small-x guard in code."
+   },
+   {
+    "id": "cramer1920",
+    "statement": "RH implies p_{n+1} − p_n = O(√p_n·log p_n): limsup (p_{n+1}−p_n)/(√p_n log p_n) ≤ c for an unspecified absolute c.",
+    "needs": "RH_only",
+    "before": "Unconditional: Baker–Harman–Pintz 2001, a prime in [x − x^{0.525}, x] for x sufficiently large (no explicit x0).",
+    "source_url": "https://arxiv.org/abs/1708.04122",
+    "source_title": "Cited in Carneiro–Milinovich–Soundararajan",
+    "year": "1920",
+    "confidence": "high",
+    "notes": "Not explicit."
+   },
+   {
+    "id": "dudek2015",
+    "statement": "RH implies that for all x ≥ 2 there is a prime in (x − (4/π)√x·log x, x]; the constant can be 1+ε for x sufficiently large (x0 not explicit).",
+    "needs": "RH_only",
+    "before": "Unconditional: Dusart 2018, for x ≥ 468991632 a prime in (x, x(1 + 1/(5000 log^2 x))].",
+    "source_url": "https://arxiv.org/abs/1402.6417",
+    "source_title": "Dudek, On the Riemann hypothesis and the difference between primes",
+    "year": "2015",
+    "confidence": "high",
+    "notes": "IJNT 11 (2015) 771–778 (from memory). Improves Ramaré–Saouter 2003 (RH constant 8/5 from memory, not verified). Also: for c=3+ε, ≥ √x primes in (x, x+c√x log x], x large."
+   },
+   {
+    "id": "dgm2016",
+    "statement": "RH implies, for x ≥ 2 and c = 1/2 + 2/log x: a prime in (x − c√x log x, x + c√x log x), and at least √x primes in (x − (c+1)√x log x, x + (c+1)√x log x); c = 0.55 works for x ≥ 5 (one prime).",
+    "needs": "RH_only",
+    "before": "Dusart 2018 interval (x, x(1+1/(5000 log^2 x))], x ≥ 468991632.",
+    "source_url": "https://arxiv.org/abs/1503.05403",
+    "source_title": "Dudek, Grenié, Molteni, Primes in explicit short intervals on RH (IJNT 2016)",
+    "year": "2016",
+    "confidence": "high",
+    "notes": "Symmetric form. Cor 4.1: RH ⇒ a prime in (n^2, (n + α log n)^2), α = 1 + 2/log n + 1/log^2 n, every integer n ≥ 2."
+   },
+   {
+    "id": "cms2019",
+    "statement": "RH implies that for all x ≥ 4 there is a prime in [x, x + (22/25)√x·log x] (Thm 5); and limsup (p_{n+1}−p_n)/(√p_n log p_n) ≤ 1/C⁺(B) < 21/25 (Cor 4).",
+    "needs": "RH_only",
+    "before": "Dusart 2018: x ≥ 468991632, a prime in (x, x(1 + 1/(5000 log^2 x))].",
+    "source_url": "https://arxiv.org/abs/1708.04122",
+    "source_title": "Carneiro, Milinovich, Soundararajan, Fourier optimization and prime gaps, Comment. Math. Helv. 94 (2019) 533–568",
+    "year": "2019",
+    "confidence": "high",
+    "notes": "Proof only needed for x ≥ 4·10^18. Thm 3: least c with liminf(π(x+c√x log x)−π(x))/√x > α is < (21/25)(1+2α). 21/25 uses B ≤ 36/11, C⁺(36/11) > 25/21. No improvement of 22/25 found to Nov 2026."
+   },
+   {
+    "id": "chamberland_straub2026",
+    "statement": "RH (with CMS and the Sorenson–Webster computation) implies a prime between x^{2+δ} and (x+1)^{2+δ} for all real x ≥ 1 when δ ≥ 1/4, so a prime between n^3 and (n+1)^3 for every n ≥ 1. An explicit x0(δ) is given for 0 < δ < 1/4.",
+    "needs": "RH_only",
+    "before": "Unconditional cubes: n ≥ exp(exp(32.892)) (Cully-Hugill), and by computation n^3 ≤ 1.649·10^40 (JSTW 2026).",
+    "source_url": "https://arxiv.org/abs/2602.22502",
+    "source_title": "Chamberland & Straub, Weakening the Legendre Conjecture",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Abstract only. Legendre (δ=0) stays open even under RH."
+   },
+   {
+    "id": "visser2026",
+    "statement": "RH implies a prime in [x, x + x^{1/2+1/40}] for x ≥ 3.5·10^90; for any 0 < m ≤ 15.831 and x ≥ 1, a prime in [x, x + x^{1/2+1/m}]; for M ≥ 2.29 and y ≥ 1, a prime in [y^M, (y+1)^M].",
+    "needs": "RH_only",
+    "before": "Baker–Harman–Pintz 2001: a prime in [x − x^{0.525}, x] only for x sufficiently large (not explicit).",
+    "source_url": "https://arxiv.org/abs/2610.27830",
+    "source_title": "Visser, Primes in short intervals assuming RH (v1, 20 Oct 2026)",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "6-page note, not refereed; abstract only checked."
+   },
+   {
+    "id": "adrt2013_nth_prime",
+    "statement": "RH ⟺ |p_n − li^{-1}(n)| < (1/π)·√n·(log n)^{5/2} for all n ≥ 11 (Thm 6.2).",
+    "needs": "RH_only",
+    "before": "Unconditional (Dusart 1999, from memory): p_n > n(log n + log log n − 1) for n ≥ 2; p_n ≤ n(log n + log log n − 0.9484) for n ≥ 39017.",
+    "source_url": "https://arxiv.org/abs/1203.5413",
+    "source_title": "Arias de Reyna & Toulisse, The n-th prime asymptotically, JTNB 25 (2013) 521–555",
+    "year": "2013",
+    "confidence": "medium",
+    "notes": "Theorem wording from a secondary snippet; check li^{-1} notation and the n ≥ 11 range in the paper."
+   },
+   {
+    "id": "robin1984_criterion",
+    "statement": "RH ⟺ σ(n) < e^γ·n·log log n for all n > 5040.",
+    "needs": "RH_only",
+    "before": "Robin's unconditional bound: σ(n) < e^γ n log log n + 0.6483·n/log log n for n ≥ 3.",
+    "source_url": "https://en.wikipedia.org/wiki/Divisor_function",
+    "source_title": "Robin, J. Math. Pures Appl. 63 (1984) 187–213 (via Wikipedia)",
+    "year": "1984",
+    "confidence": "high",
+    "notes": "5040 is the largest known counterexample to the inequality."
+   },
+   {
+    "id": "robin1984_unconditional",
+    "statement": "Unconditional: σ(n) < e^γ·n·log log n + 0.6483·n/log log n for all n ≥ 3.",
+    "needs": "unconditional_already",
+    "source_url": "https://en.wikipedia.org/wiki/Divisor_function",
+    "source_title": "Robin 1984",
+    "year": "1984",
+    "confidence": "high",
+    "notes": "0.6483 rounds up (7/3 − e^γ log log 12)·log log 12 = 0.64821…, which is near-tight at n=12 (my arithmetic)."
+   },
+   {
+    "id": "lagarias2002",
+    "statement": "RH ⟺ σ(n) ≤ H_n + exp(H_n)·log(H_n) for all n ≥ 1, with equality only for n = 1 (H_n = Σ_{j≤n} 1/j).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/math/0008177",
+    "source_title": "Lagarias, An elementary problem equivalent to the Riemann hypothesis, Amer. Math. Monthly 109 (2002) 534–543",
+    "year": "2002",
+    "confidence": "high",
+    "notes": "Equivalently strict for n > 1."
+   },
+   {
+    "id": "fks2023_psi",
+    "statement": "Unconditional: |ψ(x) − x| < 9.22106·x(log x)^{3/2}·exp(−0.8476836√log x) for all x > 2; and |ψ(x) − x| < 4.47·10^{−15}·x for all log x ≥ 3000.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2204.02588",
+    "source_title": "Fiori, Kadiri, Swidinsky, Sharper bounds for the Chebyshev function ψ(x) (v3, 17 May 2023)",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "Platt–Trudgian 2021 had 4.51·10^{−13}x for log x ≥ 3000. 0.8476836 = 2/√R, R = 5.5666305. At x=1e100 the closed form gives ≈ 0.084x."
+   },
+   {
+    "id": "fks2023_pi",
+    "statement": "Unconditional: |π(x) − Li(x)| ≤ 9.2211·x√(log x)·exp(−0.8476√log x) for all x ≥ 2 (Cor. 22 allows 0.84768363); also |π(x) − Li(x)| ≤ 0.4298·x/log x for x ≥ 2; Li(x) = ∫_2^x dt/log t.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2206.12557",
+    "source_title": "Fiori, Kadiri, Swidinsky, Sharper bounds for the error term in the PNT (v2, 17 May 2023)",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "Beats Platt–Trudgian 2021 Cor. 2 (235x(log x)^{0.52}e^{−0.8√log x}, x ≥ e^{2000}) and Johnston–Yang Cor 1.3. JY's KV bound wins only for x ≥ exp(1.826·10^9). Numeric tables (Tables 4–5) are sharper, e.g. ε_π,num = 1.7893e−8 at log x1 = 44."
+   },
+   {
+    "id": "jy2023_classical",
+    "statement": "Unconditional, x ≥ 2: |ψ(x) − x| ≤ 9.39·x(log x)^{1.515}exp(−0.8274√log x); |θ(x) − x| ≤ 9.40·x(log x)^{1.515}exp(−0.8274√log x); |π(x) − li(x)| ≤ 9.59·x(log x)^{0.515}exp(−0.8274√log x).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2204.01980",
+    "source_title": "Johnston & Yang, Some explicit estimates for the error term in the PNT (JMAA 2023)",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "Table 1 gives (X,A,B,C) for log x ≥ X, e.g. X=10^10: A=45.17, B=1.501, C=1.0903; θ uses A+0.01. FKS 2023 is better pointwise."
+   },
+   {
+    "id": "jy2023_kv",
+    "statement": "Unconditional, x ≥ 23, with E(x) = exp(−0.1853(log x)^{3/5}(log log x)^{−1/5}): |ψ(x)−x| ≤ 0.026·x(log x)^{1.801}E(x); |θ(x)−x| ≤ 0.027·x(log x)^{1.801}E(x); |π(x)−li(x)| ≤ 0.028·x(log x)^{0.801}E(x).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2204.01980",
+    "source_title": "Johnston & Yang, Thm 1.4",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "Uses Ford's KV region with c = 57.54. The paper says Thm 1.1 is better for exp(59) ≤ x ≤ exp(2.8·10^10). At x=1e100 the ψ bound is ≈ 14.8x (useless). The π line is printed as |π(x)−x| (a typo)."
+   },
+   {
+    "id": "fiori_jaskari2026_kv",
+    "statement": "Unconditional: for x ≥ 21, |ψ(x) − x| < 0.239·x·exp(−0.1982767·(1 + log log log x/(15·log log x))·(log x)^{3/5}·(log log x)^{−1/5}).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2609.23222",
+    "source_title": "Fiori & Jaskari, Explicit bounds for the prime number theorem (v2, 8 Oct 2026)",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Abstract only; θ and π versions not in the abstract. At x=1e100 gives ≈ 5.5e−3·x. The abstract also gives 0.04934x^{3/4}(log x)^2 + 0.02636425x^{7/8} (x ≥ 21), assuming a Re s > 7/8 zero-free half-plane it attributes to OpenAI, Oct 2026 (unverified; RH implies it)."
+   },
+   {
+    "id": "dusart2018_intervals",
+    "statement": "Unconditional: for x ≥ 89693 there is a prime p with x < p ≤ x(1 + 1/(log x)^3) (Prop. 5.4); for x ≥ 468991632 there is a prime p with x < p ≤ x(1 + 1/(5000(log x)^2)) (Cor. 5.5).",
+    "needs": "unconditional_already",
+    "source_url": "https://en.wikipedia.org/wiki/Bertrand%27s_postulate",
+    "source_title": "Dusart, Explicit estimates of some functions over primes, Ramanujan J. 45 (2018) 227–251 (via Wikipedia)",
+    "year": "2018",
+    "confidence": "high",
+    "notes": "Thresholds confirmed by several citing papers. Dusart 2010: x ≥ 396738, x < p ≤ x(1 + 1/(25 log^2 x)). RH counterpart: CMS (22/25)√x log x."
+   },
+   {
+    "id": "cully_hugill_lee2022",
+    "statement": "Unconditional: a prime in (x(1 − Δ^{−1}), x] for all x ≥ x0, e.g. (x0, Δ) = (4·10^18, 3.9·10^7) and (e^600, 2.5·10^11).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2103.05986",
+    "source_title": "Cully-Hugill & Lee, Explicit interval estimates for prime numbers, Math. Comp. 91 (2022) (doi 10.1090/mcom/3719)",
+    "year": "2022",
+    "confidence": "medium",
+    "notes": "The two pairs are as quoted in Cully-Hugill 2023, from the corrected arXiv v3 (Sep 2022); the paper has more pairs."
+   },
+   {
+    "id": "cully_hugill2023_powers_cubes",
+    "statement": "Unconditional: a prime between n^155 and (n+1)^155 for all n ≥ 1; and a prime between n^3 and (n+1)^3 for all n ≥ exp(exp(32.892)).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2107.14468",
+    "source_title": "Cully-Hugill, Primes between consecutive powers, J. Number Theory 247 (2023) 100–117",
+    "year": "2023",
+    "confidence": "medium",
+    "notes": "The n^155 result is from the abstract. The cubes threshold comes from a 2026 citing paper; her thesis has exp(exp(32.537)); Dudek 2016 had exp(exp(33.3)). Under RH: every n ≥ 1."
+   },
+   {
+    "id": "jstw2026_cubes",
+    "statement": "Unconditional: a prime between n^3 and (n+1)^3 whenever n^3 ≤ 1.649·10^40 (computation); an integer with at most 2 prime factors (counted with multiplicity) between n^3 and (n+1)^3 for every n ≥ 1.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2601.15564",
+    "source_title": "Johnston, Sorenson, Thomas, Webster, Primes and almost primes between cubes (v2, 16 Mar 2026)",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Abstract only."
+   }
+  ],
+  "verdicts": [
+   {
+    "id": "schoenfeld1976_theta",
+    "verdict": "confirmed",
+    "evidence": "The AMS page returned 403. Platt–Trudgian 2021 Cor. 1 (seen in a search snippet) cites Schoenfeld Thm 10: RH ⇒ |θ(x)−x| < √x log²x/(8π) for x ≥ 599, and makes it unconditional for 599 < x ≤ 2.169·10^25. The 'before' constants agree with FKS 2206.12557: A=121.0961, B=3/2, C=2, R=5.5666305, admissible for x ≥ 2 by their Cor. 14.",
+    "source_url": "https://arxiv.org/abs/2004.09765"
+   },
+   {
+    "id": "schoenfeld1976_psi",
+    "verdict": "confirmed",
+    "evidence": "Lee–Nosal v4 intro: RH ⇒ |ψ(x)−x| ≤ √x(log x)²/(8π) for all x ≥ 73.2, credited jointly to Schoenfeld and Grenié–Molteni. The primary AMS page was blocked (403).",
+    "source_url": "https://arxiv.org/html/2312.05628v4"
+   },
+   {
+    "id": "schoenfeld1976_pi",
+    "verdict": "confirmed",
+    "evidence": "Arias de Reyna–Toulisse eq. (67): 'Schoenfeld has proved' under RH that |π(x)−li(x)| < √x log x/(8π), printed for x > 2657. FKS 2206.12557 confirms li−Li = li(2) ≈ 1.04516.",
+    "source_url": "https://arxiv.org/abs/1203.5413"
+   },
+   {
+    "id": "lee_nosal_psi_theta",
+    "verdict": "confirmed",
+    "evidence": "Abstract v4 (2 Oct 2025): the same bound √x log x(log x − log log x)/(8π) holds for ψ when x ≥ 101 and for ϑ when x ≥ 2657. Thm 1.1 (x ≥ 11): √x log x(log x/(8π) − (1/(2π) + 1.465/log x) log log x + 1.2325). The cited earlier forms (x ≥ 2; x ≥ 2.3·10^9) match. No journal ref is listed.",
+    "source_url": "https://arxiv.org/abs/2312.05628"
+   },
+   {
+    "id": "lee_nosal_mertens",
+    "verdict": "confirmed",
+    "evidence": "Cor. 1.3 (HTML v4) uses the constant 3/(8π). Ranges: Σ1/p (B = 0.26149…) for x ≥ 24.4; Σ log p/p (E = −1.33258…) for x ≥ 43.1; e^C log x ∏ for x ≥ 23.8; e^{−C}/log x ∏^{−1} for x ≥ 24.2. The paper writes C = 0.57721…, i.e. Euler's γ. The proof is analytic for x ≥ 10^19 and computational below.",
+    "source_url": "https://arxiv.org/html/2312.05628v4"
+   },
+   {
+    "id": "buthe_numeric_small_x",
+    "verdict": "confirmed",
+    "evidence": "Büthe abstract (Math. Comp. 87 (2018) 1991–2009): |ψ(t)−t| ≤ 0.94√t for 11 < t ≤ 10^19. The θ bound is not in the abstract. Lee–Nosal cite Büthe Thm 2: |ϑ(x)−x| ≤ 1.95√x for 1423 ≤ x ≤ 10^19, so the θ part is second-hand.",
+    "source_url": "https://arxiv.org/abs/1511.02032"
+   },
+   {
+    "id": "cramer1920",
+    "verdict": "confirmed",
+    "evidence": "DGM §4: 'On the Riemann hypothesis, Cramér was the first to prove p_{n+1}−p_n ≪ √p_n log p_n'. No constant is given. The BHP exponent 1/2+1/40 = 0.525 matches Visser's paper.",
+    "source_url": "https://arxiv.org/abs/1503.05403"
+   },
+   {
+    "id": "dudek2015",
+    "verdict": "confirmed",
+    "evidence": "Abstract: RH ⇒ a prime in (x − (4/π)√x log x, x] for all x ≥ 2, improving Ramaré–Saouter. The constant 4/π can be replaced by 1+ε for large x. More than √x primes lie in (x, x + c√x log x] for c = 3+ε and x large. arXiv lists no journal ref, so IJNT 11 (2015) 771–778 is unverified.",
+    "source_url": "https://arxiv.org/abs/1402.6417"
+   },
+   {
+    "id": "dgm2016",
+    "verdict": "confirmed",
+    "evidence": "Thm 1.1 (v2, IJNT, doi 10.1142/S1793042116500858): RH, x ≥ 2, c = 1/2 + 2/log x gives a prime in (x ± c√x log x) and at least √x primes in (x ± (c+1)√x log x). The text gives c = 0.55 for all x ≥ 5 when one prime is needed. Cor. 4.1 (α = 1 + 2/log n + 1/log² n, n ≥ 2) is also confirmed. Appendix A gives c = 0.6102.",
+    "source_url": "https://arxiv.org/abs/1503.05403"
+   },
+   {
+    "id": "cms2019",
+    "verdict": "confirmed",
+    "evidence": "PDF v2, Thm 5: RH and x ≥ 4 ⇒ a prime in [x, x + (22/25)√x log x]; the proof assumes x ≥ 4·10^18. Cor. 4: limsup ≤ 1/C⁺(B) < 21/25. Thm 3: inf c ≤ (1+2α)/C⁺(B) < (21/25)(1+2α). Supporting facts: C⁺(36/11) > 25/21 (1.9), and 1 ≤ B ≤ 36/11 (1.12, via Iwaniec). The paper also states p_{n+1}−p_n ≤ (22/25)√p_n log p_n for all p_n > 3.",
+    "source_url": "https://arxiv.org/abs/1708.04122"
+   },
+   {
+    "id": "chamberland_straub2026",
+    "verdict": "confirmed",
+    "evidence": "Abstract (v1, 26 Feb 2026, unrefereed): RH + CMS + the Sorenson–Webster computation ⇒ a prime between x^{2+δ} and (x+1)^{2+δ} for all real x ≥ 1 when δ ≥ 1/4, with an explicit x0(δ) for smaller δ > 0. Taking δ = 1 gives cubes for all n ≥ 1. Its exponent 2.25 is better than Visser's M ≥ 2.29.",
+    "source_url": "https://arxiv.org/abs/2602.22502"
+   },
+   {
+    "id": "visser2026",
+    "verdict": "corrected",
+    "evidence": "HTML v1, Thm 1: interval [x, x+x^{1/2+1/40}], exact crossover x* = 3.482755638·10^90 against CMS 22/25. Thm 2 uses CMS for x > 4.9·10^27 and the Sorenson–Webster upper-Oppermann check (n ≤ 7·10^13) below that. The paper never says x is an integer. For real x Thm 2 is false: with m = 15.831 the interval [7.01, 10.004] contains no prime, and it also fails for 23 < x < 23.15. Thm 3 has a typo in its interval and is weaker than Chamberland–Straub.",
+    "corrected_statement": "RH ⇒ a prime in [x, x + x^{1/2+1/40}] for real x ≥ 3.5·10^90, and a prime in [y^M, (y+1)^M] for y ≥ 1, M ≥ 2.29. The m-claim (0 < m ≤ 15.831) holds only for integer x ≥ 1; my own check of small x suggests it holds there. It is false for real x (e.g. 7 < x < 7.8). Unrefereed.",
+    "source_url": "https://arxiv.org/html/2610.27830v1"
+   },
+   {
+    "id": "adrt2013_nth_prime",
+    "verdict": "confirmed",
+    "evidence": "Thm 6.2 (JTNB 25 (2013) 521–555): 'The Riemann hypothesis is equivalent to' |p_n − li^{-1}(n)| < (1/π)√n(log n)^{5/2} for all n ≥ 11. The paper writes ali(n) for li^{-1}(n). It is a true equivalence, so the bound now holds unconditionally.",
+    "source_url": "https://arxiv.org/abs/1203.5413"
+   },
+   {
+    "id": "robin1984_criterion",
+    "verdict": "confirmed",
+    "evidence": "Lagarias (1.2) and Prop. 3.1: Robin's criterion, RH ⟺ σ(n) < e^γ n log log n for all n ≥ 5041. Robin 1984 itself was not reachable.",
+    "source_url": "https://arxiv.org/abs/math/0008177"
+   },
+   {
+    "id": "robin1984_unconditional",
+    "verdict": "confirmed",
+    "evidence": "Lagarias (2.2), citing Robin Thm 2: for all n ≥ 3, σ(n) < e^γ n log log n + 0.6482·n/log log n. The sharp constant is 0.648214…, with equality at n = 12 (σ(12) = 28), so Lagarias's 0.6482 with '<' fails at n = 12. The claim's 0.6483 with '<' holds (my check: RHS ≈ 28.0011 at n = 12).",
+    "source_url": "https://arxiv.org/abs/math/0008177"
+   },
+   {
+    "id": "lagarias2002",
+    "verdict": "confirmed",
+    "evidence": "Problem E: for each n ≥ 1, σ(n) ≤ H_n + exp(H_n) log(H_n), with equality only for n = 1. Thm 1.1: Problem E ⟺ RH. The cases n ≤ 5040 were checked by computer. Published in Amer. Math. Monthly 109 (2002) 534–543.",
+    "source_url": "https://arxiv.org/abs/math/0008177"
+   },
+   {
+    "id": "fks2023_psi",
+    "verdict": "confirmed",
+    "evidence": "Abstract v3 (17 May 2023): |ψ(x)−x| < 9.22106x(log x)^{3/2}exp(−0.8476836√log x) for x > 2, and < 4.47·10^{−15}x for log x ≥ 3000, improving Platt–Trudgian's 4.51·10^{−13}x. arXiv lists no journal ref. At x = 10^100 the bound is ≈ 0.083x.",
+    "source_url": "https://arxiv.org/abs/2204.02588"
+   },
+   {
+    "id": "fks2023_pi",
+    "verdict": "confirmed",
+    "evidence": "PDF v2, Cor. 22: |π(x)−Li(x)| ≤ 9.2211x√(log x)exp(−0.84768363√log x) for x ≥ 2; the abstract rounds this to 0.8476. Eq. (4): ≤ 0.4298x/log x for x ≥ 2. Li = ∫_2^x dt/log t. The paper says it improves Platt–Trudgian Cor. 2 and Johnston–Yang Cor. 1.3.",
+    "source_url": "https://arxiv.org/abs/2206.12557"
+   },
+   {
+    "id": "jy2023_classical",
+    "verdict": "confirmed",
+    "evidence": "Abstract: ψ bound 9.39 for x ≥ 2. In the PDF, Cor. 1.2 gives θ with A1 = A + 0.01 = 9.40 (B = 1.515, C = 0.8274). Cor. 1.3: |π(x)−li(x)| ≤ 9.59x(log x)^{0.515}exp(−0.8274√log x) for x ≥ 2. arXiv lists no journal ref, so JMAA 2023 is unverified.",
+    "source_url": "https://arxiv.org/abs/2204.01980"
+   },
+   {
+    "id": "jy2023_kv",
+    "verdict": "confirmed",
+    "evidence": "Thm 1.4, for x ≥ 23: (1.7) ψ with 0.026 and (1.8) θ with 0.027, both with (log x)^{1.801}. (1.9) uses 0.028 and (log x)^{0.801}; its left side is consistent with the printed |π(x)−x| typo. All use exp(−0.1853(log x)^{3/5}(log log x)^{−1/5}). At x = 10^100 the ψ bound is ≈ 14.8x.",
+    "source_url": "https://arxiv.org/abs/2204.01980"
+   },
+   {
+    "id": "fiori_jaskari2026_kv",
+    "verdict": "confirmed",
+    "evidence": "Abstract v2 (8 Oct 2026) matches exactly, including x ≥ 21 and 0.239. The conditional 0.04934x^{3/4}log²x + 0.02636425x^{7/8} assumes a zero-free half-plane Re s > 7/8 'announced by OpenAI in October 2026'. At x = 10^100 the bound is ≈ 5.5·10^{−3}x. Unrefereed.",
+    "source_url": "https://arxiv.org/abs/2609.23222"
+   },
+   {
+    "id": "dusart2018_intervals",
+    "verdict": "confirmed",
+    "evidence": "Springer redirected to a login. Axler (arXiv 1703.08032) cites Dusart Cor. 5.5: x ≥ 468991632 ⇒ a prime in (x, x(1+1/(5000 log²x))]. Ramaré's TME-EMT survey lists Dusart 2018: x > 89693 ⇒ a prime in (x, x(1+1/log³x)]. The label 'Prop. 5.4' is unverified.",
+    "source_url": "https://tme-emt-1f5ce3.pages.math.cnrs.fr/Art09.html"
+   },
+   {
+    "id": "cully_hugill_lee2022",
+    "verdict": "confirmed",
+    "evidence": "The abstract (v3, 14 Sep 2022, doi 10.1090/mcom/3719) gives only the general (Δ, x0) statement. Cully-Hugill 2023 (v3, p.1) quotes (x0, Δ) = (4·10^18, 3.9·10^7) and (e^600, 2.5·10^11), 'among others'.",
+    "source_url": "https://arxiv.org/abs/2107.14468"
+   },
+   {
+    "id": "cully_hugill2023_powers_cubes",
+    "verdict": "confirmed",
+    "evidence": "Thm 1: a prime in (n^155, (n+1)^155) for all n ≥ 1. The cubes result for n ≥ exp(exp(32.892)) is stated in the paper's own final section (v3), not only by a 2026 citing paper. Its intro cites Dudek's exp(exp(33.3)). Published in JNT 247 (2023) 100–117.",
+    "source_url": "https://arxiv.org/abs/2107.14468"
+   },
+   {
+    "id": "jstw2026_cubes",
+    "verdict": "confirmed",
+    "evidence": "Abstract v2 (16 Mar 2026): a prime between n³ and (n+1)³ for n³ ≤ 1.649·10^40, and a number with at most 2 prime factors (counting multiplicity) between them for all n ≥ 1. Unrefereed.",
+    "source_url": "https://arxiv.org/abs/2601.15564"
+   }
+  ],
+  "missing": [
+   "Nicolas 1983, J. Number Theory 17:375–388: RH ⟺ N_k/φ(N_k) > e^γ log log N_k for every primorial N_k (k ≥ 1), the φ-analogue of Robin's criterion.",
+   "Dudek & Platt 2015, Exp. Math. 24:289–294: RH ⟹ Ramanujan's inequality π(x)² < (ex/log x)π(x/e) for all x > 38,358,837,682.",
+   "Lamzouri, Li & Soundararajan 2015, Math. Comp. 84:2391–2412: explicit RH bounds for |ζ(1+it)| and 1/|ζ(1+it)| for t ≥ 10^10, about 2e^γ and 12e^γ/π² times (log log t + O(1)); exact constants not rechecked.",
+   "Carneiro–Chandee–Milinovich 2013, Math. Ann. 356: RH ⟹ |S(t)| ≤ (1/4+o(1))log t/log log t. Chandee–Soundararajan 2011, BLMS 43: log|ζ(1/2+it)| ≤ (log 2/2+o(1))log t/log log t. Explicit forms: Simonič 2022, JNT 231.",
+   "Dusart 2018, 'Estimates of the kth prime under the Riemann hypothesis', Ramanujan J. 47:141–154: RH-explicit p_k bounds to compare with ADRT Thm 6.2 (not checked).",
+   "Sorenson–Webster verification of Legendre/upper Oppermann for n ≤ 7·10^13 (x ≤ 4.9·10^27): the unconditional input behind Chamberland–Straub and Visser (cited in arXiv 2610.27830)."
+  ]
+ },
+ "C-still-open-and-impact": {
+  "summary": "The task's premise needs one correction: the primary sources show the Alpoge library also claims GRH for every Dirichlet L-function, not just RH for zeta. Its Main.lean proves three Dirichlet theorems (LFunction_ne_zero_of_half_lt_re, LFunction_eq_zero_re, and the primitive-character form) for all moduli and characters. Sutherland's MIT dashboard (https://math.mit.edu/~drew/grh/, updated 2026-11-22 04:35 UTC) reports them accepted by leanchecker, nanoda, con-leche, con-ron and lean4lean, using only Lean's three standard axioms. The Lean default/paranoid replay of the export and lake comparator were still running. Dedekind zeta, Hecke and automorphic L-functions are explicitly not covered, and the Selberg class is not mentioned. Alpoge's note (alpo.ge/remark.pdf) says he expects the Extended Riemann Hypothesis (presumably Dedekind zeta, which is not covered) only with more time. Linear Independence and simplicity of all zeros remain open.\n\nWhat RH for zeta alone gives (now unconditional):\n- Schoenfeld's bounds: |pi(x)-li(x)| < sqrt(x) log x/(8pi) for x >= 2657, and the matching psi and theta bounds.\n- The Carneiro-Milinovich-Soundararajan prime gap (x - (22/25)sqrt(x) log x, x] for x >= 4.\n- The LLS explicit bounds on zeta(1+it) for t >= 10^10.\n- Robin's and Lagarias's inequalities, which are also Lean-checked.\n- At least 19/27 of zeros simple (Bui-Heath-Brown).\n- The pi vs li bias, which now needs only LI.\n\nNeeding Dirichlet GRH, so they follow only if that part of the library is accepted:\n- Miller's test with Bach's bound: a witness below 2(ln n)^2, or 3(ln n)^2 when it must not divide n.\n- Least quadratic non-residue below (log p)^2 for p >= 5 (LLS), hence deterministic Tonelli-Shanks.\n- Least prime in a progression at most (phi(q) log q)^2 for q > 3.\n- Goldbach exceptional set X^{1/2+eps}.\n- The GRH half of the mod-q Chebyshev races (plus LI).\n- Chebotarev for abelian extensions of Q.\n\nStill open, because they need non-abelian Dedekind or Hecke GRH:\n- Hooley's proof of Artin's conjecture.\n- Weinberger's Euclidean-equals-PID theorem.\n- General effective Chebotarev (Lagarias-Odlyzko).\n- Buchmann and Hafner-McCurley class groups and Bach's 12(log d)^2 generator bound.\n- Class-group and isogeny cryptography analyses.\n- General deterministic polynomial factoring over finite fields (medium confidence on exactly which hypothesis these papers need).\n\nAlready unconditional, so no change:\n- Ternary Goldbach (Helfgott).\n- The 2^{k/2} deterministic prime-finding exponent (Odlyzko). RH alone does not improve it; it only gives a polylog-space alternative.\n- Skewes-type bounds, superseded by Platt-Trudgian's exp(727.951332668) result for theta(x).\n- Record pi(x) values up to 10^29.\n\nPractical impact on RSA, ECC and lattice cryptography: none.\n\nClay still lists RH as 'Unsolved'. Its 2018 rules require publication in a Qualifying Outlet, two years, and general acceptance. The AHM statement (secondary source only) disputes accountability and understanding, not correctness. No human-readable proof exists yet.\n\nSeveral constants are from memory and were not re-fetched; these are marked medium confidence. They include Buchmann's 1.7 exponent, Schoof's exponent, Pintz's X^{0.72}, Rubinstein-Sarnak's 2.6e-7 and 0.9990, and the x >= 4 range for the 22/25 gap.",
+  "claims": [
+   {
+    "id": "C01",
+    "statement": "Miller's deterministic primality test with Bach's bound: if n is composite, some a < 2(ln n)^2 is a Miller-Rabin witness. More generally, every proper subgroup H of (Z/nZ)* misses some a < 2(ln n)^2, and misses a prime l not dividing n with l < 3(ln n)^2. The result is O((log n)^2) bases, about O~((log n)^4) bit operations.",
+    "needs": "GRH",
+    "before": "Unconditional deterministic test: AKS (2002/2004), and Lenstra-Pomerance O~((log n)^6). In practice keys are tested with probabilistic Miller-Rabin or BPSW.",
+    "source_url": "https://www.ams.org/journals/mcom/1990-55-191/S0025-5718-1990-1023756-8/",
+    "source_title": "Bach, Explicit bounds for primality testing and related problems, Math. Comp. 55 (1990) 355-380",
+    "year": "1990",
+    "confidence": "high",
+    "notes": "Needs GRH for the Dirichlet L-functions mod n. RH for zeta alone gives nothing: zeta is only the trivial-character case. The 2 and 3 (log q)^2 constants were confirmed through the LLS paper's account of Bach (AMS page returned 403). The same Alpoge library also claims Dirichlet GRH (see C22). If that part is accepted, Miller+Bach becomes unconditional. Practical effect is nil."
+   },
+   {
+    "id": "C02",
+    "statement": "Least quadratic non-residue n(p). Ankeny 1952: O((log p)^2). Bach: n(p) < 2(log p)^2. LLS 2015, Cor 1.1: n(p) < (log p)^2 for primes p >= 5, asymptotically (0.8+o(1))(log p)^2. CMQR (arXiv:2404.08380): n(p) < (61/80) log^2 p for large p.",
+    "needs": "GRH",
+    "before": "Unconditional best: Burgess, n(p) << p^{1/(4 sqrt e)+eps}.",
+    "source_url": "https://ar5iv.arxiv.org/html/1309.3595",
+    "source_title": "Lamzouri-Li-Soundararajan, Conditional bounds for the least quadratic non-residue and related problems, Math. Comp. 84 (2015)",
+    "year": "2015",
+    "confidence": "high",
+    "notes": "Needs GRH only for the single quadratic L(s,(./p)). RH for zeta is not enough. Covered by the claimed Dirichlet GRH in Alpoge's Main.lean, if accepted."
+   },
+   {
+    "id": "C03",
+    "statement": "Deterministic square roots mod p. Tonelli-Shanks or Cipolla become deterministic polynomial time once you test a = 2,3,... up to (log p)^2 (p >= 5) for a non-residue.",
+    "needs": "GRH",
+    "before": "Unconditionally, deterministic polynomial-time square roots mod p are open. Schoof (Math. Comp. 44, 1985) is deterministic but polynomial in log p only for fixed x; from memory, its time is O((|x|^{1/2+eps} log p)^9). Randomized algorithms run in expected polynomial time.",
+    "source_url": "https://ar5iv.arxiv.org/html/1309.3595",
+    "source_title": "LLS 2015 (non-residue bound used by Tonelli-Shanks)",
+    "year": "2015",
+    "confidence": "high",
+    "notes": "Needs only the quadratic Dirichlet L-function, so it follows if Alpoge's Dirichlet-GRH theorems are accepted. No practical change: randomized methods are already fast."
+   },
+   {
+    "id": "C04",
+    "statement": "Deterministic factoring of polynomials over finite fields, conditional on GRH. Ronyai: polynomial time for bounded degree. Evdokimov 1994: quasi-polynomial, (n^{log n} log q)^{O(1)}. Ivanyos-Karpinski-Saxena 2009: polynomial time for some cases, e.g. prime degree n with n-1 smooth.",
+    "needs": "GRH",
+    "before": "Unconditional deterministic time is polynomial in p, not log p (Berlekamp). Deterministic poly(n, log q) is open.",
+    "source_url": "https://arxiv.org/abs/0804.1974",
+    "source_title": "Ivanyos-Karpinski-Saxena, Schemes for deterministic polynomial factoring (ISSAC 2009)",
+    "year": "2009",
+    "confidence": "medium",
+    "notes": "These papers state 'assuming GRH'. Over F_p, the r-th non-residue steps use Dirichlet characters mod p. The extension-field steps appear to need Hecke or Dedekind GRH (not verified per paper). RH for zeta is irrelevant. arXiv number given from memory."
+   },
+   {
+    "id": "C05",
+    "statement": "Artin's primitive root conjecture. Hooley 1967 (J. reine angew. Math. 225, 209-220) proved the conjectured density (Artin's constant 0.3739558136... times a correction factor) for non-square g != -1.",
+    "needs": "GRH",
+    "before": "Unconditional: Heath-Brown 1986, at most two exceptional prime g; for example one of 2, 3, 5 is a primitive root for infinitely many p.",
+    "source_url": "https://arxiv.org/abs/math/0412262",
+    "source_title": "Moree, Artin's primitive root conjecture - a survey",
+    "year": "1967",
+    "confidence": "high",
+    "notes": "Needs GRH for the Dedekind zeta functions of the Kummer fields Q(zeta_k, g^{1/k}), k squarefree. These fields are non-abelian for k >= 3, so neither RH for zeta nor the claimed Dirichlet GRH suffices. Still open."
+   },
+   {
+    "id": "C06",
+    "statement": "Subexponential class group and regulator computation. Buchmann 1990: expected time L(|d_K|)^{1.7+o(1)} for fixed degree, under GRH plus smoothness heuristics. Hafner-McCurley 1989 (imaginary quadratic): rigorous expected time L(|D|)^{sqrt2+o(1)} under GRH. Here L(x) = exp(sqrt(log x log log x)). Bach: under GRH, Cl(K) is generated by prime ideals of norm < 12(log|d_K|)^2.",
+    "needs": "GRH",
+    "before": "Without GRH the outputs are not certified, and unconditional verification is far more expensive.",
+    "source_url": "https://www.ams.org/mcom/2008-77-262/S0025-5718-07-02003-0/",
+    "source_title": "Belabas-Diaz y Diaz-Friedman, Small generators of the ideal class group, Math. Comp. 77 (2008)",
+    "year": "1990",
+    "confidence": "medium",
+    "notes": "Needs RH for the Hecke L-functions of the class-group characters of K (the zeta function of the Hilbert class field). For quadratic K these are dihedral GL(2) L-functions, not Dirichlet ones, so this is open. BDF usually reduce Bach's bound by about 20x. The 1.7 and sqrt2 exponents are from memory."
+   },
+   {
+    "id": "C07",
+    "statement": "Effective Chebotarev (Lagarias-Odlyzko 1977): |pi_C(x,L/K) - (|C|/|G|)Li(x)| <= c1((|C|/|G|) x^{1/2} log(d_L x^{n_L}) + log d_L) for x >= 2, with c1 an effective absolute constant. The least prime with a given Frobenius is O((log d_L)^2).",
+    "needs": "GRH",
+    "before": "Unconditional error terms are much weaker, and least-prime bounds are a power of d_L.",
+    "source_url": "https://en.wikipedia.org/wiki/Chebotarev%27s_density_theorem",
+    "source_title": "Lagarias-Odlyzko, Effective versions of the Chebotarev density theorem, in Algebraic Number Fields (Durham 1975), 1977 (no online primary)",
+    "year": "1977",
+    "confidence": "high",
+    "notes": "Needs GRH for zeta_L. For L abelian over Q, zeta_L is a product of Dirichlet L-functions, so the claimed Dirichlet GRH would cover it. Non-abelian L, or base K != Q, needs Artin or Hecke L-functions and remains open. The Wikipedia page was not fetched; the statement is from memory."
+   },
+   {
+    "id": "C08",
+    "statement": "Least prime p = a mod q. Under GRH: p <= (phi(q) log q)^2 for q > 3 (LLS 2015), and asymptotically (1+o(1))(phi(q) log q)^2 (Bach-Sorenson 1996).",
+    "needs": "GRH",
+    "before": "Unconditional Linnik bound: p << q^L with L = 5 (Xylouris 2011).",
+    "source_url": "https://www.ams.org/journals/mcom/2015-84-295/S0025-5718-2015-02925-1",
+    "source_title": "Lamzouri-Li-Soundararajan, Math. Comp. 84 (2015)",
+    "year": "2015",
+    "confidence": "medium",
+    "notes": "Needs Dirichlet L-functions for all characters mod q; zeta alone gives nothing. Would become unconditional if Alpoge's Dirichlet GRH is accepted. The q > 3 form comes from a citing paper's snippet."
+   },
+   {
+    "id": "C09",
+    "statement": "Ternary Goldbach under GRH: Deshouillers-Effinger-te Riele-Zinoviev 1997 showed every odd n > 5 is a sum of three primes. This is now unconditional (Helfgott 2013).",
+    "needs": "unconditional_already",
+    "before": "Helfgott, arXiv:1312.7748. Every odd n > 1 is a sum of at most five primes (Tao, Math. Comp. 2014).",
+    "source_url": "https://arxiv.org/abs/1312.7748",
+    "source_title": "Helfgott, The ternary Goldbach conjecture is true",
+    "year": "2013",
+    "confidence": "high",
+    "notes": "The 1997 result assumed GRH for Dirichlet L-functions, not RH alone."
+   },
+   {
+    "id": "C10",
+    "statement": "Binary Goldbach is open even under GRH. GRH gives an exceptional set E(X) << X^{1/2+eps} (Hardy-Littlewood 1924).",
+    "needs": "GRH",
+    "before": "Unconditional: E(X) << X^{0.72} (Pintz, arXiv:1804.09084, from memory).",
+    "source_url": "https://arxiv.org/abs/1804.09084",
+    "source_title": "Pintz, exceptional set in Goldbach's problem",
+    "year": "1924",
+    "confidence": "medium",
+    "notes": "Needs Dirichlet GRH. RH for zeta alone is not enough. Would follow if Alpoge's Dirichlet GRH is accepted, but binary Goldbach still would not."
+   },
+   {
+    "id": "C11",
+    "statement": "Chebyshev bias mod q (Rubinstein-Sarnak 1994): logarithmic densities delta(4;3,1) = 0.9959 and delta(3;2,1) = 0.9990.",
+    "needs": "GRH",
+    "before": "Unconditional: only Littlewood-type infinitely-many sign changes.",
+    "source_url": "https://projecteuclid.org/journals/experimental-mathematics/volume-3/issue-3/Chebyshevs-bias/em/1048515870.full",
+    "source_title": "Rubinstein-Sarnak, Chebyshev's bias, Experiment. Math. 3 (1994) 173-197",
+    "year": "1994",
+    "confidence": "high",
+    "notes": "Needs GRH for the Dirichlet L-functions mod q plus GSH/LI (linear independence over Q of the zero ordinates). LI stays open even if Dirichlet GRH is accepted. 0.9959 was confirmed by search; 0.9990 is from memory."
+   },
+   {
+    "id": "C12",
+    "statement": "pi(x) vs li(x) race: the set where pi(x) > li(x) has logarithmic density 0.00000026.",
+    "needs": "RH_plus_other",
+    "before": "Conditional on RH plus LI for the zeta zeros.",
+    "source_url": "https://projecteuclid.org/journals/experimental-mathematics/volume-3/issue-3/Chebyshevs-bias/em/1048515870.full",
+    "source_title": "Rubinstein-Sarnak 1994",
+    "year": "1994",
+    "confidence": "medium",
+    "notes": "With RH now a theorem, only LI (zeta zeros) remains, and LI is open. The value 2.6e-7 is from memory; search did not confirm it."
+   },
+   {
+    "id": "C13",
+    "statement": "Weinberger 1973: if K has an infinite unit group, its ring of integers is Euclidean if and only if it is a PID.",
+    "needs": "GRH",
+    "before": "Unconditional cases: Harper-Murty 2004 (K Galois over Q with unit rank > 3); Harper 2004 (Z[sqrt14] is Euclidean).",
+    "source_url": "https://resolve.cambridge.org/core/journals/canadian-journal-of-mathematics/article/euclidean-rings-of-algebraic-integers/B66EAE5371EDD740117CF87710BFBCA1",
+    "source_title": "Harper-Murty, Euclidean rings of algebraic integers, Canad. J. Math. 56 (2004) 71-76",
+    "year": "1973",
+    "confidence": "medium",
+    "notes": "Needs GRH for Dedekind zeta functions (Artin-type Kummer extensions, from memory). Not covered by RH or Dirichlet GRH. Still open in general."
+   },
+   {
+    "id": "C14",
+    "statement": "Skewes 1933: assuming RH, pi(x) > li(x) for some x < e^{e^{e^{79}}}. With RH proved, this bound is now unconditional, but newer unconditional bounds are far stronger.",
+    "needs": "unconditional_already",
+    "before": "Skewes 1955 (no RH): x < e^{e^{e^{e^{7.705}}}}. Platt-Trudgian 2016: theta(x) > x for some x < exp(727.951332668), and theta(x) < x for 2 < x < 1.39*10^17, which gives pi(x) < li(x) there.",
+    "source_url": "https://arxiv.org/abs/1407.1914",
+    "source_title": "Platt-Trudgian, On the first sign change of theta(x)-x, Math. Comp. 85 (2016) 1539-1547",
+    "year": "2016",
+    "confidence": "high",
+    "notes": "Lehman-type methods need only zeros verified to a finite height. RH changes nothing practical, and the first crossing is still unknown."
+   },
+   {
+    "id": "C15",
+    "statement": "Polymath4 (finding a k-bit prime deterministically). The 2^{k/2+o(k)} bound is already unconditional: Odlyzko's analytic pi(x) (Lagarias-Odlyzko, time x^{1/2+eps}, space x^{1/4+eps}) plus binary search finds a prime in [N,2N] in N^{1/2+o(1)}. RH alone gives a prime in every interval (x - (22/25)sqrt(x) log x, x] for x >= 4. Scanning that interval with AKS gives the same N^{1/2+o(1)} time with only polylog space. So the exponent does not improve.",
+    "needs": "unconditional_already",
+    "before": "Tao-Croot-Helfgott (Math. Comp. 81, 2012), unconditional: the parity of the number of primes in an interval in time N^{1/2-c} for some c > 0. Full N^{1/2-c} prime finding is not achieved.",
+    "source_url": "https://arxiv.org/abs/1009.3956",
+    "source_title": "Tao, Croot, Helfgott, Deterministic methods to find primes",
+    "year": "2012",
+    "confidence": "high",
+    "notes": "Polynomial time would need Cramer-type gap conjectures, which go beyond RH and GRH."
+   },
+   {
+    "id": "C16",
+    "statement": "RSA, ECC and lattice cryptography: no practical change. Their security rests on factoring, ECDLP and LWE/SVP hardness, none of which assumes RH or GRH. The proof gives no new algorithm. Key generation uses probabilistic Miller-Rabin/Lucas tests (FIPS 186-5) or unconditional tests.",
+    "needs": "not_applicable",
+    "before": "Same as now.",
+    "source_url": "https://csrc.nist.gov/pubs/fips/186-5/final",
+    "source_title": "NIST FIPS 186-5 (primality testing in key generation)",
+    "year": "2023",
+    "confidence": "high",
+    "notes": "RH or GRH only turns some primality and non-residue routines into provably deterministic ones."
+   },
+   {
+    "id": "C17",
+    "statement": "Class-group and isogeny cryptography (CSIDH-type class group actions, class-group VDFs): the rigorous analyses rely on GRH for class-group characters. Examples are Bach's 12(log|d|)^2 generator bound, Hafner-McCurley running times, and expander mixing of isogeny graphs (Jao-Miller-Venkatesan, J. Number Theory 129 (2009)).",
+    "needs": "GRH",
+    "before": "Same: used heuristically.",
+    "source_url": "https://www.ams.org/mcom/2008-77-262/S0025-5718-07-02003-0/",
+    "source_title": "BDF 2008 (theorem assumes RH for L-functions of class-group characters); JMV 2009",
+    "year": "2009",
+    "confidence": "medium",
+    "notes": "Needs Hecke L-functions of imaginary quadratic orders, which neither RH for zeta nor Dirichlet GRH covers. Even a proof would only make existing heuristics rigorous; parameters would not change."
+   },
+   {
+    "id": "C18",
+    "statement": "Schoenfeld's RH-conditional bounds become unconditional: |pi(x)-li(x)| < (1/(8pi)) sqrt(x) log x for x >= 2657; |psi(x)-x| < (1/(8pi)) sqrt(x) log^2 x for x >= 73.2; |theta(x)-x| < (1/(8pi)) sqrt(x) log^2 x for x >= 599.",
+    "needs": "RH_only",
+    "before": "Büthe 2016 proved the pi bound unconditionally only while 4.92 sqrt(x/log x) <= T, where T is the height to which RH has been checked numerically (T = 3*10^12, Platt-Trudgian 2021).",
+    "source_url": "https://arxiv.org/abs/1410.7015",
+    "source_title": "Büthe, Estimating pi(x) and related functions under partial RH assumptions, Math. Comp. 85 (2016)",
+    "year": "1976",
+    "confidence": "high",
+    "notes": "Schoenfeld, Math. Comp. 30 (1976) 337-360. The constants are from memory; Büthe's condition is confirmed. This is the main computational gain: explicit errors now hold for all x."
+   },
+   {
+    "id": "C19",
+    "statement": "RH-only prime gaps become unconditional. Carneiro-Milinovich-Soundararajan: a prime lies in (x - (22/25)sqrt(x) log x, x] for x >= 4 (restated in arXiv:2411.05095 as [x, x+(22/25)sqrt(x) log x] for x > 2). Asymptotic constant 21/25, later 0.8358 (Chirre-Pereira-de Laat, Math. Comp. 2021).",
+    "needs": "RH_only",
+    "before": "Unconditional: gaps are at most x^{0.525} (Baker-Harman-Pintz).",
+    "source_url": "https://arxiv.org/abs/1708.04122",
+    "source_title": "Carneiro-Milinovich-Soundararajan, Fourier optimization and prime gaps, Comment. Math. Helv. 94 (2019) 533-568",
+    "year": "2019",
+    "confidence": "medium",
+    "notes": "The x >= 4 form is from memory. Whether the 0.8358 result assumes only RH is not confirmed."
+   },
+   {
+    "id": "C20",
+    "statement": "Explicit bounds for zeta(1+it) become unconditional (stated with the proof only sketched), for t >= 10^10: |zeta(1+it)| <= 2e^gamma(log log t - log 2 + 1/2 + 1/log log t), and 1/|zeta(1+it)| <= (12e^gamma/pi^2)(log log t - log 2 + 1/2 + 1/log log t + 14 log log t/log t).",
+    "needs": "RH_only",
+    "before": "Conditional on RH.",
+    "source_url": "https://ar5iv.arxiv.org/html/1309.3595",
+    "source_title": "LLS 2015, introduction",
+    "year": "2015",
+    "confidence": "high",
+    "notes": "The L(1,chi) analogues (Thm 1.5, q >= 10^10) need GRH for primitive chi."
+   },
+   {
+    "id": "C21",
+    "statement": "Simple zeros: the RH-conditional proportions become unconditional. Montgomery 1973: at least 2/3 of zeros are simple. Bui-Heath-Brown 2013: at least 19/27 (70.37%). This is above the 2026 unconditional records (e.g. more than 67.35% simple and on the line, arXiv:2610.08965).",
+    "needs": "RH_only",
+    "before": "Conrey-Ghosh-Gonek had 19/27 under RH plus Generalized Lindelöf.",
+    "source_url": "https://arxiv.org/abs/1302.5018",
+    "source_title": "Bui-Heath-Brown, On simple zeros of the Riemann zeta-function",
+    "year": "2013",
+    "confidence": "medium",
+    "notes": "Whether all zeros are simple is still open."
+   },
+   {
+    "id": "C22",
+    "statement": "Robin's and Lagarias's criteria are now theorems: sigma(n) < e^gamma n log log n for n > 5040, and sigma(n) <= H_n + e^{H_n} log H_n for n > 0. Sutherland's dashboard lists Lean theorems robin_inequality and lagarias_inequality, accepted by con-leche, con-ron and nanoda.",
+    "needs": "RH_only",
+    "before": "Each was equivalent to RH.",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Sutherland (MIT), verification dashboard",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "These combine the proof with a formalization of Robin 1984. lake comparator was still running on the combined export."
+   },
+   {
+    "id": "C23",
+    "statement": "Analytic pi(x) algorithms and record values do not change: they were already unconditional. Lagarias-Odlyzko runs in time x^{1/2+eps}. Platt 2015 computed pi(10^24) rigorously. Büthe-Franke-Jost-Kleinjung report pi(10^25) = 176846309399143769411680 computed unconditionally (2013). Records up to pi(10^29) (Baugh-Walisch 2022) use combinatorial methods.",
+    "needs": "unconditional_already",
+    "before": "Same.",
+    "source_url": "https://oeis.org/A006880",
+    "source_title": "OEIS A006880",
+    "year": "2013",
+    "confidence": "high",
+    "notes": "RH only makes explicit error bounds simpler."
+   },
+   {
+    "id": "C24",
+    "statement": "Primary evidence that the library goes beyond zeta. Besides riemannHypothesis, Main.lean proves LFunction_ne_zero_of_half_lt_re: for all N >= 1 and every Dirichlet character chi mod N, L(chi,s) != 0 when Re s > 1/2, except chi = 1 at s = 1. It also proves LFunction_eq_zero_re and LFunction_eq_zero_re_of_isPrimitive. Together these are GRH for all Dirichlet L-functions.",
+    "needs": "not_applicable",
+    "before": "Dirichlet GRH was open.",
+    "source_url": "https://math.mit.edu/~drew/grh/",
+    "source_title": "Sutherland (MIT), dashboard; checks run with Claude Code; updated 2026-11-22 04:35 UTC",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "Axioms: propext, Classical.choice, Quot.sound only. Accepted by leanchecker, nanoda, con-leche (all five theorems in compare mode), con-ron and lean4lean. Lean default/paranoid replay of the export and lake comparator were still running. Dedekind zeta, Hecke and automorphic L-functions are explicitly not covered; the Selberg class is not mentioned. Alpoge's note claims the method resolves GRH and says he expects 'the Extended Riemann Hypothesis too' with more time; its timeline marks GRH on 11/16/26. I could not tell whether the Lean/Mathlib joint statement certifies the Dirichlet theorems."
+   },
+   {
+    "id": "C25",
+    "statement": "Clay status: the RH page lists the problem as 'Unsolved' (checked 2026-11-22). Rules adopted 26 Sep 2018 require (1) publication in a Qualifying Outlet, (2) at least two years since publication, and (3) general acceptance in the global mathematics community. The rules say nothing about formal or computer proofs.",
+    "needs": "not_applicable",
+    "before": "n/a",
+    "source_url": "https://www.claymath.org/millennium-problems/rules/",
+    "source_title": "Clay Mathematics Institute, Rules for the Millennium Prizes",
+    "year": "2018",
+    "confidence": "high",
+    "notes": "A Lean archive with a 4-page note does not yet meet the publication condition."
+   },
+   {
+    "id": "C26",
+    "statement": "Association for Human Mathematics statement (21 Nov 2026, per OfficeChai): it does not allege an error. It argues that no human can currently take responsibility for, or understand, the Lean document, and that no one can confirm correctness with full certainty. It calls for democratic oversight of AI companies.",
+    "needs": "not_applicable",
+    "before": "In Oct 2026 the AHM criticised OpenAI's release of AI-generated mathematics (reposted on Tao's blog on 7 Oct).",
+    "source_url": "https://officechai.com/ai/gravely-concerned-that-uncontrolled-growth-in-ai-poses-a-threat-to-society-says-association-of-human-mathematics-on-riemann-hypothesis-proof/",
+    "source_title": "OfficeChai report",
+    "year": "2026",
+    "confidence": "medium",
+    "notes": "Secondary source; I did not find the AHM's own URL. A single outlet (huggingnews) reports one mathematician disputing validity; unverified."
+   },
+   {
+    "id": "C27",
+    "statement": "No human-readable proof or independent reconstruction exists. Alpoge's 4-page note gives only a rough sketch and timeline: Stepanov-style multiplicity via iterated theta lifts between definite unitary groups, chain length about sqrt(X) for the von Mangoldt sum, a relative trace formula, an Iwasawa tower, and a weakened Vandiver.",
+    "needs": "not_applicable",
+    "before": "n/a",
+    "source_url": "https://alpo.ge/remark.pdf",
+    "source_title": "Alpoge, Remark (note accompanying the Lean archive)",
+    "year": "2026",
+    "confidence": "high",
+    "notes": "A Claude-generated prose 'GRH book' ran past 250,000 pages and was not posted. Alpoge plans a proper write-up and expects large simplifications."
+   }
+  ],
+  "verdicts": [
+   {
+    "id": "C01",
+    "verdict": "confirmed",
+    "evidence": "LLS (arXiv:1309.3595, Sec. 1.1) reports Bach's GRH results: the least prime outside a proper subgroup H of (Z/qZ)* is < 2(log q)^2, it is < 3(log q)^2 if p does not divide q, and asymptotically it is (1+o(1))(log q)^2. The Miller witness bound follows. Bach's AMS page returned 403, so this is checked only through LLS. The hypothesis is Dirichlet GRH mod n. The dashboard lists LFunction_ne_zero_of_half_lt_re as checked.",
+    "source_url": "https://ar5iv.labs.arxiv.org/html/1309.3595"
+   },
+   {
+    "id": "C02",
+    "verdict": "corrected",
+    "corrected_statement": "Ankeny 1952: O((log p)^2) under GRH. Bach: n(p) < 2(log p)^2. LLS 2015 Cor 1.1: n(p) < (log p)^2 for primes p >= 5. LLS Thm 1.2: (0.8+o(1))(log p)^2 (Sec. 6.3 gives 0.794). CMQR arXiv:2404.08380 Thm 1: limsup n_p/log^2 p <= C(1)^-2 < 0.7615, i.e. n_p < (380/499) log^2 p for p sufficiently large. The constant 61/80 does not appear.",
+    "evidence": "Checked in the LLS ar5iv text and the CMQR arXiv HTML (Thm 1, Sec. 1.1). Both assume GRH for Dirichlet L-functions. 61/80 = 0.7625 is weaker than 380/499 = 0.76152.",
+    "source_url": "https://arxiv.org/html/2404.08380"
+   },
+   {
+    "id": "C03",
+    "verdict": "corrected",
+    "corrected_statement": "Under GRH for L(s,(./p)), Tonelli-Shanks becomes deterministic polynomial time: test a = 2,3,... up to (log p)^2 (p >= 5, LLS Cor 1.1) for a non-residue. Cipolla is not covered, because it needs t with t^2 - a a non-residue and the n(p) bound does not supply one. Schoof (Math. Comp. 44 (1985) 483-494) is deterministic in O(log^9 p) operations for fixed x. The |x|^{1/2+eps} dependence is unverified.",
+    "evidence": "LLS Cor 1.1. The Schoof AMS page returned 403; search snippets confirm only the O(log^9 p) bound for fixed x.",
+    "source_url": "https://ar5iv.labs.arxiv.org/html/1309.3595"
+   },
+   {
+    "id": "C04",
+    "verdict": "confirmed",
+    "evidence": "IKS abstract (arXiv:0804.1974): assuming GRH, it gives the first deterministic polynomial-time algorithm to find a nontrivial factor of a prime-degree n polynomial with n-1 smooth, and it extends the known GRH-conditional subexponential algorithm. The arXiv number is correct. arXiv lists no venue, so ISSAC 2009 is unverified. The Evdokimov and Ronyai bounds were not fetched; they match the standard literature.",
+    "source_url": "https://arxiv.org/abs/0804.1974"
+   },
+   {
+    "id": "C05",
+    "verdict": "confirmed",
+    "evidence": "Search confirms Hooley, J. reine angew. Math. 225 (1967) 209-220, which follows from GRH for Dedekind zeta functions of cyclotomic-Kummer fields. It also confirms Heath-Brown, Quart. J. Math. 37 (1986) 27-38, unconditional: at most two exceptional primes, and one of 2, 3, 5 is a primitive root for infinitely many p. The Artin constant digits were not re-fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Artin%27s_conjecture_on_primitive_roots"
+   },
+   {
+    "id": "C06",
+    "verdict": "confirmed",
+    "evidence": "Search of the Hafner-McCurley record and Biasse-Fieker confirms HM expected time L(d)^{sqrt2+o(1)} under ERH (rigorous Las Vegas), and Buchmann's heuristic L(1/2, 1.7) for fixed degree. Bach's 12 log^2|d_K| bound is standard. The Bach and BDF AMS pages returned 403, so BDF's 'about 20x' reduction is unverified. Biasse-Erukulangara (2021) claim a proof of the HM runtime with constant 3/sqrt8; unverified.",
+    "source_url": "https://geodesic.mathdoc.fr/articles/10.1090/S0894-0347-1989-1002631-0"
+   },
+   {
+    "id": "C07",
+    "verdict": "corrected",
+    "corrected_statement": "Lagarias-Odlyzko 1977, under GRH for zeta_L: |pi_C(x) - (|C|/|G|)Li(x)| <= c1((|C|/|G|) x^{1/2} log(d_L x^{n_L}) + log d_L) for x >= 2 (the standard citation form; primary not fetched). Their least-prime bound was c(log d_L)^2 (log log d_L)^4. The clean O((log d_L)^2) is due to Oesterle (70 (log d_L)^2, announced), and Bach-Sorenson 1996 made it explicit as (4 log d_L + 2.5 n_L + 5)^2.",
+    "evidence": "Zaman (arXiv:1508.00287) cites LO77 with the (log log d_L)^4 factor. Ahn-Kwon cite Oesterle's 70, and Thorner-Zaman cite the explicit Bach-Sorenson form. Other sources quote LO77 as O((log d_L)^2).",
+    "source_url": "https://arxiv.org/pdf/1508.00287"
+   },
+   {
+    "id": "C08",
+    "verdict": "confirmed",
+    "evidence": "LLS Cor 1.2 (GRH, q > 3): P(a,q) <= (phi(q) log q)^2. LLS attributes (1+o(1))(phi(q) log q)^2 and 2(q log q)^2 to Bach-Sorenson. Newer result: CMQR Thm 3 gives limsup P(a,q)/(phi(q) log q)^2 < 8/9 under GRH. Xylouris L = 5 was not fetched.",
+    "source_url": "https://ar5iv.labs.arxiv.org/html/1309.3595"
+   },
+   {
+    "id": "C09",
+    "verdict": "confirmed",
+    "evidence": "DETZ, Electron. Res. Announc. AMS 3 (1997) 99-104 (DOI 10.1090/S1079-6762-97-00031-0), outlines a proof that under GRH every odd number > 5 is a sum of three primes. Helfgott and Tao were not re-fetched.",
+    "source_url": "https://doi.org/10.1090/S1079-6762-97-00031-0"
+   },
+   {
+    "id": "C10",
+    "verdict": "confirmed",
+    "evidence": "Pintz, arXiv:1804.09084: E(X) < X^0.72 for sufficiently large X, with no hypothesis stated. The Hardy-Littlewood 1924 GRH bound X^{1/2+eps} was not fetched (standard).",
+    "source_url": "https://arxiv.org/abs/1804.09084"
+   },
+   {
+    "id": "C11",
+    "verdict": "confirmed",
+    "evidence": "Secondary sources confirm delta(4;3,1) = 0.9959 (Rubinstein-Sarnak, cited in lecture notes) and delta(3;2,1) = .9990 (Granville-Martin, arXiv:math/0408319), under GRH plus GSH/LI. The Project Euclid page came back empty.",
+    "source_url": "https://arxiv.org/pdf/math/0408319"
+   },
+   {
+    "id": "C12",
+    "verdict": "confirmed",
+    "evidence": "A secondary source gives delta(1) = 0.00000026 (about 2.6e-7) for pi(x) > li(x), assuming RH and LI for the zeta zeros. The primary RS page was not readable.",
+    "source_url": "https://arxiv.org/pdf/math/0408319"
+   },
+   {
+    "id": "C13",
+    "verdict": "confirmed",
+    "evidence": "Harper-Murty, Canad. J. Math. 56 (2004) 71-76: for K/Q Galois with unit rank > 3, O_K is Euclidean iff it is a PID, with no GRH. Weinberger 1973: under GRH, a PID with infinite unit group is Euclidean. Harper's Z[sqrt14] paper is in the same volume. Checked through search.",
+    "source_url": "https://resolve.cambridge.org/core/journals/canadian-journal-of-mathematics/article/euclidean-rings-of-algebraic-integers/B66EAE5371EDD740117CF87710BFBCA1"
+   },
+   {
+    "id": "C14",
+    "verdict": "confirmed",
+    "evidence": "Platt-Trudgian abstract (arXiv:1407.1914): theta(x) < x for 2 < x < 1.39*10^17, and theta(x) > x for some x < exp(727.951332668). The abstract does not state the pi(x) < li(x) consequence. The Skewes constants were not fetched (standard).",
+    "source_url": "https://arxiv.org/abs/1407.1914"
+   },
+   {
+    "id": "C15",
+    "verdict": "confirmed",
+    "evidence": "Polymath (Tao-Croot-Helfgott), arXiv:1009.3956, Math. Comp. 81 (2012) 1233-1246: the best unconditional time is O(N^{1/2+o(1)}), via Odlyzko. The paper decides the parity of the number of primes in an interval of [N,2N] in O(N^{1/2-c}); the full strategy is not achieved. CMS Thm 5 is stated as [x, x+(22/25)sqrt(x) log x] for x >= 4, which implies the backward interval used here.",
+    "source_url": "https://arxiv.org/abs/1009.3956"
+   },
+   {
+    "id": "C16",
+    "verdict": "confirmed",
+    "evidence": "This is a logical point: the hardness assumptions for factoring, ECDLP and LWE/SVP do not invoke RH or GRH, and the Lean proof contains no algorithm. The FIPS 186-5 page was not fetched (its Miller-Rabin and Lucas tests are standard).",
+    "source_url": "https://csrc.nist.gov/pubs/fips/186-5/final"
+   },
+   {
+    "id": "C17",
+    "verdict": "confirmed",
+    "evidence": "By reasoning: class-group characters of imaginary quadratic orders give Hecke L-functions, not Dirichlet ones, so neither RH nor the Lean Dirichlet GRH covers them (the dashboard excludes Hecke L-functions). The JMV citation and the BDF hypothesis were not fetched (BDF page returned 403).",
+    "source_url": "https://math.mit.edu/~drew/grh/"
+   },
+   {
+    "id": "C18",
+    "verdict": "corrected",
+    "corrected_statement": "Schoenfeld 1976 (RH): |pi(x)-li(x)| < (1/(8pi)) sqrt(x) log x for x >= 2657, and |theta(x)-x| < (1/(8pi)) sqrt(x) log^2 x for x >= 599. The psi threshold 73.2 is unverified. Buthe 2016 Thm 2, now valid for all x: |psi(x)-x| <= sqrt(x) log^2 x/(8pi) for x > 59; |theta(x)-x| <= the same for x > 599; |pi*(x)-li(x)| <= sqrt(x) log x/(8pi) for x > 59; |pi(x)-li(x)| <= the same for x > 2657. Before RH, all four were proven only while 4.92 sqrt(x/log x) <= T, not just the pi bound.",
+    "evidence": "Buthe, arXiv:1410.7015 (Math. Comp. 85 (2016) 2483-2498), Thm 2, read via ar5iv. The text does not contain 73.2.",
+    "source_url": "https://ar5iv.labs.arxiv.org/html/1410.7015"
+   },
+   {
+    "id": "C19",
+    "verdict": "corrected",
+    "corrected_statement": "CMS, Comment. Math. Helv. 94 (2019) 533-568. Thm 5 (RH): for x >= 4 there is a prime in [x, x + (22/25) sqrt(x) log x]; equivalently p_{n+1} - p_n <= (22/25) sqrt(p_n) log p_n for p_n > 3. Cor 4 (RH): limsup (p_{n+1}-p_n)/(sqrt(p_n) log p_n) <= 1/C+(B) < 21/25. Chirre-Pereira-de Laat, Math. Comp. 90 (2021) 2235-2246: limsup < 0.8358, assuming RH only.",
+    "evidence": "Read from the CMS PDF text (Thm 5, Cor 4). The CPdL result comes from search: C+ >= 1.1965, so 1/C+ < 0.8358. The backward form (x - (22/25)sqrt(x) log x, x] is a consequence, not the stated theorem.",
+    "source_url": "https://arxiv.org/abs/1708.04122"
+   },
+   {
+    "id": "C20",
+    "verdict": "corrected",
+    "corrected_statement": "The bounds are exactly as stated (RH, t >= 10^10), but LLS Sec. 1.3 gives them without any proof, as consequences of the method; there is no sketch. The L(1,chi) analogues are LLS Thm 1.5 (GRH, primitive chi, q >= 10^10), proved in Sec. 5.",
+    "evidence": "LLS ar5iv text, Sec. 1.3 and Thm 1.5.",
+    "source_url": "https://ar5iv.labs.arxiv.org/html/1309.3595"
+   },
+   {
+    "id": "C21",
+    "verdict": "confirmed",
+    "evidence": "Bui-Heath-Brown, arXiv:1302.5018 (Bull. LMS, doi 10.1112/blms/bdt026): at least 19/27 of the zeros are simple, assuming RH only; Conrey-Ghosh-Gonek needed RH + GLH. Knausgard, arXiv:2610.08965 (6 Oct 2026, unrefereed, Lean with 3 computation axioms): liminf N_0^s(T)/N(T) >= 0.67353. Montgomery's 2/3 was not fetched (standard).",
+    "source_url": "https://arxiv.org/abs/1302.5018"
+   },
+   {
+    "id": "C22",
+    "verdict": "confirmed",
+    "evidence": "The dashboard shows robin_inequality (5040 < n implies sigma(n) < e^gamma n log log n) and lagarias_inequality (0 < n implies sigma(n) <= H_n + exp(H_n) log H_n), built on a separate Robin1984 formalization. Both are accepted by nanoda, con-leche master, and con-leche and con-ron compare against ArithChallenge. Lake comparator is still running. The leanchecker and lean4lean passes cover only the RH archive.",
+    "source_url": "https://math.mit.edu/~drew/grh/"
+   },
+   {
+    "id": "C23",
+    "verdict": "confirmed",
+    "evidence": "OEIS A006880 quotes BFJK as computing pi(10^25) = 176846309399143769411680 unconditionally. a(26) is from Staple (2014); a(27) to a(29) are from Baugh-Walisch (2016, 2020, 2022). Platt's analytic paper (arXiv:1203.5712) is linked. The page does not show the BFJK year (2013) or method labels.",
+    "source_url": "https://oeis.org/A006880"
+   },
+   {
+    "id": "C24",
+    "verdict": "confirmed",
+    "evidence": "The dashboard (updated 2026-11-22 04:35 UTC; it says checks were run with Claude Code) lists five theorems, including the three Dirichlet ones, with axioms propext, Classical.choice and Quot.sound only. leanchecker (175,187/175,187), nanoda, con-leche, con-ron compare and lean4lean all pass. Lake comparator and the Lean default/paranoid kernels are still running. The con-leche/con-ron builds bundled with v4.36.0 declined (exit 2), which is not a rejection. Dedekind, Hecke and automorphic L-functions are not covered. remark.pdf claims GRH, expects ERH, and dates GRH 11/16/26. Neither the dashboard nor a search turned up a joint Lean/Mathlib statement.",
+    "source_url": "https://math.mit.edu/~drew/grh/"
+   },
+   {
+    "id": "C25",
+    "verdict": "confirmed",
+    "evidence": "The Clay RH page labels the problem Unsolved (fetched today, with no mention of the proof). The rules were adopted 26 Sep 2018 and require publication in a Qualifying Outlet, at least two years since publication, and general acceptance. The rules web page does not mention formal proofs; the full rules PDF was not checked.",
+    "source_url": "https://www.claymath.org/millennium-problems/rules/"
+   },
+   {
+    "id": "C26",
+    "verdict": "confirmed",
+    "evidence": "OfficeChai (21 Nov 2026) reports the Association for Human Mathematics statement. It alleges no specific error. It argues that no human can take responsibility for or understand the document, and that no one can be fully certain it is correct. It calls for democratic oversight of AI companies. The article mentions the October statement on OpenAI's 700+ AI-generated manuscripts and its repost on Tao's blog, but gives no 7 Oct date and no AHM URL.",
+    "source_url": "https://officechai.com/ai/gravely-concerned-that-uncontrolled-growth-in-ai-poses-a-threat-to-society-says-association-of-human-mathematics-on-riemann-hypothesis-proof/"
+   },
+   {
+    "id": "C27",
+    "verdict": "confirmed",
+    "evidence": "remark.pdf (4 pages) presents only the Lean. A Claude prose 'GRH book' reached 250,000+ pages and was not posted. Listed ingredients: a Stepanov determinant/multiplicity, chained theta lifts of length about sqrt(X) for the von Mangoldt sum, iterated lifts between totally definite unitary groups, a relative trace formula, an Iwasawa tower (via Behrend), and a significant weakening of Vandiver. Alpoge intends a proper write-up and expects massive simplification. No independent reconstruction was found.",
+    "source_url": "https://alpo.ge/remark.pdf"
+   }
+  ],
+  "missing": [
+   "RH gives the de Bruijn-Newman constant Lambda = 0 exactly: Rodgers-Tao proved Lambda >= 0, and RH is equivalent to Lambda <= 0 (arXiv:1801.05914, fetched).",
+   "Ramanujan's inequality pi(x)^2 < (e x/log x) pi(x/e): under RH the largest integer counterexample is x = 38,358,837,682 (Dudek-Platt, arXiv:1407.1901, via search), so this is now unconditional. The earlier unconditional range was x >= exp(9658), later exp(9032) (Axler).",
+   "The Lindelof hypothesis now follows from RH. Explicit form: |zeta(1/2+it)| << exp(((log 2)/2+o(1)) log t/log log t) (Chandee-Soundararajan, Bull. LMS 43 (2011)). Sharp moment bounds: the integral of |zeta(1/2+it)|^{2k} over [T,2T] is << T (log T)^{k^2} (Harper, arXiv:1305.4618). Neither was fetched.",
+   "Mertens function: on RH, M(x) << sqrt(x) exp((log x)^{1/2} (log log x)^{14}) (Soundararajan, J. reine angew. Math. 631 (2009)), with exponent 5/2+eps by Balazard-de Roton (arXiv:0810.3587). Now unconditional (not fetched).",
+   "If the Lean Dirichlet GRH is accepted, there are no Landau-Siegel zeros, and L(1,chi) and class-number bounds become effective and explicit. Example, LLS Thm 1.5 (primitive chi, q >= 10^10): 1/|L(1,chi)| <= (12e^gamma/pi^2)(log log q - log 2 + 1/2 + 1/log log q + 14 log log q/log q) (arXiv:1309.3595, fetched).",
+   "If the Lean Dirichlet GRH is accepted: psi(x;q,a) = x/phi(q) + O(sqrt(x) log^2 x) uniformly for q <= x, a pointwise Bombieri-Vinogradov (Davenport, Multiplicative Number Theory, ch. 20; not fetched)."
+  ]
+ },
+ "B-analytic-consequences": {
+  "summary": "Lens B, taking RH for zeta as a theorem. Anything proved conditionally on RH for zeta alone now holds unconditionally. That covers: the Lindelof hypothesis and log|zeta(1/2+it)| <= ((log 2)/2+o(1)) log t/log log t (Chandee-Soundararajan 2011); Simonic's explicit bounds; Soundararajan's and Harper's moment upper bounds; and Montgomery's pair correlation theorem with its consequences. With the unconditional lower bounds, the order T(log T)^{k^2} of the 2k-th moment is now settled for every fixed k>0. The pair correlation consequences are: simple zeros >= 19/27 (Bui-Heath-Brown), distinct zeros >= 0.8477 and N*(T) <= 1.3208 N(T) (Chirre-Goncalves-de Laat). The gap records lambda > 3.18 and mu <= 0.515396 also become unconditional; the claimed 0.50412 was withdrawn. So do the S(t) and S_1(t) bounds 1/4, pi/24 and pi/48, and Lambda = 0, because Rodgers-Tao already gave Lambda >= 0. Every RH-equivalent criterion now holds: Li, Nyman-Beurling/Baez-Duarte, Riesz, Hardy-Littlewood, Franel-Landau, Redheffer, Weil positivity for zeta, Speiser, Jensen polynomials, Robin, Lagarias and Nicolas. The Mertens bounds also hold (O(x^{1/2+eps}); Soundararajan exponent 14; Balazard-de Roton exponent 5/2+eps), as do Selberg, Cramer, Carneiro-Milinovich-Soundararajan and Schoenfeld for primes, and Littlewood's 1-line bounds with their explicit forms (Lamzouri-Li-Soundararajan 2015; Chirre-Molero 2026). Still open: the pair correlation conjecture, 100% simple zeros, mu=0 and lambda=infinity, the moment constants, the LI-based prime races, the Ng/Gonek conjectures on M(x), the Nyman-Beurling rate, and every GRH analogue. The August 2026 Claude result (Alpoge-Furman, arXiv:2608.13637, checked in Lean) proved unconditionally that at least 2/3 of zeros are simple and on the line and at least 5/6 are distinct. It raised the critical-line record from about 41.6% (5/12). For zeta it is now superseded: all zeros are on the line, at least 19/27 are simple and at least 0.8477 are distinct. Its extension to Dirichlet L-functions is not superseded, because GRH is open. The September 2026 follow-up by Lamzouri and the October 2026 one by Knausgard are superseded for zeta in the same way. Caveats: I did not check the RH proof announcement myself and took it as given. The 3.18 gap value and the Balazard-de Roton 5/2+eps exponent come from secondary citations only. Simonic's constants come from an HTML summary that was partly inconsistent, so they are medium confidence. I could not extract text from the Anthropic paper PDFs. Two items are from memory, not checked this session: the 22/25 prime-gap constant and the second-order term of Li's asymptotic. About 30 tool calls; no files or systems were changed.",
+  "claims": [
+   {
+    "id": "B01",
+    "statement": "Lindelof hypothesis: zeta(1/2+it) <<_eps |t|^eps for every eps>0. In fact log|zeta(1/2+it)| << log t/log log t (Littlewood 1912). Lindelof mu(sigma)=0 for sigma>=1/2 and 1/2-sigma for sigma<=1/2.",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Lindel%C3%B6f_hypothesis",
+    "source_title": "Lindelof hypothesis (Littlewood 1912)",
+    "year": "1912",
+    "before": "Conditional. Best unconditional: mu(1/2) <= 13/84 (Bourgain 2017)",
+    "confidence": "high",
+    "notes": "The 13/84 subconvexity record is superseded for zeta. LH for Dirichlet L-functions (GLH) is still open."
+   },
+   {
+    "id": "B02",
+    "statement": "log|zeta(1/2+it)| <= ((log 2)/2 + o(1)) log t/log log t, i.e. constant log sqrt2 = 0.3466... (Chandee-Soundararajan, Bull. LMS 43 (2011) 243-250).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2010.13307",
+    "source_title": "Simonic, arXiv:2010.13307 (cites CS11 with C00 = log sqrt2)",
+    "year": "2011",
+    "before": "RH-conditional; earlier RH constant 0.373 = (1+lambda0)/4 (Soundararajan 2009)",
+    "confidence": "high",
+    "notes": "Carneiro-Chandee (JNT 2011) extend this to 1/2<sigma<1; their strip constants were not checked here."
+   },
+   {
+    "id": "B03",
+    "statement": "Explicit: |zeta(1/2+it)| <= exp((0.5 + 6.992/((log t)^0.252 log log t)) log t/log log t) for t >= 10^40. Simplified: |zeta(1/2+it)| <= exp(0.995 log t/log log t) for t >= 2pi. Beats the unconditional explicit bounds for t >= 10^72.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2010.13307",
+    "source_title": "Simonic, On explicit estimates for S(t), S1(t), zeta(1/2+it) under RH (JNT 2022)",
+    "year": "2020",
+    "before": "RH-conditional",
+    "confidence": "medium",
+    "notes": "Read from an ar5iv summary. The numbers are self-consistent (0.995 is the main bound at t=10^40), but the summary also listed 0.543/0.337/0.373 as the paper's constants. Check the PDF."
+   },
+   {
+    "id": "B04",
+    "statement": "Explicit: |S(t)| <= (0.759282 + 20.1911/((log t)^0.285 log log t)) log t/log log t for t >= 10^2465. |S1(t)| <= (0.653 + 60.12/((log t)^0.2705 log log t)) log t/(log log t)^2 for t >= 10^208. Simplified for t >= 2pi: |S(t)| <= 0.96 log t/log log t and |S1(t)| <= 2.491 log t/(log log t)^2.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2010.13307",
+    "source_title": "Simonic (JNT 231 (2022))",
+    "year": "2020",
+    "before": "RH-conditional",
+    "confidence": "medium",
+    "notes": "Beats unconditional explicit bounds only for t >= 10^2510 (S) and t >= 10^208.4 (S1)."
+   },
+   {
+    "id": "B05",
+    "statement": "Explicit zero gaps: for consecutive ordinates gamma' >= gamma >= 10^2465, gamma' - gamma <= (9.55 + 253.82/((log gamma)^0.285 log log gamma))/log log gamma. In particular gamma' - gamma <= 12.05/log log gamma.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2010.13307",
+    "source_title": "Simonic, Corollary 2",
+    "year": "2020",
+    "before": "RH-conditional",
+    "confidence": "medium"
+   },
+   {
+    "id": "B06",
+    "statement": "S(t) = O(log t/log log t) and S1(t) = O(log t/(log log t)^2) (Littlewood 1924). Sharpest: |S(t)| <= (1/4+o(1)) log t/log log t, and -(pi/24+o(1)) log t/(log log t)^2 <= S1(t) <= (pi/48+o(1)) log t/(log log t)^2 (Carneiro-Chandee-Milinovich, Math. Ann. 356 (2013) 939-968).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1309.1526",
+    "source_title": "Carneiro-Chandee-Milinovich, Bounding S(t) and S1(t) on RH",
+    "year": "2013",
+    "before": "RH-conditional; Goldston-Gonek 2007 had 1/2 for S(t). Unconditional: S(t)=O(log t)",
+    "confidence": "high",
+    "notes": "Gives |N(T) - (T/2pi)log(T/2pi e) - 7/8| <= (1/4+o(1)) log T/log log T. Carneiro-Chirre (2018) treat S_n(t)."
+   },
+   {
+    "id": "B07",
+    "statement": "Gaps between consecutive ordinates: gamma' - gamma <= (pi + o(1))/log log gamma (Goldston-Gonek, Bull. LMS 2007).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2010.13307",
+    "source_title": "Simonic (cites GG07)",
+    "year": "2007",
+    "before": "RH-conditional; Littlewood had O(1/log log gamma)",
+    "confidence": "high"
+   },
+   {
+    "id": "B08",
+    "statement": "For every fixed real k>0 and eps>0: integral_0^T |zeta(1/2+it)|^{2k} dt <<_{k,eps} T (log T)^{k^2+eps} (Soundararajan, Annals 170 (2009) 981-993).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/math/0612106",
+    "source_title": "Soundararajan, Moments of the Riemann zeta function",
+    "year": "2009",
+    "before": "RH-conditional",
+    "confidence": "high",
+    "notes": "Superseded in sharpness by Harper (B09)."
+   },
+   {
+    "id": "B09",
+    "statement": "Sharp upper bound: for every fixed k>=0, integral_T^{2T} |zeta(1/2+it)|^{2k} dt <<_k T (log T)^{k^2} (Harper 2013). With the unconditional lower bounds >>_k T(log T)^{k^2} (Radziwill-Soundararajan 2013 for k>=1; Heap-Soundararajan 2022 for all k>0), the order is now settled for every fixed k>0.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1305.4618",
+    "source_title": "Harper, Sharp conditional bounds for moments of the Riemann zeta function",
+    "year": "2013",
+    "before": "RH-conditional for k>2. Unconditional sharp upper bounds only for 0<=k<=2 (Heap-Radziwill-Soundararajan 2019)",
+    "confidence": "high"
+   },
+   {
+    "id": "B10",
+    "statement": "The moment asymptotic integral_0^T |zeta(1/2+it)|^{2k} dt ~ C_k T (log T)^{k^2} with the Keating-Snaith/CFKRS constant is still open for k>=3 and for non-integer k. RH gives only the order of magnitude.",
+    "needs": "RH_plus_other",
+    "source_url": "https://arxiv.org/abs/1305.4618",
+    "source_title": "Harper 2013 (context)",
+    "year": "2000",
+    "before": "Open (known only for k=1 Hardy-Littlewood, k=2 Ingham)",
+    "confidence": "high"
+   },
+   {
+    "id": "B11",
+    "statement": "Montgomery's pair correlation theorem: F(alpha) = (1+o(1)) T^{-2alpha} log T + alpha + o(1) uniformly for 0<=alpha<=1, where F(alpha) = (2pi/(T log T)) sum_{0<gamma,gamma'<=T} T^{i alpha(gamma-gamma')} 4/(4+(gamma-gamma')^2).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2306.04799",
+    "source_title": "Baluyot-Goldston-Suriajaya-Turnage-Butterbaugh, unconditional Montgomery theorem (context)",
+    "year": "1973",
+    "before": "RH-conditional (Proc. Symp. Pure Math. 24); BGST 2023 gave an unconditional variant",
+    "confidence": "high",
+    "notes": "The original theorem now holds unconditionally."
+   },
+   {
+    "id": "B12",
+    "statement": "At least 2/3 of zeros are simple: N_s(T) >= (2/3+o(1))N(T), and N*(T) = sum_{0<gamma<=T} m_rho <= (4/3+o(1))N(T) (Montgomery 1973). Montgomery-Taylor and Cheer-Goldston improved these to 67.27% and 1.3275.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1810.08843",
+    "source_title": "Chirre-Goncalves-de Laat (history of records)",
+    "year": "1973",
+    "before": "RH-conditional",
+    "confidence": "high",
+    "notes": "Numerically superseded by B13 and B14."
+   },
+   {
+    "id": "B13",
+    "statement": "At least 19/27 = 0.7037... of zeros are simple (Bui-Heath-Brown, Bull. LMS 45 (2013)). They also give distinct zeros >= 0.8466 (as cited by CGdL).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1302.5018",
+    "source_title": "Bui-Heath-Brown, On simple zeros of the Riemann zeta-function",
+    "year": "2013",
+    "before": "Conrey-Ghosh-Gonek 1998 had 19/27 under RH+GLH; BHB removed GLH",
+    "confidence": "high",
+    "notes": "Best RH-only simple-zero proportion found."
+   },
+   {
+    "id": "B14",
+    "statement": "N*(T) <= (1.3208+o(1))N(T); distinct zeros N_d(T) >= (0.8477+o(1))N(T); simple zeros N_s(T) >= (0.6792+o(1))N(T); N(0.6039,T) >> N(T), i.e. a positive proportion of pairs lie within 0.6039 mean spacings (Chirre-Goncalves-de Laat, Adv. Math. 361 (2020)).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1810.08843",
+    "source_title": "Chirre-Goncalves-de Laat, pair correlation via semidefinite programming",
+    "year": "2020",
+    "before": "RH: Montgomery-Taylor 1.3275; distinct 0.8466 (BHB); small-gap pairs 0.6068 (CCLM)",
+    "confidence": "high",
+    "notes": "0.8477 is the best RH-only distinct-zero bound found. For simple zeros, 19/27 is better than 0.6792."
+   },
+   {
+    "id": "B15",
+    "statement": "The pair correlation conjecture, F(alpha) = 1+o(1) uniformly on compact subsets of alpha>=1, is still open. It would give N*(T) ~ N(T) (almost all zeros simple). GUE statistics are also unproved.",
+    "needs": "RH_plus_other",
+    "source_url": "https://arxiv.org/abs/math/0412313",
+    "source_title": "Goldston, Notes on pair correlation of zeros and prime numbers",
+    "year": "1973",
+    "before": "Open",
+    "confidence": "high"
+   },
+   {
+    "id": "B16",
+    "statement": "Goldston-Montgomery equivalence (1987): the pair correlation conjecture (F(alpha) ~ 1 uniformly for 1<=alpha<=A) is equivalent to integral_1^X (psi(x+delta x) - psi(x) - delta x)^2 dx ~ (1/2) delta X^2 log(1/delta) in the matching range X^{-1} <= delta <= X^{-1/A}. The equivalence is now unconditional; both sides remain open.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/math/0412313",
+    "source_title": "Goldston, Notes on pair correlation of zeros and prime numbers",
+    "year": "1987",
+    "before": "Equivalence held under RH",
+    "confidence": "medium",
+    "notes": "Exact uniformity ranges not checked."
+   },
+   {
+    "id": "B17",
+    "statement": "Large gaps: lambda := limsup (gamma_{n+1}-gamma_n) log gamma_n/(2pi) > 3.18 (Bui-Milinovich, Q. J. Math. 69 (2018)).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1708.00030",
+    "source_title": "Conrey-Turnage-Butterbaugh 2017 (cites lambda > 3.18, Bui-Milinovich, under RH)",
+    "year": "2018",
+    "before": "RH: Montgomery-Odlyzko 1.9799, Conrey-Ghosh-Gonek 2.337; GRH: CGG 2.68, Bui 3.033",
+    "confidence": "medium",
+    "notes": "Only seen in secondary citations. It may be unconditional for critical-line zeros (Hall-type method); either way it now holds for all zeros."
+   },
+   {
+    "id": "B18",
+    "statement": "Small gaps: mu := liminf (gamma_{n+1}-gamma_n) log gamma_n/(2pi) <= 0.515396 (Preobrazhenskii 2016). This is the best known bound per the 2022 survey of Bui-Goldston-Milinovich-Montgomery.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2208.02359",
+    "source_title": "Bui-Goldston-Milinovich-Montgomery, Small gaps and small spacings between zeta zeros",
+    "year": "2016",
+    "before": "RH: Montgomery 0.68, Montgomery-Odlyzko 0.5179, Conrey-Ghosh-Gonek ~0.517, Bui-Milinovich-Ng 0.5155",
+    "confidence": "high"
+   },
+   {
+    "id": "B19",
+    "statement": "The claimed RH bound mu < 0.50412 (Goldston-Turnage-Butterbaugh, arXiv:1904.06001) is WITHDRAWN. An error invalidates Theorem 1, so do not use it.",
+    "needs": "not_applicable",
+    "source_url": "https://arxiv.org/abs/1904.06001",
+    "source_title": "Goldston-Turnage-Butterbaugh (withdrawn v2)",
+    "year": "2019",
+    "before": "Withdrawn",
+    "confidence": "high"
+   },
+   {
+    "id": "B20",
+    "statement": "mu = 0 and lambda = infinity (arbitrarily small and large normalized gaps) are conjectured from the pair correlation conjecture and GUE. RH does not imply them.",
+    "needs": "RH_plus_other",
+    "source_url": "https://arxiv.org/abs/2208.02359",
+    "source_title": "Bui-Goldston-Milinovich-Montgomery",
+    "year": "1973",
+    "before": "Open",
+    "confidence": "high"
+   },
+   {
+    "id": "B21",
+    "statement": "r-gaps (Selberg's announcement): for each r, limsup of normalized r-gaps >= 1 + Theta/r^{1/2} and liminf <= 1 - vartheta/r^{1/2}. Proved under RH by Conrey-Turnage-Butterbaugh. The unconditional exponent is 2/3 (Inoue).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2603.17334",
+    "source_title": "Zhao, Density results for r-gaps (2026)",
+    "year": "2018",
+    "before": "RH-conditional at exponent 1/2",
+    "confidence": "high",
+    "notes": "Zhao (2026) adds positive-proportion versions."
+   },
+   {
+    "id": "B22",
+    "statement": "Unconditional: a positive proportion of zeta zero gaps are <= 2pi*lambda0/log gamma_n with lambda0 = 0.7892 (Lamzouri, Nov 2026). The previous value was 1 - 2.36*10^-6 (Zhao).",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2611.14486",
+    "source_title": "Lamzouri, The distribution of small gaps between zeros of zeta",
+    "year": "2026",
+    "before": "Unconditional",
+    "confidence": "high",
+    "notes": "Uses the unconditional Montgomery method. I did not compare it with RH positive-proportion constants."
+   },
+   {
+    "id": "B23",
+    "statement": "de Bruijn-Newman constant: Lambda = 0. RH is equivalent to Lambda <= 0, and Rodgers-Tao proved Lambda >= 0 unconditionally (Forum Math. Pi 8 (2020) e6).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1801.05914",
+    "source_title": "Rodgers-Tao, The de Bruijn-Newman constant is non-negative",
+    "year": "2018",
+    "before": "0 <= Lambda <= 0.2 (Polymath15 0.22 in 2019; Platt-Trudgian 0.2 in 2021)",
+    "confidence": "high"
+   },
+   {
+    "id": "B24",
+    "statement": "Li's criterion: lambda_n = sum_rho [1 - (1-1/rho)^n] >= 0 for all n >= 1 (Li 1997: this is equivalent to RH). So all Li coefficients are non-negative.",
+    "needs": "RH_only",
+    "source_url": "https://doi.org/10.1006/jnth.1997.2137",
+    "source_title": "Li, J. Number Theory 65 (1997) 325-333",
+    "year": "1997",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B25",
+    "statement": "Li coefficient asymptotic: lambda_n = (n/2) log n + ((gamma - 1 - log 2pi)/2) n + O(sqrt(n) log n) (Bombieri-Lagarias 1999; Lagarias 2007).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Li%27s_criterion",
+    "source_title": "Li's criterion",
+    "year": "1999",
+    "before": "RH-conditional",
+    "confidence": "medium"
+   },
+   {
+    "id": "B26",
+    "statement": "Nyman-Beurling and Baez-Duarte: the indicator of (0,1] lies in the L^2 closure of span{rho(1/(kx)) : k in N}, with rho the fractional part. Equivalently d_N -> 0. Nyman's version: the functions sum c_nu rho(theta_nu/x) with sum c_nu theta_nu = 0 are dense in L^2(0,1).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/math/0202141",
+    "source_title": "Baez-Duarte, A strengthening of the Nyman-Beurling criterion (2003)",
+    "year": "2003",
+    "before": "RH-equivalent (Nyman 1950, Beurling 1955)",
+    "confidence": "high",
+    "notes": "Beurling's L^p version (no zeros for Re s > 1/p) also follows."
+   },
+   {
+    "id": "B27",
+    "statement": "Nyman-Beurling rate: d_N^2 ~ (2 + gamma - log 4pi)/log N is still open (Baez-Duarte-Balazard-Landreau-Saias conjecture). Burnol proved liminf d_N^2 log N >= sum m_rho^2/|rho|^2 unconditionally. The asymptotic needs simple zeros plus further hypotheses.",
+    "needs": "RH_plus_other",
+    "source_url": "https://arxiv.org/abs/math/0202141",
+    "source_title": "Baez-Duarte 2003 (context)",
+    "year": "2000",
+    "before": "Open",
+    "confidence": "medium"
+   },
+   {
+    "id": "B28",
+    "statement": "Riesz criterion: -sum_{k>=1} (-x)^k/((k-1)! zeta(2k)) = O(x^{1/4+eps}) for every eps>0 (Riesz 1916: this is equivalent to RH).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Riesz 1916, Acta Math. 40)",
+    "year": "1916",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B29",
+    "statement": "Hardy-Littlewood criterion: sum_{k>=1} (-x)^k/(k! zeta(2k+1)) = O(x^{-1/4}) as x -> infinity (Hardy-Littlewood 1918: this is equivalent to RH).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riesz_function",
+    "source_title": "Riesz function (Hardy-Littlewood 1918, Acta Math. 41)",
+    "year": "1918",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B30",
+    "statement": "Franel-Landau: for the Farey fractions r_1<...<r_m of order N, with m = sum_{n<=N} phi(n): sum |r_nu - nu/m| = O(N^{1/2+eps}) (Landau) and sum (r_nu - nu/m)^2 = O(N^{-1+eps}) (Franel). Both are equivalent to RH (1924).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Franel-Landau 1924)",
+    "year": "1924",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B31",
+    "statement": "Redheffer matrix: det R_n = M(n), where R_n(i,j) = 1 if j=1 or i|j and 0 otherwise. Hence det R_n = O(n^{1/2+eps}).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Redheffer_matrix",
+    "source_title": "Redheffer matrix (Redheffer 1977)",
+    "year": "1977",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B32",
+    "statement": "Weil positivity: Weil's explicit-formula functional satisfies W(g * g~) >= 0 for all admissible test functions g (Weil 1952: this is equivalent to RH). So for zeta, Weil's Hermitian form is positive semidefinite.",
+    "needs": "RH_only",
+    "source_url": "https://eudml.org/doc/252338",
+    "source_title": "Bombieri, Remarks on Weil's quadratic functional (2000)",
+    "year": "1952",
+    "before": "RH-equivalent",
+    "confidence": "high",
+    "notes": "Weil positivity for Dirichlet/Hecke L-functions is GRH and still open. The Claude/Alpoge-Furman proof uses finite compressions of this form."
+   },
+   {
+    "id": "B33",
+    "statement": "Speiser: zeta'(s) has no zeros in 0 < Re s < 1/2 (Speiser 1934: this is equivalent to RH; Levinson-Montgomery 1974 quantified it).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Speiser 1934, Math. Ann. 110)",
+    "year": "1934",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B34",
+    "statement": "All Jensen polynomials J^{d,n}(X) of the Taylor coefficients of Xi are hyperbolic, for all d,n >= 0 (Polya: this is equivalent to RH). Griffin-Ono-Rolen-Zagier (2019) had proved it for each d with n large, and for d<=8 with all n.",
+    "needs": "RH_only",
+    "source_url": "https://doi.org/10.1073/pnas.1902572116",
+    "source_title": "Griffin-Ono-Rolen-Zagier, PNAS 116 (2019)",
+    "year": "2019",
+    "before": "Known for d<=8 or n large; RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B35",
+    "statement": "Robin: sigma(n) < e^gamma n log log n for all n > 5040 (Robin 1984: this is equivalent to RH).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Robin 1984)",
+    "year": "1984",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B36",
+    "statement": "Lagarias: sigma(n) <= H_n + exp(H_n) log H_n for all n >= 1, with equality only at n=1 (Lagarias 2002: this is equivalent to RH).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Lagarias 2002, Amer. Math. Monthly 109)",
+    "year": "2002",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B37",
+    "statement": "Nicolas: N_k/phi(N_k) > e^gamma log log N_k for every primorial N_k (Nicolas 1983: this is equivalent to RH).",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Nicolas 1983)",
+    "year": "1983",
+    "before": "RH-equivalent",
+    "confidence": "medium"
+   },
+   {
+    "id": "B38",
+    "statement": "Mertens: M(x) <<_eps x^{1/2+eps} (Littlewood 1912: this is equivalent to RH). Hence sum mu(n) n^{-s} converges to 1/zeta(s) for every s with Re s > 1/2.",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+    "source_title": "Riemann hypothesis (Littlewood 1912)",
+    "year": "1912",
+    "before": "RH-equivalent",
+    "confidence": "high"
+   },
+   {
+    "id": "B39",
+    "statement": "M(x) << sqrt(x) exp((log x)^{1/2} (log log x)^{14}) (Soundararajan, Crelle 2009), improved to <<_eps sqrt(x) exp((log x)^{1/2} (log log x)^{5/2+eps}) (Balazard-de Roton 2008).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/0810.3587",
+    "source_title": "Balazard-de Roton, notes on Soundararajan's Partial sums of the Mobius function",
+    "year": "2009",
+    "before": "RH: Landau 1924 and Titchmarsh 1927, x^{1/2} exp(A log x/log log x); Maier-Montgomery 2009, exp(C(log x)^{39/61})",
+    "confidence": "high",
+    "notes": "The 5/2+eps exponent was seen only in secondary citations. Soundararajan's paper is arXiv:0705.0723."
+   },
+   {
+    "id": "B40",
+    "statement": "Explicit RH versions of Titchmarsh's bound M(x) << x^{1/2} exp(A log x/log log x), of Montgomery-Vaughan's bound for k-free numbers, and of |zeta(s)| bounds right up to the critical line (Simonic).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2109.11744",
+    "source_title": "Simonic, Explicit estimates for zeta(s) in the critical strip under RH",
+    "year": "2021",
+    "before": "RH-conditional",
+    "confidence": "medium",
+    "notes": "Constants not extracted."
+   },
+   {
+    "id": "B41",
+    "statement": "Finer Mertens questions are still open: the Gonek/Ng conjectured size M(x) << sqrt(x) (log log log x)^{5/4}; a limiting distribution of e^{-y/2} M(e^y) (Ng 2004, which needs RH plus J_{-1}(T) << T); and the weak Mertens bound integral_2^X (M(x)/x)^2 dx << log X, which implies all zeros are simple.",
+    "needs": "RH_plus_other",
+    "source_url": "https://en.wikipedia.org/wiki/Mertens_function",
+    "source_title": "Mertens function",
+    "year": "2004",
+    "before": "Open",
+    "confidence": "medium"
+   },
+   {
+    "id": "B42",
+    "statement": "In Re s > 1/2: zeta(s), 1/zeta(s) <<_eps t^eps. zeta'/zeta(s) << (log t)^{2-2sigma} for 1/2 < sigma0 <= sigma <= sigma1 < 1. log zeta(s) << (log t)^{2-2sigma}/log log t for 1/2 + 1/log log t <= sigma <= sigma1 < 1 (Littlewood; Titchmarsh ch. XIV).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2109.11744",
+    "source_title": "Simonic 2021 (context); Titchmarsh ch. 14",
+    "year": "1924",
+    "before": "RH-conditional",
+    "confidence": "medium"
+   },
+   {
+    "id": "B43",
+    "statement": "Littlewood: |zeta(1+it)| <= (2e^gamma + o(1)) log log t and 1/|zeta(1+it)| <= (12e^gamma/pi^2 + o(1)) log log t.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2602.06199",
+    "source_title": "Chirre-Molero, Explicit conditional bounds for zeta(s) at the edge of the critical strip",
+    "year": "1928",
+    "before": "RH-conditional (unconditional bounds are only O(log t/log log t)-type)",
+    "confidence": "high"
+   },
+   {
+    "id": "B44",
+    "statement": "Explicit 1-line bounds. For t >= 10^10 (Lamzouri-Li-Soundararajan 2015): |zeta(1+it)| <= 2e^gamma (log log t - log 2 + 1/2 + 1/log log t), and 1/|zeta(1+it)| <= (12e^gamma/pi^2)(log log t - log 2 + 1/2 + 1/log log t + 14 log log t/log t). For t >= e^18 (Chirre-Molero 2026): |zeta(1+it)| <= 2e^gamma (log log t - log 2 + 1/2 + 0.2674/log log t - 2.6 log log t/log t), and 1/|zeta(1+it)| <= (12e^gamma/pi^2)(log log t - log 2 + 1/2 + 5/(8 log log t) + 10.8/(log log t)^2).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2602.06199",
+    "source_title": "Chirre-Molero (to appear, Portugaliae Math.)",
+    "year": "2026",
+    "before": "RH-conditional",
+    "confidence": "high"
+   },
+   {
+    "id": "B45",
+    "statement": "For t >= e^18: |zeta'/zeta(1+it)| <= 2 log log t + 0.0784 - gamma + 9.0581 log log t/log t - 4.7/log t, and <= 2 log log t for t >= 10^30 (Chirre-Molero 2026). Also Re zeta'/zeta(1+it) <= 2 log log t + 1 - gamma - log 4 + 8 log log t/log t - 8.6544/log t. Prior bound (Chirre-Hagen-Simonic, t >= 10^30): 2 log log t - 0.4989 + 5.35 (log log t)^2/log t.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2602.06199",
+    "source_title": "Chirre-Molero 2026",
+    "year": "2026",
+    "before": "RH-conditional",
+    "confidence": "high"
+   },
+   {
+    "id": "B46",
+    "statement": "Analogues of B43-B45 for L(1,chi), L'/L(1,chi), the least quadratic non-residue and other character-sum consequences need GRH and stay conditional.",
+    "needs": "GRH",
+    "source_url": "https://arxiv.org/abs/2602.06199",
+    "source_title": "Chirre-Molero (context: Lamzouri-Li-Soundararajan 2015)",
+    "year": "2015",
+    "before": "GRH-conditional",
+    "confidence": "high"
+   },
+   {
+    "id": "B47",
+    "statement": "Selberg 1943: pi(x+h) - pi(x) ~ h/log x for almost all x, whenever h/log^2 x -> infinity. Also sum_{p_n<=x} (p_{n+1}-p_n)^2/p_n << log^3 x.",
+    "needs": "RH_only",
+    "source_url": "https://en.wikipedia.org/wiki/Prime_gap",
+    "source_title": "Selberg, Arch. Math. Naturvid. 47 (1943)",
+    "year": "1943",
+    "before": "RH-conditional; unconditional almost-all results need h = x^{c} with c>0",
+    "confidence": "high"
+   },
+   {
+    "id": "B48",
+    "statement": "Prime gaps: p_{n+1} - p_n = O(sqrt(p_n) log p_n) (Cramer 1920). Explicitly, for all x >= 4 there is a prime in (x - (22/25) sqrt(x) log x, x] (Carneiro-Milinovich-Soundararajan, Comment. Math. Helv. 2019).",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/1708.04122",
+    "source_title": "Carneiro-Milinovich-Soundararajan, Fourier optimization and prime gaps",
+    "year": "2019",
+    "before": "RH-conditional; Dudek 2015 had 4/pi",
+    "confidence": "medium",
+    "notes": "22/25 and the arXiv id are from memory and were not fetched."
+   },
+   {
+    "id": "B49",
+    "statement": "Schoenfeld: |pi(x) - li(x)| < sqrt(x) log x/(8pi) for x >= 2657, and |psi(x) - x| < sqrt(x) log^2 x/(8pi) for x >= 73.2.",
+    "needs": "RH_only",
+    "source_url": "https://doi.org/10.1090/S0025-5718-1976-0457374-X",
+    "source_title": "Schoenfeld, Math. Comp. 30 (1976)",
+    "year": "1976",
+    "before": "RH-conditional",
+    "confidence": "high"
+   },
+   {
+    "id": "B50",
+    "statement": "Prime race pi(x) > li(x): the logarithmic density is about 2.6*10^-7 (Rubinstein-Sarnak). This needs RH plus the Linear Independence hypothesis (LI) for zeta zeros; LI is still open. A limiting distribution exists on RH alone (Wintner).",
+    "needs": "RH_plus_other",
+    "source_url": "https://en.wikipedia.org/wiki/Chebyshev%27s_bias",
+    "source_title": "Chebyshev's bias (Rubinstein-Sarnak 1994)",
+    "year": "1994",
+    "before": "RH+LI-conditional",
+    "confidence": "high",
+    "notes": "Races mod q need GRH plus LI."
+   },
+   {
+    "id": "B51",
+    "statement": "Zero-density estimates for zeta are now trivial: N(sigma,T) = 0 for sigma > 1/2. This supersedes Ingham, Huxley and Guth-Maynard 2024 (N(sigma,T) << T^{30(1-sigma)/13+o(1)}) for zeta itself.",
+    "needs": "RH_only",
+    "source_url": "https://arxiv.org/abs/2405.20552",
+    "source_title": "Guth-Maynard, New large value estimates for Dirichlet polynomials",
+    "year": "2024",
+    "before": "Unconditional density bounds",
+    "confidence": "high",
+    "notes": "Density estimates for L-function families are still needed."
+   },
+   {
+    "id": "B52",
+    "statement": "Anthropic/Claude, Aug 2026: unconditionally, at least 2/3 of zeta zeros (with multiplicity) are simple and on the critical line (0.6725 with the Montgomery-Taylor window), and at least 5/6 are distinct. Anthropic says this raised the critical-line proportion from about 41.6% to 67.2%. Method: a rank-trace inequality on finite compressions of Weil's Hermitian form plus Sylvester's law of inertia, with inputs from Aryan and BGST. Checked in Lean 4 (anthropics/zeta-23-lean).",
+    "needs": "unconditional_already",
+    "source_url": "https://www.anthropic.com/research/riemann-zeta",
+    "source_title": "Anthropic research post (10 Aug 2026, updated 13 Aug); paper Alpoge-Furman arXiv:2608.13637",
+    "year": "2026",
+    "before": "Unconditional record about 5/12 (Pratt-Robles-Zaharescu-Zeindler 2020); distinct 0.6603",
+    "confidence": "high",
+    "notes": "Superseded for zeta: RH puts all zeros on the line, and RH-only results now give simple >= 19/27 and distinct >= 0.8477. As a statement about RH it is moot."
+   },
+   {
+    "id": "B53",
+    "statement": "The Alpoge-Furman (Claude) result extends to primitive Dirichlet L-functions: unconditionally, at least 2/3 of zeros are simple and on the line. This is not superseded; full on-line placement for L(s,chi) is GRH, still open.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2608.13637",
+    "source_title": "Alpoge-Furman, More than two thirds of the zeta zeros are simple and on the critical line",
+    "year": "2026",
+    "before": "Unconditional",
+    "confidence": "medium",
+    "notes": "The exact form of the L-function statement (per character or on average) was not checked."
+   },
+   {
+    "id": "B54",
+    "statement": "Lamzouri (Sep 2026), unconditional: more than 67.25% of zeros are simple and on the line; at least 83.62% are distinct; at least 88.76% are simple or on the line; the average of the simple and on-line proportions is at least 83.62%.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2609.02882",
+    "source_title": "Lamzouri, A new proof that more than 2/3 of zeros are simple and on the critical line",
+    "year": "2026",
+    "before": "Unconditional",
+    "confidence": "high",
+    "notes": "Superseded for zeta: now 100% on the line, at least 19/27 simple, at least 0.8477 distinct."
+   },
+   {
+    "id": "B55",
+    "statement": "Knausgard (Oct 2026), unconditional: liminf N_0^s(T)/N(T) >= 0.67353... (simple and on the line), and liminf N_d(T)/N(T) >= 1645064/1960733 = 0.83900... (distinct). Checked in Lean 4 with 3 extra axioms that record search-program outputs.",
+    "needs": "unconditional_already",
+    "source_url": "https://arxiv.org/abs/2610.08965",
+    "source_title": "Knausgard, More than 83.9% distinct and more than 67.35% simple and on the critical line",
+    "year": "2026",
+    "before": "Unconditional",
+    "confidence": "high",
+    "notes": "Superseded for zeta by the RH-only bounds 19/27 and 0.8477. The abstract also says '67.80% simple', which is inconsistent with the rest."
+   }
+  ],
+  "verdicts": [
+   {
+    "id": "B01",
+    "verdict": "corrected",
+    "evidence": "The maths is right, but the attribution is wrong. Simonic (arXiv:2010.13307v2, intro) credits the RH bound log|zeta(1/2+it)| <= (C00+o(1)) log t/log log t to Littlewood [Lit24a, Thm 12], i.e. 1924, and cites Titchmarsh Thm 14.2 for RH => LH. He gives 13/84 as Bourgain 2017. Wikipedia's 'Littlewood 1912' refers to the Mertens equivalence.",
+    "corrected_statement": "RH => Lindelof: zeta(1/2+it) <<_eps |t|^eps. More sharply, log|zeta(1/2+it)| <= (C+o(1)) log t/log log t (Littlewood 1924, Thm 12 as cited by Simonic). mu(sigma)=0 for sigma>=1/2 and mu(sigma)=1/2-sigma for sigma<=1/2. The former unconditional record was mu(1/2) <= 13/84 (Bourgain 2017).",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B02",
+    "verdict": "confirmed",
+    "evidence": "Simonic's intro lists the RH constants C00: Ramachandra-Sankaranarayanan 0.47, Soundararajan 2009 0.373, and Chandee-Soundararajan 2011 (Goldston-Gonek method) log sqrt2 = 0.3466. The sqrt sign is lost in the text extraction, but plain log 2 would be weaker than 0.373, so log sqrt2 is meant. Not checked: the Carneiro-Chandee strip constants and the identity 0.373 = (1+lambda0)/4.",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B03",
+    "verdict": "confirmed",
+    "evidence": "Simonic Thm 1: |zeta(1/2+it)| <= exp(M(0.5,6.992,0.252;t) log t/log log t) for t >= 10^40, where M(a,b,c;t) = a + b/((log t)^c log log t). Cor 1: exp(0.995 log t/log log t) for t >= 2pi. The extraction shows 't >= 2' with the pi glyph dropped; the bound needs t > e. It beats the unconditional bounds for t >= 10^72. The constants 0.543, 0.337 and 0.373 are the asymptotic C0 (S), C1 (S1) and C00 (zeta) that his method gives with explicit o-terms; they are not Thm 1's constants.",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B04",
+    "verdict": "confirmed",
+    "evidence": "Simonic Thm 1: |S(t)| <= M(0.759282,20.1911,0.285;t) log t/log log t for t >= 10^2465, and |S1(t)| <= M(0.653,60.12,0.2705;t) log t/(log log t)^2 for t >= 10^208. Cor 1 (t >= 2pi): 0.96 and 2.491. These beat the unconditional bounds for t >= 10^2510 (S) and t >= 10^208.4 (S1).",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B05",
+    "verdict": "confirmed",
+    "evidence": "Simonic Cor 2: gamma'-gamma <= M(9.55,253.82,0.285;gamma)/log log gamma for consecutive ordinates gamma' > gamma >= 10^2465. In particular gamma'-gamma <= 12.05/log log gamma.",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B06",
+    "verdict": "confirmed",
+    "evidence": "arXiv:1309.1526 is Carneiro-Chandee-Milinovich, Math. Ann. 356(3) (2013) 939-968. On RH, |S(t)| <= (1/4+o(1)) log t/log log t, halving Goldston-Gonek's 1/2. Simonic cites [CCM13, Thm 1] for C1 = pi/24 for |S1(t)|. The separate pi/48 upper constant was not seen directly.",
+    "source_url": "https://arxiv.org/abs/1309.1526"
+   },
+   {
+    "id": "B07",
+    "verdict": "confirmed",
+    "evidence": "Simonic: on RH, gamma'-gamma << 1/log log gamma follows from Littlewood's S(t) bound, and [GG07, Cor 1] gives gamma'-gamma <= (pi+o(1))/log log gamma.",
+    "source_url": "https://arxiv.org/abs/2010.13307"
+   },
+   {
+    "id": "B08",
+    "verdict": "unverifiable",
+    "evidence": "Soundararajan's paper was not fetched. Simonic confirms only that Sou09 is the moments paper (Annals); the moment bound itself was not seen.",
+    "source_url": "https://arxiv.org/abs/math/0612106"
+   },
+   {
+    "id": "B09",
+    "verdict": "confirmed",
+    "evidence": "Harper's abstract (arXiv:1305.4618, May 2013): assuming RH, for any fixed k >= 0 and all large T, int_T^{2T} |zeta(1/2+it)|^{2k} dt <<_k T log^{k^2} T, sharp up to the implied constant. Not re-checked: the lower-bound attributions (Radziwill-Soundararajan, Heap-Soundararajan) and the HRS 0<=k<=2 result.",
+    "source_url": "https://arxiv.org/abs/1305.4618"
+   },
+   {
+    "id": "B10",
+    "verdict": "confirmed",
+    "evidence": "Harper calls the RH bound sharp only up to the implied constant, so RH gives the order of magnitude, not the asymptotic constant. No source read claims the asymptotic for k >= 3 or for non-integer k. The k=1 and k=2 attributions were not re-checked.",
+    "source_url": "https://arxiv.org/abs/1305.4618"
+   },
+   {
+    "id": "B11",
+    "verdict": "confirmed",
+    "evidence": "BGMM (arXiv:2208.02359, sec. 2): on RH, F(alpha) = (1+o(1)) T^{-2alpha} log T + alpha + o(1) uniformly for 0 <= |alpha| <= 1, citing Montgomery and Goldston-Montgomery. The Alpoge-Furman and Lamzouri 2026 abstracts use the 'unconditional form due to Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh'. arXiv:2306.04799 itself was not opened.",
+    "source_url": "https://arxiv.org/abs/2208.02359"
+   },
+   {
+    "id": "B12",
+    "verdict": "corrected",
+    "evidence": "CGdL (arXiv:1810.08843, sec. 2) says Montgomery was 'the first to show' 4/3. It says Montgomery-Taylor 'found the bound 1.3275 as mentioned by Cheer and Goldston', and that Cheer-Goldston showed 67.27% simple. The claim pairs the authors with the numbers loosely. Note 2-1.3275 = 0.6725, not 0.6727.",
+    "corrected_statement": "On RH: N_s(T) >= (2/3+o(1))N(T) and N*(T) <= (4/3+o(1))N(T) (Montgomery 1973). Montgomery-Taylor: N*(T) <= (1.3275+o(1))N(T), as reported by Cheer-Goldston. Cheer-Goldston: at least 67.27% of zeros are simple. Under GRH, Goldston-Gonek-Ozluk-Snyder: 1.3262 and 67.38%.",
+    "source_url": "https://arxiv.org/abs/1810.08843"
+   },
+   {
+    "id": "B13",
+    "verdict": "confirmed",
+    "evidence": "Bui-Heath-Brown (arXiv:1302.5018, Bull. LMS, DOI 10.1112/blms/bdt026): at least 19/27 of zeros are simple on RH, removing the GLH that Conrey-Ghosh-Gonek needed. CGdL: 'assuming RH, Bui and Heath-Brown improved the [distinct] constant to 0.8466', and they call 19/27 'currently the best'.",
+    "source_url": "https://arxiv.org/abs/1302.5018"
+   },
+   {
+    "id": "B14",
+    "verdict": "corrected",
+    "evidence": "CGdL Thm 4 says 'Assuming RH and (2)', where (2) is the conjecture N*(T) ~ N(T), so the 0.6039 result does not need RH alone. GRH versions: 1.3155, 0.6845, 0.8486, 0.5769. Earlier bounds: Montgomery-Taylor 1.3275, BHB 0.8466, CCLM 0.6068. The arXiv page shows no journal reference (Adv. Math. not checked).",
+    "corrected_statement": "On RH (CGdL): N*(T) <= (1.3208+o(1))N(T); N_s(T) >= (0.6792+o(1))N(T); N_d(T) >= (0.8477+o(1))N(T), using BHB's 19/27. Their Thm 4, N(0.6039,T) >> N(T), assumes RH AND N*(T) ~ N(T) (almost all zeros simple), and that is still open. On RH alone, BGMM 2022 (Thm 1) give mu_D <= 0.6039: a positive proportion of consecutive spacings are <= 0.6039 mean spacings, where zero spacings from multiple zeros are allowed.",
+    "source_url": "https://arxiv.org/abs/1810.08843"
+   },
+   {
+    "id": "B15",
+    "verdict": "confirmed",
+    "evidence": "CGdL (2019) and BGMM (2022) still treat simplicity of all zeros (N*(T) ~ N(T)) and Montgomery's pair correlation conjecture as conjectures. None of the 2026 abstracts read claims to prove them. The implication 'PCC => almost all zeros simple' was not re-checked.",
+    "source_url": "https://arxiv.org/abs/1810.08843"
+   },
+   {
+    "id": "B16",
+    "verdict": "unverifiable",
+    "evidence": "Goldston's notes were not fetched, so the exact ranges (1 <= alpha <= A, X^{-1} <= delta <= X^{-1/A}) are unchecked. The only change RH brings is that the RH-conditional equivalence becomes unconditional.",
+    "source_url": "https://arxiv.org/abs/math/0412313"
+   },
+   {
+    "id": "B17",
+    "verdict": "confirmed",
+    "evidence": "Bui-Milinovich (arXiv:1410.3635; Q. J. Math. 69 (2018) 403-423 per the BGMM references), Thm 1.1: Lambda > 3.18 for consecutive zeros on the critical line. This is unconditional (Hall-type method), so on RH lambda > 3.18, and that now holds for all zeros. Bui (arXiv:0903.4007) had 3.033 under GRH. Read from search snippets of the arXiv PDF.",
+    "source_url": "https://arxiv.org/abs/1410.3635"
+   },
+   {
+    "id": "B18",
+    "verdict": "confirmed",
+    "evidence": "BGMM (arXiv:2208.02359, sec. 1): Montgomery-Odlyzko 0.5179, then refinements; 'the current best result is due to Preobrazhenskii', mu <= 0.515396 (Res. Number Theory 2 (2016) art. 28). Montgomery's original 0.68 is also cited. BGMM is a research paper, not a survey.",
+    "source_url": "https://arxiv.org/abs/2208.02359"
+   },
+   {
+    "id": "B19",
+    "verdict": "confirmed",
+    "evidence": "arXiv:1904.06001 v2 (11 Nov 2019) is withdrawn. The comment says 'a mistake ... invalidates the calculations giving the result of Theorem 1', which was the RH claim mu < 0.50412 obtained by generalising Wu's weights.",
+    "source_url": "https://arxiv.org/abs/1904.06001"
+   },
+   {
+    "id": "B20",
+    "verdict": "corrected",
+    "evidence": "'RH does not imply them' asserts a non-implication that nobody has proved. Only 'not known to follow from RH' is supported. The bounds below are from BGMM and Bui-Milinovich.",
+    "corrected_statement": "mu = 0 and lambda = infinity are conjectured from pair correlation and GUE. They are not known to follow from RH, and proving RH did not settle them. Best RH bounds: mu <= 0.515396 (Preobrazhenskii 2016) and lambda > 3.18 (Bui-Milinovich 2018).",
+    "source_url": "https://arxiv.org/abs/2208.02359"
+   },
+   {
+    "id": "B21",
+    "verdict": "confirmed",
+    "evidence": "Zhao (arXiv:2603.17334, v1 18 Mar 2026, v2 23 Oct): Selberg announced limsup >= 1 + Theta/r^alpha and liminf <= 1 - vartheta/r^alpha. alpha = 1/2 on RH (Conrey-Turnage-Butterbaugh, Bull. LMS 50 (2018) 349-356) and alpha = 2/3 unconditionally (Inoue). Zhao proves positive-proportion versions with explicit constants.",
+    "source_url": "https://arxiv.org/abs/2603.17334"
+   },
+   {
+    "id": "B22",
+    "verdict": "confirmed",
+    "evidence": "Lamzouri (arXiv:2611.14486, 10 Nov 2026) uses an unconditional variant of Montgomery's method. A positive proportion of n have gamma_{n+1}-gamma_n <= 2pi lambda0/log gamma_n with lambda0 = 0.7892 < 4/5, counting ordinates with multiplicity. Earlier values: Simonic-Trudgian-Turnage-Butterbaugh 1-10^{-3*10^13}, Zhao 1-2.36*10^{-6}. For zeta it is now beaten by the RH result mu_D <= 0.6039 (BGMM).",
+    "source_url": "https://arxiv.org/abs/2611.14486"
+   },
+   {
+    "id": "B23",
+    "verdict": "confirmed",
+    "evidence": "The BGMM references give Rodgers-Tao as Forum Math. Pi 8 (2020) e6. Wikipedia: Lambda = 0 follows from RH <=> Lambda <= 0 together with Rodgers-Tao's Lambda >= 0, and Platt-Trudgian proved Lambda <= 0.2. The Polymath15 value 0.22 was not in the part of the page read.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B24",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia (Li's criterion): lambda_n = sum_rho [1-(1-1/rho)^n], summed symmetrically; RH <=> lambda_n > 0 for every n >= 1. Source: Li, J. Number Theory 65(2) (1997) 325-333.",
+    "source_url": "https://en.wikipedia.org/wiki/Li%27s_criterion"
+   },
+   {
+    "id": "B25",
+    "verdict": "unverifiable",
+    "evidence": "The Li's criterion page gives no asymptotic formula. It only lists Lagarias 2007 (Ann. Inst. Fourier) and Arias de Reyna 2011 as references. Neither the formula nor its attribution was checked.",
+    "source_url": "https://en.wikipedia.org/wiki/Li%27s_criterion"
+   },
+   {
+    "id": "B26",
+    "verdict": "corrected",
+    "evidence": "Wikipedia RH article: Nyman 1950 (density in L^2(0,1) with sum c_nu theta_nu = 0), Beurling 1955 (L^p version), and Baez-Duarte's strengthening to theta_nu in {1/k}. The note 'Beurling's L^p version also follows' holds only for p <= 2.",
+    "corrected_statement": "As claimed, but Beurling's L^p criterion (density in L^p(0,1) <=> no zeros with Re s > 1/p) gives density only for 1 < p <= 2. For p > 2 density fails, because all zeros lie on Re s = 1/2 > 1/p.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B27",
+    "verdict": "unverifiable",
+    "evidence": "Baez-Duarte 2003 and Burnol were not fetched. Arithmetic check only: under RH with simple zeros, sum 1/|rho|^2 = 2+gamma-log 4pi, so Burnol's lower bound would equal the conjectured constant.",
+    "source_url": "https://arxiv.org/abs/math/0202141"
+   },
+   {
+    "id": "B28",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: -sum_{k>=1} (-x)^k/((k-1)! zeta(2k)) = O(x^{1/4+eps}) for all eps > 0 iff RH (Riesz 1916).",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B29",
+    "verdict": "unverifiable",
+    "evidence": "The Wikipedia RH article only says 'see also the Hardy-Littlewood criterion' and gives no formula. The Riesz function page and the paper were not fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B30",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: sum |F_n(i) - i/m| = O(n^{1/2+eps}) for all eps > 0 iff RH (Franel and Landau 1924), with m = sum phi(i). It says Farey sequences give two equivalences but does not show the sum-of-squares form O(N^{-1+eps}), which was not separately checked.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B31",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: the determinant of the order-n Redheffer matrix equals M(n).",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B32",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia: Weil's criterion, the positivity of a certain functional, is equivalent to RH; no formula is given. On the note: Alpoge-Furman's 2/3 paper (arXiv:2608.13637) uses a finite compression of Weil's Hermitian form. The method of the Nov 2026 RH proof was not checked.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B33",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: RH <=> zeta'(s) has no zeros in 0 < Re s < 1/2 (Speiser 1934). Levinson-Montgomery was not checked.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B34",
+    "verdict": "unverifiable",
+    "evidence": "The Griffin-Ono-Rolen-Zagier PNAS paper was not fetched.",
+    "source_url": "https://doi.org/10.1073/pnas.1902572116"
+   },
+   {
+    "id": "B35",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: sigma(n) < e^gamma n log log n for all n > 5040 iff RH (Robin 1984).",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B36",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: RH <=> sigma(n) < H_n + log(H_n) e^{H_n} for every n > 1 (Lagarias 2002). This is the same as <= for all n >= 1 with equality only at n=1.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B37",
+    "verdict": "unverifiable",
+    "evidence": "The part of the Wikipedia RH article read attributes a primorial-range criterion to Broughan 2017 (Cor. 5.35) and gives a different Nicolas 1983 statement. Nicolas's paper was not fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B38",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article: M(x) = O(x^{1/2+eps}) for every eps > 0 iff RH (J. E. Littlewood, 1912). Convergence of the Dirichlet series for Re s > 1/2 follows by partial summation.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B39",
+    "verdict": "unverifiable",
+    "evidence": "The Balazard-de Roton abstract (arXiv:0810.3587, 20 Oct 2008) states no exponents. Neither Soundararajan's (log log x)^14 nor the 5/2+eps improvement was seen.",
+    "source_url": "https://arxiv.org/abs/0810.3587"
+   },
+   {
+    "id": "B40",
+    "verdict": "unverifiable",
+    "evidence": "arXiv:2109.11744 was not fetched.",
+    "source_url": "https://arxiv.org/abs/2109.11744"
+   },
+   {
+    "id": "B41",
+    "verdict": "unverifiable",
+    "evidence": "Neither Ng 2004 nor the source of Gonek's conjecture was fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Mertens_function"
+   },
+   {
+    "id": "B42",
+    "verdict": "unverifiable",
+    "evidence": "Titchmarsh ch. XIV and arXiv:2109.11744 were not fetched. Simonic cites Titchmarsh Thm 14.2 for RH => LH only.",
+    "source_url": "https://arxiv.org/abs/2109.11744"
+   },
+   {
+    "id": "B43",
+    "verdict": "confirmed",
+    "evidence": "Chirre-Molero (arXiv:2602.06199, sec. 1) on RH, citing Littlewood [12,13]: |zeta(1+it)| <= (2e^gamma+o(1)) log log t and 1/|zeta(1+it)| <= (12e^gamma/pi^2+o(1)) log log t.",
+    "source_url": "https://arxiv.org/abs/2602.06199"
+   },
+   {
+    "id": "B44",
+    "verdict": "confirmed",
+    "evidence": "Chirre-Molero sec. 1 quotes LLS [p. 2394] (RH, t >= 10^10) exactly as claimed. Their Thm 2 (RH, t >= e^18 = 6.565...*10^7) matches: 0.2674/log log t - 2.6 log log t/log t for |zeta|, and 5/(8 log log t) + 10.8/(log log t)^2 for 1/|zeta|. 0.2674 rounds up a minimum of 0.2673... The paper is to appear in Portugaliae Math.",
+    "source_url": "https://arxiv.org/abs/2602.06199"
+   },
+   {
+    "id": "B45",
+    "verdict": "confirmed",
+    "evidence": "Chirre-Molero Thm 3 (RH, t >= e^18): |zeta'/zeta(1+it)| <= 2 log log t + 0.0784 - gamma + 9.0581 log log t/log t - 4.7/log t, and <= 2 log log t for t >= 10^30. Thm 1: the Re bound is as stated. Earlier bound, Chirre-Hagen-Simonic Thm 5 (t >= 10^30): 2 log log t - 0.4989 + 5.35(log log t)^2/log t. Since 0.0783... - gamma = -0.4989..., only the lower-order terms improve.",
+    "source_url": "https://arxiv.org/abs/2602.06199"
+   },
+   {
+    "id": "B46",
+    "verdict": "confirmed",
+    "evidence": "Chirre-Molero treats zeta only. RH for zeta says nothing about the zeros of L(s,chi), and GRH is open, so the LLS-type bounds for L(1,chi) and the least quadratic non-residue stay GRH-conditional. The LLS paper was not opened.",
+    "source_url": "https://arxiv.org/abs/2602.06199"
+   },
+   {
+    "id": "B47",
+    "verdict": "unverifiable",
+    "evidence": "Selberg 1943 was not fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Prime_gap"
+   },
+   {
+    "id": "B48",
+    "verdict": "unverifiable",
+    "evidence": "arXiv:1708.04122 is Carneiro-Milinovich-Soundararajan, Comment. Math. Helv. 94(3) (2019) 533-568, but the abstract gives no constant. Search snippets of a survey give 22/25 for the explicit bound and 21/25 for the asymptotic, but state 'x > 2' and the interval (x, x+(22/25) sqrt x log x). The range is unresolved. Cramer's O(sqrt p log p) is confirmed by Wikipedia; Dudek's 4/pi was not checked.",
+    "corrected_statement": "On RH (CMS 2019): limsup (p_{n+1}-p_n)/(sqrt(p_n) log p_n) <= 21/25, and every interval of length (22/25) sqrt(x) log x at x contains a prime. The exact range and endpoints (x >= 4 vs x > 2) are unconfirmed.",
+    "source_url": "https://arxiv.org/abs/1708.04122"
+   },
+   {
+    "id": "B49",
+    "verdict": "confirmed",
+    "evidence": "Wikipedia RH article (Schoenfeld 1976): |pi(x)-li(x)| < sqrt(x) log x/(8pi) for x >= 2657, and |psi(x)-x| < sqrt(x) log^2 x/(8pi) for x >= 73.2.",
+    "source_url": "https://en.wikipedia.org/wiki/Riemann_hypothesis"
+   },
+   {
+    "id": "B50",
+    "verdict": "unverifiable",
+    "evidence": "Rubinstein-Sarnak and Wintner were not fetched.",
+    "source_url": "https://en.wikipedia.org/wiki/Chebyshev%27s_bias"
+   },
+   {
+    "id": "B51",
+    "verdict": "confirmed",
+    "evidence": "N(sigma,T) = 0 for sigma > 1/2 is immediate from RH. Guth-Maynard's 30(1-sigma)/13 exponent was not re-fetched. Density bounds for families of L-functions are still needed, since GRH is open.",
+    "source_url": "https://arxiv.org/abs/2405.20552"
+   },
+   {
+    "id": "B52",
+    "verdict": "confirmed",
+    "evidence": "arXiv:2608.13637 (v1 13 Aug 2026, v2 19 Aug), unconditional: at least 2/3 of zeros are simple and on the line, and at least 5/6 are distinct. With the Montgomery-Taylor window: 0.6725 and 0.8362. Earlier records: 5/12 and 0.6603. The method and inputs (Aryan, BGST) are as stated; Lean 4; 'discovered autonomously by Claude'. Not checked: the Anthropic post's wording (41.6% to 67.2%) and the repo name.",
+    "source_url": "https://arxiv.org/abs/2608.13637"
+   },
+   {
+    "id": "B53",
+    "verdict": "unverifiable",
+    "evidence": "The abstract says only that the results 'extend to primitive Dirichlet L-functions'. Whether this is per character or averaged over a family, and with which constant, is not stated. GRH for L(s,chi) remains open, so the result is not superseded.",
+    "source_url": "https://arxiv.org/abs/2608.13637"
+   },
+   {
+    "id": "B54",
+    "verdict": "confirmed",
+    "evidence": "Lamzouri (arXiv:2609.02882, v1 2 Sep 2026, v2 8 Sep), all unconditional: more than 67.25% simple and on the line; at least 83.62% distinct; at least 88.76% simple or on the line; the average of the simple and on-line proportions is at least 83.62%. Knausgard later raised the last two to 88.93% and 83.67%.",
+    "source_url": "https://arxiv.org/abs/2609.02882"
+   },
+   {
+    "id": "B55",
+    "verdict": "corrected",
+    "evidence": "The constants are confirmed by the arXiv:2610.08965 abstract (6 Oct 2026), which also gives 88.93% simple-or-on-line and 83.67% for the averaged proportion. The note is wrong: unconditionally, simple zeros need not lie on the line, so 'more than 67.80% simple' is consistent with 67.35% simple-and-on-line.",
+    "corrected_statement": "Knausgard (Oct 2026), unconditional: liminf N_0^s(T)/N(T) >= 0.67353... and liminf N_d(T)/N(T) >= 1645064/1960733 = 0.83900...; more than 67.80% of zeros are simple (not necessarily on the line); at least 88.93% are simple or on the line; the averaged proportion is at least 83.67%. Lean 4 with 3 extra axioms recording search-program outputs.",
+    "source_url": "https://arxiv.org/abs/2610.08965"
+   }
+  ],
+  "missing": [
+   "BGMM (arXiv:2208.02359), on RH (now a theorem): mu_d <= 0.991, so there are infinitely many gaps between DISTINCT zeros below 0.991 mean spacings. Positive proportions: mu_D <= 0.6039 (spacings, counted with multiplicity) and mu_Dd <= 1.0522 (distinct zeros).",
+   "CGdL (arXiv:1810.08843): the GRH constants stay conditional: N*(T) <= 1.3155N(T), N_s >= 0.6845N(T), N_d >= 0.8486N(T), and N(0.5769,T) >> N(T) (GRH plus simplicity).",
+   "Chirre-Molero (arXiv:2602.06199, Thm 1), RH, t >= e^18: -Re zeta'/zeta(1+it) <= 2 log log t + 1 - gamma - log 4 - 8 log log t/log t + 6.9856/log t.",
+   "von Koch 1901: RH <=> pi(x) = li(x) + O(sqrt(x) log x); Schoenfeld 1976 is the explicit version (Wikipedia RH article mentions von Koch).",
+   "Gonek 1984 (Invent. Math. 75, 123-141), on RH: sum_{0<gamma<=T} |zeta'(rho)|^2 = (T/24pi) log^4 T + O(T log^3 T). Not fetched.",
+   "Montgomery 1977 (Comment. Math. Helv. 52, 511-518), on RH: log|zeta(1/2+it)| = Omega_+((log t/log log t)^{1/2}) and S(t) = Omega_+-((log t/log log t)^{1/2}). Not fetched."
+  ]
+ }
+}
