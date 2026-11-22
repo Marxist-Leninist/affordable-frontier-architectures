@@ -1,0 +1,119 @@
+{
+  "17": {
+    "sha256": "97e2d682f675187c643d47d21228ee1cc3fb14f472cb24018a706a9827692ba4",
+    "params": 17916,
+    "dynamic_state_bytes": 224,
+    "id": {
+      "acc": 0.7233333333333334,
+      "rate": 0.0,
+      "utility": 0.7233333333333334,
+      "false_calls": 0,
+      "missed_improvements": 101,
+      "false_present": 58,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.515,
+        "overwrite": 0.965,
+        "absent": 0.86,
+        "stale": 0.85,
+        "evicted": 0.15
+      },
+      "n": 1200
+    },
+    "ood": {
+      "acc": 0.7066666666666667,
+      "rate": 0.0,
+      "utility": 0.7066666666666667,
+      "false_calls": 0,
+      "missed_improvements": 150,
+      "false_present": 26,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.24,
+        "overwrite": 1.0,
+        "absent": 0.94,
+        "stale": 0.93,
+        "evicted": 0.13
+      },
+      "n": 1200
+    }
+  },
+  "29": {
+    "sha256": "fed3288e958925bc19b2fb9386f5a84ff1336a1b7b941dd36c4f677c2666a43d",
+    "params": 17916,
+    "dynamic_state_bytes": 224,
+    "id": {
+      "acc": 0.7041666666666666,
+      "rate": 0.0,
+      "utility": 0.7041666666666666,
+      "false_calls": 0,
+      "missed_improvements": 104,
+      "false_present": 71,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.5,
+        "overwrite": 0.97,
+        "absent": 0.81,
+        "stale": 0.835,
+        "evicted": 0.11
+      },
+      "n": 1200
+    },
+    "ood": {
+      "acc": 0.6950000000000001,
+      "rate": 0.0,
+      "utility": 0.6950000000000001,
+      "false_calls": 0,
+      "missed_improvements": 151,
+      "false_present": 42,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.23,
+        "overwrite": 1.0,
+        "absent": 0.905,
+        "stale": 0.885,
+        "evicted": 0.15
+      },
+      "n": 1200
+    }
+  },
+  "43": {
+    "sha256": "c7297280b84847a6ef15f037d8754c933dee11d956d0b0eb531db6dce9d32413",
+    "params": 17916,
+    "dynamic_state_bytes": 224,
+    "id": {
+      "acc": 0.7058333333333333,
+      "rate": 0.0,
+      "utility": 0.7058333333333333,
+      "false_calls": 0,
+      "missed_improvements": 110,
+      "false_present": 60,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.49,
+        "overwrite": 0.95,
+        "absent": 0.835,
+        "stale": 0.865,
+        "evicted": 0.095
+      },
+      "n": 1200
+    },
+    "ood": {
+      "acc": 0.6841666666666666,
+      "rate": 0.0,
+      "utility": 0.6841666666666666,
+      "false_calls": 0,
+      "missed_improvements": 160,
+      "false_present": 48,
+      "accuracy_by_family": {
+        "local": 1.0,
+        "far": 0.175,
+        "overwrite": 1.0,
+        "absent": 0.895,
+        "stale": 0.865,
+        "evicted": 0.17
+      },
+      "n": 1200
+    }
+  }
+}

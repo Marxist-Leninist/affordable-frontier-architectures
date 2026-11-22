@@ -1,0 +1,1386 @@
+{
+  "arms": [
+    {
+      "seed": 17,
+      "cuts": {
+        "confidence": 0.0286976657807827,
+        "heuristic": 0.02310759760439396,
+        "learned": -2.417277373622192
+      },
+      "sha256": "0cfbcb216e037437c96a129d9a50fd506776894b6753dd311e690c5de82aa98f",
+      "train_and_calibrate_sec": 5.14897319100055,
+      "result": {
+        "id": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.69,
+              "rate": 0.0,
+              "utility": 0.69,
+              "false_calls": 0,
+              "missed_improvements": 120,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.435,
+                "overwrite": 0.945,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.79,
+              "rate": 1.0,
+              "utility": 0.765,
+              "false_calls": 604,
+              "missed_improvements": 0,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.98,
+                "overwrite": 1.0,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.77,
+              "rate": 0.42833333333333334,
+              "utility": 0.7592916666666667,
+              "false_calls": 367,
+              "missed_improvements": 24,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.865,
+                "overwrite": 0.995,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7675,
+              "rate": 0.4216666666666667,
+              "utility": 0.7569583333333333,
+              "false_calls": 365,
+              "missed_improvements": 27,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.85,
+                "overwrite": 0.995,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.7775,
+              "rate": 0.4066666666666667,
+              "utility": 0.7673333333333333,
+              "false_calls": 357,
+              "missed_improvements": 15,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.935,
+                "overwrite": 0.97,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.77,
+              "rate": 1.0,
+              "utility": 0.745,
+              "false_calls": 576,
+              "missed_improvements": 0,
+              "false_present": 93,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.98,
+                "overwrite": 1.0,
+                "absent": 0.86,
+                "stale": 0.675,
+                "evicted": 0.105
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.7658333333333334,
+              "rate": 0.4,
+              "utility": 0.7558333333333334,
+              "false_calls": 346,
+              "missed_improvements": 29,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.85,
+                "overwrite": 0.985,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.765,
+              "rate": 0.4,
+              "utility": 0.755,
+              "false_calls": 348,
+              "missed_improvements": 30,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.84,
+                "overwrite": 0.99,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.7766666666666666,
+              "rate": 0.4,
+              "utility": 0.7666666666666666,
+              "false_calls": 353,
+              "missed_improvements": 16,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.93,
+                "overwrite": 0.97,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.7341666666666666,
+              "rate": 0.4,
+              "utility": 0.7241666666666666,
+              "false_calls": 241,
+              "missed_improvements": 67,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.66,
+                "overwrite": 0.985,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.79,
+              "rate": 0.4,
+              "utility": 0.78,
+              "false_calls": 202,
+              "missed_improvements": 0,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.98,
+                "overwrite": 1.0,
+                "absent": 0.86,
+                "stale": 0.795,
+                "evicted": 0.105
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 20.89040249984464,
+            "sidecar_build_us": 8.128295833103039,
+            "probe_us": 0.59116833350951,
+            "gate_matrix_batched_us": 0.04006333332047992
+          },
+          "exact_hits": 596,
+          "gain_opportunities": 120
+        },
+        "ood": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.6933333333333334,
+              "rate": 0.0,
+              "utility": 0.6933333333333334,
+              "false_calls": 0,
+              "missed_improvements": 156,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.21,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.8233333333333334,
+              "rate": 1.0,
+              "utility": 0.7983333333333333,
+              "false_calls": 602,
+              "missed_improvements": 0,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.7783333333333333,
+              "rate": 0.37,
+              "utility": 0.7690833333333333,
+              "false_calls": 305,
+              "missed_improvements": 54,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.72,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7741666666666667,
+              "rate": 0.3641666666666667,
+              "utility": 0.7650625,
+              "false_calls": 304,
+              "missed_improvements": 59,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.695,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8049999999999999,
+              "rate": 0.37083333333333335,
+              "utility": 0.7957291666666666,
+              "false_calls": 282,
+              "missed_improvements": 22,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.88,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.8225,
+              "rate": 1.0,
+              "utility": 0.7975,
+              "false_calls": 601,
+              "missed_improvements": 0,
+              "false_present": 37,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.895,
+                "evicted": 0.13
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.785,
+              "rate": 0.4,
+              "utility": 0.775,
+              "false_calls": 333,
+              "missed_improvements": 46,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.76,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7816666666666667,
+              "rate": 0.4,
+              "utility": 0.7716666666666667,
+              "false_calls": 337,
+              "missed_improvements": 50,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.74,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8108333333333333,
+              "rate": 0.4,
+              "utility": 0.8008333333333333,
+              "false_calls": 310,
+              "missed_improvements": 15,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.915,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.7466666666666666,
+              "rate": 0.4,
+              "utility": 0.7366666666666666,
+              "false_calls": 238,
+              "missed_improvements": 92,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.53,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.8233333333333334,
+              "rate": 0.4,
+              "utility": 0.8133333333333334,
+              "false_calls": 187,
+              "missed_improvements": 0,
+              "false_present": 36,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.92,
+                "stale": 0.9,
+                "evicted": 0.13
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 63.2448150001134,
+            "sidecar_build_us": 20.24860000043797,
+            "probe_us": 0.5900808332626184,
+            "gate_matrix_batched_us": 0.04084000011062017
+          },
+          "exact_hits": 598,
+          "gain_opportunities": 156
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "cuts": {
+        "confidence": 0.040922604501247406,
+        "heuristic": 0.029089104384183884,
+        "learned": -1.9021517328902504
+      },
+      "sha256": "7b50d1830d3f2db7d531883a6fb67aea8d53c07d18b0a3b323b1f37073dd6d4a",
+      "train_and_calibrate_sec": 4.957882427999721,
+      "result": {
+        "id": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.6941666666666666,
+              "rate": 0.0,
+              "utility": 0.6941666666666666,
+              "false_calls": 0,
+              "missed_improvements": 116,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.435,
+                "overwrite": 0.975,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.7908333333333333,
+              "rate": 1.0,
+              "utility": 0.7658333333333333,
+              "false_calls": 602,
+              "missed_improvements": 0,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.7725,
+              "rate": 0.4075,
+              "utility": 0.7623125,
+              "false_calls": 339,
+              "missed_improvements": 22,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.88,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7716666666666667,
+              "rate": 0.41083333333333333,
+              "utility": 0.7613958333333334,
+              "false_calls": 344,
+              "missed_improvements": 23,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.875,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.7775,
+              "rate": 0.3858333333333333,
+              "utility": 0.7678541666666666,
+              "false_calls": 345,
+              "missed_improvements": 16,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.925,
+                "overwrite": 0.985,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.7683333333333333,
+              "rate": 1.0,
+              "utility": 0.7433333333333333,
+              "false_calls": 574,
+              "missed_improvements": 0,
+              "false_present": 96,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.705,
+                "evicted": 0.1
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.7725,
+              "rate": 0.4,
+              "utility": 0.7625,
+              "false_calls": 331,
+              "missed_improvements": 22,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.88,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7716666666666667,
+              "rate": 0.4,
+              "utility": 0.7616666666666667,
+              "false_calls": 333,
+              "missed_improvements": 23,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.875,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.7775,
+              "rate": 0.4,
+              "utility": 0.7675,
+              "false_calls": 362,
+              "missed_improvements": 16,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.925,
+                "overwrite": 0.985,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.7291666666666667,
+              "rate": 0.4,
+              "utility": 0.7191666666666667,
+              "false_calls": 249,
+              "missed_improvements": 74,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.635,
+                "overwrite": 0.985,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.7908333333333333,
+              "rate": 0.4,
+              "utility": 0.7808333333333333,
+              "false_calls": 202,
+              "missed_improvements": 0,
+              "false_present": 69,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.815,
+                "stale": 0.84,
+                "evicted": 0.1
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 10.663168333546006,
+            "sidecar_build_us": 7.564631666809873,
+            "probe_us": 0.6188441670929024,
+            "gate_matrix_batched_us": 0.03681166693543977
+          },
+          "exact_hits": 598,
+          "gain_opportunities": 116
+        },
+        "ood": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.7008333333333333,
+              "rate": 0.0,
+              "utility": 0.7008333333333333,
+              "false_calls": 0,
+              "missed_improvements": 145,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.26,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.8216666666666667,
+              "rate": 1.0,
+              "utility": 0.7966666666666666,
+              "false_calls": 603,
+              "missed_improvements": 0,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.985,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.7708333333333334,
+              "rate": 0.3475,
+              "utility": 0.7621458333333334,
+              "false_calls": 293,
+              "missed_improvements": 61,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.68,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7683333333333333,
+              "rate": 0.34833333333333333,
+              "utility": 0.759625,
+              "false_calls": 301,
+              "missed_improvements": 64,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.665,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8049999999999999,
+              "rate": 0.3466666666666667,
+              "utility": 0.7963333333333332,
+              "false_calls": 268,
+              "missed_improvements": 20,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.885,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.8216666666666667,
+              "rate": 1.0,
+              "utility": 0.7966666666666666,
+              "false_calls": 603,
+              "missed_improvements": 0,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.985,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.78,
+              "rate": 0.4,
+              "utility": 0.77,
+              "false_calls": 341,
+              "missed_improvements": 50,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.735,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7783333333333333,
+              "rate": 0.4,
+              "utility": 0.7683333333333333,
+              "false_calls": 344,
+              "missed_improvements": 52,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.725,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8091666666666667,
+              "rate": 0.4,
+              "utility": 0.7991666666666667,
+              "false_calls": 323,
+              "missed_improvements": 15,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.91,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.7466666666666666,
+              "rate": 0.4,
+              "utility": 0.7366666666666666,
+              "false_calls": 249,
+              "missed_improvements": 90,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.535,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.8216666666666667,
+              "rate": 0.4,
+              "utility": 0.8116666666666666,
+              "false_calls": 191,
+              "missed_improvements": 0,
+              "false_present": 39,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.985,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.905,
+                "evicted": 0.14
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 55.253509166656535,
+            "sidecar_build_us": 15.537779166455342,
+            "probe_us": 0.5993749997893852,
+            "gate_matrix_batched_us": 0.03638749982807591
+          },
+          "exact_hits": 597,
+          "gain_opportunities": 145
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "cuts": {
+        "confidence": 0.028557419776916504,
+        "heuristic": 0.0224780086427927,
+        "learned": -1.9253144804439624
+      },
+      "sha256": "58333cdc3c72b6ae774e1e3311ea861aa64a49d147239362358dcb034aadf201",
+      "train_and_calibrate_sec": 4.857534304000183,
+      "result": {
+        "id": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.7091666666666667,
+              "rate": 0.0,
+              "utility": 0.7091666666666667,
+              "false_calls": 0,
+              "missed_improvements": 110,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.475,
+                "overwrite": 0.965,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.8008333333333333,
+              "rate": 1.0,
+              "utility": 0.7758333333333333,
+              "false_calls": 602,
+              "missed_improvements": 0,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.7858333333333334,
+              "rate": 0.4225,
+              "utility": 0.7752708333333334,
+              "false_calls": 350,
+              "missed_improvements": 18,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.9,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.785,
+              "rate": 0.4225,
+              "utility": 0.7744375,
+              "false_calls": 356,
+              "missed_improvements": 19,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.895,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.79,
+              "rate": 0.39416666666666667,
+              "utility": 0.7801458333333333,
+              "false_calls": 357,
+              "missed_improvements": 13,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.935,
+                "overwrite": 0.99,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.7791666666666667,
+              "rate": 1.0,
+              "utility": 0.7541666666666667,
+              "false_calls": 576,
+              "missed_improvements": 0,
+              "false_present": 83,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.735,
+                "evicted": 0.1
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.7833333333333333,
+              "rate": 0.4,
+              "utility": 0.7733333333333333,
+              "false_calls": 332,
+              "missed_improvements": 21,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.885,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7825,
+              "rate": 0.4,
+              "utility": 0.7725,
+              "false_calls": 335,
+              "missed_improvements": 22,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.88,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.79,
+              "rate": 0.4,
+              "utility": 0.78,
+              "false_calls": 364,
+              "missed_improvements": 13,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.935,
+                "overwrite": 0.99,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.7424999999999999,
+              "rate": 0.4,
+              "utility": 0.7324999999999999,
+              "false_calls": 248,
+              "missed_improvements": 70,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.67,
+                "overwrite": 0.97,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.8008333333333333,
+              "rate": 0.4,
+              "utility": 0.7908333333333333,
+              "false_calls": 204,
+              "missed_improvements": 0,
+              "false_present": 57,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.99,
+                "overwrite": 1.0,
+                "absent": 0.85,
+                "stale": 0.865,
+                "evicted": 0.1
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 10.708038332722936,
+            "sidecar_build_us": 7.868414166599298,
+            "probe_us": 0.6390566666899152,
+            "gate_matrix_batched_us": 0.040152499423129484
+          },
+          "exact_hits": 598,
+          "gain_opportunities": 110
+        },
+        "ood": {
+          "fixed_dev_threshold": {
+            "recurrent": {
+              "acc": 0.6816666666666666,
+              "rate": 0.0,
+              "utility": 0.6816666666666666,
+              "false_calls": 0,
+              "missed_improvements": 166,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.145,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "always_exact": {
+              "acc": 0.8200000000000001,
+              "rate": 1.0,
+              "utility": 0.795,
+              "false_calls": 606,
+              "missed_improvements": 0,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.975,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "confidence": {
+              "acc": 0.775,
+              "rate": 0.3858333333333333,
+              "utility": 0.7653541666666667,
+              "false_calls": 326,
+              "missed_improvements": 54,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.705,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7691666666666667,
+              "rate": 0.37583333333333335,
+              "utility": 0.7597708333333333,
+              "false_calls": 322,
+              "missed_improvements": 61,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.67,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8025,
+              "rate": 0.37083333333333335,
+              "utility": 0.7932291666666667,
+              "false_calls": 288,
+              "missed_improvements": 21,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.87,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "unsafe_ignore_epoch": {
+              "acc": 0.8200000000000001,
+              "rate": 1.0,
+              "utility": 0.795,
+              "false_calls": 606,
+              "missed_improvements": 0,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.975,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            }
+          },
+          "offline_exact_40pct": {
+            "confidence": {
+              "acc": 0.78,
+              "rate": 0.4,
+              "utility": 0.77,
+              "false_calls": 337,
+              "missed_improvements": 48,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.735,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "heuristic": {
+              "acc": 0.7758333333333334,
+              "rate": 0.4,
+              "utility": 0.7658333333333334,
+              "false_calls": 342,
+              "missed_improvements": 53,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.71,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "learned": {
+              "acc": 0.8083333333333333,
+              "rate": 0.4,
+              "utility": 0.7983333333333333,
+              "false_calls": 315,
+              "missed_improvements": 14,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.905,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "seeded_random": {
+              "acc": 0.735,
+              "rate": 0.4,
+              "utility": 0.725,
+              "false_calls": 249,
+              "missed_improvements": 102,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.465,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            },
+            "oracle_not_deployable": {
+              "acc": 0.8200000000000001,
+              "rate": 0.4,
+              "utility": 0.81,
+              "false_calls": 180,
+              "missed_improvements": 0,
+              "false_present": 40,
+              "accuracy_by_family": {
+                "local": 1.0,
+                "far": 0.975,
+                "overwrite": 1.0,
+                "absent": 0.9,
+                "stale": 0.9,
+                "evicted": 0.145
+              },
+              "n": 1200
+            }
+          },
+          "timing_us": {
+            "forward_us": 53.56219333331561,
+            "sidecar_build_us": 17.028059166174597,
+            "probe_us": 0.6048008337226444,
+            "gate_matrix_batched_us": 0.03856249956394701
+          },
+          "exact_hits": 594,
+          "gain_opportunities": 166
+        }
+      }
+    }
+  ],
+  "ranks": {
+    "fixed_dev_threshold/id": [
+      {
+        "method": "learned",
+        "score": 100.0,
+        "acc": 0.7816666666666666,
+        "rate": 0.3955555555555555,
+        "utility": 0.7717777777777778
+      },
+      {
+        "method": "always_exact",
+        "score": 99.6256838468183,
+        "acc": 0.793888888888889,
+        "rate": 1.0,
+        "utility": 0.7688888888888888
+      },
+      {
+        "method": "confidence",
+        "score": 99.20277857759862,
+        "acc": 0.7761111111111111,
+        "rate": 0.41944444444444445,
+        "utility": 0.765625
+      },
+      {
+        "method": "heuristic",
+        "score": 99.02641808234954,
+        "acc": 0.7747222222222222,
+        "rate": 0.4183333333333333,
+        "utility": 0.7642638888888889
+      },
+      {
+        "method": "recurrent",
+        "score": 90.41174776849985,
+        "acc": 0.6977777777777777,
+        "rate": 0.0,
+        "utility": 0.6977777777777777
+      }
+    ],
+    "fixed_dev_threshold/ood": [
+      {
+        "method": "always_exact",
+        "score": 100.0,
+        "acc": 0.8216666666666667,
+        "rate": 1.0,
+        "utility": 0.7966666666666667
+      },
+      {
+        "method": "learned",
+        "score": 99.80299860529983,
+        "acc": 0.8041666666666666,
+        "rate": 0.3627777777777778,
+        "utility": 0.7950972222222221
+      },
+      {
+        "method": "confidence",
+        "score": 96.09135285913527,
+        "acc": 0.7747222222222222,
+        "rate": 0.36777777777777776,
+        "utility": 0.7655277777777778
+      },
+      {
+        "method": "heuristic",
+        "score": 95.58403068340306,
+        "acc": 0.7705555555555555,
+        "rate": 0.3627777777777778,
+        "utility": 0.7614861111111111
+      },
+      {
+        "method": "recurrent",
+        "score": 86.85495118549511,
+        "acc": 0.6919444444444444,
+        "rate": 0.0,
+        "utility": 0.6919444444444444
+      }
+    ],
+    "offline_exact_40pct/id": [
+      {
+        "method": "learned",
+        "score": 100.0,
+        "acc": 0.7813888888888889,
+        "rate": 0.4000000000000001,
+        "utility": 0.771388888888889
+      },
+      {
+        "method": "confidence",
+        "score": 99.02772776377384,
+        "acc": 0.773888888888889,
+        "rate": 0.4000000000000001,
+        "utility": 0.7638888888888888
+      },
+      {
+        "method": "heuristic",
+        "score": 98.91969751530425,
+        "acc": 0.7730555555555556,
+        "rate": 0.4000000000000001,
+        "utility": 0.7630555555555555
+      },
+      {
+        "method": "seeded_random",
+        "score": 94.02232625135038,
+        "acc": 0.7352777777777778,
+        "rate": 0.4000000000000001,
+        "utility": 0.7252777777777778
+      }
+    ],
+    "offline_exact_40pct/ood": [
+      {
+        "method": "learned",
+        "score": 100.00000000000001,
+        "acc": 0.8094444444444445,
+        "rate": 0.4000000000000001,
+        "utility": 0.7994444444444445
+      },
+      {
+        "method": "confidence",
+        "score": 96.52536483669213,
+        "acc": 0.7816666666666666,
+        "rate": 0.4000000000000001,
+        "utility": 0.7716666666666666
+      },
+      {
+        "method": "heuristic",
+        "score": 96.14315496872827,
+        "acc": 0.7786111111111111,
+        "rate": 0.4000000000000001,
+        "utility": 0.768611111111111
+      },
+      {
+        "method": "seeded_random",
+        "score": 91.66087560806113,
+        "acc": 0.7427777777777776,
+        "rate": 0.4000000000000001,
+        "utility": 0.7327777777777778
+      }
+    ]
+  },
+  "recurrent_state_bytes": 192,
+  "sidecar_and_header_bytes": 31,
+  "gate_weight_and_norm_bytes": 224,
+  "limits": "CPU NumPy selective diagonal recurrent proxy, not Mamba-3/4 implementation. Synthetic KV event case fixture only. Matrix timings batch-amortized."
+}

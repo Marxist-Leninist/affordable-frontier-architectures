@@ -1,0 +1,50 @@
+[
+  {
+    "seed": 17,
+    "split": "id",
+    "median_us_per_query": {
+      "always": 0.5810375,
+      "learned": 0.92546
+    }
+  },
+  {
+    "seed": 17,
+    "split": "ood",
+    "median_us_per_query": {
+      "always": 0.5620716666666666,
+      "learned": 0.7878350000000001
+    }
+  },
+  {
+    "seed": 29,
+    "split": "id",
+    "median_us_per_query": {
+      "always": 0.5580741666666666,
+      "learned": 0.7344333333333334
+    }
+  },
+  {
+    "seed": 29,
+    "split": "ood",
+    "median_us_per_query": {
+      "always": 0.5581275,
+      "learned": 0.75832
+    }
+  },
+  {
+    "seed": 43,
+    "split": "id",
+    "median_us_per_query": {
+      "always": 0.5580333333333333,
+      "learned": 0.7370783333333334
+    }
+  },
+  {
+    "seed": 43,
+    "split": "ood",
+    "median_us_per_query": {
+      "always": 0.5729125,
+      "learned": 0.7820633333333333
+    }
+  }
+]
