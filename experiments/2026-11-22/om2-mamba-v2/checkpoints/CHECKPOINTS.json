@@ -1,0 +1,130 @@
+{
+ "m2-5617": {
+  "arm": "m2",
+  "seed": 5617,
+  "params": 471008,
+  "test_macro_bpb": 2.1827927085311143,
+  "sha256": "2585c66604d751140e6297507ad770bd77ab210746d490880375b3f2230422be",
+  "bytes": 1887104
+ },
+ "m2-5649": {
+  "arm": "m2",
+  "seed": 5649,
+  "params": 471008,
+  "test_macro_bpb": 2.173685591817264,
+  "sha256": "829b094615dbfa5e6c00bff91f997a6d68abf7ef40bfd13b74df158d16eb9907",
+  "bytes": 1887104
+ },
+ "om1-5617": {
+  "arm": "om1",
+  "seed": 5617,
+  "params": 474752,
+  "test_macro_bpb": 2.149164784228095,
+  "sha256": "8b207797fd7a14d45efafcc584316fe79a4eff031ee0b98699a0f37664abb0b7",
+  "bytes": 1902504
+ },
+ "om1-5649": {
+  "arm": "om1",
+  "seed": 5649,
+  "params": 474752,
+  "test_macro_bpb": 2.1526119132989465,
+  "sha256": "27ec90e8492e595cdd7a6b4ac319b0e3c5ef2c7f3b11310f4aa5b0422671e1a1",
+  "bytes": 1902504
+ },
+ "om2-5617": {
+  "arm": "om2",
+  "seed": 5617,
+  "params": 471264,
+  "test_macro_bpb": 2.1641667445880395,
+  "sha256": "34fecbaedc6a0acd284a4b3e81bddec61141b9db6188a6ca16084919cad60e6a",
+  "bytes": 1888728
+ },
+ "om2-5649": {
+  "arm": "om2",
+  "seed": 5649,
+  "params": 471264,
+  "test_macro_bpb": 2.17111695743307,
+  "sha256": "ad4c8d9621720e980ebd9e7317bc8f5de0c31a85208ab762d537172aa53c662c",
+  "bytes": 1888728
+ },
+ "om2a-5617": {
+  "arm": "om2a",
+  "seed": 5617,
+  "params": 504289,
+  "test_macro_bpb": 2.1501908183831513,
+  "sha256": "7f0d02471f7aa306fbf23bc69513c9db11145b69f7751177326799faa0c400d0",
+  "bytes": 2021388
+ },
+ "om2a-5649": {
+  "arm": "om2a",
+  "seed": 5649,
+  "params": 504289,
+  "test_macro_bpb": 2.1548678542240762,
+  "sha256": "da33e705f9e0bda3c826408d31feb5b342d16513a7114a5f0b1a5f0f4cf19e26",
+  "bytes": 2021388
+ },
+ "om2g-5617": {
+  "arm": "om2g",
+  "seed": 5617,
+  "params": 504289,
+  "test_macro_bpb": 2.153809667717992,
+  "sha256": "12adaa2c08c0d5ed6a8ba657815cba22ecf2775d6abba5ab8ba182a32c7de202",
+  "bytes": 2021388
+ },
+ "om2g-5649": {
+  "arm": "om2g",
+  "seed": 5649,
+  "params": 504289,
+  "test_macro_bpb": 2.1599595652099115,
+  "sha256": "46d801b96920d4fdbd2c2aa1cffe2f16421c6a953bc7848f2db1db1d081222f7",
+  "bytes": 2021388
+ },
+ "om2p-5617": {
+  "arm": "om2p",
+  "seed": 5617,
+  "params": 504289,
+  "test_macro_bpb": 2.1586683040540993,
+  "sha256": "64914b5726b8d1602509ef9cea0e20a1aca03dfde242e6f72cbdac3b49e041cb",
+  "bytes": 2021388
+ },
+ "om2p-5649": {
+  "arm": "om2p",
+  "seed": 5649,
+  "params": 504289,
+  "test_macro_bpb": 2.166872888594923,
+  "sha256": "8a76d65fb78ae43af30a947c11036e7ddb9b551255c15daab48b7d44b73559f0",
+  "bytes": 2021388
+ },
+ "om2pos-5617": {
+  "arm": "om2pos",
+  "seed": 5617,
+  "params": 471264,
+  "test_macro_bpb": 2.163290689635308,
+  "sha256": "210ccc3524c996f2a4b27dfb89d28faa78a9bedf3713b98bac1c2c417814ba7d",
+  "bytes": 1888728
+ },
+ "om2pos-5649": {
+  "arm": "om2pos",
+  "seed": 5649,
+  "params": 471264,
+  "test_macro_bpb": 2.1729599322592232,
+  "sha256": "cedf725dd26032328efbb5a976b6b0650f195e6f02abcb031c48984c415b4d97",
+  "bytes": 1888728
+ },
+ "tf-5617": {
+  "arm": "tf",
+  "seed": 5617,
+  "params": 476288,
+  "test_macro_bpb": 2.3744188090919747,
+  "sha256": "6d4f72d038bc973013a15a59eeb104bb8721975a35c145891f5366640c84367a",
+  "bytes": 1907432
+ },
+ "tf-5649": {
+  "arm": "tf",
+  "seed": 5649,
+  "params": 476288,
+  "test_macro_bpb": 2.3831019138908776,
+  "sha256": "2ffac8792a44afe82fa7bbcfd199111c47566568a2ae4e743afb78d865003b96",
+  "bytes": 1907432
+ }
+}

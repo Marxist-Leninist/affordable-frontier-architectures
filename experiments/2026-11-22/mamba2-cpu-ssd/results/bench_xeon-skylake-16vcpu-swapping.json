@@ -1,0 +1,580 @@
+{
+ "label": "xeon-skylake-16vcpu-swapping",
+ "cpu": "Intel Xeon Processor (Skylake, IBRS, no TSX)",
+ "logical_cpus": 16,
+ "threads": 1,
+ "torch": "2.10.0+cu128",
+ "transformers": "4.57.6",
+ "started": "2026-11-22 05:08:42",
+ "memory_at_start": {
+  "MemTotal": 31337,
+  "MemAvailable": 11627,
+  "SwapTotal": 32767,
+  "SwapFree": 1627,
+  "load1": 12.99755859375
+ },
+ "tcmalloc": "/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4",
+ "cases": {
+  "fwd_bwd_small_b8_T256": {
+   "glibc": {
+    "kind": "fwd_bwd",
+    "model": "small",
+    "batch": 8,
+    "T": 256,
+    "reps": 5,
+    "warm": 2,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11627,
+      "SwapTotal": 32767,
+      "SwapFree": 1627,
+      "load1": 12.99755859375
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11348,
+      "SwapTotal": 32767,
+      "SwapFree": 1595,
+      "load1": 12.947265625
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11560,
+      "SwapTotal": 32767,
+      "SwapFree": 1564,
+      "load1": 13.52734375
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11426,
+      "SwapTotal": 32767,
+      "SwapFree": 1567,
+      "load1": 12.47509765625
+     }
+    ],
+    "hf": {
+     "median_s": 5.457179884426296,
+     "min_s": 5.169888684991747,
+     "max_s": 5.923335164319724,
+     "n": 10,
+     "user_s": 2.4419090000000008,
+     "sys_s": 2.9698589999999987,
+     "minor_faults": 786483.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1352.49609375
+    },
+    "new": {
+     "median_s": 0.6120950663462281,
+     "min_s": 0.5761190531775355,
+     "max_s": 0.6469484940171242,
+     "n": 10,
+     "user_s": 0.6112324999999998,
+     "sys_s": 0.0008255000000003676,
+     "minor_faults": 0.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1151.7109375
+    },
+    "speedup": 8.915575675199893,
+    "speedup_user_cpu": 3.99505752720937,
+    "memory_ratio": 1.1743364152517655
+   },
+   "tcmalloc": {
+    "kind": "fwd_bwd",
+    "model": "small",
+    "batch": 8,
+    "T": 256,
+    "reps": 5,
+    "warm": 2,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11378,
+      "SwapTotal": 32767,
+      "SwapFree": 1578,
+      "load1": 11.845703125
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11678,
+      "SwapTotal": 32767,
+      "SwapFree": 1578,
+      "load1": 12.341796875
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11436,
+      "SwapTotal": 32767,
+      "SwapFree": 1625,
+      "load1": 12.23291015625
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11456,
+      "SwapTotal": 32767,
+      "SwapFree": 1625,
+      "load1": 11.93896484375
+     }
+    ],
+    "hf": {
+     "median_s": 1.9422139974776655,
+     "min_s": 1.814043824095279,
+     "max_s": 2.2332791658118367,
+     "n": 10,
+     "user_s": 1.9375299999999989,
+     "sys_s": 0.004059500000000105,
+     "minor_faults": 863.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1174.546875
+    },
+    "new": {
+     "median_s": 0.6160156540572643,
+     "min_s": 0.5754458568990231,
+     "max_s": 0.7106533381156623,
+     "n": 10,
+     "user_s": 0.6114664999999997,
+     "sys_s": 0.006543999999999994,
+     "minor_faults": 482.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1002.515625
+    },
+    "speedup": 3.152864679145181,
+    "speedup_user_cpu": 3.1686609160109342,
+    "memory_ratio": 1.171599569832141
+   }
+  },
+  "forward_130m_T256": {
+   "glibc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 256,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11947,
+      "SwapTotal": 32767,
+      "SwapFree": 1631,
+      "load1": 12.4931640625
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11448,
+      "SwapTotal": 32767,
+      "SwapFree": 1653,
+      "load1": 11.61572265625
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11865,
+      "SwapTotal": 32767,
+      "SwapFree": 1686,
+      "load1": 12.1123046875
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11635,
+      "SwapTotal": 32767,
+      "SwapFree": 1616,
+      "load1": 12.6943359375
+     }
+    ],
+    "hf": {
+     "median_s": 75.43990893079899,
+     "min_s": 72.97278907895088,
+     "max_s": 79.88748001493514,
+     "n": 6,
+     "user_s": 36.481308,
+     "sys_s": 38.80846,
+     "minor_faults": 9786221.5,
+     "major_faults": 0.0,
+     "peak_rss_mib": 2494.04296875
+    },
+    "new": {
+     "median_s": 3.858973637688905,
+     "min_s": 3.7342274943366647,
+     "max_s": 4.072250328026712,
+     "n": 6,
+     "user_s": 3.2424195000000005,
+     "sys_s": 0.6132284999999997,
+     "minor_faults": 154777.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1341.8203125
+    },
+    "speedup": 19.549215935037868,
+    "speedup_user_cpu": 11.251260979648066,
+    "memory_ratio": 1.8587011580583745
+   },
+   "tcmalloc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 256,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11617,
+      "SwapTotal": 32767,
+      "SwapFree": 1640,
+      "load1": 12.85986328125
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11985,
+      "SwapTotal": 32767,
+      "SwapFree": 1658,
+      "load1": 12.04296875
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11076,
+      "SwapTotal": 32767,
+      "SwapFree": 1655,
+      "load1": 11.62060546875
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11622,
+      "SwapTotal": 32767,
+      "SwapFree": 1698,
+      "load1": 12.115234375
+     }
+    ],
+    "hf": {
+     "median_s": 28.497258443152532,
+     "min_s": 27.861815625801682,
+     "max_s": 29.945496293716133,
+     "n": 6,
+     "user_s": 28.434260499999997,
+     "sys_s": 0.056895999999999614,
+     "minor_faults": 8640.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 2526.25
+    },
+    "new": {
+     "median_s": 3.2700146925635636,
+     "min_s": 3.1926840050145984,
+     "max_s": 3.536775641143322,
+     "n": 6,
+     "user_s": 3.2641519999999993,
+     "sys_s": 0.0038215000000001442,
+     "minor_faults": 0.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1353.91015625
+    },
+    "speedup": 8.714718777245553,
+    "speedup_user_cpu": 8.711071206242847,
+    "memory_ratio": 1.8658919045242224
+   }
+  },
+  "forward_130m_T512": {
+   "glibc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 512,
+    "reps": 2,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11298,
+      "SwapTotal": 32767,
+      "SwapFree": 1706,
+      "load1": 12.357421875
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11024,
+      "SwapTotal": 32767,
+      "SwapFree": 1715,
+      "load1": 13.0693359375
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11032,
+      "SwapTotal": 32767,
+      "SwapFree": 1755,
+      "load1": 13.23974609375
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11678,
+      "SwapTotal": 32767,
+      "SwapFree": 1804,
+      "load1": 13.47265625
+     }
+    ],
+    "hf": {
+     "median_s": 165.2892319264356,
+     "min_s": 163.4516125037335,
+     "max_s": 167.90286748018116,
+     "n": 4,
+     "user_s": 86.056606,
+     "sys_s": 78.989712,
+     "minor_faults": 19699225.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 3718.0078125
+    },
+    "new": {
+     "median_s": 8.709983858512715,
+     "min_s": 8.577784131281078,
+     "max_s": 8.944298076909035,
+     "n": 4,
+     "user_s": 6.6984745,
+     "sys_s": 2.0527925,
+     "minor_faults": 477481.5,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1416.88671875
+    },
+    "speedup": 18.97698487292717,
+    "speedup_user_cpu": 12.847194685894529,
+    "memory_ratio": 2.6240685040650855
+   },
+   "tcmalloc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 512,
+    "reps": 2,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11593,
+      "SwapTotal": 32767,
+      "SwapFree": 1779,
+      "load1": 12.97314453125
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11060,
+      "SwapTotal": 32767,
+      "SwapFree": 1718,
+      "load1": 14.52978515625
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 11368,
+      "SwapTotal": 32767,
+      "SwapFree": 1756,
+      "load1": 13.1533203125
+     },
+     {
+      "impl": "hf",
+      "MemTotal": 31337,
+      "MemAvailable": 11975,
+      "SwapTotal": 32767,
+      "SwapFree": 1747,
+      "load1": 12.7421875
+     }
+    ],
+    "hf": {
+     "median_s": 66.0634303635452,
+     "min_s": 65.2164485710673,
+     "max_s": 71.67254312289879,
+     "n": 4,
+     "user_s": 65.94698199999999,
+     "sys_s": 0.1045910000000001,
+     "minor_faults": 17320.5,
+     "major_faults": 0.0,
+     "peak_rss_mib": 4513.6015625
+    },
+    "new": {
+     "median_s": 6.4297816953621805,
+     "min_s": 6.186009872239083,
+     "max_s": 6.6425561010837555,
+     "n": 4,
+     "user_s": 6.2860700000000005,
+     "sys_s": 0.1569615000000002,
+     "minor_faults": 30724.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1442.15625
+    },
+    "speedup": 10.2745992777946,
+    "speedup_user_cpu": 10.490971624560336,
+    "memory_ratio": 3.12975904136601
+   }
+  },
+  "forward_130m_T2048": {
+   "glibc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 2048,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 16322,
+      "SwapTotal": 32767,
+      "SwapFree": 1749,
+      "load1": 10.23779296875
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 16422,
+      "SwapTotal": 32767,
+      "SwapFree": 1744,
+      "load1": 11.0751953125
+     }
+    ],
+    "new": {
+     "median_s": 38.34559635887854,
+     "min_s": 37.55437114322558,
+     "max_s": 39.54067299282178,
+     "n": 6,
+     "user_s": 27.000477500000002,
+     "sys_s": 11.303899000000001,
+     "minor_faults": 2949430.5,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1782.26171875
+    }
+   },
+   "tcmalloc": {
+    "kind": "forward",
+    "model": "130m",
+    "batch": 1,
+    "T": 2048,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 15689,
+      "SwapTotal": 32767,
+      "SwapFree": 1733,
+      "load1": 10.2822265625
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 15265,
+      "SwapTotal": 32767,
+      "SwapFree": 1756,
+      "load1": 11.54296875
+     }
+    ],
+    "new": {
+     "median_s": 24.94875307334587,
+     "min_s": 24.07498543523252,
+     "max_s": 27.325351524632424,
+     "n": 6,
+     "user_s": 24.676679999999994,
+     "sys_s": 0.06495300000000004,
+     "minor_faults": 5122.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 1950.15234375
+    }
+   }
+  },
+  "fwd_bwd_130m_b1_T256": {
+   "glibc": {
+    "kind": "fwd_bwd",
+    "model": "130m",
+    "batch": 1,
+    "T": 256,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 16126,
+      "SwapTotal": 32767,
+      "SwapFree": 1796,
+      "load1": 10.8017578125
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 15464,
+      "SwapTotal": 32767,
+      "SwapFree": 1748,
+      "load1": 11.337890625
+     }
+    ],
+    "new": {
+     "median_s": 8.996572366449982,
+     "min_s": 8.311680580023676,
+     "max_s": 10.026859446428716,
+     "n": 6,
+     "user_s": 8.067969,
+     "sys_s": 0.6723784999999998,
+     "minor_faults": 165463.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 3247.76171875
+    }
+   },
+   "tcmalloc": {
+    "kind": "fwd_bwd",
+    "model": "130m",
+    "batch": 1,
+    "T": 256,
+    "reps": 3,
+    "warm": 1,
+    "memory_before_each_process": [
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 15376,
+      "SwapTotal": 32767,
+      "SwapFree": 2218,
+      "load1": 11.57763671875
+     },
+     {
+      "impl": "new",
+      "MemTotal": 31337,
+      "MemAvailable": 15382,
+      "SwapTotal": 32767,
+      "SwapFree": 2505,
+      "load1": 12.88037109375
+     }
+    ],
+    "new": {
+     "median_s": 8.3393792451825,
+     "min_s": 8.081631786655635,
+     "max_s": 9.328975705895573,
+     "n": 6,
+     "user_s": 7.831715500000003,
+     "sys_s": 0.6825459999999999,
+     "minor_faults": 184397.0,
+     "major_faults": 0.0,
+     "peak_rss_mib": 2976.3359375
+    }
+   }
+  }
+ },
+ "finished": "2026-11-22 06:09:42"
+}

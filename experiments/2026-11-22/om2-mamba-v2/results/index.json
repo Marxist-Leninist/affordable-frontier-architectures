@@ -1,0 +1,390 @@
+{
+ "weights": {
+  "quality": 0.35,
+  "recall": 0.15,
+  "train_speed": 0.15,
+  "decode_speed": 0.15,
+  "state_memory": 0.1,
+  "prefill_speed": 0.05,
+  "train_memory": 0.05
+ },
+ "gate_quality_index": 80.0,
+ "common_dev_target_bpb": 2.323897020669392,
+ "speed_machine": {
+  "cpu": "Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz",
+  "threads": 1,
+  "time": "2026-11-22 05:17:26"
+ },
+ "order": [
+  "m2",
+  "om2pos",
+  "om2",
+  "om2p",
+  "om2g",
+  "om2a",
+  "tf",
+  "om1"
+ ],
+ "rows": {
+  "m2": {
+   "name": "Mamba-2",
+   "family": "Mamba",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 471008,
+   "bpb": 2.178239150174189,
+   "domains": {
+    "article": 2.164408598559337,
+    "fiction": 2.1878976414749847,
+    "dialogue": 2.1824112104882465
+   },
+   "recall": 0.5600353422619048,
+   "recall_by_gap": {
+    "16": 0.5444568452380952,
+    "64": 0.5597098214285714,
+    "128": 0.5634300595238095,
+    "176": 0.5725446428571428
+   },
+   "dev_start": 8.949795110868749,
+   "dev_final": 2.1192879217825213,
+   "steps": 2000,
+   "train_s_per_step": 0.38390981731936336,
+   "train_rss": 1049.1484375,
+   "prefill": 14859.076305220702,
+   "decode_tok_s": 442.82943330213953,
+   "decode_ms": 2.251337864436209,
+   "decode_p95": 2.3622550070285797,
+   "state_bytes": 146432.0,
+   "index": {
+    "quality": 114.91134272953518,
+    "recall": 107.54599035542061,
+    "train_speed": 58.34407320857306,
+    "decode_speed": 103.5798977360592,
+    "prefill_speed": 61.706751443662974,
+    "state_memory": 716.083916083916,
+    "train_memory": 72.50690664303639
+   },
+   "combined": 115.10361850384075,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.5337587277746634,
+   "train_min_to_common_target": 5.165678399790669
+  },
+  "om1": {
+   "name": "Our Mamba v1",
+   "family": "Mamba (ours)",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 474752,
+   "bpb": 2.150888348763521,
+   "domains": {
+    "article": 2.14210133610268,
+    "fiction": 2.1563830880577846,
+    "dialogue": 2.154180622130098
+   },
+   "recall": 0.5607328869047619,
+   "recall_by_gap": {
+    "16": 0.5457589285714286,
+    "64": 0.5556175595238095,
+    "128": 0.5693824404761905,
+    "176": 0.5721726190476191
+   },
+   "dev_start": 8.046680051945085,
+   "dev_final": 2.093219178495758,
+   "steps": 2000,
+   "train_s_per_step": 3.7691774371778592,
+   "train_rss": 3487.6640625,
+   "prefill": 4329.5635718005215,
+   "decode_tok_s": 526.1074990997951,
+   "decode_ms": 1.8866036552935839,
+   "decode_p95": 2.0003379322588444,
+   "state_bytes": 45056.0,
+   "index": {
+    "quality": 117.11062830677959,
+    "recall": 107.67994284693697,
+    "train_speed": 5.942639438047207,
+    "decode_speed": 123.05903098755776,
+    "prefill_speed": 17.979805587966812,
+    "state_memory": 2327.2727272727275,
+    "train_memory": 21.8113059197484
+   },
+   "combined": 84.10095416797199,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.04738535905521284,
+   "train_min_to_common_target": 49.168876363021155
+  },
+  "om2": {
+   "name": "Our Mamba v2",
+   "family": "Mamba (ours)",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 471264,
+   "bpb": 2.167641851010555,
+   "domains": {
+    "article": 2.152412224357611,
+    "fiction": 2.1830048117847594,
+    "dialogue": 2.1675085168892942
+   },
+   "recall": 0.5600353422619048,
+   "recall_by_gap": {
+    "16": 0.5509672619047619,
+    "64": 0.5578497023809523,
+    "128": 0.5604538690476191,
+    "176": 0.5708705357142857
+   },
+   "dev_start": 8.034213343474516,
+   "dev_final": 2.1052079330771782,
+   "steps": 2000,
+   "train_s_per_step": 0.39530798757914454,
+   "train_rss": 1104.978515625,
+   "prefill": 13796.777768669497,
+   "decode_tok_s": 339.1644630846965,
+   "decode_ms": 2.9331649420782924,
+   "decode_p95": 3.0430646147578955,
+   "state_bytes": 146432.0,
+   "index": {
+    "quality": 115.75853031674559,
+    "recall": 107.54599035542061,
+    "train_speed": 56.66180090197741,
+    "decode_speed": 79.33217117040388,
+    "prefill_speed": 57.29523955641995,
+    "state_memory": 716.083916083916,
+    "train_memory": 68.84342703212909
+   },
+   "combined": 109.69556896024166,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.449953372814934,
+   "train_min_to_common_target": 5.254286519765647
+  },
+  "om2a": {
+   "name": "v2 + always-on exact store",
+   "family": "Mamba (ours) + exact store",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 504289,
+   "bpb": 2.1525293363036138,
+   "domains": {
+    "article": 2.1513756500182772,
+    "fiction": 2.156296420476293,
+    "dialogue": 2.149915938416271
+   },
+   "recall": 0.5610584077380952,
+   "recall_by_gap": {
+    "16": 0.5455729166666666,
+    "64": 0.55859375,
+    "128": 0.5690104166666667,
+    "176": 0.5710565476190477
+   },
+   "dev_start": 8.039800841471969,
+   "dev_final": 2.091026154717315,
+   "steps": 2000,
+   "train_s_per_step": 0.408672132762149,
+   "train_rss": 1099.38671875,
+   "prefill": 13314.484157806164,
+   "decode_tok_s": 304.31186405111407,
+   "decode_ms": 3.239993122406304,
+   "decode_p95": 3.431415418162942,
+   "state_bytes": 277504.0,
+   "index": {
+    "quality": 116.97749703348059,
+    "recall": 107.74245400964459,
+    "train_speed": 54.80888147616171,
+    "decode_speed": 71.17998350569813,
+    "prefill_speed": 55.292371319048165,
+    "state_memory": 377.859778597786,
+    "train_memory": 69.19358449135349
+   },
+   "combined": 100.98219005050188,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.4366905063881782,
+   "train_min_to_common_target": 5.412378246811851
+  },
+  "om2g": {
+   "name": "v2 + state-gated exact store (\"Mamba-4\" idea)",
+   "family": "Mamba (ours) + exact store",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 504289,
+   "bpb": 2.1568846164639517,
+   "domains": {
+    "article": 2.156487430405603,
+    "fiction": 2.1603111302885405,
+    "dialogue": 2.1538552886977116
+   },
+   "recall": 0.5598493303571428,
+   "recall_by_gap": {
+    "16": 0.5448288690476191,
+    "64": 0.5619419642857143,
+    "128": 0.5602678571428571,
+    "176": 0.5723586309523809
+   },
+   "dev_start": 8.039800841471969,
+   "dev_final": 2.0951693764652415,
+   "steps": 2000,
+   "train_s_per_step": 0.40732932824175805,
+   "train_rss": 1112.70703125,
+   "prefill": 13222.33687561129,
+   "decode_tok_s": 319.8275008251369,
+   "decode_ms": 3.0962617602199316,
+   "decode_p95": 3.2109778840094805,
+   "state_bytes": 277504.0,
+   "index": {
+    "quality": 116.62489199608832,
+    "recall": 107.51026969101625,
+    "train_speed": 54.98956479234089,
+    "decode_speed": 74.80916429067682,
+    "prefill_speed": 54.90970221352574,
+    "state_memory": 377.859778597786,
+    "train_memory": 68.36526208254784
+   },
+   "combined": 101.55165131658144,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.4378249528950052,
+   "train_min_to_common_target": 5.423947116293303
+  },
+  "om2p": {
+   "name": "v2 + placebo sidecar",
+   "family": "Mamba (ours) + sidecar",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 504289,
+   "bpb": 2.162770596324511,
+   "domains": {
+    "article": 2.1526418659888593,
+    "fiction": 2.173727118530266,
+    "dialogue": 2.161942804454408
+   },
+   "recall": 0.5586402529761905,
+   "recall_by_gap": {
+    "16": 0.5424107142857143,
+    "64": 0.5600818452380952,
+    "128": 0.5625,
+    "176": 0.5695684523809523
+   },
+   "dev_start": 8.039800842772323,
+   "dev_final": 2.1034859448570327,
+   "steps": 2000,
+   "train_s_per_step": 0.4030113690532744,
+   "train_rss": 1107.19140625,
+   "prefill": 13538.195273437585,
+   "decode_tok_s": 326.455821702688,
+   "decode_ms": 3.0493997037410736,
+   "decode_p95": 3.1527213286608458,
+   "state_bytes": 146432.0,
+   "index": {
+    "quality": 116.15004919266273,
+    "recall": 107.27808537238793,
+    "train_speed": 55.5787360038717,
+    "decode_speed": 76.35955987648715,
+    "prefill_speed": 56.221398529346715,
+    "state_memory": 716.083916083916,
+    "train_memory": 68.70583295994581
+   },
+   "combined": 108.72775186849954,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.44189683123782275,
+   "train_min_to_common_target": 5.345428111202335
+  },
+  "om2pos": {
+   "name": "Our Mamba v2, positive decay",
+   "family": "Mamba (ours)",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 471264,
+   "bpb": 2.1681253109472656,
+   "domains": {
+    "article": 2.1627373868805826,
+    "fiction": 2.173374943909498,
+    "dialogue": 2.1682636020517165
+   },
+   "recall": 0.5572916666666666,
+   "recall_by_gap": {
+    "16": 0.5479910714285714,
+    "64": 0.5602678571428571,
+    "128": 0.5578497023809523,
+    "176": 0.5630580357142857
+   },
+   "dev_start": 8.044209867592762,
+   "dev_final": 2.1174944658027424,
+   "steps": 2000,
+   "train_s_per_step": 0.3795680400216952,
+   "train_rss": 1048.994140625,
+   "prefill": 15006.736855972977,
+   "decode_tok_s": 371.4807969509485,
+   "decode_ms": 2.6870560832321644,
+   "decode_p95": 2.777300775051117,
+   "state_bytes": 146432.0,
+   "index": {
+    "quality": 115.71974510290441,
+    "recall": 107.01911055545634,
+    "train_speed": 59.01145545839576,
+    "decode_speed": 86.89111442336258,
+    "prefill_speed": 62.31995597375234,
+    "state_memory": 716.083916083916,
+    "train_memory": 72.5175717065269
+   },
+   "combined": 112.55077245770246,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.4684310671771466,
+   "train_min_to_common_target": 5.1686814178650335
+  },
+  "tf": {
+   "name": "Transformer",
+   "family": "Transformer",
+   "seeds": [
+    5617,
+    5649
+   ],
+   "params": 476288,
+   "bpb": 2.378760361491426,
+   "domains": {
+    "article": 2.3883376298558536,
+    "fiction": 2.3504013150566543,
+    "dialogue": 2.3975421395617698
+   },
+   "recall": 0.5207403273809523,
+   "recall_by_gap": {
+    "16": 0.5066964285714286,
+    "64": 0.5249255952380952,
+    "128": 0.5275297619047619,
+    "176": 0.5238095238095238
+   },
+   "dev_start": 8.011122907835569,
+   "dev_final": 2.323897020669392,
+   "steps": 2000,
+   "train_s_per_step": 0.22398862487170845,
+   "train_rss": 760.705078125,
+   "prefill": 24080.146754746507,
+   "decode_tok_s": 427.52449363345687,
+   "decode_ms": 2.3482872638851404,
+   "decode_p95": 2.4295609910041094,
+   "state_bytes": 1048576.0,
+   "index": {
+    "quality": 100.0,
+    "recall": 100.0,
+    "train_speed": 100.0,
+    "decode_speed": 100.0,
+    "prefill_speed": 100.0,
+    "state_memory": 100.0,
+    "train_memory": 100.0
+   },
+   "combined": 100.0,
+   "ranked": true,
+   "bits_gained_per_train_min": 0.7617207200263301,
+   "train_min_to_common_target": null
+  }
+ }
+}

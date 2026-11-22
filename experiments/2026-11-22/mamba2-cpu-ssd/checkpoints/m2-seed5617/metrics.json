@@ -1,0 +1,29 @@
+{
+ "source_run": "m2-5617",
+ "seed": 5617,
+ "params": 471008,
+ "steps": 2000,
+ "batch": 8,
+ "ctx": 256,
+ "byte_presentations": 4096000,
+ "train_stream_sha": "3af3a49f34b1db516b00f29fed912db589e33c3bfe537ce298304175196b6126",
+ "train_s": 1316.144659771584,
+ "test_bpb": {
+  "article": 2.1721167115130546,
+  "fiction": 2.1908293010013424,
+  "dialogue": 2.1854321130789462,
+  "macro": 2.1827927085311143
+ },
+ "export_check": {
+  "study_vs_transformers_max_abs": 1.1444091796875e-05,
+  "study_vs_patched_max_abs": 0.0,
+  "windows": 48
+ },
+ "files_sha256": {
+  "README.md": "799c55f029e10baac294ab686dc93ec80e1b7ffdc7e63994f469f08657895d5a",
+  "config.json": "3762467746572e2e03e251883558f1b6231edc129d709511e2b6303df5def363",
+  "generation_config.json": "1795c4ba8a409352a1ef4e189e9ab4686fd2e0949fdccc144d4e7a86b6694834",
+  "model.safetensors": "9f92e879572a52170dc7da764e16d5107bd663643671c7d925a279ae9a0f387a"
+ },
+ "trained_by": "om2bench.py arm m2 (OM2Mixer signed=False, bcnorm=False), one CPU thread"
+}

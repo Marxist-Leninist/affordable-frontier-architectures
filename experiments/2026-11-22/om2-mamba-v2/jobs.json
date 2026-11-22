@@ -1,0 +1,258 @@
+[
+ {
+  "arm": "om1",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om1",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "m2",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "m2",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2g",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2g",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2a",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2a",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2p",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2p",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2pos",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "om2pos",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "tf",
+  "seed": 5617,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "tf",
+  "seed": 5649,
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ }
+]
