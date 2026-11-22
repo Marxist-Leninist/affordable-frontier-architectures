@@ -1,0 +1,10 @@
+{
+  "materialization": "datasets.load_dataset(parquet, streaming=True) over pinned Hugging Face HTTPS shard URLs, frozen selected windows on disk once and verified against source-parity row fixtures",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "urls": {
+    "train": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet",
+    "validation": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet",
+    "test": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet"
+  },
+  "datasets_version": "5.1.0"
+}

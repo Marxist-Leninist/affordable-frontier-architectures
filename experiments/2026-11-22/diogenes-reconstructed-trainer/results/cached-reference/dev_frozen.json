@@ -1,0 +1,229 @@
+{
+  "model": {
+    "name": "Counfield/Diogenes-0.1-20M",
+    "revision": "f39659c9805f098b581483e7bf46a529e905e303",
+    "sha": "5c274c53dbfbbc2f57ca34a8e8634c7e8ea56db9b48b0799a792c352b05f6190",
+    "license": "MIT"
+  },
+  "data": {
+    "train": {
+      "parquet_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "sha": "d27822816c3e4e28854e30b877f9fb241f209f9af636cc5a5237d0ae2a00740e",
+      "positions": [
+        [
+          3,
+          446,
+          "c2f7683a04d77fac5185848b65e693346ccf1695dd0fdd482861420bf17e43c5"
+        ],
+        [
+          4,
+          351,
+          "395d7cafcad3f9941df36a49e61a86da75079ad9556c2d98dd649a50d9613275"
+        ],
+        [
+          5,
+          480,
+          "6a7e1998fce7ec2a58c68cef741cb26e3b7e8d23eaeda6d16154170a0e5f4ab6"
+        ],
+        [
+          9,
+          677,
+          "1694260bed508d79e8f731dc7209ea5da361236b2f4e781f046ffefb72ede06c"
+        ],
+        [
+          10,
+          115,
+          "bc7f000cdf33bca74dc09bc495ec8030cd9286d76e034ebc131a15434ca98dc5"
+        ],
+        [
+          11,
+          287,
+          "8f6e2ed1cf3627ea415a9c64b7ddebd9b564ea612ba641c15fec25bab1bfff31"
+        ],
+        [
+          15,
+          73,
+          "413c34b097a87a17d96f06f4532abc6c3e265d274d52f2c0b8f17ace11cd4696"
+        ],
+        [
+          16,
+          232,
+          "73f721f82a00f92d162200fb24d3113411f291b5017bbdbb47a3ac9ff641bb40"
+        ],
+        [
+          17,
+          501,
+          "18f5a3d88d7ef7f16c4095b7e6a27b92c506ceb90fdc0a4cd10ff643c47c39fb"
+        ],
+        [
+          21,
+          1134,
+          "5164b3f62b5b6e36c62a3db5114db06fe28867be77c9ec3b3f498470e2544ade"
+        ],
+        [
+          22,
+          1219,
+          "2f5385bd495ff50efddc916d8516384dbc2356b68533cb3933b73ed5d9ce935c"
+        ],
+        [
+          26,
+          1257,
+          "4d6e7050c5f64c21b4a6cc76237e0a69376e1fb812963c0f267914099bd61c67"
+        ],
+        [
+          30,
+          320,
+          "6adde42313e0eedf2fa2438237e728c961e1f23dd0cafe0652a8477ea7dd84d1"
+        ],
+        [
+          31,
+          155,
+          "3de742197b7abedb083ba026cf39062c344bdd952b41ee1cdc6ddbbd29719b34"
+        ],
+        [
+          35,
+          14,
+          "4cf01eeaceed4c7f0ac45afedebd98c862bf8ef18272408295455e279382aa54"
+        ],
+        [
+          36,
+          104,
+          "eb7e0ae87f5543829dcf85439ca4abb012375615f9bef683e1d0f1dfa209a69e"
+        ]
+      ],
+      "n": 16
+    },
+    "dev": {
+      "parquet_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+      "sha": "9c58bea517d8b5e0d2fd924cb1ead252614cc8a9d5df039cdab14d0f203b94d8",
+      "positions": [
+        [
+          3,
+          429,
+          "19339f40646db175fd4b1a154747e905c5f2402559aca5068f7cc00624b20069"
+        ],
+        [
+          7,
+          499,
+          "647d31c18c8b5ee39e8c7ec49c9bebf594ff8986b9b81c19d7f0d8b1bf104b58"
+        ],
+        [
+          8,
+          53,
+          "9511f150a6937c7a866c83ac78e188fbb13e8f443c1e7b6cc2eb29250dbf08bf"
+        ],
+        [
+          9,
+          300,
+          "7c041904c50d53b79829df30d8a855994fd7a8ed7fba55b2947d9f2f745d8f02"
+        ],
+        [
+          10,
+          9,
+          "94e7311f4b28d0e7cdeebee40ace72fca423fd537d1169a6389b0969cfebbde5"
+        ],
+        [
+          11,
+          15,
+          "5e70ab97ea41dcf3dc0aeed5e590eae0c5fc7ed733424784dd7e75cf4af735ce"
+        ],
+        [
+          12,
+          58,
+          "a3b640f92c4c9b571dda3de1051aa8ee750d096c5357d2b2eae87ff791155b52"
+        ],
+        [
+          13,
+          90,
+          "283391b4b94c41aafb9f496aee25924bdefb3fa78e6e673945ea6f686e20865c"
+        ],
+        [
+          17,
+          280,
+          "e050a54154fcf058ccceaaa62c326713831e6fbfb56197b146159472e4e36aa6"
+        ],
+        [
+          18,
+          47,
+          "fba5eba5262d5519984bc7f05dd2d6eb4d5e2050f1ace30f16fd4f2837e45f62"
+        ],
+        [
+          22,
+          9,
+          "c79e8e7d3e4af3f028acfc9e631e2a38f3873dc0e051694bc214591c5d24e1f6"
+        ],
+        [
+          23,
+          392,
+          "257b59b2f6d7c06239287eddee6459d420d7cf04b99d937fc76c4e2ff109b5ab"
+        ]
+      ],
+      "n": 12
+    },
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "materialization": "stream records from verified immutable HF Parquet cache"
+  },
+  "baseline_dev_bpb": 2.7538480907058274,
+  "baseline_dev_time_s": 0.6623738969210535,
+  "original_reference_parity": {
+    "initial_reference_max_abs": 9.5367431640625e-06,
+    "argmax_agreement": true,
+    "causal_prefix_max_abs": 6.67572021484375e-06
+  },
+  "runs": [
+    {
+      "lr": 3e-05,
+      "name": "continued-3e-05.safetensors",
+      "sha": "411c8c1b46b022df226f2a125df2d1e407b87062b551608646647ee19f59b433",
+      "bytes": 81192904,
+      "train_s": 10.801829562988132,
+      "dev_bpb": 2.7316262840472816,
+      "dev_trace": [
+        {
+          "step": 8,
+          "bpb": 2.7432633253012066,
+          "training_s": 5.4727017130935565,
+          "eval_s": 0.6662841219222173,
+          "grad_before_clip": 4.239357948303223
+        },
+        {
+          "step": 16,
+          "bpb": 2.7316262840472816,
+          "training_s": 10.801829562988132,
+          "eval_s": 0.6723600629484281,
+          "grad_before_clip": 5.7239179611206055
+        }
+      ],
+      "updated_tensors": 35
+    },
+    {
+      "lr": 0.0001,
+      "name": "continued-1e-04.safetensors",
+      "sha": "cd51a25def165608fae7bacd4fb9a890d8916ed251de2f4e2985fdb63127dae1",
+      "bytes": 81192904,
+      "train_s": 9.965946160955355,
+      "dev_bpb": 2.6953660925424203,
+      "dev_trace": [
+        {
+          "step": 8,
+          "bpb": 2.723371919391571,
+          "training_s": 5.046051170909777,
+          "eval_s": 0.6435189070180058,
+          "grad_before_clip": 4.199647903442383
+        },
+        {
+          "step": 16,
+          "bpb": 2.6953660925424203,
+          "training_s": 9.965946160955355,
+          "eval_s": 0.6232905029319227,
+          "grad_before_clip": 5.468748092651367
+        }
+      ],
+      "updated_tensors": 35
+    }
+  ],
+  "decided_before_test": "continued-1e-04.safetensors",
+  "steps": 16,
+  "target_bytes": 512,
+  "torch": "2.9.1+cu128"
+}

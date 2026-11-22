@@ -1,0 +1,35 @@
+{
+  "architectures": [
+    "SableCore"
+  ],
+  "model_type": "sable-rlt",
+  "hidden_size": 928,
+  "num_attention_heads": 8,
+  "head_dim": 116,
+  "num_hidden_layers": 1,
+  "vocab_size": 256,
+  "decoder_window": 4,
+  "feedback": true,
+  "feedback_alpha": 0.1,
+  "max_position_embeddings": 512,
+  "torch_dtype": "float32",
+  "parameter_count": 20297472,
+  "training": {
+    "run_id": "L1-scratch-w928-s401",
+    "checkpoint_step": 30518,
+    "tokens_seen": 500006912,
+    "batch_size": 32,
+    "sequence_length": 512,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "warmup_steps": 500,
+    "decay_fraction": 0.1,
+    "decay_floor": 0.1,
+    "seed": 401,
+    "synthetic_fraction": 0.25,
+    "optimizer": "AdamW",
+    "precision": "float32",
+    "cuda_graphs": true
+  }
+}
