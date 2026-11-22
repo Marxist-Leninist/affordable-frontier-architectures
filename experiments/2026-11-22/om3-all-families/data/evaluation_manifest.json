@@ -1,0 +1,41 @@
+{
+  "dev": {
+    "documents": 75,
+    "targets": 38400,
+    "domains": {
+      "article": {
+        "documents": 32,
+        "targets": 16384
+      },
+      "fiction": {
+        "documents": 11,
+        "targets": 5632
+      },
+      "dialogue": {
+        "documents": 32,
+        "targets": 16384
+      }
+    },
+    "sha256": "f98ff062cf409201aa61ff21de051b098c813aa22322c84609de3b76a85538e2"
+  },
+  "test": {
+    "documents": 303,
+    "targets": 304572,
+    "domains": {
+      "article": {
+        "documents": 31,
+        "targets": 31744
+      },
+      "fiction": {
+        "documents": 32,
+        "targets": 32768
+      },
+      "dialogue": {
+        "documents": 240,
+        "targets": 240060
+      }
+    },
+    "sha256": "f729286378e9ec3695e91e6a61f4ed3d7a3407ee0a6e73dc1aec27e62d51f90f"
+  },
+  "generation_sha256": "79847c63eaf1998bcbfc5296c3e257b036ce7fb7ed5340ca820912089e2dfba7"
+}

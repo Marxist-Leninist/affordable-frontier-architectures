@@ -1,0 +1,274 @@
+[
+ {
+  "arm": "mlstm",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "mlstm",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "titans",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "titans",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "gdn",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "gdn",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "rwkv7",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "rwkv7",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "griffin",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "griffin",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "hyena",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "hyena",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "hyb",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "hyb",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "retnet",
+  "seed": 5617,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ },
+ {
+  "arm": "retnet",
+  "seed": 5649,
+  "script": "om3bench.py",
+  "extra": [
+   "--steps",
+   "2000",
+   "--eval-every",
+   "250",
+   "--warmup",
+   "100",
+   "--batch",
+   "8",
+   "--ctx",
+   "256"
+  ]
+ }
+]

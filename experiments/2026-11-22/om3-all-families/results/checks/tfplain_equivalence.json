@@ -1,0 +1,8 @@
+{
+ "forward_max_abs_logit_diff": 5.662441253662109e-07,
+ "step_max_abs_logit_diff": 4.76837158203125e-07,
+ "sequences": 2,
+ "length": 256,
+ "torch": "2.7.1+cu128",
+ "plain_attention_modules": 4
+}

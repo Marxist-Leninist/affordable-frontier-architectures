@@ -1,0 +1,2013 @@
+{
+ "arm": "hyena",
+ "seed": 5617,
+ "status": "ok",
+ "params": 474496,
+ "steps": 2000,
+ "batch": 8,
+ "ctx": 256,
+ "lr": 0.003,
+ "hf_equivalence_max_abs": null,
+ "warmup": 100,
+ "weight_decay": 0.01,
+ "gate_cost": null,
+ "gate_hold": null,
+ "gate_ramp": null,
+ "byte_presentations": 4096000,
+ "train_stream_sha": "3af3a49f34b1db516b00f29fed912db589e33c3bfe537ce298304175196b6126",
+ "train_s": 1762.9320460772142,
+ "train_s_per_step": 0.8814660230386071,
+ "curve": [
+  {
+   "step": 0,
+   "train_s": 0.0,
+   "dev_bpb": 8.149746187599765,
+   "dev": {
+    "article": 8.148959493556838,
+    "fiction": 8.154877327249384,
+    "dialogue": 8.145401741993076,
+    "macro": 8.149746187599765
+   },
+   "eval_s": 16.77729224273935
+  },
+  {
+   "step": 250,
+   "train_s": 290.32619232404977,
+   "dev_bpb": 2.980408423972967,
+   "dev": {
+    "article": 3.0931875729218747,
+    "fiction": 2.890919808606635,
+    "dialogue": 2.957117890390391,
+    "macro": 2.980408423972967
+   },
+   "eval_s": 16.718083339277655
+  },
+  {
+   "step": 500,
+   "train_s": 572.3186451001093,
+   "dev_bpb": 2.739978764376935,
+   "dev": {
+    "article": 2.8578354038193563,
+    "fiction": 2.671998172793057,
+    "dialogue": 2.6901027165183917,
+    "macro": 2.739978764376935
+   },
+   "eval_s": 18.37498089717701
+  },
+  {
+   "step": 750,
+   "train_s": 821.8974978807382,
+   "dev_bpb": 2.6075379956491105,
+   "dev": {
+    "article": 2.718367408409957,
+    "fiction": 2.573856282337851,
+    "dialogue": 2.5303902961995233,
+    "macro": 2.6075379956491105
+   },
+   "eval_s": 16.112004172056913
+  },
+  {
+   "step": 1000,
+   "train_s": 1060.9216970372945,
+   "dev_bpb": 2.4935654637199183,
+   "dev": {
+    "article": 2.604983556678948,
+    "fiction": 2.4325837927553584,
+    "dialogue": 2.4431290417254488,
+    "macro": 2.4935654637199183
+   },
+   "eval_s": 15.084706977009773
+  },
+  {
+   "step": 1250,
+   "train_s": 1289.7116983011365,
+   "dev_bpb": 2.4212710028560966,
+   "dev": {
+    "article": 2.5419398372343434,
+    "fiction": 2.3705478105669338,
+    "dialogue": 2.351325360767013,
+    "macro": 2.4212710028560966
+   },
+   "eval_s": 12.232431656681001
+  },
+  {
+   "step": 1500,
+   "train_s": 1487.9539343765937,
+   "dev_bpb": 2.3566847138445732,
+   "dev": {
+    "article": 2.4733685070346874,
+    "fiction": 2.3084403687532355,
+    "dialogue": 2.288245265745797,
+    "macro": 2.3566847138445732
+   },
+   "eval_s": 11.77819455601275
+  },
+  {
+   "step": 1750,
+   "train_s": 1625.130640137475,
+   "dev_bpb": 2.3165468199488193,
+   "dev": {
+    "article": 2.4364568226367775,
+    "fiction": 2.2765050505412336,
+    "dialogue": 2.2366785866684467,
+    "macro": 2.3165468199488193
+   },
+   "eval_s": 9.069520553573966
+  },
+  {
+   "step": 2000,
+   "train_s": 1762.9320460772142,
+   "dev_bpb": 2.2965385577120174,
+   "dev": {
+    "article": 2.410107799516955,
+    "fiction": 2.261671122849919,
+    "dialogue": 2.2178367507691785,
+    "macro": 2.2965385577120174
+   },
+   "eval_s": 7.872333380859345
+  }
+ ],
+ "final_train_loss50": 2.320532650403312,
+ "data": {
+  "dev_sha_mismatch": 0,
+  "test_sha_mismatch": 0,
+  "dev_file_sha": "f98ff062cf409201aa61ff21de051b098c813aa22322c84609de3b76a85538e2",
+  "test_file_sha": "f729286378e9ec3695e91e6a61f4ed3d7a3407ee0a6e73dc1aec27e62d51f90f"
+ },
+ "torch": "2.7.1+cu128",
+ "threads": 1,
+ "weights_sha": "00e1c81dcf8f8c1ea69a9ed57cf05cc6865828703ace6d212f19860b24e9c5bd",
+ "test_eval_s": 61.072954691015184,
+ "test": {
+  "article": 2.3644815560808317,
+  "fiction": 2.3420873331735104,
+  "dialogue": 2.3538612879684204,
+  "macro": 2.353476725740921
+ },
+ "test_docs": [
+  {
+   "domain": "article",
+   "doc": "045cc5039a0cce7099a4476b54e79719ee2a59f55d9ec55226cf1e2b54d77473",
+   "targets": 1024,
+   "nll": 1633.5475078736781
+  },
+  {
+   "domain": "article",
+   "doc": "066c8b5130efc0c730b1f47e3dbb8dbcdbd111e5f15f3d29c2ec7f1f56542ca6",
+   "targets": 1024,
+   "nll": 1875.4143030286068
+  },
+  {
+   "domain": "article",
+   "doc": "09ce5c246a9da5dccb879906b10b577a38c10536643f8d25ce38b494b844c7f4",
+   "targets": 1024,
+   "nll": 1721.5163800714072
+  },
+  {
+   "domain": "article",
+   "doc": "0c7d5c981cbb430b58eac9ebd17ef57d042e7040f679f84433fd4e51ae20f7a9",
+   "targets": 1024,
+   "nll": 1670.8721195434919
+  },
+  {
+   "domain": "article",
+   "doc": "0d568408bd44d43a4379fb6a77d5f17913ec9184db6d3d8dc2492be4f104e7b0",
+   "targets": 1024,
+   "nll": 1556.8919154399773
+  },
+  {
+   "domain": "article",
+   "doc": "12c724bf77fa302fb37b83bb392ef430d2ce27b441754a07f2f48ccfd87381b5",
+   "targets": 1024,
+   "nll": 1608.3077710460639
+  },
+  {
+   "domain": "article",
+   "doc": "1bcd2ee63fbb4e6514446cb2629226b862e280060b6a3e7468b523a6834f5cfe",
+   "targets": 1024,
+   "nll": 1680.6172882405808
+  },
+  {
+   "domain": "article",
+   "doc": "1c020c36419b554efdecbcacff4f0e7ab1046d759778e02ffe5ca1bfb94f8c59",
+   "targets": 1024,
+   "nll": 1570.928881100961
+  },
+  {
+   "domain": "article",
+   "doc": "22cbddec6b6bfc17b975ba76137ac7970e416088d60871865e215a9cc686a4f1",
+   "targets": 1024,
+   "nll": 1632.9464529260877
+  },
+  {
+   "domain": "article",
+   "doc": "2593e4b8daae75e36cb12087bd18dbba6eebfaabbad3dfa11caad3be3fa03599",
+   "targets": 1024,
+   "nll": 1543.8406215828145
+  },
+  {
+   "domain": "article",
+   "doc": "27ec0f4a27c3a595fba752a868b8d865d98b98bfb40dbd55bf13b8116b726c66",
+   "targets": 1024,
+   "nll": 1748.8719227226102
+  },
+  {
+   "domain": "article",
+   "doc": "28da6fbbe100d85b7ffb058bcb5553d53bc885f19a75dfa752aa998dc543b980",
+   "targets": 1024,
+   "nll": 1568.0123116950854
+  },
+  {
+   "domain": "article",
+   "doc": "2b8ad249a6aee99d303d4d20a9b05db320d8887ee5864fd230181448fd5d82df",
+   "targets": 1024,
+   "nll": 1810.9701638211845
+  },
+  {
+   "domain": "article",
+   "doc": "2fc5ed8f382dd9022a29263ed7ff7eb2d3d1758ea1c908ee0fea70fa2b5432ce",
+   "targets": 1024,
+   "nll": 1706.524732759688
+  },
+  {
+   "domain": "article",
+   "doc": "326ac98fb38d12039decd016a511eaff448290688d3f6265db1ac4ff2c8ca817",
+   "targets": 1024,
+   "nll": 1640.3089017282473
+  },
+  {
+   "domain": "article",
+   "doc": "39f5dd628a16c798c30a0421456159eca821fe1b25840a35f46497835ae7531c",
+   "targets": 1024,
+   "nll": 1707.672501821071
+  },
+  {
+   "domain": "article",
+   "doc": "3ae6e78c4c1aeac440e4fdfa12c07deb4f28f25e80985d4440271a1056183866",
+   "targets": 1024,
+   "nll": 1755.0227468119701
+  },
+  {
+   "domain": "article",
+   "doc": "3bfb4e1e94f1b5507e8e3fc5501c3e5667cd48531dbe658b17eb7c936755ebf1",
+   "targets": 1024,
+   "nll": 1591.4306813664734
+  },
+  {
+   "domain": "article",
+   "doc": "4e82eb89151bc5a023bbbc1f918dcbcdafdb2b6ea800e47aa48222bf3b120aeb",
+   "targets": 1024,
+   "nll": 1407.5559860304347
+  },
+  {
+   "domain": "article",
+   "doc": "5230c0b163d60dedccfef21458d39b783d771167868d953ee2c63e11cb23c715",
+   "targets": 1024,
+   "nll": 1537.0710772544844
+  },
+  {
+   "domain": "article",
+   "doc": "5417ffa4b08363316597ed97563fc68d060e68eaeb6948fa3c8e95ab322123b6",
+   "targets": 1024,
+   "nll": 1736.7836810024455
+  },
+  {
+   "domain": "article",
+   "doc": "57a8843cf7d3a91f1ac11b857cfd9b132c77e9b2a11e2443674309224c9f538a",
+   "targets": 1024,
+   "nll": 1672.1195496123983
+  },
+  {
+   "domain": "article",
+   "doc": "58412452bde3d45faac151f0d80c6b63abf9348f7116df60b304c50bcccd9695",
+   "targets": 1024,
+   "nll": 1622.6567659214488
+  },
+  {
+   "domain": "article",
+   "doc": "69833a2388be08efebe4a9e077309dc81dd1bfad44b6b4bdf5a5fa385cc5f16e",
+   "targets": 1024,
+   "nll": 1839.7895604148507
+  },
+  {
+   "domain": "article",
+   "doc": "6fc82a93d9870379c8b66ea42c3d807177e0dee3ac7ab3e8f4c30e122610eab9",
+   "targets": 1024,
+   "nll": 2108.5123036973528
+  },
+  {
+   "domain": "article",
+   "doc": "704a367c2a7db0ed6418db29fb1924727fb5c46d3d9a3c51088a572879e51545",
+   "targets": 1024,
+   "nll": 1490.164131437894
+  },
+  {
+   "domain": "article",
+   "doc": "74b4f10c8a4f3f4f5f5382f27e357ea96794c405c978df95909c67ce2f49aad6",
+   "targets": 1024,
+   "nll": 1614.703189088963
+  },
+  {
+   "domain": "article",
+   "doc": "757bbe9e0c78855222db93795a08b8a705293462ac6f8662d50ee25b915b86e7",
+   "targets": 1024,
+   "nll": 1657.8196592807653
+  },
+  {
+   "domain": "article",
+   "doc": "764487dcc86f8bf7e02f03183639e4cf68bc1568f9e6aa96d2bfb2f66a01fc68",
+   "targets": 1024,
+   "nll": 1557.1949480300536
+  },
+  {
+   "domain": "article",
+   "doc": "799cb4d22a73145bab0f07ae359b7e7bab20c72894976947111e8da194858d70",
+   "targets": 1024,
+   "nll": 1938.1078712376766
+  },
+  {
+   "domain": "article",
+   "doc": "c6d25ca6ec432eb69c8ab8cf0809390e8b4b5d24c0c9986682818bb4671443e7",
+   "targets": 1024,
+   "nll": 1820.13621071534
+  },
+  {
+   "domain": "fiction",
+   "doc": "01e44e2dfa30eb8533882c31d03cbceaa5d56c163d6cb1fca63e4c823559321b",
+   "targets": 1024,
+   "nll": 1698.0864660426741
+  },
+  {
+   "domain": "fiction",
+   "doc": "05169634671c43119803bf254cd1edfd6922aa0768e9f14eb321fd094983935b",
+   "targets": 1024,
+   "nll": 1541.309249878279
+  },
+  {
+   "domain": "fiction",
+   "doc": "0c893a6a4f4ad43e8ec599f800995405a7adcb87f9e2165a1c7adc7407fd1806",
+   "targets": 1024,
+   "nll": 1606.8915109974332
+  },
+  {
+   "domain": "fiction",
+   "doc": "10784a0330d6b9f08d123df3e51eacf8bb7d17a10bb4ec44d28fdb65114a3d97",
+   "targets": 1024,
+   "nll": 1740.9616939999396
+  },
+  {
+   "domain": "fiction",
+   "doc": "12b2d2cd2fb4f93b2f7bf90ed161176a9a0cea87f423e74996a92b44c0531f4f",
+   "targets": 1024,
+   "nll": 1646.9631728279637
+  },
+  {
+   "domain": "fiction",
+   "doc": "17673bf83cdaa5579c0a7efe96ec16e35b4377b198b5b6cac9a696f7d95f82d4",
+   "targets": 1024,
+   "nll": 1723.364597416832
+  },
+  {
+   "domain": "fiction",
+   "doc": "1bc6cee7ba591873e88d2a9af1611770a5ec68232495da38088a8140a82afc04",
+   "targets": 1024,
+   "nll": 1555.8455786574632
+  },
+  {
+   "domain": "fiction",
+   "doc": "2ae1fde5975b0f0f322ef2587a47503e7587dd2b01fcd57819b116a474fa84ba",
+   "targets": 1024,
+   "nll": 1790.7204988431185
+  },
+  {
+   "domain": "fiction",
+   "doc": "2bb69fe0ce3d7d934f11bf9934a5a2418f75c7f277c93a02a9dddd16ee8d66da",
+   "targets": 1024,
+   "nll": 1675.2613366008736
+  },
+  {
+   "domain": "fiction",
+   "doc": "2d4527d59098b354cdc9ed8758947144993e3c122b84a0fb4c7b44ad69dfedb1",
+   "targets": 1024,
+   "nll": 1678.062106399797
+  },
+  {
+   "domain": "fiction",
+   "doc": "32e094dd568e44db03e87f73127d66c7cdaa1b9092b880bd09fd2c9b2e4350e3",
+   "targets": 1024,
+   "nll": 1725.0691101194825
+  },
+  {
+   "domain": "fiction",
+   "doc": "37581115542d3c67136420e0fad06b33bf04984a546f9eec90c8096fa85a2637",
+   "targets": 1024,
+   "nll": 1759.627563367365
+  },
+  {
+   "domain": "fiction",
+   "doc": "3ce4adb8aa63a86491ab91b39c0929f968ff81ea4d2318cd9a9a9325095d3ee7",
+   "targets": 1024,
+   "nll": 1509.7591303759255
+  },
+  {
+   "domain": "fiction",
+   "doc": "41abd92e31b0e46fc3f860aac753916cd453b4b4a889c2d1dc69e889f0335d2c",
+   "targets": 1024,
+   "nll": 1563.8445273002144
+  },
+  {
+   "domain": "fiction",
+   "doc": "41e8ea5883756cf56b61b2877c7ad708f318b25bd3680e6526d8e08bcdef8fed",
+   "targets": 1024,
+   "nll": 1529.6810818458907
+  },
+  {
+   "domain": "fiction",
+   "doc": "4ba694c5e14d281db18b4a34e1676bb8ea1cee1ba11be134e60726f8d7d46e4e",
+   "targets": 1024,
+   "nll": 1621.9874645306263
+  },
+  {
+   "domain": "fiction",
+   "doc": "4c7ee36c346066395a14540d59f986f08c9dd46745828fc0df828a1d80cad7b1",
+   "targets": 1024,
+   "nll": 1698.9444438135251
+  },
+  {
+   "domain": "fiction",
+   "doc": "51120b6ba9bb49963c0eb2119a22415954eb4939d8ca5b384fa7eacb715a96a6",
+   "targets": 1024,
+   "nll": 1650.1551257530227
+  },
+  {
+   "domain": "fiction",
+   "doc": "5514052693db03204d3ca637ea6ae3e1aa8762a60727f9ebab2fa5b0150a2797",
+   "targets": 1024,
+   "nll": 1871.2988378733862
+  },
+  {
+   "domain": "fiction",
+   "doc": "62a732e644e59015e83108fe735e73bacd8af661ed4bde9532dda80c862beb3c",
+   "targets": 1024,
+   "nll": 1799.3069612003164
+  },
+  {
+   "domain": "fiction",
+   "doc": "6b65b6aa752648ae13de7b18dd41b9386058bfcaadc46b2a884c4777911028af",
+   "targets": 1024,
+   "nll": 1780.2599948735442
+  },
+  {
+   "domain": "fiction",
+   "doc": "713756b963f40fbf3ec766adca2253c1900d9af7b131c25dce70c3d7933b510b",
+   "targets": 1024,
+   "nll": 1587.8951548096957
+  },
+  {
+   "domain": "fiction",
+   "doc": "71603783dda3c19b91277de401248785a0743522e052d201018cb497f47b115e",
+   "targets": 1024,
+   "nll": 1745.5227373180678
+  },
+  {
+   "domain": "fiction",
+   "doc": "7df4100942e0a612f7bf08823b1d6a1e6ef519d52fa2066da4cd00b67eb16d38",
+   "targets": 1024,
+   "nll": 1620.9234153297148
+  },
+  {
+   "domain": "fiction",
+   "doc": "811827bc833cbcbbcc99964330d57c44b76a23eabc331f52a198417f452303fc",
+   "targets": 1024,
+   "nll": 1704.685105761746
+  },
+  {
+   "domain": "fiction",
+   "doc": "82f2897b1a13e963fe2be4a57b8ff3c9a2f7d98ab40fab537a0caddca2b378b6",
+   "targets": 1024,
+   "nll": 1649.034622172825
+  },
+  {
+   "domain": "fiction",
+   "doc": "83f03a859ecee958f8f12bb58b7925847e254ec74790a239be598cab59d07093",
+   "targets": 1024,
+   "nll": 1737.8180516725406
+  },
+  {
+   "domain": "fiction",
+   "doc": "873b3caf31da8549767e82ca6614a26b298d4ccbb29845613ee12105c3f9fce6",
+   "targets": 1024,
+   "nll": 1654.3271273304708
+  },
+  {
+   "domain": "fiction",
+   "doc": "8b7c5981d8583e38d2ed53bf3da954f0b96569bece6a07b07aab1dd6606d46d9",
+   "targets": 1024,
+   "nll": 1463.8276963065728
+  },
+  {
+   "domain": "fiction",
+   "doc": "8e0299d2b14f27a1b72dee03e24b7b101ea3d4ca34d097559659405379c36f1c",
+   "targets": 1024,
+   "nll": 1547.2135624263901
+  },
+  {
+   "domain": "fiction",
+   "doc": "906e051643b802e2e1a56a75648d9bcf03c45d4c75dc5733515028e3e9829901",
+   "targets": 1024,
+   "nll": 1658.4176613780437
+  },
+  {
+   "domain": "fiction",
+   "doc": "984196b86787bafe16bc393f2ba43de64807b0fdecf6c33358219e5d087c2634",
+   "targets": 1024,
+   "nll": 1658.8736503162654
+  },
+  {
+   "domain": "dialogue",
+   "doc": "009da6787de6191e8d27dedde9601544831d7fe7e5f71618dad4ea60b59211ea",
+   "targets": 1024,
+   "nll": 1389.8737164096674
+  },
+  {
+   "domain": "dialogue",
+   "doc": "00de6c1964fdaa13a0bf038ab6dcdb2b4b46cdf7c7f14876a2871445b1e57141",
+   "targets": 1024,
+   "nll": 1764.2654201257392
+  },
+  {
+   "domain": "dialogue",
+   "doc": "01c43b1e24efe675979ef4c9004aa182dc579b2323a079d2258876b6ba4c8301",
+   "targets": 1024,
+   "nll": 1585.6276165608433
+  },
+  {
+   "domain": "dialogue",
+   "doc": "02281885e00d223c5f90da7a12bbb47f7bd25584c2c0889245fde5a4e3652a93",
+   "targets": 1024,
+   "nll": 1929.099628179567
+  },
+  {
+   "domain": "dialogue",
+   "doc": "042361c067b3935f09d6102795423831f03529dd4f572b18af644f9a8aca7b98",
+   "targets": 1024,
+   "nll": 1471.5133380840998
+  },
+  {
+   "domain": "dialogue",
+   "doc": "044fea6028a01847f7b7220d9cc36b5ba61728c533dea4b4f0d9268a26810fea",
+   "targets": 820,
+   "nll": 1161.619786180905
+  },
+  {
+   "domain": "dialogue",
+   "doc": "052361ada29d95244bd822494ff5bca2af4e48dc497cc9d1148f0280a39ddc72",
+   "targets": 1024,
+   "nll": 1657.0317560222466
+  },
+  {
+   "domain": "dialogue",
+   "doc": "053a56a8a4dbfc685e2cd3509aa511a65eb0dcaaf7ec4772941fd74be113b38c",
+   "targets": 1024,
+   "nll": 1831.3509195477236
+  },
+  {
+   "domain": "dialogue",
+   "doc": "055d002f4811814813574b3f03716f1550a9225f75509f579d34f2ee615b2d52",
+   "targets": 1024,
+   "nll": 1702.9123386049177
+  },
+  {
+   "domain": "dialogue",
+   "doc": "05651096d1cb22e863aa4506c4f4a426a637bdff7efde437b5facd118e4f5bbd",
+   "targets": 1024,
+   "nll": 1366.9808331995737
+  },
+  {
+   "domain": "dialogue",
+   "doc": "06344cfda35108c1ef724c692a78106e332a48b7298eafff91ec4814ace98130",
+   "targets": 1024,
+   "nll": 1504.2271824647905
+  },
+  {
+   "domain": "dialogue",
+   "doc": "081691d6439c3e570a7ebdef9ac065d4f078eab000b3af36e6b4832862675cc9",
+   "targets": 1024,
+   "nll": 2000.5806679500965
+  },
+  {
+   "domain": "dialogue",
+   "doc": "086eddaa0a37c8f7c4ed2719c79ba4d3274f65ff83f085b5d93c9d6f7ef8dcbf",
+   "targets": 1024,
+   "nll": 1946.4180719444994
+  },
+  {
+   "domain": "dialogue",
+   "doc": "089b22547969918d13239914dd572a5d312e70e859dc627c7f3d27eff117f50f",
+   "targets": 1024,
+   "nll": 2060.14058386907
+  },
+  {
+   "domain": "dialogue",
+   "doc": "09f129ce9ef22c42a342ca27ae6f5a4a3b7968ac4930c7b1629104c4d96936b1",
+   "targets": 1024,
+   "nll": 1921.292448481836
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0a5e638fe041f820a5d7ba86c8148e749ec430405df6df67ccb406d4bbc8fbd8",
+   "targets": 995,
+   "nll": 1598.556060215633
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0aaed0f3dfaa162a092d4b4e03e24b49af1c101f405f64adff6ef6db495e2381",
+   "targets": 1024,
+   "nll": 2189.5815595409367
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0ae86e25e3529ff23af96398d81c35d2f9b416434331b32d505489af36c25a92",
+   "targets": 914,
+   "nll": 1551.591851905454
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0b4fa46cd28f5fda236f600b9417c2753bfdb0fa1936d3fa9896db088daff94b",
+   "targets": 888,
+   "nll": 1239.2693431365187
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0c1bfb61c5f47b2d9b636d647a23b23f847be526d4ae024c28434c944b67cb95",
+   "targets": 1024,
+   "nll": 1942.295275953482
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0c5ad32a82ce07c73057c5e6ffb7afb93a161152be5a352cd0713ece25cd50a9",
+   "targets": 1024,
+   "nll": 2366.5043402491137
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0d78d2b0bb4b8b93b129b45a3b4d64d8a957dbbca637e2cf204bf77f3dfab822",
+   "targets": 1024,
+   "nll": 1337.8009512331337
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0df4e1f8d5c08a6336372f23d3ea95d1fa83af6ab7a1fc35a17283d3e2d7190b",
+   "targets": 1016,
+   "nll": 1270.8078052530764
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0eed9c309015ca00f939a1891a8d6215e61a384acc153e545c872fe65cbb4a64",
+   "targets": 1024,
+   "nll": 1507.71286765259
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0fd75ba557a11f254202b7a7472233a995faec208acd27a3e8dab1d82c61faf8",
+   "targets": 845,
+   "nll": 1704.8429237883538
+  },
+  {
+   "domain": "dialogue",
+   "doc": "0fe10ae017d616b759ff51d3c981742ed893f5a13b333f0ab3483a03186ad9a0",
+   "targets": 1024,
+   "nll": 2005.0842882001307
+  },
+  {
+   "domain": "dialogue",
+   "doc": "135338971d1089b17802303913b63d4707086e90d3fd11f8b82285dd4e747c10",
+   "targets": 1024,
+   "nll": 1684.8696629675105
+  },
+  {
+   "domain": "dialogue",
+   "doc": "1598610efc708947f2a644f1381a0101d03e29bd0aad6665dc0f3589d3c4726b",
+   "targets": 838,
+   "nll": 1406.8713316950598
+  },
+  {
+   "domain": "dialogue",
+   "doc": "16c61d26e879e84e26d11f1a7495c42e150897c0753a755e67551e6c20367e2a",
+   "targets": 1024,
+   "nll": 1322.8538599940366
+  },
+  {
+   "domain": "dialogue",
+   "doc": "1aeb7ce4cd6413256cf02fb7022c23d4fdd61070bb0f6decf028659b5b5dc0f3",
+   "targets": 805,
+   "nll": 1263.0497139843646
+  },
+  {
+   "domain": "dialogue",
+   "doc": "1c47a1ccf61e4e03feaa0f5d56a36fd8e1faf9dd20f916141e1704f9817e50fc",
+   "targets": 1024,
+   "nll": 1536.0822564410046
+  },
+  {
+   "domain": "dialogue",
+   "doc": "1d65f2e5e6064eba24caf54c3c6fbcf06a64b0f2950cba2482e13ac7e1dd76d3",
+   "targets": 1024,
+   "nll": 1380.759482500318
+  },
+  {
+   "domain": "dialogue",
+   "doc": "1d689381c3fbd508c0d6593bd7cdf89f8b5585fa226a255bb89d81a5df3d4660",
+   "targets": 1024,
+   "nll": 2134.254476828035
+  },
+  {
+   "domain": "dialogue",
+   "doc": "22e43d790b752e74c24e778e40befa19c2183959951ff6ed887ac0a0fe693c99",
+   "targets": 1024,
+   "nll": 1340.8814846008318
+  },
+  {
+   "domain": "dialogue",
+   "doc": "23087f80d52d2cf84e964e3d390cd59359673f63d5dcd5b759b87d7d28660618",
+   "targets": 1024,
+   "nll": 1481.3522538156249
+  },
+  {
+   "domain": "dialogue",
+   "doc": "254a760826c3bb06991cff5730e54c42f78e872378e2cbf0fd67ab598177444a",
+   "targets": 1024,
+   "nll": 1618.4607276798924
+  },
+  {
+   "domain": "dialogue",
+   "doc": "26c34f847dd6f4cb30a7bc9766c2e9abdf82eda0c573f3e465c8afe264208d2e",
+   "targets": 1024,
+   "nll": 2550.48568206653
+  },
+  {
+   "domain": "dialogue",
+   "doc": "271adfdd838263e3bf6817d89d147a0141e62715ab8bee63365bd7de12c04815",
+   "targets": 1024,
+   "nll": 1901.518639593618
+  },
+  {
+   "domain": "dialogue",
+   "doc": "271c01ba65f8a90fcb943b17f95818d4ccc272a59c7a2e11e0fe6ed86de0551e",
+   "targets": 1024,
+   "nll": 1658.8481328032794
+  },
+  {
+   "domain": "dialogue",
+   "doc": "28576d5dd0a6d7031a8cbaf654b9db685dc15b80722fa8a82ec861183bfb3fc8",
+   "targets": 1024,
+   "nll": 1702.440944450209
+  },
+  {
+   "domain": "dialogue",
+   "doc": "295858d726e7db8679896c97411e8f2771da309278aadb903b0be425a5ee5056",
+   "targets": 1024,
+   "nll": 1715.8397386900615
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2bb0af5be1c39e2d6bbc81a1ea35656d34b747ef4130751427d7e461c63e9282",
+   "targets": 1024,
+   "nll": 1401.1232768406626
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2bcf029044ae0449630aceed7396746f13d03bb42e29feae2f0a06637c47ac48",
+   "targets": 1024,
+   "nll": 1932.8187288485933
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2d240bfcd133b90601dab8fb2194bad7e16eb5418217d74709631cb4f0ede0bd",
+   "targets": 1024,
+   "nll": 2737.320171533618
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2d889a241d2d97c7cea99fdf1ff8db666fadc95c3302751d3d6d0999951fe643",
+   "targets": 1024,
+   "nll": 1363.1739418968791
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2e5c43ce79de937c25c1663771ee257ca8232cf569927c7458b2105a7cd4b2a7",
+   "targets": 1024,
+   "nll": 1628.191714516026
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2f03cf622aea91a88dd45476b8d271e0cd48d2aee1a9c180fc7f45fce95ddf5c",
+   "targets": 1024,
+   "nll": 1431.5082471510977
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2fc27aacc5513db6f5ad40eb11a05af0acf5e1338ae90719ec4a424d78b08f1f",
+   "targets": 1024,
+   "nll": 1620.135197061929
+  },
+  {
+   "domain": "dialogue",
+   "doc": "2ff17315b04eb523c50afba7decd96e087508e8eede6f35b0fb33f89979efeb6",
+   "targets": 1024,
+   "nll": 1592.5176315769786
+  },
+  {
+   "domain": "dialogue",
+   "doc": "321d69255f0e70eb269d778e5e42d09367944f9237cef9f33a72b6a8eb6b4e78",
+   "targets": 1024,
+   "nll": 1632.3995378850377
+  },
+  {
+   "domain": "dialogue",
+   "doc": "34b04970179219b6df085016f3be2ad62c20fce8d5651995caf7aef248dc3089",
+   "targets": 1024,
+   "nll": 1409.5029197887052
+  },
+  {
+   "domain": "dialogue",
+   "doc": "36231fa4cc26ce49f036996e88fd651a09042e7d92b6f373bfe5626f64e182c4",
+   "targets": 1024,
+   "nll": 1651.8889217083342
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3687f44108a981fca9e6dcf5d912c68b64f6c0024421e8b6e2b1d74d27faa3a5",
+   "targets": 1024,
+   "nll": 1541.8973958287388
+  },
+  {
+   "domain": "dialogue",
+   "doc": "378cefa65729786c77329d455358384cf7ab3acecc4cdd1a070df488275ecc2d",
+   "targets": 1024,
+   "nll": 1757.0401678704657
+  },
+  {
+   "domain": "dialogue",
+   "doc": "37e278262ba50e1c265e3d358b753637f0b1cf0b50c95f258e1a0994e538f719",
+   "targets": 1024,
+   "nll": 1513.8655507478397
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3827c6e7214f11cbe4283a404d5d0189181786517615486ffe80819b77c578fb",
+   "targets": 1024,
+   "nll": 1610.03972122923
+  },
+  {
+   "domain": "dialogue",
+   "doc": "38301f8e9d6d5ef474dc05211e469b8e83960e8bef204f14965205057559737b",
+   "targets": 1024,
+   "nll": 1795.2441328526475
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3a0514eac8e41e87371b55c640c41f965c7b27fcf36bb27901a29f2478d8753f",
+   "targets": 1024,
+   "nll": 1858.6251342501491
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3b089c635f183c59499a42a5bb307819719aaf0f492ed1fd0e5bb7b7ae660c13",
+   "targets": 1024,
+   "nll": 1401.1901219512802
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3cb1b486b5069f39f28ed7a8c7fc2d94285508807ff6eefcedeb850f9bd316a7",
+   "targets": 1024,
+   "nll": 1865.2569918481167
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3d9b298fcaa6455d0d7e74d19902369ba1d11e22171d9fe6449c14c970e31d49",
+   "targets": 1024,
+   "nll": 2336.035978271975
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3f2865133e80d016ef40c571e4ad65ac05a665488526973db2f2306cb47b2e9d",
+   "targets": 1024,
+   "nll": 1622.1941461595707
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3f5129d6fd50c68318efedbac67f6f3ae6eb6f637e72950dd4a7e0ded45643bd",
+   "targets": 873,
+   "nll": 1175.3515747706406
+  },
+  {
+   "domain": "dialogue",
+   "doc": "3f5ef3b9678bfe7baa5fc1c3c42b40d9c538140b966ab2fb58ce1431ca99e93d",
+   "targets": 859,
+   "nll": 1124.0457897412125
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4024dda8df813cc1f5f829773e1e8eb217efb77af0d378fc017200a880f41ab5",
+   "targets": 1024,
+   "nll": 1521.803863679641
+  },
+  {
+   "domain": "dialogue",
+   "doc": "421d2d92e25214728e8019c9a107882a5ce62dfb7f98fc800fd42111a774c035",
+   "targets": 1024,
+   "nll": 1366.7451303382404
+  },
+  {
+   "domain": "dialogue",
+   "doc": "42b0a9c3b2cd79ee73e4a6d13928a2bf6a1ded70b57c0c11f9e3b0fa94e803d1",
+   "targets": 1024,
+   "nll": 1606.3019858438056
+  },
+  {
+   "domain": "dialogue",
+   "doc": "42c4925741ed6cde06b157872e3052a82be96134c279c89d7196a0908fa5e0c9",
+   "targets": 1024,
+   "nll": 1469.6829922361649
+  },
+  {
+   "domain": "dialogue",
+   "doc": "431db78c9f06ad7d7a781ebbd28ff5d3d9b34bad361e7ec7b8c76b20df694454",
+   "targets": 1024,
+   "nll": 2327.160833576694
+  },
+  {
+   "domain": "dialogue",
+   "doc": "43848cfb02cec8ab18b01bbef99bcfadeb3effb88d3ec4ac738132bc3ceb0525",
+   "targets": 1024,
+   "nll": 1287.7747012356995
+  },
+  {
+   "domain": "dialogue",
+   "doc": "450dd643fe0398157fd963619c61210161d4e686ed6f5a9ec509581c6f2cc9a4",
+   "targets": 893,
+   "nll": 2123.98791775899
+  },
+  {
+   "domain": "dialogue",
+   "doc": "47bcff8e13d0428e153be5448dfeff2afdc2925b2683693e7b2c0741ef16eb09",
+   "targets": 811,
+   "nll": 1498.4585906417342
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4a1531f10774cbb1ba150bf2dc299d0d8e813cbb80a9aca487f5813f9dcfcdb5",
+   "targets": 993,
+   "nll": 1790.539272939437
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4a30858fc46c316aa88618867bb529b4de80be2344982cbfcb2d7c6e93d18308",
+   "targets": 1024,
+   "nll": 1704.0503935986198
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4adafd7ef095dae795b91fbe8a5c58822dedd5bd35939db8bb2cbe4518114552",
+   "targets": 1024,
+   "nll": 2221.022060240095
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4b166406b2d878a3c5135b2004791a90179e2e6d27d15736f1d414d38a2ff361",
+   "targets": 1024,
+   "nll": 1472.0118349973345
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4d78d669b0ce8d0477630e28f681bbebc47dd1acf5994425753e0c66e4bc686a",
+   "targets": 1024,
+   "nll": 1431.4196503866697
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4ec0b97eae5a70cdbcbda1c3957408767bb36a3714def250734a2defcb972da8",
+   "targets": 1024,
+   "nll": 1879.591655562399
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4ef8caef60671e295b60b050fc90aa599fd10745c222c5901e43c8cbcedece79",
+   "targets": 1024,
+   "nll": 3623.7277719045524
+  },
+  {
+   "domain": "dialogue",
+   "doc": "4faf6573839462d46d3b4fbab73caaa17377ac3c94bc8db6ad7ce7a1314da82b",
+   "targets": 1024,
+   "nll": 1585.9315702589229
+  },
+  {
+   "domain": "dialogue",
+   "doc": "503e530b7240893f3770cd0365033aeb158be2205ec60d1c2f29b44662821955",
+   "targets": 1024,
+   "nll": 1458.088927226141
+  },
+  {
+   "domain": "dialogue",
+   "doc": "50436f619050e7df52144a2850f7da2a24b833b127e84491407c4ba6b7fe0859",
+   "targets": 1024,
+   "nll": 2092.285279889242
+  },
+  {
+   "domain": "dialogue",
+   "doc": "507d24ac47f68065c11fe180e02abea7529d28041afc5f1ae9ca11d083e4f7de",
+   "targets": 1024,
+   "nll": 1592.022615134134
+  },
+  {
+   "domain": "dialogue",
+   "doc": "50c01f82b06cfb69c7d7ff7f1cc49db24b657322c4e5fc2b360c2acb69778549",
+   "targets": 1024,
+   "nll": 1667.521267939941
+  },
+  {
+   "domain": "dialogue",
+   "doc": "51ebe1a9bfbb39f2b2a2471d9b1ddf7c73550928d7f924dcf3ae9e2da493bdc8",
+   "targets": 1024,
+   "nll": 1411.907077397569
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5208bf14a34eed3d1ab9664c084fb15955014119a2c9498bfdc6a94f737f0265",
+   "targets": 1024,
+   "nll": 1541.1790761846933
+  },
+  {
+   "domain": "dialogue",
+   "doc": "52bb9687709607b4e486b8ca3691da2f9ed32a4704c0d9025a56469728a4983b",
+   "targets": 1024,
+   "nll": 1399.1214176497888
+  },
+  {
+   "domain": "dialogue",
+   "doc": "536fa8ec0a61edcac6d0ab9fe2283e082196af9c0e39600f8356007ead4b7593",
+   "targets": 871,
+   "nll": 1345.7084435378201
+  },
+  {
+   "domain": "dialogue",
+   "doc": "540fc06d445336bdfb98293cd30940ff6045e2d86e238791cd303d821675e1d6",
+   "targets": 1024,
+   "nll": 1653.041281847749
+  },
+  {
+   "domain": "dialogue",
+   "doc": "541ff01d3d359f4d2a98124b100d02200e68a21e628ecbf7a5a46ee9a56ea43d",
+   "targets": 1024,
+   "nll": 1648.1502314019017
+  },
+  {
+   "domain": "dialogue",
+   "doc": "571fb78df57729b5a9498f589dff83d6f4e78e1d3265b8a29d06021256b364fe",
+   "targets": 1024,
+   "nll": 1500.7550943440292
+  },
+  {
+   "domain": "dialogue",
+   "doc": "59a02fb712cdcba9f32ef404075359140cfe0950256468a9cc33e047ab1e98b7",
+   "targets": 1024,
+   "nll": 1643.331770708377
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5a1563664df12be33f1afcc7fd8437f2d5ff48bab584109efe1f4e9a3295f222",
+   "targets": 1024,
+   "nll": 1928.1504933335818
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5a64b991b4f874edcbd80efaf89bb63db8794a3861c56a49e9f820d67ebd26eb",
+   "targets": 1024,
+   "nll": 1366.347175409086
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5cf4b866c8c6610f5e6c91567a187af2697c969260fe19befd53b76e60904e8d",
+   "targets": 770,
+   "nll": 1501.7603735475568
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5d0ce4f291c52e03c435a96d6f4534435191926adcccbef49f6e105ff9ad52f7",
+   "targets": 776,
+   "nll": 1068.8651473142672
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5e88994936a3715d71125ab24500bf24e77721470ba681b6e2e32b17a010aff8",
+   "targets": 1024,
+   "nll": 1435.539614461537
+  },
+  {
+   "domain": "dialogue",
+   "doc": "5f4b4f197be6262313adf5430685e786bb457e7c66f3aecba63101f3a26bf250",
+   "targets": 1024,
+   "nll": 1816.532040320104
+  },
+  {
+   "domain": "dialogue",
+   "doc": "606c8ec5d9b650df6c5bf2549f6488f480d28d3b96da591ba6d854e278f4611b",
+   "targets": 1024,
+   "nll": 1567.3771863692673
+  },
+  {
+   "domain": "dialogue",
+   "doc": "60f5eb797d0fb15ece49f6e807c59ce6b41348e3ea2dcbaa9fc44de968a9960c",
+   "targets": 1024,
+   "nll": 2757.577255823824
+  },
+  {
+   "domain": "dialogue",
+   "doc": "63318dc8c8563be94adb089b6bcfa27aa1c7f4f7ae4fd9901d7863b81bc904a7",
+   "targets": 1024,
+   "nll": 2575.755271026632
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6568e2065b4bb8214065bafb79b37a515be4f10bd19ae8a851146d3738a24467",
+   "targets": 1024,
+   "nll": 1581.4803802629467
+  },
+  {
+   "domain": "dialogue",
+   "doc": "65ca426dff0cbf6ea3b5fa80fbf2da9c5daecffdf7b9acd67184e8eebce8c078",
+   "targets": 897,
+   "nll": 3210.142362046987
+  },
+  {
+   "domain": "dialogue",
+   "doc": "661024b604e4673290984085f57ed160149fa5f8603dc32f566a2a286dadb280",
+   "targets": 795,
+   "nll": 1061.1539650399936
+  },
+  {
+   "domain": "dialogue",
+   "doc": "66f9bdf730f94ec3906d4d697eeff4b7ed2bd27793772285a27de7317324a77c",
+   "targets": 1024,
+   "nll": 1515.4238090557046
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6797887b5efec0a69e57a641d713ecaefbbb1b6b3b646b05d1d442e808a57664",
+   "targets": 1024,
+   "nll": 1571.8501651369734
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6ad0059369b804bb15c9a07dbba83cb57876a52eb773621593e6557812a8d78e",
+   "targets": 1024,
+   "nll": 1390.9465860018972
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6ba40a895c63f5cd7915840ca1b275fb7fb374ac819725e122a65d814e380481",
+   "targets": 1024,
+   "nll": 1611.9649181668647
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6c993d02c928fa96de3c626459a8ee20bedb7fc045a0a5a937d9c44bb4d9c90b",
+   "targets": 1024,
+   "nll": 1501.7105835844995
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6d9be3e325bf904fe0f633f05d1bdf13316d123af7913b9c4f23bcba78ecffad",
+   "targets": 1005,
+   "nll": 1599.0081488192081
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6e1b850d14e5c82a65ecefd4c1d1d4675b185e748eec81d0555ed2054cc85574",
+   "targets": 1024,
+   "nll": 1352.08460669528
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6e5e0e9164cb197eb5d0b730af5f5fc44c891ebd85fa8af949227d04970c1dd7",
+   "targets": 1024,
+   "nll": 1544.177857780218
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6e912842cd578778293cc2b5baed5b13b7bf670b14fd05af03a883d8b2557f82",
+   "targets": 1024,
+   "nll": 1328.755935888912
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6f231191079b35edead46b6546e986fc73a70220008b7dade16f9b4f6db8c15e",
+   "targets": 1024,
+   "nll": 1596.4392911876203
+  },
+  {
+   "domain": "dialogue",
+   "doc": "6feddaca3c9e2035bf832dae990f252a05a2fe803bf3bf287e50c5971152d8a0",
+   "targets": 1024,
+   "nll": 1477.62084824685
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7117a4a382922f5310bfd9446dbf9ccd86cd6e988ba94865988367db8c8cc144",
+   "targets": 1024,
+   "nll": 1282.3560456394916
+  },
+  {
+   "domain": "dialogue",
+   "doc": "74b441c5ecef97adec29109e7dd2fc29b84c3d6cb5dceeb7eb383f0b50cb276e",
+   "targets": 876,
+   "nll": 1313.4857607150916
+  },
+  {
+   "domain": "dialogue",
+   "doc": "774c077fd80d60a8d01773eca0096f51126b6abf94f0bec8a6c31efadb6112d0",
+   "targets": 1024,
+   "nll": 1532.1435646255268
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7a5732d75676259eb720903c6b4e8eb283b14b81482de6504d9d5e233dcb8266",
+   "targets": 821,
+   "nll": 1223.8797742987517
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7d35452671501c55efef81f9bfc0f99a1aefda5e611e1ca849aa94dbd3cdd18d",
+   "targets": 1024,
+   "nll": 1794.6428727966268
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7d60bb17aef5f9a15eb4390eaf0b8b605f581010a2c5010c0b11e261d9086382",
+   "targets": 1024,
+   "nll": 2819.5161607437767
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7f51accb782321df7749f76dc04c0fcb1a59cfa04884a21b98e62bfa7a7b98ca",
+   "targets": 1024,
+   "nll": 1345.2635783060687
+  },
+  {
+   "domain": "dialogue",
+   "doc": "7f674d145f506db64a9503490d11964c7dbc1957a678af80c80ca6fe6625603d",
+   "targets": 1024,
+   "nll": 1335.469409342506
+  },
+  {
+   "domain": "dialogue",
+   "doc": "80e68d41f0eb457c08905a0aab131962080e256aeb77f5ea777743e3ee245c63",
+   "targets": 1024,
+   "nll": 1506.3784011349198
+  },
+  {
+   "domain": "dialogue",
+   "doc": "811e2b40dccf65f077cc73735013037a101354b0a3ae1ef04ae7426cd98441b6",
+   "targets": 1024,
+   "nll": 1332.7730254479102
+  },
+  {
+   "domain": "dialogue",
+   "doc": "811e6c9d374c58a87b0e45cb4f98369d9ef6fe671826a6a2e5a1c32deb5cd76d",
+   "targets": 1024,
+   "nll": 1651.9399680229835
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8161ac729dd87c723e387db4cb39e4fe1c6a32b7736941a9fd1bcc7309c04481",
+   "targets": 1024,
+   "nll": 1570.0213272045366
+  },
+  {
+   "domain": "dialogue",
+   "doc": "822035e55427d78b9195482d90f71a00ff2ac86ed7bfc050607cad7dd48dad7d",
+   "targets": 1024,
+   "nll": 1372.1613684730837
+  },
+  {
+   "domain": "dialogue",
+   "doc": "823de60680a181d7770dcd231b683e4c98bfaabf1d6448c791c9ebd4d550d33e",
+   "targets": 1024,
+   "nll": 1402.508723957988
+  },
+  {
+   "domain": "dialogue",
+   "doc": "840ab95d0fe542b4982b9e4d6840c0a84bdf196e6c50841cd54a1d22dc6c63e9",
+   "targets": 1024,
+   "nll": 1512.138258603518
+  },
+  {
+   "domain": "dialogue",
+   "doc": "85862c9c93acb4260150ba8143172fce26dc4eff1f539e36539a6db6d7ac7ba4",
+   "targets": 1024,
+   "nll": 1389.1039214450284
+  },
+  {
+   "domain": "dialogue",
+   "doc": "87f391afcb31da87ce82fb8047bfc55da0bc1018c60a94c4652d583d37270dbc",
+   "targets": 1024,
+   "nll": 1681.4687205463997
+  },
+  {
+   "domain": "dialogue",
+   "doc": "88102ae5e1622b1e64e058acd6435d3d8131a6378b380d5ecd683359532818bb",
+   "targets": 938,
+   "nll": 1331.8442528548767
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8985e711a25681db31b27bd1d60101af136e5a3c86ca30e390c9eeba5af07c83",
+   "targets": 1024,
+   "nll": 1415.513610768132
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8aa75a8b345958913b9620cbeae386715de133010568ea05cd2cc2ea8eb675ea",
+   "targets": 1024,
+   "nll": 1314.5247976384126
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8b26ff62407e6f5507d1242715f6fade8fd1ec755d0bb1e25b2855ad817d6859",
+   "targets": 811,
+   "nll": 1429.8879033944104
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8bcbdcb95b29aaa031d4fb2016a3fea64e882e274a82ae1a285e758d5ce7fcc3",
+   "targets": 1024,
+   "nll": 1611.6007634344278
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8be86be304f3bdc5fcb1ea3d6ca89d991441d9c1b9b3d122ecbb2c872770f1ff",
+   "targets": 1024,
+   "nll": 1413.5425329721766
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8cb85c56e61ad226c36ef7cadd23d3db00b13e7b50cd3e3f98e7d9e5069dd864",
+   "targets": 1024,
+   "nll": 1630.0279197223135
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8cd20cfc8fb76a4b37f904c4bc2bf3f9d2501e7ed9d06b7cec9ce91b4eafafa4",
+   "targets": 1024,
+   "nll": 1339.7780233697267
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8d380ad9bbc46b2e576c75d920845261d61a3231afd649bd56e43bf559a5f005",
+   "targets": 906,
+   "nll": 1606.695762170013
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8db0e4e4eb5680c4a82acc1ad81191ab32c7ff84c6a6d02768a7c8e397ea6aec",
+   "targets": 1024,
+   "nll": 1525.4983093659393
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8f5f6c6644cb6254946d01db16575bea41057d9cacf95c13473fb133209a8465",
+   "targets": 806,
+   "nll": 1232.3945332176518
+  },
+  {
+   "domain": "dialogue",
+   "doc": "8fcb96455f68f026a20e9ea416d0e3308af5f40febcdb3d492d8bb035cf88865",
+   "targets": 1024,
+   "nll": 1820.5672744780313
+  },
+  {
+   "domain": "dialogue",
+   "doc": "911a9a1341dd7df6535c3bbf81462be4bb90d79bfeb0f6cb2ffc9f668ceec222",
+   "targets": 1024,
+   "nll": 1675.9365161228925
+  },
+  {
+   "domain": "dialogue",
+   "doc": "91af64150ef362dbb86d4ec8b2a73e5b33fd9ce4f5a2da62899eb1b2ae08e8b0",
+   "targets": 931,
+   "nll": 1254.3530888011446
+  },
+  {
+   "domain": "dialogue",
+   "doc": "933a6c8aaf379e1f176f6a3fb0adbd2603bf9035ec4366da54926873a8c8101f",
+   "targets": 1024,
+   "nll": 1378.2590436018072
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9358bc6b608b49fe2846c46f31f21422567e79ee24c6bfe0e9ed0dfc1856860a",
+   "targets": 1024,
+   "nll": 1303.5417657516082
+  },
+  {
+   "domain": "dialogue",
+   "doc": "93ff612521d31a89953b3478c75435279f1f7ba1f5d550d4e19287afe8e62b9e",
+   "targets": 1024,
+   "nll": 1577.8417963831453
+  },
+  {
+   "domain": "dialogue",
+   "doc": "958a41d6160b9713d9a540961dd6839fba6b0927b78991596087fe2987667501",
+   "targets": 1024,
+   "nll": 1840.6356299219187
+  },
+  {
+   "domain": "dialogue",
+   "doc": "95a79b8c39a473dd0ac82e43182edd0132922ceda3c29dac67e315640ddea80e",
+   "targets": 1024,
+   "nll": 1652.1453031616984
+  },
+  {
+   "domain": "dialogue",
+   "doc": "966852ee8e91238bd1ff97ca02ede137bc96754e360763ac1948d7a127ef9aed",
+   "targets": 1024,
+   "nll": 1756.9313728226698
+  },
+  {
+   "domain": "dialogue",
+   "doc": "96ac0032fd2b57c84e2e036e50c3dff95a49a6b6f83fa9a82b5483b8375a0431",
+   "targets": 1024,
+   "nll": 1644.5616868199431
+  },
+  {
+   "domain": "dialogue",
+   "doc": "976dc414eb44b69ea61002c6077c0fd9ef1638f4478704baaf83a66222a4d3e3",
+   "targets": 1024,
+   "nll": 1689.9554425716633
+  },
+  {
+   "domain": "dialogue",
+   "doc": "98922a6ab26939ca388af7c8252bd90d8b5d08cd3be83ced019cccc03eadbf31",
+   "targets": 1024,
+   "nll": 1467.0516292352695
+  },
+  {
+   "domain": "dialogue",
+   "doc": "989c7bc13be434ef7997ebaa0a60b21784c80a29652d2977b6e88ff2b5500676",
+   "targets": 1024,
+   "nll": 2007.7254014271311
+  },
+  {
+   "domain": "dialogue",
+   "doc": "98a2b236021c92061b6d7740f5a3c342f5a04a55daf6bc6ae4050bf5ca44d855",
+   "targets": 1024,
+   "nll": 2254.875801422808
+  },
+  {
+   "domain": "dialogue",
+   "doc": "992236cd17862b3803e47ae8c877d67559cfc1232d6ca2c89ed425b764aa9a72",
+   "targets": 1024,
+   "nll": 1708.3622597677168
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9a14da575219997507f30318cf9cf82488573a110055649dc2bb9397d68116a7",
+   "targets": 1024,
+   "nll": 1531.5917688517366
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9a81c113bf40156b0ff10e689d5ef8c5803179bdb7dabfbf429f0d2bdee6c790",
+   "targets": 1024,
+   "nll": 1703.1469031118904
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9b50ddf282f3856f0adbe33c56af93b88bedb897044d6d90794e9412da9f0e21",
+   "targets": 791,
+   "nll": 1362.325083947042
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9d58a9f751127a10165219e5c6bedabc32b4059e78f603326dd150f79f49002a",
+   "targets": 1024,
+   "nll": 1364.2342430033605
+  },
+  {
+   "domain": "dialogue",
+   "doc": "9dae803ae327ceaa7434db79222f0c69df3c8bfd4588b9f61b72903b7ac6d5e1",
+   "targets": 1024,
+   "nll": 1445.031507597887
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a0cf1b81776ee9b7e3f60b23edb705346811ef465b31f4e41b219c3125e27404",
+   "targets": 1024,
+   "nll": 1510.5631575627485
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a1e1c4eb37527722607134dca0cd4fcdbcc5297bb7ffbb7426c8f5dd94467c8e",
+   "targets": 1024,
+   "nll": 2774.0991802902427
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a284d01aea5b26ec8303909aeb6b8546587be9a5c2835286280cc93aba7c9cfc",
+   "targets": 1024,
+   "nll": 1304.974744356121
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a4e4b700dfaf94f4a1046fad29710c5360e2ee919924c2bacec88c9b19048c0f",
+   "targets": 1024,
+   "nll": 1756.2615029833396
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a5362f8fc67fc423195a292f76982518fdbe78a17f963d45b20107ed59483f7a",
+   "targets": 1008,
+   "nll": 1458.3187246454181
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a7edacb357af3173d3a650c49cfafb290b4a07834eb37b366bc121aa4d33d8cf",
+   "targets": 1024,
+   "nll": 1521.0453784335405
+  },
+  {
+   "domain": "dialogue",
+   "doc": "a95d5ad76abd83ae9994ee09a77cd86ff504b690897b91f185608218fc0cca09",
+   "targets": 1024,
+   "nll": 2231.1353710573167
+  },
+  {
+   "domain": "dialogue",
+   "doc": "ab5ff744fa210527442bf91e0959c400da6dd6bc669db242347f19a43cb3c104",
+   "targets": 1024,
+   "nll": 1638.1024664810393
+  },
+  {
+   "domain": "dialogue",
+   "doc": "af7c4447db7355a86663eeba8ca271fbb90e1c7a85bf7e9a3680394e3ef2faec",
+   "targets": 1024,
+   "nll": 1272.1968832145212
+  },
+  {
+   "domain": "dialogue",
+   "doc": "afc2f79530c71e3c9ebd58e167837e05ed097f498e09e909eb4e7430f61b640d",
+   "targets": 1024,
+   "nll": 2095.5942278406583
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b1e5daaa2746e280b9470fe4d843fff992bedfedc77b6176aefefd46bfa3d461",
+   "targets": 1024,
+   "nll": 1777.0855065431679
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b57354f9254672345e6e4b008cc6573d9998d8ef565477ff8b0b4402914c2a05",
+   "targets": 881,
+   "nll": 1238.8853554492816
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b7094d14db35c5b934728dd3b4e0e7a91777638953cda291b57a30ba3829da59",
+   "targets": 769,
+   "nll": 1151.9908393416554
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b71a4a721219525b38253e64eefac685001e63f98ddbd6fe791b7c760db0b718",
+   "targets": 843,
+   "nll": 1165.725006115972
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b7b36d9cd0eb2e58c140dad7dc52f6652e6bcf154e90c05e8ff504a16c0e9ae2",
+   "targets": 1024,
+   "nll": 2389.287027772283
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b85b079091e7834e838a15b1d43a0d909cf4565b0e8b0ad1c730e2c40c704f17",
+   "targets": 1024,
+   "nll": 1432.2191108543193
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b904d8dce499b004815728d9ffba6627735a79b0038fe6555f581b1fc52c37f4",
+   "targets": 1024,
+   "nll": 1414.237823361531
+  },
+  {
+   "domain": "dialogue",
+   "doc": "b9bc4dc591815e1c84ec7ef529bc3d27773d0be7f5a47883a77b131e18365c2f",
+   "targets": 1024,
+   "nll": 1960.049211325124
+  },
+  {
+   "domain": "dialogue",
+   "doc": "ba54a7d0c9725c1ff71dabe279f0e109ed19c1bce49c9cfd4bf907e6f58df290",
+   "targets": 823,
+   "nll": 1099.3505210331641
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bac121c2cdadf48f6680aae12b5cd5f6a4bd77fb9a64371bf61d187d661fb5d5",
+   "targets": 1024,
+   "nll": 1691.0773052528966
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bb37c37c831164929b60e33a24f4c90dd601540c88881f6674c841dfbcc81338",
+   "targets": 1024,
+   "nll": 1449.9247581738746
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bc4e6e1225aec5877b898edc7c6824851d661bcac8e9c8f8fea4b9c0336749e3",
+   "targets": 1024,
+   "nll": 1205.0137788889697
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bcbcbfc17723d1a6a2f3d5afa09441918b03e421f250df92fb83855e4b30fdd4",
+   "targets": 993,
+   "nll": 1809.4940149990143
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bd58af10a395c35f16b6a6498b071b242fe75eaa200703b5af6286f57d5afbfb",
+   "targets": 1024,
+   "nll": 1502.0523030986078
+  },
+  {
+   "domain": "dialogue",
+   "doc": "bde6d6a93ce5fd1dc246191c3e237711cbab9688f872a3f7c3396fe47d1f5338",
+   "targets": 1024,
+   "nll": 1897.8206658333074
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c135f73cecc06c1102ac76d1562ed54df5aa786519dd4ea7c36511792b546848",
+   "targets": 1024,
+   "nll": 1970.544608823955
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c2051834f00496dddde251d5faccb605c8b58f8d4df6b21a5f2e27a78ccf9335",
+   "targets": 1024,
+   "nll": 2390.5649637955066
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c25b41e172c7b661d00c935f0b8fd22361c31335069c8e0427b79d94b97835c1",
+   "targets": 1024,
+   "nll": 1536.336893367814
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c504dc08938005d6a990eab287f9194eaa40d4938c7f946991d90169e5394387",
+   "targets": 1024,
+   "nll": 1603.5611241440056
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c51a5b6be5b48f7943af9f3c9ed7a6c3ce878720f28496bba9c1ec83e9cae725",
+   "targets": 1024,
+   "nll": 2045.9957213499583
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c544838a9685268c299f789f115fac8023eb107662728337b0a47f705c30b7b4",
+   "targets": 839,
+   "nll": 1547.7041691425256
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c5b2419b95f1da7ee4a80457e282fb08ed4d514d3a5ce5fd2c8230ce34a0266e",
+   "targets": 1017,
+   "nll": 1974.2139761399012
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c8845c11b0633789dbc112d2fefb1b9151d546f3f1fa328c1af08b6388ecc083",
+   "targets": 1024,
+   "nll": 1423.5411764425226
+  },
+  {
+   "domain": "dialogue",
+   "doc": "c90b82f3cf344122945a8127a1d36c3ad326169f3cb318a526ee9b6a9fb6d861",
+   "targets": 1024,
+   "nll": 1780.791486544069
+  },
+  {
+   "domain": "dialogue",
+   "doc": "cc63ad00eb4f8894427a7d3278205fad9d1bebb386902b96194c82f77ea47a43",
+   "targets": 1024,
+   "nll": 1386.1093469429761
+  },
+  {
+   "domain": "dialogue",
+   "doc": "cc7a55a5ec5feddcb9519be6e61b592d833f5dd9bb86145a8fa77f936c18e27b",
+   "targets": 1024,
+   "nll": 1260.3262466957094
+  },
+  {
+   "domain": "dialogue",
+   "doc": "cced5607b6393c0f7654930e18ff851c901e2eee32b21acef31969ce092cd7cd",
+   "targets": 1024,
+   "nll": 1933.9431659486145
+  },
+  {
+   "domain": "dialogue",
+   "doc": "cfefac192ddbb30176470b81c76112f94872b7f68cfa2ce3e1c6f60a48558df8",
+   "targets": 1024,
+   "nll": 2523.994123267359
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d0ed04a3d7ae37001d9140fb97c6b70c442c062e03380aaeef2bb442aba199ba",
+   "targets": 1024,
+   "nll": 1964.0441495646955
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d3c9bdaf9a4ab0c260a3c5f62058d0b06b310091222b61f9757232a0ee8dc371",
+   "targets": 1024,
+   "nll": 2262.298737909994
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d462d205011f1e455f8168a591151379b2a8ecbe27b3967d741b461952e592ff",
+   "targets": 1024,
+   "nll": 1992.4990834322525
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d4fad1fe0e8c6739bf94168233c7cba672bfc1a19a77f7a0b51c36727bb5c37f",
+   "targets": 902,
+   "nll": 1455.6299824079033
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d519beccccadd395c9dc5424fa5dc0aec9129c1bb63d95fe5f84ba022677429f",
+   "targets": 1024,
+   "nll": 1601.5629858321045
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d556ae5986ea107e072140f046eb4a6ded8049332b3399270675393d80ae77ce",
+   "targets": 1024,
+   "nll": 1618.7749176832149
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d6de503f4266445e3f9e47e8f5d3ae3c8070738e1941af929f2d7c6cc6fa9cd0",
+   "targets": 1024,
+   "nll": 1566.2832201428246
+  },
+  {
+   "domain": "dialogue",
+   "doc": "d9ab47a49d3ce09373faacb099e9772a687eba7695cd51103e5020aba5937e8e",
+   "targets": 1024,
+   "nll": 1620.6512570797931
+  },
+  {
+   "domain": "dialogue",
+   "doc": "da37cb36d7d73a851b26d676b061ffa9e99fa732e7710aaa198bf38c688d554a",
+   "targets": 1024,
+   "nll": 1319.7762438704958
+  },
+  {
+   "domain": "dialogue",
+   "doc": "da3ea3c97c7038f1b890ecccdb15714c019c20d5afddeb7d3dca39dd35d4420a",
+   "targets": 1024,
+   "nll": 1274.3066382723046
+  },
+  {
+   "domain": "dialogue",
+   "doc": "db6c402a2bc56cadf3f528e2ab56cfa3e388a71e92b726d069f740044e9ef2b1",
+   "targets": 1024,
+   "nll": 2089.7391571634216
+  },
+  {
+   "domain": "dialogue",
+   "doc": "dbf097ca0ba66c4031d6c0516d2d443d58ce1dea042727448a98b2ae68a3256c",
+   "targets": 1024,
+   "nll": 1793.8033248930005
+  },
+  {
+   "domain": "dialogue",
+   "doc": "dce4f074bdb466f8cd64fbf2b09df410e2417bcec109730442239a3be8be175e",
+   "targets": 1008,
+   "nll": 1665.5313303410076
+  },
+  {
+   "domain": "dialogue",
+   "doc": "de12a7b81a15a52f1ba55f1f1727cad9d07fd3b1988b53d69c379a7592f19928",
+   "targets": 1024,
+   "nll": 1437.1664422900649
+  },
+  {
+   "domain": "dialogue",
+   "doc": "df8acf328872ebf07a99b72bf46b7bb7ea0ac283dd8094631df3bcb3035ff5f0",
+   "targets": 1024,
+   "nll": 1438.6019783671945
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e1b46ede395953721c58635ee2c5eb886095169c771fae59fb498b00c3bd0b8c",
+   "targets": 1024,
+   "nll": 1445.2510624716524
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e1b7a2c807b1c50613dc0b298a7707090e289840405374c763dcd7f03312b325",
+   "targets": 1024,
+   "nll": 1379.8742543919943
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e1db20b7e23977cd73ec829608756b7e8e8b297ef3bed47a2269c062a8edb0c4",
+   "targets": 1024,
+   "nll": 1950.7374952300452
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e2ea21bce41a3badd9b13e9e67d4e26b7d74111a2962fb161df1dfc4492de740",
+   "targets": 1024,
+   "nll": 1410.0346892366651
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e63167af8a784fd02cda390cd3f1ace8b6b9cd442c7e9997f07bc68c9ec65210",
+   "targets": 1024,
+   "nll": 1345.1530647321488
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e7fd9867055bcbe210c194552e634b3dc53c41a6401732b772727903dae9ed99",
+   "targets": 1024,
+   "nll": 1423.404789192602
+  },
+  {
+   "domain": "dialogue",
+   "doc": "e825a3e67cd0d8ddaaf9abfbf737135dd1b0ae287f0aaa27a53ce21446358a36",
+   "targets": 1024,
+   "nll": 1749.1647284580395
+  },
+  {
+   "domain": "dialogue",
+   "doc": "eaf1e33d9c50ea876ce8e033b7e5ab98cfce9d50e6c6b17606ea9e4b974d8263",
+   "targets": 1024,
+   "nll": 1609.2273668755079
+  },
+  {
+   "domain": "dialogue",
+   "doc": "eb01bebc041fa649b6c81e3346aaf9fb1109231d729dae0b8237bebf5ff14033",
+   "targets": 1024,
+   "nll": 1421.0244575024117
+  },
+  {
+   "domain": "dialogue",
+   "doc": "ed193dc8034f3f350de8ad48523ae07f3d3006be9aff7f0190b506215f6cdf75",
+   "targets": 969,
+   "nll": 1401.5455051026074
+  },
+  {
+   "domain": "dialogue",
+   "doc": "eebd5efb173674f728171bfe3c80740894a5fbfd741dec03887bd2d9afbf53c4",
+   "targets": 1024,
+   "nll": 1534.4983772522537
+  },
+  {
+   "domain": "dialogue",
+   "doc": "ef26904d0f4e19ffff88535aa73f6c898a143db50203f5dc08c7cac4841343b8",
+   "targets": 1024,
+   "nll": 1572.0770297429408
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f11f6c2a5d8914a78661a5b39afd3e6ca70503192a290b8133b0aac88fc03508",
+   "targets": 867,
+   "nll": 1346.1276035110932
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f274357ce15663976bc09094a38eb541f71c11c34b78c7e8904fd0fc46d01298",
+   "targets": 1024,
+   "nll": 1508.630339561263
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f2806b84f958f4eb4aa78e76434dd0abc0d0b470de7f0728a75f8960b1f9cb28",
+   "targets": 1024,
+   "nll": 1462.0759951184737
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f2e6b75944c4325689a96e657acee8de98a7bfae24c4dde76e756f89c8e50312",
+   "targets": 843,
+   "nll": 1347.9591442032252
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f31ab1ed221495a99fdcb5f2ea9e60dff9f48ad98a4b4648d7f8d596b04fa948",
+   "targets": 1024,
+   "nll": 1289.772438121785
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f37abdaedd6f57e31b9290a785bbba953fe416c5d0c335c6b4a887bdd361e5c8",
+   "targets": 1024,
+   "nll": 1296.8728081774898
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f50328943486ed9e43f0a801bbc39e2dec943642f80f6d0c2dab571aa3fc7613",
+   "targets": 1024,
+   "nll": 1664.5175958460895
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f6eb676ec1b48eb1cb2e230245984ea698289b296b7a32b2e9656d7af217874d",
+   "targets": 1024,
+   "nll": 1451.6369286580011
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f6eda1ac2267a5003ce20e026d5427395059dc538ed28db2a38fecfc4fd09142",
+   "targets": 1024,
+   "nll": 1571.253084466327
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f70954b49a8e1312ff411db0d7c8d4b7829f5969784fc16bb7201d621a97c163",
+   "targets": 1024,
+   "nll": 1386.6254135149065
+  },
+  {
+   "domain": "dialogue",
+   "doc": "f8afb5f877a35e96ac8ddd1a10796d07ff7d6921bcb217a19009349a418bdeb3",
+   "targets": 1024,
+   "nll": 1267.6075732242898
+  },
+  {
+   "domain": "dialogue",
+   "doc": "fd823ade36fe84880f737ed59f64470364e85d4689b503636161648173871e78",
+   "targets": 978,
+   "nll": 1328.840431650984
+  }
+ ],
+ "copy": {
+  "16": {
+   "targets": 2688,
+   "second_acc": 0.5167410714285714,
+   "second_bpb": 2.431361540500878,
+   "first_acc": 0.5152529761904762,
+   "first_bpb": 2.4181580341724067,
+   "copy_gain_bpb": -0.013203506328471067
+  },
+  "64": {
+   "targets": 2688,
+   "second_acc": 0.5316220238095238,
+   "second_bpb": 2.383742318720918,
+   "first_acc": 0.5345982142857143,
+   "first_bpb": 2.3404195378373305,
+   "copy_gain_bpb": -0.04332278088358701
+  },
+  "128": {
+   "targets": 2688,
+   "second_acc": 0.5316220238095238,
+   "second_bpb": 2.35492331899765,
+   "first_acc": 0.5461309523809523,
+   "first_bpb": 2.282266123789166,
+   "copy_gain_bpb": -0.07265719520848418
+  },
+  "176": {
+   "targets": 2688,
+   "second_acc": 0.5349702380952381,
+   "second_bpb": 2.3058585502785878,
+   "first_acc": 0.5442708333333334,
+   "first_bpb": 2.250295533799187,
+   "copy_gain_bpb": -0.055563016479400505
+  }
+ },
+ "parity_max_abs": 1.1444091796875e-05,
+ "timing": {
+  "prefill_tok_s": 10130.643356181508,
+  "prefill_ms_median": 25.26986598968506,
+  "decode_ms_median": 3.4676503855735064,
+  "decode_ms_p95": 4.040534142404795,
+  "decode_tok_s": 286.29525323244053,
+  "prompt": "p twenty hit in Australia . The song has been certified platinum",
+  "greedy_sample": ", and the state the states the states the states the states the states the states the states the states the states the states the states the states the states the states the states the states "
+ },
+ "peak_rss_mib": 1008.12890625,
+ "wall_s": 1942.8481585979462
+}

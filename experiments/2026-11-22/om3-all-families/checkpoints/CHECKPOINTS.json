@@ -1,0 +1,146 @@
+{
+ "gdn-5617": {
+  "arm": "gdn",
+  "seed": 5617,
+  "params": 470880,
+  "test_macro_bpb": 2.206515187132095,
+  "parity_after_training": 1.1444091796875e-05,
+  "sha256": "6c19efdd79a82d2aaa622d61f0fd9a2147f4ef6809584aa6699d2f5118154635",
+  "bytes": 1885992
+ },
+ "gdn-5649": {
+  "arm": "gdn",
+  "seed": 5649,
+  "params": 470880,
+  "test_macro_bpb": 2.2110761986127305,
+  "parity_after_training": 1.1444091796875e-05,
+  "sha256": "9e799e393dd619a0eb7d71049b736dd272edd29d4fce67facff96cfc91d56f4a",
+  "bytes": 1885992
+ },
+ "griffin-5617": {
+  "arm": "griffin",
+  "seed": 5617,
+  "params": 471040,
+  "test_macro_bpb": 2.27061865425017,
+  "parity_after_training": 1.52587890625e-05,
+  "sha256": "3fd1bcd3bedea962853d76721121cbde11e29e5023d3d93516224f9bbe07346e",
+  "bytes": 1890096
+ },
+ "griffin-5649": {
+  "arm": "griffin",
+  "seed": 5649,
+  "params": 471040,
+  "test_macro_bpb": 2.2426547019334,
+  "parity_after_training": 1.52587890625e-05,
+  "sha256": "3a6ba1ef9a00036b10dfcd7513d0a83ea9ffa040b00d9694d75de13fea83a81f",
+  "bytes": 1890096
+ },
+ "hyb-5617": {
+  "arm": "hyb",
+  "seed": 5617,
+  "params": 471088,
+  "test_macro_bpb": 2.187636703361318,
+  "parity_after_training": 1.33514404296875e-05,
+  "sha256": "4cbcba1ee016dca45b9ee80b9a4b0d6399f94b03027880008b565c02a9208c63",
+  "bytes": 1887104
+ },
+ "hyb-5649": {
+  "arm": "hyb",
+  "seed": 5649,
+  "params": 471088,
+  "test_macro_bpb": 2.1902798827880052,
+  "parity_after_training": 1.52587890625e-05,
+  "sha256": "65636fab9a8f9a1b1682cf884009a12b423a847edd5256d9c5afa4d7f8451f9d",
+  "bytes": 1887104
+ },
+ "hyena-5617": {
+  "arm": "hyena",
+  "seed": 5617,
+  "params": 474496,
+  "test_macro_bpb": 2.353476725740921,
+  "parity_after_training": 1.1444091796875e-05,
+  "sha256": "8f152de76d20b20b1da42befaa6089317e4205b31c0c3465feb40b80c3624d8d",
+  "bytes": 1905216
+ },
+ "hyena-5649": {
+  "arm": "hyena",
+  "seed": 5649,
+  "params": 474496,
+  "test_macro_bpb": 2.3564007734825045,
+  "parity_after_training": 1.33514404296875e-05,
+  "sha256": "e649c192d5b776ab73b49b0573e0de51530ed181942e27e022b517d800f85c69",
+  "bytes": 1905216
+ },
+ "mlstm-5617": {
+  "arm": "mlstm",
+  "seed": 5617,
+  "params": 470688,
+  "test_macro_bpb": 2.17325910737999,
+  "parity_after_training": 1.33514404296875e-05,
+  "sha256": "e1f70924f8aa79fec37730d441b75f95271cb8f6ce0d369e0c2c4d82f357c046",
+  "bytes": 1887648
+ },
+ "mlstm-5649": {
+  "arm": "mlstm",
+  "seed": 5649,
+  "params": 470688,
+  "test_macro_bpb": 2.16727433064011,
+  "parity_after_training": 1.1444091796875e-05,
+  "sha256": "a466bdcfee41a1dced47210b840fa3942b901bd011ce158e90bb94bf590d9096",
+  "bytes": 1887648
+ },
+ "retnet-5617": {
+  "arm": "retnet",
+  "seed": 5617,
+  "params": 471296,
+  "test_macro_bpb": 2.471161108665081,
+  "parity_after_training": 2.288818359375e-05,
+  "sha256": "7d22869cdab6cc7d530279d35639eadbd02b6a82c193883d3fe3f2a96eb19ee6",
+  "bytes": 1889336
+ },
+ "retnet-5649": {
+  "arm": "retnet",
+  "seed": 5649,
+  "params": 471296,
+  "test_macro_bpb": 2.4797836360476513,
+  "parity_after_training": 1.9073486328125e-05,
+  "sha256": "f3389eeeec5a25c96dd7b50eee31eba4da511b8171a2a2cb87b15ed4fe4a01e7",
+  "bytes": 1889336
+ },
+ "rwkv7-5617": {
+  "arm": "rwkv7",
+  "seed": 5617,
+  "params": 470784,
+  "test_macro_bpb": 2.2580410820386017,
+  "parity_after_training": 1.430511474609375e-05,
+  "sha256": "e9a5000eec3ad874d819eff0d8a9f103a0cd832efe74d51f243062d2fbda04d6",
+  "bytes": 1894344
+ },
+ "rwkv7-5649": {
+  "arm": "rwkv7",
+  "seed": 5649,
+  "params": 470784,
+  "test_macro_bpb": 2.258791681477803,
+  "parity_after_training": 1.239776611328125e-05,
+  "sha256": "f7efa9793aa84602fc80752ce7ebcc2edbf6fd3b92df8f95d1fb016587282f52",
+  "bytes": 1894344
+ },
+ "titans-5617": {
+  "arm": "titans",
+  "seed": 5617,
+  "params": 471704,
+  "test_macro_bpb": 2.3067829775250766,
+  "parity_after_training": 2.09808349609375e-05,
+  "sha256": "7309c843c4f0d535a68dc32489a2ff2ce5c6160df7f6b0d26250593aedb08b55",
+  "bytes": 1891608
+ },
+ "titans-5649": {
+  "arm": "titans",
+  "seed": 5649,
+  "params": 471704,
+  "test_macro_bpb": 2.3135959827636237,
+  "parity_after_training": 1.9073486328125e-05,
+  "sha256": "92fb486eb155b64c1ca520636f0fcf7df464535c48ce67dc18b04ae496553323",
+  "bytes": 1891608
+ }
+}

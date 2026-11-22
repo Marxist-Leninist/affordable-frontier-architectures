@@ -1,0 +1,80 @@
+<p><strong>At a glance:</strong> the Transformer ({comb:tf}; spread {sp:tf}) and the Transformer-Mamba hybrid ({comb:hyb};
+{sp:hyb}) are level at the top: their spreads overlap, and the timing on this shared machine cannot separate them (with the second
+timing pass alone the hybrid leads, {ac:hyb:pass2} against 100.0). Mamba-2 is third ({comb:m2}; {sp:m2}) and the only model in the
+top four under all {nways} ways of counting (ranks {rr:m2}). Our v2 with positive decay ({comb:om2pos}) and RetNet ({comb:retnet})
+follow. No model is best on every metric: on held-out text, which this page ranks first, the Transformer is {qro:tf} of 16
+({bpb:tf} bits/byte) and RetNet {qro:retnet} ({bpb:retnet}); both rank high on fast training steps. Best quality: our Mamba v1
+({bpb:om1}) and v2 with the always-on store ({bpb:om2a}), level ({ci:om1:om2a}). Fastest decoding: our Mamba v1 ({dec:om1}
+ms/token), which ranks {ro:om1} of 16 under these weights because each training step takes {xs:tf:om1} as long as the Transformer's and
+needs {xm:om1:tf} its training memory. Smallest decode state: Griffin ({state:griffin} KiB).</p>
+<!-- list -->
+<li><strong>Who leads depends on how costs are counted.</strong> With equal weights, {leadc:equal}; with quality at 50%,
+{leadc:q50}; with speed-heavy weights, {leadc:speed}; without the repeat-span column, {leadc:norec}; when training cost is counted
+as time to reach a given quality, {leadc:ttq}; when only inference counts, {leadc:infonly}; with memory at batch 8, {leadc:b8}.
+("Level" means their spreads overlap.) Mamba-2 is in the top four under all {nways} ways, the hybrid under {top4:hyb}
+({aro:hyb:stateonly} with OM2's state-only memory) and the Transformer under {top4:tf}: it is {aro:tf:ttq} with time to quality,
+{aro:tf:infonly} with inference only, {aro:tf:b8} with memory at batch 8 and {aro:tf:stateonly} with state-only memory.</li>
+<li><strong>Attention kernel.</strong> The attention layers (Transformer, hybrid, Griffin, Titans-style, the exact store) run on
+PyTorch's fused CPU attention kernel; the recurrent mixers run as ordinary PyTorch ops. With its attention written out in ordinary ops
+(the same function to {tfeq}), the Transformer takes {ctl:train}&times; as long per training step, needs {ctl:train_memory}&times;
+the training memory and prefills {ctl:prefill}&times; slower; its decode difference is not resolved (its rounds {ctl:dpl} ms against
+the Transformer's {ctl:dtf} ms in the same pass). It would score {ctl:comb}, inside the spreads of the rows ranked {ctl:near}. Part
+of the Transformer's lead is the kernel PyTorch ships, not the design.</li>
+<li><strong>Quality ranks differently.</strong> Our Mamba v1 ({bpb:om1}) and v2 with the always-on store ({bpb:om2a}) lead,
+level with each other. xLSTM's mLSTM ({bpb:mlstm}) is level with plain v2 ({bpb:om2}; {ci:mlstm:om2}, the two seeds
+{ps:mlstm:om2}) and ahead of Mamba-2 ({ci:mlstm:m2}). Every model except RetNet beats the Transformer ({bpb:tf}); RetNet is
+{ci:retnet:tf} behind. The RetNet paper's perplexity scaling comparison with Transformers is at 1.3B, 2.7B and 6.7B parameters,
+where it calls them comparable and reports RetNet ahead above about 2B, so it says nothing direct about 0.47M parameters; this arm's
+heads, value width and FFN are also narrower than the paper's.</li>
+<li><strong>Hybrids and recurrent designs.</strong> The hybrid (Mamba-2, attention + MLP, Mamba-2, attention + MLP: a 1:1
+interleave where Jamba puts one attention layer in eight) is {ci:hyb:m2} behind the Mamba-2 arm and trains {xs:hyb:m2} faster per
+step; the gap is not the swap alone, since the Mamba-2 arm keeps Hugging Face's initialisation and the hybrid the benchmark's. Its
+two attention layers keep a KV cache ({state:hyb} KiB of decode state against Mamba-2's {state:m2}). Gated DeltaNet (mixer only)
+trails Mamba-2 ({ci:gdn:m2}); its paper reports it ahead at 1.3B parameters (Wiki perplexity 16.42 against 16.56), and we did not
+test why it is behind here: both arms are mixer-only with 32-wide key heads, narrower than the 128 the Gated DeltaNet paper chose,
+and the Gated DeltaNet arm has half as many heads and a 25% smaller recurrent state (6,144 against 8,192 values per layer). Griffin
+and the RWKV-7-style model are not separated (the two seeds {ps:griffin:rwkv7}) and both trail Mamba-2 (Griffin {ci:griffin:m2}).
+The Titans-style arm is Titans' MAG design (a 64-token attention window beside the long-term memory) with a small linear memory (2
+heads of 32&times;32) instead of the deep MLP memory, a combination the paper does not report (its linear-memory ablation is of the
+memory-only model). With linear memory its update is the same kind of gated delta rule as Gated DeltaNet's, with a third of the
+memory state (2,048 against 6,144 values per layer), so its quality ({bpb:titans}) says nothing about Titans against Gated
+DeltaNet; it decodes slowest ({dec:titans} ms/token). Hyena edges the Transformer ({ci:hyena:tf}).</li>
+<li><strong>Speed and memory.</strong> Per training step the Transformer ({sps:tf} s) and RetNet ({sps:retnet}) are fastest,
+then Hyena ({sps:hyena}) and the hybrid ({sps:hyb}); our Mamba v1 is slowest ({sps:om1}). Counted as time to quality the order
+changes: the hybrid reaches the common dev-set target ({target} bits/byte, the worst final dev score of any single run; dev scores run
+lower than the test scores in the table) in {ttt:hyb} training minutes on this CPU and Mamba-2 in {ttt:m2}, against the
+Transformer's {ttt:tf}; the Transformer's own final dev score ({tffinal}) takes the hybrid {tttf:hyb} minutes and Mamba-2
+{tttf:m2}, against the Transformer's {tttf:tf}. These are read off the dev curves of one 2,000-step cosine schedule; separately
+scheduled shorter runs were not trained. Griffin has the smallest decode state ({state:griffin} KiB, fixed in size because its
+attention is local). Hyena's per-sequence state, the history of its long-convolution inputs, is {state:hyena} KiB after 256 tokens,
+about the Transformer's {state:tf} KiB KV cache. The shared machine switched between a fast and a slow mode within tens of seconds:
+between timing rounds a model's decode time varied by up to {maxjit}% and its training step by up to {trjit}%, which is what the
+spreads show.</li>
+<li><strong>The "Mamba-4" store.</strong> The exact-token store helps quality when every token reads it (always-on minus placebo
+{ci:om2a:om2p}). The state-gated version does not work as designed: by the end of training its gate had not become selective (mean
+gate weight {gate:om2g} in the two seeds), and reading only where the gate exceeds 0.5, as designed, it reads on {read:om2g}% of
+tokens and scores {bpb:om2g} bits/byte, worse than plain v2 ({bpb:om2}). Used as a soft weight on every token it scores
+{bpbs:om2g} (soft minus placebo {ci:om2gsoft:om2p}). So it fails this page's test for state-gated retrieval (better exact recall
+without worse held-out loss) on held-out loss alone; this benchmark has no working recall measure, since no model copies.</li>
+<li><strong>No model shows in-context copying.</strong> Every model predicts a 32-byte span repeated after 16&ndash;176 bytes of
+another document worse than its first occurrence, which follows its own text (copy gain {cg} bits/byte over every model, seed and
+gap), so any copying is smaller than the cost of the change of context. The repeat-span column ({recrange}% next-byte accuracy)
+therefore measures ordinary next-byte skill, a second quality score, not recall; leaving it out changes no model's rank by more than
+{maxmove:norec}.</li>
+<li><strong>Choices made after seeing the results, and their effect.</strong> Memory: OM2's card (8 models) scored it by the decode
+state alone, which put Mamba-2 first and the Transformer 7th of 8; on these 16 models that definition puts {lead:stateonly} first,
+RetNet {aro:retnet:stateonly}, the hybrid {aro:hyb:stateonly} and the Transformer {aro:tf:stateonly}, because its 10% column
+multiplies Griffin's score by {spct:griffin}&times; while the 35% quality column moves no model by more than {qpct}% (the training-speed
+column, which multiplies our v1's score by {mult:om1:train_speed}&times;, was kept as a real difference in training time). Memory now
+counts fp32 weights plus the per-sequence decode state, which leaves out {tabs:hyena} KiB of input-independent filter taps that
+Hyena's decoder caches (counting them, Hyena is {aro:hyena:statetotal} instead of {ro:hyena}). Training memory is measured above the
+process baseline (with the whole process, as in OM2, {leadc:rsswhole}). Timings are medians over two passes, a choice made after
+both were seen: with the first pass alone {leadc:pass1}; with the second alone {leadc:pass2}; with each model's best decode and
+prefill round {leadc:latbest}; with prefill and decode timed interleaved in one process {leadc:latil}. Each of these is one of the
+{nways} ways of counting. The state-gated store is scored with its gate as designed; scored with its soft read it would be
+{wi:om2g_soft_rank} ({wi:om2g_soft_comb}) instead of {ro:om2g}. The recall column was renamed. Because these choices came after the
+results, and the top of this table matches the family ranking above (Transformer, hybrid, Mamba), that agreement is not independent
+support for that ranking.</li>
+<li><strong>Short context only.</strong> Every speed and memory figure is at 256 tokens or fewer, where the Transformer's KV
+cache ({state:tf} KiB) is still smaller than its weights; long contexts, where attention caches and decode time grow and fixed
+recurrent states do not, are not tested here.</li>

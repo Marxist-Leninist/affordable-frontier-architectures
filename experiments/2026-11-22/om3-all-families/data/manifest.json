@@ -1,0 +1,58 @@
+{
+  "domains": {
+    "article": {
+      "train": {
+        "documents": 225,
+        "bytes": 4192911,
+        "sha256": "89d75d34eb3367127d1888c3c3188607c5812fc61c42a85f5bdf055b2551667f"
+      },
+      "dev": {
+        "documents": 33,
+        "bytes": 522935,
+        "sha256": "2003d4601755dc4eea09a2e208ff2f74113f89addeecd046660fb951334b2c54"
+      },
+      "test": {
+        "documents": 31,
+        "bytes": 522606,
+        "sha256": "99908538768081da42fe2b374445c45b3eed3a7e2741e23c57ae6ceaf63e807e"
+      }
+    },
+    "fiction": {
+      "train": {
+        "documents": 213,
+        "bytes": 3481560,
+        "sha256": "09439db2b1c2e2d28570219fcb344fb9de6f30f4c7f6a090074dd8972aeebd08"
+      },
+      "dev": {
+        "documents": 11,
+        "bytes": 181532,
+        "sha256": "f48ccd1224cf817ca9bff4ca5fa7e1da88ce66f100ccf4e053f36b0f7160410a"
+      },
+      "test": {
+        "documents": 32,
+        "bytes": 517026,
+        "sha256": "191911da580d484d105f0cb08e4ef13e58bbc5feed2a75f71d17b6f7c9feb4b3"
+      }
+    },
+    "dialogue": {
+      "train": {
+        "documents": 1809,
+        "bytes": 4194228,
+        "sha256": "e94457141b370ba1ebd5ea22c76b3a755e9cdad691f5555e1c8ab054072529ba"
+      },
+      "dev": {
+        "documents": 208,
+        "bytes": 455551,
+        "sha256": "9439fda5ae1106549fba39e790a0c67fb202b9abd478660f81a8dfef15e68ea4"
+      },
+      "test": {
+        "documents": 240,
+        "bytes": 524250,
+        "sha256": "1c27873b32c60c203c3a01f1520a8767477c585a0f4d6b45f2dc87691576913b"
+      }
+    }
+  },
+  "train_bytes": 11873191,
+  "train_sha256": "e58bc4084cfc06c5cf96ba65fb1fb38a244a691d2f09d389b09603eba92c8552",
+  "note": "human-only primary corpus; source-entity split, exact normalized duplicate check plus bottom64 word5gram overlap>=0.8 train/dev-to-eval exclusion; heuristic not proof against all paraphrase overlap"
+}
