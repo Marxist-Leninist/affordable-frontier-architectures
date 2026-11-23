@@ -1,0 +1,24 @@
+{
+  "FP32-1733": {
+    "master_sha": "bf2f465d804c1308ac534ac4b034e881661722d9516315a7ddd16f7503de3f55",
+    "cpu_load_valid": true
+  },
+  "FP32-1741": {
+    "master_sha": "329f860829c8fc695af93f7419284f129cdc84228e31c44083adaccedf8c2e8d",
+    "cpu_load_valid": true
+  },
+  "BitNet-b1.58-1733": {
+    "master_sha": "89b63b97b5fa9dd4072d80dfac6ad69a1fc7b0ea3be5066aea6562edc326a018",
+    "cpu_load_valid": true,
+    "packed_sha": "9c4e7a4ff39c9b4926d30231dba36e5fad9937b3c339e0b4dd3400515f56ad49",
+    "engineering_scope": "cross-device FP32 reductions are not a promised bit-exact master/re-quant replay",
+    "master_vs_packed_cpu_logits_max_abs": 0.058208465576171875
+  },
+  "BitNet-b1.58-1741": {
+    "master_sha": "1a36e088e6b5031f8a267d124a3a8c8e5748c5337df986bb92241390624c22c5",
+    "cpu_load_valid": true,
+    "packed_sha": "67958ad432d61ee73467c205d94feb63bfd3e14f15de94ac5ed7be7488d2b6f5",
+    "engineering_scope": "cross-device FP32 reductions are not a promised bit-exact master/re-quant replay",
+    "master_vs_packed_cpu_logits_max_abs": 0.036261916160583496
+  }
+}

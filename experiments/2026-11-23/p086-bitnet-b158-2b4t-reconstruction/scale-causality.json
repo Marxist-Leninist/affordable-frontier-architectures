@@ -1,0 +1,1 @@
+{"1733":{"code_mismatches":0,"scale_relative_max_abs":3.814697265625e-06,"cpu_native_scale_replaces_GPU_bitexact":true,"using_archived_GPU_scale_logits_max_abs":0.058208465576171875},"1741":{"code_mismatches":0,"scale_relative_max_abs":5.7220458984375e-06,"cpu_native_scale_replaces_GPU_bitexact":true,"using_archived_GPU_scale_logits_max_abs":0.036261916160583496}}
