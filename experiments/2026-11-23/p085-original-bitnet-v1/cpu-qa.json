@@ -1,0 +1,16 @@
+{
+  "signed_projection_integer_ref_max_abs": 0.0,
+  "uncentered_beta": 3.0,
+  "identity_ste": true,
+  "suffix_causality_eval": true,
+  "full_training_restore": {
+    "False": {
+      "par": 1903488,
+      "restore_next_update_exact": true
+    },
+    "True": {
+      "par": 1903488,
+      "restore_next_update_exact": true
+    }
+  }
+}

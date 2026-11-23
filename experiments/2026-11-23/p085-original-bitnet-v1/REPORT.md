@@ -1,0 +1,13 @@
+# P085: original 2023 BitNet v1 equation study, matched on GTX1660
+
+Checked the **original W1A8 BitNet** equations from [Wang et al., arXiv:2310.11453v1](https://arxiv.org/html/2310.11453v1) sections 2.1–2.2 and Appendix A. This is a 1.903M-parameter mini from-scratch adaptation, not BitNet b1.58, a newer Microsoft checkpoint, or an attempted reproduction of the publication's corpus/125M+ scales. Binary forward projection signs from centered FP32 masters, original uncentered absmean scale, SubLN, tensorwise A8 training and strict tokenwise A8 inference, Eq6 affine before-GELU explicit convention, and full-precision untied embedding/head with topology-matched dense control. Both use FP32 CPU/GPU masters and optimizer; this is ordinary PyTorch fake quant, not an integer/bit CUDA speed test. No inference energy claim.
+
+| Matched arm | Test BPB by seed; mean | Mean fit seconds | Ref prefill p50/p95 | Qualified combined |
+|---|---:|---:|---:|---:|
+| FP32 same topology | 2.36081, 2.38118; **2.37099** | 32.6222 | 1.5323/1.5487ms | 100 |
+| Original-BitNet mini W1A8 | 3.49018, 3.32396; **3.40707** | 45.5150 | 4.7584/4.8611ms | No |
+
+Matched identical initial master generation, 2,400 steps and 4,915,200 known WikiText2 training byte targets per arm/seed, two seeds1733/1741. BitNet +1.03608 BPB, fixed-seed paired 32×8-holdout-window block interval [1.01383,1.05940], fails +.15 in both seeds. At common 32.4s/32.8s observed times, BitNet preceding step1500 eval 3.58807/3.39257, FP32 final 2.35310/2.38118. FP32 first observed dev≤3.25 at step900 ~12.13/12.31s, BitNet did not cross it. Gain BPB/min 10.600/10.438 FP32 vs6.210/6.201 BitNet. Reference prefill batch-one 128 bytes, no native low-bit efficiency measurement (point latency intentionally *not* used to infer paper-scale results).
+
+Training summary both arms 7,613,952 B actual FP32 trainable master, 15,228,116 B Adam states/counters =22,842,068 B persistent tensor payload, different whole measured GPU allocation peaks (272.7–295.6 MB FP32 vs293.9–324.4 MB W1A8). Signed projection inference export 221,184 B 1-bit signs +64 B FP32 scales +536,064 B FP32 remainder =757,312 B; two exact packed files 776,980 B each. Versus 7,613,952 B FP32 weights, 10.05× smaller model tensor payload. That is storage, not training VRAM or production cache memory. Bit-packed export reload regenerated original eval logits exactly. Original formula probe exact signed reference; backward identity STE, strict tokenwise causal prefix and exact serialized Adam next-step replay both CPU/CUDA QA. Final master checkpoints (both arms) + packed export files held on authorized experiment host. Final checkpoints intentionally omit accumulated Adam to preserve disk floor.
+
